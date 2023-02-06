@@ -29,17 +29,35 @@ learned_ability_table = {
     "Eggs": ItemData(130009, ItemClassification.progression),
     "Talon Trot": ItemData(130010, ItemClassification.progression),
     "Beak Buster": ItemData(130011, ItemClassification.progression),
-    "Flight": ItemData(99999, ItemClassification.progression),
-    "Shock Spring Jump": ItemData(99999, ItemClassification.progression),
-
+    "Flight": ItemData(130012, ItemClassification.progression),
+    "Shock Spring Jump": ItemData(130013, ItemClassification.progression),
+    "Wonderwing": ItemData(130014, ItemClassification.progression),
+    "Wading Boots": ItemData(130015, ItemClassification.progression),
+    "Beak Bomb": ItemData(130016, ItemClassification.progression),
+    "Turbo Talon Trot": ItemData(130016, ItemClassification.progression)
 }
 
 progression_item_table = {
-    "Jiggy": ItemData(140000, ItemClassification.progression),
-    "Note": ItemData(140001, ItemClassification.progression),
-    "Mumbo Token": ItemData(140002, ItemClassification.progression),
+    "Jiggy": ItemData(130017, ItemClassification.progression),
+    "Mumbo Token": ItemData(130018, ItemClassification.progression),
 }
 
 useful_item_table = {
-    "Honeycomb Piece": ItemData(150000, ItemClassification.useful),
+    "Honeycomb Piece": ItemData(130019, ItemClassification.useful),
+}
+
+junk_table = {
+    "Honeycomb": ItemData(130020, ItemClassification.filler),
+    "10 Eggs": ItemData(130021, ItemClassification.filler),
+    "10 Red Feathers": ItemData(130022, ItemClassification.filler),
+    "5 Gold Feathers": ItemData(130023, ItemClassification.filler),
+    "Extra Life": ItemData(130024, ItemClassification.filler)
+}
+
+item_table = {
+    **basic_ability_table
+    **learned_ability_table
+    **progression_item_table
+    **useful_item_table
+    **junk_table
 }
