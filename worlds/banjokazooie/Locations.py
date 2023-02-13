@@ -30,6 +30,9 @@ location_table = {
     "GL Bubblegloop Swamp Witch's Hat Jiggy": LocationData(120017, [["Rat-A-Tat Rap", "Beak Buster", "Shock Spring Jump"], ["Beak Barge", "Beak Buster", "Shock Spring Jump"], ["Eggs", "Beak Buster", "Shock Spring Jump"]]),
     "GL Above Freezeezy Peak Jiggy": LocationData(120018, [["Flap Flip", "Eggs", "Beak Buster" "Flight", "Turbo Talon Trot"]]),
     "GL Gobi's Valley Sarcophagus Jiggy": LocationData(120019, [["Feathery Flap", "Eggs", "Beak Buster", "Flight"], ["Rat-A-Tat Rap", "Eggs", "Beak Buster",  "Flight"], ["Swim", "Eggs", "Beak Buster", "Turbo Talon Trot"]]),
+    "GL Mad Monster Mansion Grunty's Eye Jiggy": LocationData(99999[["Flap Flip", "Rat-A-Tat Rap", "Beak Buster", "Turbo Talon Trot", "Shock Spring Jump", "Flight"]]),
+    "GL Rusty Bucket Bay Area Jiggy": LocationData(99999, [["Jump", "Feathery Flap", "Beak Buster"], [["Jump", "Rat-A-Tat Rap", "Beak Buster"]]]),
+    "GL Click Clock Wood Bee Jiggy": LocationData(99999, [["Feathery Flap", "Talon Trot", "Shock Spring Jump"], ["Rat-A-Tat Rap", "Talon Trot", "Shock Spring Jump"]]), #Requires Transformation
 
     "GL Mumbo Token Behind Red Magic Cauldron": LocationData(999999),
     "GL Mumbo Token Above Drain Pipe": LocationData(999999),
@@ -37,6 +40,10 @@ location_table = {
     "GL Mumbo Token Near Click Clock Wood Podium": LocationData(999999, [["Swim"]]),
     "GL Mumbo Token Behind Sarcophagus": LocationData(99999),
     "GL Mumbo Token Above Freezeezy Peak": LocationData(99999, [["Flap Flip"]]),
+    "GL Mumbo Token Under Rusty Bucket Bay": LocationData(99999, [["Swim"]]),
+    "GL Mumbo Token By Mad Monster Mansion Podium": LocationData(99999, [["Swim", "Feathery Flap"], ["Swim", "Rar-A-Tat Rap"]]),
+    "GL Mumbo Token Behind Mumbo": LocationData(99999, [["Flap Flip", "Beak Barge"], [["Flap Flip", "Rat-A-Tat Rap"]]]), #Needs Transformation
+    "GL Tunnel from Click Clock Wood Mumbo Token": LocationData(99999),
 
     "MM Conga Orange Throw Jiggy": LocationData(120014),
     "MM Chimpy Orange Jiggy": LocationData(120015, [["Climb"]]),
@@ -205,6 +212,112 @@ location_table = {
     "GV Mumbo Token in Sandybutt's Pot": LocationData(99999, [["Eggs", "Flight"], ["Swim", "Eggs", "Turbo Talon Trot"]]),
 #    "GV Mumbo Token Inside Water Pyramid": LocationData(XXXXXX, [["Swim", "Turbo Talon Trot"]]), #MISSABLE, DO NOT RANDOMIZE OR FACTOR IN LOGIC
 
+    "MMM Napper's Jiggy": LocationData(99999, [["Jump", "Climb", "Shock Spring Jump"], ["Flap Flip", "Feathery Flap", "Climb", "Talon Trot", "Shock Spring Jump"], ["Flap Flip", "Climb", "Rat-A-Tat Rap", "Talon Trot", "Shock Spring Jump"]]),
+    "MMM Cellar Jiggy": LocationData(99999, [["Rat-A-Tat Rap"], ["Beak Barge"], ["Eggs"]]),
+    "MMM Tumblar's Jiggy": LocationData(99999, [["Rat-A-Tat Rap"], ["Beak Barge"], ["Eggs"]]),
+    "MMM Jiggy in the Well": LocationData(99999, [["Climb", "Swim"]]), #Transformation works too
+    "MMM Flowerpot Jiggy": LocationData(99999, [["Beak Barge", "Eggs"], ["Rat-A-Tat Rap", "Eggs"]]),
+    "MMM Top of the Clock Tower Jiggy": LocationData(99999, [["Jump", "Climb", "Talon Trot"]]),
+    "MMM Motzand's Jiggy": LocationData(99999, [["Flap Flip", "Beak Barge", "Beak Buster", "Turbo Talon Trot", "Shock Spring Jump"], ["Flap Flip", "Rat-A-Tat Rap", "Beak Buster", "Turbo Talon Trot", "Shock Spring Jump"]]),
+    "MMM Jiggy in the Toilet": LocationData(99999, [["Flap Flip", "Jump", "Climb", "Rat-A-Tat Rap"], ["Flap Flip", "Jump", "Climb", "Eggs"], ["Flap Flip", "Climb", "Talon Trot", "Rat-A-Tat Rap"], ["Flap Flip", "Climb", "Talon Trot", "Eggs"]]),
+    "MMM Jiggy in the Gutter": LocationData(99999, [["Flap Flip", "Climb"], ["Flap Flip", "Beak Barge"], ["Flap Flip", "Rat-A-Tat Rap"]]),
+    "MMM Jinjo Jiggy": LocationData(99999, [["Jump", "Climb", "Rat-A-Tat Rap", "Shock Spring Jump"], ["Jump", "Climb", "Eggs", "Shock Spring Jump"], ["Climb", "Rat-A-Tat Rap", "Talon Trot", "Shock Spring Jump"], ["Climb", "Talon Trot", "Eggs", "Shock Spring Jump"]]),
+#    "MMM Blue Jinjo": LocationData(99999, [["Shock Spring Jump"]]),
+#    "MMM Green Jinjo": LocationData(99999, [["Jump", "Climb", "Shock Spring Jump"], ["Climb", "Talon Trot", "Shock Spring Jump"]]),
+#    "MMM Orange Jinjo": LocationData(99999),
+#    "MMM Pink Jinjo": LocationData(99999, [["Rat-A-Tat Rap"], ["Beak Barge"], ["Eggs"]]),
+#    "MMM Yellow Jinjo": LocationData(99999, [["Jump", "Climb", "Rat-A-Tat Rap", "Shock Spring Jump"], ["Jump", "Climb", "Eggs", "Shock Spring Jump"], ["Climb", "Rat-A-Tat Rap", "Talon Trot", "Shock Spring Jump"], ["Climb", "Talon Trot", "Eggs", "Shock Spring Jump"]]),
+    "MMM Church Rafters Honeycomb Piece": LocationData(99999[["Flap Flip", "Feathery Flap", "Beak Buster", "Turbo Talon Trot", "Shock Spring Jump", "Flight"], ["Flap Flip", "Rat-A-Tat Rap", "Beak Buster", "Turbo Talon Trot", "Shock Spring Jump", "Flight"]]),
+    "MMM Honeycomb Piece Under the Floorboards": LocationData(99999, [["Flap Flip", "Jump", "Climb", "Rat-A-Tat Rap"], ["Flap Flip", "Jump", "Climb", "Eggs"], ["Flap Flip", "Climb", "Talon Trot", "Rat-A-Tat Rap"], ["Flap Flip", "Climb", "Talon Trot", "Eggs"]]),
+    "MMM Mumbo Token in Fireplace": LocationData(99999, [["Rat-A-Tat Rap"],["Eggs"], ["Jump", "Climb", "Shock Spring Jump"], ["Climb", "Talon Trot", "Shock Spring Jump"]]),
+    "MMM Mumbo Token in Toilet/Cellar": LocationData(99999, [["Rat-A-Tat Rap"], ["Beak Barge"], ["Eggs"]]), #Shared Item ID, collecting one collects the other
+    "MMM Mumbo Token in Bathroom": LocationData(99999, [["Jump", "Climb", "Rat-A-Tat Rap"], ["Jump", "Climb", "Eggs"], ["Climb", "Talon Trot", "Rat-A-Tat Rap"], ["Climb", "Talon Trot", "Eggs"]]),
+    "MMM Mumbo Token in Maze": LocationData(99999),
+    "MMM Mumbo Token in Maze Corner from Roof": LocationData(99999, [["Climb"]]), #Transformation works too
+    "MMM Mumbo Token Atop Tumblar's Shack": LocationData(99999, [["Shock Spring Jump"]]),
+    "MMM Mumbo Token in the Well": LocationData(99999, [["Climb", "Swim"]]), #Transformation works too
+    "MMM Mumbo Token Behind a Grave": LocationData(99999, [["Climb"], ["Beak Barge"], ["Rat-A-Tat Rap"]]), #Transformation works too
+    "MMM Mumbo Token in the Clock Tower": LocationData(99999, [["Jump", "Rat-A-Tat Rap", "Talon Trot"], ["Jump", "Beak Barge", "Talon Trot"], ["Jump", "Climb", "Talon Trot"]]),
+    "MMM Mumbo Token in Church Chair": LocationData(99999, [["Flap Flip", "Beak Barge", "Beak Buster", "Turbo Talon Trot"], ["Flap Flip", "Rat-A-Tat Rap", "Beak Buster", "Turbo Talon Trot"]]),
+    "MMM Mumbo Token in Church Rafters": LocationData(99999[["Flap Flip", "Feathery Flap", "Beak Buster", "Turbo Talon Trot", "Shock Spring Jump", "Flight"], ["Flap Flip", "Rat-A-Tat Rap", "Beak Buster", "Turbo Talon Trot", "Shock Spring Jump", "Flight"]]),
+    "MMM Mumbo Token Near Tumblar's Shack": LocationData(99999),
+    "MMM Mumbo Token in Yellow Jinjo Room":  LocationData(99999, [["Jump", "Climb", "Rat-A-Tat Rap", "Shock Spring Jump"], ["Jump", "Climb", "Eggs", "Shock Spring Jump"], ["Climb", "Rat-A-Tat Rap", "Talon Trot", "Shock Spring Jump"], ["Climb", "Talon Trot", "Eggs", "Shock Spring Jump"]]),
+    "MMM Mumbo Token Near Blue Jinjo": LocationData(99999, [["Eggs"]]),
+
+    #RBB Entry REQUIRES Climb
+    "RBB Smokestack Jiggy": LocationData(99999),
+    "RBB Whistle Jiggy": LocationData(99999, [["Beak Buster"]]),
+    "RBB Warehouse Jiggy": LocationData(99999, [["Flap Flip", "Eggs", "Talon Trot", "Beak Buster"], ["Flap Flip", "Feathery Flap"], ["Flap Flip", "Rat-A-Tat Rap"]]),
+    "RBB Metal Cage Jiggy": LocationData(99999, [["Flap Flip", "Beak Barge"], ["Beak Barge", "Eggs", "Talon Trot"]]),
+    "RBB Captain's Room Jiggy": LocationData(99999, [["Rat-A-Tat Rap"]]),
+    "RBB Boss Boom Box's Jiggy": LocationData(99999, [["Feathery Flap", "Beak Barge"], ["Rat-A-Tat Rap", "Beak Barge"]]),
+    "RBB Dolphin Jiggy": LocationData(99999, [["Swim", "Beak Buster"]]),
+    "RBB Engine Room Jiggy": LocationData(99999),
+    "RBB Propeller Jiggy": LocationData(99999, [["Swim", "Beak Buster"]]),
+    "RBB Jinjo Jiggy": LocationData(99999, [["Feathery Flap", "Eggs", "Talon Trot"], ["Rat-A-Tat Rap", "Eggs", "Talon Trot"]]),
+#    "RBB Blue Jinjo": LocationData(99999),
+#    "RBB Green Jinjo": LocationData(99999, [["Feathery Flap", "Eggs", "Talon Trot"], ["Rat-A-Tat Rap", "Eggs", "Talon Trot"]]),
+#    "RBB Orange Jinjo": LocationData(99999, [["Feathery Flap", "Eggs"], ["Rat-A-Tat Rap", "Eggs"]]),
+#    "RBB Pink Jinjo": LocationData(99999, [["Swim"]]),
+#    "RBB Yellow Jinjo": LocationData(99999),
+    "RBB Engine Room Honeycomb Piece": LocationData(99999, [["Beak Barge"], ["Eggs"]]),
+    "RBB Hidden Warehouse Honeycomb Piece": LocationData(99999, [["Swim", "Beak Buster", "Flight"]]),
+    "RBB Toll Bridge Mumbo Token": LocationData(99999, [["Flap Flip", "Eggs"]]),
+    "RBB Lifeboat Mumbo Token": LocationData(99999),
+    "RBB Mumbo Token Near Boss Boom Box": LocationData(99999),
+    "RBB Barracks Mumbo Token": LocationData(99999),
+    "RBB Engine Control Room Mumbo Token": LocationData(99999),
+    "RBB Engine Room Left Mumbo Token": LocationData(99999, [["Beak Barge", "Beak Buster"], ["Eggs", "Beak Buster"]]),
+    "RBB Engine Room Right Mumbo Token": LocationData(99999, [["Beak Barge", "Beak Buster"], ["Eggs", "Beak Buster"]]),
+    "RBB Mumbo Token in Store Room": LocationData(99999),
+    "RBB Navigation Room Mumbo Token": LocationData(99999, [["Rat-A-Tat Rap"]]),
+    "RBB Oven Mumbo Token": LocationData(99999, [["Wonderwing"]]),
+    "RBB Smokestack Mumbo Token": LocationData(99999, [["Shock Spring Jump"]]),
+    "RBB Toxic Waste Mumbo Token": LocationData(99999, [["Feathery Flap", "Eggs", "Talon Trot"], ["Rat-A-Tat Rap", "Eggs", "Talon Trot"]]),
+    "RBB Mumbo Token Ship's Bow": LocationData(99999),
+    "RBB Warehouse Crate 1 Mumbo Token": LocationData(99999),
+    "RBB Warehouse Crate 2 Mumbo Token": LocationData(99999),
+
+    "CCW Treetop Room Jiggy": LocationData(99999, [["Beak Barge"], ["Rat-A-Tat Rap"], ["Eggs"]]),
+    "CCW Top of the Tree Jiggy": LocationData(99999), #Requires Transformation
+    "CCW Summer Zubbas' Jiggy": LocationData(99999),
+    "CCW Summer Leaf Jiggy": LocationData(99999),
+    "CCW Summer Construction Site Jiggy": LocationData(99999),
+    "CCW Fall Gnawty's Jiggy": LocationData(99999),
+    "CCW Fall Plant Jiggy": LocationData(99999, [["Eggs"]]), #Requires obtaining Gobi's Valley Gobi Jiggies and Honeycomb Piece
+    "CCW Fall Nabnut's Jiggy": LocationData(99999, [["Rat-A-Tat Rap"]]),
+    "CCW Winter Eyrie's Jiggy": LocationData(99999),
+    "CCW Jinjo Jiggy": LocationData(99999), #Requires Transformation
+#    "CCW Green Jinjo": LocationData(99999, [["Wonderwing"]]), #Transformation works too
+#    "CCW Orange Jinjo": LocationData(99999),
+#    "CCW Pink Jinjo": LocationData(99999), #Requires Transformation
+#    "CCW Yellow Jinjo": LocationData(99999),
+    "CCW Winter Honeycomb Piece Above Nabnut's House": LocationData(99999, [["Rat-A-Tat Rap", "Flight"], ["Flight", "Beak Bomb"]]),
+    "CCW Winter Honeycomb Piece in Gnawty's House": LocationData(99999, [["Swim"]]),
+    "CCW Spring Snapper Plant Mumbo Token Near Entrance": LocationData(99999, [["Wonderwing"]]), #Transformation works too
+    "CCW Spring Snapper Plant Mumbo Token Near Garden": LocationData(99999, [["Wonderwing"]]), #Transformation works too
+    "CCW Spring Mumbo Token in Treetop Above Mumbo's Hut": LocationData(99999), #Transformation works too
+    "CCW Spring Mumbo Token on Beehive": LocationData(99999), #Transformation works too
+    "CCW Spring Mumbo Token in Construction Site": LocationData(99999), #Transformation works too
+    "CCW Spring Mumbo Token on Nabnut's Dresser": LocationData(99999), #Transformation works too
+    "CCW Spring Mumbo Token outside Mumbo's Hut/Nabnut's House": LocationData(99999), #Shared Item ID, collecting one collects the other
+    "CCW Summer Snapper Plant Mumbo Token Near Mumbo's Hut": LocationData(99999, [["Wonderwing"]]),
+    "CCW Summer Mumbo Token in Gnawty's House": LocationData(99999),
+    "CCW Summer Mumbo Token in Field by Garden": LocationData(99999),
+    "CCW Summer Mumbo Token in Mumbo's Hut": LocationData(99999, [["Wonderwing"], ["Wading Boots"]]),
+    "CCW Summer Mumbo Token in Treetop Above Mumbo's Hut": LocationData(99999),
+    "CCW Summer Mumbo Token Above Leaf Jiggy": LocationData(99999),
+    "CCW Summer Mumbo Token after Nabnut's House": LocationData(99999),
+    "CCW Fall Snapper Plant Mumbo Token Near Entrance": LocationData(99999, [["Wonderwing"]]),
+    "CCW Fall Mumbo Token in Treetop Above Mumbo's Hut": LocationData(99999),
+    "CCW Fall Mumbo Token on Leaves": LocationData(99999),
+    "CCW Fall Mumbo Token Near Construction Site": LocationData(99999),
+    "CCW Fall Snapper Plant Mumbo Token in Treetop": LocationData(99999),
+    "CCW Winter Garden Mumbo Token": LocationData(99999),
+    "CCW Winter Snowman  Mumbo Token Near Garden": LocationData(99999, [["Flight"]]),
+    "CCW Winter Beehive": LocationData(99999),
+    "CCW Winter Mumbo Token Near Nabnut's House": LocationData(99999),
+    "CCW Winter Mumbo Token Behind Lake Platform": LocationData(99999),
 
 #    "Banjo's House": 12000,
 #    "Spiral Mountain": 12001,
