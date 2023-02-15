@@ -32,7 +32,7 @@ learned_ability_table = {
     "Flight": ItemData(130012, ItemClassification.progression),
     "Shock Spring Jump": ItemData(130013, ItemClassification.progression),
     "Wonderwing": ItemData(130014, ItemClassification.progression),
-    "Wading Boots": ItemData(130015, ItemClassification.progression),
+    "Stilt Stride": ItemData(130015, ItemClassification.progression),
     "Beak Bomb": ItemData(130016, ItemClassification.progression),
     "Turbo Talon Trot": ItemData(130016, ItemClassification.progression)
 }

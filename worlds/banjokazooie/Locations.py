@@ -131,28 +131,28 @@ location_table = {
     "BS Tanktup Jiggy": LocationData(99999, [["Beak Buster"]]),
     "BS Tiptup Jiggy": LocationData(99999, [["Beak Buster"]]),
     "BS Hut Jiggy": LocationData (99999, [["Beak Buster", "Shock Spring Jump"]]),
-    "BS Platform Near Mumbo's Hut Jiggy": LocationData(99999, [["Beak Buster", "Wading Boots"]]),
+    "BS Platform Near Mumbo's Hut Jiggy": LocationData(99999, [["Beak Buster", "Stilt Stride"]]),
     "BS Croctus Jiggy": LocationData(99999, [["Eggs", "Talon Trot", "Beak Buster", "Shock Spring Jump"]]),
-    "BS Mr. Vile Jiggy": LocationData(99999, [["Wading Boots"]]), #AND Transformation
-    "BS Jinjo Jiggy": LocationData(99999, [["Climb", "Feathery Flap", "Talon Trot", "Wading Boots"], ["Climb", "Rat-A-Tat Rap", "Talon Trot", "Wading Boots"]]), #AND Transformation
+    "BS Mr. Vile Jiggy": LocationData(99999, [["Stilt Stride"]]), #AND Transformation
+    "BS Jinjo Jiggy": LocationData(99999, [["Climb", "Feathery Flap", "Talon Trot", "Stilt Stride"], ["Climb", "Rat-A-Tat Rap", "Talon Trot", "Stilt Stride"]]), #AND Transformation
 #    "BS Blue Jinjo": LocationData (99999, [["Climb"]]),
-#    "BS Green Jinjo": LocationData(99999, [["Talon Trot"], ["Wading Boots"]]), #OR Transformation
+#    "BS Green Jinjo": LocationData(99999, [["Talon Trot"], ["Stilt Stride"]]), #OR Transformation
 #    "BS Orange Jinjo": LocationData(99999),
-#    "BS Pink Jinjo": LocationData(99999 [["Wading Boots"]]), AND Transformation
+#    "BS Pink Jinjo": LocationData(99999 [["Stilt Stride"]]), AND Transformation
 #    "BS Yellow Jinjo": LocationData(99999, [["Feathery Flap"], ["Rat-A-Tat Rap"]]),
-    "BS Wading Boots Molehill": LocationData(99999),
+    "BS Stilt Stride Molehill": LocationData(99999),
     "BS Above Tiptup Honeycomb Piece": LocationData(99999, [["Flap Flip", "Beak Buster"]]),
-    "BS Mumbo's Hut Honeycomb Piece": LocationData(99999, [["Flap Flip", "Wading Boots"]]),
+    "BS Mumbo's Hut Honeycomb Piece": LocationData(99999, [["Flap Flip", "Stilt Stride"]]),
     "BS Mumbo Token Behind Yellow Jinjo": LocationData(99999),
     "BS Mumbo Token Above Cat Tail": LocationData(99999, [["Climb"]]),
     "BS Mumbo Token on Central Platform": LocationData(99999, [["Talon Trot"]]), #OR Transformation
     "BS Mumbo Token Inside Tanktup": LocationData(99999, [["Beak Buster"]]),
     "BS Mumbo Token Near Huts": LocationData(99999, [["Beak Buster", "Shock Spring Jump"]]),
-    "BS Mumbo Token Behind Mumbo's Hut": LocationData(99999, [["Wading Boots"]]),
-    "BS Mumbo Token Behind Mumbo": LocationData(99999, [["Wading Boots"]]),
-    "BS Left Mumbo Token Under Huts": LocationData(99999, [["Wading Boots"]]), #AND Transformation
-    "BS Right Mumbo Token Under Huts": LocationData(99999, [["Wading Boots"]]), #AND Transformation
-    "BS Mumbo Token Near Mr. Vile": LocationData(99999, [["Wading Boots"]]), #AND Transformation
+    "BS Mumbo Token Behind Mumbo's Hut": LocationData(99999, [["Stilt Stride"]]),
+    "BS Mumbo Token Behind Mumbo": LocationData(99999, [["Stilt Stride"]]),
+    "BS Left Mumbo Token Under Huts": LocationData(99999, [["Stilt Stride"]]), #AND Transformation
+    "BS Right Mumbo Token Under Huts": LocationData(99999, [["Stilt Stride"]]), #AND Transformation
+    "BS Mumbo Token Near Mr. Vile": LocationData(99999, [["Stilt Stride"]]), #AND Transformation
 
     "FP Snowman Jiggy": LocationData(99999, [["Flight", "Beak Bomb"]]),
     "FP Snowman's Pipe Jiggy": LocationData(99999, [["Talon Trot", "Shock Spring Jump"], ["Flight"]]),
@@ -192,16 +192,16 @@ location_table = {
     "GV Sandybutt's Jiggy": LocationData(99999, [["Feathery Flap", "Flight", "Eggs"], ["Rat-A-Tat Rap", "Flight", "Eggs"], ["Swim", "Eggs", "Turbo Talon Trot"]]),
     "GV Gobi's Jiggy": LocationData(99999, [["Beak Buster"]]),
     "GV Trunker's Jiggy": LocationData(99999, [["Climb", "Feathery Flap", "Beak Buster"], ["Climb", "Rat-A-Tat Rap", "Beak Buster"], ["Flight, Beak Buster"]]),
-    "GV Jinjo Jiggy": LocationData(99999, [["Feathery Flap", "Flap Flip", "Eggs", "Flight", "Wading Boots"], ["Swim", "Rat-A-Tat Rap", "Flap Flip", "Eggs", "Wading Boots", "Turbo Talon Trot"]]),
+    "GV Jinjo Jiggy": LocationData(99999, [["Feathery Flap", "Flap Flip", "Eggs", "Flight", "Stilt Stride"], ["Swim", "Rat-A-Tat Rap", "Flap Flip", "Eggs", "Stilt Stride", "Turbo Talon Trot"]]),
 #    "GV Blue Jinjo": LocationData(99999, [["Flight"], ["Swim", "Turbo Talon Trot"]]),
 #    "GV Yellow Jinjo": LocationData(99999),
 #    "GV Green Jinjo": LocationData(99999),
 #    "GV Pink Jinjo": LocationData(99999), [["Eggs", "Flight"], ["Swim", "Eggs", "Turbo Talon Trot"]]),
-#    "GV Orange Jinjo": LocationData(99999, [["Feathery Flap", "Flap Flip", "Eggs", "Wading Boots"], ["Rat-A-Tat Rap", "Flap Flip", "Eggs", "Wading Boots"]]),
+#    "GV Orange Jinjo": LocationData(99999, [["Feathery Flap", "Flap Flip", "Eggs", "Stilt Stride"], ["Rat-A-Tat Rap", "Flap Flip", "Eggs", "Stilt Stride"]]),
     "GV Turbo Talon Trot Molehill": LocationData(99999),
     "GV Cactus Honeycomb Piece": LocationData(99999, [["Feathery Flap", "Flap Flip", "Beak Buster", "Flight"], ["Rat-A-Tat Rap", "Flap Flip", "Beak Buster", "Flight"]]),
     "GV Gobi's Honeycomb Piece": LocationData(99999, [["Beak Buster"]]),
-    "GV Mumbo Token Behind Jinxy": LocationData(99999, [["Feathery Flap", "Flap Flip", "Wading Boots"], ["Rat-A-Tat Rap", "Flap Flip", "Wading Boots"]]),
+    "GV Mumbo Token Behind Jinxy": LocationData(99999, [["Feathery Flap", "Flap Flip", "Stilt Stride"], ["Rat-A-Tat Rap", "Flap Flip", "Stilt Stride"]]),
     "GV Mumbo Token On Jinxy's Nose": LocationData(99999, [["Feathery Flap", "Flap Flip"], ["Rat-A-Tat Rap", "Flap Flip"]]),
     "GV Mumbo Token Inside Jinxy": LocationData(99999, [["Feathery Flap", "Flap Flip", "Eggs"], ["Rat-A-Tat Rap", "Flap Flip", "Eggs"]]),
     "GV Mumbo Token Outside Water Pyramid": LocationData(99999),
@@ -304,7 +304,7 @@ location_table = {
     "CCW Summer Snapper Plant Mumbo Token Near Mumbo's Hut": LocationData(99999, [["Wonderwing"]]),
     "CCW Summer Mumbo Token in Gnawty's House": LocationData(99999),
     "CCW Summer Mumbo Token in Field by Garden": LocationData(99999),
-    "CCW Summer Mumbo Token in Mumbo's Hut": LocationData(99999, [["Wonderwing"], ["Wading Boots"]]),
+    "CCW Summer Mumbo Token in Mumbo's Hut": LocationData(99999, [["Wonderwing"], ["Stilt Stride"]]),
     "CCW Summer Mumbo Token in Treetop Above Mumbo's Hut": LocationData(99999),
     "CCW Summer Mumbo Token Above Leaf Jiggy": LocationData(99999),
     "CCW Summer Mumbo Token after Nabnut's House": LocationData(99999),
