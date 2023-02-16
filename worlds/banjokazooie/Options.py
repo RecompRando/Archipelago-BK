@@ -1,5 +1,4 @@
 import typing
-
 from ...Options import Option, Toggle, DefaultOnToggle, Range, Choice, DeathLink
 
 
@@ -18,10 +17,15 @@ class ShuffleMumboTokens(Toggle):
     display_name = "Shuffle Mumbo Tokens"
 
 
+class ShuffleEmptyHoneycombs(Toggle):
+    """Shuffles all Empty Honeycombs into the item pool, and includes Empty Honeycomb locations in randomization"""
+    display_name = "Shuffle Empty Honeycombs"
+
+
 class ShuffleMoves(Choice):
-    """Shuffles moves to other molehills, or adds them to the item pool"""
+    """Shuffles moves into other molehills, or adds them to the item pool"""
     display_name = "Shuffle Moves"
-    option_Off = 0
+    option_off = 0
     option_shuffle_molehills = 1
     option_movesanity = 2
 
@@ -32,8 +36,7 @@ class ShuffleBasicMoves(Toggle):
 
 
 class LevelRandomizer(Toggle):
-    """Randomizes some level entrances. Due to transformation limitations, Mumbo's Mountain and Bubblegloop Swamp can
-    only shuffle between each other, and Mad Monster Mansion and Click Clock Wood cannot be randomized"""
+    """Randomizes most level entrances. Mad Monster Mansion cannot be randomized"""
     display_name = "Level Randomizer"
 
 
@@ -45,7 +48,8 @@ class NumberOfJiggies(Range):
 
 
 class NumberOfMumboTokens(Range):
-    """How many Mumbo Tokens exist. There will always be enough to afford every transformation"""
+    """How many Mumbo Tokens exist. There will always be enough to afford every transformation. This only applies if
+    Shuffle Mumbo Tokens is turned on"""
     range_start = 75
     range_end = 113
     default = 113
@@ -139,6 +143,7 @@ bk_options: typing.Dict[str, type(Option)] = {
     "SafetyChecks": SafetyChecks,
     "AdvancedTricks": AdvancedTricks,
     "MumboShuffle": ShuffleMumboTokens,
+    "EmptyHoneycombShuffle": ShuffleEmptyHoneycombs,
     "MoveShuffle": ShuffleMoves,
     "BasicMoveShuffle": ShuffleBasicMoves,
     "LevelRandomizer": LevelRandomizer,
