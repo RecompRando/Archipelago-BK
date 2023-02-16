@@ -1,5 +1,4 @@
 import typing
-
 from BaseClasses import Item, ItemClassification
 
 
@@ -38,26 +37,26 @@ learned_ability_table = {
 }
 
 progression_item_table = {
-    "Jiggy": ItemData(130017, ItemClassification.progression),
-    "Mumbo Token": ItemData(130018, ItemClassification.progression),
+    "Jiggy": ItemData(130017, ItemClassification.progression_skip_balancing),
+    "Mumbo Token": ItemData(130018, ItemClassification.progression_skip_balancing),
 }
 
 useful_item_table = {
     "Honeycomb Piece": ItemData(130019, ItemClassification.useful),
 }
 
-junk_table = {
+junk_item_table = {
     "Honeycomb": ItemData(130020, ItemClassification.filler),
-    "10 Eggs": ItemData(130021, ItemClassification.filler),
+    "20 Eggs": ItemData(130021, ItemClassification.filler),
     "10 Red Feathers": ItemData(130022, ItemClassification.filler),
     "5 Gold Feathers": ItemData(130023, ItemClassification.filler),
     "Extra Life": ItemData(130024, ItemClassification.filler)
 }
 
 item_table = {
-    **basic_ability_table
-    **learned_ability_table
-    **progression_item_table
-    **useful_item_table
-    **junk_table
+    **basic_ability_table,
+    **learned_ability_table,
+    **progression_item_table,
+    **useful_item_table,
+    **junk_item_table
 }

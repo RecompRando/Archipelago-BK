@@ -1,30 +1,33 @@
 import typing
-
 from BaseClasses import Location
+
 
 class BKLocation(Location):
     game = "Banjo-Kazooie"
+
 
 class LocationData(typing.NamedTuple):
     address: int
     requirements: typing.Optional[typing.List[typing.List[str]]] = None
 
 
-location_table = {
-    "Jump Molehill": LocationData(120000),
-    "Swim Molehill": LocationData(120001),
-    "Climb Molehill": LocationData(120002),
-    "Beak Barge Molehill": LocationData(120003),
-    "Attack Molehill": LocationData(120004),
+sm_location_table = {
+    "SM Jump Molehill": LocationData(120000),
+    "SM Swim Molehill": LocationData(120001),
+    "SM Climb Molehill": LocationData(120002),
+    "SM Beak Barge Molehill": LocationData(120003),
+    "SM Attack Molehill": LocationData(120004),
     "SM Jump Honeycomb Piece": LocationData(120005, [["Jump", "Feathery Flap"], ["Flap Flip"]]),
     "SM Waterfall Honeycomb Piece": LocationData(120006, [["Jump", "Feathery Flap"], ["Jump", "Rat-A-Tat Rap"]]),
     "SM Tree Honeycomb Piece": LocationData(120007, [["Climb"]]),
     "SM Underwater Honeycomb Piece": LocationData(120008, [["Swim"]]),
     "SM Beak Barge Honeycomb Piece": LocationData(120009, [["Beak Barge"]]),
     "SM Combat Honeycomb Piece": LocationData(120010, [["Rat-A-Tat Rap"]]),
+}
 
+gl_location_table = {
     "GL Entryway Jiggy": LocationData(120013, [["Jump"], ["Feathery Flap"], ["Flap Flip"], ["Rat-A-Tat Rap"]]),
-    "GL Atop Mumbo's Mountain Jiggy": LocationData(120014, [["Beak Buster"]]), #Needs Transformation
+    "GL Atop Mumbo's Mountain Jiggy": LocationData(120014, [["Jump", "Beak Buster"]]), #Needs Transformation
     "GL Treasure Trove Cove Cannon Jiggy": LocationData(120015, [["Flap Flip", "Beak Buster", "Flight"]]),
     "GL Clanker's Cavern Eye Switch Jiggy": LocationData(120016, [["Swim", "Beak Buster"]]),
     "GL Bubblegloop Swamp Witch's Hat Jiggy": LocationData(120017, [["Rat-A-Tat Rap", "Beak Buster", "Shock Spring Jump"], ["Beak Barge", "Beak Buster", "Shock Spring Jump"], ["Eggs", "Beak Buster", "Shock Spring Jump"]]),
@@ -44,7 +47,9 @@ location_table = {
     "GL Mumbo Token By Mad Monster Mansion Podium": LocationData(99999, [["Swim", "Feathery Flap"], ["Swim", "Rar-A-Tat Rap"]]),
     "GL Mumbo Token Behind Mumbo": LocationData(99999, [["Flap Flip", "Beak Barge"], [["Flap Flip", "Rat-A-Tat Rap"]]]), #Needs Transformation
     "GL Tunnel from Click Clock Wood Mumbo Token": LocationData(99999),
+}
 
+mm_location_table = {
     "MM Conga Orange Throw Jiggy": LocationData(120014),
     "MM Chimpy Orange Jiggy": LocationData(120015, [["Climb"]]),
     "MM Conga Attack Jiggy": LocationData(120016, [["Flap Flip", "Eggs"]]),
@@ -70,7 +75,9 @@ location_table = {
     "MM Mumbo Token Behind Stonehenge": LocationData(99999),
     "MM Mumbo Token in Termite Mountain": LocationData(99999, [["Talon Trot"]]), #OR Transformation
     "MM Mumbo Token by Mumbo's Hut": LocationData(99999),
+}
 
+ttc_location_table = {
     "TTC Nipper Jiggy": LocationData(99999, [["Jump", "Rat-A-Tat Rap"], ["Flap Flip", "Rat-A-Tat Rap"]]),
     "TTC Blubber's Jiggy": LocationData(99999, [["Flap Flip", "Swim", "Beak Buster"]]),
     "TTC Sandcastle Jiggy": LocationData(99999, [["Flap Flip", "Eggs", "Beak Buster"]]),
@@ -100,7 +107,9 @@ location_table = {
     "TTC Mumbo Token in Underwater Pool": LocationData(99999, [["Swim"]]),
     "TTC Mumbo Token Above Floating Crate": LocationData(99999),
     "TTC Mumbo Token in Lighthouse": LocationData(99999, [["Flight"]]),
+}
 
+cc_location_table = {
     "CC Raising Clanker Jiggy": LocationData(99999),
     "CC Above Clanker's Tail Jiggy": LocationData(99999, [["Rat-A-Tat Rap"]]),
     "CC Above Clanker's Bolt Jiggy": LocationData(99999, [["Flap Flip"]]),
@@ -124,7 +133,9 @@ location_table = {
     "CC Mumbo Token in Clanker's First Gold Tooth":  LocationData(99999, [["Eggs"]]),
     "CC Mumbo Token in High Grate": LocationData(99999, [["Climb", "Shock Spring Jump"]]),
     "CC Mumbo Token in Underwater Tunnel": LocationData(99999),
+}
 
+bs_location_table = {
     "BS Egg Jiggy": LocationData(99999, [["Rat-A-Tat Rap", "Beak Barge", "Beak Buster", "Shock Spring Jump"]]),
     "BS Central Switch Jiggy": LocationData(99999, [["Talon Trot", "Beak Buster"]]),
     "BS Flibbet Jiggy": LocationData(99999, [["Claw Swipe"], ["Roll"], ["Rat-A-Tat Rap"], ["Beak Barge"], ["Beak Buster"]]), #OR Transformation
@@ -153,7 +164,9 @@ location_table = {
     "BS Left Mumbo Token Under Huts": LocationData(99999, [["Stilt Stride"]]), #AND Transformation
     "BS Right Mumbo Token Under Huts": LocationData(99999, [["Stilt Stride"]]), #AND Transformation
     "BS Mumbo Token Near Mr. Vile": LocationData(99999, [["Stilt Stride"]]), #AND Transformation
+}
 
+fp_location_table = {
     "FP Snowman Jiggy": LocationData(99999, [["Flight", "Beak Bomb"]]),
     "FP Snowman's Pipe Jiggy": LocationData(99999, [["Talon Trot", "Shock Spring Jump"], ["Flight"]]),
     "FP Boggy's Toboggan Jiggy": LocationData(99999, [["Talon Trot"], ["Flight"]]),
@@ -182,7 +195,9 @@ location_table = {
     "FP Right Mumbo Token Under Large Snowman": LocationData(99999),
     "FP Mumbo Token Under Christmas Tree": LocationData(99999, [["Jump", "Feathery Flap"], ["Jump", "Rat-A-Tat Rap"], ["Flap Flip"], ["Flight"]]),
     "FP Underwater Mumbo Token": LocationData(99999),
+}
 
+gv_location_table = {
     "GV Jinxy's Jiggy": LocationData(99999, [["Feathery Flap", "Flap Flip", "Eggs"], ["Rat-A-Tat Rap", "Flap Flip", "Eggs"]]),
     "GV Grabba's Jiggy": LocationData(99999, [["Turbo Talon Trot"]]),
     "GV Flip Puzzle Jiggy": LocationData(99999, [["Beak Buster"]]),
@@ -211,7 +226,9 @@ location_table = {
     "GV Mumbo Token Atop Central Pyramid": LocationData(99999, [["Flight"], ["Swim", "Eggs", "Turbo Talon Trot"]]),
     "GV Mumbo Token in Sandybutt's Pot": LocationData(99999, [["Eggs", "Flight"], ["Swim", "Eggs", "Turbo Talon Trot"]]),
 #    "GV Mumbo Token Inside Water Pyramid": LocationData(XXXXXX, [["Swim", "Turbo Talon Trot"]]), #MISSABLE, DO NOT RANDOMIZE OR FACTOR IN LOGIC
+}
 
+mmm_location_table = {
     "MMM Napper's Jiggy": LocationData(99999, [["Jump", "Climb", "Shock Spring Jump"], ["Flap Flip", "Feathery Flap", "Climb", "Talon Trot", "Shock Spring Jump"], ["Flap Flip", "Climb", "Rat-A-Tat Rap", "Talon Trot", "Shock Spring Jump"]]),
     "MMM Cellar Jiggy": LocationData(99999, [["Rat-A-Tat Rap"], ["Beak Barge"], ["Eggs"]]),
     "MMM Tumblar's Jiggy": LocationData(99999, [["Rat-A-Tat Rap"], ["Beak Barge"], ["Eggs"]]),
@@ -243,7 +260,9 @@ location_table = {
     "MMM Mumbo Token Near Tumblar's Shack": LocationData(99999),
     "MMM Mumbo Token in Yellow Jinjo Room":  LocationData(99999, [["Jump", "Climb", "Rat-A-Tat Rap", "Shock Spring Jump"], ["Jump", "Climb", "Eggs", "Shock Spring Jump"], ["Climb", "Rat-A-Tat Rap", "Talon Trot", "Shock Spring Jump"], ["Climb", "Talon Trot", "Eggs", "Shock Spring Jump"]]),
     "MMM Mumbo Token Near Blue Jinjo": LocationData(99999, [["Eggs"]]),
+}
 
+rbb_location_table = {
     #RBB Entry REQUIRES Climb
     "RBB Smokestack Jiggy": LocationData(99999),
     "RBB Whistle Jiggy": LocationData(99999, [["Beak Buster"]]),
@@ -277,7 +296,9 @@ location_table = {
     "RBB Mumbo Token Ship's Bow": LocationData(99999),
     "RBB Warehouse Crate 1 Mumbo Token": LocationData(99999),
     "RBB Warehouse Crate 2 Mumbo Token": LocationData(99999),
+}
 
+ccw_location_table = {
     "CCW Treetop Room Jiggy": LocationData(99999, [["Beak Barge"], ["Rat-A-Tat Rap"], ["Eggs"]]),
     "CCW Top of the Tree Jiggy": LocationData(99999), #Requires Transformation
     "CCW Summer Zubbas' Jiggy": LocationData(99999),
@@ -318,98 +339,18 @@ location_table = {
     "CCW Winter Beehive": LocationData(99999),
     "CCW Winter Mumbo Token Near Nabnut's House": LocationData(99999),
     "CCW Winter Mumbo Token Behind Lake Platform": LocationData(99999),
-
-#    "Banjo's House": 12000,
-#    "Spiral Mountain": 12001,
-#    "Grunty's Lair 1F": 12002,
-#    "Grunty's Lair 2F": 12003,
-#    "Grunty's Lair 3F:": 12004,
-#    "Grunty's Lair Trove Entrance": 12005,
-#    "Grunty's Lair Clanker Entrance": 12006,
-#    "Grunty's Lair 4F": 12007,
-#    "Grunty's Lair Swamp Entrance": 12008,
-#    "Grunty's Lair 5F": 12009,
-#    "Grunty's Lair 6F": 12010,
-#    "Grunty's Lair Magma Room": 12011,
-#    "Grunty's Lair Graveyard": 12012,
-#    "Grunty's Lair Mumbo's Hut": 12013,
-#    "Grunty's Lair 7F": 12014,
-#    "Grunty's Lair Shipyard": 12015,
-#    "Grunty's Lair 8F": 12016,
-#    "Grunty's Lair Game Show": 12017,
-#    "Grunty's Lair Top": 12018,
-#    "Grunty's Lair Arena": 12019,
-#    "Mumbo's Mountain Hub": 12020,
-#    "Mumbo's Mountain Mumbo's Hut": 12021,
-#    "Mumbo's Mountain Termite Hill": 12022,
-#    "Treasure Trove Cove Hub": 12023,
-#    "Treasure Trove Cove Sandcastle Room": 12024,
-#    "Treasure Trove Cove Sharkfood Island Cave": 12025,
-#    "Treasure Trove Cove Crab Shell": 12026,
-#    "Treasure Trove Cove Ship Entrance A": 12027,
-#    "Treasure Trove Cove Ship Entrance B": 12028,
-#    "Clanker's Cavern Hub": 12029,
-#    "Clanker's Cavern Clanker's Head": 12030,
-#    "Clanker's Cavern Clanker's Mouth": 12031,
-#    "Clanker's Cavern Clanker's Stomach": 12032,
-#    "Bubblegloop Swamp Hub": 12033,
-#    "Bubblegloop Swamp Mumbo's Hut": 12034,
-#    "Bubblegloop Swamp Inside Alligator": 12035,
-#    "Bubblegloop Swamp Inside Tanktup": 12036,
-#    "Freezeezy Peak Hub": 12037,
-#    "Freezeezy Peak Boggy's Igloo": 12038,
-#    "Freezeezy Peak Wozza's Cave": 12039,
-#    "Freezeezy Peak Christmas Tree": 12040,
-#    "Freezeezy Peak Mumbo's Hut": 12041,
-#    "Gobi's Valley Hub": 12042,
-#    "Gobi's Valley Inside Jinxy": 12043,
-#    "Gobi's Valley Egg Cave": 12044,
-#    "Gobi's Valley Rubee's Pyramid": 12045,
-#    "Gobi's Valley Water Pyramid": 12046,
-#    "Gobi's Valley Panel Puzzle Pyramid": 12047,
-#    "Gobi's Valley Sandybutt's Tomb": 12048,
-#    "Mad Monster Mansion Hub": 12049,
-#    "Mad Monster Mansion Dining Room": 12050,
-#    "Mad Monster Mansion Bathroom": 12051,
-#    "Mad Monster Mansion Bedroom": 12052,
-#    "Mad Monster Mansion Rafters": 12053,
-#    "Mad Monster Mansion Cellar": 12054,
-#    "Mad Monster Mansion Well": 12055,
-#    "Mad Monster Mansion Tumblar's Shack": 12056,
-#    "Mad Monster Mansion Church": 12057,
-#    "Mad Monster Mansion Gutter": 12058,
-#    "Mad Monster Mansion Mumbo's Hut": 12059,
-#    "Rusty Bucket Bay Hub": 12060,
-#    "Rusty Bucket Bay Engine Room": 12061,
-#    "Rusty Bucket Bay Captain's Cabin": 12062,
-#    "Rusty Bucket Bay Barracks": 12063,
-#    "Rusty Bucket Bay Kitchen": 12064,
-#    "Rusty Bucket Bay Map Room": 12065,
-#    "Rusty Bucket Bay Cargo Hold": 12066,
-#    "Rusty Bucket Bay Anchor Hold": 12067,
-#    "Rusty Bucket Bay Storage Crate A": 12068,
-#    "Rusty Bucket Bay Storage Crate B": 12069,
-#    "Rusty Bucket Bay Storage Crate C": 12070,
-#    "Rusty Bucket Bay Broken Window": 12071,
-#    "Rusty Bucket Bay Water Warehouse": 12072,
-#    "Rusty Bucket Bay Snacker Warehouse": 12073,
-#    "Click Clock Wood Hub": 12074,
-#    "Click Clock Wood Spring Hub": 12075,
-#    "Click Clock Wood Spring Mumbo's Hut": 12076,
-#    "Click Clock Wood Spring Nabnut's House": 12077,
-#    "Click Clock Wood Spring Zubba's Nest": 12078,
-#    "Click Clock Wood Summer Hub": 12079,
-#    "Click Clock Wood Summer Mumbo's Hut": 12080,
-#    "Click Clock Wood Summer Nabnut's House": 12081,
-#    "Click Clock Wood Summer Zubba's Nest": 12082,
-#    "Click Clock Wood Autumn Hub": 12083,
-#    "Click Clock Wood Autumn Mumbo's Hut": 12084,
-#    "Click Clock Wood Autumn Nabnut's House": 12085,
-#    "Click Clock Wood Autumn Zubba's Nest": 12086,
-#    "Click Clock Wood Winter Hub": 12087,
-#    "Click Clock Wood Winter Mumbo's Hut": 12088,
-#    "Click Clock Wood Winter Nabnut's House": 12089,
-#    "Click Clock Wood Nut Storage Room": 12090,
-#    "Click Clock Wood Treetop Room": 12091,###
 }
 
+location_table = {
+    **sm_location_table,
+    **gl_location_table,
+    **mm_location_table,
+    **ttc_location_table,
+    **cc_location_table,
+    **bs_location_table,
+    **fp_location_table,
+    **gv_location_table,
+    **mmm_location_table,
+    **rbb_location_table,
+    **ccw_location_table
+}
