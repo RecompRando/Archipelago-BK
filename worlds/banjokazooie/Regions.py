@@ -13,16 +13,9 @@ def create_regions(world: MultiWorld, player: int):
                 menu_region.locations.append(BKLocation(player, location, empty_honeycomb_location_table[location].address, menu_region))
     world.regions.append(menu_region)
 
-    glregion = create_region("Grunty's Lair", player, world)
-    initialize_locations(glregion, gl_location_table)
-    if(world.ShuffleCheato[player].value):
-        for location in cheato_location_table.keys():
-            glregion.locations.append(BKLocation(player, location, cheato_location_table[location].address, glregion))
-    if(world.ShuffleMumboTokens[player].value):
-        for location in mumbo_token_location_table.keys():
-            if location.contains("GL"):
-                glregion.locations.append(BKLocation(player, location, mumbo_token_location_table[location].address, glregion))
-    world.regions.append(glregion)
+    glfloor1region = create_region("Grunty's Lair 1F", player, world)
+    initialize_locations(glfloor1region, glf1_location_table)
+    world.regions.append(glfloor1region)
 
     mmregion = create_region("Mumbo's Mountain", player, world)
     initialize_locations(mmregion, mm_location_table)
@@ -41,6 +34,11 @@ def create_regions(world: MultiWorld, player: int):
     world.regions.append(mmregion)
 
     glfloor2region = create_region("Grunty's Lair 2F", player, world)
+    initialize_locations(glfloor2region, glf2_location_table)
+    if(world.ShuffleMumboTokens[player].value):
+        for location in mumbo_token_location_table.keys():
+            if location.contains("GLF2"):
+                glfloor2region.locations.append(BKLocation(player, location, mumbo_token_location_table[location].address, glfloor2region))
     world.regions.append(glfloor2region)
 
     ttcregion = create_region("Treasure Trove Cove", player, world)
@@ -78,6 +76,11 @@ def create_regions(world: MultiWorld, player: int):
     world.regions.append(ccregion)
 
     glfloor3region = create_region("Grunty's Lair 3F", player, world)
+    initialize_locations(glfloor3region, glf3_location_table)
+    if(world.ShuffleMumboTokens[player].value):
+        for location in mumbo_token_location_table.keys():
+            if location.contains("GLF3"):
+                glfloor3region.locations.append(BKLocation(player, location, mumbo_token_location_table[location].address, glfloor3region))
     world.regions.append(glfloor3region)
 
     bsregion = create_region("Bubblegloop Swamp", player, world)
@@ -97,10 +100,12 @@ def create_regions(world: MultiWorld, player: int):
     world.regions.append(bsregion)
 
     glfloor4region = create_region("Grunty's Lair 4F", player, world)
+    initialize_locations(glfloor4region, glf4_location_table)
+    if(world.ShuffleMumboTokens[player].value):
+        for location in mumbo_token_location_table.keys():
+            if location.contains("GLF4"):
+                glfloor4region.locations.append(BKLocation(player, location, mumbo_token_location_table[location].address, glfloor4region))
     world.regions.append(glfloor4region)
-
-    glfloor5region = create_region("Grunty's Lair 5F", player, world)
-    world.regions.append(glfloor5region)
 
     fpregion = create_region("Freezeezy Peak", player, world)
     initialize_locations(fpregion, fp_location_table)
@@ -138,8 +143,13 @@ def create_regions(world: MultiWorld, player: int):
                 gvregion.locations.append(BKLocation(player, location, mumbo_token_location_table[location].address, gvregion))
     world.regions.append(gvregion)
 
-    glfloor6region = create_region("Grunty's Lair 6F", player, world)
-    world.regions.append(glfloor6region)
+    glfloor5region = create_region("Grunty's Lair 5F", player, world)
+    initialize_locations(glfloor5region, glf5_location_table)
+    if(world.ShuffleMumboTokens[player].value):
+        for location in mumbo_token_location_table.keys():
+            if location.contains("GLF5"):
+                glfloor5region.locations.append(BKLocation(player, location, mumbo_token_location_table[location].address, glfloor5region))
+    world.regions.append(glfloor5region)
 
     mmmregion = create_region("Mad Monster Mansion", player, world)
     initialize_locations(mmmregion, mmm_location_table)
@@ -178,8 +188,13 @@ def create_regions(world: MultiWorld, player: int):
                 rbbregion.locations.append(BKLocation(player, location, mumbo_token_location_table[location].address, rbbregion))
     world.regions.append(rbbregion)
 
-    glfloor7region = create_region("Grunty's Lair 7F", player, world)
-    world.regions.append(glfloor7region)
+    glfloor6region = create_region("Grunty's Lair 6F", player, world)
+    initialize_locations(glfloor6region, glf6_location_table)
+    if(world.ShuffleMumboTokens[player].value):
+        for location in mumbo_token_location_table.keys():
+            if location.contains("GLF6"):
+                glfloor6region.locations.append(BKLocation(player, location, mumbo_token_location_table[location].address, glfloor6region))
+    world.regions.append(glfloor6region)
 
     ccwregion = create_region("Click Clock Wood", player, world)
     initialize_locations(ccwregion, ccw_location_table)
@@ -199,8 +214,11 @@ def create_regions(world: MultiWorld, player: int):
                 ccwregion.locations.append(BKLocation(player, location, mumbo_token_location_table[location].address, ccwregion))
     world.regions.append(ccwregion)
 
-    glfloor8region = create_region("Grunty's Lair 8F", player, world)
-    world.regions.append(glfloor8region)
+    glfloor7region = create_region("Grunty's Lair 7F", player, world)
+    world.regions.append(glfloor7region)
+
+    gltopfloorregion = create_region("Grunty's Lair Top Floor", player, world)
+    world.regions.append(gltopfloorregion)
 
 
 def connect_regions(world: MultiWorld, player: int, source: str, target: str, rule: typing.Optional[typing.Callable] = None):
@@ -217,7 +235,7 @@ def connect_regions(world: MultiWorld, player: int, source: str, target: str, ru
 
 
 def create_region(name: str, player: int, world: MultiWorld):
-    return Region(name, RegionType.Generic, name, player, world)
+    return Region(name, player, world, name)
 
 
 def initialize_locations(region: Region, locations, player: int):

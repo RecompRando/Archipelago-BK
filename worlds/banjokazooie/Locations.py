@@ -11,17 +11,32 @@ class LocationData(typing.NamedTuple):
     requirements: typing.Optional[typing.List[typing.List[str]]] = None
 
 
-gl_location_table = {
-    "GL Entryway Jiggy": LocationData(120013, [["Jump"], ["Feathery Flap"], ["Flap Flip"], ["Rat-A-Tat Rap"]]),
-    "GL Atop Mumbo's Mountain Jiggy": LocationData(120014, [["Jump", "Beak Buster"]]), #Needs Transformation
-    "GL Treasure Trove Cove Cannon Jiggy": LocationData(120015, [["Flap Flip", "Beak Buster", "Flight"]]),
-    "GL Clanker's Cavern Eye Switch Jiggy": LocationData(120016, [["Swim", "Beak Buster"]]),
-    "GL Bubblegloop Swamp Witch's Hat Jiggy": LocationData(120017, [["Rat-A-Tat Rap", "Beak Buster", "Shock Spring Jump"], ["Beak Barge", "Beak Buster", "Shock Spring Jump"], ["Eggs", "Beak Buster", "Shock Spring Jump"]]),
-    "GL Above Freezeezy Peak Jiggy": LocationData(120018, [["Flap Flip", "Eggs", "Beak Buster" "Flight", "Turbo Talon Trot"]]),
-    "GL Gobi's Valley Sarcophagus Jiggy": LocationData(120019, [["Feathery Flap", "Eggs", "Beak Buster", "Flight"], ["Rat-A-Tat Rap", "Eggs", "Beak Buster",  "Flight"], ["Swim", "Eggs", "Beak Buster", "Turbo Talon Trot"]]),
-    "GL Mad Monster Mansion Grunty's Eye Jiggy": LocationData(99999[["Flap Flip", "Rat-A-Tat Rap", "Beak Buster", "Turbo Talon Trot", "Shock Spring Jump", "Flight"]]),
-    "GL Rusty Bucket Bay Area Jiggy": LocationData(99999, [["Jump", "Feathery Flap", "Beak Buster"], [["Jump", "Rat-A-Tat Rap", "Beak Buster"]]]),
-    "GL Click Clock Wood Bee Jiggy": LocationData(99999, [["Feathery Flap", "Talon Trot", "Shock Spring Jump"], ["Rat-A-Tat Rap", "Talon Trot", "Shock Spring Jump"]]), #Requires Transformation
+glf1_location_table = {
+    "GLF1 Entryway Jiggy": LocationData(120013, [["Jump"], ["Feathery Flap"], ["Flap Flip"], ["Rat-A-Tat Rap"]]),
+    "GLF1 Atop Mumbo's Mountain Jiggy": LocationData(120014, [["Jump", "Beak Buster"]]), #Needs Transformation
+}
+
+glf2_location_table = {
+    "GLF2 Treasure Trove Cove Cannon Jiggy": LocationData(120015, [["Flap Flip", "Beak Buster", "Flight"]]),
+    "GLF2 Clanker's Cavern Eye Switch Jiggy": LocationData(120016, [["Swim", "Beak Buster"]]),
+}
+
+glf3_location_table = {
+    "GLF3 Bubblegloop Swamp Witch's Hat Jiggy": LocationData(120017, [["Rat-A-Tat Rap", "Beak Buster", "Shock Spring Jump"], ["Beak Barge", "Beak Buster", "Shock Spring Jump"], ["Eggs", "Beak Buster", "Shock Spring Jump"]]),
+}
+
+glf4_location_table = {
+    "GLF4 Above Freezeezy Peak Jiggy": LocationData(120018, [["Flap Flip", "Eggs", "Beak Buster" "Flight", "Turbo Talon Trot"]]),
+    "GLF4 Gobi's Valley Sarcophagus Jiggy": LocationData(120019, [["Feathery Flap", "Eggs", "Beak Buster", "Flight"], ["Rat-A-Tat Rap", "Eggs", "Beak Buster",  "Flight"], ["Swim", "Eggs", "Beak Buster", "Turbo Talon Trot"]]),
+    "GLF4 Mad Monster Mansion Grunty's Eye Jiggy": LocationData(99999[["Flap Flip", "Rat-A-Tat Rap", "Beak Buster", "Turbo Talon Trot", "Shock Spring Jump", "Flight"]]),
+}
+
+glf5_location_table = {
+    "GLF5 Rusty Bucket Bay Area Jiggy": LocationData(99999, [["Jump", "Feathery Flap", "Beak Buster"], [["Jump", "Rat-A-Tat Rap", "Beak Buster"]]]),
+}
+
+glf6_location_table = {
+    "GLF6 Click Clock Wood Bee Jiggy": LocationData(99999, [["Feathery Flap", "Talon Trot", "Shock Spring Jump"], ["Rat-A-Tat Rap", "Talon Trot", "Shock Spring Jump"]]), #Requires Transformation
 }
 
 mm_location_table = {
@@ -43,7 +58,7 @@ mm_location_table = {
 }
 
 ttc_location_table = {
-    "TTC Nipper Jiggy": LocationData(99999, [["Jump", "Rat-A-Tat Rap"], ["Flap Flip", "Rat-A-Tat Rap"]]),
+    "TTC Nipper Jiggy": LocationData(99999, [["Jump", "Rat-A-Tat Rap"], ["Flap Flip", "Rat-A-Tat Rap"], ["Jump", "Wonderwing"], ["Flap Flip", "Wonderwing"]]),
     "TTC Blubber's Jiggy": LocationData(99999, [["Flap Flip", "Swim", "Beak Buster"]]),
     "TTC Sandcastle Jiggy": LocationData(99999, [["Flap Flip", "Eggs", "Beak Buster"]]),
     "TTC Shock Spring Jump Jiggy": LocationData(99999, [["Shock Spring Jump"], ["Flight"]]),
@@ -250,19 +265,16 @@ secrets_location_table = {
 }
 
 mumbo_token_location_table = {
-    "GL Mumbo Token Behind Red Magic Cauldron": LocationData(999999),
-    "GL Mumbo Token Above Drain Pipe": LocationData(999999),
-    "GL Mumbo Token Above Clanker's Cavern": LocationData(999999, [["Flap Flip", "Feathery Flap", "Beak Buster"],
-                                                                   ["Flap Flip", "Rat-A-Tat Rap", "Beak Buster"]]),
-    "GL Mumbo Token Near Click Clock Wood Podium": LocationData(999999, [["Swim"]]),
-    "GL Mumbo Token Behind Sarcophagus": LocationData(99999),
-    "GL Mumbo Token Above Freezeezy Peak": LocationData(99999, [["Flap Flip"]]),
-    "GL Mumbo Token Under Rusty Bucket Bay": LocationData(99999, [["Swim"]]),
-    "GL Mumbo Token By Mad Monster Mansion Podium": LocationData(99999, [["Swim", "Feathery Flap"],
-                                                                         ["Swim", "Rar-A-Tat Rap"]]),
-    "GL Mumbo Token Behind Mumbo": LocationData(99999, [["Flap Flip", "Beak Barge"], [["Flap Flip", "Rat-A-Tat Rap"]]]),
-    # Needs Transformation
-    "GL Tunnel from Click Clock Wood Mumbo Token": LocationData(99999),
+    "GLF2 Mumbo Token Behind Red Magic Cauldron": LocationData(999999),
+    "GLF2 Mumbo Token Above Drain Pipe": LocationData(999999),
+    "GLF2 Mumbo Token Above Clanker's Cavern": LocationData(999999, [["Flap Flip", "Feathery Flap", "Beak Buster"], ["Flap Flip", "Rat-A-Tat Rap", "Beak Buster"]]),
+    "GLF2 Mumbo Token Near Click Clock Wood Podium": LocationData(999999, [["Swim"]]),
+    "GLF4 Mumbo Token Behind Sarcophagus": LocationData(99999),
+    "GLF4 Mumbo Token Above Freezeezy Peak": LocationData(99999, [["Flap Flip"]]),
+    "GLF5 Mumbo Token Under Rusty Bucket Bay": LocationData(99999, [["Swim"]]),
+    "GLF5 Mumbo Token By Mad Monster Mansion Podium": LocationData(99999, [["Swim", "Feathery Flap"], ["Swim", "Rar-A-Tat Rap"]]),
+    "GLF5 Mumbo Token Behind Mumbo": LocationData(99999, [["Flap Flip", "Beak Barge"], [["Flap Flip", "Rat-A-Tat Rap"]]]), # Needs Transformation
+    "GLF6 Tunnel from Click Clock Wood Mumbo Token": LocationData(99999),
     "MM Mumbo Token Behind Pink Jinjo": LocationData(12034),
     "MM Mumbo Token By Conga": LocationData(12035, [["Flap Flip", "Climb"]]),
     "MM Mumbo Token Behind Stonehenge": LocationData(99999),
@@ -369,15 +381,20 @@ mumbo_token_location_table = {
 }
 
 location_table = {
-    **gl_location_table,
+    **glf1_location_table,
     **mm_location_table,
+    **glf2_location_table,
     **ttc_location_table,
     **cc_location_table,
+    **glf3_location_table,
     **bs_location_table,
+    **glf4_location_table,
     **fp_location_table,
     **gv_location_table,
     **mmm_location_table,
+    **glf5_location_table,
     **rbb_location_table,
+    **glf6_location_table,
     **ccw_location_table,
 }
 
