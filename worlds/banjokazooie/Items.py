@@ -43,6 +43,19 @@ progression_item_table = {
 
 useful_item_table = {
     "Honeycomb Piece": ItemData(130019, ItemClassification.useful),
+    "BLUEEGGS Cheato": ItemData(99999, ItemClassification.useful),
+    "REDFEATHERS Cheato": ItemData(99999, ItemClassification.useful),
+    "GOLDFEATHERS Cheato": ItemData(99999, ItemClassification.useful)
+}
+
+useless_item_table = {
+    "Ice Key": ItemData(99999, ItemClassification.trap),
+    "Pink Egg": ItemData(99999, ItemClassification.trap),
+    "Blue Egg": ItemData(99999, ItemClassification.trap),
+    "Cyan Egg": ItemData(99999, ItemClassification.trap),
+    "Green Egg": ItemData(99999, ItemClassification.trap),
+    "Red Egg": ItemData(99999, ItemClassification.trap),
+    "Yellow Egg": ItemData(99999, ItemClassification.trap),
 }
 
 junk_item_table = {
@@ -58,5 +71,6 @@ item_table = {
     **learned_ability_table,
     **progression_item_table,
     **useful_item_table,
+    **useless_item_table,
     **junk_item_table
 }

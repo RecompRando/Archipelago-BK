@@ -22,6 +22,20 @@ class ShuffleEmptyHoneycombs(Toggle):
     display_name = "Shuffle Empty Honeycombs"
 
 
+class ShuffleCheato(Toggle):
+    """Shuffles the three Cheato checks into the item pool"""
+    display_name = "Shuffle Cheato"
+
+
+class ShuffleSecrets(Choice):
+    """Shuffles the six Giant Eggs and Ice Key into the pool. Open Locations has all of them available by default,
+    while Closed Locations requires entering the appropriate codes in the Treasure Trove Cove Sandcastle Room"""
+    display_name = "Shuffle Secrets"
+    option_off = 0
+    option_open_locations = 1
+    option_closed_locations = 2
+
+
 class ShuffleMoves(Choice):
     """Shuffles moves into other molehills, or adds them to the item pool"""
     display_name = "Shuffle Moves"
@@ -144,6 +158,8 @@ bk_options: typing.Dict[str, type(Option)] = {
     "AdvancedTricks": AdvancedTricks,
     "MumboShuffle": ShuffleMumboTokens,
     "EmptyHoneycombShuffle": ShuffleEmptyHoneycombs,
+    "ShuffleCheato": ShuffleCheato,
+    "ShuffleSecrets": ShuffleSecrets,
     "MoveShuffle": ShuffleMoves,
     "BasicMoveShuffle": ShuffleBasicMoves,
     "LevelRandomizer": LevelRandomizer,
