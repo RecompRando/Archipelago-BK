@@ -42,7 +42,7 @@ progression_item_table = {
 }
 
 useful_item_table = {
-    "Honeycomb Piece": ItemData(130019, ItemClassification.useful),
+    "Empty Honeycomb Piece": ItemData(130019, ItemClassification.useful),
     "BLUEEGGS Cheato": ItemData(99999, ItemClassification.useful),
     "REDFEATHERS Cheato": ItemData(99999, ItemClassification.useful),
     "GOLDFEATHERS Cheato": ItemData(99999, ItemClassification.useful)

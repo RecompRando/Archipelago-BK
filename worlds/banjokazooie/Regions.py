@@ -1,9 +1,9 @@
-from BaseClasses import MultiWorld, Region, RegionType, Entrance
+from BaseClasses import MultiWorld, Region, Entrance
 from Locations import *
 
 
 def create_regions(world: MultiWorld, player: int):
-    menu_region = Region("Menu", RegionType.Generic, "Spiral Mountain", player, world)
+    menu_region = Region("Menu", player, world, "Spiral Mountain")
     if(world.ShuffleBasicMoves[player].value):
         for location in basic_molehill_location_table.keys():
             menu_region.locations.append(BKLocation(player, location, basic_molehill_location_table[location].address, menu_region))

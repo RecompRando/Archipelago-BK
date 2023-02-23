@@ -4,6 +4,40 @@ from Locations import setup_locations
 
 
 def set_rules(world: MultiWorld, player: int):
+    gruntys_lair_entrances = [
+        ["Spiral Mountain", 1],
+        ["Grunty's Lair 1F", 2],
+        ["Grunty's Lair 2F", 3],
+        ["Grunty's Lair 3F", 4],
+        ["Grunty's Lair 4F", 5],
+        ["Grunty's Lair 5F", 6],
+        ["Grunty's Lair 6F", 7],
+        ["Grunty's Lair 7F", 8],
+        ["Grunty's Lair Top Floor", 9]
+    ]
+
+    level_entrances = [
+        ["Mumbo's Mountain", 10],
+        ["Treasure Trove Cove", 11],
+        ["Clanker's Cavern", 12],
+        ["Bubblegloop Swamp", 13],
+        ["Freezeezy Peak", 14],
+        ["Gobi's Valley", 15],
+        ["Mad Monster Mansion", 16],
+        ["Rusty Bucket Bay", 17],
+        ["Click Clock Wood", 18],
+    ]
+
+    if world.level_randomizer[player].value:
+        entrances = level_entrances.copy()
+        mm_entrance = entrances.pop(0)
+        mmm_entrance = entrances.pop(5)
+        if world.shuffle_moves[player].value == 0:
+            entrances.insert(0, mm_entrance)
+        world.random.shuffle(entrances)
+        entrances.insert(6, mmm_entrance)
+
+
     set_location_rules(world, player)
     set_region_rules(world, player)
 

@@ -7,7 +7,7 @@ class BKLocation(Location):
 
 
 class LocationData(typing.NamedTuple):
-    address: int
+    code: typing.Optional[int]
     requirements: typing.Optional[typing.List[typing.List[str]]] = None
 
 
