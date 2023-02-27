@@ -12,7 +12,7 @@ class BKItem(Item):
     game: str = "Banjo-Kazooie"
 
 
-basic_ability_table = {
+basic_moves_table = {
     "Jump": ItemData(130000, ItemClassification.progression),
     "Feathery Flap": ItemData(130001, ItemClassification.progression),
     "Flap Flip": ItemData(130002, ItemClassification.progression),
@@ -24,7 +24,7 @@ basic_ability_table = {
     "Rat-A-Tat Rap": ItemData(130008, ItemClassification.progression),
 }
 
-learned_ability_table = {
+learned_moves_table = {
     "Eggs": ItemData(130009, ItemClassification.progression),
     "Talon Trot": ItemData(130010, ItemClassification.progression),
     "Beak Buster": ItemData(130011, ItemClassification.progression),
@@ -43,32 +43,32 @@ progression_item_table = {
 
 useful_item_table = {
     "Empty Honeycomb Piece": ItemData(130019, ItemClassification.useful),
-    "BLUEEGGS Cheato": ItemData(99999, ItemClassification.useful),
-    "REDFEATHERS Cheato": ItemData(99999, ItemClassification.useful),
-    "GOLDFEATHERS Cheato": ItemData(99999, ItemClassification.useful)
+    "BLUEEGGS Cheato": ItemData(130020, ItemClassification.useful),
+    "REDFEATHERS Cheato": ItemData(130021, ItemClassification.useful),
+    "GOLDFEATHERS Cheato": ItemData(130022, ItemClassification.useful)
 }
 
 useless_item_table = {
-    "Ice Key": ItemData(99999, ItemClassification.trap),
-    "Pink Egg": ItemData(99999, ItemClassification.trap),
-    "Blue Egg": ItemData(99999, ItemClassification.trap),
-    "Cyan Egg": ItemData(99999, ItemClassification.trap),
-    "Green Egg": ItemData(99999, ItemClassification.trap),
-    "Red Egg": ItemData(99999, ItemClassification.trap),
-    "Yellow Egg": ItemData(99999, ItemClassification.trap),
+    "Ice Key": ItemData(130023, ItemClassification.trap),
+    "Pink Egg": ItemData(130024, ItemClassification.trap),
+    "Blue Egg": ItemData(130025, ItemClassification.trap),
+    "Cyan Egg": ItemData(130026, ItemClassification.trap),
+    "Green Egg": ItemData(130027, ItemClassification.trap),
+    "Red Egg": ItemData(130028, ItemClassification.trap),
+    "Yellow Egg": ItemData(130029, ItemClassification.trap),
 }
 
 junk_item_table = {
-    "Honeycomb": ItemData(130020, ItemClassification.filler),
-    "20 Eggs": ItemData(130021, ItemClassification.filler),
-    "10 Red Feathers": ItemData(130022, ItemClassification.filler),
-    "5 Gold Feathers": ItemData(130023, ItemClassification.filler),
-    "Extra Life": ItemData(130024, ItemClassification.filler)
+    "Honeycomb": ItemData(130030, ItemClassification.filler),
+    "Egg Refill": ItemData(130031, ItemClassification.filler),
+    "Red Feathers Refill": ItemData(130032, ItemClassification.filler),
+    "Gold Feathers Refill": ItemData(130033, ItemClassification.filler),
+    "Extra Life": ItemData(130034, ItemClassification.filler)
 }
 
 item_table = {
-    **basic_ability_table,
-    **learned_ability_table,
+    **basic_moves_table,
+    **learned_moves_table,
     **progression_item_table,
     **useful_item_table,
     **useless_item_table,

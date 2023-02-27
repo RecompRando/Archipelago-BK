@@ -4,224 +4,226 @@ from Locations import *
 
 def create_regions(world: MultiWorld, player: int):
     menu_region = Region("Menu", player, world, "Spiral Mountain")
-    if(world.ShuffleBasicMoves[player].value):
+    for location in empty_honeycomb_location_table.keys():
+        if location.contains("SM"):
+            menu_region.locations.append(BKLocation(
+                player, location, empty_honeycomb_location_table[location].code, menu_region))
+    if world.shuffle_basic_moves[player].value:
         for location in basic_molehill_location_table.keys():
-            menu_region.locations.append(BKLocation(player, location, basic_molehill_location_table[location].address, menu_region))
-    if(world.ShuffleEmptyHoneycombs[player].value):
-        for location in empty_honeycomb_location_table.keys():
-            if location.contains("SM"):
-                menu_region.locations.append(BKLocation(player, location, empty_honeycomb_location_table[location].address, menu_region))
+            menu_region.locations.append(BKLocation(
+                player, location, basic_molehill_location_table[location].code, menu_region))
     world.regions.append(menu_region)
 
-    glfloor1region = create_region("Grunty's Lair 1F", player, world)
-    initialize_locations(glfloor1region, glf1_location_table)
-    world.regions.append(glfloor1region)
+    gl_floor_1_region = create_region("Grunty's Lair 1F", player, world)
+    initialize_locations(gl_floor_1_region, glf1_location_table)
+    world.regions.append(gl_floor_1_region)
 
-    mmregion = create_region("Mumbo's Mountain", player, world)
-    initialize_locations(mmregion, mm_location_table)
-    if(world.ShuffleMoves[player].value):
+    mm_region = create_region("Mumbo's Mountain", player, world)
+    initialize_locations(mm_region, mm_location_table)
+    if world.shuffle_moves[player].value != 0:
         for location in molehill_location_table.keys():
             if location.contains("MM"):
-                mmregion.locations.append(BKLocation(player, location, molehill_location_table[location].address, mmregion))
-    if(world.ShuffleEmptyHoneycombs[player].value):
-        for location in empty_honeycomb_location_table.keys():
-            if location.contains("MM"):
-                mmregion.locations.append(BKLocation(player, location, empty_honeycomb_location_table[location].address, mmregion))
-    if(world.ShuffleMumboTokens[player].value):
-        for location in mumbo_token_location_table.keys():
-            if location.contains("MM"):
-                mmregion.locations.append(BKLocation(player, location, mumbo_token_location_table[location].address, mmregion))
-    world.regions.append(mmregion)
+                mm_region.locations.append(BKLocation(
+                    player, location, molehill_location_table[location].code, mm_region))
+    for location in empty_honeycomb_location_table.keys():
+        if location.contains("MM"):
+            mm_region.locations.append(BKLocation(
+                player, location, empty_honeycomb_location_table[location].code, mm_region))
+    for location in mumbo_token_location_table.keys():
+        if location.contains("MM"):
+            mm_region.locations.append(BKLocation(
+                player, location, mumbo_token_location_table[location].code, mm_region))
+    world.regions.append(mm_region)
 
-    glfloor2region = create_region("Grunty's Lair 2F", player, world)
-    initialize_locations(glfloor2region, glf2_location_table)
-    if(world.ShuffleMumboTokens[player].value):
-        for location in mumbo_token_location_table.keys():
-            if location.contains("GLF2"):
-                glfloor2region.locations.append(BKLocation(player, location, mumbo_token_location_table[location].address, glfloor2region))
-    world.regions.append(glfloor2region)
+    gl_floor_2_region = create_region("Grunty's Lair 2F", player, world)
+    initialize_locations(gl_floor_2_region, glf2_location_table)
+    for location in mumbo_token_location_table.keys():
+        if location.contains("GLF2"):
+            gl_floor_2_region.locations.append(BKLocation(
+                player, location, mumbo_token_location_table[location].code, gl_floor_2_region))
+    world.regions.append(gl_floor_2_region)
 
-    ttcregion = create_region("Treasure Trove Cove", player, world)
-    initialize_locations(ttcregion, ttc_location_table)
-    if(world.ShuffleMoves[player].value):
+    ttc_region = create_region("Treasure Trove Cove", player, world)
+    initialize_locations(ttc_region, ttc_location_table)
+    for location in empty_honeycomb_location_table.keys():
+        if location.contains("TTC"):
+            ttc_region.locations.append(BKLocation(
+                player, location, empty_honeycomb_location_table[location].code, ttc_region))
+    for location in mumbo_token_location_table.keys():
+        if location.contains("TTC"):
+            ttc_region.locations.append(BKLocation(
+                player, location, mumbo_token_location_table[location].code, ttc_region))
+    if world.shuffle_moves[player].value != 0:
         for location in molehill_location_table.keys():
             if location.contains("TTC"):
-                ttcregion.locations.append(BKLocation(player, location, molehill_location_table[location].address, ttcregion))
-    if(world.ShuffleEmptyHoneycombs[player].value):
-        for location in empty_honeycomb_location_table.keys():
-            if location.contains("TTC"):
-                ttcregion.locations.append(BKLocation(player, location, empty_honeycomb_location_table[location].address, ttcregion))
-    if(world.ShuffleSecrets[player].value):
-        ttcregion.locations.append(BKLocation(player, "Sharkfood Island Egg", secrets_location_table["Pink Egg"].address, ttcregion))
-    if(world.ShuffleMumboTokens[player].value):
-        for location in mumbo_token_location_table.keys():
-            if location.contains("TTC"):
-                ttcregion.locations.append(BKLocation(player, location, mumbo_token_location_table[location].address, ttcregion))
-    world.regions.append(ttcregion)
+                ttc_region.locations.append(BKLocation(
+                    player, location, molehill_location_table[location].code, ttc_region))
+    if world.shuffle_secrets[player].value != 0:
+        ttc_region.locations.append(BKLocation(
+            player, "Sharkfood Island Egg", secrets_location_table["Pink Egg"].code, ttc_region))
+    world.regions.append(ttc_region)
 
-    ccregion = create_region("Clanker's Cavern", player, world)
-    initialize_locations(ccregion, cc_location_table)
-    if(world.ShuffleMoves[player].value):
+    cc_region = create_region("Clanker's Cavern", player, world)
+    initialize_locations(cc_region, cc_location_table)
+    for location in empty_honeycomb_location_table.keys():
+        if location.contains("CC"):
+            cc_region.locations.append(BKLocation(
+                player, location, empty_honeycomb_location_table[location].code, cc_region))
+    for location in mumbo_token_location_table.keys():
+        if location.contains("CC"):
+            cc_region.locations.append(BKLocation(
+                player, location, mumbo_token_location_table[location].code, cc_region))
+    if world.shuffle_moves[player].value != 0:
         for location in molehill_location_table.keys():
             if location.contains("CC"):
-                ccregion.locations.append(BKLocation(player, location, molehill_location_table[location].address, ccregion))
-    if(world.ShuffleEmptyHoneycombs[player].value):
-        for location in empty_honeycomb_location_table.keys():
-            if location.contains("CC"):
-                ccregion.locations.append(BKLocation(player, location, empty_honeycomb_location_table[location].address, ccregion))
-    if(world.ShuffleMumboTokens[player].value):
-        for location in mumbo_token_location_table.keys():
-            if location.contains("CC"):
-                ccregion.locations.append(BKLocation(player, location, mumbo_token_location_table[location].address, ccregion))
-    world.regions.append(ccregion)
+                cc_region.locations.append(BKLocation(
+                    player, location, molehill_location_table[location].code, cc_region))
+    world.regions.append(cc_region)
 
-    glfloor3region = create_region("Grunty's Lair 3F", player, world)
-    initialize_locations(glfloor3region, glf3_location_table)
-    if(world.ShuffleMumboTokens[player].value):
-        for location in mumbo_token_location_table.keys():
-            if location.contains("GLF3"):
-                glfloor3region.locations.append(BKLocation(player, location, mumbo_token_location_table[location].address, glfloor3region))
-    world.regions.append(glfloor3region)
+    gl_floor_3_region = create_region("Grunty's Lair 3F", player, world)
+    initialize_locations(gl_floor_3_region, glf3_location_table)
+    for location in mumbo_token_location_table.keys():
+        if location.contains("GLF3"):
+            gl_floor_3_region.locations.append(BKLocation(
+                player, location, mumbo_token_location_table[location].code, gl_floor_3_region))
+    world.regions.append(gl_floor_3_region)
 
-    bsregion = create_region("Bubblegloop Swamp", player, world)
-    initialize_locations(bsregion, bs_location_table)
-    if(world.ShuffleMoves[player].value):
+    bs_region = create_region("Bubblegloop Swamp", player, world)
+    initialize_locations(bs_region, bs_location_table)
+    for location in empty_honeycomb_location_table.keys():
+        if location.contains("BS"):
+            bs_region.locations.append(BKLocation(
+                player, location, empty_honeycomb_location_table[location].code, bs_region))
+    for location in mumbo_token_location_table.keys():
+        if location.contains("BS"):
+            bs_region.locations.append(BKLocation(
+                player, location, mumbo_token_location_table[location].code, bs_region))
+    if world.shuffle_moves[player].value != 0:
         for location in molehill_location_table.keys():
             if location.contains("BS"):
-                bsregion.locations.append(BKLocation(player, location, molehill_location_table[location].address, bsregion))
-    if(world.ShuffleEmptyHoneycombs[player].value):
-        for location in empty_honeycomb_location_table.keys():
-            if location.contains("BS"):
-                bsregion.locations.append(BKLocation(player, location, empty_honeycomb_location_table[location].address, bsregion))
-    if(world.ShuffleMumboTokens[player].value):
-        for location in mumbo_token_location_table.keys():
-            if location.contains("BS"):
-                bsregion.locations.append(BKLocation(player, location, mumbo_token_location_table[location].address, bsregion))
-    world.regions.append(bsregion)
+                bs_region.locations.append(BKLocation(
+                    player, location, molehill_location_table[location].code, bs_region))
+    world.regions.append(bs_region)
 
-    glfloor4region = create_region("Grunty's Lair 4F", player, world)
-    initialize_locations(glfloor4region, glf4_location_table)
-    if(world.ShuffleMumboTokens[player].value):
-        for location in mumbo_token_location_table.keys():
-            if location.contains("GLF4"):
-                glfloor4region.locations.append(BKLocation(player, location, mumbo_token_location_table[location].address, glfloor4region))
-    world.regions.append(glfloor4region)
+    gl_floor_4_region = create_region("Grunty's Lair 4F", player, world)
+    initialize_locations(gl_floor_4_region, glf4_location_table)
+    for location in mumbo_token_location_table.keys():
+        if location.contains("GLF4"):
+            gl_floor_4_region.locations.append(BKLocation(
+                player, location, mumbo_token_location_table[location].code, gl_floor_4_region))
+    world.regions.append(gl_floor_4_region)
 
-    fpregion = create_region("Freezeezy Peak", player, world)
-    initialize_locations(fpregion, fp_location_table)
-    if(world.ShuffleMoves[player].value):
+    fp_region = create_region("Freezeezy Peak", player, world)
+    initialize_locations(fp_region, fp_location_table)
+    for location in empty_honeycomb_location_table.keys():
+        if location.contains("FP"):
+            fp_region.locations.append(BKLocation(
+                player, location, empty_honeycomb_location_table[location].code, fp_region))
+    for location in mumbo_token_location_table.keys():
+        if location.contains("FP"):
+            fp_region.locations.append(BKLocation(
+                player, location, mumbo_token_location_table[location].code, fp_region))
+    if world.shuffle_moves[player].value != 0:
         for location in molehill_location_table.keys():
             if location.contains("FP"):
-                fpregion.locations.append(BKLocation(player, location, molehill_location_table[location].address, fpregion))
-    if(world.ShuffleEmptyHoneycombs[player].value):
-        for location in empty_honeycomb_location_table.keys():
-            if location.contains("FP"):
-                fpregion.locations.append(BKLocation(player, location, empty_honeycomb_location_table[location].address, fpregion))
-    if(world.ShuffleSecrets[player].value):
-        fpregion.locations.append(BKLocation(player, "Ice Key", secrets_location_table["Ice Key"].address, fpregion))
-    if(world.ShuffleMumboTokens[player].value):
-        for location in mumbo_token_location_table.keys():
-            if location.contains("FP"):
-                fpregion.locations.append(BKLocation(player, location, mumbo_token_location_table[location].address, fpregion))
-    world.regions.append(fpregion)
+                fp_region.locations.append(BKLocation(
+                    player, location, molehill_location_table[location].code, fp_region))
+    if world.shuffle_secrets[player].value != 0:
+        fp_region.locations.append(BKLocation(
+            player, "Ice Key", secrets_location_table["Ice Key"].code, fp_region))
+    world.regions.append(fp_region)
 
-    gvregion = create_region("Gobi's Valley", player, world)
-    initialize_locations(gvregion, gv_location_table)
-    if(world.ShuffleMoves[player].value):
+    gv_region = create_region("Gobi's Valley", player, world)
+    initialize_locations(gv_region, gv_location_table)
+    for location in empty_honeycomb_location_table.keys():
+        if location.contains("GV"):
+            gv_region.locations.append(BKLocation(
+                player, location, empty_honeycomb_location_table[location].code, gv_region))
+    for location in mumbo_token_location_table.keys():
+        if location.contains("GV"):
+            gv_region.locations.append(BKLocation(
+                player, location, mumbo_token_location_table[location].code, gv_region))
+    if world.shuffle_moves[player].value != 0:
         for location in molehill_location_table.keys():
             if location.contains("GV"):
-                gvregion.locations.append(BKLocation(player, location, molehill_location_table[location].address, gvregion))
-    if(world.ShuffleEmptyHoneycombs[player].value):
-        for location in empty_honeycomb_location_table.keys():
-            if location.contains("GV"):
-                gvregion.locations.append(BKLocation(player, location, empty_honeycomb_location_table[location].address, gvregion))
-    if(world.ShuffleSecrets[player].value):
-        gvregion.locations.append(BKLocation(player, "Gobi's Valley Egg", secrets_location_table["Blue Egg"].address, gvregion))
-    if(world.ShuffleMumboTokens[player].value):
-        for location in mumbo_token_location_table.keys():
-            if location.contains("GV"):
-                gvregion.locations.append(BKLocation(player, location, mumbo_token_location_table[location].address, gvregion))
-    world.regions.append(gvregion)
+                gv_region.locations.append(BKLocation(
+                    player, location, molehill_location_table[location].code, gv_region))
+    if world.shuffle_secrets[player].value != 0:
+        gv_region.locations.append(BKLocation(
+            player, "Gobi's Valley Egg", secrets_location_table["Blue Egg"].code, gv_region))
+    world.regions.append(gv_region)
 
-    glfloor5region = create_region("Grunty's Lair 5F", player, world)
-    initialize_locations(glfloor5region, glf5_location_table)
-    if(world.ShuffleMumboTokens[player].value):
-        for location in mumbo_token_location_table.keys():
-            if location.contains("GLF5"):
-                glfloor5region.locations.append(BKLocation(player, location, mumbo_token_location_table[location].address, glfloor5region))
-    world.regions.append(glfloor5region)
+    gl_floor_5_region = create_region("Grunty's Lair 5F", player, world)
+    initialize_locations(gl_floor_5_region, glf5_location_table)
+    for location in mumbo_token_location_table.keys():
+        if location.contains("GLF5"):
+            gl_floor_5_region.locations.append(BKLocation(
+                player, location, mumbo_token_location_table[location].code, gl_floor_5_region))
+    world.regions.append(gl_floor_5_region)
 
-    mmmregion = create_region("Mad Monster Mansion", player, world)
-    initialize_locations(mmmregion, mmm_location_table)
-    if(world.ShuffleMoves[player].value):
-        for location in molehill_location_table.keys():
-            if location.contains("MMM"):
-                mmmregion.locations.append(BKLocation(player, location, molehill_location_table[location].address, mmmregion))
-    if(world.ShuffleEmptyHoneycombs[player].value):
-        for location in empty_honeycomb_location_table.keys():
-            if location.contains("MMM"):
-                mmmregion.locations.append(BKLocation(player, location, empty_honeycomb_location_table[location].address, mmmregion))
-    if(world.ShuffleSecrets[player].value):
-        mmmregion.locations.append(BKLocation(player, "Cellar Egg", secrets_location_table["Cyan Egg"].address, mmmregion))
-        mmmregion.locations.append(BKLocation(player, "Bathroom Egg", secrets_location_table["Green Egg"].address, mmmregion))
-    if(world.ShuffleMumboTokens[player].value):
-        for location in mumbo_token_location_table.keys():
-            if location.contains("MMM"):
-                mmmregion.locations.append(BKLocation(player, location, mumbo_token_location_table[location].address, mmmregion))
-    world.regions.append(mmmregion)
+    mmm_region = create_region("Mad Monster Mansion", player, world)
+    initialize_locations(mmm_region, mmm_location_table)
+    for location in empty_honeycomb_location_table.keys():
+        if location.contains("MMM"):
+            mmm_region.locations.append(BKLocation(
+                player, location, empty_honeycomb_location_table[location].code, mmm_region))
+    for location in mumbo_token_location_table.keys():
+        if location.contains("MMM"):
+            mmm_region.locations.append(BKLocation(
+                player, location, mumbo_token_location_table[location].code, mmm_region))
+    if world.shuffle_secrets[player].value != 0:
+        mmm_region.locations.append(BKLocation(
+            player, "Cellar Egg", secrets_location_table["Cyan Egg"].code, mmm_region))
+        mmm_region.locations.append(BKLocation(
+            player, "Bathroom Egg", secrets_location_table["Green Egg"].code, mmm_region))
+    world.regions.append(mmm_region)
 
-    rbbregion = create_region("Rusty Bucket Bay", player, world)
-    initialize_locations(rbbregion, rbb_location_table)
-    if(world.ShuffleMoves[player].value):
-        for location in molehill_location_table.keys():
-            if location.contains("RBB"):
-                rbbregion.locations.append(BKLocation(player, location, molehill_location_table[location].address, rbbregion))
-    if(world.ShuffleEmptyHoneycombs[player].value):
-        for location in empty_honeycomb_location_table.keys():
-            if location.contains("RBB"):
-                rbbregion.locations.append(BKLocation(player, location, empty_honeycomb_location_table[location].address, rbbregion))
-    if(world.ShuffleSecrets[player].value):
-        rbbregion.locations.append(BKLocation(player, "Captain's Room Egg", secrets_location_table["Red Egg"].address, rbbregion))
-    if(world.ShuffleMumboTokens[player].value):
-        for location in mumbo_token_location_table.keys():
-            if location.contains("RBB"):
-                rbbregion.locations.append(BKLocation(player, location, mumbo_token_location_table[location].address, rbbregion))
-    world.regions.append(rbbregion)
+    rbb_region = create_region("Rusty Bucket Bay", player, world)
+    initialize_locations(rbb_region, rbb_location_table)
+    for location in empty_honeycomb_location_table.keys():
+        if location.contains("RBB"):
+            rbb_region.locations.append(BKLocation(
+                player, location, empty_honeycomb_location_table[location].code, rbb_region))
+    for location in mumbo_token_location_table.keys():
+        if location.contains("RBB"):
+            rbb_region.locations.append(BKLocation(
+                player, location, mumbo_token_location_table[location].code, rbb_region))
+    if world.shuffle_secrets[player].value != 0:
+        rbb_region.locations.append(BKLocation(
+            player, "Captain's Room Egg", secrets_location_table["Red Egg"].code, rbb_region))
+    world.regions.append(rbb_region)
 
-    glfloor6region = create_region("Grunty's Lair 6F", player, world)
-    initialize_locations(glfloor6region, glf6_location_table)
-    if(world.ShuffleMumboTokens[player].value):
-        for location in mumbo_token_location_table.keys():
-            if location.contains("GLF6"):
-                glfloor6region.locations.append(BKLocation(player, location, mumbo_token_location_table[location].address, glfloor6region))
-    world.regions.append(glfloor6region)
+    gl_floor_6_region = create_region("Grunty's Lair 6F", player, world)
+    initialize_locations(gl_floor_6_region, glf6_location_table)
+    for location in mumbo_token_location_table.keys():
+        if location.contains("GLF6"):
+            gl_floor_6_region.locations.append(BKLocation(
+                player, location, mumbo_token_location_table[location].code, gl_floor_6_region))
+    world.regions.append(gl_floor_6_region)
 
-    ccwregion = create_region("Click Clock Wood", player, world)
-    initialize_locations(ccwregion, ccw_location_table)
-    if world.ShuffleMoves[player].value:
-        for location in molehill_location_table.keys():
-            if location.contains("CCW"):
-                ccwregion.locations.append(BKLocation(player, location, molehill_location_table[location].address, ccwregion))
-    if world.ShuffleEmptyHoneycombs[player].value:
-        for location in empty_honeycomb_location_table.keys():
-            if location.contains("CCW"):
-                ccwregion.locations.append(BKLocation(player, location, empty_honeycomb_location_table[location].address, ccwregion))
-    if world.ShuffleSecrets[player].value:
-        ccwregion.locations.append(BKLocation(player, "Nabnut's Egg", secrets_location_table["Yellow Egg"].address, ccwregion))
-    if world.ShuffleMumboTokens[player].value:
-        for location in mumbo_token_location_table.keys():
-            if location.contains("CCW"):
-                ccwregion.locations.append(BKLocation(player, location, mumbo_token_location_table[location].address, ccwregion))
-    world.regions.append(ccwregion)
+    ccw_region = create_region("Click Clock Wood", player, world)
+    initialize_locations(ccw_region, ccw_location_table)
+    for location in empty_honeycomb_location_table.keys():
+        if location.contains("CCW"):
+            ccw_region.locations.append(BKLocation(
+                player, location, empty_honeycomb_location_table[location].code, ccw_region))
+    for location in mumbo_token_location_table.keys():
+        if location.contains("CCW"):
+            ccw_region.locations.append(BKLocation(
+                player, location, mumbo_token_location_table[location].code, ccw_region))
+    if world.shuffle_secrets[player].value != 0:
+        ccw_region.locations.append(BKLocation(
+            player, "Nabnut's Egg", secrets_location_table["Yellow Egg"].code, ccw_region))
+    world.regions.append(ccw_region)
 
-    glfloor7region = create_region("Grunty's Lair 7F", player, world)
-    world.regions.append(glfloor7region)
+    gl_floor_7_region = create_region("Grunty's Lair 7F", player, world)
+    world.regions.append(gl_floor_7_region)
 
-    gltopfloorregion = create_region("Grunty's Lair Top Floor", player, world)
-    world.regions.append(gltopfloorregion)
+    gl_top_floor_region = create_region("Grunty's Lair Top Floor", player, world)
+    world.regions.append(gl_top_floor_region)
 
 
-def connect_regions(world: MultiWorld, player: int, source: str, target: str, rule: typing.Optional[typing.Callable] = None):
+def connect_regions(world: MultiWorld, player, source: str, target: str, rule: typing.Optional[typing.Callable] = None):
     source_region = world.get_region(source, player)
     target_region = world.get_region(target, player)
 
@@ -239,4 +241,5 @@ def create_region(name: str, player: int, world: MultiWorld):
 
 
 def initialize_locations(region: Region, locations, player: int):
-    region.locations += [BKLocation(player, location_name, location_table[location_name].address, region) for location_name in locations]
+    region.locations += [BKLocation(player, location_name, location_table[location_name].address, region)
+                         for location_name in locations]

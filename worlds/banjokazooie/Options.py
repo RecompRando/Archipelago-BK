@@ -1,15 +1,18 @@
-import typing
-from ...Options import Option, Toggle, DefaultOnToggle, Range, Choice, DeathLink
+from ...Options import Toggle, DefaultOnToggle, Range, Choice, DeathLink
 
 
-class ShuffleMumboTokens(DefaultOnToggle):
-    """Shuffles all Mumbo Tokens into the item pool, and includes Mumbo Token locations in randomization"""
-    display_name = "Shuffle Mumbo Tokens"
+class ShuffleMoves(Choice):
+    """Shuffles moves into other molehills, or adds them to the item pool"""
+    display_name = "Shuffle Moves"
+    default = 1
+    option_off = 0
+    option_shuffle_molehills = 1
+    option_movesanity = 2
 
 
-class ShuffleEmptyHoneycombs(DefaultOnToggle):
-    """Shuffles all Empty Honeycombs into the item pool, and includes Empty Honeycomb locations in randomization"""
-    display_name = "Shuffle Empty Honeycombs"
+class ShuffleBasicMoves(Toggle):
+    """If checked, shuffles all basic moves, based on Shuffle Moves setting"""
+    display_name = "Shuffle Basic Moves"
 
 
 class ShuffleCheato(Toggle):
@@ -27,48 +30,53 @@ class ShuffleSecrets(Choice):
     option_closed_locations = 2
 
 
-class ShuffleMoves(Choice):
-    """Shuffles moves into other molehills, or adds them to the item pool"""
-    display_name = "Shuffle Moves"
-    option_off = 0
-    option_shuffle_molehills = 1
-    option_movesanity = 2
-
-
-class ShuffleBasicMoves(Toggle):
-    """If checked, shuffles all basic moves, based on Shuffle Moves setting"""
-    display_name = "Shuffle Basic Moves"
-
-
 class LevelRandomizer(Toggle):
     """Randomizes most level entrances. Mad Monster Mansion cannot be randomized. If ShuffleMoves is disabled,
     the first level will always be Mumbo's Mountain"""
     display_name = "Level Randomizer"
 
 
+class DynamicNoteDoors(DefaultOnToggle):
+    """Dynamically changes Note Door costs based on available moves. Only does anything if Basic Moves are shuffled.
+    If turned off, most Basic Moves will be guaranteed fairly early on"""
+    display_name = "Dynamic Note Doors"
+
+
+class CorrectPads(DefaultOnToggle):
+    """Some Shock Spring Pads and Flight Pads are always usable without learning the corresponding moves. If this is
+    turned on, those pads will be replaced with regular pads that require those moves"""
+    display_name = "Correct Pads"
+
+
+class SkipFurnaceFun(Toggle):
+    """Skips Furnace Fun entirely. When you get to it, the game will immediately behave as though you completed it"""
+    display_name = "Skip Furnace Fun"
+
+
 class NumberOfJiggies(Range):
-    """How many jiggies exist. There will always be enough to win the game"""
-    range_start = 94
+    """How many jiggies exist. There will always be enough to open every level, complete the secret puzzle, and win the
+    game. Level requirements will dynamically change based on the number of jiggies that exist"""
+    range_start = 0
     range_end = 100
     default = 100
 
 
 class NumberOfMumboTokens(Range):
-    """How many Mumbo Tokens exist. There will always be enough to afford every transformation. This only applies if
-    Shuffle Mumbo Tokens is turned on"""
-    range_start = 75
+    """How many Mumbo Tokens exist. There will always be enough to afford every transformation. Transformation
+    requirements will dynamically change based on the number of Mumbo Tokens that exist"""
+    range_start = 0
     range_end = 112
     default = 112
 
 
 bk_options = {
-    "shuffle_mumbo_tokens": ShuffleMumboTokens,
-    "shuffle_empty_honeycombs": ShuffleEmptyHoneycombs,
-    "shuffle_cheato": ShuffleCheato,
-    "shuffle_secrets": ShuffleSecrets,
     "shuffle_moves": ShuffleMoves,
     "shuffle_basic_moves": ShuffleBasicMoves,
+    "shuffle_cheato": ShuffleCheato,
+    "shuffle_secrets": ShuffleSecrets,
     "level_randomizer": LevelRandomizer,
+    "dynamic_note_doors": DynamicNoteDoors,
+    "correct_pads": CorrectPads,
     "number_of_jiggies": NumberOfJiggies,
     "number_of_mumbo_tokens": NumberOfMumboTokens,
     "death_link": DeathLink
