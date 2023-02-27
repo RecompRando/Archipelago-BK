@@ -31,13 +31,19 @@ def set_rules(world: MultiWorld, player: int):
     if world.level_randomizer[player].value:
         world.random.shuffle(level_entrances)
         if world.shuffle_moves[player].value == 0:
-            while level_entrances[0][0] != "Mumbo's Mountain" and (level_entrances[6][0] != "Freezeezy Peak" or
-                                                                   "Mad Monster Mansion" or "Click Clock Wood"):
+            while level_entrances[0][0] != "Mumbo's Mountain" and (
+                    level_entrances[3][0] != "Bubblegloop Swamp" or "Freezeezy Peak" or "Mad Monster Mansion" or
+                    "Click Clock Wood") and (
+                    level_entrances[6][0] != "Bubblegloop Swamp" or "Freezeezy Peak" or "Mad Monster Mansion" or
+                    "Click Clock Wood"):
                 world.random.shuffle(level_entrances)
         else:
-            while (level_entrances[0][0] != "Mumbo's Mountain" or "Freezeezy Peak" or "Mad Monster Mansion" or
-                   "Click Clock Wood") and (level_entrances[6][0] != "Mumbo's Mountain" or "Freezeezy Peak" or
-                                            "Mad Monster Mansion" or "Click Clock Wood"):
+            while (level_entrances[0][0] != "Mumbo's Mountain" or "Bubblegloop Swamp" or "Freezeezy Peak" or
+                   "Mad Monster Mansion" or "Click Clock Wood") and (
+                    level_entrances[3][0] != "Mumbo's Mountain" or "Bubblegloop Swamp" or "Freezeezy Peak" or
+                    "Mad Monster Mansion" or "Click Clock Wood") and (
+                    level_entrances[6][0] != "Mumbo's Mountain" or "Bubblegloop Swamp" or "Freezeezy Peak" or
+                    "Mad Monster Mansion" or "Click Clock Wood"):
                 world.random.shuffle(level_entrances)
 
     set_location_rules(world, player)
@@ -79,25 +85,25 @@ def set_region_rules(world: MultiWorld, player: int):
                      lambda state: state.has("Jiggy", player, 23) and state.has("Stilt Stride", player, 1))
         if region.name == "Gobi's Valley":
             set_rule(region.entrances[0], lambda state: state.has("Jiggy", player, 32) and (
-                        state.has("Wonderwing", player, 1) or ((state.has("Beak Barge", player, 1) or state.has(
-                    "Rat-A-Tat Rap", player, 1) or state.has("Eggs", player, 1)) and state.has("Stilt Stride", player,
-                                                                                               1))))
+                    state.has("Wonderwing", player, 1) or ((state.has("Beak Barge", player, 1) or state.has(
+                "Rat-A-Tat Rap", player, 1) or state.has("Eggs", player, 1)) and state.has("Stilt Stride", player,
+                                                                                           1))))
         if region.name == "Grunty's Lair 5F":
             set_rule(region.entrances[0], lambda state: state.has("Swim", player, 1))
         if region.name == "Mad Monster Mansion":
             set_rule(region.entrances[0], lambda state: state.has("Jiggy", player, 42) and (
-                        state.has("Feathery Flap", player, 1) or state.has("Rat-A-Tat Rap", player, 1) or state.has(
-                    "Talon Trot", player, 1)) and state.has("Swim", player, 1))
+                    state.has("Feathery Flap", player, 1) or state.has("Rat-A-Tat Rap", player, 1) or state.has(
+                "Talon Trot", player, 1)) and state.has("Swim", player, 1))
         if region.name == "Rusty Bucket Bay":
             set_rule(region.entrances[0],
                      lambda state: state.has("Jiggy", player, 54) and state.has("Swim", player, 1) and (
-                                 state.has("Beak Barge", player, 1) or state.has("Rat-A-Tat Rap", player,
-                                                                                 1)) and state.has("Beak Buster",
-                                                                                                   player, 1))
+                             state.has("Beak Barge", player, 1) or state.has("Rat-A-Tat Rap", player,
+                                                                             1)) and state.has("Beak Buster",
+                                                                                               player, 1))
         if region.name == "Grunty's Lair 6F":
             set_rule(region.entrances[0], lambda state: state.has("Flap Flip", player, 1) or (
-                        (state.has("Rat-A-Tat Rap", player, 1) or state.has("Eggs", player, 1)) and state.has(
-                    "Beak Buster", player, 1)))
+                    (state.has("Rat-A-Tat Rap", player, 1) or state.has("Eggs", player, 1)) and state.has(
+                "Beak Buster", player, 1)))
         if region.name == "Click Clock Wood":
             set_rule(region.entrances[0],
                      lambda state: state.has("Jiggy", player, 69) and state.has("Flap Flip", player, 1) and state.has(

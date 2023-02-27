@@ -36,12 +36,6 @@ class LevelRandomizer(Toggle):
     display_name = "Level Randomizer"
 
 
-class DynamicNoteDoors(DefaultOnToggle):
-    """Dynamically changes Note Door costs based on available moves. Only does anything if Basic Moves are shuffled.
-    If turned off, most Basic Moves will be guaranteed fairly early on"""
-    display_name = "Dynamic Note Doors"
-
-
 class CorrectPads(DefaultOnToggle):
     """Some Shock Spring Pads and Flight Pads are always usable without learning the corresponding moves. If this is
     turned on, those pads will be replaced with regular pads that require those moves"""
@@ -75,7 +69,6 @@ bk_options = {
     "shuffle_cheato": ShuffleCheato,
     "shuffle_secrets": ShuffleSecrets,
     "level_randomizer": LevelRandomizer,
-    "dynamic_note_doors": DynamicNoteDoors,
     "correct_pads": CorrectPads,
     "number_of_jiggies": NumberOfJiggies,
     "number_of_mumbo_tokens": NumberOfMumboTokens,

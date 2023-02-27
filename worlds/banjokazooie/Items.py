@@ -33,37 +33,38 @@ learned_moves_table = {
     "Wonderwing": ItemData(130014, ItemClassification.progression),
     "Stilt Stride": ItemData(130015, ItemClassification.progression),
     "Beak Bomb": ItemData(130016, ItemClassification.progression),
-    "Turbo Talon Trot": ItemData(130016, ItemClassification.progression)
+    "Turbo Talon Trot": ItemData(130017, ItemClassification.progression)
 }
 
 progression_item_table = {
-    "Jiggy": ItemData(130017, ItemClassification.progression_skip_balancing),
-    "Mumbo Token": ItemData(130018, ItemClassification.progression_skip_balancing),
+    "Jiggy": ItemData(130018, ItemClassification.progression),
+    "Mumbo Token": ItemData(130019, ItemClassification.progression_skip_balancing),
+    "Note": ItemData(130020, ItemClassification.progression_skip_balancing)
 }
 
 useful_item_table = {
-    "Empty Honeycomb Piece": ItemData(130019, ItemClassification.useful),
-    "BLUEEGGS Cheato": ItemData(130020, ItemClassification.useful),
-    "REDFEATHERS Cheato": ItemData(130021, ItemClassification.useful),
-    "GOLDFEATHERS Cheato": ItemData(130022, ItemClassification.useful)
+    "Empty Honeycomb Piece": ItemData(130021, ItemClassification.useful),
+    "BLUEEGGS Cheato": ItemData(130022, ItemClassification.useful),
+    "REDFEATHERS Cheato": ItemData(130023, ItemClassification.useful),
+    "GOLDFEATHERS Cheato": ItemData(130024, ItemClassification.useful)
 }
 
 useless_item_table = {
-    "Ice Key": ItemData(130023, ItemClassification.trap),
-    "Pink Egg": ItemData(130024, ItemClassification.trap),
-    "Blue Egg": ItemData(130025, ItemClassification.trap),
-    "Cyan Egg": ItemData(130026, ItemClassification.trap),
-    "Green Egg": ItemData(130027, ItemClassification.trap),
-    "Red Egg": ItemData(130028, ItemClassification.trap),
-    "Yellow Egg": ItemData(130029, ItemClassification.trap),
+    "Ice Key": ItemData(130025, ItemClassification.trap),
+    "Pink Egg": ItemData(130026, ItemClassification.trap),
+    "Blue Egg": ItemData(130027, ItemClassification.trap),
+    "Cyan Egg": ItemData(130028, ItemClassification.trap),
+    "Green Egg": ItemData(130029, ItemClassification.trap),
+    "Red Egg": ItemData(130030, ItemClassification.trap),
+    "Yellow Egg": ItemData(130031, ItemClassification.trap),
 }
 
 junk_item_table = {
-    "Honeycomb": ItemData(130030, ItemClassification.filler),
-    "Egg Refill": ItemData(130031, ItemClassification.filler),
-    "Red Feathers Refill": ItemData(130032, ItemClassification.filler),
-    "Gold Feathers Refill": ItemData(130033, ItemClassification.filler),
-    "Extra Life": ItemData(130034, ItemClassification.filler)
+    "Honeycomb": ItemData(130032, ItemClassification.filler),
+    "Egg Refill": ItemData(130033, ItemClassification.filler),
+    "Red Feathers Refill": ItemData(130034, ItemClassification.filler),
+    "Gold Feathers Refill": ItemData(130035, ItemClassification.filler),
+    "Extra Life": ItemData(130036, ItemClassification.filler)
 }
 
 item_table = {
