@@ -143,11 +143,14 @@ def create_regions(world: MultiWorld, player: int):
     world.regions.append(gv_region)
 
     gl_floor_5_region = create_region("Grunty's Lair 5F", player, world)
-    initialize_locations(gl_floor_5_region, glf5_location_table)
+    world.regions.append(gl_floor_5_region)
+
+    gl_floor_6_region = create_region("Grunty's Lair 6F", player, world)
+    initialize_locations(gl_floor_6_region, glf6_location_table)
     for location, data in mumbo_token_location_table:
         if location.contains("GLF5"):
-            gl_floor_5_region.locations.append(BKLocation(player, location, data.code, gl_floor_5_region))
-    world.regions.append(gl_floor_5_region)
+            gl_floor_6_region.locations.append(BKLocation(player, location, data.code, gl_floor_6_region))
+    world.regions.append(gl_floor_6_region)
 
     mmm_region = create_region("Mad Monster Mansion", player, world)
     initialize_locations(mmm_region, mmm_location_table)
@@ -181,12 +184,12 @@ def create_regions(world: MultiWorld, player: int):
             player, "Captain's Room Egg", secrets_location_table["Red Egg"].code, rbb_region))
     world.regions.append(rbb_region)
 
-    gl_floor_6_region = create_region("Grunty's Lair 6F", player, world)
-    initialize_locations(gl_floor_6_region, glf6_location_table)
+    gl_floor_7_region = create_region("Grunty's Lair 7F", player, world)
+    initialize_locations(gl_floor_7_region, glf7_location_table)
     for location, data in mumbo_token_location_table:
         if location.contains("GLF6"):
-            gl_floor_6_region.locations.append(BKLocation(player, location, data.code, gl_floor_6_region))
-    world.regions.append(gl_floor_6_region)
+            gl_floor_7_region.locations.append(BKLocation(player, location, data.code, gl_floor_7_region))
+    world.regions.append(gl_floor_7_region)
 
     ccw_region = create_region("Click Clock Wood", player, world)
     initialize_locations(ccw_region, ccw_location_table)
@@ -203,8 +206,8 @@ def create_regions(world: MultiWorld, player: int):
             player, "Nabnut's Egg", secrets_location_table["Yellow Egg"].code, ccw_region))
     world.regions.append(ccw_region)
 
-    gl_floor_7_region = create_region("Grunty's Lair 7F", player, world)
-    world.regions.append(gl_floor_7_region)
+    gl_floor_8_region = create_region("Grunty's Lair 8F", player, world)
+    world.regions.append(gl_floor_8_region)
 
     gl_top_floor_region = create_region("Grunty's Lair Top Floor", player, world)
     world.regions.append(gl_top_floor_region)

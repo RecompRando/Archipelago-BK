@@ -52,8 +52,8 @@ def set_rules(world: MultiWorld, player: int):
 
 def set_location_rules(world: MultiWorld, player: int):
     locations = setup_locations(world, player)
-    for location in locations:
-        if locations[location].requirements:
+    for location, data in locations:
+        if data.requirements:
             set_location_rule(world, player, location, locations)
 
 
@@ -62,7 +62,8 @@ def set_region_rules(world: MultiWorld, player: int):
         if region.name == "Mumbo's Mountain":
             set_rule(region.entrances[0], lambda state: state.has("Jiggy", player, 1))
         if region.name == "Grunty's Lair 2F":
-            set_rule(region.entrances[0], lambda state: state.has("Talon Trot", player, 1))
+            set_rule(region.entrances[0], lambda state: state.has("Talon Trot", player, 1) and state.has(
+                "Note", player, 50))
         if region.name == "Treasure Trove Cove":
             set_rule(region.entrances[0], lambda state: state.has("Jiggy", player, 3))
         if region.name == "Clanker's Cavern":
@@ -72,14 +73,16 @@ def set_region_rules(world: MultiWorld, player: int):
                                                                                                 1) and state.has(
                          "Shock Spring Jump", player, 1))
         if region.name == "Grunty's Lair 3F":
-            set_rule(region.entrances[0], lambda state: state.has("Talon Trot", player, 1))
+            set_rule(region.entrances[0], lambda state: state.has("Talon Trot", player, 1) and state.has(
+                "Note", player, 180))
         if region.name == "Bubblegloop Swamp":
             set_rule(region.entrances[0],
                      lambda state: state.has("Jiggy", player, 15) and state.has("Flap Flip", player, 1) and state.has(
                          "Swim", player, 1) and state.has("Beak Buster", player, 1))
         if region.name == "Grunty's Lair 4F":
             set_rule(region.entrances[0],
-                     lambda state: state.has("Jump", player, 1) and state.has("Shock Spring Jump", player, 1))
+                     lambda state: state.has("Jump", player, 1) and state.has(
+                         "Shock Spring Jump", player, 1) and state.has("Note", player, 260))
         if region.name == "Freezeezy Peak":
             set_rule(region.entrances[0],
                      lambda state: state.has("Jiggy", player, 23) and state.has("Stilt Stride", player, 1))
@@ -89,7 +92,10 @@ def set_region_rules(world: MultiWorld, player: int):
                 "Rat-A-Tat Rap", player, 1) or state.has("Eggs", player, 1)) and state.has("Stilt Stride", player,
                                                                                            1))))
         if region.name == "Grunty's Lair 5F":
-            set_rule(region.entrances[0], lambda state: state.has("Swim", player, 1))
+            set_rule(region.entrances[0], lambda state: state.has("Note", player, 350))
+        if region.name == "Grunty's Lair 6F":
+            set_rule(region.entrances[0], lambda state: state.has("Swim", player, 1) and state.has(
+                "Note", player, 450))
         if region.name == "Mad Monster Mansion":
             set_rule(region.entrances[0], lambda state: state.has("Jiggy", player, 42) and (
                     state.has("Feathery Flap", player, 1) or state.has("Rat-A-Tat Rap", player, 1) or state.has(
@@ -100,23 +106,24 @@ def set_region_rules(world: MultiWorld, player: int):
                              state.has("Beak Barge", player, 1) or state.has("Rat-A-Tat Rap", player,
                                                                              1)) and state.has("Beak Buster",
                                                                                                player, 1))
-        if region.name == "Grunty's Lair 6F":
+        if region.name == "Grunty's Lair 7F":
             set_rule(region.entrances[0], lambda state: state.has("Flap Flip", player, 1) or (
                     (state.has("Rat-A-Tat Rap", player, 1) or state.has("Eggs", player, 1)) and state.has(
-                "Beak Buster", player, 1)))
+                "Beak Buster", player, 1)) and state.has("Note", player, 640))
         if region.name == "Click Clock Wood":
             set_rule(region.entrances[0],
                      lambda state: state.has("Jiggy", player, 69) and state.has("Flap Flip", player, 1) and state.has(
                          "Swim", player, 1) and state.has("Talon Trot", player, 1) and state.has("Beak Buster", player,
                                                                                                  1))
-        if region.name == "Grunty's Lair 7F":
-            set_rule(region.entrances[0], lambda state: state.has("Flap Flip", player, 1))
+        if region.name == "Grunty's Lair 8F":
+            set_rule(region.entrances[0], lambda state: state.has("Flap Flip", player, 1) and state.has(
+                "Note", player, 765))
         if region.name == "Grunty's Lair Top Floor":
             set_rule(region.entrances[0],
                      lambda state: state.has("Jiggy", player, 94) and state.has("Eggs", player, 1) and state.has(
                          "Flight", player, 1) and ((state.has("Wonderwing") and state.has("Beak Bomb", player,
                                                                                           1)) or state.has(
-                         "Beak Buster")))
+                         "Beak Buster")) and state.has("Note", player, 810))
 
 
 def set_location_rule(world: MultiWorld, player: int, location: str, locations):
