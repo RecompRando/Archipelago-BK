@@ -39,7 +39,7 @@ learned_moves_table = {
 progression_item_table = {
     "Jiggy": ItemData(130018, ItemClassification.progression),
     "Mumbo Token": ItemData(130019, ItemClassification.progression_skip_balancing),
-    "Note": ItemData(130020, ItemClassification.progression_skip_balancing)
+    "Note": ItemData(None, ItemClassification.progression_skip_balancing)
 }
 
 useful_item_table = {

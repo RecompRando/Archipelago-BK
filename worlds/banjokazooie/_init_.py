@@ -46,7 +46,7 @@ class BanjoKazooieWorld(World):
 
     def get_filler_item_name(self) -> str:
         return self.multiworld.random.choice(
-            ["Honeycomb", "20 Eggs", "10 Red Feathers", "5 Gold Feathers", "Extra Life"])
+            ["Honeycomb", "Egg Refill", "Red Feathers Refill", "Gold Feathers Refill", "Extra Life"])
 
     def set_rules(self) -> None:
         set_rules(self.multiworld, self.player)
