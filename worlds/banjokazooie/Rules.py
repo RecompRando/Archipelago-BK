@@ -127,15 +127,15 @@ def set_region_rules(world: MultiWorld, player: int):
 
 def set_location_rule(world: MultiWorld, player: int, location: str, locations):
     set_rule(world.get_location(location, player),
-             lambda state: can_access_location(state, player, location, locations))
+             lambda state: can_access_location(world, state, player, location, locations))
 
 
-def can_access_location(state: "CollectionState", player: int, location: str, locations) -> bool:
+def can_access_location(world, state: "CollectionState", player: int, location: str, locations) -> bool:
     for requirements in locations[location].requirements:
         fulfills_requirements = True
         for requirement in requirements:
-            if requirement.startswith("Mumbo Token"):
-                if not state.has(requirement, player, requirement.requirement.strip("Mubo Tken[]")):
+            if requirement.startswith("Mumbo Token Amount"):
+                if not state.has(requirement, player, world.total_transformation_cost[player].value):
                     fulfills_requirements = False
             else:
                 if not state.has(requirement, player, 1):
