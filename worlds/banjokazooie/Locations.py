@@ -318,7 +318,7 @@ empty_honeycomb_location_table = {
     "GV Cactus Honeycomb Piece": LocationData(99999, [["Feathery Flap", "Flap Flip", "Beak Buster", "Flight"],
                                                       ["Rat-A-Tat Rap", "Flap Flip", "Beak Buster", "Flight"]]),
     "GV Gobi's Honeycomb Piece": LocationData(99999, [["Beak Buster"]]),
-    "MMM Church Rafters Honeycomb Piece": LocationData(99999[["Flap Flip", "Feathery Flap", "Beak Buster",
+    "MMM Church Rafters Honeycomb Piece": LocationData(99999, [["Flap Flip", "Feathery Flap", "Beak Buster",
                                                               "Turbo Talon Trot", "Shock Spring Jump", "Flight"], [
         "Flap Flip", "Rat-A-Tat Rap", "Beak Buster", "Turbo Talon Trot", "Shock Spring Jump", "Flight"]]),
     "MMM Honeycomb Piece Under the Floorboards": LocationData(99999, [["Flap Flip", "Jump", "Climb", "Rat-A-Tat Rap"],

@@ -21,7 +21,7 @@ basic_moves_table = {
     "Beak Barge": ItemData(130005, ItemClassification.progression),
     "Claw Swipe": ItemData(130006, ItemClassification.progression),
     "Roll": ItemData(130007, ItemClassification.progression),
-    "Rat-A-Tat Rap": ItemData(130008, ItemClassification.progression),
+    "Rat-A-Tat Rap": ItemData(130008, ItemClassification.progression)
 }
 
 learned_moves_table = {
@@ -56,7 +56,7 @@ useless_item_table = {
     "Cyan Egg": ItemData(130028, ItemClassification.trap),
     "Green Egg": ItemData(130029, ItemClassification.trap),
     "Red Egg": ItemData(130030, ItemClassification.trap),
-    "Yellow Egg": ItemData(130031, ItemClassification.trap),
+    "Yellow Egg": ItemData(130031, ItemClassification.trap)
 }
 
 junk_item_table = {
