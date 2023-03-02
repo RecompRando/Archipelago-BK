@@ -59,6 +59,13 @@ def create_regions(world: MultiWorld, player: int):
             player, "Sharkfood Island Egg", secrets_location_table["Pink Egg"].code, ttc_region))
     world.regions.append(ttc_region)
 
+    gl_floor_3_region = create_region("Grunty's Lair 3F", player, world)
+    initialize_locations(gl_floor_3_region, glf3_location_table, player)
+    for location, data in mumbo_token_location_table:
+        if location.contains("GLF3"):
+            gl_floor_3_region.locations.append(BKLocation(player, location, data.code, gl_floor_3_region))
+    world.regions.append(gl_floor_3_region)
+
     cc_region = create_region("Clanker's Cavern", player, world)
     initialize_locations(cc_region, cc_location_table, player)
     for location, data in empty_honeycomb_location_table:
@@ -75,12 +82,12 @@ def create_regions(world: MultiWorld, player: int):
                 cc_region.locations.append(BKLocation(player, location, data.code, cc_region))
     world.regions.append(cc_region)
 
-    gl_floor_3_region = create_region("Grunty's Lair 3F", player, world)
-    initialize_locations(gl_floor_3_region, glf3_location_table, player)
+    gl_floor_4_region = create_region("Grunty's Lair 4F", player, world)
+    initialize_locations(gl_floor_4_region, glf4_location_table, player)
     for location, data in mumbo_token_location_table:
-        if location.contains("GLF3"):
-            gl_floor_3_region.locations.append(BKLocation(player, location, data.code, gl_floor_3_region))
-    world.regions.append(gl_floor_3_region)
+        if location.contains("GLF4"):
+            gl_floor_4_region.locations.append(BKLocation(player, location, data.code, gl_floor_4_region))
+    world.regions.append(gl_floor_4_region)
 
     bs_region = create_region("Bubblegloop Swamp", player, world)
     initialize_locations(bs_region, bs_location_table, player)
@@ -98,12 +105,12 @@ def create_regions(world: MultiWorld, player: int):
                 bs_region.locations.append(BKLocation(player, location, data.code, bs_region))
     world.regions.append(bs_region)
 
-    gl_floor_4_region = create_region("Grunty's Lair 4F", player, world)
-    initialize_locations(gl_floor_4_region, glf4_location_table, player)
+    gl_floor_5_region = create_region("Grunty's Lair 5F", player, world)
+    initialize_locations(gl_floor_5_region, glf5_location_table, player)
     for location, data in mumbo_token_location_table:
-        if location.contains("GLF4"):
-            gl_floor_4_region.locations.append(BKLocation(player, location, data.code, gl_floor_4_region))
-    world.regions.append(gl_floor_4_region)
+        if location.contains("GLF5"):
+            gl_floor_5_region.locations.append(BKLocation(player, location, data.code, gl_floor_5_region))
+    world.regions.append(gl_floor_5_region)
 
     fp_region = create_region("Freezeezy Peak", player, world)
     initialize_locations(fp_region, fp_location_table, player)
@@ -142,15 +149,19 @@ def create_regions(world: MultiWorld, player: int):
             player, "Gobi's Valley Egg", secrets_location_table["Blue Egg"].code, gv_region))
     world.regions.append(gv_region)
 
-    gl_floor_5_region = create_region("Grunty's Lair 5F", player, world)
-    world.regions.append(gl_floor_5_region)
-
     gl_floor_6_region = create_region("Grunty's Lair 6F", player, world)
     initialize_locations(gl_floor_6_region, glf6_location_table, player)
     for location, data in mumbo_token_location_table:
-        if location.contains("GLF5"):
+        if location.contains("GLF6"):
             gl_floor_6_region.locations.append(BKLocation(player, location, data.code, gl_floor_6_region))
     world.regions.append(gl_floor_6_region)
+
+    gl_floor_7_region = create_region("Grunty's Lair 7F", player, world)
+    initialize_locations(gl_floor_7_region, glf7_location_table, player)
+    for location, data in mumbo_token_location_table:
+        if location.contains("GLF7"):
+            gl_floor_7_region.locations.append(BKLocation(player, location, data.code, gl_floor_7_region))
+    world.regions.append(gl_floor_7_region)
 
     mmm_region = create_region("Mad Monster Mansion", player, world)
     initialize_locations(mmm_region, mmm_location_table, player)
@@ -184,12 +195,12 @@ def create_regions(world: MultiWorld, player: int):
             player, "Captain's Room Egg", secrets_location_table["Red Egg"].code, rbb_region))
     world.regions.append(rbb_region)
 
-    gl_floor_7_region = create_region("Grunty's Lair 7F", player, world)
-    initialize_locations(gl_floor_7_region, glf7_location_table, player)
+    gl_floor_8_region = create_region("Grunty's Lair 8F", player, world)
+    initialize_locations(gl_floor_8_region, glf8_location_table, player)
     for location, data in mumbo_token_location_table:
-        if location.contains("GLF6"):
-            gl_floor_7_region.locations.append(BKLocation(player, location, data.code, gl_floor_7_region))
-    world.regions.append(gl_floor_7_region)
+        if location.contains("GLF8"):
+            gl_floor_8_region.locations.append(BKLocation(player, location, data.code, gl_floor_8_region))
+    world.regions.append(gl_floor_8_region)
 
     ccw_region = create_region("Click Clock Wood", player, world)
     initialize_locations(ccw_region, ccw_location_table, player)
@@ -206,8 +217,8 @@ def create_regions(world: MultiWorld, player: int):
             player, "Nabnut's Egg", secrets_location_table["Yellow Egg"].code, ccw_region))
     world.regions.append(ccw_region)
 
-    gl_floor_8_region = create_region("Grunty's Lair 8F", player, world)
-    world.regions.append(gl_floor_8_region)
+    gl_floor_9_region = create_region("Grunty's Lair 9F", player, world)
+    world.regions.append(gl_floor_9_region)
 
     gl_top_floor_region = create_region("Grunty's Lair Top Floor", player, world)
     world.regions.append(gl_top_floor_region)

@@ -21,7 +21,7 @@ basic_moves_table = {
     "Beak Barge": ItemData(130005, ItemClassification.progression),
     "Claw Swipe": ItemData(130006, ItemClassification.progression),
     "Roll": ItemData(130007, ItemClassification.progression),
-    "Rat-A-Tat Rap": ItemData(130008, ItemClassification.progression),
+    "Rat-A-Tat Rap": ItemData(130008, ItemClassification.progression)
 }
 
 learned_moves_table = {
@@ -56,7 +56,7 @@ useless_item_table = {
     "Cyan Egg": ItemData(130028, ItemClassification.trap),
     "Green Egg": ItemData(130029, ItemClassification.trap),
     "Red Egg": ItemData(130030, ItemClassification.trap),
-    "Yellow Egg": ItemData(130031, ItemClassification.trap),
+    "Yellow Egg": ItemData(130031, ItemClassification.trap)
 }
 
 junk_item_table = {
@@ -67,11 +67,56 @@ junk_item_table = {
     "Extra Life": ItemData(130036, ItemClassification.filler)
 }
 
+jiggy_puzzle_table = {
+    "MM Jiggy Puzzle": ItemData(None, ItemClassification.progression),
+    "TTC Jiggy Puzzle": ItemData(None, ItemClassification.progression),
+    "CC Jiggy Puzzle": ItemData(None, ItemClassification.progression),
+    "BS Jiggy Puzzle": ItemData(None, ItemClassification.progression),
+    "FP Jiggy Puzzle": ItemData(None, ItemClassification.progression),
+    "GV Jiggy Puzzle": ItemData(None, ItemClassification.progression),
+    "MMM Jiggy Puzzle": ItemData(None, ItemClassification.progression),
+    "RBB Jiggy Puzzle": ItemData(None, ItemClassification.progression),
+    "CCW Jiggy Puzzle": ItemData(None, ItemClassification.progression)
+}
+
+witch_switch_table = {
+    "MM Witch Switch": ItemData(None, ItemClassification.progression_skip_balancing),
+    "TTC Witch Switch": ItemData(None, ItemClassification.progression_skip_balancing),
+    "CC Witch Switch": ItemData(None, ItemClassification.progression_skip_balancing),
+    "BS Witch Switch": ItemData(None, ItemClassification.progression_skip_balancing),
+    "FP Witch Switch": ItemData(None, ItemClassification.progression_skip_balancing),
+    "GV Witch Switch": ItemData(None, ItemClassification.progression_skip_balancing),
+    "MMM Witch Switch": ItemData(None, ItemClassification.progression_skip_balancing),
+    "RBB Witch Switch": ItemData(None, ItemClassification.progression_skip_balancing),
+    "CCW Witch Switch": ItemData(None, ItemClassification.progression_skip_balancing)
+}
+
+transformation_table = {
+    "Termite Transformation": ItemData(None, ItemClassification.progression),
+    "Crocodile Transformation": ItemData(None, ItemClassification.progression),
+    "Walrus Transformation": ItemData(None, ItemClassification.progression),
+    "Pumpkin Transformation": ItemData(None, ItemClassification.progression),
+    "Bee Transformation": ItemData(None, ItemClassification.progression)
+}
+
+misc_event_table = {
+    "Toboggan Jiggy Flag": ItemData(None, ItemClassification.progression_skip_balancing),
+    "Boggy's First Race Flag": ItemData(None, ItemClassification.progression_skip_balancing),
+    "Gobi's Jiggy Flag": ItemData(None, ItemClassification.progression_skip_balancing),
+    "Trunker's Jiggy Flag": ItemData(None, ItemClassification.progression_skip_balancing),
+    "Gobi's Honeycomb Flag": ItemData(None, ItemClassification.progression_skip_balancing),
+    "CCW Jiggy Podium Switch": ItemData(None, ItemClassification.progression)
+}
+
 item_table = {
     **basic_moves_table,
     **learned_moves_table,
     **progression_item_table,
     **useful_item_table,
     **useless_item_table,
-    **junk_item_table
+    **junk_item_table,
+    **jiggy_puzzle_table,
+    **witch_switch_table,
+    **transformation_table,
+    **misc_event_table
 }

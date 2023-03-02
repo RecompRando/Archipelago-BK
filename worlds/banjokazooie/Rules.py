@@ -135,7 +135,7 @@ def can_access_location(world, state: "CollectionState", player: int, location: 
         fulfills_requirements = True
         for requirement in requirements:
             if requirement.startswith("Mumbo Token Amount"):
-                if not state.has(requirement, player, world.total_transformation_cost[player].value):
+                if not state.has(requirement, player, int(world.number_of_mumbo_tokens[player].value*.66)):
                     fulfills_requirements = False
             else:
                 if not state.has(requirement, player, 1):
