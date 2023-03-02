@@ -14,11 +14,11 @@ def create_regions(world: MultiWorld, player: int):
     world.regions.append(menu_region)
 
     gl_floor_1_region = create_region("Grunty's Lair 1F", player, world)
-    initialize_locations(gl_floor_1_region, glf1_location_table)
+    initialize_locations(gl_floor_1_region, glf1_location_table, player)
     world.regions.append(gl_floor_1_region)
 
     mm_region = create_region("Mumbo's Mountain", player, world)
-    initialize_locations(mm_region, mm_location_table)
+    initialize_locations(mm_region, mm_location_table, player)
     if world.shuffle_moves[player].value != 0:
         for location, data in molehill_location_table:
             if location.contains("MM"):
@@ -34,14 +34,14 @@ def create_regions(world: MultiWorld, player: int):
     world.regions.append(mm_region)
 
     gl_floor_2_region = create_region("Grunty's Lair 2F", player, world)
-    initialize_locations(gl_floor_2_region, glf2_location_table)
+    initialize_locations(gl_floor_2_region, glf2_location_table, player)
     for location, data in mumbo_token_location_table:
         if location.contains("GLF2"):
             gl_floor_2_region.locations.append(BKLocation(player, location, data.code, gl_floor_2_region))
     world.regions.append(gl_floor_2_region)
 
     ttc_region = create_region("Treasure Trove Cove", player, world)
-    initialize_locations(ttc_region, ttc_location_table)
+    initialize_locations(ttc_region, ttc_location_table, player)
     for location, data in empty_honeycomb_location_table:
         if location.contains("TTC"):
             ttc_region.locations.append(BKLocation(player, location, data.code, ttc_region))
@@ -60,7 +60,7 @@ def create_regions(world: MultiWorld, player: int):
     world.regions.append(ttc_region)
 
     cc_region = create_region("Clanker's Cavern", player, world)
-    initialize_locations(cc_region, cc_location_table)
+    initialize_locations(cc_region, cc_location_table, player)
     for location, data in empty_honeycomb_location_table:
         if location.contains("CC"):
             cc_region.locations.append(BKLocation(player, location, data.code, cc_region))
@@ -76,14 +76,14 @@ def create_regions(world: MultiWorld, player: int):
     world.regions.append(cc_region)
 
     gl_floor_3_region = create_region("Grunty's Lair 3F", player, world)
-    initialize_locations(gl_floor_3_region, glf3_location_table)
+    initialize_locations(gl_floor_3_region, glf3_location_table, player)
     for location, data in mumbo_token_location_table:
         if location.contains("GLF3"):
             gl_floor_3_region.locations.append(BKLocation(player, location, data.code, gl_floor_3_region))
     world.regions.append(gl_floor_3_region)
 
     bs_region = create_region("Bubblegloop Swamp", player, world)
-    initialize_locations(bs_region, bs_location_table)
+    initialize_locations(bs_region, bs_location_table, player)
     for location, data in empty_honeycomb_location_table:
         if location.contains("BS"):
             bs_region.locations.append(BKLocation(player, location, data.code, bs_region))
@@ -99,14 +99,14 @@ def create_regions(world: MultiWorld, player: int):
     world.regions.append(bs_region)
 
     gl_floor_4_region = create_region("Grunty's Lair 4F", player, world)
-    initialize_locations(gl_floor_4_region, glf4_location_table)
+    initialize_locations(gl_floor_4_region, glf4_location_table, player)
     for location, data in mumbo_token_location_table:
         if location.contains("GLF4"):
             gl_floor_4_region.locations.append(BKLocation(player, location, data.code, gl_floor_4_region))
     world.regions.append(gl_floor_4_region)
 
     fp_region = create_region("Freezeezy Peak", player, world)
-    initialize_locations(fp_region, fp_location_table)
+    initialize_locations(fp_region, fp_location_table, player)
     for location, data in empty_honeycomb_location_table:
         if location.contains("FP"):
             fp_region.locations.append(BKLocation(player, location, data.code, fp_region))
@@ -124,7 +124,7 @@ def create_regions(world: MultiWorld, player: int):
     world.regions.append(fp_region)
 
     gv_region = create_region("Gobi's Valley", player, world)
-    initialize_locations(gv_region, gv_location_table)
+    initialize_locations(gv_region, gv_location_table, player)
     for location, data in empty_honeycomb_location_table:
         if location.contains("GV"):
             gv_region.locations.append(BKLocation(player, location, data.code, gv_region))
@@ -146,14 +146,14 @@ def create_regions(world: MultiWorld, player: int):
     world.regions.append(gl_floor_5_region)
 
     gl_floor_6_region = create_region("Grunty's Lair 6F", player, world)
-    initialize_locations(gl_floor_6_region, glf6_location_table)
+    initialize_locations(gl_floor_6_region, glf6_location_table, player)
     for location, data in mumbo_token_location_table:
         if location.contains("GLF5"):
             gl_floor_6_region.locations.append(BKLocation(player, location, data.code, gl_floor_6_region))
     world.regions.append(gl_floor_6_region)
 
     mmm_region = create_region("Mad Monster Mansion", player, world)
-    initialize_locations(mmm_region, mmm_location_table)
+    initialize_locations(mmm_region, mmm_location_table, player)
     for location, data in empty_honeycomb_location_table:
         if location.contains("MMM"):
             mmm_region.locations.append(BKLocation(player, location, data.code, mmm_region))
@@ -170,7 +170,7 @@ def create_regions(world: MultiWorld, player: int):
     world.regions.append(mmm_region)
 
     rbb_region = create_region("Rusty Bucket Bay", player, world)
-    initialize_locations(rbb_region, rbb_location_table)
+    initialize_locations(rbb_region, rbb_location_table, player)
     for location, data in empty_honeycomb_location_table:
         if location.contains("RBB"):
             rbb_region.locations.append(BKLocation(player, location, data.code, rbb_region))
@@ -185,14 +185,14 @@ def create_regions(world: MultiWorld, player: int):
     world.regions.append(rbb_region)
 
     gl_floor_7_region = create_region("Grunty's Lair 7F", player, world)
-    initialize_locations(gl_floor_7_region, glf7_location_table)
+    initialize_locations(gl_floor_7_region, glf7_location_table, player)
     for location, data in mumbo_token_location_table:
         if location.contains("GLF6"):
             gl_floor_7_region.locations.append(BKLocation(player, location, data.code, gl_floor_7_region))
     world.regions.append(gl_floor_7_region)
 
     ccw_region = create_region("Click Clock Wood", player, world)
-    initialize_locations(ccw_region, ccw_location_table)
+    initialize_locations(ccw_region, ccw_location_table, player)
     for location, data in empty_honeycomb_location_table:
         if location.contains("CCW"):
             ccw_region.locations.append(BKLocation(player, location, data.code, ccw_region))
