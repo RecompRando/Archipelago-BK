@@ -68,9 +68,8 @@ def set_region_rules(world: MultiWorld, player: int):
             set_rule(region.entrances[0], lambda state: state.has("Jiggy", player, 3))
         if region.name == "Clanker's Cavern":
             set_rule(region.entrances[0],
-                     lambda state: state.has("Jiggy", player, 8) and state.has("Jump", player, 1) and state.has(
-                         "Flap Flip", player, 1) and state.has("Swim", player, 1) and state.has("Beak Buster", player,
-                                                                                                1) and state.has(
+                     lambda state: state.has("Jiggy", player, 8) and state.has("Flap Flip", player, 1) and state.has(
+                         "Swim", player, 1) and state.has("Beak Buster", player, 1) and state.has(
                          "Shock Spring Jump", player, 1))
         if region.name == "Grunty's Lair 3F":
             set_rule(region.entrances[0], lambda state: state.has("Talon Trot", player, 1) and state.has(
@@ -81,7 +80,7 @@ def set_region_rules(world: MultiWorld, player: int):
                          "Swim", player, 1) and state.has("Beak Buster", player, 1))
         if region.name == "Grunty's Lair 4F":
             set_rule(region.entrances[0],
-                     lambda state: state.has("Jump", player, 1) and state.has(
+                     lambda state: state.has(
                          "Shock Spring Jump", player, 1) and state.has("Note", player, 260))
         if region.name == "Freezeezy Peak":
             set_rule(region.entrances[0],
@@ -135,8 +134,12 @@ def can_access_location(state: "CollectionState", player: int, location: str, lo
     for requirements in locations[location].requirements:
         fulfills_requirements = True
         for requirement in requirements:
-            if not state.has(requirement, player, 1):
-                fulfills_requirements = False
+            if requirement.startswith("Mumbo Token"):
+                if not state.has(requirement, player, requirement.requirement.strip("Mubo Tken[]")):
+                    fulfills_requirements = False
+            else:
+                if not state.has(requirement, player, 1):
+                    fulfills_requirements = False
         if fulfills_requirements:
             return True
     return False
