@@ -114,11 +114,14 @@ transformation_table = {
 }
 
 misc_event_table = {
+    "BLUEEGGS Cheato Rock Cleared": ItemData(None, ItemClassification.progression),
     "Toboggan Jiggy Flag": ItemData(None, ItemClassification.progression_skip_balancing),
     "Boggy's First Race Flag": ItemData(None, ItemClassification.progression_skip_balancing),
     "Gobi's Jiggy Flag": ItemData(None, ItemClassification.progression_skip_balancing),
     "Trunker's Jiggy Flag": ItemData(None, ItemClassification.progression_skip_balancing),
     "Gobi's Honeycomb Flag": ItemData(None, ItemClassification.progression_skip_balancing),
+    "Water Level Switch 1": ItemData(None, ItemClassification.progression),
+    "Water Level Switch 2": ItemData(None, ItemClassification.progression),
     "CCW Jiggy Podium Switch": ItemData(None, ItemClassification.progression)
 }
 

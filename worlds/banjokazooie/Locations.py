@@ -68,6 +68,25 @@ glf5_location_table = {
 
 glf6_location_table = {
     "GLF6 GV Jiggy Puzzle": LocationData(None, [["Jiggy Amount [GV]"]]),
+    # ROM edited to allow access for any transformation
+    "GLF6 Water Level Switch 1": LocationData(None, [["Beak Barge", "Beak Buster", "Termite Transformation"],
+                                                     ["Rat-A-Tat Rap", "Beak Buster", "Termite Transformation"],
+                                                     ["Eggs", "Beak Buster", "Termite Transformation"],
+                                                     ["Beak Barge", "Beak Buster", "Crocodile Transformation"],
+                                                     ["Rat-A-Tat Rap", "Beak Buster", "Crocodile Transformation"],
+                                                     ["Eggs", "Beak Buster", "Crocodile Transformation"],
+                                                     ["Beak Barge", "Beak Buster", "Walrus Transformation"],
+                                                     ["Rat-A-Tat Rap", "Beak Buster", "Walrus Transformation"],
+                                                     ["Eggs", "Beak Buster", "Walrus Transformation"],
+                                                     ["Beak Barge", "Beak Buster", "Pumpkin Transformation"],
+                                                     ["Rat-A-Tat Rap", "Beak Buster", "Pumpkin Transformation"],
+                                                     ["Eggs", "Beak Buster", "Pumpkin Transformation"],
+                                                     ["Beak Barge", "Beak Buster", "Bee Transformation"],
+                                                     ["Rat-A-Tat Rap", "Beak Buster", "Bee Transformation"],
+                                                     ["Eggs", "Beak Buster", "Bee Transformation"]]),
+    "GLF6 Water Level Switch 2": LocationData(None, [["Feathery Flap", "Beak Buster", "Water Level Switch 1"],
+                                                     ["Rat-A-Tat Rap", "Beak Buster", "Water Level Switch 1"],
+                                                     ["Talon Trot", "Beak Buster", "Water Level Switch 1"]])
 }
 
 glf7_location_table = {
@@ -292,7 +311,6 @@ bs_location_table = {
     "BS Jinjo Jiggy": LocationData(120049, [["Feathery Flap", "Climb", "Crocodile Transformation"],
                                             ["Rat-A-Tat Rap", "Climb", "Crocodile Transformation"],
                                             ["Talon Trot", "Climb", "Crocodile Transformation"]]),
-    # AND Transformation
     #    "BS Blue Jinjo": LocationData (99999, [["Feathery Flap", "Climb"],
     #                                                      ["Rat-A-Tat Rap", "Climb"],
     #                                                      ["Talon Trot", "Climb"]]),
@@ -582,7 +600,6 @@ empty_honeycomb_location_table = {
 
 mumbo_token_location_table = {
     "GLF2 Mumbo Token Behind Red Magic Cauldron": LocationData(120124),
-
     "GLF2 Mumbo Token Above Drain Pipe": LocationData(120125),
     "GLF2 Mumbo Token Near Click Clock Wood Podium": LocationData(120126, [["Swim"]]),
 
@@ -593,12 +610,28 @@ mumbo_token_location_table = {
     "GLF5 Mumbo Token Behind Sarcophagus": LocationData(120128),
     "GLF5 Mumbo Token Above Freezeezy Peak": LocationData(120129, [["Flap Flip"]]),
 
-    "GLF6 Mumbo Token Behind Mumbo": LocationData(120130, [["Flap Flip", "Beak Barge"],
-                                                           [["Flap Flip", "Rat-A-Tat Rap"]]]),
+    # ROM edited to allow entrance for any transformation
+    "GLF6 Mumbo Token Behind Mumbo": LocationData(120130, [["Beak Barge", "Termite Transformation"],
+                                                           ["Rat-A-Tat Rap", "Termite Transformation"],
+                                                           ["Eggs", "Termite Transformation"],
+                                                           ["Beak Barge", "Crocodile Transformation"],
+                                                           ["Rat-A-Tat Rap", "Crocodile Transformation"],
+                                                           ["Eggs", "Crocodile Transformation"],
+                                                           ["Beak Barge", "Walrus Transformation"],
+                                                           ["Rat-A-Tat Rap", "Walrus Transformation"],
+                                                           ["Eggs", "Walrus Transformation"],
+                                                           ["Beak Barge", "Pumpkin Transformation"],
+                                                           ["Rat-A-Tat Rap", "Pumpkin Transformation"],
+                                                           ["Eggs", "Pumpkin Transformation"],
+                                                           ["Beak Barge", "Bee Transformation"],
+                                                           ["Rat-A-Tat Rap", "Bee Transformation"],
+                                                           ["Eggs", "Bee Transformation"]]),
 
     "GLF7 Mumbo Token Under Rusty Bucket Bay": LocationData(120131, [["Swim"]]),
     "GLF7 Mumbo Token By Mad Monster Mansion Podium": LocationData(120132, [["Swim", "Feathery Flap"],
-                                                                            ["Swim", "Rat-A-Tat Rap"]]),
+                                                                            ["Swim", "Rat-A-Tat Rap"],
+                                                                            ["Swim", "Talon Trot"]]),
+
     "GLF8 Tunnel from Click Clock Wood Mumbo Token": LocationData(120133, [["Flap Flip"],
                                                                            ["Talon Trot", "Flight"],
                                                                            ["Bee Transformation"]]),
@@ -646,7 +679,7 @@ mumbo_token_location_table = {
     "TTC Mumbo Token Above Floating Crate": LocationData(120147),
     "TTC Mumbo Token in Lighthouse": LocationData(120148, [["Jump", "Flight"],
                                                            ["Feathery Flap", "Flight"],
-                                                           ["Flap Flip"],
+                                                           ["Flap Flip", "Flight"],
                                                            ["Rat-A-Tat Rap", "Flight"],
                                                            ["Talon Trot"]]),
 
@@ -874,10 +907,15 @@ molehill_location_table = {
     "MM Egg Molehill": LocationData(120236, [["Flap Flip"]]),
     "MM Talon Trot Molehill": LocationData(120237),
     "MM Beak Buster Molehill": LocationData(120238),
-    "TTC Flight Molehill": LocationData(120239, [["Talon Trot"],
-                                                 ["Flight"]]),
+    "TTC Flight Molehill": LocationData(120239, [["Jump", "Flight"],
+                                                 ["Feathery Flap", "Flight"],
+                                                 ["Flap Flip", "Flight"],
+                                                 ["Rat-A-Tat Rap", "Flight"],
+                                                 ["Talon Trot", "Flight"]]),
     "TTC Shock Spring Jump Molehill": LocationData(120240, [["Jump"],
+                                                            ["Feathery Flap"],
                                                             ["Flap Flip"],
+                                                            ["Rat-A-Tat Rap"],
                                                             ["Talon Trot"]]),
     "CC Wonderwing Molehill": LocationData(120241, [["Swim", "Flight"]]),
     "BS Stilt Stride Molehill": LocationData(120242),
@@ -895,34 +933,36 @@ basic_molehill_location_table = {
 }
 
 cheato_location_table = {
+    "BLUEEGGS Cheato Rock Cleared Flag": LocationData(None, [["Beak Barge", "Stilt Stride"],
+                                                             ["Rat-A-Tat Rap", "Stilt Stride"],
+                                                             ["Eggs", "Stilt Stride"],
+                                                             ["Beak Buster", "Stilt Stride"]]),
     "BLUEEGGS Cheato": LocationData(120250, [["BLUEEGGS Cheato Rock Cleared", "Termite Transformation"],
                                              ["BLUEEGGS Cheato Rock Cleared", "Crocodile Transformation"],
                                              ["BLUEEGGS Cheato Rock Cleared", "Walrus Transformation"],
                                              ["BLUEEGGS Cheato Rock Cleared", "Pumpkin Transformation"],
                                              ["BLUEEGGS Cheato Rock Cleared", "Bee Transformation"]]),
-    "BLUEEGGS Cheato Rock Cleared Flag": LocationData(None, [["Beak Barge", "Stilt Stride"],
-                                                             ["Rat-A-Tat Rap", "Stilt Stride"],
-                                                             ["Eggs", "Stilt Stride"],
-                                                             ["Beak Buster", "Stilt Stride"]]),
     "REDFEATHERS Cheato": LocationData(120251, [["Termite Transformation"],
                                                 ["Crocodile Transformation"],
                                                 ["Walrus Transformation"],
                                                 ["Pumpkin Transformation"],
                                                 ["Bee Transformation"]]),
     "GOLDFEATHERS Cheato": LocationData(120252, [["Swim", "Rat-A-Tat Rap", "Beak Buster"],
-                                                 ["Swim", "Eggs", "Beak Buster"]])
+                                                 ["Swim", "Eggs", "Beak Buster"],
+                                                 ["Bee Transformation"]])
 }
 
 secrets_location_table = {
     "Ice Key": LocationData(120253, [["Flap Flip", "Walrus Transformation"]]),
-    "Pink Egg": LocationData(120254, [["Feathery Flap", "Shock Spring Jump"],
-                                      ["Rat-A-Tat Rap", "Shock Spring Jump"],
-                                      ["Talon Trot", "Shock Spring Jump"]]),
+    "Pink Egg": LocationData(120254, [["Jump", "Feathery Flap", "Shock Spring Jump"],
+                                      ["Jump", "Rat-A-Tat Rap", "Shock Spring Jump"],
+                                      ["Jump", "Talon Trot", "Shock Spring Jump"]]),
     "Blue Egg": LocationData(120255, [["Talon Trot"],
                                       ["Turbo Talon Trot"]]),
     "Cyan Egg": LocationData(120256, [["Beak Barge"],
                                       ["Rat-A-Tat Rap"],
-                                      ["Eggs"]]),
+                                      ["Eggs"],
+                                      ["Beak Buster"]]),
     "Green Egg": LocationData(120257, [["Jump", "Climb", "Rat-A-Tat Rap"],
                                        ["Jump", "Climb", "Eggs"],
                                        ["Talon Trot", "Climb", "Rat-A-Tat Rap"],

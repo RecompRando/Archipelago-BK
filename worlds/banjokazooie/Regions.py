@@ -3,15 +3,17 @@ from Locations import *
 
 
 def create_regions(world: MultiWorld, player: int):
-    menu_region = Region("Menu", player, world, "Spiral Mountain")
+    menu_region = Region("Menu", player, world)
+    world.regions.append(menu_region)
+
+    sm_region = Region("Spiral Mountain", player, world)
     for location, data in empty_honeycomb_location_table:
         if location.contains("SM"):
-            menu_region.locations.append(BKLocation(
-                player, location, data.code, menu_region))
+            sm_region.locations.append(BKLocation(player, location, data.code, sm_region))
     if world.shuffle_basic_moves[player].value:
         for location, data in basic_molehill_location_table:
-            menu_region.locations.append(BKLocation(player, location, data.code, menu_region))
-    world.regions.append(menu_region)
+            sm_region.locations.append(BKLocation(player, location, data.code, sm_region))
+    world.regions.append(sm_region)
 
     gl_floor_1_region = create_region("Grunty's Lair 1F", player, world)
     initialize_locations(gl_floor_1_region, glf1_location_table, player)
@@ -84,9 +86,6 @@ def create_regions(world: MultiWorld, player: int):
 
     gl_floor_4_region = create_region("Grunty's Lair 4F", player, world)
     initialize_locations(gl_floor_4_region, glf4_location_table, player)
-    for location, data in mumbo_token_location_table:
-        if location.contains("GLF4"):
-            gl_floor_4_region.locations.append(BKLocation(player, location, data.code, gl_floor_4_region))
     world.regions.append(gl_floor_4_region)
 
     bs_region = create_region("Bubblegloop Swamp", player, world)
@@ -217,10 +216,10 @@ def create_regions(world: MultiWorld, player: int):
             player, "Nabnut's Egg", secrets_location_table["Yellow Egg"].code, ccw_region))
     world.regions.append(ccw_region)
 
-    gl_floor_9_region = create_region("Grunty's Lair 9F", player, world)
-    world.regions.append(gl_floor_9_region)
+    gl_floor_furnace_fun_region = create_region("Grunty's Lair - Furnace Fun", player, world)
+    world.regions.append(gl_floor_furnace_fun_region)
 
-    gl_top_floor_region = create_region("Grunty's Lair Top Floor", player, world)
+    gl_top_floor_region = create_region("Grunty's Lair - Top Floor", player, world)
     world.regions.append(gl_top_floor_region)
 
 

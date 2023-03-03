@@ -2,12 +2,12 @@ from ...Options import Toggle, DefaultOnToggle, Range, Choice, DeathLink
 
 
 class ShuffleMoves(DefaultOnToggle):
-    """Shuffles moves into other molehills, or adds them to the item pool"""
+    """Shuffles moves into the item pool"""
     display_name = "Shuffle Moves"
 
 
 class ShuffleBasicMoves(Toggle):
-    """If checked, shuffles all basic moves, based on Shuffle Moves setting"""
+    """Shuffles basic moves into the item pool"""
     display_name = "Shuffle Basic Moves"
 
 
