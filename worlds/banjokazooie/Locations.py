@@ -14,6 +14,7 @@ class LocationData(typing.NamedTuple):
 glf1_location_table = {
     "GLF1 Entryway Jiggy": LocationData(120000),
     "GLF1 MM Jiggy Puzzle": LocationData(None, [["Jiggy Amount [MM]"]]),
+    "GLF1 Note Door 1": LocationData(None, [["Talon Trot", "Note Door Amount [1]"]]),
     "GLF1 Atop Mumbo's Mountain Jiggy": LocationData(120001, [["Termite Transformation", "MM Witch Switch"],
                                                               ["Crocodile Transformation", "MM Witch Switch"],
                                                               ["Walrus Transformation", "MM Witch Switch"],
@@ -25,6 +26,7 @@ glf2_location_table = {
     "GLF2 TTC Jiggy Puzzle": LocationData(None, [["Jiggy Amount [TTC]"]]),
     "GLF2 CC Jiggy Puzzle": LocationData(None, [["Shock Spring Jump", "Jiggy Amount [CC]"]]),
     "GLF2 CCW Jiggy Puzzle": LocationData(None, [["Swim", "CCW Jiggy Podium Switch"]]),
+    "GLF2 Note Door 2": LocationData(None, [["Talon Trot", "Note Door Amount [2]"]]),
     "GLF2 Treasure Trove Cove Cannon Jiggy": LocationData(120002, [["Flap Flip", "TTC Witch Switch"]]),
     "GLF2 Clanker's Cavern Eye Switch Jiggy": LocationData(120003, [["Beak Buster", "CC Witch Switch"]]),
 }
@@ -42,6 +44,7 @@ glf4_location_table = {
                                                 ["Walrus Transformation", "Jiggy Amount [FP]"],
                                                 ["Pumpkin Transformation", "Jiggy Amount [FP]"],
                                                 ["Bee Transformation", "Jiggy Amount [FP]"]]),
+    "GLF4 Note Door 3": LocationData(None, [["Shock Spring Jump", "Note Door Amount [3]"]]),
     "GLF4 Bubblegloop Swamp Witch's Hat Jiggy":
         LocationData(120004, [["Jump", "Beak Barge", "Beak Buster", "Shock Spring Jump", "BS Witch Switch"],
                               ["Jump", "Rat-A-Tat Rap", "Beak Buster", "Shock Spring Jump", "BS Witch Switch"],
@@ -49,6 +52,8 @@ glf4_location_table = {
 }
 
 glf5_location_table = {
+    "GLF5 Note Door 4": LocationData(None, [["Note Door Amount [4]"]]),
+    "GLF5 Note Door 5": LocationData(None, [["Note Door Amount [5]"]]),
     "GLF5 Above Freezeezy Peak Jiggy": LocationData(120005,
                                                     [["Flap Flip", "Eggs", "Beak Buster",
                                                       "Flight", "Turbo Talon Trot", "FP Witch Switch"]]),
@@ -72,14 +77,30 @@ glf7_location_table = {
     "GLF7 RBB Jiggy Puzzle": LocationData(None, [["Swim", "Feathery Flap", "Beak Buster", "Jiggy Amount [RBB]"],
                                                  ["Swim", "Rat-A-Tat Rap", "Beak Buster", "Jiggy Amount [RBB]"],
                                                  ["Swim", "Talon Trot", "Beak Buster", "Jiggy Amount [RBB]"]]),
-    "GLF7 Rusty Bucket Bay Area Jiggy": LocationData(120008, [["Swim", "RBB Witch Switch"]]),
+    "GLF7 Note Door 6":
+        LocationData(None, [["Swim", "Flap Flip", "Feathery Flap", "Beak Buster", "Note Door Amount [6]"],
+                            ["Swim", "Flap Flip", "Rat-A-Tat Rap", "Beak Buster", "Note Door Amount [6]"]]),
+    "GLF7 Rusty Bucket Bay Area Jiggy":
+        LocationData(120008, [["Swim", "Feathery Flap", "Beak Buster", "RBB Witch Switch"],
+                              ["Swim", "Rat-A-Tat Rap", "Beak Buster", "RBB Witch Switch"]]),
 }
 
 glf8_location_table = {
     # Flight pad added next to Click Clock Wood entrance to allow for more level randomization
     "GLF8 Click Clock Wood Jiggy Podium Switch": LocationData(None, [["Flap Flip", "Beak Buster"],
                                                                      ["Talon Trot", "Flight", "Beak Buster"]]),
-    "GLF8 Click Clock Wood Bee Jiggy": LocationData(120009, [["Talon Trot", "Flight", "CCW Witch Switch"]]),
+    "GLF8 Note Door 7": LocationData(None, [["Flap Flip", "Note Door Amount [7]"],
+                                            ["Talon Trot", "Flight", "Note Door Amount [7]"],
+                                            ["Bee Transformation", "Note Door Amount [7]"]]),
+    "GLF8 Click Clock Wood Bee Jiggy": LocationData(120009, [["Talon Trot", "Flight", "CCW Witch Switch"],
+                                                             ["Bee Transformation", "CCW Witch Switch"]]),
+}
+
+gltf_location_table = {
+    "GLTF Final Boss Jiggy Puzzle": LocationData(None, [["Jiggy Amount [FB]"]]),
+    "GLTF Secret Puzzle": LocationData(120260, [["Note Door 9", "Jiggy Amount [SP]"]]),
+    "GLTF Note Door 8": LocationData(None, [["Note Door Amount [8]"]]),
+    "GLTF Note Door 9": LocationData(None, [["Note Door 8", "Final Boss Jiggy Puzzle", "Note Door Amount [9]"]]),
 }
 
 mm_location_table = {
@@ -578,7 +599,9 @@ mumbo_token_location_table = {
     "GLF7 Mumbo Token Under Rusty Bucket Bay": LocationData(120131, [["Swim"]]),
     "GLF7 Mumbo Token By Mad Monster Mansion Podium": LocationData(120132, [["Swim", "Feathery Flap"],
                                                                             ["Swim", "Rat-A-Tat Rap"]]),
-    "GLF7 Tunnel from Click Clock Wood Mumbo Token": LocationData(120133, [["Flap Flip"]]),
+    "GLF8 Tunnel from Click Clock Wood Mumbo Token": LocationData(120133, [["Flap Flip"],
+                                                                           ["Talon Trot", "Flight"],
+                                                                           ["Bee Transformation"]]),
 
     "MM Mumbo Token Behind Pink Jinjo": LocationData(120134),
     "MM Mumbo Token By Conga": LocationData(120135, [["Flap Flip"]]),
@@ -711,7 +734,7 @@ mumbo_token_location_table = {
                                                                ["Feathery Flap", "Turbo Talon Trot", "Eggs"],
                                                                ["Rat-A-Tat Rap", "Turbo Talon Trot", "Eggs"]]),
     #   # MISSABLE, REMOVE FROM ROM
-    #   "GV Mumbo Token Inside Water Pyramid": LocationData(XXXXXX, [["Swim", "Turbo Talon Trot"]]),
+    #   "GV Mumbo Token Inside Water Pyramid": LocationData(None, [["Turbo Talon Trot"]]),
 
     "MMM Mumbo Token in Fireplace": LocationData(120183, [["Jump", "Climb", "Shock Spring Jump"],
                                                           ["Talon Trot", "Climb", "Shock Spring Jump"],
@@ -811,7 +834,7 @@ mumbo_token_location_table = {
     "CCW Spring Mumbo Token on Nabnut's Dresser": LocationData(120217,
                                                                [["Talon Trot", "Beak Buster", "Shock Spring Jump"],
                                                                 ["Bee Transformation", "Beak Buster"]]),
-    # Shared Item ID, collecting one collects the other (REMOVE FROM MUMBO'S YARD)
+    # Shared Item ID, collecting one collects the other (REMOVE MUMBO'S YARD FROM ROM)
     "CCW Spring Mumbo Token outside Nabnut's House/Mumbo's Hut":
         LocationData(120218, [["Talon Trot", "Beak Buster", "Shock Spring Jump"],
                               ["Bee Transformation", "Beak Buster"]]),
@@ -2788,8 +2811,8 @@ mmm_notes_location_table = {
                                                        ["Flap Flip", "Rat-A-Tat Rap", "Pumpkin Transformation"],
                                                        ["Flap Flip", "Eggs", "Pumpkin Transformation"]]),
     "Mad Monster Mansion Note 100": LocationData(None, [["Flap Flip", "Beak Barge", "Pumpkin Transformation"],
-                                                       ["Flap Flip", "Rat-A-Tat Rap", "Pumpkin Transformation"],
-                                                       ["Flap Flip", "Eggs", "Pumpkin Transformation"]]),
+                                                        ["Flap Flip", "Rat-A-Tat Rap", "Pumpkin Transformation"],
+                                                        ["Flap Flip", "Eggs", "Pumpkin Transformation"]]),
 }
 rbb_notes_location_table = {
     # Obtainable with no requirements
@@ -3315,7 +3338,7 @@ location_table = {
 
 
 def setup_locations(world, player: int):
-    if world.ShuffleMoves[player].value != 0:
+    if world.ShuffleMoves[player].value:
         location_table.update(**molehill_location_table)
 
     if world.ShuffleBasicMoves[player].value:
@@ -3324,7 +3347,7 @@ def setup_locations(world, player: int):
     if world.ShuffleCheato[player].value:
         location_table.update(**cheato_location_table)
 
-    if world.ShuffleSecrets[player].value != 0:
+    if world.ShuffleSecrets[player].value:
         location_table.update(**secrets_location_table)
 
     return location_table

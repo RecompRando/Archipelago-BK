@@ -135,7 +135,67 @@ def can_access_location(world, state: "CollectionState", player: int, location: 
         fulfills_requirements = True
         for requirement in requirements:
             if requirement.startswith("Mumbo Token Amount"):
-                if not state.has(requirement, player, int(world.number_of_mumbo_tokens[player].value*.66)):
+                if not state.has("Mumbo Token", player, int(world.number_of_mumbo_tokens[player].value*.66)):
+                    fulfills_requirements = False
+            elif requirement == "Jiggy Amount [MM]":
+                if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value*.01)):
+                    fulfills_requirements = False
+            elif requirement == "Jiggy Amount [TTC]":
+                if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value*.08)):
+                    fulfills_requirements = False
+            elif requirement == "Jiggy Amount [CC]":
+                if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value*.08)):
+                    fulfills_requirements = False
+            elif requirement == "Jiggy Amount [BS]":
+                if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value*.15)):
+                    fulfills_requirements = False
+            elif requirement == "Jiggy Amount [FP]":
+                if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value*.32)):
+                    fulfills_requirements = False
+            elif requirement == "Jiggy Amount [GV]":
+                if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value*.32)):
+                    fulfills_requirements = False
+            elif requirement == "Jiggy Amount [MMM]":
+                if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value*.42)):
+                    fulfills_requirements = False
+            elif requirement == "Jiggy Amount [RBB]":
+                if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value*.54)):
+                    fulfills_requirements = False
+            elif requirement == "Jiggy Amount [CCW]":
+                if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value*.69)):
+                    fulfills_requirements = False
+            elif requirement == "Jiggy Amount [FB]":
+                if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value*.94)):
+                    fulfills_requirements = False
+            elif requirement == "Jiggy Amount [SP]":
+                if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value*.98)):
+                    fulfills_requirements = False
+            elif requirement == "Node Door Amount [1]":
+                if not state.has("Note", player, 50):
+                    fulfills_requirements = False
+            elif requirement == "Node Door Amount [2]":
+                if not state.has("Note", player, 180):
+                    fulfills_requirements = False
+            elif requirement == "Node Door Amount [3]":
+                if not state.has("Note", player, 260):
+                    fulfills_requirements = False
+            elif requirement == "Node Door Amount [4]":
+                if not state.has("Note", player, 350):
+                    fulfills_requirements = False
+            elif requirement == "Node Door Amount [5]":
+                if not state.has("Note", player, 450):
+                    fulfills_requirements = False
+            elif requirement == "Node Door Amount [6]":
+                if not state.has("Note", player, 640):
+                    fulfills_requirements = False
+            elif requirement == "Node Door Amount [7]":
+                if not state.has("Note", player, 765):
+                    fulfills_requirements = False
+            elif requirement == "Node Door Amount [8]":
+                if not state.has("Note", player, 810):
+                    fulfills_requirements = False
+            elif requirement == "Node Door Amount [9]":
+                if not state.has("Note", player, 882):
                     fulfills_requirements = False
             else:
                 if not state.has(requirement, player, 1):

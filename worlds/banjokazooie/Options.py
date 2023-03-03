@@ -1,13 +1,9 @@
 from ...Options import Toggle, DefaultOnToggle, Range, Choice, DeathLink
 
 
-class ShuffleMoves(Choice):
+class ShuffleMoves(DefaultOnToggle):
     """Shuffles moves into other molehills, or adds them to the item pool"""
     display_name = "Shuffle Moves"
-    default = 1
-    option_off = 0
-    option_shuffle_molehills = 1
-    option_movesanity = 2
 
 
 class ShuffleBasicMoves(Toggle):
@@ -20,14 +16,10 @@ class ShuffleCheato(Toggle):
     display_name = "Shuffle Cheato"
 
 
-class ShuffleSecrets(Choice):
-    """Shuffles the six Giant Eggs and Ice Key into the pool, and includes Cheato locations in randomization. Open
-    Locations has all of them available by default, while Closed Locations requires entering the appropriate codes in
-    the Treasure Trove Cove Sandcastle Room"""
+class ShuffleSecrets(Toggle):
+    """Shuffles the six Giant Eggs and Ice Key into the pool, and includes Cheato locations in randomization. If
+    enabled, all secret locations are available by default"""
     display_name = "Shuffle Secrets"
-    option_off = 0
-    option_open_locations = 1
-    option_closed_locations = 2
 
 
 class LevelRandomizer(Toggle):
@@ -47,8 +39,13 @@ class SkipFurnaceFun(Toggle):
     display_name = "Skip Furnace Fun"
 
 
+class RemoveNoteDoors(Toggle):
+    """Removes all Note Doors from the game"""
+    display_name = "Remove Note Doors"
+
+
 class NumberOfJiggies(Range):
-    """How many jiggies exist. There will always be enough to open every level, complete the secret puzzle, and win the
+    """How many Jiggies exist. There will always be enough to open every level, complete the secret puzzle, and win the
     game. Level requirements will dynamically change based on the number of jiggies that exist"""
     range_start = 0
     range_end = 100
@@ -70,6 +67,8 @@ bk_options = {
     "shuffle_secrets": ShuffleSecrets,
     "level_randomizer": LevelRandomizer,
     "correct_pads": CorrectPads,
+    "skip_furnace_fun": SkipFurnaceFun,
+    "remove_note_doors": RemoveNoteDoors,
     "number_of_jiggies": NumberOfJiggies,
     "number_of_mumbo_tokens": NumberOfMumboTokens,
     "death_link": DeathLink

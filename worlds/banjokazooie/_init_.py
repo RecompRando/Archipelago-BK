@@ -72,7 +72,8 @@ class BanjoKazooieWorld(World):
             self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
 
     def generate_early(self) -> None:
-        self.multiworld.local_early_items[self.player]["Jiggy"] = 1
+        if not self.multiworld.number_of_jiggies[self.player].value == 0:
+            self.multiworld.local_early_items[self.player]["Jiggy"] = 1
         if self.multiworld.move_shuffle[self.player] != 0:
             self.multiworld.local_early_items[self.player]["Talon Trot"] = 1
 
