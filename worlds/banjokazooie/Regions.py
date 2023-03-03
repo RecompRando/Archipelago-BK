@@ -50,11 +50,11 @@ def create_regions(world: MultiWorld, player: int):
             ttc_region.locations.append(BKLocation(player, location, data.code, ttc_region))
     for location, data in ttc_notes_location_table:
         ttc_region.locations.append(BKLocation(player, location, data.code, ttc_region))
-    if world.shuffle_moves[player].value != 0:
+    if world.shuffle_moves[player].value:
         for location, data in molehill_location_table:
             if location.contains("TTC"):
                 ttc_region.locations.append(BKLocation(player, location, data.code, ttc_region))
-    if world.shuffle_secrets[player].value != 0:
+    if world.shuffle_secrets[player].value:
         ttc_region.locations.append(BKLocation(
             player, "Sharkfood Island Egg", secrets_location_table["Pink Egg"].code, ttc_region))
     world.regions.append(ttc_region)
@@ -76,7 +76,7 @@ def create_regions(world: MultiWorld, player: int):
             cc_region.locations.append(BKLocation(player, location, data.code, cc_region))
     for location, data in cc_notes_location_table:
         cc_region.locations.append(BKLocation(player, location, data.code, cc_region))
-    if world.shuffle_moves[player].value != 0:
+    if world.shuffle_moves[player].value:
         for location, data in molehill_location_table:
             if location.contains("CC"):
                 cc_region.locations.append(BKLocation(player, location, data.code, cc_region))
@@ -99,7 +99,7 @@ def create_regions(world: MultiWorld, player: int):
             bs_region.locations.append(BKLocation(player, location, data.code, bs_region))
     for location, data in bs_notes_location_table:
         bs_region.locations.append(BKLocation(player, location, data.code, bs_region))
-    if world.shuffle_moves[player].value != 0:
+    if world.shuffle_moves[player].value:
         for location, data in molehill_location_table:
             if location.contains("BS"):
                 bs_region.locations.append(BKLocation(player, location, data.code, bs_region))
@@ -122,11 +122,11 @@ def create_regions(world: MultiWorld, player: int):
             fp_region.locations.append(BKLocation(player, location, data.code, fp_region))
     for location, data in fp_notes_location_table:
         fp_region.locations.append(BKLocation(player, location, data.code, fp_region))
-    if world.shuffle_moves[player].value != 0:
+    if world.shuffle_moves[player].value:
         for location, data in molehill_location_table:
             if location.contains("FP"):
                 fp_region.locations.append(BKLocation(player, location, data.code, fp_region))
-    if world.shuffle_secrets[player].value != 0:
+    if world.shuffle_secrets[player].value:
         fp_region.locations.append(BKLocation(player, "Ice Key", secrets_location_table["Ice Key"].code, fp_region))
     world.regions.append(fp_region)
 
@@ -140,11 +140,11 @@ def create_regions(world: MultiWorld, player: int):
             gv_region.locations.append(BKLocation(player, location, data.code, gv_region))
     for location, data in gv_notes_location_table:
         gv_region.locations.append(BKLocation(player, location, data.code, gv_region))
-    if world.shuffle_moves[player].value != 0:
+    if world.shuffle_moves[player].value:
         for location, data in molehill_location_table:
             if location.contains("GV"):
                 gv_region.locations.append(BKLocation(player, location, data.code, gv_region))
-    if world.shuffle_secrets[player].value != 0:
+    if world.shuffle_secrets[player].value:
         gv_region.locations.append(BKLocation(
             player, "Gobi's Valley Egg", secrets_location_table["Blue Egg"].code, gv_region))
     world.regions.append(gv_region)
@@ -173,7 +173,7 @@ def create_regions(world: MultiWorld, player: int):
             mmm_region.locations.append(BKLocation(player, location, data.code, mmm_region))
     for location, data in mmm_notes_location_table:
         mmm_region.locations.append(BKLocation(player, location, data.code, mmm_region))
-    if world.shuffle_secrets[player].value != 0:
+    if world.shuffle_secrets[player].value:
         mmm_region.locations.append(BKLocation(
             player, "Cellar Egg", secrets_location_table["Cyan Egg"].code, mmm_region))
         mmm_region.locations.append(BKLocation(
@@ -190,7 +190,7 @@ def create_regions(world: MultiWorld, player: int):
             rbb_region.locations.append(BKLocation(player, location, data.code, rbb_region))
     for location, data in rbb_notes_location_table:
         rbb_region.locations.append(BKLocation(player, location, data.code, rbb_region))
-    if world.shuffle_secrets[player].value != 0:
+    if world.shuffle_secrets[player].value:
         rbb_region.locations.append(BKLocation(
             player, "Captain's Room Egg", secrets_location_table["Red Egg"].code, rbb_region))
     world.regions.append(rbb_region)
@@ -212,7 +212,7 @@ def create_regions(world: MultiWorld, player: int):
             ccw_region.locations.append(BKLocation(player, location, data.code, ccw_region))
     for location, data in ccw_notes_location_table:
         ccw_region.locations.append(BKLocation(player, location, data.code, ccw_region))
-    if world.shuffle_secrets[player].value != 0:
+    if world.shuffle_secrets[player].value:
         ccw_region.locations.append(BKLocation(
             player, "Nabnut's Egg", secrets_location_table["Yellow Egg"].code, ccw_region))
     world.regions.append(ccw_region)
@@ -228,7 +228,7 @@ def connect_regions(world: MultiWorld, player, source: str, target: str, rule: t
     source_region = world.get_region(source, player)
     target_region = world.get_region(target, player)
 
-    connection = Entrance(player, source_region.name+" -> "+target_region.name, source_region)
+    connection = Entrance(player, source_region.name + " -> " + target_region.name, source_region)
 
     if rule:
         connection.access_rule = rule
