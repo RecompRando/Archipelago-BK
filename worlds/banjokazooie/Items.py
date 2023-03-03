@@ -46,25 +46,26 @@ useful_item_table = {
     "Empty Honeycomb Piece": ItemData(130021, ItemClassification.useful),
     "BLUEEGGS Cheato": ItemData(130022, ItemClassification.useful),
     "REDFEATHERS Cheato": ItemData(130023, ItemClassification.useful),
-    "GOLDFEATHERS Cheato": ItemData(130024, ItemClassification.useful)
+    "GOLDFEATHERS Cheato": ItemData(130024, ItemClassification.useful),
+    "Double Health": ItemData(130025, ItemClassification.useful)
 }
 
 useless_item_table = {
-    "Ice Key": ItemData(130025, ItemClassification.trap),
-    "Pink Egg": ItemData(130026, ItemClassification.trap),
-    "Blue Egg": ItemData(130027, ItemClassification.trap),
-    "Cyan Egg": ItemData(130028, ItemClassification.trap),
-    "Green Egg": ItemData(130029, ItemClassification.trap),
-    "Red Egg": ItemData(130030, ItemClassification.trap),
-    "Yellow Egg": ItemData(130031, ItemClassification.trap)
+    "Ice Key": ItemData(130026, ItemClassification.trap),
+    "Pink Egg": ItemData(130027, ItemClassification.trap),
+    "Blue Egg": ItemData(130028, ItemClassification.trap),
+    "Cyan Egg": ItemData(130029, ItemClassification.trap),
+    "Green Egg": ItemData(130030, ItemClassification.trap),
+    "Red Egg": ItemData(130031, ItemClassification.trap),
+    "Yellow Egg": ItemData(130032, ItemClassification.trap)
 }
 
 junk_item_table = {
-    "Honeycomb": ItemData(130032, ItemClassification.filler),
-    "Egg Refill": ItemData(130033, ItemClassification.filler),
-    "Red Feathers Refill": ItemData(130034, ItemClassification.filler),
-    "Gold Feathers Refill": ItemData(130035, ItemClassification.filler),
-    "Extra Life": ItemData(130036, ItemClassification.filler)
+    "Honeycomb": ItemData(130033, ItemClassification.filler),
+    "Egg Refill": ItemData(130034, ItemClassification.filler),
+    "Red Feathers Refill": ItemData(130035, ItemClassification.filler),
+    "Gold Feathers Refill": ItemData(130036, ItemClassification.filler),
+    "Extra Life": ItemData(130037, ItemClassification.filler)
 }
 
 jiggy_puzzle_table = {
@@ -76,7 +77,20 @@ jiggy_puzzle_table = {
     "GV Jiggy Puzzle": ItemData(None, ItemClassification.progression),
     "MMM Jiggy Puzzle": ItemData(None, ItemClassification.progression),
     "RBB Jiggy Puzzle": ItemData(None, ItemClassification.progression),
-    "CCW Jiggy Puzzle": ItemData(None, ItemClassification.progression)
+    "CCW Jiggy Puzzle": ItemData(None, ItemClassification.progression),
+    "Final Boss Jiggy Puzzle": ItemData(None, ItemClassification.progression)
+}
+
+note_door_table = {
+    "Note Door 1": ItemData(None, ItemClassification.progression),
+    "Note Door 2": ItemData(None, ItemClassification.progression),
+    "Note Door 3": ItemData(None, ItemClassification.progression),
+    "Note Door 4": ItemData(None, ItemClassification.progression),
+    "Note Door 5": ItemData(None, ItemClassification.progression),
+    "Note Door 6": ItemData(None, ItemClassification.progression),
+    "Note Door 7": ItemData(None, ItemClassification.progression),
+    "Note Door 8": ItemData(None, ItemClassification.progression),
+    "Note Door 9": ItemData(None, ItemClassification.progression)
 }
 
 witch_switch_table = {
@@ -116,6 +130,7 @@ item_table = {
     **useless_item_table,
     **junk_item_table,
     **jiggy_puzzle_table,
+    **note_door_table,
     **witch_switch_table,
     **transformation_table,
     **misc_event_table
