@@ -151,7 +151,7 @@ class BanjoKazooieWorld(World):
             ["Honeycomb", "Egg Refill", "Red Feathers Refill", "Gold Feathers Refill", "Extra Life"])
 
     def initialize_events(self) -> None:
-        for location, data in location_table:
+        for location, data in location_table.items():
             if data.code is None:
                 if "Jiggy Puzzle" in location:
                     if "MM" in location and "MMM" not in location:
