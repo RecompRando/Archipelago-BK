@@ -256,4 +256,4 @@ def initialize_locations(region: Region, locations, player: int):
         region.locations += [BKLocation(player, location_name, location_table[location_name].code, region)
                             for location_name in locations]
     except:
-        print(location_name for location_name in locations)
+        print(location_name for location_name in locations.keys())
