@@ -125,7 +125,7 @@ class BanjoKazooieWorld(World):
     def generate_early(self) -> None:
         if self.multiworld.level_randomizer[self.player].value:
             self.multiworld.random.shuffle(self.level_entrances)
-            if self.multiworld.shuffle_moves[self.player].value:
+            if not self.multiworld.shuffle_moves[self.player].value:
                 while self.level_entrances[0][0] != "Mumbo's Mountain" and (
                         self.level_entrances[3][
                             0] != "Bubblegloop Swamp" or "Freezeezy Peak" or "Mad Monster Mansion" or
