@@ -248,6 +248,7 @@ def create_regions(world: MultiWorld, player: int):
     world.regions.append(gl_floor_furnace_fun_region)
 
     gl_top_floor_region = create_region("Grunty's Lair - Top Floor", player, world)
+    initialize_locations(gl_top_floor_region, gltf_location_table, player)
     world.regions.append(gl_top_floor_region)
 
 
