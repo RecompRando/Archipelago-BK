@@ -2,6 +2,23 @@ from BaseClasses import MultiWorld, Region, Entrance
 from Locations import *
 
 
+def connect_regions(world: MultiWorld, player, source: str, target: str, rule: typing.Optional[typing.Callable] = None):
+    source_region = world.get_region(source, player)
+    target_region = world.get_region(target, player)
+
+    connection = Entrance(player, source_region.name + " -> " + target_region.name, source_region)
+
+    if rule:
+        connection.access_rule = rule
+
+    source_region.exits.append(connection)
+    connection.connect(target_region)
+
+
+def create_region(name: str, player: int, world: MultiWorld):
+    return Region(name, player, world, name)
+
+
 def create_regions(world: MultiWorld, player: int):
     menu_region = Region("Menu", player, world)
     world.regions.append(menu_region)
@@ -221,23 +238,6 @@ def create_regions(world: MultiWorld, player: int):
 
     gl_top_floor_region = create_region("Grunty's Lair - Top Floor", player, world)
     world.regions.append(gl_top_floor_region)
-
-
-def connect_regions(world: MultiWorld, player, source: str, target: str, rule: typing.Optional[typing.Callable] = None):
-    source_region = world.get_region(source, player)
-    target_region = world.get_region(target, player)
-
-    connection = Entrance(player, source_region.name + " -> " + target_region.name, source_region)
-
-    if rule:
-        connection.access_rule = rule
-
-    source_region.exits.append(connection)
-    connection.connect(target_region)
-
-
-def create_region(name: str, player: int, world: MultiWorld):
-    return Region(name, player, world, name)
 
 
 def initialize_locations(region: Region, locations, player: int):

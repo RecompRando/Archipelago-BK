@@ -3,7 +3,7 @@ from BaseClasses import Tutorial
 from Options import *
 from Items import BKItem, item_table
 from Locations import *
-from Regions import create_regions, connect_regions, initialize_locations
+from Regions import create_regions
 from Rules import set_rules
 from typing import Any, Dict
 
