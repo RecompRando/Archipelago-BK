@@ -52,6 +52,57 @@ class BanjoKazooieWorld(World):
     def create_item(self, name: str):
         return BKItem(name, item_table.get(name).classification, item_table.get(name).code, self.player)
 
+    def create_items(self) -> None:
+        self.initialize_events()
+        self.initialize_notes()
+
+        jiggy_count = self.multiworld.number_of_jiggies[self.player].value
+        self.multiworld.itempool += [self.create_item("Jiggy")
+                                     for amount in range(0, jiggy_count)]
+        self.multiworld.itempool += [self.create_item(self.get_filler_item_name())
+                                     for amount in range(jiggy_count, 100)]
+
+        self.multiworld.itempool += [self.create_item("Empty Honeycomb Piece") for amount in range(0, 24)]
+
+        mumbo_token_count = self.multiworld.number_of_mumbo_tokens[self.player].value
+        self.multiworld.itempool += [self.create_item("Mumbo Token") for amount in range(0, mumbo_token_count)]
+        self.multiworld.itempool += [self.create_item(self.get_filler_item_name())
+                                     for amount in range(mumbo_token_count, 112)]
+
+        if self.multiworld.shuffle_moves[self.player]:
+            self.multiworld.itempool += [self.create_item("Eggs"),
+                                         self.create_item("Talon Trot"),
+                                         self.create_item("Beak Buster"),
+                                         self.create_item("Flight"),
+                                         self.create_item("Shock Spring Jump"),
+                                         self.create_item("Wonderwing"),
+                                         self.create_item("Stilt Stride"),
+                                         self.create_item("Beak Bomb"),
+                                         self.create_item("Turbo Talon Trot")]
+        if self.multiworld.shuffle_basic_moves[self.player]:
+            self.multiworld.itempool += [self.create_item("Jump"),
+                                         self.create_item("Feathery Flap"),
+                                         self.create_item("Flap Flip"),
+                                         self.create_item("Swim"),
+                                         self.create_item("Climb"),
+                                         self.create_item("Beak Barge"),
+                                         self.create_item("Claw Swipe"),
+                                         self.create_item("Roll"),
+                                         self.create_item("Rat-A-Tat Rap")]
+        if self.multiworld.shuffle_cheato[self.player]:
+            self.multiworld.itempool += [self.create_item("BLUEEGGS Cheato"),
+                                         self.create_item("REDFEATHERS Cheato"),
+                                         self.create_item("GOLDFEATHERS Cheato")]
+        if self.multiworld.shuffle_secrets[self.player]:
+            self.multiworld.itempool += [self.create_item("Ice Key"),
+                                         self.create_item("Pink Egg"),
+                                         self.create_item("Blue Egg"),
+                                         self.create_item("Cyan Egg"),
+                                         self.create_item("Green Egg"),
+                                         self.create_item("Red Egg"),
+                                         self.create_item("Yellow Egg")]
+        self.multiworld.completion_condition[self.player] = lambda state: state.has("Victory")
+
     def create_regions(self) -> None:
         create_regions(self.multiworld, self.player)
 
@@ -267,57 +318,6 @@ class BanjoKazooieWorld(World):
             self.multiworld.local_early_items[self.player]["Jiggy"] = 1
         if self.multiworld.move_shuffle[self.player]:
             self.multiworld.local_early_items[self.player]["Talon Trot"] = 1
-
-    def generate_basic(self) -> None:
-        self.initialize_events()
-        self.initialize_notes()
-
-        jiggy_count = self.multiworld.number_of_jiggies[self.player].value
-        self.multiworld.itempool += [self.create_item("Jiggy")
-                                     for amount in range(0, jiggy_count)]
-        self.multiworld.itempool += [self.create_item(self.get_filler_item_name())
-                                     for amount in range(jiggy_count, 100)]
-
-        self.multiworld.itempool += [self.create_item("Empty Honeycomb Piece") for amount in range(0, 24)]
-
-        mumbo_token_count = self.multiworld.number_of_mumbo_tokens[self.player].value
-        self.multiworld.itempool += [self.create_item("Mumbo Token") for amount in range(0, mumbo_token_count)]
-        self.multiworld.itempool += [self.create_item(self.get_filler_item_name())
-                                     for amount in range(mumbo_token_count, 112)]
-
-        if self.multiworld.shuffle_moves[self.player]:
-            self.multiworld.itempool += [self.create_item("Eggs"),
-                                         self.create_item("Talon Trot"),
-                                         self.create_item("Beak Buster"),
-                                         self.create_item("Flight"),
-                                         self.create_item("Shock Spring Jump"),
-                                         self.create_item("Wonderwing"),
-                                         self.create_item("Stilt Stride"),
-                                         self.create_item("Beak Bomb"),
-                                         self.create_item("Turbo Talon Trot")]
-        if self.multiworld.shuffle_basic_moves[self.player]:
-            self.multiworld.itempool += [self.create_item("Jump"),
-                                         self.create_item("Feathery Flap"),
-                                         self.create_item("Flap Flip"),
-                                         self.create_item("Swim"),
-                                         self.create_item("Climb"),
-                                         self.create_item("Beak Barge"),
-                                         self.create_item("Claw Swipe"),
-                                         self.create_item("Roll"),
-                                         self.create_item("Rat-A-Tat Rap")]
-        if self.multiworld.shuffle_cheato[self.player]:
-            self.multiworld.itempool += [self.create_item("BLUEEGGS Cheato"),
-                                         self.create_item("REDFEATHERS Cheato"),
-                                         self.create_item("GOLDFEATHERS Cheato")]
-        if self.multiworld.shuffle_secrets[self.player]:
-            self.multiworld.itempool += [self.create_item("Ice Key"),
-                                         self.create_item("Pink Egg"),
-                                         self.create_item("Blue Egg"),
-                                         self.create_item("Cyan Egg"),
-                                         self.create_item("Green Egg"),
-                                         self.create_item("Red Egg"),
-                                         self.create_item("Yellow Egg")]
-        self.multiworld.completion_condition[self.player] = lambda state: state.has("Victory")
 
     def set_rules(self) -> None:
         set_rules(self.multiworld, self.player, self.level_entrances)
