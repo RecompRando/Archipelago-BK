@@ -151,7 +151,7 @@ class BanjoKazooieWorld(World):
             ["Honeycomb", "Egg Refill", "Red Feathers Refill", "Gold Feathers Refill", "Extra Life"])
 
     def initialize_events(self) -> None:
-        print(self.multiworld.get_unfilled_locations(location_table, player)
+        print(self.multiworld.get_unfilled_locations(location_table, self.player))
         for location, data in location_table.items():
             if data.code is None:
                 if "Jiggy Puzzle" in location:
