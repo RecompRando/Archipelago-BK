@@ -103,6 +103,9 @@ def create_regions(world: MultiWorld, player: int):
 
     gl_floor_4_region = create_region("Grunty's Lair 4F", player, world)
     initialize_locations(gl_floor_4_region, glf4_location_table, player)
+    if world.shuffle_cheato[player].value:
+        gl_floor_4_region.locations.append(
+            BKLocation(player, "BLUEEGGS Cheato", cheato_location_table["BLUEEGGS Cheato"].code, gl_floor_4_region))
     world.regions.append(gl_floor_4_region)
 
     bs_region = create_region("Bubblegloop Swamp", player, world)
@@ -170,6 +173,9 @@ def create_regions(world: MultiWorld, player: int):
     for location, data in mumbo_token_location_table:
         if location.contains("GLF6"):
             gl_floor_6_region.locations.append(BKLocation(player, location, data.code, gl_floor_6_region))
+    if world.shuffle_cheato[player].value:
+        gl_floor_6_region.locations.append(
+            BKLocation(player, "REDFEATHERS Cheato", cheato_location_table["REDFEATHERS Cheato"].code, gl_floor_6_region))
     world.regions.append(gl_floor_6_region)
 
     gl_floor_7_region = create_region("Grunty's Lair 7F", player, world)
@@ -177,6 +183,9 @@ def create_regions(world: MultiWorld, player: int):
     for location, data in mumbo_token_location_table:
         if location.contains("GLF7"):
             gl_floor_7_region.locations.append(BKLocation(player, location, data.code, gl_floor_7_region))
+    if world.shuffle_cheato[player].value:
+        gl_floor_7_region.locations.append(
+            BKLocation(player, "GOLDFEATHERS Cheato", cheato_location_table["GOLDFEATHERS Cheato"].code, gl_floor_7_region))
     world.regions.append(gl_floor_7_region)
 
     mmm_region = create_region("Mad Monster Mansion", player, world)
