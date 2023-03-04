@@ -28,11 +28,11 @@ class BanjoKazooieWorld(World):
     web = BanjoKazooieWeb()
 
     option_definitions = bk_options
-    game = "Banjo-Kazooie"
+    game = "Banjo Kazooie"
     topology_present = True
 
     data_version = 0
-    required_client_version = (0, 3, 5)
+    required_client_version = (0, 3, 8)
 
     item_name_to_id = {name: data.code for name, data in item_table.items()}
     location_name_to_id = {name: data.code for name, data in location_table.items()}
