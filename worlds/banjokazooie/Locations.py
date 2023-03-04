@@ -794,7 +794,7 @@ mumbo_token_location_table = {
                                                             ["Beak Barge"],
                                                             ["Rat-A-Tat Rap"],
                                                             ["Eggs"]]),
-    "MMM Mumbo Token in the Clock Tower": LocationData(1201910, [["Rat-A-Tat Rap", "Talon Trot"],
+    "MMM Mumbo Token in the Clock Tower": LocationData(120191, [["Rat-A-Tat Rap", "Talon Trot"],
                                                                  ["Beak Barge", "Talon Trot"],
                                                                  ["Eggs", "Talon Trot"],
                                                                  ["Climb", "Talon Trot"]]),
