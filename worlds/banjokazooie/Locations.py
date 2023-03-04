@@ -521,7 +521,7 @@ ccw_location_table = {
     #    "CCW Orange Jinjo": LocationData(99999),
     #    "CCW Pink Jinjo": LocationData(99999, [["Bee Transformation"]]), #Requires Transformation
     #    "CCW Yellow Jinjo": LocationData(99999),
-    "CCW Transformation": LocationData(None, [["Mumbo Token Amount [CCW"]]),
+    "CCW Transformation": LocationData(None, [["Mumbo Token Amount [CCW]"]]),
     "CCW Witch Switch": LocationData(None, [["Talon Trot", "Shock Spring Jump", "Beak Buster", "Flight", "Beak Bomb"]]),
 }
 
