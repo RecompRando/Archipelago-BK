@@ -53,8 +53,6 @@ class BanjoKazooieWorld(World):
         return BKItem(name, item_table.get(name).classification, item_table.get(name).code, self.player)
 
     def create_items(self) -> None:
-        self.initialize_events()
-        self.initialize_notes()
 
         jiggy_count = self.multiworld.number_of_jiggies[self.player].value
         self.multiworld.itempool += [self.create_item("Jiggy")
@@ -104,6 +102,8 @@ class BanjoKazooieWorld(World):
         self.multiworld.completion_condition[self.player] = lambda state: state.has("Victory")
 
     def create_regions(self) -> None:
+        self.initialize_events()
+        self.initialize_notes()
         create_regions(self.multiworld, self.player)
 
     def fill_slot_data(self) -> Dict[str, Any]:
@@ -121,6 +121,31 @@ class BanjoKazooieWorld(World):
             "death_link": self.multiworld.death_link[self.player].value,
         }
         return slot_data
+
+    def generate_early(self) -> None:
+        if self.multiworld.level_randomizer[self.player].value:
+            self.multiworld.random.shuffle(self.level_entrances)
+            if self.multiworld.shuffle_moves[self.player].value:
+                while self.level_entrances[0][0] != "Mumbo's Mountain" and (
+                        self.level_entrances[3][
+                            0] != "Bubblegloop Swamp" or "Freezeezy Peak" or "Mad Monster Mansion" or
+                        "Click Clock Wood") and (
+                        self.level_entrances[6][
+                            0] != "Bubblegloop Swamp" or "Freezeezy Peak" or "Mad Monster Mansion" or
+                        "Click Clock Wood"):
+                    self.multiworld.random.shuffle(self.level_entrances)
+            else:
+                while (self.level_entrances[0][0] != "Mumbo's Mountain" or "Bubblegloop Swamp" or "Freezeezy Peak" or
+                       "Mad Monster Mansion" or "Click Clock Wood") and (
+                        self.level_entrances[3][0] != "Mumbo's Mountain" or "Bubblegloop Swamp" or "Freezeezy Peak" or
+                        "Mad Monster Mansion" or "Click Clock Wood") and (
+                        self.level_entrances[6][0] != "Mumbo's Mountain" or "Bubblegloop Swamp" or "Freezeezy Peak" or
+                        "Mad Monster Mansion" or "Click Clock Wood"):
+                    self.multiworld.random.shuffle(self.level_entrances)
+        if 0 != self.multiworld.number_of_jiggies[self.player].value != 100:
+            self.multiworld.local_early_items[self.player]["Jiggy"] = 1
+        if self.multiworld.move_shuffle[self.player]:
+            self.multiworld.local_early_items[self.player]["Talon Trot"] = 1
 
     def get_filler_item_name(self) -> str:
         return self.multiworld.random.choice(
@@ -293,31 +318,6 @@ class BanjoKazooieWorld(World):
         for note in ccw_notes_location_table:
             location_table.update(**ccw_notes_location_table)
             self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
-
-    def generate_early(self) -> None:
-        if self.multiworld.level_randomizer[self.player].value:
-            self.multiworld.random.shuffle(self.level_entrances)
-            if self.multiworld.shuffle_moves[self.player].value:
-                while self.level_entrances[0][0] != "Mumbo's Mountain" and (
-                        self.level_entrances[3][
-                            0] != "Bubblegloop Swamp" or "Freezeezy Peak" or "Mad Monster Mansion" or
-                        "Click Clock Wood") and (
-                        self.level_entrances[6][
-                            0] != "Bubblegloop Swamp" or "Freezeezy Peak" or "Mad Monster Mansion" or
-                        "Click Clock Wood"):
-                    self.multiworld.random.shuffle(self.level_entrances)
-            else:
-                while (self.level_entrances[0][0] != "Mumbo's Mountain" or "Bubblegloop Swamp" or "Freezeezy Peak" or
-                       "Mad Monster Mansion" or "Click Clock Wood") and (
-                        self.level_entrances[3][0] != "Mumbo's Mountain" or "Bubblegloop Swamp" or "Freezeezy Peak" or
-                        "Mad Monster Mansion" or "Click Clock Wood") and (
-                        self.level_entrances[6][0] != "Mumbo's Mountain" or "Bubblegloop Swamp" or "Freezeezy Peak" or
-                        "Mad Monster Mansion" or "Click Clock Wood"):
-                    self.multiworld.random.shuffle(self.level_entrances)
-        if 0 != self.multiworld.number_of_jiggies[self.player].value != 100:
-            self.multiworld.local_early_items[self.player]["Jiggy"] = 1
-        if self.multiworld.move_shuffle[self.player]:
-            self.multiworld.local_early_items[self.player]["Talon Trot"] = 1
 
     def set_rules(self) -> None:
         set_rules(self.multiworld, self.player, self.level_entrances)
