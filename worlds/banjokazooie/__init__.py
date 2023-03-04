@@ -86,6 +86,18 @@ class BanjoKazooieWorld(World):
                                          self.create_item("Claw Swipe"),
                                          self.create_item("Roll"),
                                          self.create_item("Rat-A-Tat Rap")]
+        else:
+            self.multiworld.precollected_items += {
+                self.create_item("Jump"),
+                self.create_item("Feathery Flap"),
+                self.create_item("Flap Flip"),
+                self.create_item("Swim"),
+                self.create_item("Climb"),
+                self.create_item("Beak Barge"),
+                self.create_item("Claw Swipe"),
+                self.create_item("Roll"),
+                self.create_item("Rat-A-Tat Rap")
+            }
         if self.multiworld.shuffle_cheato[self.player]:
             self.multiworld.itempool += [self.create_item("BLUEEGGS Cheato"),
                                          self.create_item("REDFEATHERS Cheato"),
