@@ -3395,16 +3395,16 @@ all_locations_table = {
 
 
 def setup_locations(world, player: int):
-    if world.ShuffleMoves[player].value:
+    if world.shuffle_moves[player].value:
         location_table.update(**molehill_location_table)
 
-    if world.ShuffleBasicMoves[player].value:
+    if world.shuffle_basic_moves[player].value:
         location_table.update(**basic_molehill_location_table)
 
-    if world.ShuffleCheato[player].value:
+    if world.shuffle_cheato[player].value:
         location_table.update(**cheato_location_table)
 
-    if world.ShuffleSecrets[player].value:
+    if world.shuffle_secrets[player].value:
         location_table.update(**secrets_location_table)
 
     return location_table
