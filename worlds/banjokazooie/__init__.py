@@ -289,7 +289,6 @@ class BanjoKazooieWorld(World):
                     elif location == "Victory":
                         self.multiworld.get_location(location, self.player).place_locked_item(
                             self.create_item("Victory"))
-                self.multiworld.get_location(location, self.player).locked = True
 
     def initialize_notes(self) -> None:
         for note in mm_notes_location_table:
