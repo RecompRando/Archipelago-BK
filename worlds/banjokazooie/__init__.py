@@ -102,7 +102,7 @@ class BanjoKazooieWorld(World):
         self.initialize_events()
         self.initialize_notes()
 
-        self.multiworld.completion_condition[self.player] = lambda state: state.has("Victory")
+        self.multiworld.completion_condition[self.player] = lambda state: state.has("Victory", self.player)
 
     def create_regions(self) -> None:
         create_regions(self.multiworld, self.player)
