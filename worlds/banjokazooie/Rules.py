@@ -4,49 +4,7 @@ from Locations import setup_locations
 from Regions import connect_regions
 
 
-def set_rules(world: MultiWorld, player: int):
-    gruntys_lair_entrances = [
-        ["Spiral Mountain", 1],
-        ["Grunty's Lair 1F", 2],
-        ["Grunty's Lair 2F", 3],
-        ["Grunty's Lair 3F", 4],
-        ["Grunty's Lair 4F", 5],
-        ["Grunty's Lair 5F", 6],
-        ["Grunty's Lair 6F", 7],
-        ["Grunty's Lair 7F", 8],
-        ["Grunty's Lair Top Floor", 9]
-    ]
-
-    level_entrances = [
-        ["Mumbo's Mountain", 10],
-        ["Treasure Trove Cove", 11],
-        ["Clanker's Cavern", 12],
-        ["Bubblegloop Swamp", 13],
-        ["Freezeezy Peak", 14],
-        ["Gobi's Valley", 15],
-        ["Mad Monster Mansion", 16],
-        ["Rusty Bucket Bay", 17],
-        ["Click Clock Wood", 18],
-    ]
-
-    if world.level_randomizer[player].value:
-        world.random.shuffle(level_entrances)
-        if world.shuffle_moves[player].value:
-            while level_entrances[0][0] != "Mumbo's Mountain" and (
-                    level_entrances[3][0] != "Bubblegloop Swamp" or "Freezeezy Peak" or "Mad Monster Mansion" or
-                    "Click Clock Wood") and (
-                    level_entrances[6][0] != "Bubblegloop Swamp" or "Freezeezy Peak" or "Mad Monster Mansion" or
-                    "Click Clock Wood"):
-                world.random.shuffle(level_entrances)
-        else:
-            while (level_entrances[0][0] != "Mumbo's Mountain" or "Bubblegloop Swamp" or "Freezeezy Peak" or
-                   "Mad Monster Mansion" or "Click Clock Wood") and (
-                    level_entrances[3][0] != "Mumbo's Mountain" or "Bubblegloop Swamp" or "Freezeezy Peak" or
-                    "Mad Monster Mansion" or "Click Clock Wood") and (
-                    level_entrances[6][0] != "Mumbo's Mountain" or "Bubblegloop Swamp" or "Freezeezy Peak" or
-                    "Mad Monster Mansion" or "Click Clock Wood"):
-                world.random.shuffle(level_entrances)
-
+def set_rules(world: MultiWorld, player: int, level_entrances: list[list[str, int]]):
     connect_regions(world, player, "Menu", "Spiral Mountain")
     connect_regions(world, player, "Spiral Mountain", "Grunty's Lair 1F")
     connect_regions(world, player, "Grunty's Lair 1F", level_entrances[0][0]), lambda state: state.has(

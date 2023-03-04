@@ -120,6 +120,8 @@ gltf_location_table = {
     "GLTF Secret Puzzle": LocationData(120260, [["Note Door 9", "Jiggy Amount [SP]"]]),
     "GLTF Note Door 8": LocationData(None, [["Note Door Amount [8]"]]),
     "GLTF Note Door 9": LocationData(None, [["Note Door 8", "Final Boss Jiggy Puzzle", "Note Door Amount [9]"]]),
+    "Victory":
+        LocationData(None, [["Rat-A-Tat Rap", "Eggs", "Flight", "Wonderwing", "Beak Bomb", "Final Boss Jiggy Puzzle"]])
 }
 
 mm_location_table = {
@@ -3364,16 +3366,7 @@ location_table = {
     **glf7_location_table,
     **ccw_location_table,
     **empty_honeycomb_location_table,
-    **mumbo_token_location_table,
-    **mm_notes_location_table,
-    **ttc_notes_location_table,
-    **cc_notes_location_table,
-    **bs_notes_location_table,
-    **fp_notes_location_table,
-    **gv_notes_location_table,
-    **mmm_notes_location_table,
-    **rbb_notes_location_table,
-    **ccw_notes_location_table
+    **mumbo_token_location_table
 }
 
 
