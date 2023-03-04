@@ -35,7 +35,7 @@ class BanjoKazooieWorld(World):
     required_client_version = (0, 3, 8)
 
     item_name_to_id = {name: data.code for name, data in item_table.items()}
-    location_name_to_id = {name: data.code for name, data in location_table.items()}
+    location_name_to_id = {name: data.code for name, data in all_locations_table.items()}
 
     level_entrances = [
         ["Mumbo's Mountain", 1],
