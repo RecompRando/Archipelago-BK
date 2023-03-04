@@ -160,7 +160,7 @@ mm_location_table = {
     #                                           ["Rat-A-Tat Rap"],
     #                                           ["Talon Trot"]]),
     #    "MM Yellow Jinjo": LocationData(12027),
-    "MM Transformation": LocationData(None, [["Mumbo Token Amount [MM]"]]),
+    "MM Termite Transformation": LocationData(None, [["Mumbo Token Amount [MM]"]]),
     "MM Witch Switch": LocationData(None, [["Flap Flip", "Beak Buster"]])
 }
 
@@ -320,7 +320,7 @@ bs_location_table = {
     #    "BS Orange Jinjo": LocationData(99999),
     #    "BS Pink Jinjo": LocationData(99999 [[["Crocodile Transformation"]]]),
     #    "BS Yellow Jinjo": LocationData(99999, [["Feathery Flap"], ["Rat-A-Tat Rap"], ["Talon Trot"]]),
-    "BS Transformation": LocationData(None, [["Jump", "Stilt Stride", "Mumbo Token Amount [BS]"],
+    "BS Crocodile Transformation": LocationData(None, [["Jump", "Stilt Stride", "Mumbo Token Amount [BS]"],
                                              ["Feathery Flap", "Stilt Stride", "Mumbo Token Amount [BS]"],
                                              ["Rat-A-Tat Rap", "Stilt Stride", "Mumbo Token Amount [BS]"],
                                              ["Talon Trot", "Stilt Stride", "Mumbo Token Amount [BS]"]]),
@@ -352,7 +352,7 @@ fp_location_table = {
     "FP Toboggan Jiggy Flag": LocationData(None, [["Talon Trot"],
                                                   ["Flight"]]),
     "FP Boggy's First Race Jiggy Flag": LocationData(None, [["Walrus Transformation"]]),
-    "FP Transformation": LocationData(None, [["Flight", "Mumbo Token Amount [FP]"]]),
+    "FP Walrus Transformation": LocationData(None, [["Flight", "Mumbo Token Amount [FP]"]]),
     "FP Witch Switch": LocationData(None, [["Flight", "Beak Bomb"]])
 }
 
@@ -436,7 +436,7 @@ mmm_location_table = {
     #                                             ["Jump", "Climb", "Eggs", "Shock Spring Jump"],
     #                                             ["Climb", "Rat-A-Tat Rap", "Talon Trot", "Shock Spring Jump"],
     #                                             ["Climb", "Talon Trot", "Eggs", "Shock Spring Jump"]]),
-    "MMM Transformation": LocationData(None, [["Climb", "Flap Flip", "Mumbo Token Amount [MMM]"],
+    "MMM Pumpkin Transformation": LocationData(None, [["Climb", "Flap Flip", "Mumbo Token Amount [MMM]"],
                                               ["Beak Barge", "Flap Flip", "Mumbo Token Amount [MMM]"],
                                               ["Rat-A-Tat Rap", "Flap Flip", "Mumbo Token Amount [MMM]"],
                                               ["Eggs", "Flap Flip", "Mumbo Token Amount [MMM]"]]),
@@ -521,7 +521,7 @@ ccw_location_table = {
     #    "CCW Orange Jinjo": LocationData(99999),
     #    "CCW Pink Jinjo": LocationData(99999, [["Bee Transformation"]]), #Requires Transformation
     #    "CCW Yellow Jinjo": LocationData(99999),
-    "CCW Transformation": LocationData(None, [["Mumbo Token Amount [CCW]"]]),
+    "CCW Bee Transformation": LocationData(None, [["Mumbo Token Amount [CCW]"]]),
     "CCW Witch Switch": LocationData(None, [["Talon Trot", "Shock Spring Jump", "Beak Buster", "Flight", "Beak Bomb"]]),
 }
 
