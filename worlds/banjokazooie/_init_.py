@@ -128,7 +128,7 @@ class BanjoKazooieWorld(World):
 
     def initialize_events(self) -> None:
         for location, data in location_table:
-            if data.requirements is None:
+            if data.code is None:
                 if "Jiggy Puzzle" in location:
                     if "MM" in location and "MMM" not in location:
                         self.multiworld.get_location(location, self.player).place_locked_item(
