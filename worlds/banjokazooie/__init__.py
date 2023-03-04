@@ -98,11 +98,13 @@ class BanjoKazooieWorld(World):
                                          self.create_item("Green Egg"),
                                          self.create_item("Red Egg"),
                                          self.create_item("Yellow Egg")]
+
+        self.initialize_events()
+        self.initialize_notes()
+
         self.multiworld.completion_condition[self.player] = lambda state: state.has("Victory")
 
     def create_regions(self) -> None:
-        self.initialize_events()
-        self.initialize_notes()
         create_regions(self.multiworld, self.player)
 
     def fill_slot_data(self) -> Dict[str, Any]:
