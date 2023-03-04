@@ -3392,7 +3392,7 @@ all_locations_table = {
     **gltf_location_table,
     **ccw_location_table,
     **empty_honeycomb_location_table,
-    **mumbo_token_location_table
+    **mumbo_token_location_table,
     **molehill_location_table,
     **basic_molehill_location_table,
     **cheato_location_table,
