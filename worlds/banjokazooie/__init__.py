@@ -1,10 +1,11 @@
 from worlds.AutoWorld import World, WebWorld
 from BaseClasses import Tutorial
-from Options import *
-from Items import BKItem, item_table
-from Locations import *
-from Regions import create_regions
-from Rules import set_rules
+from .Options import *
+from .Items import BKItem, item_table
+from .Locations import *
+from .Options import bk_options
+from .Regions import create_regions
+from .Rules import set_rules
 from typing import Any, Dict
 
 
@@ -143,7 +144,7 @@ class BanjoKazooieWorld(World):
                     self.multiworld.random.shuffle(self.level_entrances)
         if self.multiworld.number_of_jiggies[self.player].value == 100:
             self.multiworld.local_early_items[self.player]["Jiggy"] = 1
-        if self.multiworld.move_shuffle[self.player]:
+        if self.multiworld.shuffle_moves[self.player]:
             self.multiworld.local_early_items[self.player]["Talon Trot"] = 1
 
     def get_filler_item_name(self) -> str:

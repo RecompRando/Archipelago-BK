@@ -1,7 +1,7 @@
 from ..generic.Rules import set_rule
 from BaseClasses import MultiWorld, CollectionState
-from Locations import setup_locations
-from Regions import connect_regions
+from .Locations import setup_locations
+from .Regions import connect_regions
 
 
 def can_access_location(world, state: "CollectionState", player: int, location: str, locations) -> bool:

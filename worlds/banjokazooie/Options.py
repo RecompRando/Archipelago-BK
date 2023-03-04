@@ -1,4 +1,4 @@
-from ...Options import Toggle, DefaultOnToggle, Range, DeathLink
+from Options import Toggle, DefaultOnToggle, Range, DeathLink
 
 
 class ShuffleMoves(DefaultOnToggle):

@@ -1,5 +1,5 @@
 from BaseClasses import MultiWorld, Region, Entrance
-from Locations import *
+from .Locations import *
 
 
 def connect_regions(world: MultiWorld, player, source: str, target: str, rule: typing.Optional[typing.Callable] = None):
