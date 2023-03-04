@@ -53,7 +53,6 @@ class BanjoKazooieWorld(World):
         return BKItem(name, item_table.get(name).classification, item_table.get(name).code, self.player)
 
     def create_items(self) -> None:
-
         jiggy_count = self.multiworld.number_of_jiggies[self.player].value
         self.multiworld.itempool += [self.create_item("Jiggy")
                                      for amount in range(0, jiggy_count)]
