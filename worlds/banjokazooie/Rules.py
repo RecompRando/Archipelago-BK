@@ -86,7 +86,7 @@ def set_location_rule(world: MultiWorld, player: int, location: str, locations):
 
 def set_location_rules(world: MultiWorld, player: int):
     locations = setup_locations(world, player)
-    for location, data in locations:
+    for location, data in locations.items():
         if data.requirements:
             set_location_rule(world, player, location, locations)
 
