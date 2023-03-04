@@ -142,7 +142,7 @@ class BanjoKazooieWorld(World):
                         self.level_entrances[6][0] != "Mumbo's Mountain" or "Bubblegloop Swamp" or "Freezeezy Peak" or
                         "Mad Monster Mansion" or "Click Clock Wood"):
                     self.multiworld.random.shuffle(self.level_entrances)
-        if 0 != self.multiworld.number_of_jiggies[self.player].value != 100:
+        if self.multiworld.number_of_jiggies[self.player].value == 100:
             self.multiworld.local_early_items[self.player]["Jiggy"] = 1
         if self.multiworld.move_shuffle[self.player]:
             self.multiworld.local_early_items[self.player]["Talon Trot"] = 1
