@@ -112,6 +112,7 @@ class BanjoKazooieWorld(World):
                         "Mad Monster Mansion" or "Click Clock Wood") and (
                         self.level_entrances[6][0] != "Mumbo's Mountain" or "Bubblegloop Swamp" or "Freezeezy Peak" or
                         "Mad Monster Mansion" or "Click Clock Wood"):
+                    print("Bogosort is stupid!")
                     self.multiworld.random.shuffle(self.level_entrances)
         if self.multiworld.number_of_jiggies[self.player].value == 100:
             self.multiworld.local_early_items[self.player]["Jiggy"] = 1
