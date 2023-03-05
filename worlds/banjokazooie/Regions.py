@@ -71,7 +71,7 @@ def create_regions(world: MultiWorld, player: int):
         if "TTC" in location:
             ttc_region.locations.append(BKLocation(player, location, data.code, ttc_region))
     ttc_region.locations.append(
-        BKLocation(player, "Sharkfood Island Egg", secrets_location_table["Pink Egg"].code, ttc_region))
+        BKLocation(player, "Pink Egg", secrets_location_table["Pink Egg"].code, ttc_region))
     world.regions.append(ttc_region)
 
     gl_floor_3_region = create_region("Grunty's Lair 3F", player, world)
@@ -157,7 +157,7 @@ def create_regions(world: MultiWorld, player: int):
         if "GV" in location:
             gv_region.locations.append(BKLocation(player, location, data.code, gv_region))
     gv_region.locations.append(BKLocation(
-        player, "Gobi's Valley Egg", secrets_location_table["Blue Egg"].code, gv_region))
+        player, "Blue Egg", secrets_location_table["Blue Egg"].code, gv_region))
     world.regions.append(gv_region)
 
     gl_floor_6_region = create_region("Grunty's Lair 6F", player, world)
@@ -191,9 +191,9 @@ def create_regions(world: MultiWorld, player: int):
     for location, data in mmm_notes_location_table.items():
         mmm_region.locations.append(BKLocation(player, location, data.code, mmm_region))
     mmm_region.locations.append(BKLocation(
-        player, "Cellar Egg", secrets_location_table["Cyan Egg"].code, mmm_region))
+        player, "Cyan Egg", secrets_location_table["Cyan Egg"].code, mmm_region))
     mmm_region.locations.append(BKLocation(
-        player, "Bathroom Egg", secrets_location_table["Green Egg"].code, mmm_region))
+        player, "Green Egg", secrets_location_table["Green Egg"].code, mmm_region))
     world.regions.append(mmm_region)
 
     rbb_region = create_region("Rusty Bucket Bay", player, world)
@@ -207,7 +207,7 @@ def create_regions(world: MultiWorld, player: int):
     for location, data in rbb_notes_location_table.items():
         rbb_region.locations.append(BKLocation(player, location, data.code, rbb_region))
     rbb_region.locations.append(BKLocation(
-        player, "Captain's Room Egg", secrets_location_table["Red Egg"].code, rbb_region))
+        player, "Red Egg", secrets_location_table["Red Egg"].code, rbb_region))
     world.regions.append(rbb_region)
 
     gl_floor_8_region = create_region("Grunty's Lair 8F", player, world)
@@ -228,7 +228,7 @@ def create_regions(world: MultiWorld, player: int):
     for location, data in ccw_notes_location_table.items():
         ccw_region.locations.append(BKLocation(player, location, data.code, ccw_region))
     ccw_region.locations.append(BKLocation(
-        player, "Nabnut's Egg", secrets_location_table["Yellow Egg"].code, ccw_region))
+        player, "Yellow Egg", secrets_location_table["Yellow Egg"].code, ccw_region))
     world.regions.append(ccw_region)
 
     gl_floor_furnace_fun_region = create_region("Grunty's Lair - Furnace Fun", player, world)
