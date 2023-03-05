@@ -28,7 +28,7 @@ class BanjoKazooieWorld(World):
     web = BanjoKazooieWeb()
 
     option_definitions = bk_options
-    game = "Banjo Kazooie"
+    game = "Banjo-Kazooie"
     topology_present = True
 
     data_version = 0
