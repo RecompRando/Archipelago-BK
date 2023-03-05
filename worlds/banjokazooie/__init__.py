@@ -190,31 +190,31 @@ class BanjoKazooieWorld(World):
                         self.multiworld.get_location(location, self.player).place_locked_item(
                             self.create_item("Final Boss Jiggy Puzzle"))
                 elif "Note Door" in location:
-                    if location.endswith("1"):
+                    if "1" in location:
                         self.multiworld.get_location(location, self.player).place_locked_item(
                             self.create_item("Note Door 1"))
-                    elif location.endswith("2"):
+                    elif "2" in location:
                         self.multiworld.get_location(location, self.player).place_locked_item(
                             self.create_item("Note Door 2"))
-                    elif location.endswith("3"):
+                    elif "3" in location:
                         self.multiworld.get_location(location, self.player).place_locked_item(
                             self.create_item("Note Door 3"))
-                    elif location.endswith("4"):
+                    elif "4" in location:
                         self.multiworld.get_location(location, self.player).place_locked_item(
                             self.create_item("Note Door 4"))
-                    elif location.endswith("5"):
+                    elif "5" in location:
                         self.multiworld.get_location(location, self.player).place_locked_item(
                             self.create_item("Note Door 5"))
-                    elif location.endswith("6"):
+                    elif "6" in location:
                         self.multiworld.get_location(location, self.player).place_locked_item(
                             self.create_item("Note Door 6"))
-                    elif location.endswith("7"):
+                    elif "7" in location:
                         self.multiworld.get_location(location, self.player).place_locked_item(
                             self.create_item("Note Door 7"))
-                    elif location.endswith("8"):
+                    elif "8" in location:
                         self.multiworld.get_location(location, self.player).place_locked_item(
                             self.create_item("Note Door 8"))
-                    elif location.endswith("9"):
+                    elif "9" in location:
                         self.multiworld.get_location(location, self.player).place_locked_item(
                             self.create_item("Note Door 9"))
                 elif "Witch Switch" in location:
