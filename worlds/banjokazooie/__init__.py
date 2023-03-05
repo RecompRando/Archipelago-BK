@@ -68,7 +68,7 @@ class BanjoKazooieWorld(World):
 
         self.multiworld.itempool += [self.create_item("Double Health")]
 
-        if self.multiworld.shuffle_moves:
+        if self.multiworld.shuffle_moves[self.player]:
             self.multiworld.itempool += [self.create_item("Eggs"),
                                          self.create_item("Talon Trot"),
                                          self.create_item("Beak Buster"),
@@ -78,7 +78,7 @@ class BanjoKazooieWorld(World):
                                          self.create_item("Stilt Stride"),
                                          self.create_item("Beak Bomb"),
                                          self.create_item("Turbo Talon Trot")]
-        if self.multiworld.shuffle_basic_moves:
+        if self.multiworld.shuffle_basic_moves[self.player]:
             self.multiworld.itempool += [self.create_item("Jump"),
                                          self.create_item("Feathery Flap"),
                                          self.create_item("Flap Flip"),
@@ -88,11 +88,11 @@ class BanjoKazooieWorld(World):
                                          self.create_item("Claw Swipe"),
                                          self.create_item("Roll"),
                                          self.create_item("Rat-A-Tat Rap")]
-        if self.multiworld.shuffle_cheato:
+        if self.multiworld.shuffle_cheato[self.player]:
             self.multiworld.itempool += [self.create_item("BLUEEGGS Cheato"),
                                          self.create_item("REDFEATHERS Cheato"),
                                          self.create_item("GOLDFEATHERS Cheato")]
-        if self.multiworld.shuffle_secrets:
+        if self.multiworld.shuffle_secrets[self.player]:
             self.multiworld.itempool += [self.create_item("Ice Key"),
                                          self.create_item("Pink Egg"),
                                          self.create_item("Blue Egg"),
