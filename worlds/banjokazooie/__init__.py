@@ -115,7 +115,7 @@ class BanjoKazooieWorld(World):
                     self.multiworld.random.shuffle(self.level_entrances)
         if self.multiworld.number_of_jiggies[self.player].value == 100:
             self.multiworld.local_early_items[self.player]["Jiggy"] = 1
-        if self.multiworld.shuffle_moves[self.player]:
+        if self.multiworld.shuffle_moves[self.player].value != 0:
             self.multiworld.local_early_items[self.player]["Talon Trot"] = 1
 
     def get_filler_item_name(self) -> str:
