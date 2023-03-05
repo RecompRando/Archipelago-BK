@@ -107,8 +107,7 @@ class BanjoKazooieWorld(World):
                     print(self.level_entrances)
                     self.multiworld.random.shuffle(self.level_entrances)
             else:
-                while (self.level_entrances[0][0] != "Mumbo's Mountain" or "Bubblegloop Swamp" or "Freezeezy Peak" or
-                        "Mad Monster Mansion" or "Click Clock Wood") and (
+                while (self.level_entrances[0][0] != "Mumbo's Mountain") and (
                         self.level_entrances[3][
                             0] != "Mumbo's Mountain" or "Bubblegloop Swamp" or "Freezeezy Peak" or "Mad Monster Mansion"
                         or "Click Clock Wood") and (
