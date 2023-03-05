@@ -46,6 +46,7 @@ def can_access_location(world, state: "CollectionState", player: int, location: 
                     fulfills_requirements = False
             elif requirement == "Node Door Amount [1]":
                 if not state.has("Note", player, 50):
+                    print(state.count("Note", player))
                     fulfills_requirements = False
             elif requirement == "Node Door Amount [2]":
                 if not state.has("Note", player, 180):
