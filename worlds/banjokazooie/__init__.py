@@ -99,12 +99,17 @@ class BanjoKazooieWorld(World):
             if self.multiworld.shuffle_moves[self.player].value == 0:
                 while True:
                     if self.level_entrances[0][0] == "Mumbo's Mountain":
-                        if (self.level_entrances[3][0] == "Mumbo's Mountain" or "Bubblegloop Swamp" or "Freezeezy Peak"
-                                or "Mad Monster Mansion" or "Click Clock Wood"):
-                            if (self.level_entrances[6][0] == "Mumbo's Mountain" or "Bubblegloop Swamp" or
-                                    "Freezeezy Peak" or "Mad Monster Mansion" or "Click Clock Wood"):
+                        if (self.level_entrances[3][0] == "Mumbo's Mountain" or
+                                self.level_entrances[3][0] == "Bubblegloop Swamp" or
+                                self.level_entrances[3][0] == "Freezeezy Peak" or
+                                self.level_entrances[3][0] == "Mad Monster Mansion" or
+                                self.level_entrances[3][0] == "Click Clock Wood"):
+                            if (self.level_entrances[6][0] == "Mumbo's Mountain" or
+                                    self.level_entrances[6][0] == "Bubblegloop Swamp" or
+                                    self.level_entrances[6][0] == "Freezeezy Peak" or
+                                    self.level_entrances[6][0] == "Mad Monster Mansion" or
+                                    self.level_entrances[6][0] == "Click Clock Wood"):
                                 break
-                    print(self.level_entrances)
                     self.multiworld.random.shuffle(self.level_entrances)
             else:
                 while True:
@@ -124,7 +129,6 @@ class BanjoKazooieWorld(World):
                                     self.level_entrances[6][0] == "Mad Monster Mansion" or
                                     self.level_entrances[6][0] == "Click Clock Wood"):
                                 break
-                    print(self.level_entrances)
                     self.multiworld.random.shuffle(self.level_entrances)
             print(self.level_entrances)
 
