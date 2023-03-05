@@ -97,27 +97,27 @@ class BanjoKazooieWorld(World):
         if self.multiworld.level_randomizer[self.player].value != 0:
             self.multiworld.random.shuffle(self.level_entrances)
             if self.multiworld.shuffle_moves[self.player].value == 0:
-                while self.level_entrances[0][0] != "Mumbo's Mountain" and (
-                        self.level_entrances[3][
-                            0] != "Bubblegloop Swamp" or "Freezeezy Peak" or "Mad Monster Mansion" or
-                        "Click Clock Wood") and (
-                        self.level_entrances[6][
-                            0] != "Bubblegloop Swamp" or "Freezeezy Peak" or "Mad Monster Mansion" or
-                        "Click Clock Wood"):
+                while True:
+                    if self.level_entrances[0][0] == "Mumbo's Mountain":
+                        if (self.level_entrances[3][0] == "Mumbo's Mountain" or "Bubblegloop Swamp" or "Freezeezy Peak"
+                                or "Mad Monster Mansion" or "Click Clock Wood"):
+                            if (self.level_entrances[6][0] == "Mumbo's Mountain" or "Bubblegloop Swamp" or
+                                    "Freezeezy Peak" or "Mad Monster Mansion" or "Click Clock Wood"):
+                                break
                     print(self.level_entrances)
                     self.multiworld.random.shuffle(self.level_entrances)
             else:
-                while (self.level_entrances[0][0] != "Mumbo's Mountain" or "Bubblegloop Swamp" or "Freezeezy Peak" or
-                       "Mad Monster Mansion" or "Click Clock Wood"):
-                    while (self.level_entrances[3][
-                               0] != "Bubblegloop Swamp" or "Freezeezy Peak" or "Mad Monster Mansion" or
-                           "Click Clock Wood") and (
-                            self.level_entrances[6][
-                                0] != "Bubblegloop Swamp" or "Freezeezy Peak" or "Mad Monster Mansion" or
-                            "Click Clock Wood"):
-                        print(self.level_entrances)
-                        self.multiworld.random.shuffle(self.level_entrances)
+                while True:
+                    if (self.level_entrances[0][0] == "Mumbo's Mountain" or "Bubblegloop Swamp" or "Freezeezy Peak" or
+                            "Mad Monster Mansion" or "Click Clock Wood"):
+                        if (self.level_entrances[3][0] == "Mumbo's Mountain" or "Bubblegloop Swamp" or "Freezeezy Peak"
+                                or "Mad Monster Mansion" or "Click Clock Wood"):
+                            if (self.level_entrances[6][0] == "Mumbo's Mountain" or "Bubblegloop Swamp" or
+                                    "Freezeezy Peak" or "Mad Monster Mansion" or "Click Clock Wood"):
+                                break
+                    print(self.level_entrances)
                     self.multiworld.random.shuffle(self.level_entrances)
+
         if self.multiworld.number_of_jiggies[self.player].value == 100:
             self.multiworld.local_early_items[self.player]["Jiggy"] = 1
         if self.multiworld.shuffle_moves[self.player].value != 0:
