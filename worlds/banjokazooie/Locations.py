@@ -3373,6 +3373,7 @@ location_table = {
     **glf7_location_table,
     **rbb_location_table,
     **glf8_location_table,
+    **glff_location_table,
     **gltf_location_table,
     **ccw_location_table,
     **empty_honeycomb_location_table,
