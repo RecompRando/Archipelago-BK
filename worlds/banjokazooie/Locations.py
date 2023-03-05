@@ -898,7 +898,7 @@ mumbo_token_location_table = {
     "CCW Winter Garden Mumbo Token": LocationData(120231, [["Talon Trot", "Beak Buster", "Shock Spring Jump"]]),
     "CCW Winter Sir Slush Mumbo Token Near Garden":
         LocationData(120232, [["Talon Trot", "Beak Buster", "Shock Spring Jump", "Flight", "Beak Bomb"]]),
-    "CCW Winter Beehive": LocationData(120233, [["Talon Trot", "Beak Buster", "Shock Spring Jump"]]),
+    "CCW Winter Beehive Mumbo Token": LocationData(120233, [["Talon Trot", "Beak Buster", "Shock Spring Jump"]]),
     "CCW Winter Mumbo Token Near Nabnut's House":
         LocationData(120234, [["Talon Trot", "Beak Buster", "Shock Spring Jump"]]),
     "CCW Winter Mumbo Token Behind Lake Platform":
