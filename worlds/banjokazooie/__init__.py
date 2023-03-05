@@ -117,6 +117,7 @@ class BanjoKazooieWorld(World):
                                 break
                     print(self.level_entrances)
                     self.multiworld.random.shuffle(self.level_entrances)
+                print(self.level_entrances)
 
         if self.multiworld.number_of_jiggies[self.player].value == 100:
             self.multiworld.local_early_items[self.player]["Jiggy"] = 1
