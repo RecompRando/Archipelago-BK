@@ -123,7 +123,7 @@ misc_event_table = {
     "Water Level Switch 1": ItemData(None, ItemClassification.progression),
     "Water Level Switch 2": ItemData(None, ItemClassification.progression),
     "CCW Jiggy Podium Switch": ItemData(None, ItemClassification.progression),
-    "Victory": ItemData(None, ItemClassification)
+    "Victory": ItemData(None, ItemClassification.progression)
 }
 
 item_table = {
