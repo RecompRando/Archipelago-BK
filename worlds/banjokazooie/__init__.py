@@ -59,7 +59,7 @@ class BanjoKazooieWorld(World):
         self.multiworld.itempool += [self.create_item(self.get_filler_item_name())
                                      for amount in range(jiggy_count, 100)]
 
-        self.multiworld.itempool += [self.create_item("Empty Honeycomb Piece") for amount in range(0, 14)] #24, testing
+        self.multiworld.itempool += [self.create_item("Empty Honeycomb Piece") for amount in range(0, 2)] #24, testing
 
         mumbo_token_count = self.multiworld.number_of_mumbo_tokens[self.player].value
         self.multiworld.itempool += [self.create_item("Mumbo Token") for amount in range(0, mumbo_token_count)]
