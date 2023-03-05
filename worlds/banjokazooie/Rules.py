@@ -1,6 +1,6 @@
 from ..generic.Rules import set_rule
 from BaseClasses import MultiWorld, CollectionState
-from .Locations import setup_locations
+from .Locations import location_table
 from .Regions import connect_regions
 
 
@@ -85,8 +85,7 @@ def set_location_rule(world: MultiWorld, player: int, location: str, locations):
 
 
 def set_location_rules(world: MultiWorld, player: int):
-    locations = setup_locations(world, player)
-    for location, data in locations.items():
+    for location, data in location_table.items():
         if data.requirements:
             set_location_rule(world, player, location, locations)
 

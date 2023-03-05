@@ -35,7 +35,7 @@ class BanjoKazooieWorld(World):
     required_client_version = (0, 3, 8)
 
     item_name_to_id = {name: data.code for name, data in item_table.items()}
-    location_name_to_id = {name: data.code for name, data in all_locations_table.items()}
+    location_name_to_id = {name: data.code for name, data in location_table.items()}
 
     level_entrances = [
         ["Mumbo's Mountain", 1],
@@ -86,18 +86,6 @@ class BanjoKazooieWorld(World):
                                          self.create_item("Claw Swipe"),
                                          self.create_item("Roll"),
                                          self.create_item("Rat-A-Tat Rap")]
-        else:
-            self.multiworld.precollected_items += {
-                self.create_item("Jump"),
-                self.create_item("Feathery Flap"),
-                self.create_item("Flap Flip"),
-                self.create_item("Swim"),
-                self.create_item("Climb"),
-                self.create_item("Beak Barge"),
-                self.create_item("Claw Swipe"),
-                self.create_item("Roll"),
-                self.create_item("Rat-A-Tat Rap")
-            }
         if self.multiworld.shuffle_cheato[self.player]:
             self.multiworld.itempool += [self.create_item("BLUEEGGS Cheato"),
                                          self.create_item("REDFEATHERS Cheato"),
@@ -112,6 +100,7 @@ class BanjoKazooieWorld(World):
                                          self.create_item("Yellow Egg")]
 
         self.initialize_events()
+        self.initialize_options()
         self.initialize_notes()
 
         self.multiworld.completion_condition[self.player] = lambda state: state.has("Victory", self.player)
@@ -330,6 +319,68 @@ class BanjoKazooieWorld(World):
         for note in ccw_notes_location_table:
             location_table.update(**ccw_notes_location_table)
             self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
+
+    def initialize_options(self) -> None:
+        if not self.multiworld.shuffle_moves[self.player]:
+            self.multiworld.get_location("MM Eggs Molehill", self.player).place_locked_item(
+                self.create_item("Eggs"))
+            self.multiworld.get_location("MM Talon Trot Molehill", self.player).place_locked_item(
+                self.create_item("Talon Trot"))
+            self.multiworld.get_location("MM Beak Buster Molehill", self.player).place_locked_item(
+                self.create_item("Beak Buster"))
+            self.multiworld.get_location("TTC Flight Molehill", self.player).place_locked_item(
+                self.create_item("Flight"))
+            self.multiworld.get_location("TTC Shock Spring Jump Molehill", self.player).place_locked_item(
+                self.create_item("Shock Spring Jump"))
+            self.multiworld.get_location("CC Wonderwing Molehill", self.player).place_locked_item(
+                self.create_item("Wonderwing"))
+            self.multiworld.get_location("BS Stilt Stride Molehill", self.player).place_locked_item(
+                self.create_item("Stilt Stride"))
+            self.multiworld.get_location("FP Beak Bomb Molehill", self.player).place_locked_item(
+                self.create_item("Beak Bomb"))
+            self.multiworld.get_location("GV Turbo Talon Trot Molehill", self.player).place_locked_item(
+                self.create_item("Turbo Talon Trot"))
+        if not self.multiworld.shuffle_basic_moves[self.player]:
+            self.multiworld.get_location("SM Jump Molehill 1", self.player).place_locked_item(
+                self.create_item("Jump"))
+            self.multiworld.get_location("SM Jump Molehill 2", self.player).place_locked_item(
+                self.create_item("Feathery Flap"))
+            self.multiworld.get_location("SM Jump Molehill 3", self.player).place_locked_item(
+                self.create_item("Flap Flip"))
+            self.multiworld.get_location("SM Swim Molehill", self.player).place_locked_item(
+                self.create_item("Swim"))
+            self.multiworld.get_location("SM Climb Molehill", self.player).place_locked_item(
+                self.create_item("Climb"))
+            self.multiworld.get_location("SM Beak Barge Molehill", self.player).place_locked_item(
+                self.create_item("Beak Barge"))
+            self.multiworld.get_location("SM Attack Molehill 1", self.player).place_locked_item(
+                self.create_item("Claw Swipe"))
+            self.multiworld.get_location("SM Attack Molehill 2", self.player).place_locked_item(
+                self.create_item("Roll"))
+            self.multiworld.get_location("SM Attack Molehill 3", self.player).place_locked_item(
+                self.create_item("Rat-A-Tat Rap"))
+        if not self.multiworld.shuffle_cheato[self.player]:
+            self.multiworld.get_location("BLUEEGGS Cheato", self.player).place_locked_item(
+                self.create_item("BLUEEGGS Cheato"))
+            self.multiworld.get_location("REDFEATHERS Cheato", self.player).place_locked_item(
+                self.create_item("REDFEATHERS Cheato"))
+            self.multiworld.get_location("GOLDFEATHERS Cheato", self.player).place_locked_item(
+                self.create_item("GOLDFEATHERS Cheato"))
+        if not self.multiworld.shuffle_secrets[self.player]:
+            self.multiworld.get_location("Ice Key", self.player).place_locked_item(
+                self.create_item("Ice Key"))
+            self.multiworld.get_location("Pink Egg", self.player).place_locked_item(
+                self.create_item("Pink Egg"))
+            self.multiworld.get_location("Blue Egg", self.player).place_locked_item(
+                self.create_item("Blue Egg"))
+            self.multiworld.get_location("Cyan Egg", self.player).place_locked_item(
+                self.create_item("Cyan Egg"))
+            self.multiworld.get_location("Green Egg", self.player).place_locked_item(
+                self.create_item("Green Egg"))
+            self.multiworld.get_location("Red Egg", self.player).place_locked_item(
+                self.create_item("Red Egg"))
+            self.multiworld.get_location("Yellow Egg", self.player).place_locked_item(
+                self.create_item("Yellow Egg"))
 
     def set_rules(self) -> None:
         set_rules(self.multiworld, self.player, self.level_entrances)

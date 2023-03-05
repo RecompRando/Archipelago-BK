@@ -906,7 +906,7 @@ mumbo_token_location_table = {
 }
 
 molehill_location_table = {
-    "MM Egg Molehill": LocationData(120236, [["Flap Flip"]]),
+    "MM Eggs Molehill": LocationData(120236, [["Flap Flip"]]),
     "MM Talon Trot Molehill": LocationData(120237),
     "MM Beak Buster Molehill": LocationData(120238),
     "TTC Flight Molehill": LocationData(120239, [["Jump", "Flight"],
@@ -927,11 +927,15 @@ molehill_location_table = {
 }
 
 basic_molehill_location_table = {
-    "SM Jump Molehill": LocationData(120245),
-    "SM Swim Molehill": LocationData(120246),
-    "SM Climb Molehill": LocationData(120247),
-    "SM Beak Barge Molehill": LocationData(120248),
-    "SM Attack Molehill": LocationData(120249),
+    "SM Jump Molehill 1": LocationData(120245),
+    "SM Jump Molehill 2": LocationData(120246),
+    "SM Jump Molehill 3": LocationData(120247),
+    "SM Swim Molehill": LocationData(120248),
+    "SM Climb Molehill": LocationData(120249),
+    "SM Beak Barge Molehill": LocationData(120250),
+    "SM Attack Molehill 1": LocationData(120251),
+    "SM Attack Molehill 2": LocationData(120252),
+    "SM Attack Molehill 3": LocationData(120253),
 }
 
 cheato_location_table = {
@@ -939,41 +943,41 @@ cheato_location_table = {
                                                              ["Rat-A-Tat Rap", "Stilt Stride"],
                                                              ["Eggs", "Stilt Stride"],
                                                              ["Beak Buster", "Stilt Stride"]]),
-    "BLUEEGGS Cheato": LocationData(120250, [["BLUEEGGS Cheato Rock Cleared", "Termite Transformation"],
+    "BLUEEGGS Cheato": LocationData(120254, [["BLUEEGGS Cheato Rock Cleared", "Termite Transformation"],
                                              ["BLUEEGGS Cheato Rock Cleared", "Crocodile Transformation"],
                                              ["BLUEEGGS Cheato Rock Cleared", "Walrus Transformation"],
                                              ["BLUEEGGS Cheato Rock Cleared", "Pumpkin Transformation"],
                                              ["BLUEEGGS Cheato Rock Cleared", "Bee Transformation"]]),
-    "REDFEATHERS Cheato": LocationData(120251, [["Termite Transformation"],
+    "REDFEATHERS Cheato": LocationData(120255, [["Termite Transformation"],
                                                 ["Crocodile Transformation"],
                                                 ["Walrus Transformation"],
                                                 ["Pumpkin Transformation"],
                                                 ["Bee Transformation"]]),
-    "GOLDFEATHERS Cheato": LocationData(120252, [["Swim", "Rat-A-Tat Rap", "Beak Buster"],
+    "GOLDFEATHERS Cheato": LocationData(120256, [["Swim", "Rat-A-Tat Rap", "Beak Buster"],
                                                  ["Swim", "Eggs", "Beak Buster"],
                                                  ["Bee Transformation"]])
 }
 
 secrets_location_table = {
-    "Ice Key": LocationData(120253, [["Flap Flip", "Walrus Transformation"]]),
-    "Pink Egg": LocationData(120254, [["Jump", "Feathery Flap", "Shock Spring Jump"],
+    "Ice Key": LocationData(120257, [["Flap Flip", "Walrus Transformation"]]),
+    "Pink Egg": LocationData(120258, [["Jump", "Feathery Flap", "Shock Spring Jump"],
                                       ["Jump", "Rat-A-Tat Rap", "Shock Spring Jump"],
                                       ["Jump", "Talon Trot", "Shock Spring Jump"]]),
-    "Blue Egg": LocationData(120255, [["Talon Trot"],
+    "Blue Egg": LocationData(120259, [["Talon Trot"],
                                       ["Turbo Talon Trot"]]),
-    "Cyan Egg": LocationData(120256, [["Beak Barge"],
+    "Cyan Egg": LocationData(120260, [["Beak Barge"],
                                       ["Rat-A-Tat Rap"],
                                       ["Eggs"],
                                       ["Beak Buster"]]),
-    "Green Egg": LocationData(120257, [["Jump", "Climb", "Rat-A-Tat Rap"],
+    "Green Egg": LocationData(120261, [["Jump", "Climb", "Rat-A-Tat Rap"],
                                        ["Jump", "Climb", "Eggs"],
                                        ["Talon Trot", "Climb", "Rat-A-Tat Rap"],
                                        ["Talon Trot", "Climb", "Eggs"]]),
-    "Red Egg": LocationData(120258, [["Rat-A-Tat Rap"],
+    "Red Egg": LocationData(120262, [["Rat-A-Tat Rap"],
                                      ["Jump", "Eggs"],
                                      ["Feathery Flap", "Eggs"],
                                      ["Talon Trot", "Eggs"]]),
-    "Yellow Egg": LocationData(120259, [["Talon Trot", "Shock Spring Jump", "Beak Buster"]]),
+    "Yellow Egg": LocationData(120263, [["Talon Trot", "Shock Spring Jump", "Beak Buster"]]),
 }
 
 mm_notes_location_table = {
@@ -3369,29 +3373,6 @@ location_table = {
     **gltf_location_table,
     **ccw_location_table,
     **empty_honeycomb_location_table,
-    **mumbo_token_location_table
-}
-
-all_locations_table = {
-    **glf1_location_table,
-    **mm_location_table,
-    **glf2_location_table,
-    **ttc_location_table,
-    **glf3_location_table,
-    **cc_location_table,
-    **glf4_location_table,
-    **bs_location_table,
-    **glf5_location_table,
-    **fp_location_table,
-    **gv_location_table,
-    **glf6_location_table,
-    **mmm_location_table,
-    **glf7_location_table,
-    **rbb_location_table,
-    **glf8_location_table,
-    **gltf_location_table,
-    **ccw_location_table,
-    **empty_honeycomb_location_table,
     **mumbo_token_location_table,
     **molehill_location_table,
     **basic_molehill_location_table,
@@ -3399,18 +3380,3 @@ all_locations_table = {
     **secrets_location_table
 }
 
-
-def setup_locations(world, player: int):
-    if world.shuffle_moves[player].value:
-        location_table.update(**molehill_location_table)
-
-    if world.shuffle_basic_moves[player].value:
-        location_table.update(**basic_molehill_location_table)
-
-    if world.shuffle_cheato[player].value:
-        location_table.update(**cheato_location_table)
-
-    if world.shuffle_secrets[player].value:
-        location_table.update(**secrets_location_table)
-
-    return location_table
