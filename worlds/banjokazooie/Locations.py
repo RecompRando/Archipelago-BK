@@ -120,7 +120,7 @@ glff_location_table = {
 }
 
 gltf_location_table = {
-    "GLTF Final Boss Jiggy Puzzle": LocationData(None, [["Jiggy Amount [FB]", "Note Door Amount [9]"]]),
+    "GLTF Final Boss Jiggy Puzzle": LocationData(None, [["Jiggy Amount [FB]"]]),
     "GLTF Secret Puzzle": LocationData(120264, [["Note Door 9", "Jiggy Amount [SP]"]]),
     "GLTF Note Door 9": LocationData(None, [["Note Door 8", "Final Boss Jiggy Puzzle", "Note Door Amount [9]"]]),
     "Victory":

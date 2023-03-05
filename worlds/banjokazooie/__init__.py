@@ -153,7 +153,7 @@ class BanjoKazooieWorld(World):
                     elif "CCW" in location:
                         self.multiworld.get_location(location, self.player).place_locked_item(
                             self.create_item("CCW Jiggy Puzzle"))
-                    elif "FB" in location:
+                    elif "Final Boss" in location:
                         self.multiworld.get_location(location, self.player).place_locked_item(
                             self.create_item("Final Boss Jiggy Puzzle"))
                 elif "Note Door" in location:
