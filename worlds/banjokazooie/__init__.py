@@ -247,7 +247,7 @@ class BanjoKazooieWorld(World):
                     elif location == "GV Trunker's Jiggy Flag":
                         self.multiworld.get_location(location, self.player).place_locked_item(
                             self.create_item("Trunker's Jiggy Flag"))
-                    elif location == "Gobi's Honeycomb Flag":
+                    elif location == "GV Gobi's Honeycomb Flag":
                         self.multiworld.get_location(location, self.player).place_locked_item(
                             self.create_item("Gobi's Honeycomb Flag"))
                     elif location == "BLUEEGGS Cheato Rock Cleared Flag":
