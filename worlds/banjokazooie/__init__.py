@@ -155,7 +155,7 @@ class BanjoKazooieWorld(World):
 
     def initialize_events(self) -> None:
         for location, data in location_table.items():
-            if data.code is None:
+            if data.code is None and "Note" not in location:
                 if "Jiggy Puzzle" in location:
                     if "MM" in location and "MMM" not in location:
                         self.multiworld.get_location(location, self.player).place_locked_item(
@@ -293,31 +293,22 @@ class BanjoKazooieWorld(World):
 
     def initialize_notes(self) -> None:
         for note in mm_notes_location_table:
-            location_table.update(**mm_notes_location_table)
             self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
         for note in ttc_notes_location_table:
-            location_table.update(**ttc_notes_location_table)
             self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
         for note in cc_notes_location_table:
-            location_table.update(**cc_notes_location_table)
             self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
         for note in bs_notes_location_table:
-            location_table.update(**bs_notes_location_table)
             self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
         for note in fp_notes_location_table:
-            location_table.update(**fp_notes_location_table)
             self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
         for note in gv_notes_location_table:
-            location_table.update(**gv_notes_location_table)
             self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
         for note in mmm_notes_location_table:
-            location_table.update(**mmm_notes_location_table)
             self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
         for note in rbb_notes_location_table:
-            location_table.update(**rbb_notes_location_table)
             self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
         for note in ccw_notes_location_table:
-            location_table.update(**ccw_notes_location_table)
             self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
 
     def initialize_options(self) -> None:

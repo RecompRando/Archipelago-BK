@@ -3377,6 +3377,15 @@ location_table = {
     **molehill_location_table,
     **basic_molehill_location_table,
     **cheato_location_table,
-    **secrets_location_table
+    **secrets_location_table,
+    **mm_notes_location_table,
+    **ttc_notes_location_table,
+    **ccw_notes_location_table,
+    **bs_notes_location_table,
+    **fp_notes_location_table,
+    **gv_notes_location_table,
+    **mmm_notes_location_table,
+    **rbb_notes_location_table,
+    **ccw_notes_location_table
 }
 
