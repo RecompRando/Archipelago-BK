@@ -66,6 +66,8 @@ class BanjoKazooieWorld(World):
         self.multiworld.itempool += [self.create_item(self.get_filler_item_name())
                                      for amount in range(mumbo_token_count, 112)]
 
+        self.multiworld.itempool += [self.create_item("Double Health")]
+
         if self.multiworld.shuffle_moves:
             self.multiworld.itempool += [self.create_item("Eggs"),
                                          self.create_item("Talon Trot"),
