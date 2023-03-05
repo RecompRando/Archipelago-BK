@@ -99,6 +99,9 @@ def create_regions(world: MultiWorld, player: int):
     gl_floor_4_region = create_region("Grunty's Lair 4F", player, world)
     initialize_locations(gl_floor_4_region, glf4_location_table, player)
     gl_floor_4_region.locations.append(
+        BKLocation(player, "BLUEEGGS Cheato Rock Cleared Flag",
+                   cheato_location_table["BLUEEGGS Cheato Rock Cleared Flag"].code, gl_floor_4_region))
+    gl_floor_4_region.locations.append(
         BKLocation(player, "BLUEEGGS Cheato", cheato_location_table["BLUEEGGS Cheato"].code, gl_floor_4_region))
     world.regions.append(gl_floor_4_region)
 
