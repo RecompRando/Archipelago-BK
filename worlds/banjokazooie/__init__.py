@@ -68,39 +68,6 @@ class BanjoKazooieWorld(World):
 
         self.multiworld.itempool += [self.create_item("Double Health")]
 
-        if self.multiworld.shuffle_moves[self.player].value != 0:
-            self.multiworld.itempool += [self.create_item("Eggs"),
-                                         self.create_item("Talon Trot"),
-                                         self.create_item("Beak Buster"),
-                                         self.create_item("Flight"),
-                                         self.create_item("Shock Spring Jump"),
-                                         self.create_item("Wonderwing"),
-                                         self.create_item("Stilt Stride"),
-                                         self.create_item("Beak Bomb"),
-                                         self.create_item("Turbo Talon Trot")]
-        if self.multiworld.shuffle_basic_moves[self.player].value != 0:
-            self.multiworld.itempool += [self.create_item("Jump"),
-                                         self.create_item("Feathery Flap"),
-                                         self.create_item("Flap Flip"),
-                                         self.create_item("Swim"),
-                                         self.create_item("Climb"),
-                                         self.create_item("Beak Barge"),
-                                         self.create_item("Claw Swipe"),
-                                         self.create_item("Roll"),
-                                         self.create_item("Rat-A-Tat Rap")]
-        if self.multiworld.shuffle_cheato[self.player].value != 0:
-            self.multiworld.itempool += [self.create_item("BLUEEGGS Cheato"),
-                                         self.create_item("REDFEATHERS Cheato"),
-                                         self.create_item("GOLDFEATHERS Cheato")]
-        if self.multiworld.shuffle_secrets[self.player].value != 0:
-            self.multiworld.itempool += [self.create_item("Ice Key"),
-                                         self.create_item("Pink Egg"),
-                                         self.create_item("Blue Egg"),
-                                         self.create_item("Cyan Egg"),
-                                         self.create_item("Green Egg"),
-                                         self.create_item("Red Egg"),
-                                         self.create_item("Yellow Egg")]
-
         self.initialize_events()
         self.initialize_options()
         self.initialize_notes()
@@ -314,7 +281,17 @@ class BanjoKazooieWorld(World):
             self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
 
     def initialize_options(self) -> None:
-        if self.multiworld.shuffle_moves[self.player].value == 0:
+        if self.multiworld.shuffle_moves[self.player].value != 0:
+            self.multiworld.itempool += [self.create_item("Eggs"),
+                                         self.create_item("Talon Trot"),
+                                         self.create_item("Beak Buster"),
+                                         self.create_item("Flight"),
+                                         self.create_item("Shock Spring Jump"),
+                                         self.create_item("Wonderwing"),
+                                         self.create_item("Stilt Stride"),
+                                         self.create_item("Beak Bomb"),
+                                         self.create_item("Turbo Talon Trot")]
+        else:
             self.multiworld.get_location("MM Eggs Molehill", self.player).place_locked_item(
                 self.create_item("Eggs"))
             self.multiworld.get_location("MM Talon Trot Molehill", self.player).place_locked_item(
@@ -333,7 +310,17 @@ class BanjoKazooieWorld(World):
                 self.create_item("Beak Bomb"))
             self.multiworld.get_location("GV Turbo Talon Trot Molehill", self.player).place_locked_item(
                 self.create_item("Turbo Talon Trot"))
-        if self.multiworld.shuffle_basic_moves[self.player].value == 0:
+        if self.multiworld.shuffle_basic_moves[self.player].value != 0:
+            self.multiworld.itempool += [self.create_item("Jump"),
+                                         self.create_item("Feathery Flap"),
+                                         self.create_item("Flap Flip"),
+                                         self.create_item("Swim"),
+                                         self.create_item("Climb"),
+                                         self.create_item("Beak Barge"),
+                                         self.create_item("Claw Swipe"),
+                                         self.create_item("Roll"),
+                                         self.create_item("Rat-A-Tat Rap")]
+        else:
             self.multiworld.get_location("SM Jump Molehill 1", self.player).place_locked_item(
                 self.create_item("Jump"))
             self.multiworld.get_location("SM Jump Molehill 2", self.player).place_locked_item(
@@ -352,14 +339,26 @@ class BanjoKazooieWorld(World):
                 self.create_item("Roll"))
             self.multiworld.get_location("SM Attack Molehill 3", self.player).place_locked_item(
                 self.create_item("Rat-A-Tat Rap"))
-        if self.multiworld.shuffle_cheato[self.player].value == 0:
+        if self.multiworld.shuffle_cheato[self.player].value != 0:
+            self.multiworld.itempool += [self.create_item("BLUEEGGS Cheato"),
+                                         self.create_item("REDFEATHERS Cheato"),
+                                         self.create_item("GOLDFEATHERS Cheato")]
+        else:
             self.multiworld.get_location("BLUEEGGS Cheato", self.player).place_locked_item(
                 self.create_item("BLUEEGGS Cheato"))
             self.multiworld.get_location("REDFEATHERS Cheato", self.player).place_locked_item(
                 self.create_item("REDFEATHERS Cheato"))
             self.multiworld.get_location("GOLDFEATHERS Cheato", self.player).place_locked_item(
                 self.create_item("GOLDFEATHERS Cheato"))
-        if self.multiworld.shuffle_secrets[self.player].value == 0:
+        if self.multiworld.shuffle_secrets[self.player].value != 0:
+            self.multiworld.itempool += [self.create_item("Ice Key"),
+                                         self.create_item("Pink Egg"),
+                                         self.create_item("Blue Egg"),
+                                         self.create_item("Cyan Egg"),
+                                         self.create_item("Green Egg"),
+                                         self.create_item("Red Egg"),
+                                         self.create_item("Yellow Egg")]
+        else:
             self.multiworld.get_location("Ice Key", self.player).place_locked_item(
                 self.create_item("Ice Key"))
             self.multiworld.get_location("Pink Egg", self.player).place_locked_item(
