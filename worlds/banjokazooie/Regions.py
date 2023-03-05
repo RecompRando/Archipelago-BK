@@ -231,8 +231,9 @@ def create_regions(world: MultiWorld, player: int):
         player, "Yellow Egg", secrets_location_table["Yellow Egg"].code, ccw_region))
     world.regions.append(ccw_region)
 
-    gl_floor_furnace_fun_region = create_region("Grunty's Lair - Furnace Fun", player, world)
-    world.regions.append(gl_floor_furnace_fun_region)
+    gl_furnace_fun_region = create_region("Grunty's Lair - Furnace Fun", player, world)
+    initialize_locations(gl_furnace_fun_region, glff_location_table, player)
+    world.regions.append(gl_furnace_fun_region)
 
     gl_top_floor_region = create_region("Grunty's Lair - Top Floor", player, world)
     initialize_locations(gl_top_floor_region, gltf_location_table, player)

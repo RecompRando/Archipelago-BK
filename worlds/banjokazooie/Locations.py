@@ -115,10 +115,13 @@ glf8_location_table = {
                                                              ["Bee Transformation", "CCW Witch Switch"]]),
 }
 
+glff_location_table = {
+    "GLFF Note Door 8": LocationData(None, [["Note Door Amount [8]"]]),
+}
+
 gltf_location_table = {
     "GLTF Final Boss Jiggy Puzzle": LocationData(None, [["Jiggy Amount [FB]"]]),
     "GLTF Secret Puzzle": LocationData(120264, [["Note Door 9", "Jiggy Amount [SP]"]]),
-    "GLTF Note Door 8": LocationData(None, [["Note Door Amount [8]"]]),
     "GLTF Note Door 9": LocationData(None, [["Note Door 8", "Final Boss Jiggy Puzzle", "Note Door Amount [9]"]]),
     "Victory":
         LocationData(None, [["Rat-A-Tat Rap", "Eggs", "Flight", "Wonderwing", "Beak Bomb", "Final Boss Jiggy Puzzle"]])
