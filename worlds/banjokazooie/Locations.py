@@ -913,7 +913,7 @@ molehill_location_table = {
                                                  ["Feathery Flap", "Flight"],
                                                  ["Flap Flip", "Flight"],
                                                  ["Rat-A-Tat Rap", "Flight"],
-                                                 ["Talon Trot", "Flight"]]),
+                                                 ["Talon Trot"]]),
     "TTC Shock Spring Jump Molehill": LocationData(120240, [["Jump"],
                                                             ["Feathery Flap"],
                                                             ["Flap Flip"],
