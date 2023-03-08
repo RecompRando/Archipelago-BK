@@ -3356,6 +3356,34 @@ ccw_notes_location_table = {
                                                      ["Talon Trot", "Beak Buster", "Shock Spring Jump", "Flight"]]),
 }
 
+location_table_without_notes = {
+    **glf1_location_table,
+    **mm_location_table,
+    **glf2_location_table,
+    **ttc_location_table,
+    **glf3_location_table,
+    **cc_location_table,
+    **glf4_location_table,
+    **bs_location_table,
+    **glf5_location_table,
+    **fp_location_table,
+    **gv_location_table,
+    **glf6_location_table,
+    **mmm_location_table,
+    **glf7_location_table,
+    **rbb_location_table,
+    **glf8_location_table,
+    **glff_location_table,
+    **gltf_location_table,
+    **ccw_location_table,
+    **empty_honeycomb_location_table,
+    **mumbo_token_location_table,
+    **molehill_location_table,
+    **basic_molehill_location_table,
+    **cheato_location_table,
+    **secrets_location_table
+}
+
 location_table = {
     **glf1_location_table,
     **mm_location_table,
