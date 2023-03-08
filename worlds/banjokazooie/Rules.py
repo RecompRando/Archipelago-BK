@@ -93,50 +93,50 @@ def set_location_rules(world: MultiWorld, player: int):
 def set_rules(world: MultiWorld, player: int, level_entrances: list[list[str, int]]):
     connect_regions(world, player, "Menu", "Spiral Mountain")
     connect_regions(world, player, "Spiral Mountain", "Grunty's Lair 1F")
-    connect_regions(world, player, "Grunty's Lair 1F", level_entrances[0][0]), lambda state: state.has(
-        "MM Jiggy Puzzle", player)
-    connect_regions(world, player, "Grunty's Lair 1F", "Grunty's Lair 2F"), lambda state: state.has(
-        "Talon Trot", player) and state.has("Note Door 1", player)
-    connect_regions(world, player, "Grunty's Lair 2F", level_entrances[1][0]), lambda state: state.has(
-        "TTC Jiggy Puzzle", player)
-    connect_regions(world, player, "Grunty's Lair 2F", "Grunty's Lair 3F"), lambda state: state.has(
-        "Flap Flip", player)
-    connect_regions(world, player, "Grunty's Lair 3F", level_entrances[2][0]), lambda state: state.has(
+    connect_regions(world, player, "Grunty's Lair 1F", level_entrances[0][0], lambda state: state.has(
+        "MM Jiggy Puzzle", player))
+    connect_regions(world, player, "Grunty's Lair 1F", "Grunty's Lair 2F", lambda state: state.has(
+        "Talon Trot", player) and state.has("Note Door 1", player))
+    connect_regions(world, player, "Grunty's Lair 2F", level_entrances[1][0], lambda state: state.has(
+        "TTC Jiggy Puzzle", player))
+    connect_regions(world, player, "Grunty's Lair 2F", "Grunty's Lair 3F", lambda state: state.has(
+        "Flap Flip", player))
+    connect_regions(world, player, "Grunty's Lair 3F", level_entrances[2][0], lambda state: state.has(
         "CC Jiggy Puzzle", player) and state.has("Beak Buster", player) and (state.has("Feathery Flap", player) or
                                                                              state.has("Rat-A-Tat Rap", player) or
-                                                                             state.has("Talon Trot", player))
-    connect_regions(world, player, "Grunty's Lair 2F", "Grunty's Lair 4F"), lambda state: state.has(
-        "Talon Trot", player) and state.has("Note Door 2", player)
-    connect_regions(world, player, "Grunty's Lair 4F", level_entrances[3][0]), lambda state: state.has(
-        "BS Jiggy Puzzle", player)
-    connect_regions(world, player, "Grunty's Lair 4F", "Grunty's Lair 5F"), lambda state: state.has(
-        "Shock Spring Jump", player) and state.has("Note Door 3", player)
-    connect_regions(world, player, "Grunty's Lair 5F", level_entrances[4][0]), lambda state: state.has(
-        "FP Jiggy Puzzle", player)
-    connect_regions(world, player, "Grunty's Lair 5F", level_entrances[5][0]), lambda state: state.has(
+                                                                             state.has("Talon Trot", player)))
+    connect_regions(world, player, "Grunty's Lair 2F", "Grunty's Lair 4F", lambda state: state.has(
+        "Talon Trot", player) and state.has("Note Door 2", player))
+    connect_regions(world, player, "Grunty's Lair 4F", level_entrances[3][0], lambda state: state.has(
+        "BS Jiggy Puzzle", player))
+    connect_regions(world, player, "Grunty's Lair 4F", "Grunty's Lair 5F", lambda state: state.has(
+        "Shock Spring Jump", player) and state.has("Note Door 3", player))
+    connect_regions(world, player, "Grunty's Lair 5F", level_entrances[4][0], lambda state: state.has(
+        "FP Jiggy Puzzle", player))
+    connect_regions(world, player, "Grunty's Lair 5F", level_entrances[5][0], lambda state: state.has(
         "GV Jiggy Puzzle", player) and state.has("Stilt Stride", player) and (state.has("Beak Barge", player) or
                                                                               state.has("Rat-A-Tat Rap", player) or
-                                                                              state.has("Eggs", player))
-    connect_regions(world, player, "Grunty's Lair 5F", "Grunty's Lair 6F"), lambda state: state.has(
-        "Note Door 4", player)
-    connect_regions(world, player, "Grunty's Lair 6F", level_entrances[6][0]), lambda state: state.has(
-        "MMM Jiggy Puzzle", player)
-    connect_regions(world, player, "Grunty's Lair 5F", "Grunty's Lair 7F"), lambda state: state.has(
-        "Note Door 5", player)
-    connect_regions(world, player, "Grunty's Lair 7F", level_entrances[7][0]), lambda state: state.has(
-        "RBB Jiggy Puzzle", player) and state.has("Water Level Switch 1", player)
-    connect_regions(world, player, "Grunty's Lair 7F", "Grunty's Lair 8F"), lambda state: state.has(
+                                                                              state.has("Eggs", player)))
+    connect_regions(world, player, "Grunty's Lair 5F", "Grunty's Lair 6F", lambda state: state.has(
+        "Note Door 4", player))
+    connect_regions(world, player, "Grunty's Lair 6F", level_entrances[6][0], lambda state: state.has(
+        "MMM Jiggy Puzzle", player))
+    connect_regions(world, player, "Grunty's Lair 5F", "Grunty's Lair 7F", lambda state: state.has(
+        "Note Door 5", player))
+    connect_regions(world, player, "Grunty's Lair 7F", level_entrances[7][0], lambda state: state.has(
+        "RBB Jiggy Puzzle", player) and state.has("Water Level Switch 1", player))
+    connect_regions(world, player, "Grunty's Lair 7F", "Grunty's Lair 8F", lambda state: state.has(
         "Note Door 6", player) and state.has("Water Level Switch 1", player) and state.has(
         "Water Level Switch 2", player) and (state.has("Flap Flip", player) or (state.has("Rat-A-Tat Rap", player) and
                                                                                 state.has("Beak Buster", player)) or
                                              (state.has("Eggs", player) and
-                                              state.has("Beak Buster", player)))
-    connect_regions(world, player, "Grunty's Lair 8F", level_entrances[8][0]), lambda state: state.has(
-        "CCW Jiggy Puzzle", player) and state.has("Talon Trot", player)
-    connect_regions(world, player, "Grunty's Lair 8F", "Grunty's Lair - Furnace Fun"), lambda state: state.has(
+                                              state.has("Beak Buster", player))))
+    connect_regions(world, player, "Grunty's Lair 8F", level_entrances[8][0], lambda state: state.has(
+        "CCW Jiggy Puzzle", player) and state.has("Talon Trot", player))
+    connect_regions(world, player, "Grunty's Lair 8F", "Grunty's Lair - Furnace Fun", lambda state: state.has(
         "Note Door 7", player) and (state.has("Flap Flip", player) or state.has("Bee Transformation", player) or
-                                    (state.has("Talon Trot", player) and state.has("Flight", player)))
-    connect_regions(world, player, "Grunty's Lair - Furnace Fun", "Grunty's Lair - Top Floor"), lambda state: state.has(
-        "Note Door 8", player)
+                                    (state.has("Talon Trot", player) and state.has("Flight", player))))
+    connect_regions(world, player, "Grunty's Lair - Furnace Fun", "Grunty's Lair - Top Floor", lambda state: state.has(
+        "Note Door 8", player))
 
     set_location_rules(world, player)
