@@ -61,14 +61,14 @@ glf3_location_table:dict = {
 
 glf4_location_table:dict = {
     BK_Str_Enums.GLF4_FP_JIGGY_PUZZLE:
-        LocationData(None, [[BK_Str_Enums.STILT_STRIDE, "Jiggy Amount [FP]"],
-                            [BK_Str_Enums.TERMITE_TRANSFORMATION, "Jiggy Amount [FP]"],
-                            [BK_Str_Enums.CROCODILE_TRANSFORMATION, "Jiggy Amount [FP]"],
-                            [BK_Str_Enums.WALRUS_TRANSFORMATION, "Jiggy Amount [FP]"],
-                            [BK_Str_Enums.PUMPKIN_TRANSFORMATION, "Jiggy Amount [FP]"],
-                            [BK_Str_Enums.BEE_TRANSFORMATION, "Jiggy Amount [FP]"]]),
+        LocationData(None, [[BK_Str_Enums.STILT_STRIDE, BK_Str_Enums.JIGGY_AMOUNT_FP],
+                            [BK_Str_Enums.TERMITE_TRANSFORMATION, BK_Str_Enums.JIGGY_AMOUNT_FP],
+                            [BK_Str_Enums.CROCODILE_TRANSFORMATION, BK_Str_Enums.JIGGY_AMOUNT_FP],
+                            [BK_Str_Enums.WALRUS_TRANSFORMATION, BK_Str_Enums.JIGGY_AMOUNT_FP],
+                            [BK_Str_Enums.PUMPKIN_TRANSFORMATION, BK_Str_Enums.JIGGY_AMOUNT_FP],
+                            [BK_Str_Enums.BEE_TRANSFORMATION, BK_Str_Enums.JIGGY_AMOUNT_FP]]),
     BK_Str_Enums.GLF4_NOTE_DOOR_3:
-        LocationData(None, [[BK_Str_Enums.SHOCK_SPRING_JUMP, "Note Door Amount [3]"]]),
+        LocationData(None, [[BK_Str_Enums.SHOCK_SPRING_JUMP, BK_Str_Enums.NOTE_DOOR_AMOUNT_3]]),
     BK_Str_Enums.GLF4_BUBBLEGLOOP_SWAMP_WITCHS_HAT_JIGGY:
         LocationData(120004, [[BK_Str_Enums.JUMP, BK_Str_Enums.BEAK_BARGE, BK_Str_Enums.BEAK_BUSTER, BK_Str_Enums.SHOCK_SPRING_JUMP, "BS Witch Switch"],
                               [BK_Str_Enums.JUMP, BK_Str_Enums.RAT_A_TAP_RAP, BK_Str_Enums.BEAK_BUSTER, BK_Str_Enums.SHOCK_SPRING_JUMP, "BS Witch Switch"],
@@ -76,8 +76,8 @@ glf4_location_table:dict = {
 }
 
 glf5_location_table:dict = {
-    "GLF5 Note Door 4": LocationData(None, [["Note Door Amount [4]"]]),
-    "GLF5 Note Door 5": LocationData(None, [["Note Door Amount [5]"]]),
+    "GLF5 Note Door 4": LocationData(None, [[BK_Str_Enums.NOTE_DOOR_AMOUNT_4]]),
+    "GLF5 Note Door 5": LocationData(None, [[BK_Str_Enums.NOTE_DOOR_AMOUNT_5]]),
     "GLF5 Above Freezeezy Peak Jiggy": LocationData(120005,
                                                     [[BK_Str_Enums.FLAP_FLIP, BK_Str_Enums.EGGS, BK_Str_Enums.BEAK_BUSTER,
                                                       BK_Str_Enums.FLIGHT, BK_Str_Enums.TURBO_TALON_TROT, "FP Witch Switch"]]),
