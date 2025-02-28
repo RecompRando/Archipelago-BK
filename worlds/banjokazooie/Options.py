@@ -44,12 +44,12 @@ from Options import Toggle, DefaultOnToggle, Range, DeathLink
     # ~ display_name = "Remove Note Doors"
 
 
-class NumberOfJiggies(Range):
-    """How many Jiggies exist. There will always be enough to open every level, complete the secret puzzle, and win the
-    game. Level requirements will dynamically change based on the number of jiggies that exist"""
-    range_start = 0
-    range_end = 100
-    default = 100
+# ~ class NumberOfJiggies(Range):
+    # ~ """How many Jiggies exist. There will always be enough to open every level, complete the secret puzzle, and win the
+    # ~ game. Level requirements will dynamically change based on the number of jiggies that exist"""
+    # ~ range_start = 0
+    # ~ range_end = 100
+    # ~ default = 100
 
 
 # ~ class NumberOfMumboTokens(Range):
@@ -69,7 +69,7 @@ bk_options = {
     # ~ "correct_pads": CorrectPads,
     # ~ "skip_furnace_fun": SkipFurnaceFun,
     # ~ "remove_note_doors": RemoveNoteDoors,
-    "number_of_jiggies": NumberOfJiggies,
+    # ~ "number_of_jiggies": NumberOfJiggies,
     # ~ "number_of_mumbo_tokens": NumberOfMumboTokens,
     # ~ "death_link": DeathLink
 }
