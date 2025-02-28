@@ -985,7 +985,7 @@ secrets_location_table = {
 
 mm_notes_location_table = {
     # Obtainable with no requirements
-    "Mumbo's Mountain Note 1": LocationData(None),
+    "Mumbo's Mountain Note 1": LocationData(0x010218DD),
     "Mumbo's Mountain Note 2": LocationData(None),
     "Mumbo's Mountain Note 3": LocationData(None),
     "Mumbo's Mountain Note 4": LocationData(None),

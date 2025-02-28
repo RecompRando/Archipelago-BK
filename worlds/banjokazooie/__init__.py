@@ -27,12 +27,13 @@ class BanjoKazooieWorld(World):
     """
     web = BanjoKazooieWeb()
 
-    option_definitions = bk_options
+    options_dataclass = BKOptions
+    options = BKOptions
     game = "Banjo-Kazooie"
     topology_present = True
 
     data_version = 0
-    required_client_version = (0, 3, 8)
+    required_client_version = (0, 2, 6)
 
     item_name_to_id = {name: data.code for name, data in item_table.items()}
     location_name_to_id = {name: data.code for name, data in location_table.items()}
@@ -79,17 +80,17 @@ class BanjoKazooieWorld(World):
 
     def fill_slot_data(self) -> Dict[str, Any]:
         slot_data = {
-            "shuffle_moves": self.multiworld.shuffle_moves[self.player].value,
-            "shuffle_basic_moves": self.multiworld.shuffle_basic_moves[self.player].value,
-            "shuffle_cheato": self.multiworld.shuffle_cheato[self.player].value,
-            "shuffle_secrets": self.multiworld.shuffle_secrets[self.player].value,
-            "level_randomizer": self.level_entrances,
-            "correct_pads": self.multiworld.correct_pads[self.player].value,
-            "skip_furnace_fun": self.multiworld.skip_furnace_fun[self.player].value,
-            "remove_note_doors": self.multiworld.remove_note_doors[self.player].value,
-            "number_of_jiggies": self.multiworld.number_of_jiggies[self.player].value,
-            "number_of_mumbo_tokens": self.multiworld.number_of_mumbo_tokens[self.player].value,
-            "death_link": self.multiworld.death_link[self.player].value,
+            "shuffle_moves": self.options.shuffle_moves.value,
+            "shuffle_basic_moves": self.options.shuffle_basic_moves.value,
+            "shuffle_cheato": self.options.shuffle_cheato.value,
+            "shuffle_secrets": self.options.shuffle_secrets.value,
+            # ~ "level_randomizer": self.level_entrances,
+            "correct_pads": self.options.correct_pads.value,
+            "skip_furnace_fun": self.options.skip_furnace_fun.value,
+            "remove_note_doors": self.options.remove_note_doors.value,
+            "number_of_jiggies": self.options.number_of_jiggies.value,
+            "number_of_mumbo_tokens": self.options.number_of_mumbo_tokens.value,
+            "death_link": self.options.death_link.value,
         }
         return slot_data
 
@@ -280,6 +281,9 @@ class BanjoKazooieWorld(World):
 
     def initialize_notes(self) -> None:
         for note in mm_notes_location_table:
+            if "Note 1" in note:
+                self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note (Real)"))
+                continue
             self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
         for note in ttc_notes_location_table:
             self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))

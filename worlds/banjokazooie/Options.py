@@ -1,4 +1,8 @@
-from Options import Toggle, DefaultOnToggle, Range, DeathLink
+from dataclasses import dataclass
+
+from typing import Dict
+
+from Options import Toggle, DefaultOnToggle, Range, DeathLink, PerGameCommonOptions
 
 
 class ShuffleMoves(DefaultOnToggle):
@@ -59,17 +63,16 @@ class NumberOfMumboTokens(Range):
     range_end = 112
     default = 112
 
-
-bk_options = {
-    "shuffle_moves": ShuffleMoves,
-    "shuffle_basic_moves": ShuffleBasicMoves,
-    "shuffle_cheato": ShuffleCheato,
-    "shuffle_secrets": ShuffleSecrets,
-    "level_randomizer": LevelRandomizer,
-    "correct_pads": CorrectPads,
-    "skip_furnace_fun": SkipFurnaceFun,
-    "remove_note_doors": RemoveNoteDoors,
-    "number_of_jiggies": NumberOfJiggies,
-    "number_of_mumbo_tokens": NumberOfMumboTokens,
-    "death_link": DeathLink
-}
+@dataclass
+class BKOptions(PerGameCommonOptions):
+    shuffle_moves: ShuffleMoves
+    shuffle_basic_moves: ShuffleBasicMoves
+    shuffle_cheato: ShuffleCheato
+    shuffle_secrets: ShuffleSecrets
+    level_randomizer: LevelRandomizer
+    correct_pads: CorrectPads
+    skip_furnace_fun: SkipFurnaceFun
+    remove_note_doors: RemoveNoteDoors
+    number_of_jiggies: NumberOfJiggies
+    number_of_mumbo_tokens: NumberOfMumboTokens
+    death_link: DeathLink
