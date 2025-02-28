@@ -53,52 +53,53 @@ def set_rules(world: MultiWorld, player: int, level_entrances: list[list[str, in
     '''
     Connects each location of the world by their access requirements.
     '''
-    connect_regions(world, player, BK_Str_Enums.MENU, BK_Str_Enums.SPIRAL_MOUNTAIN)
-    connect_regions(world, player, BK_Str_Enums.SPIRAL_MOUNTAIN, BK_Str_Enums.GRUNTYS_LAIR_1F)
-    connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_1F, level_entrances[0][0], lambda state: state.has(
-        BK_Str_Enums.MM_JIGGY_PUZZLE, player))
-    connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_1F, BK_Str_Enums.GRUNTYS_LAIR_2F, lambda state: state.has(
-        BK_Str_Enums.TALON_TROT, player) and state.has(BK_Str_Enums.NOTE_DOOR_1, player))
-    connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_2F, level_entrances[1][0], lambda state: state.has(
-        BK_Str_Enums.TTC_JIGGY_PUZZLE, player))
-    connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_2F, BK_Str_Enums.GRUNTYS_LAIR_3F, lambda state: state.has(
-        BK_Str_Enums.FLAP_FLIP, player))
-    connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_3F, level_entrances[2][0], lambda state: state.has(
-        BK_Str_Enums.CC_JIGGY_PUZZLE, player) and state.has(BK_Str_Enums.BEAK_BUSTER, player) and (state.has(BK_Str_Enums.FEATHERY_FLAP, player) or
-                                                                                                   state.has(BK_Str_Enums.RAT_A_TAP_RAP, player) or
-                                                                                                   state.has(BK_Str_Enums.TALON_TROT, player)))
-    connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_2F, BK_Str_Enums.GRUNTYS_LAIR_4F, lambda state: state.has(
-        BK_Str_Enums.TALON_TROT, player) and state.has(BK_Str_Enums.NOTE_DOOR_2, player))
-    connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_4F, level_entrances[3][0], lambda state: state.has(
-        BK_Str_Enums.BS_JIGGY_PUZZLE, player))
-    connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_4F, BK_Str_Enums.GRUNTYS_LAIR_5F, lambda state: state.has(
-        BK_Str_Enums.SHOCK_SPRING_JUMP, player) and state.has(BK_Str_Enums.NOTE_DOOR_3, player))
-    connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_5F, level_entrances[4][0], lambda state: state.has(
-        BK_Str_Enums.FP_JIGGY_PUZZLE, player))
-    connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_5F, level_entrances[5][0], lambda state: state.has(
-        BK_Str_Enums.GV_JIGGY_PUZZLE, player) and state.has(BK_Str_Enums.STILT_STRIDE, player) and (state.has(BK_Str_Enums.BEAK_BARGE, player) or
-                                                                                                    state.has(BK_Str_Enums.RAT_A_TAP_RAP, player) or
-                                                                                                    state.has(BK_Str_Enums.EGGS, player)))
-    connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_5F, BK_Str_Enums.GRUNTYS_LAIR_6F, lambda state: state.has(
-        BK_Str_Enums.NOTE_DOOR_4, player))
-    connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_6F, level_entrances[6][0], lambda state: state.has(
-        BK_Str_Enums.MMM_JIGGY_PUZZLE, player))
-    connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_5F, BK_Str_Enums.GRUNTYS_LAIR_7F, lambda state: state.has(
-        BK_Str_Enums.NOTE_DOOR_5, player))
-    connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_7F, level_entrances[7][0], lambda state: state.has(
-        BK_Str_Enums.RBB_JIGGY_PUZZLE, player) and state.has(BK_Str_Enums.WATER_LEVEL_SWITCH_1, player))
-    connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_7F, BK_Str_Enums.GRUNTYS_LAIR_8F, lambda state: state.has(
-        BK_Str_Enums.NOTE_DOOR_6, player) and state.has(BK_Str_Enums.WATER_LEVEL_SWITCH_1, player) and state.has(
-        BK_Str_Enums.WATER_LEVEL_SWITCH_2, player) and (state.has(BK_Str_Enums.FLAP_FLIP, player) or (state.has(BK_Str_Enums.RAT_A_TAP_RAP, player) and
-                                                                                                      state.has(BK_Str_Enums.BEAK_BUSTER, player)) or
-                                                       (state.has(BK_Str_Enums.EGGS, player) and
-                                                        state.has(BK_Str_Enums.BEAK_BUSTER, player))))
-    connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_8F, level_entrances[8][0], lambda state: state.has(
-        BK_Str_Enums.CCW_JIGGY_PUZZLE, player) and state.has(BK_Str_Enums.TALON_TROT, player))
-    connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_8F, BK_Str_Enums.GRUNTYS_LAIR_FURNACE_FUN, lambda state: state.has(
-        BK_Str_Enums.NOTE_DOOR_7, player) and (state.has(BK_Str_Enums.FLAP_FLIP, player) or state.has(BK_Str_Enums.BEE_TRANSFORMATION, player) or
-                                              (state.has(BK_Str_Enums.TALON_TROT, player) and state.has(BK_Str_Enums.FLIGHT, player))))
-    connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_FURNACE_FUN, BK_Str_Enums.GRUNTYS_LAIR_TOP_FLOOR, lambda state: state.has(
-        BK_Str_Enums.NOTE_DOOR_8, player))
+    connect_regions(world, player, BK_Str_Enums.MENU, BK_Str_Enums.GRUNTYS_LAIR_1F)
+    # ~ connect_regions(world, player, BK_Str_Enums.MENU, BK_Str_Enums.SPIRAL_MOUNTAIN)
+    # ~ connect_regions(world, player, BK_Str_Enums.SPIRAL_MOUNTAIN, BK_Str_Enums.GRUNTYS_LAIR_1F)
+    # ~ connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_1F, level_entrances[0][0], lambda state: state.has(
+        # ~ BK_Str_Enums.MM_JIGGY_PUZZLE, player))
+    # ~ connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_1F, BK_Str_Enums.GRUNTYS_LAIR_2F, lambda state: state.has(
+        # ~ BK_Str_Enums.TALON_TROT, player) and state.has(BK_Str_Enums.NOTE_DOOR_1, player))
+    # ~ connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_2F, level_entrances[1][0], lambda state: state.has(
+        # ~ BK_Str_Enums.TTC_JIGGY_PUZZLE, player))
+    # ~ connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_2F, BK_Str_Enums.GRUNTYS_LAIR_3F, lambda state: state.has(
+        # ~ BK_Str_Enums.FLAP_FLIP, player))
+    # ~ connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_3F, level_entrances[2][0], lambda state: state.has(
+        # ~ BK_Str_Enums.CC_JIGGY_PUZZLE, player) and state.has(BK_Str_Enums.BEAK_BUSTER, player) and (state.has(BK_Str_Enums.FEATHERY_FLAP, player) or
+                                                                                                   # ~ state.has(BK_Str_Enums.RAT_A_TAP_RAP, player) or
+                                                                                                   # ~ state.has(BK_Str_Enums.TALON_TROT, player)))
+    # ~ connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_2F, BK_Str_Enums.GRUNTYS_LAIR_4F, lambda state: state.has(
+        # ~ BK_Str_Enums.TALON_TROT, player) and state.has(BK_Str_Enums.NOTE_DOOR_2, player))
+    # ~ connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_4F, level_entrances[3][0], lambda state: state.has(
+        # ~ BK_Str_Enums.BS_JIGGY_PUZZLE, player))
+    # ~ connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_4F, BK_Str_Enums.GRUNTYS_LAIR_5F, lambda state: state.has(
+        # ~ BK_Str_Enums.SHOCK_SPRING_JUMP, player) and state.has(BK_Str_Enums.NOTE_DOOR_3, player))
+    # ~ connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_5F, level_entrances[4][0], lambda state: state.has(
+        # ~ BK_Str_Enums.FP_JIGGY_PUZZLE, player))
+    # ~ connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_5F, level_entrances[5][0], lambda state: state.has(
+        # ~ BK_Str_Enums.GV_JIGGY_PUZZLE, player) and state.has(BK_Str_Enums.STILT_STRIDE, player) and (state.has(BK_Str_Enums.BEAK_BARGE, player) or
+                                                                                                    # ~ state.has(BK_Str_Enums.RAT_A_TAP_RAP, player) or
+                                                                                                    # ~ state.has(BK_Str_Enums.EGGS, player)))
+    # ~ connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_5F, BK_Str_Enums.GRUNTYS_LAIR_6F, lambda state: state.has(
+        # ~ BK_Str_Enums.NOTE_DOOR_4, player))
+    # ~ connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_6F, level_entrances[6][0], lambda state: state.has(
+        # ~ BK_Str_Enums.MMM_JIGGY_PUZZLE, player))
+    # ~ connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_5F, BK_Str_Enums.GRUNTYS_LAIR_7F, lambda state: state.has(
+        # ~ BK_Str_Enums.NOTE_DOOR_5, player))
+    # ~ connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_7F, level_entrances[7][0], lambda state: state.has(
+        # ~ BK_Str_Enums.RBB_JIGGY_PUZZLE, player) and state.has(BK_Str_Enums.WATER_LEVEL_SWITCH_1, player))
+    # ~ connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_7F, BK_Str_Enums.GRUNTYS_LAIR_8F, lambda state: state.has(
+        # ~ BK_Str_Enums.NOTE_DOOR_6, player) and state.has(BK_Str_Enums.WATER_LEVEL_SWITCH_1, player) and state.has(
+        # ~ BK_Str_Enums.WATER_LEVEL_SWITCH_2, player) and (state.has(BK_Str_Enums.FLAP_FLIP, player) or (state.has(BK_Str_Enums.RAT_A_TAP_RAP, player) and
+                                                                                                      # ~ state.has(BK_Str_Enums.BEAK_BUSTER, player)) or
+                                                       # ~ (state.has(BK_Str_Enums.EGGS, player) and
+                                                        # ~ state.has(BK_Str_Enums.BEAK_BUSTER, player))))
+    # ~ connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_8F, level_entrances[8][0], lambda state: state.has(
+        # ~ BK_Str_Enums.CCW_JIGGY_PUZZLE, player) and state.has(BK_Str_Enums.TALON_TROT, player))
+    # ~ connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_8F, BK_Str_Enums.GRUNTYS_LAIR_FURNACE_FUN, lambda state: state.has(
+        # ~ BK_Str_Enums.NOTE_DOOR_7, player) and (state.has(BK_Str_Enums.FLAP_FLIP, player) or state.has(BK_Str_Enums.BEE_TRANSFORMATION, player) or
+                                              # ~ (state.has(BK_Str_Enums.TALON_TROT, player) and state.has(BK_Str_Enums.FLIGHT, player))))
+    # ~ connect_regions(world, player, BK_Str_Enums.GRUNTYS_LAIR_FURNACE_FUN, BK_Str_Enums.GRUNTYS_LAIR_TOP_FLOOR, lambda state: state.has(
+        # ~ BK_Str_Enums.NOTE_DOOR_8, player))
 
     set_location_rules(world, player)
