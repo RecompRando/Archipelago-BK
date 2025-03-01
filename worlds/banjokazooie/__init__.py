@@ -281,10 +281,7 @@ class BanjoKazooieWorld(World):
 
     def initialize_notes(self) -> None:
         for note in mm_notes_location_table:
-            if "Note 1" in note:
-                self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note (Real)"))
-                continue
-            self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
+            self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note (Real)"))
         for note in ttc_notes_location_table:
             self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
         for note in cc_notes_location_table:
