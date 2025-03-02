@@ -46,31 +46,31 @@ def can_access_location(world, state: "CollectionState", player: int, location: 
                     fulfills_requirements = False
             elif requirement == "Note Door Amount [1]":
                 if not state.has("Note", player, 50):
-                    fulfills_requirements = False
+                    fulfills_requirements = True
             elif requirement == "Note Door Amount [2]":
                 if not state.has("Note", player, 180):
-                    fulfills_requirements = False
+                    fulfills_requirements = True
             elif requirement == "Note Door Amount [3]":
                 if not state.has("Note", player, 260):
-                    fulfills_requirements = False
+                    fulfills_requirements = True
             elif requirement == "Note Door Amount [4]":
                 if not state.has("Note", player, 350):
-                    fulfills_requirements = False
+                    fulfills_requirements = True
             elif requirement == "Note Door Amount [5]":
                 if not state.has("Note", player, 450):
-                    fulfills_requirements = False
+                    fulfills_requirements = True
             elif requirement == "Note Door Amount [6]":
                 if not state.has("Note", player, 640):
-                    fulfills_requirements = False
+                    fulfills_requirements = True
             elif requirement == "Note Door Amount [7]":
                 if not state.has("Note", player, 765):
-                    fulfills_requirements = False
+                    fulfills_requirements = True
             elif requirement == "Note Door Amount [8]":
                 if not state.has("Note", player, 810):
-                    fulfills_requirements = False
+                    fulfills_requirements = True
             elif requirement == "Note Door Amount [9]":
                 if not state.has("Note", player, 882):
-                    fulfills_requirements = False
+                    fulfills_requirements = True
             else:
                 if not state.has(requirement, player):
                     fulfills_requirements = False

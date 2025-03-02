@@ -280,24 +280,25 @@ class BanjoKazooieWorld(World):
                             self.create_item("Victory"))
 
     def initialize_notes(self) -> None:
+        mid = 100
         for note in mm_notes_location_table:
-            self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note (Real)"))
+            self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
         for note in ttc_notes_location_table:
             self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
         for note in cc_notes_location_table:
             self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
         for note in bs_notes_location_table:
-            self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
+            self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note (Event)"))
         for note in fp_notes_location_table:
-            self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
+            self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note (Event)"))
         for note in gv_notes_location_table:
-            self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
+            self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note (Event)"))
         for note in mmm_notes_location_table:
-            self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
+            self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note (Event)"))
         for note in rbb_notes_location_table:
-            self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
+            self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note (Event)"))
         for note in ccw_notes_location_table:
-            self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
+            self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note (Event)"))
 
     def initialize_options(self) -> None:
         if self.multiworld.shuffle_moves[self.player].value != 0:
