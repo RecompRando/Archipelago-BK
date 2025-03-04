@@ -54,7 +54,7 @@ class BanjoKazooieWorld(World):
         return BKItem(name, item_table.get(name).classification, item_table.get(name).code, self.player)
 
     def create_items(self) -> None:
-        jiggy_count = self.multiworld.number_of_jiggies[self.player].value
+        jiggy_count = self.options.number_of_jiggies.value
         self.multiworld.itempool += [self.create_item("Jiggy")
                                      for amount in range(0, jiggy_count)]
         self.multiworld.itempool += [self.create_item(self.get_filler_item_name())
@@ -62,16 +62,16 @@ class BanjoKazooieWorld(World):
 
         self.multiworld.itempool += [self.create_item("Empty Honeycomb Piece") for amount in range(0, 24)]
 
-        mumbo_token_count = self.multiworld.number_of_mumbo_tokens[self.player].value
+        mumbo_token_count = self.options.number_of_mumbo_tokens.value
+
         self.multiworld.itempool += [self.create_item("Mumbo Token") for amount in range(0, mumbo_token_count)]
         self.multiworld.itempool += [self.create_item(self.get_filler_item_name())
-                                     for amount in range(mumbo_token_count, 112)]
+                                     for amount in range(mumbo_token_count, 115)]
 
         self.multiworld.itempool += [self.create_item("Double Health")]
 
         self.initialize_events()
         self.initialize_options()
-        self.initialize_notes()
 
         self.multiworld.completion_condition[self.player] = lambda state: state.has("Victory", self.player)
 
@@ -279,28 +279,30 @@ class BanjoKazooieWorld(World):
                         self.multiworld.get_location(location, self.player).place_locked_item(
                             self.create_item("Victory"))
 
-    def initialize_notes(self) -> None:
-        for note in mm_notes_location_table:
-            self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
-        for note in ttc_notes_location_table:
-            self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
-        for note in cc_notes_location_table:
-            self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
-        for note in bs_notes_location_table:
-            self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
-        for note in fp_notes_location_table:
-            self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
-        for note in gv_notes_location_table:
-            self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
-        for note in mmm_notes_location_table:
-            self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
-        for note in rbb_notes_location_table:
-            self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
-        for note in ccw_notes_location_table:
-            self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
-
     def initialize_options(self) -> None:
-        if self.multiworld.shuffle_moves[self.player].value != 0:
+        if self.options.shuffle_notes.value:
+            for i in range(0, 900):
+                self.multiworld.itempool += [self.create_item("Note")]
+        else:
+            for note in mm_notes_location_table:
+                self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
+            for note in ttc_notes_location_table:
+                self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
+            for note in cc_notes_location_table:
+                self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
+            for note in bs_notes_location_table:
+                self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
+            for note in fp_notes_location_table:
+                self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
+            for note in gv_notes_location_table:
+                self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
+            for note in mmm_notes_location_table:
+                self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
+            for note in rbb_notes_location_table:
+                self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
+            for note in ccw_notes_location_table:
+                self.multiworld.get_location(note, self.player).place_locked_item(self.create_item("Note"))
+        if self.options.shuffle_moves.value != 0:
             self.multiworld.itempool += [self.create_item("Eggs"),
                                          self.create_item("Talon Trot"),
                                          self.create_item("Beak Buster"),
@@ -329,7 +331,7 @@ class BanjoKazooieWorld(World):
                 self.create_item("Beak Bomb"))
             self.multiworld.get_location("GV Turbo Talon Trot Molehill", self.player).place_locked_item(
                 self.create_item("Turbo Talon Trot"))
-        if self.multiworld.shuffle_basic_moves[self.player].value != 0:
+        if self.options.shuffle_basic_moves.value != 0:
             self.multiworld.itempool += [self.create_item("Jump"),
                                          self.create_item("Feathery Flap"),
                                          self.create_item("Flap Flip"),
@@ -358,7 +360,7 @@ class BanjoKazooieWorld(World):
                 self.create_item("Roll"))
             self.multiworld.get_location("SM Attack Molehill 3", self.player).place_locked_item(
                 self.create_item("Rat-A-Tat Rap"))
-        if self.multiworld.shuffle_cheato[self.player].value != 0:
+        if self.options.shuffle_cheato.value != 0:
             self.multiworld.itempool += [self.create_item("BLUEEGGS Cheato"),
                                          self.create_item("REDFEATHERS Cheato"),
                                          self.create_item("GOLDFEATHERS Cheato")]
@@ -369,7 +371,7 @@ class BanjoKazooieWorld(World):
                 self.create_item("REDFEATHERS Cheato"))
             self.multiworld.get_location("GOLDFEATHERS Cheato", self.player).place_locked_item(
                 self.create_item("GOLDFEATHERS Cheato"))
-        if self.multiworld.shuffle_secrets[self.player].value != 0:
+        if self.options.shuffle_secrets.value != 0:
             self.multiworld.itempool += [self.create_item("Ice Key"),
                                          self.create_item("Pink Egg"),
                                          self.create_item("Blue Egg"),

@@ -5,6 +5,11 @@ from typing import Dict
 from Options import Toggle, DefaultOnToggle, Range, DeathLink, PerGameCommonOptions
 
 
+class ShuffleNotes(Toggle):
+    """Shuffles notes into the item pool"""
+    display_name = "Shuffle Notes"
+
+
 class ShuffleMoves(DefaultOnToggle):
     """Shuffles moves into the item pool"""
     display_name = "Shuffle Moves"
@@ -60,11 +65,12 @@ class NumberOfMumboTokens(Range):
     """How many Mumbo Tokens exist. There will always be enough to afford every transformation. Transformation
     requirements will dynamically change based on the number of Mumbo Tokens that exist"""
     range_start = 0
-    range_end = 112
-    default = 112
+    range_end = 115
+    default = 115
 
 @dataclass
 class BKOptions(PerGameCommonOptions):
+    shuffle_notes: ShuffleNotes
     shuffle_moves: ShuffleMoves
     shuffle_basic_moves: ShuffleBasicMoves
     shuffle_cheato: ShuffleCheato
