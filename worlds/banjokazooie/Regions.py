@@ -108,15 +108,15 @@ def create_regions(world: MultiWorld, player: int):
     bs_region = create_region("Bubblegloop Swamp", player, world)
     initialize_locations(bs_region, bs_location_table, player)
     for location, data in empty_honeycomb_location_table.items():
-        if "BS" in location:
+        if "BGS" in location:
             bs_region.locations.append(BKLocation(player, location, data.code, bs_region))
     for location, data in mumbo_token_location_table.items():
-        if "BS" in location:
+        if "BGS" in location:
             bs_region.locations.append(BKLocation(player, location, data.code, bs_region))
     for location, data in bs_notes_location_table.items():
         bs_region.locations.append(BKLocation(player, location, data.code, bs_region))
     for location, data in molehill_location_table.items():
-        if "BS" in location:
+        if "BGS" in location:
             bs_region.locations.append(BKLocation(player, location, data.code, bs_region))
     world.regions.append(bs_region)
 

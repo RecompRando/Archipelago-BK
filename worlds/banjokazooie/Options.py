@@ -65,8 +65,8 @@ class NumberOfMumboTokens(Range):
     """How many Mumbo Tokens exist. There will always be enough to afford every transformation. Transformation
     requirements will dynamically change based on the number of Mumbo Tokens that exist"""
     range_start = 0
-    range_end = 115
-    default = 115
+    range_end = 116
+    default = 116
 
 @dataclass
 class BKOptions(PerGameCommonOptions):

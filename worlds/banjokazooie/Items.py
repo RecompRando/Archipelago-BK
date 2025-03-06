@@ -13,27 +13,27 @@ class BKItem(Item):
 
 
 basic_moves_table = {
-    "Jump": ItemData(130000, ItemClassification.progression),
-    "Feathery Flap": ItemData(130001, ItemClassification.progression),
-    "Flap Flip": ItemData(130002, ItemClassification.progression),
-    "Swim": ItemData(130003, ItemClassification.progression),
-    "Climb": ItemData(130004, ItemClassification.progression),
-    "Beak Barge": ItemData(130005, ItemClassification.progression),
-    "Claw Swipe": ItemData(130006, ItemClassification.progression),
-    "Roll": ItemData(130007, ItemClassification.progression),
-    "Rat-A-Tat Rap": ItemData(130008, ItemClassification.progression)
+    "Jump": ItemData(0x0400000A, ItemClassification.progression),
+    "Feathery Flap": ItemData(0x04000007, ItemClassification.progression),
+    "Flap Flip": ItemData(0x04000008, ItemClassification.progression),
+    "Swim": ItemData(0x0400000F, ItemClassification.progression),
+    "Climb": ItemData(0x04000005, ItemClassification.progression),
+    "Beak Barge": ItemData(0x04000000, ItemClassification.progression),
+    "Claw Swipe": ItemData(0x04000004, ItemClassification.progression),
+    "Roll": ItemData(0x0400000C, ItemClassification.progression),
+    "Rat-A-Tat Rap": ItemData(0x0400000B, ItemClassification.progression)
 }
 
 learned_moves_table = {
-    "Eggs": ItemData(130009, ItemClassification.progression),
-    "Talon Trot": ItemData(130010, ItemClassification.progression),
-    "Beak Buster": ItemData(130011, ItemClassification.progression),
-    "Flight": ItemData(130012, ItemClassification.progression),
-    "Shock Spring Jump": ItemData(130013, ItemClassification.progression),
-    "Wonderwing": ItemData(130014, ItemClassification.progression),
-    "Stilt Stride": ItemData(130015, ItemClassification.progression),
-    "Beak Bomb": ItemData(130016, ItemClassification.progression),
-    "Turbo Talon Trot": ItemData(130017, ItemClassification.progression)
+    "Eggs": ItemData(0x04000006, ItemClassification.progression),
+    "Talon Trot": ItemData(0x04000010, ItemClassification.progression),
+    "Beak Buster": ItemData(0x04000002, ItemClassification.progression),
+    "Flight": ItemData(0x04000009, ItemClassification.progression),
+    "Shock Spring Jump": ItemData(0x0400000D, ItemClassification.progression),
+    "Wonderwing": ItemData(0x04000012, ItemClassification.progression),
+    "Stilt Stride": ItemData(0x0400000E, ItemClassification.progression),
+    "Beak Bomb": ItemData(0x04000001, ItemClassification.progression),
+    "Turbo Talon Trot": ItemData(0x04000011, ItemClassification.progression)
 }
 
 progression_item_table = {
@@ -72,13 +72,14 @@ jiggy_puzzle_table = {
     "MM Jiggy Puzzle": ItemData(None, ItemClassification.progression),
     "TTC Jiggy Puzzle": ItemData(None, ItemClassification.progression),
     "CC Jiggy Puzzle": ItemData(None, ItemClassification.progression),
-    "BS Jiggy Puzzle": ItemData(None, ItemClassification.progression),
+    "BGS Jiggy Puzzle": ItemData(None, ItemClassification.progression),
     "FP Jiggy Puzzle": ItemData(None, ItemClassification.progression),
     "GV Jiggy Puzzle": ItemData(None, ItemClassification.progression),
     "MMM Jiggy Puzzle": ItemData(None, ItemClassification.progression),
     "RBB Jiggy Puzzle": ItemData(None, ItemClassification.progression),
     "CCW Jiggy Puzzle": ItemData(None, ItemClassification.progression),
-    "Final Boss Jiggy Puzzle": ItemData(None, ItemClassification.progression)
+    "Final Boss Jiggy Puzzle": ItemData(None, ItemClassification.progression),
+    "Secret Jiggy Puzzle": ItemData(None, ItemClassification.progression)
 }
 
 note_door_table = {
@@ -97,7 +98,7 @@ witch_switch_table = {
     "MM Witch Switch": ItemData(None, ItemClassification.progression_skip_balancing),
     "TTC Witch Switch": ItemData(None, ItemClassification.progression_skip_balancing),
     "CC Witch Switch": ItemData(None, ItemClassification.progression_skip_balancing),
-    "BS Witch Switch": ItemData(None, ItemClassification.progression_skip_balancing),
+    "BGS Witch Switch": ItemData(None, ItemClassification.progression_skip_balancing),
     "FP Witch Switch": ItemData(None, ItemClassification.progression_skip_balancing),
     "GV Witch Switch": ItemData(None, ItemClassification.progression_skip_balancing),
     "MMM Witch Switch": ItemData(None, ItemClassification.progression_skip_balancing),
