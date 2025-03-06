@@ -71,6 +71,8 @@ def can_access_location(world, state: "CollectionState", player: int, location: 
             elif requirement == "Note Door Amount [9]":
                 if not state.has("Note", player, 882):
                     fulfills_requirements = False
+            elif requirement in location_table.keys():
+                return can_access_location(world, state, player, requirement, locations)
             else:
                 if not state.has(requirement, player):
                     fulfills_requirements = False

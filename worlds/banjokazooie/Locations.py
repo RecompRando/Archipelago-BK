@@ -28,7 +28,7 @@ glf2_location_table = {
     "GLF2 CCW Jiggy Puzzle": LocationData(None, [["Swim", "CCW Jiggy Podium Switch"]]),
     "GLF2 Note Door 2": LocationData(None, [["Talon Trot", "Note Door Amount [2]"]]),
     "GLF2 Treasure Trove Cove Cannon Jiggy": LocationData(0x00000036, [["Flap Flip", "TTC Witch Switch"]]),
-    "GLF2 Clanker's Cavern Eye Switch Jiggy": LocationData(120003, [["Beak Buster", "CC Witch Switch"]]),
+    "GLF2 Clanker's Cavern Eye Switch Jiggy": LocationData(0x00000035, [["Beak Buster", "CC Witch Switch"]]),
 }
 
 glf3_location_table = {
@@ -46,24 +46,24 @@ glf4_location_table = {
                                                 ["Bee Transformation", "Jiggy Amount [FP]"]]),
     "GLF4 Note Door 3": LocationData(None, [["Shock Spring Jump", "Note Door Amount [3]"]]),
     "GLF4 Bubblegloop Swamp Witch's Hat Jiggy":
-        LocationData(120004, [["Jump", "Beak Barge", "Beak Buster", "Shock Spring Jump", "BS Witch Switch"],
-                              ["Jump", "Rat-A-Tat Rap", "Beak Buster", "Shock Spring Jump", "BS Witch Switch"],
-                              ["Jump", "Eggs", "Beak Buster", "Shock Spring Jump", "BS Witch Switch"]]),
+        LocationData(0x00000037, [["Jump", "Beak Barge", "Beak Buster", "Shock Spring Jump", "BS Witch Switch"],
+                                  ["Jump", "Rat-A-Tat Rap", "Beak Buster", "Shock Spring Jump", "BS Witch Switch"],
+                                  ["Jump", "Eggs", "Beak Buster", "Shock Spring Jump", "BS Witch Switch"]]),
 }
 
 glf5_location_table = {
     "GLF5 Note Door 4": LocationData(None, [["Note Door Amount [4]"]]),
     "GLF5 Note Door 5": LocationData(None, [["Note Door Amount [5]"]]),
-    "GLF5 Above Freezeezy Peak Jiggy": LocationData(120005,
+    "GLF5 Above Freezeezy Peak Jiggy": LocationData(0x00000038,
                                                     [["Flap Flip", "Eggs", "Beak Buster",
                                                       "Flight", "Turbo Talon Trot", "FP Witch Switch"]]),
     "GLF5 Gobi's Valley Sarcophagus Jiggy":
-        LocationData(120006, [["Jump", "Beak Barge", "Beak Buster", "Shock Spring Jump", "GV Witch Switch"],
-                              ["Jump", "Rat-A-Tat Rap", "Beak Buster", "Shock Spring Jump", "GV Witch Switch"],
-                              ["Jump", "Eggs", "Beak Buster", "Shock Spring Jump", "GV Witch Switch"]]),
-    "GLF5 Mad Monster Mansion Grunty's Eye Jiggy": LocationData(120007, [["Rat-A-Tat Rap", "MMM Witch Switch"],
-                                                                         ["Feathery Flap", "Eggs",
-                                                                          "MMM Witch Switch"]]),
+        LocationData(0x0000003A, [["Jump", "Beak Barge", "Beak Buster", "Shock Spring Jump", "GV Witch Switch"],
+                                  ["Jump", "Rat-A-Tat Rap", "Beak Buster", "Shock Spring Jump", "GV Witch Switch"],
+                                  ["Jump", "Eggs", "Beak Buster", "Shock Spring Jump", "GV Witch Switch"]]),
+    "GLF5 Mad Monster Mansion Grunty's Eye Jiggy": LocationData(0x00000039, [["Rat-A-Tat Rap", "MMM Witch Switch"],
+                                                                             ["Feathery Flap", "Eggs",
+                                                                              "MMM Witch Switch"]]),
 }
 
 glf6_location_table = {
@@ -100,8 +100,8 @@ glf7_location_table = {
         LocationData(None, [["Swim", "Flap Flip", "Feathery Flap", "Beak Buster", "Note Door Amount [6]"],
                             ["Swim", "Flap Flip", "Rat-A-Tat Rap", "Beak Buster", "Note Door Amount [6]"]]),
     "GLF7 Rusty Bucket Bay Area Jiggy":
-        LocationData(120008, [["Swim", "Feathery Flap", "Beak Buster", "RBB Witch Switch"],
-                              ["Swim", "Rat-A-Tat Rap", "Beak Buster", "RBB Witch Switch"]]),
+        LocationData(0x0000003B, [["Swim", "Feathery Flap", "Beak Buster", "RBB Witch Switch"],
+                                  ["Swim", "Rat-A-Tat Rap", "Beak Buster", "RBB Witch Switch"]]),
 }
 
 glf8_location_table = {
@@ -111,8 +111,8 @@ glf8_location_table = {
     "GLF8 Note Door 7": LocationData(None, [["Flap Flip", "Note Door Amount [7]"],
                                             ["Talon Trot", "Flight", "Note Door Amount [7]"],
                                             ["Bee Transformation", "Note Door Amount [7]"]]),
-    "GLF8 Click Clock Wood Bee Jiggy": LocationData(120009, [["Talon Trot", "Flight", "CCW Witch Switch"],
-                                                             ["Bee Transformation", "CCW Witch Switch"]]),
+    "GLF8 Click Clock Wood Bee Jiggy": LocationData(0x0000003C, [["Talon Trot", "Flight", "CCW Witch Switch"],
+                                                                 ["Bee Transformation", "CCW Witch Switch"]]),
 }
 
 glff_location_table = {
@@ -121,7 +121,8 @@ glff_location_table = {
 
 gltf_location_table = {
     "GLTF Final Boss Jiggy Puzzle": LocationData(None, [["Jiggy Amount [FB]"]]),
-    "GLTF Secret Puzzle": LocationData(120264, [["Note Door 9", "Jiggy Amount [SP]"]]),
+    "GLTF Secret Prize": LocationData(0x05000000, [["GLTF Secret Jiggy Puzzle"]]),
+    "GLTF Secret Jiggy Puzzle": LocationData(None, [["Note Door 9", "Jiggy Amount [SP]"]]),
     "GLTF Note Door 9": LocationData(None, [["Note Door 8", "Final Boss Jiggy Puzzle", "Note Door Amount [9]"]]),
     "Victory":
         LocationData(None, [["Rat-A-Tat Rap", "Eggs", "Flight", "Wonderwing", "Beak Bomb", "Final Boss Jiggy Puzzle"]])
