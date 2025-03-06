@@ -20,7 +20,7 @@ def can_access_location(world, state: "CollectionState", player: int, location: 
             elif requirement == "Jiggy Amount [CC]":
                 if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value * .08)):
                     fulfills_requirements = False
-            elif requirement == "Jiggy Amount [BS]":
+            elif requirement == "Jiggy Amount [BGS]":
                 if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value * .15)):
                     fulfills_requirements = False
             elif requirement == "Jiggy Amount [FP]":
@@ -110,7 +110,7 @@ def set_rules(world: MultiWorld, player: int, level_entrances: list[list[str, in
     connect_regions(world, player, "Grunty's Lair 2F", "Grunty's Lair 4F", lambda state: state.has(
         "Talon Trot", player) and state.has("Note Door 2", player))
     connect_regions(world, player, "Grunty's Lair 4F", level_entrances[3][0], lambda state: state.has(
-        "BS Jiggy Puzzle", player))
+        "BGS Jiggy Puzzle", player))
     connect_regions(world, player, "Grunty's Lair 4F", "Grunty's Lair 5F", lambda state: state.has(
         "Shock Spring Jump", player) and state.has("Note Door 3", player))
     connect_regions(world, player, "Grunty's Lair 5F", level_entrances[4][0], lambda state: state.has(

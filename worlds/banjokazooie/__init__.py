@@ -154,9 +154,9 @@ class BanjoKazooieWorld(World):
                     elif "CC" in location and "CCW" not in location:
                         self.multiworld.get_location(location, self.player).place_locked_item(
                             self.create_item("CC Jiggy Puzzle"))
-                    elif "BS" in location:
+                    elif "BGS" in location:
                         self.multiworld.get_location(location, self.player).place_locked_item(
-                            self.create_item("BS Jiggy Puzzle"))
+                            self.create_item("BGS Jiggy Puzzle"))
                     elif "FP" in location:
                         self.multiworld.get_location(location, self.player).place_locked_item(
                             self.create_item("FP Jiggy Puzzle"))
@@ -216,9 +216,9 @@ class BanjoKazooieWorld(World):
                     elif "CC" in location and "CCW" not in location:
                         self.multiworld.get_location(location, self.player).place_locked_item(
                             self.create_item("CC Witch Switch"))
-                    elif "BS" in location:
+                    elif "BGS" in location:
                         self.multiworld.get_location(location, self.player).place_locked_item(
-                            self.create_item("BS Witch Switch"))
+                            self.create_item("BGS Witch Switch"))
                     elif "FP" in location:
                         self.multiworld.get_location(location, self.player).place_locked_item(
                             self.create_item("FP Witch Switch"))
@@ -328,7 +328,7 @@ class BanjoKazooieWorld(World):
                 self.create_item("Shock Spring Jump"))
             self.multiworld.get_location("CC Wonderwing Molehill", self.player).place_locked_item(
                 self.create_item("Wonderwing"))
-            self.multiworld.get_location("BS Stilt Stride Molehill", self.player).place_locked_item(
+            self.multiworld.get_location("BGS Stilt Stride Molehill", self.player).place_locked_item(
                 self.create_item("Stilt Stride"))
             self.multiworld.get_location("FP Beak Bomb Molehill", self.player).place_locked_item(
                 self.create_item("Beak Bomb"))
