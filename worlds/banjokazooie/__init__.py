@@ -399,4 +399,4 @@ class BanjoKazooieWorld(World):
                 self.create_item("Yellow Egg"))
 
     def set_rules(self) -> None:
-        set_rules(self.multiworld, self.player, self.level_entrances)
+        set_rules(self.options, self.multiworld, self.player, self.level_entrances)

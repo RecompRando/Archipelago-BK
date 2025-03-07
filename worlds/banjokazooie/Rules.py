@@ -4,45 +4,45 @@ from .Locations import location_table
 from .Regions import connect_regions
 
 
-def can_access_location(world, state: "CollectionState", player: int, location: str, locations) -> bool:
+def can_access_location(options, state: "CollectionState", player: int, location: str, locations) -> bool:
     for requirements in locations[location].requirements:
         fulfills_requirements = True
         for requirement in requirements:
             if requirement.startswith("Mumbo Token Amount"):
-                if not state.has("Mumbo Token", player, int(world.number_of_mumbo_tokens[player].value * .66)):
+                if not state.has("Mumbo Token", player, int(options.number_of_mumbo_tokens.value * .66)):
                     fulfills_requirements = False
             elif requirement == "Jiggy Amount [MM]":
-                if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value * .01)):
+                if not state.has("Jiggy", player, int(options.number_of_jiggies.value * .01)):
                     fulfills_requirements = False
             elif requirement == "Jiggy Amount [TTC]":
-                if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value * .08)):
+                if not state.has("Jiggy", player, int(options.number_of_jiggies.value * .08)):
                     fulfills_requirements = False
             elif requirement == "Jiggy Amount [CC]":
-                if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value * .08)):
+                if not state.has("Jiggy", player, int(options.number_of_jiggies.value * .08)):
                     fulfills_requirements = False
             elif requirement == "Jiggy Amount [BGS]":
-                if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value * .15)):
+                if not state.has("Jiggy", player, int(options.number_of_jiggies.value * .15)):
                     fulfills_requirements = False
             elif requirement == "Jiggy Amount [FP]":
-                if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value * .32)):
+                if not state.has("Jiggy", player, int(options.number_of_jiggies.value * .32)):
                     fulfills_requirements = False
             elif requirement == "Jiggy Amount [GV]":
-                if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value * .32)):
+                if not state.has("Jiggy", player, int(options.number_of_jiggies.value * .32)):
                     fulfills_requirements = False
             elif requirement == "Jiggy Amount [MMM]":
-                if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value * .42)):
+                if not state.has("Jiggy", player, int(options.number_of_jiggies.value * .42)):
                     fulfills_requirements = False
             elif requirement == "Jiggy Amount [RBB]":
-                if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value * .54)):
+                if not state.has("Jiggy", player, int(options.number_of_jiggies.value * .54)):
                     fulfills_requirements = False
             elif requirement == "Jiggy Amount [CCW]":
-                if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value * .69)):
+                if not state.has("Jiggy", player, int(options.number_of_jiggies.value * .69)):
                     fulfills_requirements = False
             elif requirement == "Jiggy Amount [FB]":
-                if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value * .94)):
+                if not state.has("Jiggy", player, int(options.number_of_jiggies.value * .94)):
                     fulfills_requirements = False
             elif requirement == "Jiggy Amount [SP]":
-                if not state.has("Jiggy", player, int(world.number_of_jiggies[player].value * .98)):
+                if not state.has("Jiggy", player, int(options.number_of_jiggies.value * .98)):
                     fulfills_requirements = False
             elif requirement == "Note Door Amount [1]":
                 if not state.has("Note", player, 50):
@@ -72,7 +72,7 @@ def can_access_location(world, state: "CollectionState", player: int, location: 
                 if not state.has("Note", player, 882):
                     fulfills_requirements = False
             elif requirement in location_table.keys():
-                return can_access_location(world, state, player, requirement, locations)
+                return can_access_location(options, state, player, requirement, locations)
             else:
                 if not state.has(requirement, player):
                     fulfills_requirements = False
@@ -81,18 +81,18 @@ def can_access_location(world, state: "CollectionState", player: int, location: 
     return False
 
 
-def set_location_rule(world: MultiWorld, player: int, location: str, locations):
+def set_location_rule(options, world: MultiWorld, player: int, location: str, locations):
     set_rule(world.get_location(location, player),
-             lambda state: can_access_location(world, state, player, location, locations))
+             lambda state: can_access_location(options, state, player, location, locations))
 
 
-def set_location_rules(world: MultiWorld, player: int):
+def set_location_rules(options, world: MultiWorld, player: int):
     for location, data in location_table.items():
         if data.requirements:
-            set_location_rule(world, player, location, location_table)
+            set_location_rule(options, world, player, location, location_table)
 
 
-def set_rules(world: MultiWorld, player: int, level_entrances: list[list[str, int]]):
+def set_rules(options, world: MultiWorld, player: int, level_entrances: list[list[str, int]]):
     connect_regions(world, player, "Menu", "Spiral Mountain")
     connect_regions(world, player, "Spiral Mountain", "Grunty's Lair 1F")
     connect_regions(world, player, "Grunty's Lair 1F", level_entrances[0][0], lambda state: state.has(
@@ -141,4 +141,4 @@ def set_rules(world: MultiWorld, player: int, level_entrances: list[list[str, in
     connect_regions(world, player, "Grunty's Lair - Furnace Fun", "Grunty's Lair - Top Floor", lambda state: state.has(
         "Note Door 8", player))
 
-    set_location_rules(world, player)
+    set_location_rules(options, world, player)
