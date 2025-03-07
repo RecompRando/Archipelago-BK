@@ -95,9 +95,9 @@ class BanjoKazooieWorld(World):
         return slot_data
 
     def generate_early(self) -> None:
-        if self.multiworld.level_randomizer[self.player].value != 0:
+        if self.options.level_randomizer.value != 0:
             self.multiworld.random.shuffle(self.level_entrances)
-            if self.multiworld.shuffle_moves[self.player].value == 0:
+            if self.options.shuffle_moves.value == 0:
                 while True:
                     if self.level_entrances[0][0] == "Mumbo's Mountain":
                         if (self.level_entrances[3][0] == "Mumbo's Mountain" or
@@ -134,7 +134,7 @@ class BanjoKazooieWorld(World):
 
 #        if self.multiworld.number_of_jiggies[self.player].value == 100:
 #            self.multiworld.local_early_items[self.player]["Jiggy"] = 1
-        if self.multiworld.shuffle_moves[self.player].value != 0:
+        if self.options.shuffle_moves.value != 0:
             self.multiworld.local_early_items[self.player]["Talon Trot"] = 1
 
     def get_filler_item_name(self) -> str:
