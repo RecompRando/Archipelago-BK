@@ -24,44 +24,44 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_GRUNTILDAS_LAIR,
         address=0x00000034
     ),
-    "MM Conga Orange Throw Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_MM_CONGA_ORANGE_THROW: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
         address=0x00000008
     ),
-    "MM Chimpy Orange Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_MM_CHIMPY_ORANGE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
         address=0x00000009
     ),
-    "MM Conga Attack Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_MM_CONGA_ATTACK: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
         address=0x0000000A
     ),
-    "MM Stonehenge Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_MM_STONEHENGE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
         address=0x00000006
     ),
-    "MM Hillside Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_MM_HILLSIDE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
         address=0x00000007
     ),
-    "MM Mumbo's Hut Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_MM_MUMBOS_HUT: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
         address=0x00000003
     ),
-    "MM Totem Pole Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_MM_TOTEM_POLE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
         address=0x00000004
     ),
     "MM Hut Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_MUMBOS_MOUNTAIN,
         address=0x00000005
     ),
     "MM Top of Termite Mountain Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_MUMBOS_MOUNTAIN,
         address=0x00000002
     ),
     "MM Jinjo Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_MUMBOS_MOUNTAIN,
         address=0x00000001
     ),
     "GLF2 Treasure Trove Cove Cannon Jiggy": BKLocationData(
