@@ -52,15 +52,15 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x00000004
     ),
-    "MM Hut Jiggy": BKLocationData(
+    LOC_JIGGY_MM_HUT: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x00000005
     ),
-    "MM Top of Termite Mountain Jiggy": BKLocationData(
+    LOC_JIGGY_MM_MOUNTAINTOP: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x00000002
     ),
-    "MM Jinjo Jiggy": BKLocationData(
+    LOC_JIGGY_MM_JINJO: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x00000001
     ),

@@ -30,6 +30,12 @@ def get_location_rules(player, options):
                 state.has(ITEM_FLAP_FLIP, player) and
                 state.has(ITEM_EGGS, player)
             ),
+        LOC_JIGGY_MM_STONEHENGE:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_TERMITE_TRANSFORMATION, player)
+            ),
         LOC_JIGGY_MM_HILLSIDE:
             lambda state: True,
         LOC_JIGGY_MM_MUMBOS_HUT:
@@ -46,6 +52,25 @@ def get_location_rules(player, options):
                     state.has(ITEM_FLAP_FLIP, player) or
                     state.has(ITEM_TALON_TROT, player)
                 )
+            ),
+        LOC_JIGGY_MM_HUT:
+            lambda state:
+            (
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_JIGGY_MM_MOUNTAINTOP:
+            lambda state:
+            (
+                state.has(ITEM_TERMITE_TRANSFORMATION, player)
+            ),
+        LOC_JIGGY_MM_JINJO:
+            lambda state:
+            (
+                state.has(ITEM_MM_BLUE_JINJO, player) and
+                state.has(ITEM_MM_GREEN_JINJO, player) and
+                state.has(ITEM_MM_ORANGE_JINJO, player) and
+                state.has(ITEM_MM_PURPLE_JINJO, player) and
+                state.has(ITEM_MM_YELLOW_JINJO, player)
             ),
         LOC_DEFEAT_GRUNTILDA:
             lambda state: True,
