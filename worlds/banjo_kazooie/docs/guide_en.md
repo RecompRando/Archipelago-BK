@@ -19,4 +19,4 @@ If you need some ideas for what to do while waiting for button activation, give 
 - Do your school work.
 
 
-~~If you run into any issues with this game, definitely do not contact **thephar** on discord. *wink* *wink*~~
+~~If you run into any issues with this game, definitely do not contact **thephar** on discord. *wink* *wink*.~~
