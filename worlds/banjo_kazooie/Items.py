@@ -61,6 +61,10 @@ item_data_table: Dict[str, BKItemData] = {
         code=0x04000010,
         type=ItemClassification.progression
     ),
+    "Talon Trot Speed Upgrade": BKItemData(
+        code=0x04000011,
+        type=ItemClassification.progression
+    ),
     "Beak Buster": BKItemData(
         code=0x04000002,
         type=ItemClassification.progression

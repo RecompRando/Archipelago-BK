@@ -16,11 +16,11 @@ class BKLocationData(NamedTuple):
     locked_item: Optional[str] = None
 
 location_data_table: Dict[str, BKLocationData] = {
-    "GLF1 Entryway Jiggy": BKLocationData(
+    LOC_JIGGY_GL_ENTRYWAY: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x00000033
     ),
-    "GLF1 Atop Mumbo's Mountain Jiggy": BKLocationData(
+    LOC_JIGGY_GL_ATOP_MUMBOS_MOUNTAIN: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x00000034
     ),
@@ -64,91 +64,91 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x00000001
     ),
-    "GLF2 Treasure Trove Cove Cannon Jiggy": BKLocationData(
+    LOC_JIGGY_GL_TTC_CANNON: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x00000036
     ),
-    "GLF2 Clanker's Cavern Eye Switch Jiggy": BKLocationData(
+    LOC_JIGGY_GL_CC_EYE_SWITCHES: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x00000035
     ),
-    "TTC Nipper Jiggy": BKLocationData(
+    LOC_JIGGY_TTC_NIPPER: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x00000012
     ),
-    "TTC Blubber's Jiggy": BKLocationData(
+    LOC_JIGGY_TTC_BLUBBER: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x00000014
     ),
-    "TTC Sandcastle Jiggy": BKLocationData(
+    LOC_JIGGY_TTC_SANDCASTLE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x00000010
     ),
-    "TTC Shock Spring Jump Jiggy": BKLocationData(
+    LOC_JIGGY_TTC_SHOCK_SPRING: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0000000D
     ),
-    "TTC X Marks the Spot Jiggy": BKLocationData(
+    LOC_JIGGY_TTC_X_MARK: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x00000011
     ),
-    "TTC Underwater Pool Jiggy": BKLocationData(
+    LOC_JIGGY_TTC_POOL: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0000000F
     ),
-    "TTC Cliffside Jiggy": BKLocationData(
+    LOC_JIGGY_TTC_CLIFFSIDE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0000000E
     ),
-    "TTC Lockup Jiggy": BKLocationData(
+    LOC_JIGGY_TTC_LOCKUP: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x00000013
     ),
-    "TTC Lighthouse Jiggy": BKLocationData(
+    LOC_JIGGY_TTC_LIGHTHOUSE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0000000C
     ),
-    "TTC Jinjo Jiggy": BKLocationData(
+    LOC_JIGGY_TTC_JINJO: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0000000B
     ),
-    "CC Raising Clanker Jiggy": BKLocationData(
+    LOC_JIGGY_CC_CLANKER_RAISE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x00000017
     ),
-    "CC Above Clanker's Tail Jiggy": BKLocationData(
+    LOC_JIGGY_CC_CLANKER_TAIL: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x00000018
     ),
-    "CC Above Clanker's Bolt Jiggy": BKLocationData(
+    LOC_JIGGY_CC_CLANKER_BOLT: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x00000019
     ),
-    "CC Clanker's Second Gold Tooth Jiggy": BKLocationData(
+    LOC_JIGGY_CC_CLANKER_GOLD_TEETH: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0000001B
     ),
-    "CC Inside Clanker's Blowhole Jiggy": BKLocationData(
+    LOC_JIGGY_CC_CLANKER_BLOWHOLE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0000001D
     ),
-    "CC Wonderwing Jiggy": BKLocationData(
+    LOC_JIGGY_CC_WONDERWING: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0000001E
     ),
-    "CC Clanker's Rings Jiggy": BKLocationData(
+    LOC_JIGGY_CC_STOMACH_RINGS: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0000001C
     ),
-    "CC Snippet Jiggy": BKLocationData(
+    LOC_JIGGY_CC_SNIPPET: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x00000016
     ),
-    "CC Underwater Tunnel Jiggy": BKLocationData(
+    LOC_JIGGY_CC_UNDERWATER_TUNNEL: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0000001A
     ),
-    "CC Jinjo Jiggy": BKLocationData(
+    LOC_JIGGY_CC_JINJO: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x00000015
     ),
