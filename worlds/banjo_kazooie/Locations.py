@@ -24,6 +24,30 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_GRUNTILDAS_LAIR,
         address=0x00000034
     ),
+    LOC_JIGGY_GL_TTC_CANNON: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR,
+        address=0x00000036
+    ),
+    LOC_JIGGY_GL_EYE_SWITCHES: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR,
+        address=0x00000035
+    ),
+    LOC_JIGGY_GL_WITCHS_HAT: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR,
+        address=0x00000037
+    ),
+    LOC_JIGGY_GL_ABOVE_FP: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR,
+        address=0x00000038
+    ),
+    LOC_JIGGY_GL_SARCOPHAGUS: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR,
+        address=0x0000003A
+    ),
+    LOC_JIGGY_GL_GRUNTYS_EYE: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR,
+        address=0x00000039
+    ),
     LOC_JIGGY_MM_CONGA_ORANGE_THROW: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x00000008
@@ -64,188 +88,164 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x00000001
     ),
-    LOC_JIGGY_GL_TTC_CANNON: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
-        address=0x00000036
-    ),
-    LOC_JIGGY_GL_CC_EYE_SWITCHES: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
-        address=0x00000035
-    ),
     LOC_JIGGY_TTC_NIPPER: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_TREASURE_TROVE_COVE,
         address=0x00000012
     ),
     LOC_JIGGY_TTC_BLUBBER: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_TREASURE_TROVE_COVE,
         address=0x00000014
     ),
     LOC_JIGGY_TTC_SANDCASTLE: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_TREASURE_TROVE_COVE,
         address=0x00000010
     ),
     LOC_JIGGY_TTC_SHOCK_SPRING: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_TREASURE_TROVE_COVE,
         address=0x0000000D
     ),
     LOC_JIGGY_TTC_X_MARK: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_TREASURE_TROVE_COVE,
         address=0x00000011
     ),
     LOC_JIGGY_TTC_POOL: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_TREASURE_TROVE_COVE,
         address=0x0000000F
     ),
     LOC_JIGGY_TTC_CLIFFSIDE: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_TREASURE_TROVE_COVE,
         address=0x0000000E
     ),
     LOC_JIGGY_TTC_LOCKUP: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_TREASURE_TROVE_COVE,
         address=0x00000013
     ),
     LOC_JIGGY_TTC_LIGHTHOUSE: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_TREASURE_TROVE_COVE,
         address=0x0000000C
     ),
     LOC_JIGGY_TTC_JINJO: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_TREASURE_TROVE_COVE,
         address=0x0000000B
     ),
     LOC_JIGGY_CC_CLANKER_RAISE: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_CLANKERS_CAVERN,
         address=0x00000017
     ),
     LOC_JIGGY_CC_CLANKER_TAIL: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_CLANKERS_CAVERN,
         address=0x00000018
     ),
     LOC_JIGGY_CC_CLANKER_BOLT: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_CLANKERS_CAVERN,
         address=0x00000019
     ),
     LOC_JIGGY_CC_CLANKER_GOLD_TEETH: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_CLANKERS_CAVERN,
         address=0x0000001B
     ),
     LOC_JIGGY_CC_CLANKER_BLOWHOLE: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_CLANKERS_CAVERN,
         address=0x0000001D
     ),
     LOC_JIGGY_CC_WONDERWING: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_CLANKERS_CAVERN,
         address=0x0000001E
     ),
     LOC_JIGGY_CC_STOMACH_RINGS: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_CLANKERS_CAVERN,
         address=0x0000001C
     ),
     LOC_JIGGY_CC_SNIPPET: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_CLANKERS_CAVERN,
         address=0x00000016
     ),
     LOC_JIGGY_CC_UNDERWATER_TUNNEL: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_CLANKERS_CAVERN,
         address=0x0000001A
     ),
     LOC_JIGGY_CC_JINJO: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_CLANKERS_CAVERN,
         address=0x00000015
     ),
-    "GLF4 Bubblegloop Swamp Witch's Hat Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
-        address=0x00000037
-    ),
-    "BGS Egg Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_BGS_EGG: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
         address=0x00000021
     ),
-    "BGS Central Switch Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_BGS_CENTER_RACE: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
         address=0x00000020
     ),
-    "BGS Flibbet Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_BGS_FLIBBET: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
         address=0x00000024
     ),
-    "BGS Tanktup's Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_BGS_TANKTUP: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
         address=0x00000026
     ),
-    "BGS Tiptup's Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_BGS_TIPTUP: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
         address=0x00000027
     ),
-    "BGS Hut Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_BGS_HUT: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
         address=0x00000023
     ),
-    "BGS Platform Near Mumbo's Hut Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_BGS_MUMBOS_HUT_RACE: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
         address=0x00000025
     ),
-    "BGS Croctus Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_BGS_CROCTUS: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
         address=0x00000022
     ),
-    "BGS Mr. Vile Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_BGS_MR_VILE: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
         address=0x00000028
     ),
-    "BGS Jinjo Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_BGS_JINJO: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
         address=0x0000001F
     ),
-    "GLF5 Above Freezeezy Peak Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
-        address=0x00000038
-    ),
-    "GLF5 Gobi's Valley Sarcophagus Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
-        address=0x0000003A
-    ),
-    "GLF5 Mad Monster Mansion Grunty's Eye Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
-        address=0x00000039
-    ),
-    "FP Sir Slush Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_FP_SIR_SLUSH: BKLocationData(
+        region=RGN_FREEZEEZY_PEAK,
         address=0x00000031
     ),
-    "FP Snowman's Pipe Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_FP_SNOWMAN_PIPE: BKLocationData(
+        region=RGN_FREEZEEZY_PEAK,
         address=0x0000002B
     ),
-    "FP Boggy's Toboggan Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_FP_TOBOGGAN: BKLocationData(
+        region=RGN_FREEZEEZY_PEAK,
         address=0x0000002A
     ),
-    "FP Snowman's Buttons Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_FP_SNOWMAN_BUTTONS: BKLocationData(
+        region=RGN_FREEZEEZY_PEAK,
         address=0x0000002D
     ),
-    "FP Top of the Christmas Tree Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_FP_CHRISTMAS_TREE: BKLocationData(
+        region=RGN_FREEZEEZY_PEAK,
         address=0x0000002F
     ),
-    "FP Wozza's Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_FP_WOZZA: BKLocationData(
+        region=RGN_FREEZEEZY_PEAK,
         address=0x00000032
     ),
-    "FP Boggy's Presents Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_FP_PRESENTS: BKLocationData(
+        region=RGN_FREEZEEZY_PEAK,
         address=0x0000002E
     ),
-    "FP Boggy's First Race Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_FP_BOGGY_RACE_1: BKLocationData(
+        region=RGN_FREEZEEZY_PEAK,
         address=0x00000030
     ),
-    "FP Boggy's Second Race Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_FP_BOGGY_RACE_2: BKLocationData(
+        region=RGN_FREEZEEZY_PEAK,
         address=0x0000002C
     ),
-    "FP Jinjo Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_FP_JINJO: BKLocationData(
+        region=RGN_FREEZEEZY_PEAK,
         address=0x00000029
     ),
     "GV Jinxy's Jiggy": BKLocationData(
