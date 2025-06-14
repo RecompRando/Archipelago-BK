@@ -22,13 +22,27 @@ def get_location_rules(player, options):
             lambda state: True,
         LOC_JIGGY_GL_ATOP_MUMBOS_MOUNTAIN:
             lambda state:
-                state.has(ITEM_TERMITE_TRANSFORMATION, player),
+            (
+                state.has(ITEM_TERMITE_TRANSFORMATION, player)
+            ),
         LOC_JIGGY_GL_TTC_CANNON:
             lambda state:
-                state.has(ITEM_FLAP_FLIP, player),
+            (
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
         LOC_JIGGY_GL_EYE_SWITCHES:
             lambda state:
-                state.has(ITEM_BEAK_BUSTER, player),
+            (
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_JIGGY_GL_ABOVE_FP:
+            lambda state:
+            (
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_TURBO_TALON_TROT, player) and
+                state.has(ITEM_FLIGHT, player)
+            ),
         LOC_JIGGY_MM_CONGA_ORANGE_THROW:
             lambda state: True,
         LOC_JIGGY_MM_CHIMPY_ORANGE:
@@ -396,7 +410,6 @@ def get_location_rules(player, options):
         LOC_JIGGY_FP_BOGGY_RACE_2:
             lambda state:
             (
-                state.has(ITEM_WALRUS_TRANSFORMATION, player) and
                 state.has(ITEM_TURBO_TALON_TROT, player)
             ),
         LOC_JIGGY_FP_JINJO:
