@@ -160,6 +160,17 @@ LOC_JIGGY_FP_BOGGY_RACE_1 = "FP Boogy Race 1 Jiggy"
 LOC_JIGGY_FP_BOGGY_RACE_2 = "FP Boggy Race 2 Jiggy"
 LOC_JIGGY_FP_JINJO = "FP Jinjo Jiggy"
 
+LOC_JIGGY_GV_JINXY = "GV Jinxy's Jiggy"
+LOC_JIGGY_GV_GRABBA = "GV Grabba's Jiggy"
+LOC_JIGGY_GV_FLIP_PANELS = "GV Flip Panel Pyramid Jiggy"
+LOC_JIGGY_GV_WATER_PYRAMID = "GV Water Pyramid Jiggy"
+LOC_JIGGY_GV_ANCIENT_ONES = "GV Ancient Ones' Jiggy"
+LOC_JIGGY_GV_RUBEE = "GV Rubee's Jiggy"
+LOC_JIGGY_GV_SANDYBUTT = "GV Sandybutt's Jiggy"
+LOC_JIGGY_GV_GOBI = "GV Gobi's Jiggy"
+LOC_JIGGY_GV_TRUNKER = "GV Trunker's Jiggy"
+LOC_JIGGY_GV_JINJO = "GV Jinjo Jiggy"
+
 LOC_DEFEAT_GRUNTILDA = "Defeat Gruntilda"
 
 RGN_MENU = "Menu"

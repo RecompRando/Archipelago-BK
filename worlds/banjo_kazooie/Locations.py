@@ -248,43 +248,43 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_FREEZEEZY_PEAK,
         address=0x00000029
     ),
-    "GV Jinxy's Jiggy": BKLocationData(
+    LOC_JIGGY_GV_JINXY: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0000003F
     ),
-    "GV Grabba's Jiggy": BKLocationData(
+    LOC_JIGGY_GV_GRABBA: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0000003E
     ),
-    "GV Flip Puzzle Jiggy": BKLocationData(
+    LOC_JIGGY_GV_FLIP_PANELS: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x00000040
     ),
-    "GV Water Pyramid Jiggy": BKLocationData(
+    LOC_JIGGY_GV_WATER_PYRAMID: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x00000042
     ),
-    "GV Ancient Ones' Jiggy": BKLocationData(
+    LOC_JIGGY_GV_ANCIENT_ONES: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x00000046
     ),
-    "GV Rubee's Jiggy": BKLocationData(
+    LOC_JIGGY_GV_RUBEE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x00000043
     ),
-    "GV Sandybutt's Jiggy": BKLocationData(
+    LOC_JIGGY_GV_SANDYBUTT: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x00000041
     ),
-    "GV Gobi's Jiggy": BKLocationData(
+    LOC_JIGGY_GV_GOBI: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x00000044
     ),
-    "GV Trunker's Jiggy": BKLocationData(
+    LOC_JIGGY_GV_TRUNKER: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x00000045
     ),
-    "GV Jinjo Jiggy": BKLocationData(
+    LOC_JIGGY_GV_JINJO: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0000003D
     ),

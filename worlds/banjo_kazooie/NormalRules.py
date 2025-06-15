@@ -43,6 +43,15 @@ def get_location_rules(player, options):
                 state.has(ITEM_TURBO_TALON_TROT, player) and
                 state.has(ITEM_FLIGHT, player)
             ),
+        LOC_JIGGY_GL_SARCOPHAGUS:
+            lambda state:
+            (
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) or
+                (
+                    state.has(ITEM_FLAP_FLIP, player) and   #Requires somewhat specific timing
+                    state.has(ITEM_BEAK_BUSTER, player)
+                )
+            ),
         LOC_JIGGY_MM_CONGA_ORANGE_THROW:
             lambda state: True,
         LOC_JIGGY_MM_CHIMPY_ORANGE:
@@ -476,6 +485,143 @@ def get_location_rules(player, options):
                     state.has(ITEM_FP_ORANGE_JINJO, player) and
                     state.has(ITEM_FP_PURPLE_JINJO, player) and
                     state.has(ITEM_FP_YELLOW_JINJO, player)
+            ),
+        LOC_JIGGY_GV_JINXY:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or    #required to access most of the level
+                state.has(ITEM_TURBO_TALON_TROT, player)
+            ) and
+            (
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or   #required to get on top of Jinxy/jump across carpets
+                    (
+                        state.has(ITEM_JUMP, player) and    #some carpets have very strict jumps that need the height
+                        state.has(ITEM_RAT_A_TAT_RAP, player)
+                    )
+                ) and
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_EGGS, player)
+            ),
+        LOC_JIGGY_GV_GRABBA:
+            lambda state:
+            (
+                state.has(ITEM_TURBO_TALON_TROT, player)
+            ),
+        LOC_JIGGY_GV_FLIP_PANELS:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or    #required to access most of the level
+                state.has(ITEM_TURBO_TALON_TROT, player)
+            ) and
+            (
+            state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_JIGGY_GV_WATER_PYRAMID:
+            lambda state:
+            (
+                state.has(ITEM_TURBO_TALON_TROT, player) and
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_JIGGY_GV_ANCIENT_ONES:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or    #required to access most of the level
+                state.has(ITEM_TURBO_TALON_TROT, player)
+            ) and
+            (
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or   #required to get on top of Jinxy
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and    #fairly easy to get on top of him with these
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                ) and
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_JIGGY_GV_RUBEE:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or    #required to access most of the level
+                state.has(ITEM_TURBO_TALON_TROT, player)
+            ) and
+            (
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or   #required to get on top of Jinxy
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and    #fairly easy to get on top of him with these
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                ) and
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_FLIGHT, player) and
+                state.has(ITEM_BEAK_BOMB, player) and
+                state.has(ITEM_EGGS, player)
+            ),
+        LOC_JIGGY_GV_SANDYBUTT:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or    #required to access most of the level
+                state.has(ITEM_TURBO_TALON_TROT, player)
+            ) and
+            (
+            state.has(ITEM_EGGS, player)
+            ),
+        LOC_JIGGY_GV_GOBI:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or    #required to access most of the level
+                state.has(ITEM_TURBO_TALON_TROT, player)
+            ) and
+            (
+            state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_JIGGY_GV_TRUNKER:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or    #required to access most of the level
+                state.has(ITEM_TURBO_TALON_TROT, player) #Gobi's jiggy required first
+            ) and
+            (
+            state.has(ITEM_BEAK_BUSTER, player) and
+                (
+                    (
+                        state.has(ITEM_CLIMB, player) and
+                        (
+                            state.has(ITEM_RAT_A_TAT_RAP, player) or    #to get on top of Trunker, you can either climb
+                            state.has(ITEM_FEATHERY_FLAP, player) or    #up a nearby tree and jump across, or...
+                            (
+                                state.has(ITEM_JUMP, player) and
+                                state.has(ITEM_TALON_TROT, player)
+                            )
+                        )
+                    ) or
+                    (
+                        (
+                            state.has(ITEM_FEATHERY_FLAP, player) or  #...get to the flight pad and fly over
+                            state.has(ITEM_RAT_A_TAT_RAP, player) or
+                            (
+                                state.has(ITEM_JUMP, player) and
+                                state.has(ITEM_TALON_TROT, player)
+                            )
+                        ) and
+                        state.has(ITEM_FLAP_FLIP, player) and
+                        state.has(ITEM_FLIGHT, player)
+                    )
+
+                )
+            ),
+        LOC_JIGGY_GV_JINJO:
+            lambda state:
+            (
+                    state.has(ITEM_GV_BLUE_JINJO, player) and
+                    state.has(ITEM_GV_GREEN_JINJO, player) and
+                    state.has(ITEM_GV_ORANGE_JINJO, player) and
+                    state.has(ITEM_GV_PURPLE_JINJO, player) and
+                    state.has(ITEM_GV_YELLOW_JINJO, player)
             ),
         LOC_DEFEAT_GRUNTILDA:
             lambda state: True,
