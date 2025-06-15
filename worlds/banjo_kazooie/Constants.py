@@ -19,6 +19,9 @@ ITEM_TERMITE_TRANSFORMATION = "Termite Transformation"
 ITEM_FLIGHT = "Flight"
 ITEM_SHOCK_SPRING_JUMP = "Shock Spring Jump"
 
+ITEM_BLUBBER_GOLD_BEAK_BUSTER = "Blubber's Gold - Beak Buster Hold"
+ITEM_BLUBBER_GOLD_SWIM = "Blubber's Gold - Swim Hold"
+
 ITEM_WONDERWING = "Wonderwing"
 
 ITEM_STILT_STRIDE = "Stilt Stride"
