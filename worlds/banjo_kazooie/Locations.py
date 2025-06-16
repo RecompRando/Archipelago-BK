@@ -48,6 +48,14 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_GRUNTILDAS_LAIR,
         address=0x00000039
     ),
+    LOC_JIGGY_GL_WATER_SWITCH: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR,
+        address=0x0000003B
+    ),
+     LOC_JIGGY_GL_BEE_TREE: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR,
+        address=0x0000003C
+    ),
     LOC_JIGGY_MM_CONGA_ORANGE_THROW: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x00000008
@@ -249,175 +257,167 @@ location_data_table: Dict[str, BKLocationData] = {
         address=0x00000029
     ),
     LOC_JIGGY_GV_JINXY: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_GOBIS_VALLEY,
         address=0x0000003F
     ),
     LOC_JIGGY_GV_GRABBA: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_GOBIS_VALLEY,
         address=0x0000003E
     ),
     LOC_JIGGY_GV_FLIP_PANELS: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_GOBIS_VALLEY,
         address=0x00000040
     ),
     LOC_JIGGY_GV_WATER_PYRAMID: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_GOBIS_VALLEY,
         address=0x00000042
     ),
     LOC_JIGGY_GV_ANCIENT_ONES: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_GOBIS_VALLEY,
         address=0x00000046
     ),
     LOC_JIGGY_GV_RUBEE: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_GOBIS_VALLEY,
         address=0x00000043
     ),
     LOC_JIGGY_GV_SANDYBUTT: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_GOBIS_VALLEY,
         address=0x00000041
     ),
     LOC_JIGGY_GV_GOBI: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_GOBIS_VALLEY,
         address=0x00000044
     ),
     LOC_JIGGY_GV_TRUNKER: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_GOBIS_VALLEY,
         address=0x00000045
     ),
     LOC_JIGGY_GV_JINJO: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+        region=RGN_GOBIS_VALLEY,
         address=0x0000003D
     ),
-    "MMM Napper's Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_MMM_NAPPER: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
         address=0x0000005D
     ),
-    "MMM Cellar Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_MMM_CELLAR: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
         address=0x0000005E
     ),
-    "MMM Tumblar's Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_MMM_TUMBLAR: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
         address=0x00000062
     ),
-    "MMM Jiggy in the Well": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_MMM_WELL: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
         address=0x0000005C
     ),
-    "MMM Flowerpot Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_MMM_FLOWERPOT: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
         address=0x00000063
     ),
-    "MMM Top of the Clock Tower Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_MMM_CLOCK_TOWER: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
         address=0x0000005F
     ),
-    "MMM Motzand's Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_MMM_MOTZAND: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
         address=0x00000060
     ),
-    "MMM Jiggy in the Toilet": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_MMM_LOGGO: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
         address=0x00000064
     ),
-    "MMM Jiggy in the Storm Drain": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_MMM_STORM_DRAIN: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
         address=0x00000061
     ),
-    "MMM Jinjo Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_MMM_JINJO: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
         address=0x0000005B
     ),
-    "GLF7 Rusty Bucket Bay Area Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
-        address=0x0000003B
-    ),
-    "RBB Smokestack Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_RBB_SMOKESTACK: BKLocationData(
+        region=RGN_RUSTY_BUCKET_BAY,
         address=0x00000055
     ),
-    "RBB Whistle Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_RBB_WHISTLE: BKLocationData(
+        region=RGN_RUSTY_BUCKET_BAY,
         address=0x00000054
     ),
-    "RBB Warehouse Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_RBB_WAREHOUSE: BKLocationData(
+        region=RGN_RUSTY_BUCKET_BAY,
         address=0x00000052
     ),
-    "RBB Metal Cage Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_RBB_METAL_CAGE: BKLocationData(
+        region=RGN_RUSTY_BUCKET_BAY,
         address=0x00000059
     ),
-    "RBB Captain's Room Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_RBB_CAPTAINS_ROOM: BKLocationData(
+        region=RGN_RUSTY_BUCKET_BAY,
         address=0x00000058
     ),
-    "RBB Boss Boom Box's Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_RBB_BOSS_BOOM_BOX: BKLocationData(
+        region=RGN_RUSTY_BUCKET_BAY,
         address=0x00000056
     ),
-    "RBB Dolphin Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_RBB_SNORKEL: BKLocationData(
+        region=RGN_RUSTY_BUCKET_BAY,
         address=0x00000053
     ),
-    "RBB Engine Room Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_RBB_ENGINE_ROOM: BKLocationData(
+        region=RGN_RUSTY_BUCKET_BAY,
         address=0x0000005A
     ),
-    "RBB Propeller Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_RBB_PROPELLER: BKLocationData(
+        region=RGN_RUSTY_BUCKET_BAY,
         address=0x00000057
     ),
-    "RBB Jinjo Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_RBB_JINJO: BKLocationData(
+        region=RGN_RUSTY_BUCKET_BAY,
         address=0x00000051
     ),
-    "GLF8 Click Clock Wood Bee Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
-        address=0x0000003C
-    ),
-    "GLTF Secret Prize": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
-        address=0x05000000
-    ),
-    "CCW Treetop Room Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+#    "GLTF Secret Prize": BKLocationData(
+#        region=RGN_GRUNTILDAS_LAIR,
+#        address=0x05000000
+#    ),
+    LOC_JIGGY_CCW_TREETOP_ROOM: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
         address=0x00000050
     ),
-    "CCW Top of the Tree Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_CCW_TREETOP_SNAREBEAR: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
         address=0x0000004F
     ),
-    "CCW Summer Zubbas' Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_CCW_ZUBBA: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
         address=0x0000004C
     ),
-    "CCW Summer Shock Jump Leaves Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_CCW_LEAVES: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
         address=0x0000004E
     ),
-    "CCW Summer Construction Site Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_CCW_CABIN: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
         address=0x00000048
     ),
-    "CCW Fall Gnawty's Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_CCW_GNAWTY: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
         address=0x0000004B
     ),
-    "CCW Fall Plant Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_CCW_PLANT: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
         address=0x0000004D
     ),
-    "CCW Fall Nabnut's Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_CCW_NABNUTS: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
         address=0x0000004A
     ),
-    "CCW Winter Eyrie's Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_CCW_EYRIE: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
         address=0x00000049
     ),
-    "CCW Jinjo Jiggy": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
+    LOC_JIGGY_CCW_JINJO: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
         address=0x00000047
     ),
     "SM Jump Honeycomb Piece": BKLocationData(

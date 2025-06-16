@@ -113,6 +113,11 @@ item_data_table: Dict[str, BKItemData] = {
         type=ItemClassification.useful,
         num_exist=24
     ),
+    "Acorn": BKItemData(
+        code=0x0001FBE5,
+        type=ItemClassification.useful,
+        num_exist=24
+    ),
     "BLUEEGGS Cheato": BKItemData(
         code=0x0001FBE6,
         type=ItemClassification.useful,

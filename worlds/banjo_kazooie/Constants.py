@@ -19,8 +19,7 @@ ITEM_TERMITE_TRANSFORMATION = "Termite Transformation"
 ITEM_FLIGHT = "Flight"
 ITEM_SHOCK_SPRING_JUMP = "Shock Spring Jump"
 
-ITEM_BLUBBER_GOLD_BEAK_BUSTER = "Blubber's Gold - Beak Buster Hold"
-ITEM_BLUBBER_GOLD_SWIM = "Blubber's Gold - Swim Hold"
+ITEM_BLUBBER_GOLD = "Blubber's Gold"
 
 ITEM_WONDERWING = "Wonderwing"
 
@@ -32,9 +31,16 @@ ITEM_WALRUS_TRANSFORMATION = "Walrus Transformation"
 
 ITEM_TURBO_TALON_TROT = "Turbo Talon Trot"
 
+ITEM_PUMPKIN_TRANSFORMATION = "Pumpkin Transformation"
+
+ITEM_BEE_TRANSFORMATION = "Bee Transformation"
+
 ITEM_RED_PRESENT = "Red Present"
 ITEM_BLUE_PRESENT = "Blue Present"
 ITEM_GREEN_PRESENT = "Green Present"
+
+ITEM_CATERPILLAR = "Caterpillar"
+ITEM_ACORN = "Acorn"
 
 ITEM_MM_BLUE_JINJO = "Mumbo's Mountain Blue Jinjo"
 ITEM_MM_GREEN_JINJO = "Mumbo's Mountain Green Jinjo"
@@ -104,6 +110,8 @@ LOC_JIGGY_GL_WITCHS_HAT = "GL Witch's Hat Jiggy"
 LOC_JIGGY_GL_ABOVE_FP = "GL Above Freezeezy Peak Jiggy"
 LOC_JIGGY_GL_SARCOPHAGUS = "GL Sarcophagus Jiggy"
 LOC_JIGGY_GL_GRUNTYS_EYE = "GL Grunty's Eye Jiggy"
+LOC_JIGGY_GL_WATER_SWITCH = "GL Water Switch Jiggy"
+LOC_JIGGY_GL_BEE_TREE = "GL Bee Tree Jiggy"
 
 LOC_JIGGY_MM_CONGA_ORANGE_THROW = "MM Conga Orange Throw Jiggy"
 LOC_JIGGY_MM_CHIMPY_ORANGE = "MM Chimpy Orange Jiggy"
@@ -170,6 +178,39 @@ LOC_JIGGY_GV_SANDYBUTT = "GV Sandybutt's Jiggy"
 LOC_JIGGY_GV_GOBI = "GV Gobi's Jiggy"
 LOC_JIGGY_GV_TRUNKER = "GV Trunker's Jiggy"
 LOC_JIGGY_GV_JINJO = "GV Jinjo Jiggy"
+
+LOC_JIGGY_MMM_NAPPER = "MMM Napper's Jiggy"
+LOC_JIGGY_MMM_CELLAR = "MMM Cellar Jiggy"
+LOC_JIGGY_MMM_TUMBLAR = "MMM Tumblar's Jiggy"
+LOC_JIGGY_MMM_WELL = "MMM Well Jiggy"
+LOC_JIGGY_MMM_FLOWERPOT = "MMM Flowerpot Jiggy"
+LOC_JIGGY_MMM_CLOCK_TOWER = "MMM Clock Tower Jiggy"
+LOC_JIGGY_MMM_MOTZAND = "MMM Motzand's Jiggy"
+LOC_JIGGY_MMM_LOGGO = "MMM Loggo's Jiggy"
+LOC_JIGGY_MMM_STORM_DRAIN = "MMM Storm Drain Jiggy"
+LOC_JIGGY_MMM_JINJO = "GV Jinjo Jiggy"
+
+LOC_JIGGY_RBB_SMOKESTACK = "RBB Smokestack Jiggy"
+LOC_JIGGY_RBB_WHISTLE = "RBB Whistle Jiggy"
+LOC_JIGGY_RBB_WAREHOUSE = "RBB Warehouse Jiggy"
+LOC_JIGGY_RBB_METAL_CAGE = "RBB Metal Cage Jiggy"
+LOC_JIGGY_RBB_CAPTAINS_ROOM = "RBB Captain's Room Jiggy"
+LOC_JIGGY_RBB_BOSS_BOOM_BOX = "RBB Boss Boom Box's Jiggy"
+LOC_JIGGY_RBB_SNORKEL = "RBB Snorkel's Jiggy"
+LOC_JIGGY_RBB_ENGINE_ROOM = "RBB Engine Room Jiggy"
+LOC_JIGGY_RBB_PROPELLER = "RBB Propeller Jiggy"
+LOC_JIGGY_RBB_JINJO = "RBB Jinjo Jiggy"
+
+LOC_JIGGY_CCW_TREETOP_ROOM = "CCW Treetop Room Jiggy"
+LOC_JIGGY_CCW_TREETOP_SNAREBEAR = "CCW Treetop Snarebear Jiggy"
+LOC_JIGGY_CCW_ZUBBA = "CCW Zubbas' Jiggy"
+LOC_JIGGY_CCW_LEAVES = "CCW Summer Leaves Jiggy"
+LOC_JIGGY_CCW_CABIN = "CCW Cabin Jiggy"
+LOC_JIGGY_CCW_GNAWTY = "CCW Gnawty's Jiggy"
+LOC_JIGGY_CCW_PLANT = "CCW Plant Jiggy"
+LOC_JIGGY_CCW_NABNUTS = "CCW Nabnuts' Jiggy"
+LOC_JIGGY_CCW_EYRIE = "CCW Eyrie's Jiggy"
+LOC_JIGGY_CCW_JINJO = "CCW Jinjo Jiggy"
 
 LOC_DEFEAT_GRUNTILDA = "Defeat Gruntilda"
 
