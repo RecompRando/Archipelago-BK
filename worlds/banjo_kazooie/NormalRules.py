@@ -50,15 +50,15 @@ def get_location_rules(player, options):
         LOC_JIGGY_GL_GRUNTYS_EYE:
             lambda state:
             (
-                state.has(ITEM_RAT_A_TAT_RAP, player) or
-                state.has(ITEM_FEATHERY_FLAP, player) or
+                state.has(ITEM_JUMP, player) and
+                state.has(ITEM_FEATHERY_FLAP, player) and
                 (
-                    state.has(ITEM_JUMP, player) and
-                    state.has(ITEM_TALON_TROT, player)
-                ) and
-                (
-                    state.has(ITEM_BEAK_BARGE, player) or       #Needs testing
-                    state.has(ITEM_EGGS, player)                #Wonderwing probably works?
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_EGGS, player) or
+                    state.has(ITEM_WONDERWING, player) or
+                    (
+                        
+                    )
                 )
             ),
         LOC_JIGGY_GL_WATER_SWITCH:
@@ -71,8 +71,8 @@ def get_location_rules(player, options):
             (
                 state.has(ITEM_BEE_TRANSFORMATION, player) and
                 (
-                        state.has(ITEM_TALON_TROT, player) or  # required to access Mumbo's Skull
-                        state.has(ITEM_STILT_STRIDE, player)
+                    state.has(ITEM_TALON_TROT, player) or  # required to access Mumbo's Skull
+                    state.has(ITEM_STILT_STRIDE, player)
                 )
             ),
         LOC_JIGGY_MM_CONGA_ORANGE_THROW:
@@ -432,11 +432,11 @@ def get_location_rules(player, options):
         LOC_JIGGY_BGS_JINJO:
             lambda state:
             (
-                    state.has(ITEM_BGS_BLUE_JINJO, player) and
-                    state.has(ITEM_BGS_GREEN_JINJO, player) and
-                    state.has(ITEM_BGS_ORANGE_JINJO, player) and
-                    state.has(ITEM_BGS_PURPLE_JINJO, player) and
-                    state.has(ITEM_BGS_YELLOW_JINJO, player)
+                state.has(ITEM_BGS_BLUE_JINJO, player) and
+                state.has(ITEM_BGS_GREEN_JINJO, player) and
+                state.has(ITEM_BGS_ORANGE_JINJO, player) and
+                state.has(ITEM_BGS_PURPLE_JINJO, player) and
+                state.has(ITEM_BGS_YELLOW_JINJO, player)
             ),
         LOC_JIGGY_FP_SIR_SLUSH:
             lambda state:
@@ -517,11 +517,11 @@ def get_location_rules(player, options):
         LOC_JIGGY_FP_JINJO:
             lambda state:
             (
-                    state.has(ITEM_FP_BLUE_JINJO, player) and
-                    state.has(ITEM_FP_GREEN_JINJO, player) and
-                    state.has(ITEM_FP_ORANGE_JINJO, player) and
-                    state.has(ITEM_FP_PURPLE_JINJO, player) and
-                    state.has(ITEM_FP_YELLOW_JINJO, player)
+                state.has(ITEM_FP_BLUE_JINJO, player) and
+                state.has(ITEM_FP_GREEN_JINJO, player) and
+                state.has(ITEM_FP_ORANGE_JINJO, player) and
+                state.has(ITEM_FP_PURPLE_JINJO, player) and
+                state.has(ITEM_FP_YELLOW_JINJO, player)
             ),
         LOC_JIGGY_GV_JINXY:
             lambda state:
@@ -555,7 +555,7 @@ def get_location_rules(player, options):
                 state.has(ITEM_TURBO_TALON_TROT, player)
             ) and
             (
-            state.has(ITEM_BEAK_BUSTER, player)
+                state.has(ITEM_BEAK_BUSTER, player)
             ),
         LOC_JIGGY_GV_WATER_PYRAMID:
             lambda state:
@@ -626,7 +626,7 @@ def get_location_rules(player, options):
                 state.has(ITEM_TURBO_TALON_TROT, player) #Gobi's jiggy required first
             ) and
             (
-            state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_BEAK_BUSTER, player) and
                 (
                     (
                         state.has(ITEM_CLIMB, player) and
@@ -651,62 +651,61 @@ def get_location_rules(player, options):
                         state.has(ITEM_FLAP_FLIP, player) and
                         state.has(ITEM_FLIGHT, player)
                     )
-
                 )
             ),
         LOC_JIGGY_GV_JINJO:
             lambda state:
             (
-                    state.has(ITEM_GV_BLUE_JINJO, player) and
-                    state.has(ITEM_GV_GREEN_JINJO, player) and
-                    state.has(ITEM_GV_ORANGE_JINJO, player) and
-                    state.has(ITEM_GV_PURPLE_JINJO, player) and
-                    state.has(ITEM_GV_YELLOW_JINJO, player)
+                state.has(ITEM_GV_BLUE_JINJO, player) and
+                state.has(ITEM_GV_GREEN_JINJO, player) and
+                state.has(ITEM_GV_ORANGE_JINJO, player) and
+                state.has(ITEM_GV_PURPLE_JINJO, player) and
+                state.has(ITEM_GV_YELLOW_JINJO, player)
             ),
         LOC_JIGGY_MMM_NAPPER:
             lambda state:
             (
-                    state.has(ITEM_CLIMB, player) and
-                    state.has(ITEM_SHOCK_SPRING_JUMP, player) and
-                    (
-                        state.has(ITEM_JUMP, player) or         #required to hop along the chairs
-                        state.has(ITEM_FEATHERY_FLAP, player) or
-                        state.has(ITEM_FLAP_FLIP, player) or    #yes, it's possible, and not really that difficult
-                        state.has(ITEM_RAT_A_TAT_RAP, player)
-                    )
+                state.has(ITEM_CLIMB, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                (
+                    state.has(ITEM_JUMP, player) or         #required to hop along the chairs
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_FLAP_FLIP, player) or    #yes, it's possible, and not really that difficult
+                    state.has(ITEM_RAT_A_TAT_RAP, player)
+                )
             ),
         LOC_JIGGY_MMM_CELLAR:
             lambda state:
             (
-                    state.has(ITEM_RAT_A_TAT_RAP, player) or
-                    state.has(ITEM_BEAK_BARGE, player) or       #Wonderwing also works
-                    state.has(ITEM_EGGS, player)
+                state.has(ITEM_RAT_A_TAT_RAP, player) or
+                state.has(ITEM_BEAK_BARGE, player) or       #Wonderwing also works
+                state.has(ITEM_EGGS, player)
             ),
         LOC_JIGGY_MMM_TUMBLAR:
             lambda state:
             (
-                    state.has(ITEM_RAT_A_TAT_RAP, player) or
-                    state.has(ITEM_BEAK_BARGE, player) or       #Wonderwing also works
-                    state.has(ITEM_EGGS, player)
+                state.has(ITEM_RAT_A_TAT_RAP, player) or
+                state.has(ITEM_BEAK_BARGE, player) or       #Wonderwing also works
+                state.has(ITEM_EGGS, player)
             ),
         LOC_JIGGY_MMM_WELL:
             lambda state:
             (
-                    state.has(ITEM_SWIM, player) or
+                state.has(ITEM_SWIM, player) or
+                (
+                    state.has(ITEM_PUMPKIN_TRANSFORMATION, player) and
+                    state.has(ITEM_FLAP_FLIP, player) and   #required to get to Mumbo's Skull
                     (
-                        state.has(ITEM_PUMPKIN_TRANSFORMATION, player) and
-                        state.has(ITEM_FLAP_FLIP, player) and   #required to get to Mumbo's Skull
-                        (
-                            state.has(ITEM_RAT_A_TAT_RAP, player) or    #required to open church gate
-                            state.has(ITEM_BEAK_BARGE, player) or       #Wonderwing also works
-                            state.has(ITEM_EGGS, player)
-                        )
+                        state.has(ITEM_RAT_A_TAT_RAP, player) or    #required to open church gate
+                        state.has(ITEM_BEAK_BARGE, player) or       #Wonderwing also works
+                        state.has(ITEM_EGGS, player)
                     )
+                )
             ),
         LOC_JIGGY_MMM_FLOWERPOT:
             lambda state:
             (
-                    state.has(ITEM_EGGS, player)
+                state.has(ITEM_EGGS, player)
             ),
         LOC_JIGGY_MMM_CLOCK_TOWER:
             lambda state:
@@ -736,46 +735,46 @@ def get_location_rules(player, options):
         LOC_JIGGY_MMM_LOGGO:
             lambda state:
             (
-                    state.has(ITEM_CLIMB, player) and
+                state.has(ITEM_CLIMB, player) and
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or        #required to break window
+                    state.has(ITEM_EGGS, player)                    #Wonderwing also works
+                )
+                (
+                    state.has(ITEM_PUMPKIN_TRANSFORMATION, player) and
+                    state.has(ITEM_FLAP_FLIP, player) and           #required to get to Mumbo's Skull
                     (
-                        state.has(ITEM_RAT_A_TAT_RAP, player) or        #required to break window
-                        state.has(ITEM_EGGS, player)                    #Wonderwing also works
+                        state.has(ITEM_RAT_A_TAT_RAP, player) or    #required to open church gate
+                        state.has(ITEM_BEAK_BARGE, player) or       #Wonderwing also works
+                        state.has(ITEM_EGGS, player)
                     )
-                    (
-                        state.has(ITEM_PUMPKIN_TRANSFORMATION, player) and
-                        state.has(ITEM_FLAP_FLIP, player) and           #required to get to Mumbo's Skull
-                        (
-                            state.has(ITEM_RAT_A_TAT_RAP, player) or    #required to open church gate
-                            state.has(ITEM_BEAK_BARGE, player) or       #Wonderwing also works
-                            state.has(ITEM_EGGS, player)
-                        )
-                    )
+                )
             ),
         LOC_JIGGY_MMM_STORM_DRAIN:
             lambda state:
             (
                 state.has(ITEM_PUMPKIN_TRANSFORMATION, player) and
                 state.has(ITEM_FLAP_FLIP, player) and           #required to get to Mumbo's Skull
-                    (
-                        state.has(ITEM_RAT_A_TAT_RAP, player) or    #required to open church gate
-                        state.has(ITEM_BEAK_BARGE, player) or       #Wonderwing also works
-                        state.has(ITEM_EGGS, player)
-                    )
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or    #required to open church gate
+                    state.has(ITEM_BEAK_BARGE, player) or       #Wonderwing also works
+                    state.has(ITEM_EGGS, player)
+                )
 
             ),
         LOC_JIGGY_MMM_JINJO:
             lambda state:
             (
-                    state.has(ITEM_MMM_BLUE_JINJO, player) and
-                    state.has(ITEM_MMM_GREEN_JINJO, player) and
-                    state.has(ITEM_MMM_ORANGE_JINJO, player) and
-                    state.has(ITEM_MMM_PURPLE_JINJO, player) and
-                    state.has(ITEM_MMM_YELLOW_JINJO, player)
+                state.has(ITEM_MMM_BLUE_JINJO, player) and
+                state.has(ITEM_MMM_GREEN_JINJO, player) and
+                state.has(ITEM_MMM_ORANGE_JINJO, player) and
+                state.has(ITEM_MMM_PURPLE_JINJO, player) and
+                state.has(ITEM_MMM_YELLOW_JINJO, player)
             ),
         LOC_JIGGY_RBB_SMOKESTACK:
             lambda state:
             (
-                    state.has(ITEM_CLIMB, player)
+                state.has(ITEM_CLIMB, player)
             ),
         LOC_JIGGY_RBB_WHISTLE:
             lambda state:
@@ -854,8 +853,8 @@ def get_location_rules(player, options):
         LOC_JIGGY_RBB_SNORKEL:
             lambda state:
             (
-                    state.has(ITEM_SWIM, player) and
-                    state.has(ITEM_BEAK_BUSTER, player)
+                state.has(ITEM_SWIM, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
             ),
         LOC_JIGGY_RBB_ENGINE_ROOM:
             lambda state:
@@ -873,47 +872,48 @@ def get_location_rules(player, options):
         LOC_JIGGY_RBB_JINJO:
             lambda state:
             (
-                    state.has(ITEM_RBB_BLUE_JINJO, player) and
-                    state.has(ITEM_RBB_GREEN_JINJO, player) and
-                    state.has(ITEM_RBB_ORANGE_JINJO, player) and
-                    state.has(ITEM_RBB_PURPLE_JINJO, player) and
-                    state.has(ITEM_RBB_YELLOW_JINJO, player)
+                state.has(ITEM_RBB_BLUE_JINJO, player) and
+                state.has(ITEM_RBB_GREEN_JINJO, player) and
+                state.has(ITEM_RBB_ORANGE_JINJO, player) and
+                state.has(ITEM_RBB_PURPLE_JINJO, player) and
+                state.has(ITEM_RBB_YELLOW_JINJO, player)
             ),
         LOC_JIGGY_CCW_TREETOP_ROOM:
             lambda state:
             (
-                    state.has(ITEM_TALON_TROT, player) and
-                    (
-                        state.has(ITEM_JUMP, player) or
-                        state.has(ITEM_FEATHERY_FLAP, player) or
-                        state.has(ITEM_RAT_A_TAT_RAP, player)
-                    ) and
-                    state.has(ITEM_SHOCK_SPRING_JUMP, player) and
-                    state.has(ITEM_FLAP_FLIP, player) and
-                    (
-                        state.has(ITEM_RAT_A_TAT_RAP, player) or        #required to break the wooden door at the top
-                        state.has(ITEM_BEAK_BARGE, player) or           #Wonderwing works too
-                        state.has(ITEM_EGGS, player)
-                    )
+                state.has(ITEM_TALON_TROT, player) and
+                (
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player)
+                ) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                state.has(ITEM_FLAP_FLIP, player) and
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or        #required to break the wooden door at the top
+                    state.has(ITEM_BEAK_BARGE, player) or           #Wonderwing works too
+                    state.has(ITEM_EGGS, player)
+                )
             ),
         LOC_JIGGY_CCW_TREETOP_SNAREBEAR:
             lambda state:
             (
-                    state.has(ITEM_BEE_TRANSFORMATION, player) and
-                    (
-                        state.has(ITEM_TALON_TROT, player) or       #required to access Mumbo's Skull
-                        state.has(ITEM_STILT_STRIDE, player)
-                    )
+                state.has(ITEM_BEE_TRANSFORMATION, player) and
+                (
+                    state.has(ITEM_TALON_TROT, player) or       #required to access Mumbo's Skull
+                    state.has(ITEM_STILT_STRIDE, player)
+                )
             ),
         LOC_JIGGY_CCW_ZUBBA:
             lambda state:
             (
-                    state.has(ITEM_TALON_TROT, player) and
-                    state.has(ITEM_BEAK_BUSTER, player)         #yes, you can beat the Zubbas with just Beak Buster
+                state.has(ITEM_TALON_TROT, player) and
+                state.has(ITEM_BEAK_BUSTER, player)         #yes, you can beat the Zubbas with just Beak Buster
             ),
         LOC_JIGGY_CCW_LEAVES:
             lambda state:
             (
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) and   #either route requires this
                 (
                     state.has(ITEM_FEATHERY_FLAP, player) or
                     state.has(ITEM_RAT_A_TAT_RAP, player) or
@@ -925,18 +925,17 @@ def get_location_rules(player, options):
                 (
                     state.has(ITEM_FLAP_FLIP, player) or        #you can either jump up the leaves from the bottom...
                     state.has(ITEM_TALON_TROT, player)          #...or climb up and fall onto the platform
-                ) and
-                    state.has(ITEM_SHOCK_SPRING_JUMP, player)   #either route requires this
+                )
             ),
         LOC_JIGGY_CCW_CABIN:
             lambda state:
             (
-                    state.has(ITEM_TALON_TROT, player) and
-                    (
-                        state.has(ITEM_JUMP, player) or
-                        state.has(ITEM_FEATHERY_FLAP, player) or
-                        state.has(ITEM_RAT_A_TAT_RAP, player)
-                    )
+                state.has(ITEM_TALON_TROT, player) and
+                (
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player)
+                )
             ),
         LOC_JIGGY_CCW_GNAWTY:
             lambda state:
@@ -951,36 +950,36 @@ def get_location_rules(player, options):
         LOC_JIGGY_CCW_PLANT:
             lambda state:
             (
-                    state.has(ITEM_EGGS, player) and
-                    state.has(ITEM_BEAK_BUSTER, player) and         #needs all Gobi events prior done
-                    state.has(ITEM_TALON_TROT, player)
+                state.has(ITEM_EGGS, player) and
+                state.has(ITEM_BEAK_BUSTER, player) and         #needs all Gobi events prior done
+                state.has(ITEM_TALON_TROT, player)
             ),
         LOC_JIGGY_CCW_NABNUTS:
             lambda state:
             (
-                    state.has(ITEM_ACORN, player, 6)
+                state.has(ITEM_ACORN, player, 6)
             ),
         LOC_JIGGY_CCW_EYRIE:
             lambda state:
             (
-                    state.has(ITEM_TALON_TROT, player) and
-                    (
-                        state.has(ITEM_JUMP, player) or
-                        state.has(ITEM_FEATHERY_FLAP, player) or
-                        state.has(ITEM_RAT_A_TAT_RAP, player)
-                    ) and
-                    state.has(ITEM_SHOCK_SPRING_JUMP, player) and
-                    state.has(ITEM_BEAK_BUSTER, player) and
-                    state.has(ITEM_CATERPILLAR, player, 15)
+                state.has(ITEM_TALON_TROT, player) and
+                (
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player)
+                ) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_CATERPILLAR, player, 15)
             ),
         LOC_JIGGY_CCW_JINJO:
             lambda state:
             (
-                    state.has(ITEM_CCW_BLUE_JINJO, player) and
-                    state.has(ITEM_CCW_GREEN_JINJO, player) and
-                    state.has(ITEM_CCW_ORANGE_JINJO, player) and
-                    state.has(ITEM_CCW_PURPLE_JINJO, player) and
-                    state.has(ITEM_CCW_YELLOW_JINJO, player)
+                state.has(ITEM_CCW_BLUE_JINJO, player) and
+                state.has(ITEM_CCW_GREEN_JINJO, player) and
+                state.has(ITEM_CCW_ORANGE_JINJO, player) and
+                state.has(ITEM_CCW_PURPLE_JINJO, player) and
+                state.has(ITEM_CCW_YELLOW_JINJO, player)
             ),
         LOC_DEFEAT_GRUNTILDA:
             lambda state: True,
