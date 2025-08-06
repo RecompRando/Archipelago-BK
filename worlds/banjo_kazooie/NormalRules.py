@@ -50,14 +50,28 @@ def get_location_rules(player, options):
         LOC_JIGGY_GL_GRUNTYS_EYE:
             lambda state:
             (
-                state.has(ITEM_JUMP, player) and
-                state.has(ITEM_FEATHERY_FLAP, player) and
+                (
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_FEATHERY_FLAP, player)
+                    ) or
+                    (
+                        state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                        state.has(ITEM_BEAK_BUSTER, player) and
+                        state.has(ITEM_TURBO_TALON_TROT, player) and
+                        state.has(ITEM_FLIGHT, player)
+                    )
+                ) and
                 (
                     state.has(ITEM_RAT_A_TAT_RAP, player) or
                     state.has(ITEM_EGGS, player) or
                     state.has(ITEM_WONDERWING, player) or
                     (
-                        
+                        state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                        state.has(ITEM_BEAK_BUSTER, player) and
+                        state.has(ITEM_TURBO_TALON_TROT, player) and
+                        state.has(ITEM_FLIGHT, player) and
+                        state.has(ITEM_BEAK_BOMB, player)
                     )
                 )
             ),
@@ -119,9 +133,7 @@ def get_location_rules(player, options):
                 state.has(ITEM_BEAK_BUSTER, player) and
                 (
                     state.has(ITEM_JUMP, player) or
-                    state.has(ITEM_FLAP_FLIP, player) or    #required to get on top of the huts
-                    state.has(ITEM_RAT_A_TAT_RAP, player) or
-                    state.has(ITEM_FEATHERY_FLAP, player)
+                    state.has(ITEM_FLAP_FLIP, player)    #required to get on top of the huts
                 )
             ),
         LOC_JIGGY_MM_MOUNTAINTOP:
@@ -361,13 +373,14 @@ def get_location_rules(player, options):
                     state.has(ITEM_TALON_TROT, player) or    #can fall from bridge without taking damage
                     state.has(ITEM_STILT_STRIDE, player)
                 ) and
-                state.has(ITEM_CLAW_SWIPE, player) or
-                state.has(ITEM_ROLL, player) or
-                state.has(ITEM_RAT_A_TAT_RAP, player) or
-                state.has(ITEM_BEAK_BARGE, player) or
-                state.has(ITEM_BEAK_BUSTER, player) or
-                state.has(ITEM_EGGS, player) or
-                state.has(ITEM_WONDERWING, player)
+                (
+                    state.has(ITEM_ROLL, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BARGE, player) or
+                    state.has(ITEM_BEAK_BUSTER, player) or
+                    state.has(ITEM_EGGS, player) or
+                    state.has(ITEM_WONDERWING, player)
+                )
             ),
         LOC_JIGGY_BGS_TANKTUP:
             lambda state:
