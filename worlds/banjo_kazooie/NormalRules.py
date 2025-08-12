@@ -13,6 +13,58 @@ def get_region_rules(player, options):
 
 def get_location_rules(player, options):
     return {
+        LOC_EMPTY_HONEYCOMB_SM_LOG: (
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player) or
+                (
+                    state.has(ITEM_JUMP, player) and
+                    (
+                        state.has(ITEM_RAT_A_TAT_RAP, player) or
+                        state.has(ITEM_FEATHERY_FLAP, player)
+                    )
+                )
+            )
+        ),
+        LOC_EMPTY_HONEYCOMB_SM_WATERFALL: (
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) and
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_FEATHERY_FLAP, player)
+                )
+            )
+        ),
+        LOC_EMPTY_HONEYCOMB_SM_TREE: (
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) and
+                (
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_FLAP_FLIP, player) or
+                    state.has(ITEM_BEAK_BUSTER, player)
+                )
+            )
+        ),
+        LOC_EMPTY_HONEYCOMB_SM_UNDERWATER: (
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player)
+            )
+        ),
+        LOC_EMPTY_HONEYCOMB_SM_ROCK: (
+            lambda state:
+            (
+                state.has(ITEM_BEAK_BARGE, player)
+            )
+        ),
+        LOC_EMPTY_HONEYCOMB_SM_COLLIWOBBLE: (
+            lambda state:
+            (
+                state.has(ITEM_RAT_A_TAT_RAP, player)
+            )
+        ),
         LOC_JIGGY_GL_ENTRYWAY:
             lambda state: True,
         LOC_JIGGY_GL_ATOP_MUMBOS_MOUNTAIN:
@@ -73,6 +125,24 @@ def get_location_rules(player, options):
                 (
                         state.has(ITEM_TALON_TROT, player) or  # required to access Mumbo's Skull
                         state.has(ITEM_STILT_STRIDE, player)
+                )
+            ),
+        LOC_MUMBO_TOKEN_GL_RED_CAULDRON:
+            lambda state: True,
+        LOC_MUMBO_TOKEN_GL_DRAIN_PIPE:
+            lambda state: True,
+        LOC_MUMBO_TOKEN_GL_CCW_PODIUM:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_MUMBO_TOKEN_GL_ABOVE_CC:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player) and
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_FEATHERY_FLAP, player)
                 )
             ),
         LOC_JIGGY_MM_CONGA_ORANGE_THROW:
@@ -137,6 +207,45 @@ def get_location_rules(player, options):
                 state.has(ITEM_MM_ORANGE_JINJO, player) and
                 state.has(ITEM_MM_PURPLE_JINJO, player) and
                 state.has(ITEM_MM_YELLOW_JINJO, player)
+            ),
+        LOC_EMPTY_HONEYCOMB_MM_HILLSIDE:
+            lambda state: True,
+        LOC_EMPTY_HONEYCOMB_MM_TOTEM:
+            lambda state:
+            (
+                state.has(ITEM_EGGS, player) and
+                (
+                    state.has(ITEM_FLAP_FLIP, player) or
+                    (
+                        state.has(ITEM_BEAK_BUSTER, player) and
+                        (
+                            state.has(ITEM_JUMP, player) or
+                            state.has(ITEM_RAT_A_TAT_RAP, player) or # required to get on the platform
+                            state.has(ITEM_FEATHERY_FLAP, player)
+                        )
+                    )
+                 )
+            ),
+        LOC_MUMBO_TOKEN_MM_ENTRANCE:
+            lambda state: True,
+        LOC_MUMBO_TOKEN_MM_CHIMPY:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_MUMBO_TOKEN_MM_STONEHENGE:
+            lambda state: True,
+        LOC_MUMBO_TOKEN_MM_MUMBOS_HUT:
+            lambda state: True,
+        LOC_MUMBO_TOKEN_MM_TERMITE_MOUND:
+            lambda state:
+            (
+                state.has(ITEM_TERMITE_TRANSFORMATION, player) or
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_RAT_A_TAT_RAP, player) or
+                state.has(ITEM_FEATHERY_FLAP, player) or
+                state.has(ITEM_FLAP_FLIP, player) or
+                state.has(ITEM_TALON_TROT, player)
             ),
         LOC_JIGGY_TTC_NIPPER:
             lambda state:
@@ -224,6 +333,52 @@ def get_location_rules(player, options):
                 state.has(ITEM_TTC_ORANGE_JINJO, player) and
                 state.has(ITEM_TTC_PURPLE_JINJO, player) and
                 state.has(ITEM_TTC_YELLOW_JINJO, player)
+            ),
+        LOC_EMPTY_HONEYCOMB_TTC_UNDERWATER:
+            lambda state:
+            (
+             state.has(ITEM_SWIM, player)
+            ),
+        LOC_EMPTY_HONEYCOMB_TTC_CRATE:
+            lambda state: True,
+        LOC_MUMBO_TOKEN_TTC_NIPPER:
+            lambda state: True,
+        LOC_MUMBO_TOKEN_TTC_MAST:
+            lambda state:
+            (
+             state.has(ITEM_CLIMB, player) or
+             state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_MUMBO_TOKEN_TTC_HOLD:
+            lambda state:
+            (
+             state.has(ITEM_BEAK_BUSTER, player) and
+             state.has(ITEM_SWIM, player)
+            ),
+        LOC_MUMBO_TOKEN_TTC_SHOCK_SPRING: (
+            lambda state:
+            (
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) or
+                state.has(ITEM_FLIGHT, player)
+            )
+        ),
+        LOC_MUMBO_TOKEN_TTC_X_MARK:
+            lambda state: True,
+        LOC_MUMBO_TOKEN_TTC_LOCKUP_LEFT:
+            lambda state: True,
+        LOC_MUMBO_TOKEN_TTC_LOCKUP_RIGHT:
+            lambda state: True,
+        LOC_MUMBO_TOKEN_TTC_POOL:
+            lambda state:
+            (
+             state.has(ITEM_SWIM, player)
+            ),
+        LOC_MUMBO_TOKEN_TTC_CRATE:
+            lambda state: True,
+        LOC_MUMBO_TOKEN_TTC_LIGHTHOUSE:
+            lambda state:
+            (
+             state.has(ITEM_FLIGHT, player)
             ),
         LOC_JIGGY_CC_CLANKER_RAISE:
             lambda state:
@@ -336,6 +491,63 @@ def get_location_rules(player, options):
                 state.has(ITEM_CC_ORANGE_JINJO, player) and
                 state.has(ITEM_CC_PURPLE_JINJO, player) and
                 state.has(ITEM_CC_YELLOW_JINJO, player)
+            ),
+        LOC_EMPTY_HONEYCOMB_CC_PIPE:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_EMPTY_HONEYCOMB_CC_GRATE:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_FEATHERY_FLAP, player)
+                ) and
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_MUMBO_TOKEN_CC_ENTRANCE:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) and
+                (
+                    state.has(ITEM_FLAP_FLIP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        (
+                            state.has(ITEM_RAT_A_TAT_RAP, player) or
+                            state.has(ITEM_FEATHERY_FLAP, player)
+                        )
+                    )
+                )
+            ),
+        LOC_MUMBO_TOKEN_CC_CLANKER_TAIL:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_MUMBO_TOKEN_CC_CLANKER_GOLD_TEETH:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player) and
+                state.has(ITEM_EGGS, player)
+            ),
+        LOC_MUMBO_TOKEN_CC_GRATE:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_FEATHERY_FLAP, player)
+                )
+            ),
+        LOC_MUMBO_TOKEN_CC_UNDERWATER_TUNNEL:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player)
             ),
         LOC_JIGGY_BGS_EGG:
             lambda state:

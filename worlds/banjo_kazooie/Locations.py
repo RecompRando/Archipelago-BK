@@ -420,51 +420,51 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_CLICK_CLOCK_WOOD,
         address=0x00000047
     ),
-    "SM Jump Honeycomb Piece": BKLocationData(
+    LOC_EMPTY_HONEYCOMB_SM_LOG: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x02000013
     ),
-    "SM Waterfall Honeycomb Piece": BKLocationData(
+    LOC_EMPTY_HONEYCOMB_SM_WATERFALL: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x02000014
     ),
-    "SM Tree Honeycomb Piece": BKLocationData(
+    LOC_EMPTY_HONEYCOMB_SM_TREE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x02000016
     ),
-    "SM Underwater Honeycomb Piece": BKLocationData(
+    LOC_EMPTY_HONEYCOMB_SM_UNDERWATER: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x02000015
     ),
-    "SM Beak Barge Honeycomb Piece": BKLocationData(
+    LOC_EMPTY_HONEYCOMB_SM_ROCK: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x02000018
     ),
-    "SM Combat Honeycomb Piece": BKLocationData(
+    LOC_EMPTY_HONEYCOMB_SM_COLLIWOBBLE: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR,
+        address=0x02000018
+    ),
+    LOC_EMPTY_HONEYCOMB_MM_HILLSIDE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x02000017
     ),
-    "MM Hillside Honeycomb Piece": BKLocationData(
+    LOC_EMPTY_HONEYCOMB_MM_TOTEM: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
-        address=0x02000001
+        address=0x02000017
     ),
-    "MM Totem Pole Honeycomb Piece": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
-        address=0x02000002
-    ),
-    "TTC Underwater Honeycomb Piece": BKLocationData(
+    LOC_EMPTY_HONEYCOMB_TTC_UNDERWATER: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x02000003
     ),
-    "TTC Floating Crate Honeycomb Piece": BKLocationData(
+    LOC_EMPTY_HONEYCOMB_TTC_CRATE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x02000004
     ),
-    "CC Inside Pipe Honeycomb Piece": BKLocationData(
+    LOC_EMPTY_HONEYCOMB_CC_PIPE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x02000005
     ),
-    "CC Inside Wall Grate Honeycomb Piece": BKLocationData(
+    LOC_EMPTY_HONEYCOMB_CC_GRATE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x02000006
     ),
@@ -516,21 +516,21 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0200000D
     ),
-    "GLF2 Mumbo Token Behind Red Magic Cauldron": BKLocationData(
+    LOC_MUMBO_TOKEN_GL_RED_CAULDRON: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000051
     ),
-    "GLF2 Mumbo Token Above Drain Pipe": BKLocationData(
+    LOC_MUMBO_TOKEN_GL_DRAIN_PIPE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000053
     ),
-    "GLF2 Mumbo Token Near Click Clock Wood Podium": BKLocationData(
+    LOC_MUMBO_TOKEN_GL_CCW_PODIUM: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000052
     ),
-    "GLF3 Mumbo Token Above Clanker's Cavern": BKLocationData(
+    LOC_MUMBO_TOKEN_GL_ABOVE_CC: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
-        address=0x03000054
+        address=0x03000052
     ),
     "GLF5 Mumbo Token Behind Sarcophagus": BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
@@ -556,83 +556,83 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000058
     ),
-    "MM Mumbo Token Behind Pink Jinjo": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
-        address=0x03000004
+    LOC_MUMBO_TOKEN_MM_ENTRANCE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x00000009
     ),
-    "MM Mumbo Token By Conga": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
-        address=0x03000001
+    LOC_MUMBO_TOKEN_MM_CHIMPY: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x00000009
     ),
-    "MM Mumbo Token Behind Stonehenge": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
-        address=0x03000002
+    LOC_MUMBO_TOKEN_MM_STONEHENGE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x00000009
     ),
-    "MM Mumbo Token in Termite Mountain": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
-        address=0x03000005
-    ),
-    "MM Mumbo Token by Mumbo's Hut": BKLocationData(
+    LOC_MUMBO_TOKEN_MM_MUMBOS_HUT: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000003
     ),
-    "TTC Mumbo Token Behind Nipper": BKLocationData(
+    LOC_MUMBO_TOKEN_MM_TERMITE_MOUND: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR,
+        address=0x03000005
+    ),
+    LOC_MUMBO_TOKEN_TTC_NIPPER: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300000F
     ),
-    "TTC Mumbo Token in Blubber's Mast": BKLocationData(
+    LOC_MUMBO_TOKEN_TTC_MAST: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000009
     ),
-    "TTC Mumbo Token in Blubber's Hold": BKLocationData(
+    LOC_MUMBO_TOKEN_TTC_HOLD: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
-        address=0x03000006
+        address=0x03000009
     ),
-    "TTC Mumbo Token Near Shock Spring Jump Molehill": BKLocationData(
+    LOC_MUMBO_TOKEN_TTC_SHOCK_SPRING: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300000E
     ),
-    "TTC Mumbo Token by Treasure Box Island": BKLocationData(
+    LOC_MUMBO_TOKEN_TTC_X_MARK: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300000C
     ),
-    "TTC Left Mumbo Token inside Lockup": BKLocationData(
+    LOC_MUMBO_TOKEN_TTC_LOCKUP_LEFT: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000007
     ),
-    "TTC Right Mumbo Token inside Lockup": BKLocationData(
+    LOC_MUMBO_TOKEN_TTC_LOCKUP_RIGHT: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000008
     ),
-    "TTC Mumbo Token in Underwater Pool": BKLocationData(
+    LOC_MUMBO_TOKEN_TTC_POOL: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300000D
     ),
-    "TTC Mumbo Token Above Floating Crate": BKLocationData(
+    LOC_MUMBO_TOKEN_TTC_CRATE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300000B
     ),
-    "TTC Mumbo Token in Lighthouse": BKLocationData(
+    LOC_MUMBO_TOKEN_TTC_LIGHTHOUSE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300000A
     ),
-    "CC Mumbo Token Above Entrance": BKLocationData(
+    LOC_MUMBO_TOKEN_CC_ENTRANCE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000011
     ),
-    "CC Mumbo Token Above Clanker's Tail": BKLocationData(
+    LOC_MUMBO_TOKEN_CC_CLANKER_TAIL: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000010
     ),
-    "CC Mumbo Token in Clanker's First Gold Tooth": BKLocationData(
+    LOC_MUMBO_TOKEN_CC_CLANKER_GOLD_TEETH: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000014
     ),
-    "CC Mumbo Token in High Grate": BKLocationData(
+    LOC_MUMBO_TOKEN_CC_GRATE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000013
     ),
-    "CC Mumbo Token in Underwater Tunnel": BKLocationData(
+    LOC_MUMBO_TOKEN_CC_UNDERWATER_TUNNEL: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000012
     ),
