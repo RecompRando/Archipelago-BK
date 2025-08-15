@@ -468,27 +468,27 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_GRUNTILDAS_LAIR,
         address=0x02000006
     ),
-    "BGS Above Tiptup Honeycomb Piece": BKLocationData(
+    LOC_EMPTY_HONEYCOMB_BGS_TIPTOP_STAND: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x02000008
     ),
-    "BGS Mumbo's Hut Honeycomb Piece": BKLocationData(
+    LOC_EMPTY_HONEYCOMB_BGS_INSIDE_MUMBOS_HUT: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x02000007
     ),
-    "FP Sir Slush Honeycomb Piece": BKLocationData(
+    LOC_EMPTY_HONEYCOMB_FP_SIR_SLUSH: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0200000A
     ),
-    "FP Wozza's Cave Honeycomb Piece": BKLocationData(
+    LOC_EMPTY_HONEYCOMB_FP_WOZZA: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x02000009
     ),
-    "GV Cactus Honeycomb Piece": BKLocationData(
+    LOC_EMPTY_HONEYCOMB_GV_CACTUS: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0200000B
     ),
-    "GV Gobi's Honeycomb Piece": BKLocationData(
+    LOC_EMPTY_HONEYCOMB_GV_GOBI: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0200000C
     ),
@@ -528,15 +528,15 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000052
     ),
-    LOC_MUMBO_TOKEN_GL_ABOVE_CC: BKLocationData(
+    LOC_MUMBO_TOKEN_GL_ABOVE_CC_ENTRANCE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000052
     ),
-    "GLF5 Mumbo Token Behind Sarcophagus": BKLocationData(
+    LOC_MUMBO_TOKEN_GL_BEHIND_SARCOPHAGUS: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000055
     ),
-    "GLF5 Mumbo Token Above Freezeezy Peak": BKLocationData(
+    LOC_MUMBO_TOKEN_GL_ABOVE_FP_ENTRANCE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000056
     ),
@@ -544,11 +544,11 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000057
     ),
-    "GLF7 Mumbo Token Under Rusty Bucket Bay": BKLocationData(
+    LOC_MUMBO_TOKEN_GL_BELOW_RBB_ENTRANCE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000059
     ),
-    "GLF7 Mumbo Token By Mad Monster Mansion Podium": BKLocationData(
+    LOC_MUMBO_TOKEN_GL_BY_MMM_PODIUM: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300005A
     ),
@@ -556,7 +556,7 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000058
     ),
-    LOC_MUMBO_TOKEN_MM_ENTRANCE: BKLocationData(
+    LOC_MUMBO_TOKEN_MM_BEHIND_PINK_JINJO: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x00000009
     ),
@@ -636,123 +636,123 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000012
     ),
-    "BGS Mumbo Token Behind Yellow Jinjo": BKLocationData(
+    LOC_MUMBO_TOKEN_BGS_BEHIND_YELLOW_JINJO: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000018
     ),
-    "BGS Mumbo Token Above Cattail": BKLocationData(
+    LOC_MUMBO_TOKEN_BGS_ATOP_CATTAIL: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000017
     ),
-    "BGS Mumbo Token on Central Platform": BKLocationData(
+    LOC_MUMBO_TOKEN_BGS_CENTRAL_PLATFORM: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300001B
     ),
-    "BGS Mumbo Token Inside Tanktup": BKLocationData(
+    LOC_MUMBO_TOKEN_BGS_INSIDE_TANKTUP: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300001C
     ),
-    "BGS Mumbo Token Near Huts": BKLocationData(
+    LOC_MUMBO_TOKEN_BGS_INSIDE_HUT: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000019
     ),
-    "BGS Mumbo Token Behind Mumbo's Hut": BKLocationData(
+    LOC_MUMBO_TOKEN_BGS_BEHIND_MUMBOS_HUT: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300001A
     ),
-    "BGS Mumbo Token Behind Mumbo": BKLocationData(
+    LOC_MUMBO_TOKEN_BGS_BEHIND_MUMBO: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300001E
     ),
-    "BGS Left Mumbo Token Under Huts": BKLocationData(
+    LOC_MUMBO_TOKEN_BGS_UNDER_HUTS_LEFT: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000015
     ),
-    "BGS Right Mumbo Token Under Huts": BKLocationData(
+    LOC_MUMBO_TOKEN_BGS_UNDER_HUTS_RIGHT: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000016
     ),
-    "BGS Mumbo Token Near Mr. Vile": BKLocationData(
+    LOC_MUMBO_TOKEN_BGS_INSIDE_MR_VILE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300001D
     ),
-    "FP Mumbo Token in Boggy's Igloo": BKLocationData(
+    LOC_MUMBO_TOKEN_FP_INSIDE_IGLOO: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000028
     ),
-    "FP Mumbo Token By Molehill": BKLocationData(
+    LOC_MUMBO_TOKEN_FP_BEHIND_PRESENTS: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000021
     ),
-    "FP Mumbo Token Above House Flight Pad": BKLocationData(
+    LOC_MUMBO_TOKEN_FP_ABOVE_HOUSE_FLIGHT_PAD: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000022
     ),
-    "FP Mumbo Token Under Sir Slush Near Wozza": BKLocationData(
+    LOC_MUMBO_TOKEN_FP_SIR_SLUSH_WOZZA: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000024
     ),
-    "FP Mumbo Token Under Sir Slush on Island": BKLocationData(
+    LOC_MUMBO_TOKEN_FP_SIR_SLUSH_ISLAND: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000023
     ),
-    "FP Mumbo Token After Boggy's Toboggan": BKLocationData(
+    LOC_MUMBO_TOKEN_FP_TOBOGGAN: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000026
     ),
-    "FP Left Mumbo Token Under Large Snowman": BKLocationData(
+    LOC_MUMBO_TOKEN_FP_LARGE_SNOWMAN_LEFT: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300001F
     ),
-    "FP Right Mumbo Token Under Large Snowman": BKLocationData(
+    LOC_MUMBO_TOKEN_FP_LARGE_SNOWMAN_RIGHT: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000020
     ),
-    "FP Mumbo Token Under Christmas Tree": BKLocationData(
+    LOC_MUMBO_TOKEN_FP_UNDER_CHRISTMAS_TREE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000025
     ),
-    "FP Underwater Mumbo Token": BKLocationData(
+    LOC_MUMBO_TOKEN_FP_UNDERWATER: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000027
     ),
-    "GV Mumbo Token Behind Jinxy": BKLocationData(
+    LOC_MUMBO_TOKEN_GV_BEHIND_JINXY: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300002A
     ),
-    "GV Mumbo Token On Jinxy's Nose": BKLocationData(
+    LOC_MUMBO_TOKEN_GV_ABOVE_JINXYS_NOSE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000029
     ),
-    "GV Mumbo Token Inside Jinxy": BKLocationData(
+    LOC_MUMBO_TOKEN_GV_INSIDE_JINXY: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000032
     ),
-    "GV Mumbo Token Outside Water Pyramid": BKLocationData(
+    LOC_MUMBO_TOKEN_GV_OUTSIDE_WATER_PYRAMID_FRONT: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300002D
     ),
-    "GV Mumbo Token in Flip Puzzle Pyramid": BKLocationData(
+    LOC_MUMBO_TOKEN_GV_FLIP_PANEL_PYRAMID: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300002E
     ),
-    "GV Mumbo Token in Central Moat": BKLocationData(
+    LOC_MUMBO_TOKEN_GV_MOAT: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300002B
     ),
-    "GV Mumbo Token in Rubee's Pyramid": BKLocationData(
+    LOC_MUMBO_TOKEN_GV_RUBEE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000031
     ),
-    "GV Mumbo Token Atop Central Pyramid": BKLocationData(
+    LOC_MUMBO_TOKEN_GV_ATOP_CENTRAL_PYRAMID: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300002C
     ),
-    "GV Mumbo Token in Sandybutt's Pot": BKLocationData(
+    LOC_MUMBO_TOKEN_GV_CENTRAL_PYRAMID_POT: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300002F
     ),
-    "GV Mumbo Token Inside Water Pyramid": BKLocationData(
+    LOC_MUMBO_TOKEN_GV_INSIDE_WATER_PYRAMID: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000030
     ),
