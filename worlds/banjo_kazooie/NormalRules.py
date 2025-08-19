@@ -170,6 +170,11 @@ def get_location_rules(player, options):
                     state.has(ITEM_FLAP_FLIP, player)
                 )
             ),
+        LOC_MUMBO_TOKEN_GL_BEHIND_MUMBO:
+            lambda state:
+            (
+                state.has(ITEM_PUMPKIN_TRANSFORMATION, player)  #TODO: figure out semantics regarding levels
+            ),
         LOC_MUMBO_TOKEN_GL_BELOW_RBB_ENTRANCE:
             lambda state:
             (
@@ -187,6 +192,11 @@ def get_location_rules(player, options):
                         state.has(ITEM_TALON_TROT, player)
                     )
                 )
+            ),
+        LOC_MUMBO_TOKEN_GL_NEAR_CCW_PODIUM_SWITCH:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player)
             ),
         LOC_JIGGY_MM_CONGA_ORANGE_THROW:
             lambda state: True,
@@ -1396,6 +1406,183 @@ def get_location_rules(player, options):
                 state.has(ITEM_MMM_PURPLE_JINJO, player) and
                 state.has(ITEM_MMM_YELLOW_JINJO, player)
             ),
+        LOC_EMPTY_HONEYCOMB_MMM_CHURCH_RAFTER:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or  # required to open church gate
+                    state.has(ITEM_BEAK_BARGE, player) or  # Wonderwing also works
+                    state.has(ITEM_EGGS, player)
+                ) and
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_TURBO_TALON_TROT, player) and
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_EMPTY_HONEYCOMB_MMM_FLOORBOARD:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) and
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or        #required to break window
+                    state.has(ITEM_EGGS, player)                    #Wonderwing also works
+                )
+                (
+                    state.has(ITEM_PUMPKIN_TRANSFORMATION, player) and
+                    state.has(ITEM_FLAP_FLIP, player) and           #required to get to Mumbo's Skull
+                    (
+                        state.has(ITEM_RAT_A_TAT_RAP, player) or    #required to open church gate
+                        state.has(ITEM_BEAK_BARGE, player) or       #Wonderwing also works
+                        state.has(ITEM_EGGS, player)
+                    )
+                )
+            ),
+        LOC_MUMBO_TOKEN_MMM_FIREPLACE:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_CLIMB, player) and      #you can either climb up the mansion and enter the chimney...
+                    state.has(ITEM_SHOCK_SPRING_JUMP, player)
+                ) or
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BARGE, player) or       #...or just break down the door and walk in
+                    state.has(ITEM_EGGS, player)                #Wonderwing also works
+                )
+            ),
+        LOC_MUMBO_TOKEN_MMM_CELLAR:
+            lambda state:
+            (
+                state.has(ITEM_RAT_A_TAT_RAP, player) or
+                state.has(ITEM_BEAK_BARGE, player) or       #Wonderwing also works
+                state.has(ITEM_EGGS, player)
+            ),
+        LOC_MUMBO_TOKEN_MMM_LOGGO:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) and
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or        #required to break window
+                    state.has(ITEM_EGGS, player)                    #Wonderwing also works
+                )
+                (
+                    state.has(ITEM_PUMPKIN_TRANSFORMATION, player) and
+                    state.has(ITEM_FLAP_FLIP, player) and           #required to get to Mumbo's Skull
+                    (
+                        state.has(ITEM_RAT_A_TAT_RAP, player) or    #required to open church gate
+                        state.has(ITEM_BEAK_BARGE, player) or       #Wonderwing also works
+                        state.has(ITEM_EGGS, player)
+                    )
+                )
+            ),
+        LOC_MUMBO_TOKEN_MMM_SINK:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) and
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or        #required to break window
+                    state.has(ITEM_EGGS, player)                    #Wonderwing also works
+                )
+            ),
+        LOC_MUMBO_TOKEN_MMM_MAZE:
+            lambda state: True,
+        LOC_MUMBO_TOKEN_MMM_MAZE_HIDDEN_AREA:
+            lambda state:
+            (
+                (                   #you can either turn into a pumpkin and go in through the small gap in the hedge...
+                    state.has(ITEM_PUMPKIN_TRANSFORMATION, player) and
+                    state.has(ITEM_FLAP_FLIP, player) and           #required to get to Mumbo's Skull
+                    (
+                        state.has(ITEM_RAT_A_TAT_RAP, player) or    #required to open church gate
+                        state.has(ITEM_BEAK_BARGE, player) or       #Wonderwing also works
+                        state.has(ITEM_EGGS, player)
+                    )
+                ) or
+                state.has(ITEM_CLIMB, player) #...or just climb onto the roof and fall onto it, your call:)
+            ),
+        LOC_MUMBO_TOKEN_MMM_SHACK_ROOF:
+            lambda state:
+            (
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        LOC_MUMBO_TOKEN_MMM_WELL:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player) or
+                (
+                    state.has(ITEM_PUMPKIN_TRANSFORMATION, player) and
+                    state.has(ITEM_FLAP_FLIP, player) and   #required to get to Mumbo's Skull
+                    (
+                        state.has(ITEM_RAT_A_TAT_RAP, player) or    #required to open church gate
+                        state.has(ITEM_BEAK_BARGE, player) or       #Wonderwing also works
+                        state.has(ITEM_EGGS, player)
+                    )
+                )
+            ),
+        LOC_MUMBO_TOKEN_MMM_BEHIND_GRAVE:
+            lambda state:
+            (
+                state.has(ITEM_RAT_A_TAT_RAP, player) or  # required to open church gate
+                state.has(ITEM_BEAK_BARGE, player) or  # Wonderwing also works
+                state.has(ITEM_EGGS, player)
+            ),
+        LOC_MUMBO_TOKEN_MMM_CLOCK_TOWER:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or  # required to open church gate
+                    state.has(ITEM_BEAK_BARGE, player) or  # Wonderwing also works
+                    state.has(ITEM_EGGS, player)
+                ) and
+                state.has(ITEM_JUMP, player) and
+                state.has(ITEM_TALON_TROT, player)
+            ),
+        LOC_MUMBO_TOKEN_MMM_CHURCH_CHAIR:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or  # required to open church gate
+                    state.has(ITEM_BEAK_BARGE, player) or  # Wonderwing also works
+                    state.has(ITEM_EGGS, player)
+                ) and
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_TURBO_TALON_TROT, player) and
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_MUMBO_TOKEN_MMM_CHURCH_RAFTER:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or  # required to open church gate
+                    state.has(ITEM_BEAK_BARGE, player) or  # Wonderwing also works
+                    state.has(ITEM_EGGS, player)
+                ) and
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_TURBO_TALON_TROT, player) and
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_MUMBO_TOKEN_MMM_NEAR_SHACK:
+            lambda state: True,
+        LOC_MUMBO_TOKEN_MMM_BEDROOM:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or        #required to break window
+                    state.has(ITEM_EGGS, player)                    #Wonderwing also works
+                )
+            ),
+        LOC_MUMBO_TOKEN_MMM_FOUNTAIN:
+            lambda state:
+            (
+                state.has(ITEM_EGGS, player)
+            ),
+        LOC_MUMBO_TOKEN_MMM_NEAR_FOUNTAIN:
+            lambda state: True,
         LOC_JIGGY_RBB_SMOKESTACK:
             lambda state:
             (
@@ -1484,12 +1671,22 @@ def get_location_rules(player, options):
         LOC_JIGGY_RBB_ENGINE_ROOM:
             lambda state:
             (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BARGE, player) or   #to open the engine room door
+                    state.has(ITEM_EGGS, player)
+                ) and
                 state.has(ITEM_CLIMB, player) and       #to hit the switch before entering the engine room
                 state.has(ITEM_BEAK_BUSTER, player)     #yes, you really need no other moves to get the Jiggy
             ),
         LOC_JIGGY_RBB_PROPELLER:
             lambda state:
             (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BARGE, player) or   #to open the engine room door
+                    state.has(ITEM_EGGS, player)
+                ) and
                 state.has(ITEM_CLIMB, player) and           #to hit the switch before entering the engine room
                 state.has(ITEM_BEAK_BUSTER, player) and     #yes, you don't need any more moves for this one either
                 state.has(ITEM_SWIM, player)
@@ -1502,6 +1699,134 @@ def get_location_rules(player, options):
                 state.has(ITEM_RBB_ORANGE_JINJO, player) and
                 state.has(ITEM_RBB_PURPLE_JINJO, player) and
                 state.has(ITEM_RBB_YELLOW_JINJO, player)
+            ),
+        LOC_EMPTY_HONEYCOMB_RBB_ENGINE_ROOM:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BARGE, player) or   #to open the engine room door
+                    state.has(ITEM_EGGS, player)
+                ) and
+                state.has(ITEM_CLIMB, player) and #I THINK you can fall into the cubbyhole where the empty honeycomb is?
+                state.has(ITEM_FLAP_FLIP, player) #I couldn't replicate it myself though
+            ),
+        LOC_EMPTY_HONEYCOMB_RBB_WAREHOUSE:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player) and
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_MUMBO_TOKEN_RBB_TOLL_BRIDGE:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_EGGS, player)
+            ),
+        LOC_MUMBO_TOKEN_RBB_LIFEBOAT:
+            lambda state: True,
+        LOC_MUMBO_TOKEN_RBB_BEHIND_WITCH_SWITCH_TOWER:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player)
+            ),
+        LOC_MUMBO_TOKEN_RBB_BARRACKS:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or   #to break the window
+                    state.has(ITEM_EGGS, player)               #Wonderwing works too
+                ) and
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_MUMBO_TOKEN_RBB_ENGINE_ROOM_ENTRY:
+            lambda state:
+            (
+                state.has(ITEM_RAT_A_TAT_RAP, player) or
+                state.has(ITEM_BEAK_BARGE, player) or   #to open the engine room door
+                state.has(ITEM_EGGS, player)
+            ),
+        LOC_MUMBO_TOKEN_RBB_ENGINE_ROOM_LEFT:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BARGE, player) or   #to open the engine room door
+                    state.has(ITEM_EGGS, player)
+                ) and
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_MUMBO_TOKEN_RBB_ENGINE_ROOM_RIGHT:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BARGE, player) or   #to open the engine room door
+                    state.has(ITEM_EGGS, player)
+                ) and
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_MUMBO_TOKEN_RBB_PERISCOPE_STOREROOM:
+            lambda state: True,
+        LOC_MUMBO_TOKEN_RBB_NAVIGATION_ROOM:
+            lambda state:
+            (
+                state.has(ITEM_RAT_A_TAT_RAP, player) or   #to break the window
+                state.has(ITEM_EGGS, player)               #Wonderwing works too
+            ),
+        LOC_MUMBO_TOKEN_RBB_OVEN:
+            lambda state:
+            (
+                state.has(ITEM_WONDERWING, player) #this is nigh impossible to get without taking damage or Wonderwing
+            ),
+        LOC_MUMBO_TOKEN_RBB_SMOKESTACK:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        LOC_MUMBO_TOKEN_RBB_TOXIC_WASTE_DRUM:
+            lambda state:
+            (
+                state.has(ITEM_FEATHERY_FLAP, player) or
+                state.has(ITEM_RAT_A_TAT_RAP, player)
+            ),
+        LOC_MUMBO_TOKEN_RBB_SHIP_BOW:
+            lambda state: True,
+        LOC_MUMBO_TOKEN_RBB_LEFT_SHIPPING_CRATE:
+            lambda state:
+            (
+                (
+                    (
+                        state.has(ITEM_FLAP_FLIP, player) or    #first, you need to get to the crate, either from
+                        state.has(ITEM_CLIMB, player)           #the ship's crane...
+                    ) or
+                    (
+                        state.has(ITEM_EGGS, player) and        #...or by going around the perimeter of the level
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                ) and
+                (
+                    state.has(ITEM_JUMP, player) or             #then you need to actually be able to get the token
+                    state.has(ITEM_FLAP_FLIP, player)
+                )
+            ),
+        LOC_MUMBO_TOKEN_RBB_MIDDLE_SHIPPING_CRATE:
+            lambda state:
+            (
+                (
+                    (
+                        state.has(ITEM_CLIMB, player)           #first, you need to get to the crate, either from
+                    ) or                                        #the ship's crane...
+                    (
+                        state.has(ITEM_EGGS, player) and        #...or by going around the perimeter of the level
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                ) and
+                (
+                    state.has(ITEM_FLAP_FLIP, player)           #then you need to actually be able to get the token
+                )
             ),
         LOC_JIGGY_CCW_TREETOP_ROOM:
             lambda state:

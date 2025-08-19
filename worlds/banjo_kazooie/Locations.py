@@ -492,19 +492,19 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0200000C
     ),
-    "MMM Church Rafters Honeycomb Piece": BKLocationData(
+    LOC_EMPTY_HONEYCOMB_MMM_CHURCH_RAFTER: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x02000011
     ),
-    "MMM Honeycomb Piece Under the Floorboards": BKLocationData(
+    LOC_EMPTY_HONEYCOMB_MMM_FLOORBOARD: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x02000012
     ),
-    "RBB Engine Room Honeycomb Piece": BKLocationData(
+    LOC_EMPTY_HONEYCOMB_RBB_ENGINE_ROOM: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x02000010
     ),
-    "RBB Hidden Warehouse Honeycomb Piece": BKLocationData(
+    LOC_EMPTY_HONEYCOMB_RBB_WAREHOUSE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0200000F
     ),
@@ -540,7 +540,7 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000056
     ),
-    "GLF6 Mumbo Token Behind Mumbo": BKLocationData(
+    LOC_MUMBO_TOKEN_GL_BEHIND_MUMBO: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000057
     ),
@@ -552,7 +552,7 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300005A
     ),
-    "GLF8 Tunnel from Click Clock Wood Mumbo Token": BKLocationData(
+    LOC_MUMBO_TOKEN_GL_NEAR_CCW_PODIUM_SWITCH: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000058
     ),
@@ -756,127 +756,127 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000030
     ),
-    "MMM Mumbo Token in Fireplace": BKLocationData(
+    LOC_MUMBO_TOKEN_MMM_FIREPLACE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300003E
     ),
-    "MMM Mumbo Token in Cellar": BKLocationData(
+    LOC_MUMBO_TOKEN_MMM_CELLAR: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300003D
     ),
-    "MMM Mumbo Token in Toilet": BKLocationData(
+    LOC_MUMBO_TOKEN_MMM_LOGGO: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000074
     ),
-    "MMM Mumbo Token in Bathroom": BKLocationData(
+    LOC_MUMBO_TOKEN_MMM_SINK: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000041
     ),
-    "MMM Mumbo Token in Maze": BKLocationData(
+    LOC_MUMBO_TOKEN_MMM_MAZE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000037
     ),
-    "MMM Mumbo Token in Maze Corner from Roof": BKLocationData(
+    LOC_MUMBO_TOKEN_MMM_MAZE_HIDDEN_AREA: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000036
     ),
-    "MMM Mumbo Token Atop Tumblar's Shack": BKLocationData(
+    LOC_MUMBO_TOKEN_MMM_SHACK_ROOF: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300003C
     ),
-    "MMM Mumbo Token in the Well": BKLocationData(
+    LOC_MUMBO_TOKEN_MMM_WELL: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300003F
     ),
-    "MMM Mumbo Token Behind a Grave": BKLocationData(
+    LOC_MUMBO_TOKEN_MMM_BEHIND_GRAVE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000038
     ),
-    "MMM Mumbo Token in the Clock Tower": BKLocationData(
+    LOC_MUMBO_TOKEN_MMM_CLOCK_TOWER: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000035
     ),
-    "MMM Mumbo Token in Church Chair": BKLocationData(
+    LOC_MUMBO_TOKEN_MMM_CHURCH_CHAIR: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300003B
     ),
-    "MMM Mumbo Token in Church Rafters": BKLocationData(
+    LOC_MUMBO_TOKEN_MMM_CHURCH_RAFTER: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300003A
     ),
-    "MMM Mumbo Token Near Tumblar's Shack": BKLocationData(
+   LOC_MUMBO_TOKEN_MMM_NEAR_SHACK: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000034
     ),
-    "MMM Mumbo Token in Bedroom": BKLocationData(
+    LOC_MUMBO_TOKEN_MMM_BEDROOM: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000040
     ),
-    "MMM Mumbo Token in Whipcrack by Blue Jinjo": BKLocationData(
+    LOC_MUMBO_TOKEN_MMM_FOUNTAIN: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000039
     ),
-    "MMM Mumbo Token Hidden Behind Corner Near Blue Jinjo": BKLocationData(
+    LOC_MUMBO_TOKEN_MMM_NEAR_FOUNTAIN: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000033
     ),
-    "RBB Toll Bridge Mumbo Token": BKLocationData(
+    LOC_MUMBO_TOKEN_RBB_TOLL_BRIDGE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000045
     ),
-    "RBB Lifeboat Mumbo Token": BKLocationData(
+    LOC_MUMBO_TOKEN_RBB_LIFEBOAT: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000044
     ),
-    "RBB Mumbo Token Near Witch Switch Tower": BKLocationData(
+    LOC_MUMBO_TOKEN_RBB_BEHIND_WITCH_SWITCH_TOWER: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000047
     ),
-    "RBB Barracks Mumbo Token": BKLocationData(
+    LOC_MUMBO_TOKEN_RBB_BARRACKS: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300004A
     ),
-    "RBB Engine Control Room Mumbo Token": BKLocationData(
+    LOC_MUMBO_TOKEN_RBB_ENGINE_ROOM_ENTRY: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300004F
     ),
-    "RBB Engine Room Left Mumbo Token": BKLocationData(
+    LOC_MUMBO_TOKEN_RBB_ENGINE_ROOM_LEFT: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300004D
     ),
-    "RBB Engine Room Right Mumbo Token": BKLocationData(
+    LOC_MUMBO_TOKEN_RBB_ENGINE_ROOM_RIGHT: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300004E
     ),
-    "RBB Mumbo Token in Storeroom": BKLocationData(
+    LOC_MUMBO_TOKEN_RBB_PERISCOPE_STOREROOM: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000050
     ),
-    "RBB Navigation Room Mumbo Token": BKLocationData(
+    LOC_MUMBO_TOKEN_RBB_NAVIGATION_ROOM: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300004B
     ),
-    "RBB Oven Mumbo Token": BKLocationData(
+    LOC_MUMBO_TOKEN_RBB_OVEN: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300004C
     ),
-    "RBB Smokestack Mumbo Token": BKLocationData(
+    LOC_MUMBO_TOKEN_RBB_SMOKESTACK: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000042
     ),
-    "RBB Toxic Waste Mumbo Token": BKLocationData(
+    LOC_MUMBO_TOKEN_RBB_TOXIC_WASTE_DRUM: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000046
     ),
-    "RBB Mumbo Token Ship's Bow": BKLocationData(
+    LOC_MUMBO_TOKEN_RBB_SHIP_BOW: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000043
     ),
-    "RBB Warehouse Crate 1 Mumbo Token": BKLocationData(
+    LOC_MUMBO_TOKEN_RBB_LEFT_SHIPPING_CRATE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000048
     ),
-    "RBB Warehouse Crate 2 Mumbo Token": BKLocationData(
+    LOC_MUMBO_TOKEN_RBB_MIDDLE_SHIPPING_CRATE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000049
     ),
