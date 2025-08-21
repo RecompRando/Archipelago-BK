@@ -508,11 +508,11 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0200000F
     ),
-    "CCW Winter Honeycomb Piece Above Nabnut's House": BKLocationData(
+    LOC_EMPTY_HONEYCOMB_CCW_WINTER_NABNUTS: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0200000E
     ),
-    "CCW Winter Honeycomb Piece in Gnawty's House": BKLocationData(
+    LOC_EMPTY_HONEYCOMB_CCW_WINTER_GNAWTY: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0200000D
     ),
@@ -880,103 +880,103 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000049
     ),
-    "CCW Spring Snarebear Mumbo Token Near Entrance": BKLocationData(
+    LOC_MUMBO_TOKEN_CCW_SPRING_ENTRANCE_SNAREBEAR: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000060
     ),
-    "CCW Spring Snarebear Mumbo Token Near Garden": BKLocationData(
+    LOC_MUMBO_TOKEN_CCW_SPRING_GARDEN_SNAREBEAR: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300005F
     ),
-    "CCW Spring Mumbo Token in Treetop Above Mumbo's Hut": BKLocationData(
+    LOC_MUMBO_TOKEN_CCW_SPRING_TREETOP_ABOVE_MUMBOS_HUT: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300005C
     ),
-    "CCW Spring Mumbo Token on Beehive": BKLocationData(
+    LOC_MUMBO_TOKEN_CCW_SPRING_BEEHIVE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000061
     ),
-    "CCW Spring Mumbo Token in Construction Site": BKLocationData(
+    LOC_MUMBO_TOKEN_CCW_SPRING_CABIN: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300005B
     ),
-    "CCW Spring Mumbo Token on Nabnut's Dresser": BKLocationData(
+    LOC_MUMBO_TOKEN_CCW_SPRING_NABNUTS_DRESSER: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000062
     ),
-    "CCW Spring Mumbo Token by Eyrie's Nest": BKLocationData(
+    LOC_MUMBO_TOKEN_CCW_SPRING_NEAR_EYRIES_NEST: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300005D
     ),
-    "CCW Spring Mumbo Token in Thorn Field Near Mumbo's Hut": BKLocationData(
+    LOC_MUMBO_TOKEN_CCW_SPRING_THORNS: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300005E
     ),
-    "CCW Summer Snarebear Mumbo Token Near Mumbo's Hut": BKLocationData(
+    LOC_MUMBO_TOKEN_CCW_SUMMER_ENTRANCE_SNAREBEAR: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000065
     ),
-    "CCW Summer Mumbo Token in Gnawty's House": BKLocationData(
+    LOC_MUMBO_TOKEN_CCW_SUMMER_GNAWTY: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000067
     ),
-    "CCW Summer Mumbo Token in Field by Garden": BKLocationData(
+    LOC_MUMBO_TOKEN_CCW_SUMMER_GARDEN: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000064
     ),
-    "CCW Summer Mumbo Token in Mumbo's Hut": BKLocationData(
+    LOC_MUMBO_TOKEN_CCW_SUMMER_MUMBOS_HUT: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000069
     ),
-    "CCW Summer Mumbo Token in Treetop Above Mumbo's Hut": BKLocationData(
+    LOC_MUMBO_TOKEN_CCW_SUMMER_TREETOP_ABOVE_MUMBOS_HUT: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000066
     ),
-    "CCW Summer Mumbo Token Above Shock Jump Leaves Jiggy": BKLocationData(
+    LOC_MUMBO_TOKEN_CCW_SUMMER_LEAVES: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000068
     ),
-    "CCW Summer Mumbo Token after Nabnut's House": BKLocationData(
+    LOC_MUMBO_TOKEN_CCW_SUMMER_AFTER_NABNUTS_HOUSE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000063
     ),
-    "CCW Fall Snarebear Mumbo Token Near Entrance": BKLocationData(
+    LOC_MUMBO_TOKEN_CCW_FALL_ENTRANCE_SNAREBEAR: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300006B
     ),
-    "CCW Fall Mumbo Token in Treetop Above Mumbo's Hut": BKLocationData(
+    LOC_MUMBO_TOKEN_CCW_FALL_TREETOP_ABOVE_MUMBOS_HUT: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300006E
     ),
-    "CCW Fall Mumbo Token on Shock Jump Leaves": BKLocationData(
+    LOC_MUMBO_TOKEN_CCW_FALL_LEAVES: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300006A
     ),
-    "CCW Fall Mumbo Token Near Construction Site": BKLocationData(
+    LOC_MUMBO_TOKEN_CCW_FALL_CABIN: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300006D
     ),
-    "CCW Fall Snarebear Mumbo Token in Treetop": BKLocationData(
+    LOC_MUMBO_TOKEN_CCW_FALL_TREETOP_SNAREBEAR: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300006C
     ),
-    "CCW Winter Garden Mumbo Token": BKLocationData(
+    LOC_MUMBO_TOKEN_CCW_WINTER_GARDEN: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300006F
     ),
-    "CCW Winter Sir Slush Mumbo Token Near Garden": BKLocationData(
+    LOC_MUMBO_TOKEN_CCW_WINTER_SIR_SLUSH: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000073
     ),
-    "CCW Winter Beehive Mumbo Token": BKLocationData(
+    LOC_MUMBO_TOKEN_CCW_WINTER_BEEHIVE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000071
     ),
-    "CCW Winter Mumbo Token Near Nabnut's House": BKLocationData(
+    LOC_MUMBO_TOKEN_CCW_WINTER_NEAR_NABNUTS_HOUSE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000072
     ),
-    "CCW Winter Mumbo Token Behind Lake Platform": BKLocationData(
+    LOC_MUMBO_TOKEN_CCW_WINTER_BEHIND_LAKE_PLATFORM: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000070
     ),

@@ -1931,6 +1931,250 @@ def get_location_rules(player, options):
                 state.has(ITEM_CCW_PURPLE_JINJO, player) and
                 state.has(ITEM_CCW_YELLOW_JINJO, player)
             ),
+        LOC_EMPTY_HONEYCOMB_CCW_WINTER_NABNUTS:
+            lambda state:
+            (
+                state.has(ITEM_FLIGHT, player) and
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BOMB, player)
+                )
+            ),
+        LOC_EMPTY_HONEYCOMB_CCW_WINTER_GNAWTY:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player) #May require boulder broken in summer?
+            ),
+        LOC_MUMBO_TOKEN_CCW_SPRING_ENTRANCE_SNAREBEAR:
+            lambda state:
+            (
+                state.has(ITEM_WONDERWING, player)
+            ),
+        LOC_MUMBO_TOKEN_CCW_SPRING_GARDEN_SNAREBEAR:
+            lambda state:
+            (
+                state.has(ITEM_WONDERWING, player)
+            ),
+        LOC_MUMBO_TOKEN_CCW_SPRING_TREETOP_ABOVE_MUMBOS_HUT:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player)
+            ),
+        LOC_MUMBO_TOKEN_CCW_SPRING_BEEHIVE:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player)
+            ),
+        LOC_MUMBO_TOKEN_CCW_SPRING_CABIN:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) and
+                (
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player)
+                ) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        LOC_MUMBO_TOKEN_CCW_SPRING_NABNUTS_DRESSER:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) and
+                (
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player)
+                ) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        LOC_MUMBO_TOKEN_CCW_SPRING_NEAR_EYRIES_NEST:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) and
+                (
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player)
+                ) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        LOC_MUMBO_TOKEN_CCW_SPRING_THORNS:
+            lambda state:
+            (
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_MUMBO_TOKEN_CCW_SUMMER_ENTRANCE_SNAREBEAR:
+            lambda state:
+            (
+                state.has(ITEM_WONDERWING, player)
+            ),
+        LOC_MUMBO_TOKEN_CCW_SUMMER_GNAWTY:
+            lambda state:
+            (
+                state.has(ITEM_BEAK_BARGE, player) or  # required to break the boulder
+                state.has(ITEM_BEAK_BUSTER, player) or # Wonderwing MIGHT work but probably not
+                state.has(ITEM_EGGS, player)
+            ),
+        LOC_MUMBO_TOKEN_CCW_SUMMER_GARDEN:
+            lambda state: True,
+        LOC_MUMBO_TOKEN_CCW_SUMMER_MUMBOS_HUT:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) and
+                (
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_FLAP_FLIP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player)
+                )
+            ),
+        LOC_MUMBO_TOKEN_CCW_SUMMER_TREETOP_ABOVE_MUMBOS_HUT:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or   #you can either just climb the ramp...
+                (
+                    (
+                        state.has(ITEM_FEATHERY_FLAP, player) or
+                        state.has(ITEM_RAT_A_TAT_RAP, player) or
+                        (
+                            state.has(ITEM_JUMP, player) and
+                            state.has(ITEM_TALON_TROT, player)
+                        )
+                    ) and
+                    (
+                        state.has(ITEM_FLAP_FLIP, player) and        #...or climb the leaves and fall onto the platform
+                        state.has(ITEM_SHOCK_SPRING_JUMP, player)
+                    )
+                )
+            ),
+        LOC_MUMBO_TOKEN_CCW_SUMMER_LEAVES:
+            lambda state:
+            (
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) and   #either route requires this
+                state.has(ITEM_FLAP_FLIP, player) and
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                )
+            ),
+        LOC_MUMBO_TOKEN_CCW_SUMMER_AFTER_NABNUTS_HOUSE:
+            lambda state:
+            (
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) and   #either route requires this
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                ) and
+                (
+                    state.has(ITEM_FLAP_FLIP, player) or        #you can either jump up the leaves from the bottom...
+                    state.has(ITEM_TALON_TROT, player)          #...or climb up the ramp
+                )
+            ),
+        LOC_MUMBO_TOKEN_CCW_FALL_ENTRANCE_SNAREBEAR:
+            lambda state:
+            (
+                state.has(ITEM_WONDERWING, player)
+            ),
+        LOC_MUMBO_TOKEN_CCW_FALL_TREETOP_ABOVE_MUMBOS_HUT:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or   #you can either just climb the ramp...
+                (
+                    (
+                        state.has(ITEM_FEATHERY_FLAP, player) or
+                        state.has(ITEM_RAT_A_TAT_RAP, player) or
+                        (
+                            state.has(ITEM_JUMP, player) and
+                            state.has(ITEM_TALON_TROT, player)
+                        )
+                    ) and
+                    (
+                        state.has(ITEM_FLAP_FLIP, player) and        #...or climb the leaves and fall onto the platform
+                        state.has(ITEM_SHOCK_SPRING_JUMP, player)
+                    )
+                )
+            ),
+        LOC_MUMBO_TOKEN_CCW_FALL_LEAVES:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                ) and
+                (
+                    state.has(ITEM_FLAP_FLIP, player) or        #you can either jump up the leaves from the bottom...
+                    (
+                        state.has(ITEM_TALON_TROT, player) and  #...or climb up the ramp and fall down the leaves
+                        state.has(ITEM_SHOCK_SPRING_JUMP, player)
+                    )
+                )
+            ),
+        LOC_MUMBO_TOKEN_CCW_FALL_CABIN:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) and
+                (
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player)
+                ) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        LOC_MUMBO_TOKEN_CCW_FALL_TREETOP_SNAREBEAR:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) and
+                (
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player)
+                ) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_MUMBO_TOKEN_CCW_WINTER_GARDEN:
+            lambda state: True,
+        LOC_MUMBO_TOKEN_CCW_WINTER_SIR_SLUSH:
+            lambda state:
+            (
+                state.has(ITEM_FLIGHT, player) and
+                state.has(ITEM_BEAK_BOMB, player)
+            ),
+        LOC_MUMBO_TOKEN_CCW_WINTER_BEEHIVE:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_MUMBO_TOKEN_CCW_WINTER_NEAR_NABNUTS_HOUSE:
+            lambda state:
+            (
+                state.has(ITEM_FLIGHT, player) or
+                (
+                    state.has(ITEM_TALON_TROT, player) and
+                    (
+                        state.has(ITEM_JUMP, player) or
+                        state.has(ITEM_FEATHERY_FLAP, player) or
+                        state.has(ITEM_RAT_A_TAT_RAP, player)
+                    ) and
+                    state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                    state.has(ITEM_FLAP_FLIP, player)
+                )
+            ),
+        LOC_MUMBO_TOKEN_CCW_WINTER_BEHIND_LAKE_PLATFORM:
+            lambda state: True,
         LOC_DEFEAT_GRUNTILDA:
             lambda state: True,
     }
