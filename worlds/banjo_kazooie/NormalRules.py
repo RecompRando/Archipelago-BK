@@ -1004,19 +1004,23 @@ def get_location_rules(player, options):
             ) and
             (
                 (
-                    state.has(ITEM_FLAP_FLIP, player) and
                     (
-                        state.has(ITEM_FEATHERY_FLAP, player) or
-                        state.has(ITEM_RAT_A_TAT_RAP, player) # required to get on top of Jinxy
-                    )
-                ) or
+                        state.has(ITEM_FLAP_FLIP, player) and
+                        (
+                            state.has(ITEM_FEATHERY_FLAP, player) or
+                            state.has(ITEM_RAT_A_TAT_RAP, player) # required to get on top of Jinxy
+                        )
+                    ) or
                 (
-                    state.has(ITEM_JUMP, player) and
                     (
-                        state.has(ITEM_RAT_A_TAT_RAP, player) or   #required to get on top of Jinxy
-                        state.has(ITEM_TALON_TROT, player)
+                        state.has(ITEM_JUMP, player) and
+                        (
+                            state.has(ITEM_RAT_A_TAT_RAP, player) or   #required to get on top of Jinxy
+                            state.has(ITEM_TALON_TROT, player)
+                        )
                     )
-                ) and
+                )
+            ) and
                 state.has(ITEM_FLIGHT, player)
             ),
         LOC_JIGGY_GV_RUBEE:
@@ -1027,19 +1031,23 @@ def get_location_rules(player, options):
             ) and
             (
                 (
-                    state.has(ITEM_FLAP_FLIP, player) and
                     (
-                        state.has(ITEM_FEATHERY_FLAP, player) or
-                        state.has(ITEM_RAT_A_TAT_RAP, player) # required to get on top of Jinxy
-                    )
-                ) or
+                        state.has(ITEM_FLAP_FLIP, player) and
+                        (
+                            state.has(ITEM_FEATHERY_FLAP, player) or
+                            state.has(ITEM_RAT_A_TAT_RAP, player) # required to get on top of Jinxy
+                        )
+                    ) or
                 (
-                    state.has(ITEM_JUMP, player) and
                     (
-                        state.has(ITEM_RAT_A_TAT_RAP, player) or   #required to get on top of Jinxy
-                        state.has(ITEM_TALON_TROT, player)
+                        state.has(ITEM_JUMP, player) and
+                        (
+                            state.has(ITEM_RAT_A_TAT_RAP, player) or   #required to get on top of Jinxy
+                            state.has(ITEM_TALON_TROT, player)
+                        )
                     )
-                ) and
+                )
+            ) and
                 state.has(ITEM_FLIGHT, player) and
                 state.has(ITEM_BEAK_BOMB, player) and
                 state.has(ITEM_EGGS, player) and
@@ -1117,19 +1125,23 @@ def get_location_rules(player, options):
             ) and
             (
                 (
-                    state.has(ITEM_FLAP_FLIP, player) and
                     (
-                        state.has(ITEM_FEATHERY_FLAP, player) or
-                        state.has(ITEM_RAT_A_TAT_RAP, player) # required to get on top of Jinxy
-                    )
-                ) or
+                        state.has(ITEM_FLAP_FLIP, player) and
+                        (
+                            state.has(ITEM_FEATHERY_FLAP, player) or
+                            state.has(ITEM_RAT_A_TAT_RAP, player) # required to get on top of Jinxy
+                        )
+                    ) or
                 (
-                    state.has(ITEM_JUMP, player) and
                     (
-                        state.has(ITEM_RAT_A_TAT_RAP, player) or   #required to get on top of Jinxy
-                        state.has(ITEM_TALON_TROT, player)
+                        state.has(ITEM_JUMP, player) and
+                        (
+                            state.has(ITEM_RAT_A_TAT_RAP, player) or   #required to get on top of Jinxy
+                            state.has(ITEM_TALON_TROT, player)
+                        )
                     )
-                ) and
+                )
+            ) and
                 state.has(ITEM_BEAK_BUSTER, player) and
                 state.has(ITEM_FLIGHT, player)
             ),
@@ -1239,19 +1251,23 @@ def get_location_rules(player, options):
             ) and
             (
                 (
-                    state.has(ITEM_FLAP_FLIP, player) and
                     (
-                        state.has(ITEM_FEATHERY_FLAP, player) or
-                        state.has(ITEM_RAT_A_TAT_RAP, player) # required to get on top of Jinxy
-                    )
-                ) or
+                        state.has(ITEM_FLAP_FLIP, player) and
+                        (
+                            state.has(ITEM_FEATHERY_FLAP, player) or
+                            state.has(ITEM_RAT_A_TAT_RAP, player) # required to get on top of Jinxy
+                        )
+                    ) or
                 (
-                    state.has(ITEM_JUMP, player) and
                     (
-                        state.has(ITEM_RAT_A_TAT_RAP, player) or   #required to get on top of Jinxy
-                        state.has(ITEM_TALON_TROT, player)
+                        state.has(ITEM_JUMP, player) and
+                        (
+                            state.has(ITEM_RAT_A_TAT_RAP, player) or   #required to get on top of Jinxy
+                            state.has(ITEM_TALON_TROT, player)
+                        )
                     )
-                ) and
+                )
+            ) and
                 state.has(ITEM_FLIGHT, player) and
                 state.has(ITEM_BEAK_BOMB, player)
             ),
