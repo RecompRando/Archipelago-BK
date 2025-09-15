@@ -25,7 +25,7 @@ class BKWebWorld(WebWorld):
     tutorials = [setup_en]
 
 
-class MMRWorld(World):
+class BKWorld(World):
     """
     Banjo-Kazooie is a 3D platforming game. You control Banjo the bear and Kazooie the bird on their quest to save
     Banjo's sister Tooty from the evil witch Gruntilda. Climb Grunty's Lair, explore 9 unique worlds, and defeat
