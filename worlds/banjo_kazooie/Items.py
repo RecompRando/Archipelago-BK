@@ -63,7 +63,8 @@ item_data_table: Dict[str, BKItemData] = {
     ),
     ITEM_TALON_TROT_SPEED_ONLY: BKItemData(
         code=0x04000013,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_BEAK_BUSTER: BKItemData(
         code=0x04000002,
@@ -91,6 +92,26 @@ item_data_table: Dict[str, BKItemData] = {
     ),
     ITEM_TURBO_TALON_TROT: BKItemData(
         code=0x04000011,
+        type=ItemClassification.progression
+    ),
+    ITEM_JINJO_MM_BLUE: BKItemData(
+        code=None,
+        type=ItemClassification.progression
+    ),
+    ITEM_JINJO_MM_GREEN: BKItemData(
+        code=None,
+        type=ItemClassification.progression
+    ),
+    ITEM_JINJO_MM_ORANGE: BKItemData(
+        code=None,
+        type=ItemClassification.progression
+    ),
+    ITEM_JINJO_MM_PURPLE: BKItemData(
+        code=None,
+        type=ItemClassification.progression
+    ),
+    ITEM_JINJO_MM_YELLOW: BKItemData(
+        code=None,
         type=ItemClassification.progression
     ),
     ITEM_JIGGY: BKItemData(
@@ -136,6 +157,26 @@ item_data_table: Dict[str, BKItemData] = {
     ITEM_DOUBLE_HEALTH: BKItemData(
         code=0x0001FBE9,
         type=ItemClassification.useful
+    ),
+    ITEM_TRANSFORMATION_TERMITE: BKItemData(
+        code=None,
+        type=ItemClassification.progression
+    ),
+    ITEM_TRANSFORMATION_CROCODILE: BKItemData(
+        code=None,
+        type=ItemClassification.progression
+    ),
+    ITEM_TRANSFORMATION_WALRUS: BKItemData(
+        code=None,
+        type=ItemClassification.progression
+    ),
+    ITEM_TRANSFORMATION_PUMPKIN: BKItemData(
+        code=None,
+        type=ItemClassification.progression
+    ),
+    ITEM_TRANSFORMATION_BEE: BKItemData(
+        code=None,
+        type=ItemClassification.progression
     ),
     "Ice Key": BKItemData(
         code=0x0001FBEA,

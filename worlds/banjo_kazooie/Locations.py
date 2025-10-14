@@ -16,6 +16,51 @@ class BKLocationData(NamedTuple):
     locked_item: Optional[str] = None
 
 location_data_table: Dict[str, BKLocationData] = {
+    LOC_TRANSFORMATION_TERMITE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_TRANSFORMATION_TERMITE
+    ),
+    LOC_TRANSFORMATION_CROCODILE: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=None,
+        locked_item=ITEM_TRANSFORMATION_CROCODILE
+    ),
+    LOC_TRANSFORMATION_WALRUS: BKLocationData(
+        region=RGN_FREEZEEZY_PEAK,
+        address=None,
+        locked_item=ITEM_TRANSFORMATION_WALRUS
+    ),
+    LOC_TRANSFORMATION_PUMPKIN: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
+        address=None,
+        locked_item=ITEM_TRANSFORMATION_PUMPKIN
+    ),
+    LOC_TRANSFORMATION_BEE: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_TRANSFORMATION_BEE
+    ),
+    LOC_JINJO_MM_BLUE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None
+    ),
+    LOC_JINJO_MM_GREEN: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None
+    ),
+    LOC_JINJO_MM_ORANGE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None
+    ),
+    LOC_JINJO_MM_PURPLE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None
+    ),
+    LOC_JINJO_MM_YELLOW: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None
+    ),
     LOC_JIGGY_GL_ENTRYWAY: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x00000033
@@ -52,7 +97,7 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0000003B
     ),
-     LOC_JIGGY_GL_BEE_TREE: BKLocationData(
+    LOC_JIGGY_GL_BEE_TREE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0000003C
     ),
@@ -4693,8 +4738,8 @@ location_data_table: Dict[str, BKLocationData] = {
         address=0x01460890
     ),
     LOC_DEFEAT_GRUNTILDA: BKLocationData(
-        region="Gruntilda's Lair",
-        locked_item="Victory"
+        region=RGN_GRUNTILDAS_LAIR,
+        locked_item=ITEM_VICTORY
     ),
 }
 
