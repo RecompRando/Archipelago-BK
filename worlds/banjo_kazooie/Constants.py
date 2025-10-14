@@ -1,4 +1,8 @@
 ITEM_JIGGY = "Jiggy"
+ITEM_MUMBO_TOKEN = "Mumbo Token"
+ITEM_NOTE = "Note"
+ITEM_EMPTY_HONEYCOMB = "Empty Honeycomb Piece"
+ITEM_DOUBLE_HEALTH = "Double Health"
 
 ITEM_JUMP = "Jump"
 ITEM_FEATHERY_FLAP = "Feathery Flap"
@@ -11,7 +15,7 @@ ITEM_SWIM = "Swim"
 ITEM_BEAK_BARGE = "Beak Barge"
 
 ITEM_TALON_TROT = "Talon Trot"
-ITEM_TALON_TROT_SPEED_UPGRADE = "Talon Trot Speed Upgrade"
+ITEM_TALON_TROT_SPEED_ONLY = "Talon Trot Speed Only"
 ITEM_EGGS = "Eggs"
 ITEM_BEAK_BUSTER = "Beak Buster"
 ITEM_TERMITE_TRANSFORMATION = "Termite Transformation"
@@ -99,6 +103,9 @@ ITEM_CCW_YELLOW_JINJO = "Click Clock Wood Yellow Jinjo"
 ITEM_EGG_REFILL = "Egg Refill"
 ITEM_REDFEATHER_REFILL = "Red Feather Refill"
 ITEM_GOLDFEATHER_REFILL = "Gold Feather Refill"
+
+ITEM_HONEYCOMB = "Honeycomb"
+ITEM_EXTRA_LIFE = "Extra Life"
 
 ITEM_VICTORY = "Victory"
 

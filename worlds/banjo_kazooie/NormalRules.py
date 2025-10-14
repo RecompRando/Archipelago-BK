@@ -3,6 +3,25 @@ from .Constants import *
 def rgn_connection_string(rgn1, rgn2):
     return str(rgn1) + " -> " + str(rgn2)
 
+def has_tokens_for_all_transforms(state, player):
+    return state.has(ITEM_MUMBO_TOKEN, player, 75)
+
+def can_smash_mm_huts(state, player):
+    return
+    (
+        state.has(ITEM_BEAK_BUSTER, player) and
+        (
+            state.has(ITEM_JUMP, player) or
+            state.has(ITEM_FLAP_FLIP, player)    #required to get on top of the huts
+        )
+    )
+
+def has_mm_jinjos(state, player):
+    return
+    (
+        can_smash_mm_huts(state, player)
+    )
+
 def get_region_rules(player, options):
     return {
         rgn_connection_string(RGN_SPIRAL_MOUNTAIN, RGN_GRUNTILDAS_LAIR):
@@ -13,7 +32,7 @@ def get_region_rules(player, options):
 
 def get_location_rules(player, options):
     return {
-        LOC_EMPTY_HONEYCOMB_SM_LOG: (
+        LOC_EMPTY_HONEYCOMB_SM_LOG:
             lambda state:
             (
                 state.has(ITEM_FLAP_FLIP, player) or
@@ -24,9 +43,8 @@ def get_location_rules(player, options):
                         state.has(ITEM_FEATHERY_FLAP, player)
                     )
                 )
-            )
-        ),
-        LOC_EMPTY_HONEYCOMB_SM_WATERFALL: (
+            ),
+        LOC_EMPTY_HONEYCOMB_SM_WATERFALL:
             lambda state:
             (
                 state.has(ITEM_JUMP, player) and
@@ -34,9 +52,8 @@ def get_location_rules(player, options):
                     state.has(ITEM_RAT_A_TAT_RAP, player) or
                     state.has(ITEM_FEATHERY_FLAP, player)
                 )
-            )
-        ),
-        LOC_EMPTY_HONEYCOMB_SM_TREE: (
+            ),
+        LOC_EMPTY_HONEYCOMB_SM_TREE:
             lambda state:
             (
                 state.has(ITEM_CLIMB, player) and
@@ -45,26 +62,22 @@ def get_location_rules(player, options):
                     state.has(ITEM_FLAP_FLIP, player) or
                     state.has(ITEM_BEAK_BUSTER, player)
                 )
-            )
-        ),
-        LOC_EMPTY_HONEYCOMB_SM_UNDERWATER: (
+            ),
+        LOC_EMPTY_HONEYCOMB_SM_UNDERWATER:
             lambda state:
             (
                 state.has(ITEM_SWIM, player)
-            )
-        ),
-        LOC_EMPTY_HONEYCOMB_SM_ROCK: (
+            ),
+        LOC_EMPTY_HONEYCOMB_SM_ROCK:
             lambda state:
             (
                 state.has(ITEM_BEAK_BARGE, player)
-            )
-        ),
-        LOC_EMPTY_HONEYCOMB_SM_COLLIWOBBLE: (
+            ),
+        LOC_EMPTY_HONEYCOMB_SM_COLLIWOBBLE:
             lambda state:
             (
                 state.has(ITEM_RAT_A_TAT_RAP, player)
-            )
-        ),
+            ),
         LOC_JIGGY_GL_ENTRYWAY:
             lambda state: True,
         LOC_JIGGY_GL_ATOP_MUMBOS_MOUNTAIN:
@@ -239,11 +252,7 @@ def get_location_rules(player, options):
         LOC_JIGGY_MM_HUT:
             lambda state:
             (
-                state.has(ITEM_BEAK_BUSTER, player) and
-                (
-                    state.has(ITEM_JUMP, player) or
-                    state.has(ITEM_FLAP_FLIP, player)    #required to get on top of the huts
-                )
+                can_smash_mm_huts(state, player)
             ),
         LOC_JIGGY_MM_MOUNTAINTOP:
             lambda state:
@@ -253,11 +262,7 @@ def get_location_rules(player, options):
         LOC_JIGGY_MM_JINJO:
             lambda state:
             (
-                state.has(ITEM_MM_BLUE_JINJO, player) and
-                state.has(ITEM_MM_GREEN_JINJO, player) and
-                state.has(ITEM_MM_ORANGE_JINJO, player) and
-                state.has(ITEM_MM_PURPLE_JINJO, player) and
-                state.has(ITEM_MM_YELLOW_JINJO, player)
+                has_mm_jinjos(state, player)
             ),
         LOC_EMPTY_HONEYCOMB_MM_HILLSIDE:
             lambda state: True,
@@ -311,10 +316,10 @@ def get_location_rules(player, options):
                 )
             ),
         LOC_JIGGY_TTC_BLUBBER:
-            lambda state:
-            (
-                state.has(ITEM_BLUBBER_GOLD, player, 2)
-            ),
+            lambda state: True,
+            # ~ (
+                # ~ state.has(ITEM_BLUBBER_GOLD, player, 2)
+            # ~ ),
         LOC_JIGGY_TTC_SANDCASTLE:
             lambda state:
             (

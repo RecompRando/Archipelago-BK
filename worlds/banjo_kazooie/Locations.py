@@ -376,10 +376,10 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_RUSTY_BUCKET_BAY,
         address=0x00000051
     ),
-#    "GLTF Secret Prize": BKLocationData(
-#        region=RGN_GRUNTILDAS_LAIR,
-#        address=0x05000000
-#    ),
+    "GLTF Secret Prize": BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR,
+        address=0x05000000
+    ),
     LOC_JIGGY_CCW_TREETOP_ROOM: BKLocationData(
         region=RGN_CLICK_CLOCK_WOOD,
         address=0x00000050
@@ -804,7 +804,7 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_GRUNTILDAS_LAIR,
         address=0x0300003A
     ),
-   LOC_MUMBO_TOKEN_MMM_NEAR_SHACK: BKLocationData(
+    LOC_MUMBO_TOKEN_MMM_NEAR_SHACK: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x03000034
     ),

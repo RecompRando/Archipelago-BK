@@ -17,107 +17,107 @@ class BKItemData(NamedTuple):
 
 
 item_data_table: Dict[str, BKItemData] = {
-    "Jump": BKItemData(
+    ITEM_JUMP: BKItemData(
         code=0x0400000A,
         type=ItemClassification.progression
     ),
-    "Feathery Flap": BKItemData(
+    ITEM_FEATHERY_FLAP: BKItemData(
         code=0x04000007,
         type=ItemClassification.progression
     ),
-    "Flap Flip": BKItemData(
+    ITEM_FLAP_FLIP: BKItemData(
         code=0x04000008,
         type=ItemClassification.progression
     ),
-    "Swim": BKItemData(
+    ITEM_SWIM: BKItemData(
         code=0x0400000F,
         type=ItemClassification.progression
     ),
-    "Climb": BKItemData(
+    ITEM_CLIMB: BKItemData(
         code=0x04000005,
         type=ItemClassification.progression
     ),
-    "Beak Barge": BKItemData(
+    ITEM_BEAK_BARGE: BKItemData(
         code=0x04000000,
         type=ItemClassification.progression
     ),
-    "Claw Swipe": BKItemData(
+    ITEM_CLAW_SWIPE: BKItemData(
         code=0x04000004,
         type=ItemClassification.progression
     ),
-    "Roll": BKItemData(
+    ITEM_ROLL: BKItemData(
         code=0x0400000C,
         type=ItemClassification.progression
     ),
-    "Rat-A-Tat Rap": BKItemData(
+    ITEM_RAT_A_TAT_RAP: BKItemData(
         code=0x0400000B,
         type=ItemClassification.progression
     ),
-    "Eggs": BKItemData(
+    ITEM_EGGS: BKItemData(
         code=0x04000006,
         type=ItemClassification.progression
     ),
-    "Talon Trot": BKItemData(
+    ITEM_TALON_TROT: BKItemData(
         code=0x04000010,
         type=ItemClassification.progression
     ),
-    "Talon Trot Speed Upgrade": BKItemData(
-        code=0x04000011,
+    ITEM_TALON_TROT_SPEED_ONLY: BKItemData(
+        code=0x04000013,
         type=ItemClassification.progression
     ),
-    "Beak Buster": BKItemData(
+    ITEM_BEAK_BUSTER: BKItemData(
         code=0x04000002,
         type=ItemClassification.progression
     ),
-    "Flight": BKItemData(
+    ITEM_FLIGHT: BKItemData(
         code=0x04000009,
         type=ItemClassification.progression
     ),
-    "Shock Spring Jump": BKItemData(
+    ITEM_SHOCK_SPRING_JUMP: BKItemData(
         code=0x0400000D,
         type=ItemClassification.progression
     ),
-    "Wonderwing": BKItemData(
+    ITEM_WONDERWING: BKItemData(
         code=0x04000012,
         type=ItemClassification.progression
     ),
-    "Stilt Stride": BKItemData(
+    ITEM_STILT_STRIDE: BKItemData(
         code=0x0400000E,
         type=ItemClassification.progression
     ),
-    "Beak Bomb": BKItemData(
+    ITEM_BEAK_BOMB: BKItemData(
         code=0x04000001,
         type=ItemClassification.progression
     ),
-    "Turbo Talon Trot": BKItemData(
+    ITEM_TURBO_TALON_TROT: BKItemData(
         code=0x04000011,
         type=ItemClassification.progression
     ),
-    "Jiggy": BKItemData(
+    ITEM_JIGGY: BKItemData(
         code=0x0001FBE2,
         type=ItemClassification.progression,
         num_exist=100
     ),
-    "Mumbo Token": BKItemData(
+    ITEM_MUMBO_TOKEN: BKItemData(
         code=0x0001FBE3,
         type=ItemClassification.progression,
         num_exist=116
     ),
-    "Note": BKItemData(
+    ITEM_NOTE: BKItemData(
         code=0x0001FBE4,
         type=ItemClassification.progression,
         num_exist=900
     ),
-    "Empty Honeycomb Piece": BKItemData(
+    ITEM_EMPTY_HONEYCOMB: BKItemData(
         code=0x0001FBE5,
         type=ItemClassification.useful,
         num_exist=24
     ),
-    "Acorn": BKItemData(
-        code=0x0001FBE5,
-        type=ItemClassification.useful,
-        num_exist=24
-    ),
+    # ~ "Acorn": BKItemData(
+        # ~ code=0x0001FBE5,
+        # ~ type=ItemClassification.useful,
+        # ~ num_exist=24
+    # ~ ),
     "BLUEEGGS Cheato": BKItemData(
         code=0x0001FBE6,
         type=ItemClassification.useful,
@@ -133,7 +133,7 @@ item_data_table: Dict[str, BKItemData] = {
         type=ItemClassification.useful,
         can_create=lambda options: False
     ),
-    "Double Health": BKItemData(
+    ITEM_DOUBLE_HEALTH: BKItemData(
         code=0x0001FBE9,
         type=ItemClassification.useful
     ),
@@ -172,7 +172,7 @@ item_data_table: Dict[str, BKItemData] = {
         type=ItemClassification.progression,
         can_create=lambda options: False
     ),
-    "Honeycomb": BKItemData(
+    ITEM_HONEYCOMB: BKItemData(
         code=0x0001FBF1,
         type=ItemClassification.filler,
         can_create=lambda options: False
@@ -192,7 +192,7 @@ item_data_table: Dict[str, BKItemData] = {
         type=ItemClassification.filler,
         can_create=lambda options: False
     ),
-    "Extra Life": BKItemData(
+    ITEM_EXTRA_LIFE: BKItemData(
         code=0x0001FBF5,
         type=ItemClassification.filler,
         can_create=lambda options: False
