@@ -487,15 +487,15 @@ location_data_table: Dict[str, BKLocationData] = {
     ),
     LOC_EMPTY_HONEYCOMB_SM_COLLIWOBBLE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
-        address=0x02000018
+        address=0x02000017
     ),
     LOC_EMPTY_HONEYCOMB_MM_HILLSIDE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
-        address=0x02000017
+        address=0x02000001
     ),
     LOC_EMPTY_HONEYCOMB_MM_TOTEM: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
-        address=0x02000017
+        address=0x02000002
     ),
     LOC_EMPTY_HONEYCOMB_TTC_UNDERWATER: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
@@ -575,7 +575,7 @@ location_data_table: Dict[str, BKLocationData] = {
     ),
     LOC_MUMBO_TOKEN_GL_ABOVE_CC_ENTRANCE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
-        address=0x03000052
+        address=0x03000054
     ),
     LOC_MUMBO_TOKEN_GL_BEHIND_SARCOPHAGUS: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
@@ -603,15 +603,15 @@ location_data_table: Dict[str, BKLocationData] = {
     ),
     LOC_MUMBO_TOKEN_MM_BEHIND_PINK_JINJO: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
-        address=0x00000009
+        address=0x03000004
     ),
     LOC_MUMBO_TOKEN_MM_CHIMPY: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
-        address=0x00000009
+        address=0x03000001
     ),
     LOC_MUMBO_TOKEN_MM_STONEHENGE: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
-        address=0x00000009
+        address=0x03000002
     ),
     LOC_MUMBO_TOKEN_MM_MUMBOS_HUT: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
@@ -631,7 +631,7 @@ location_data_table: Dict[str, BKLocationData] = {
     ),
     LOC_MUMBO_TOKEN_TTC_HOLD: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
-        address=0x03000009
+        address=0x03000006
     ),
     LOC_MUMBO_TOKEN_TTC_SHOCK_SPRING: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
