@@ -94,26 +94,26 @@ item_data_table: Dict[str, BKItemData] = {
         code=0x04000011,
         type=ItemClassification.progression
     ),
-    ITEM_JINJO_MM_BLUE: BKItemData(
-        code=None,
-        type=ItemClassification.progression
-    ),
-    ITEM_JINJO_MM_GREEN: BKItemData(
-        code=None,
-        type=ItemClassification.progression
-    ),
-    ITEM_JINJO_MM_ORANGE: BKItemData(
-        code=None,
-        type=ItemClassification.progression
-    ),
-    ITEM_JINJO_MM_PURPLE: BKItemData(
-        code=None,
-        type=ItemClassification.progression
-    ),
-    ITEM_JINJO_MM_YELLOW: BKItemData(
-        code=None,
-        type=ItemClassification.progression
-    ),
+    # ~ ITEM_JINJO_MM_BLUE: BKItemData(
+        # ~ code=None,
+        # ~ type=ItemClassification.progression
+    # ~ ),
+    # ~ ITEM_JINJO_MM_GREEN: BKItemData(
+        # ~ code=None,
+        # ~ type=ItemClassification.progression
+    # ~ ),
+    # ~ ITEM_JINJO_MM_ORANGE: BKItemData(
+        # ~ code=None,
+        # ~ type=ItemClassification.progression
+    # ~ ),
+    # ~ ITEM_JINJO_MM_PURPLE: BKItemData(
+        # ~ code=None,
+        # ~ type=ItemClassification.progression
+    # ~ ),
+    # ~ ITEM_JINJO_MM_YELLOW: BKItemData(
+        # ~ code=None,
+        # ~ type=ItemClassification.progression
+    # ~ ),
     ITEM_JIGGY: BKItemData(
         code=0x0001FBE2,
         type=ItemClassification.progression,

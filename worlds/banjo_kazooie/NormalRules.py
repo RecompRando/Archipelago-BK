@@ -30,6 +30,8 @@ def get_region_rules(player, options):
             lambda state: True,
         rgn_connection_string(RGN_GRUNTILDAS_LAIR, RGN_MUMBOS_MOUNTAIN):
             lambda state: state.has(ITEM_JIGGY, player),
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR, RGN_TREASURE_TROVE_COVE):
+            lambda state: True,
     }
 
 def get_location_rules(player, options):
