@@ -7,8 +7,7 @@ def has_tokens_for_all_transforms(state, player):
     return state.has(ITEM_MUMBO_TOKEN, player, 75)
 
 def can_smash_mm_huts(state, player):
-    return
-    (
+    return (
         state.has(ITEM_BEAK_BUSTER, player) and
         (
             state.has(ITEM_JUMP, player) or
@@ -17,16 +16,14 @@ def can_smash_mm_huts(state, player):
     )
 
 def can_traverse_bgs(state, player):
-    return
-    (
+    return (
         state.has(ITEM_JUMP, player) or
         state.has(ITEM_FEATHERY_FLAP, player) or  # required to access most of the level
         state.has(ITEM_FLAP_FLIP, player)
     )
 
 def can_reach_eyrie(state, player):
-    return
-    (
+    return (
         state.has(ITEM_TALON_TROT, player) and
         state.has(ITEM_JUMP, player) and
         state.has(ITEM_FEATHERY_FLAP, player) and
