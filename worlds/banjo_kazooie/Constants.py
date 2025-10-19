@@ -153,12 +153,16 @@ LOC_TRANSFORMATION_WALRUS = "Walrus"
 LOC_TRANSFORMATION_PUMPKIN = "Pumpkin"
 LOC_TRANSFORMATION_BEE = "Bee"
 
-# Molehills - Spiral Mountain
-LOC_MOLEHILL_SM_COMBAT_VEGGIE_PATCH = "SM Molehill - Combat Tutorial Veggie Patch"
-LOC_MOLEHILL_SM_ROCKS = "SM Molehill - Rocks"
-LOC_MOLEHILL_SM_NEAR_MOUNTAIN_BRIDGE = "SM Molehill - Near Mountain Bridge"
-LOC_MOLEHILL_SM_NEAR_RIVER = "SM Molehill - Near River"
-LOC_MOLEHILL_SM_IN_FRONT_OF_STUMP = "SM Molehill - In Front of Stump"
+# Molehills Spiral Mountain
+LOC_MOLEHILL_SM_COMBAT_VEGGIE_PATCH_1 = "SM Molehill Combat Tutorial Veggie Patch (1)"
+LOC_MOLEHILL_SM_COMBAT_VEGGIE_PATCH_2 = "SM Molehill Combat Tutorial Veggie Patch (2)"
+LOC_MOLEHILL_SM_COMBAT_VEGGIE_PATCH_3 = "SM Molehill Combat Tutorial Veggie Patch (3)"
+LOC_MOLEHILL_SM_ROCKS = "SM Molehill Rocks"
+LOC_MOLEHILL_SM_NEAR_MOUNTAIN_BRIDGE = "SM Molehill Near Mountain Bridge"
+LOC_MOLEHILL_SM_NEAR_RIVER = "SM Molehill Near River"
+LOC_MOLEHILL_SM_IN_FRONT_OF_STUMP_1 = "SM Molehill In Front of Stump (1)"
+LOC_MOLEHILL_SM_IN_FRONT_OF_STUMP_2 = "SM Molehill In Front of Stump (2)"
+LOC_MOLEHILL_SM_IN_FRONT_OF_STUMP_3 = "SM Molehill In Front of Stump (3)"
 
 LOC_EMPTY_HONEYCOMB_SM_LOG = "SM Empty Honeycomb Piece on Log"
 LOC_EMPTY_HONEYCOMB_SM_WATERFALL = "SM Empty Honeycomb Piece Behind Waterfall"
@@ -188,10 +192,10 @@ LOC_MUMBO_TOKEN_GL_BELOW_RBB_ENTRANCE = "GL Mumbo Token Below RBB Entrance"
 LOC_MUMBO_TOKEN_GL_BY_MMM_PODIUM = "GL Mumbo Token By MMM Jiggy Podium"
 LOC_MUMBO_TOKEN_GL_NEAR_CCW_PODIUM_SWITCH = "GL Mumbo Token Near CCW Jiggy Podium Switch"
 
-# Molehills - Mumbo's Mountain
-LOC_MOLEHILL_MM_AFTER_CHIMPYS_STUMP = "MM Molehill - After Chimpy's Stump"
-LOC_MOLEHILL_MM_STONEHENGE = "MM Molehill - Stonehenge"
-LOC_MOLEHILL_MM_HUTS = "MM Molehill - Huts"
+# Molehills Mumbo's Mountain
+LOC_MOLEHILL_MM_AFTER_CHIMPYS_STUMP = "MM Molehill After Chimpy's Stump"
+LOC_MOLEHILL_MM_STONEHENGE = "MM Molehill Stonehenge"
+LOC_MOLEHILL_MM_HUTS = "MM Molehill Huts"
 
 LOC_JINJO_MM_BLUE = "MM Blue Jinjo"
 LOC_JINJO_MM_GREEN = "MM Green Jinjo"
@@ -216,9 +220,9 @@ LOC_MUMBO_TOKEN_MM_STONEHENGE = "MM Stonehenge Mumbo Token"
 LOC_MUMBO_TOKEN_MM_MUMBOS_HUT = "MM Mumbo Token Near Mumbo's Hut"
 LOC_MUMBO_TOKEN_MM_TERMITE_MOUND = "MM Termite Mound Mumbo Token"
 
-# Molehills - Treasure Trove Cove
-LOC_MOLEHILL_TTC_MAST = "TTC Molehill - Ship Mast"
-LOC_MOLEHILL_TTC_NEAR_SANDCASTLE = "TTC Molehill - Near Sandcastle"
+# Molehills Treasure Trove Cove
+LOC_MOLEHILL_TTC_MAST = "TTC Molehill Ship Mast"
+LOC_MOLEHILL_TTC_NEAR_SANDCASTLE = "TTC Molehill Near Sandcastle"
 
 LOC_JINJO_TTC_BLUE = "TTC Blue Jinjo"
 LOC_JINJO_TTC_GREEN = "TTC Green Jinjo"
@@ -248,8 +252,8 @@ LOC_MUMBO_TOKEN_TTC_POOL = "TTC Underwater Pool Mumbo Token"
 LOC_MUMBO_TOKEN_TTC_CRATE = "TTC Mumbo Token Atop Floating Crate"
 LOC_MUMBO_TOKEN_TTC_LIGHTHOUSE = "TTC Lighthouse Mumbo Token"
 
-# Molehills - Clanker's Cavern
-LOC_MOLEHILL_CC_NEAR_SPINNING_BLADES = "CC Molehill - Near Spinning Blades"
+# Molehills Clanker's Cavern
+LOC_MOLEHILL_CC_NEAR_SPINNING_BLADES = "CC Molehill Near Spinning Blades"
 
 LOC_JINJO_CC_BLUE = "CC Blue Jinjo"
 LOC_JINJO_CC_GREEN = "CC Green Jinjo"
@@ -274,8 +278,8 @@ LOC_MUMBO_TOKEN_CC_CLANKER_GOLD_TEETH = "CC Clanker's Gold Teeth Mumbo Token"
 LOC_MUMBO_TOKEN_CC_GRATE = "CC Wall Grate Mumbo Token"
 LOC_MUMBO_TOKEN_CC_UNDERWATER_TUNNEL = "CC Underwater Tunnel Mumbo Token"
 
-# Molehills - Bubblegloop Swamp
-LOC_MOLEHILL_BGS_BEHIND_WORLD_ENTRY = "BGS Molehill - Behind World Entry"
+# Molehills Bubblegloop Swamp
+LOC_MOLEHILL_BGS_BEHIND_WORLD_ENTRY = "BGS Molehill Behind World Entry"
 
 LOC_JINJO_BGS_BLUE = "BGS Blue Jinjo"
 LOC_JINJO_BGS_GREEN = "BGS Green Jinjo"
@@ -292,7 +296,7 @@ LOC_JIGGY_BGS_MUMBOS_HUT_RACE = "BGS Race Near Mumbo's Hut Jiggy"
 LOC_JIGGY_BGS_CROCTUS = "BGS Croctus Jiggy"
 LOC_JIGGY_BGS_MR_VILE = "BGS Mr. Vile's Jiggy"
 LOC_JIGGY_BGS_JINJO = "BGS Jinjo Jiggy"
-LOC_EMPTY_HONEYCOMB_BGS_TIPTOP_STAND = "BGS Empty Honeycomb Piece Above Tiptup's Stand"
+LOC_EMPTY_HONEYCOMB_BGS_TIPTUP_STAND = "BGS Empty Honeycomb Piece Above Tiptup's Stand"
 LOC_EMPTY_HONEYCOMB_BGS_INSIDE_MUMBOS_HUT = "BGS Empty Honeycomb Piece Inside Mumbo's Hut"
 LOC_MUMBO_TOKEN_BGS_BEHIND_YELLOW_JINJO = "BGS Mumbo Token Behind Yellow Jinjo"
 LOC_MUMBO_TOKEN_BGS_ATOP_CATTAIL = "BGS Mumbo Token Atop Cattail"
@@ -305,8 +309,8 @@ LOC_MUMBO_TOKEN_BGS_UNDER_HUTS_LEFT = "BGS Left Mumbo Token Under Huts"
 LOC_MUMBO_TOKEN_BGS_UNDER_HUTS_RIGHT = "BGS Right Mumbo Token Under Huts"
 LOC_MUMBO_TOKEN_BGS_INSIDE_MR_VILE = "BGS Mumbo Token Inside Mr. Vile"
 
-# Molehills - Freezeezy Peak
-LOC_MOLEHILL_FP_NEXT_TO_STACK_OF_PRESENTS = "FP Molehill - Next to Stack of Presents"
+# Molehills Freezeezy Peak
+LOC_MOLEHILL_FP_NEXT_TO_STACK_OF_PRESENTS = "FP Molehill Next to Stack of Presents"
 
 LOC_JINJO_FP_BLUE = "FP Blue Jinjo"
 LOC_JINJO_FP_GREEN = "FP Green Jinjo"
@@ -336,8 +340,8 @@ LOC_MUMBO_TOKEN_FP_LARGE_SNOWMAN_RIGHT = "FP Right Mumbo Token Under Large Snowm
 LOC_MUMBO_TOKEN_FP_UNDER_CHRISTMAS_TREE = "FP Mumbo Token Under Christmas Tree"
 LOC_MUMBO_TOKEN_FP_UNDERWATER = "FP Mumbo Token Underwater Near Scarf"
 
-# Molehills - Gobi's Valley
-LOC_MOLEHILL_GV_NEAR_KAZOOIE_PYRAMID = "GV Molehill - Near Kazooie Pyramid"
+# Molehills Gobi's Valley
+LOC_MOLEHILL_GV_NEAR_KAZOOIE_PYRAMID = "GV Molehill Near Kazooie Pyramid"
 
 LOC_JINJO_GV_BLUE = "GV Blue Jinjo"
 LOC_JINJO_GV_GREEN = "GV Green Jinjo"
@@ -481,13 +485,24 @@ LOC_DEFEAT_GRUNTILDA = "Defeat Gruntilda"
 
 RGN_MENU = "Menu"
 RGN_SPIRAL_MOUNTAIN = "Spiral Mountain"
-RGN_GRUNTILDAS_LAIR = "Gruntilda's Lair"
+RGN_GRUNTILDAS_LAIR_LOBBY = "Gruntilda's Lair Lobby"
+RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR = "Gruntilda's Lair 50 Note Door"
 RGN_MUMBOS_MOUNTAIN = "Mumbo's Mountain"
 RGN_TREASURE_TROVE_COVE = "Treasure Trove Cove"
 RGN_CLANKERS_CAVERN = "Clanker's Cavern"
+RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR = "Gruntilda's Lair 180 Note Door"
 RGN_BUBBLEGLOOP_SWAMP = "Bubblegloop Swamp"
+RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR = "Gruntilda's Lair 260 Note Door"
 RGN_FREEZEEZY_PEAK = "Freezeezy Peak"
 RGN_GOBIS_VALLEY = "Gobi's Valley"
+RGN_GRUNTILDAS_LAIR_350_NOTE_DOOR = "Gruntilda's Lair 350 Note Door"
 RGN_MAD_MONSTER_MANSION = "Mad Monster Mansion"
+RGN_GRUNTILDAS_LAIR_450_NOTE_DOOR = "Gruntilda's Lair 450 Note Door"
 RGN_RUSTY_BUCKET_BAY = "Rusty Bucket Bay"
+RGN_GRUNTILDAS_LAIR_640_NOTE_DOOR = "Gruntilda's Lair 640 Note Door"
 RGN_CLICK_CLOCK_WOOD = "Click Clock Wood"
+RGN_GRUNTILDAS_LAIR_765_NOTE_DOOR = "Gruntilda's Lair 765 Note Door"
+RGN_GRUNTILDAS_LAIR_FURNACE_FUN = "Gruntilda's Lair Furnace Fun"
+RGN_GRUNTILDAS_LAIR_810_NOTE_DOOR = "Gruntilda's Lair 810 Note Door"
+RGN_GRUNTILDAS_LAIR_882_NOTE_DOOR = "Gruntilda's Lair 882 Note Door"
+RGN_GRUNTILDAS_LAIR_FIGHT = "Gruntilda's Lair Grunty Fight"

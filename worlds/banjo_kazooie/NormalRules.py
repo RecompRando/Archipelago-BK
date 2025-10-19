@@ -38,20 +38,122 @@ def can_reach_eyrie(state, player):
 
 def get_region_rules(player, options):
     return {
-        rgn_connection_string(RGN_SPIRAL_MOUNTAIN, RGN_GRUNTILDAS_LAIR):
+        rgn_connection_string(RGN_SPIRAL_MOUNTAIN, RGN_GRUNTILDAS_LAIR_LOBBY):
             lambda state: True,
-        rgn_connection_string(RGN_GRUNTILDAS_LAIR, RGN_MUMBOS_MOUNTAIN):
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_LOBBY, RGN_MUMBOS_MOUNTAIN):
             lambda state:
             (
                 state.has(ITEM_JIGGY, player)
             ),
-        rgn_connection_string(RGN_GRUNTILDAS_LAIR, RGN_TREASURE_TROVE_COVE):
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_LOBBY, RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR):
             lambda state:
             (
-                state.has(ITEM_JIGGY, player, 2) and
-                state.has(ITEM_NOTE, player, 50) and
+                state.has(ITEM_NOTE, player, 50)
+            ),
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR, RGN_TREASURE_TROVE_COVE):
+            lambda state:
+            (
+                state.has(ITEM_JIGGY, player, 15) and  # 1+2+5+7
                 state.has(ITEM_TALON_TROT, player)
             ),
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR, RGN_CLANKERS_CAVERN):
+            lambda state:
+            (
+                state.has(ITEM_JIGGY, player, 15)  # 1+2+5+7
+            ),
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR):
+            lambda state:
+            (
+                state.has(ITEM_NOTE, player, 180) and
+                state.has(ITEM_TALON_TROT, player)
+            ),
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR, RGN_BUBBLEGLOOP_SWAMP):
+            lambda state:
+            (
+                state.has(ITEM_JIGGY, player, 23) and
+                state.has(ITEM_TALON_TROT, player)  # 1+2+5+7+8
+            ),
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR):
+            lambda state:
+            (
+                state.has(ITEM_NOTE, player, 260) and
+                state.has(ITEM_TALON_TROT, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR, RGN_FREEZEEZY_PEAK):
+            lambda state:
+            (
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                state.has(ITEM_JIGGY, player, 32)  # 1+2+5+7+8+9
+            ),
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR, RGN_GOBIS_VALLEY):
+            lambda state:
+            (
+                state.has(ITEM_JIGGY, player, 32) and  # 1+2+5+7+8+9
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_350_NOTE_DOOR):
+            lambda state:
+            (
+                state.has(ITEM_NOTE, player, 350)
+            ),
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_350_NOTE_DOOR, RGN_MAD_MONSTER_MANSION):
+            lambda state:
+            (
+                state.has(ITEM_JIGGY, player, 54)  # 1+2+5+7+8+9+10+12
+            ),
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_350_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_450_NOTE_DOOR):
+            lambda state:
+            (
+                state.has(ITEM_NOTE, player, 450)
+            ),
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_350_NOTE_DOOR, RGN_MAD_MONSTER_MANSION):
+            lambda state:
+            (
+                state.has(ITEM_JIGGY, player, 54)  # 1+2+5+7+8+9+10+12
+            ),
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_450_NOTE_DOOR, RGN_RUSTY_BUCKET_BAY):
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player) and
+                state.has(ITEM_JIGGY, player, 54)  # 1+2+5+7+8+9+10+12
+            ),
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_450_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_640_NOTE_DOOR):
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player) and
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_NOTE, player, 640)
+            ),
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_640_NOTE_DOOR, RGN_CLICK_CLOCK_WOOD):
+            lambda state:
+            (
+                state.has(ITEM_JIGGY, player, 69) and  # 1+2+5+7+8+9+10+12+15
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_640_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_765_NOTE_DOOR):
+            lambda state:
+            (
+                state.has(ITEM_NOTE, player, 765) and
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_765_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_FURNACE_FUN):
+            lambda state: True,
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_FURNACE_FUN, RGN_GRUNTILDAS_LAIR_810_NOTE_DOOR):
+            lambda state:
+            (
+                state.has(ITEM_NOTE, player, 810) and
+                state.has(ITEM_JIGGY, player, 94)
+            ),
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_810_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_882_NOTE_DOOR):
+            lambda state:
+            (
+                state.has(ITEM_NOTE, player, 882)
+            ),
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_882_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_FIGHT):
+            lambda state: True,
     }
 
 def get_location_rules(player, options):
@@ -324,7 +426,11 @@ def get_location_rules(player, options):
                 state.has(ITEM_TALON_TROT, player) and
                 state.has(ITEM_STILT_STRIDE, player)
             ),
-        LOC_MOLEHILL_SM_COMBAT_VEGGIE_PATCH:
+        LOC_MOLEHILL_SM_COMBAT_VEGGIE_PATCH_1:
+            lambda state: True,
+        LOC_MOLEHILL_SM_COMBAT_VEGGIE_PATCH_2:
+            lambda state: True,
+        LOC_MOLEHILL_SM_COMBAT_VEGGIE_PATCH_3:
             lambda state: True,
         LOC_MOLEHILL_SM_ROCKS:
             lambda state: True,
@@ -332,7 +438,11 @@ def get_location_rules(player, options):
             lambda state: True,
         LOC_MOLEHILL_SM_NEAR_RIVER:
             lambda state: True,
-        LOC_MOLEHILL_SM_IN_FRONT_OF_STUMP:
+        LOC_MOLEHILL_SM_IN_FRONT_OF_STUMP_1:
+            lambda state: True,
+        LOC_MOLEHILL_SM_IN_FRONT_OF_STUMP_2:
+            lambda state: True,
+        LOC_MOLEHILL_SM_IN_FRONT_OF_STUMP_3:
             lambda state: True,
         LOC_EMPTY_HONEYCOMB_SM_LOG:
             lambda state:
@@ -829,7 +939,7 @@ def get_location_rules(player, options):
             lambda state:
             (
                 state.has(ITEM_SWIM, player) and
-                state.has(ITEM_FLAP_FLIGHT, player)
+                state.has(ITEM_FLAP_FLIP, player)
             ),
         LOC_JIGGY_CC_CLANKER_RAISE:
             lambda state:
@@ -1107,7 +1217,7 @@ def get_location_rules(player, options):
                 state.has(ITEM_JINJO_BGS_PURPLE, player) and
                 state.has(ITEM_JINJO_BGS_YELLOW, player)
             ),
-        LOC_EMPTY_HONEYCOMB_BGS_TIPTOP_STAND:
+        LOC_EMPTY_HONEYCOMB_BGS_TIPTUP_STAND:
             lambda state:
             (
                 state.has(ITEM_FLAP_FLIP, player) and
