@@ -24,18 +24,272 @@ def can_traverse_bgs(state, player):
         state.has(ITEM_FLAP_FLIP, player)
     )
 
+def can_reach_eyrie(state, player):
+    return
+    (
+        state.has(ITEM_TALON_TROT, player) and
+        state.has(ITEM_JUMP, player) and
+        state.has(ITEM_FEATHERY_FLAP, player) and
+        state.has(ITEM_SHOCK_SPRING_JUMP, player)
+    )
+
 def get_region_rules(player, options):
     return {
         rgn_connection_string(RGN_SPIRAL_MOUNTAIN, RGN_GRUNTILDAS_LAIR):
             lambda state: True,
         rgn_connection_string(RGN_GRUNTILDAS_LAIR, RGN_MUMBOS_MOUNTAIN):
-            lambda state: state.has(ITEM_JIGGY, player),
+            lambda state:
+            (
+                state.has(ITEM_JIGGY, player)
+            ),
         rgn_connection_string(RGN_GRUNTILDAS_LAIR, RGN_TREASURE_TROVE_COVE):
-            lambda state: True,
+            lambda state:
+            (
+                state.has(ITEM_JIGGY, player, 2) and
+                state.has(ITEM_NOTE, player, 50) and
+                state.has(ITEM_TALON_TROT, player)
+            ),
     }
 
 def get_location_rules(player, options):
     return {
+        # Blubbers Gold
+        LOC_BLUBBER_GOLD_TTC_POOP_DECK:
+            lambda state:
+            (
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_BLUBBER_GOLD_TTC_HOLD_UNDERWATER:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player)
+            ),
+        # Presents
+        LOC_RED_PRESENT_FP_TREE:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) and
+                state.has(ITEM_FLAP_FLIP, player) or
+                (
+                    state.has(ITEM_JUMP, player) and
+                    state.has(ITEM_FEATHERY_FLAP, player)
+                )
+            ),
+        LOC_GREEN_PRESENT_FP_NEAR_RAMP:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                (
+                    state.has(ITEM_JUMP, player) and
+                    state.has(ITEM_FEATHERY_FLAP, player)
+                )
+            ),
+        LOC_BLUE_PRESENT_FP_GIANT_SNOWMAN_NOSE:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                state.has(ITEM_FLAP_FLIP, player) or
+                (
+                    state.has(ITEM_FLIGHT, player) and
+                    state.has(ITEM_FLAP_FLIP, player)
+                )
+            ),
+        # Worms
+        LOC_WORM_SUMMER_CCW_ENTRY_PATH:
+            lambda state: True,
+        LOC_WORM_SUMMER_CCW_SNAPPER_NEAR_BULL:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) and
+                state.has(ITEM_FEATHERY_FLAP, player)
+            ),
+        LOC_WORM_SUMMER_CCW_LEDGE_NEAR_MUMBO:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_WORM_SUMMER_CCW_OUTSIDE_MUMBO:
+            lambda state:
+            (
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        LOC_WORM_SUMMER_CCW_IN_DRIED_LAKE:
+            lambda state: True,
+        LOC_WORM_SUMMER_CCW_LEDGE_ABOVE_BRAMBLES:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player)
+            ),
+        LOC_WORM_SUMMER_CCW_NEAR_CABIN:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) and
+                state.has(ITEM_JUMP, player)
+            ),
+        LOC_WORM_SUMMER_CCW_NEAR_CABIN:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) and
+                state.has(ITEM_JUMP, player) and
+                state.has(ITEM_FEATHERY_FLAP, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        LOC_WORM_SUMMER_CCW_NEAR_NABNUTS_HOME:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) and
+                state.has(ITEM_JUMP, player) and
+                state.has(ITEM_FEATHERY_FLAP, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        # NOTE! The worms for Autumn will not spawn without feeding Eyrie in Summer (5 worms needed). ALSO! if you suck and die the worms respawn but Eyrie state is saved so you can get more worms than normally possible.
+        LOC_WORM_AUTUMN_CCW_ENTRY_LEAF_PILE:
+            lambda state:
+            (
+                can_reach_eyrie(state, player) and
+                state.has(ITEM_TALON_TROT, player)
+            ),
+        LOC_WORM_AUTUMN_CCW_RAMP_NEAR_LAKE:
+            lambda state:
+            (
+                can_reach_eyrie(state, player)
+            ),
+        LOC_WORM_AUTUMN_CCW_NEAR_STILT_BOOTS:
+            lambda state:
+            (
+                can_reach_eyrie(state, player) and
+                state.has(ITEM_TALON_TROT, player)
+            ),
+        LOC_WORM_AUTUMN_CCW_INSIDE_MUMBO_HUT:
+            lambda state:
+            (
+                can_reach_eyrie(state, player) and
+                state.has(ITEM_TALON_TROT, player) and
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_WORM_AUTUMN_CCW_LEAF_PILE_NEAR_BRAMBLES:
+            lambda state:
+            (
+                can_reach_eyrie(state, player) and
+                state.has(ITEM_TALON_TROT, player)
+            ),
+        LOC_WORM_AUTUMN_CCW_LEAF_PILE_NEAR_FLOWER:
+            lambda state:
+            (
+                can_reach_eyrie(state, player) and
+                state.has(ITEM_TALON_TROT, player)
+            ),
+        LOC_WORM_AUTUMN_CCW_LEDGE_ABOVE_BRAMBLES:
+            lambda state:
+            (
+                can_reach_eyrie(state, player) and
+                state.has(ITEM_TALON_TROT, player)
+            ),
+        LOC_WORM_AUTUMN_CCW_ATOP_BEEHIVE:
+            lambda state:
+            (
+                can_reach_eyrie(state, player) and
+                state.has(ITEM_TALON_TROT, player)
+            ),
+        LOC_WORM_AUTUMN_CCW_INSIDE_BEEHIVE:
+            lambda state:
+            (
+                can_reach_eyrie(state, player) and
+                state.has(ITEM_TALON_TROT, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_WORM_AUTUMN_CCW_BELOW_CABIN:
+            lambda state:
+            (
+                can_reach_eyrie(state, player) and
+                state.has(ITEM_TALON_TROT, player) and
+                state.has(ITEM_JUMP, player) and
+                state.has(ITEM_FEATHERY_FLAP, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        LOC_WORM_AUTUMN_CCW_INSIDE_NABNUTS_HOUSE:
+            lambda state:
+            (
+                can_reach_eyrie(state, player) and
+                state.has(ITEM_TALON_TROT, player) and
+                state.has(ITEM_JUMP, player) and
+                state.has(ITEM_FEATHERY_FLAP, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        LOC_WORM_AUTUMN_CCW_BEHIND_EYRIE:
+            lambda state:
+            (
+                can_reach_eyrie(state, player) and
+                state.has(ITEM_TALON_TROT, player) and
+                state.has(ITEM_JUMP, player) and
+                state.has(ITEM_FEATHERY_FLAP, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        LOC_WORM_AUTUMN_CCW_TREETOP_PAST_NEST:
+            lambda state:
+            (
+                can_reach_eyrie(state, player) and
+                state.has(ITEM_TALON_TROT, player) and
+                state.has(ITEM_JUMP, player) and
+                state.has(ITEM_FEATHERY_FLAP, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        # Acorns
+        LOC_ACORN_AUTUMN_CCW_BEHIND_UPPER_WINDOW:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) and
+                state.has(ITEM_JUMP, player) and
+                state.has(ITEM_FEATHERY_FLAP, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                state.has(ITEM_RAT_A_TAT_RAP, player) and
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_ACORN_AUTUMN_CCW_EDGE_OF_CIRCULAR_GAP_PATH:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) and
+                state.has(ITEM_JUMP, player) and
+                state.has(ITEM_FEATHERY_FLAP, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_ACORN_AUTUMN_CCW_MIDDLE_OF_CIRCULAR_GAP_PATH:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) and
+                state.has(ITEM_JUMP, player) and
+                state.has(ITEM_FEATHERY_FLAP, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        LOC_ACORN_AUTUMN_CCW_LEDGE_BELOW_CIRCULAR_GAP_PATH:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) and
+                state.has(ITEM_JUMP, player) and
+                state.has(ITEM_FEATHERY_FLAP, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        LOC_ACORN_AUTUMN_CCW_LOWER_SLOPED_PATH:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) and
+                state.has(ITEM_JUMP, player) and
+                state.has(ITEM_FEATHERY_FLAP, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        LOC_ACORN_AUTUMN_CCW_INSIDE_NABNUTS_HOUSE:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) and
+                state.has(ITEM_JUMP, player) and
+                state.has(ITEM_FEATHERY_FLAP, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
         LOC_TRANSFORMATION_TERMITE:
             lambda state:
             (
@@ -46,7 +300,7 @@ def get_location_rules(player, options):
             (
                 has_tokens_for_all_transforms(state, player) and
                 can_traverse_bgs(state, player) and
-                state.has("Stilt Stride", player)
+                state.has(ITEM_STILT_STRIDE, player)
             ),
         LOC_TRANSFORMATION_WALRUS:
             lambda state:
@@ -397,14 +651,13 @@ def get_location_rules(player, options):
                     state.has(ITEM_FLAP_FLIP, player)
                 )
             ),
-        LOC_JIGGY_TTC_SHOCK_SPRING: (
+        LOC_JIGGY_TTC_SHOCK_SPRING:
             lambda state:
             (
                 state.has(ITEM_SHOCK_SPRING_JUMP, player) or
                 state.has(ITEM_FLIGHT, player)
-            )
-        ),
-        LOC_JIGGY_TTC_X_MARK: (
+            ),
+        LOC_JIGGY_TTC_X_MARK:
             lambda state:
             (
                 state.has(ITEM_BEAK_BUSTER, player) and
@@ -422,8 +675,7 @@ def get_location_rules(player, options):
                         )
                     )
                 )
-            )
-        ),
+            ),
         LOC_JIGGY_TTC_POOL:
             lambda state:
             (
@@ -457,6 +709,39 @@ def get_location_rules(player, options):
                 state.has(ITEM_JINJO_TTC_PURPLE, player) and
                 state.has(ITEM_JINJO_TTC_YELLOW, player)
             ),
+        LOC_JINJO_TTC_BLUE:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_JINJO_TTC_GREEN:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) and
+                state.has(ITEM_CLIMB, player)
+            ),
+        LOC_JINJO_TTC_ORANGE:
+            lambda state: True,
+        LOC_JINJO_TTC_PURPLE:
+            lambda state:
+            (
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                state.has(ITEM_JUMP, player) or
+                (
+                    state.has(ITEM_FLIGHT, player) or
+                    (
+                        state.has(ITEM_FLAP_FLIP,player) and
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_FEATHERY_FLAP, player)
+                    )
+                )
+
+            ),
+        LOC_JINJO_TTC_YELLOW:
+            lambda state:
+            (
+                state.has(ITEM_FLIGHT, player)
+            ),
         LOC_EMPTY_HONEYCOMB_TTC_UNDERWATER:
             lambda state:
             (
@@ -478,13 +763,12 @@ def get_location_rules(player, options):
              state.has(ITEM_BEAK_BUSTER, player) and
              state.has(ITEM_SWIM, player)
             ),
-        LOC_MUMBO_TOKEN_TTC_SHOCK_SPRING: (
+        LOC_MUMBO_TOKEN_TTC_SHOCK_SPRING:
             lambda state:
             (
                 state.has(ITEM_SHOCK_SPRING_JUMP, player) or
                 state.has(ITEM_FLIGHT, player)
-            )
-        ),
+            ),
         LOC_MUMBO_TOKEN_TTC_X_MARK:
             lambda state: True,
         LOC_MUMBO_TOKEN_TTC_LOCKUP_LEFT:
@@ -1462,7 +1746,7 @@ def get_location_rules(player, options):
                 (
                     state.has(ITEM_RAT_A_TAT_RAP, player) or        #required to break window
                     state.has(ITEM_EGGS, player)                    #Wonderwing also works
-                )
+                ) and
                 (
                     state.has(ITEM_TRANSFORMATION_PUMPKIN, player) and
                     state.has(ITEM_FLAP_FLIP, player) and           #required to get to Mumbo's Skull
@@ -2008,7 +2292,7 @@ def get_location_rules(player, options):
                 ) and
                 state.has(ITEM_SHOCK_SPRING_JUMP, player) and
                 state.has(ITEM_BEAK_BUSTER, player) and
-                state.has(ITEM_CATERPILLAR, player, 15)
+                state.has(ITEM_WORM, player, 15)
             ),
         LOC_JIGGY_CCW_JINJO:
             lambda state:

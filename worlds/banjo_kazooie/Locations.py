@@ -16,51 +16,421 @@ class BKLocationData(NamedTuple):
     locked_item: Optional[str] = None
 
 location_data_table: Dict[str, BKLocationData] = {
-    # ~ LOC_TRANSFORMATION_TERMITE: BKLocationData(
-        # ~ region=RGN_MUMBOS_MOUNTAIN,
-        # ~ address=None,
-        # ~ locked_item=ITEM_TRANSFORMATION_TERMITE
-    # ~ ),
-    # ~ LOC_TRANSFORMATION_CROCODILE: BKLocationData(
-        # ~ region=RGN_BUBBLEGLOOP_SWAMP,
-        # ~ address=None,
-        # ~ locked_item=ITEM_TRANSFORMATION_CROCODILE
-    # ~ ),
-    # ~ LOC_TRANSFORMATION_WALRUS: BKLocationData(
-        # ~ region=RGN_FREEZEEZY_PEAK,
-        # ~ address=None,
-        # ~ locked_item=ITEM_TRANSFORMATION_WALRUS
-    # ~ ),
-    # ~ LOC_TRANSFORMATION_PUMPKIN: BKLocationData(
-        # ~ region=RGN_MAD_MONSTER_MANSION,
-        # ~ address=None,
-        # ~ locked_item=ITEM_TRANSFORMATION_PUMPKIN
-    # ~ ),
-    # ~ LOC_TRANSFORMATION_BEE: BKLocationData(
-        # ~ region=RGN_CLICK_CLOCK_WOOD,
-        # ~ address=None,
-        # ~ locked_item=ITEM_TRANSFORMATION_BEE
-    # ~ ),
-    # ~ LOC_JINJO_MM_BLUE: BKLocationData(
-        # ~ region=RGN_MUMBOS_MOUNTAIN,
-        # ~ address=None
-    # ~ ),
-    # ~ LOC_JINJO_MM_GREEN: BKLocationData(
-        # ~ region=RGN_MUMBOS_MOUNTAIN,
-        # ~ address=None
-    # ~ ),
-    # ~ LOC_JINJO_MM_ORANGE: BKLocationData(
-        # ~ region=RGN_MUMBOS_MOUNTAIN,
-        # ~ address=None
-    # ~ ),
-    # ~ LOC_JINJO_MM_PURPLE: BKLocationData(
-        # ~ region=RGN_MUMBOS_MOUNTAIN,
-        # ~ address=None
-    # ~ ),
-    # ~ LOC_JINJO_MM_YELLOW: BKLocationData(
-        # ~ region=RGN_MUMBOS_MOUNTAIN,
-        # ~ address=None
-    # ~ ),
+    LOC_TRANSFORMATION_TERMITE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_TRANSFORMATION_TERMITE
+    ),
+    LOC_TRANSFORMATION_CROCODILE: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=None,
+        locked_item=ITEM_TRANSFORMATION_CROCODILE
+    ),
+    LOC_TRANSFORMATION_WALRUS: BKLocationData(
+        region=RGN_FREEZEEZY_PEAK,
+        address=None,
+        locked_item=ITEM_TRANSFORMATION_WALRUS
+    ),
+    LOC_TRANSFORMATION_PUMPKIN: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
+        address=None,
+        locked_item=ITEM_TRANSFORMATION_PUMPKIN
+    ),
+    LOC_TRANSFORMATION_BEE: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_TRANSFORMATION_BEE
+    ),
+    LOC_BLUBBER_GOLD_TTC_POOP_DECK: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=None,
+        locked_item=ITEM_BLUBBER_GOLD
+    ),
+    LOC_BLUBBER_GOLD_TTC_HOLD_UNDERWATER: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=None,
+        locked_item=ITEM_BLUBBER_GOLD
+    ),
+    LOC_RED_PRESENT_FP_TREE: BKLocationData(
+        region=RGN_FREEZEEZY_PEAK,
+        address=None,
+        locked_item=ITEM_RED_PRESENT
+    ),
+    LOC_GREEN_PRESENT_FP_NEAR_RAMP: BKLocationData(
+        region=RGN_FREEZEEZY_PEAK,
+        address=None,
+        locked_item=ITEM_GREEN_PRESENT
+    ),
+    LOC_BLUE_PRESENT_FP_GIANT_SNOWMAN_NOSE: BKLocationData(
+        region=RGN_FREEZEEZY_PEAK,
+        address=None,
+        locked_item=ITEM_BLUE_PRESENT
+    ),
+    LOC_WORM_SUMMER_CCW_ENTRY_PATH: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_WORM
+    ),
+    LOC_WORM_SUMMER_CCW_SNAPPER_NEAR_BULL: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_WORM
+    ),
+    LOC_WORM_SUMMER_CCW_LEDGE_NEAR_MUMBO: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_WORM
+    ),
+    LOC_WORM_SUMMER_CCW_OUTSIDE_MUMBO: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_WORM
+    ),
+    LOC_WORM_SUMMER_CCW_IN_DRIED_LAKE: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_WORM
+    ),
+    LOC_WORM_SUMMER_CCW_LEDGE_ABOVE_BRAMBLES: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_WORM
+    ),
+    LOC_WORM_SUMMER_CCW_NEAR_CABIN: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_WORM
+    ),
+    LOC_WORM_SUMMER_CCW_ZUBBAS_NEST: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_WORM
+    ),
+    LOC_WORM_SUMMER_CCW_NEAR_NABNUTS_HOME: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_WORM
+    ),
+    LOC_WORM_AUTUMN_CCW_ENTRY_LEAF_PILE: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_WORM
+    ),
+    LOC_WORM_AUTUMN_CCW_RAMP_NEAR_LAKE: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_WORM
+    ),
+    LOC_WORM_AUTUMN_CCW_NEAR_STILT_BOOTS: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_WORM
+    ),
+    LOC_WORM_AUTUMN_CCW_INSIDE_MUMBO_HUT: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_WORM
+    ),
+    LOC_WORM_AUTUMN_CCW_LEAF_PILE_NEAR_BRAMBLES: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_WORM
+    ),
+    LOC_WORM_AUTUMN_CCW_LEAF_PILE_NEAR_FLOWER: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_WORM
+    ),
+    LOC_WORM_AUTUMN_CCW_LEDGE_ABOVE_BRAMBLES: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_WORM
+    ),
+    LOC_WORM_AUTUMN_CCW_ATOP_BEEHIVE: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_WORM
+    ),
+    LOC_WORM_AUTUMN_CCW_INSIDE_BEEHIVE: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_WORM
+    ),
+    LOC_WORM_AUTUMN_CCW_BELOW_CABIN: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_WORM
+    ),
+    LOC_WORM_AUTUMN_CCW_INSIDE_NABNUTS_HOUSE: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_WORM
+    ),
+    LOC_WORM_AUTUMN_CCW_BEHIND_EYRIE: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_WORM
+    ),
+    LOC_WORM_AUTUMN_CCW_TREETOP_PAST_NEST: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_WORM
+    ),
+    LOC_ACORN_AUTUMN_CCW_BEHIND_UPPER_WINDOW: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_ACORN
+    ),
+    LOC_ACORN_AUTUMN_CCW_EDGE_OF_CIRCULAR_GAP_PATH: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_ACORN
+    ),
+    LOC_ACORN_AUTUMN_CCW_MIDDLE_OF_CIRCULAR_GAP_PATH: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_ACORN
+    ),
+    LOC_ACORN_AUTUMN_CCW_LEDGE_BELOW_CIRCULAR_GAP_PATH: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_ACORN
+    ),
+    LOC_ACORN_AUTUMN_CCW_LOWER_SLOPED_PATH: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_ACORN
+    ),
+    LOC_ACORN_AUTUMN_CCW_INSIDE_NABNUTS_HOUSE: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_ACORN
+    ),
+    LOC_JINJO_MM_BLUE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_MM_BLUE
+    ),
+    LOC_JINJO_MM_GREEN: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_MM_GREEN
+    ),
+    LOC_JINJO_MM_ORANGE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_MM_ORANGE
+    ),
+    LOC_JINJO_MM_PURPLE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_MM_PURPLE
+    ),
+    LOC_JINJO_MM_YELLOW: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_MM_YELLOW
+    ),
+    LOC_JINJO_TTC_BLUE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_TTC_BLUE
+    ),
+    LOC_JINJO_TTC_GREEN: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_TTC_GREEN
+    ),
+    LOC_JINJO_TTC_ORANGE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_TTC_ORANGE
+    ),
+    LOC_JINJO_TTC_PURPLE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_TTC_PURPLE
+    ),
+    LOC_JINJO_TTC_YELLOW: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_TTC_YELLOW
+    ),
+    LOC_JINJO_CC_BLUE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_CC_BLUE
+    ),
+    LOC_JINJO_CC_GREEN: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_CC_GREEN
+    ),
+    LOC_JINJO_CC_ORANGE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_CC_ORANGE
+    ),
+    LOC_JINJO_CC_PURPLE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_CC_PURPLE
+    ),
+    LOC_JINJO_CC_YELLOW: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_CC_YELLOW
+    ),
+    LOC_JINJO_BGS_BLUE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_BGS_BLUE
+    ),
+    LOC_JINJO_BGS_GREEN: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_BGS_GREEN
+    ),
+    LOC_JINJO_BGS_ORANGE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_BGS_ORANGE
+    ),
+    LOC_JINJO_BGS_PURPLE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_BGS_PURPLE
+    ),
+    LOC_JINJO_BGS_YELLOW: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_BGS_YELLOW
+    ),
+    LOC_JINJO_FP_BLUE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_FP_BLUE
+    ),
+    LOC_JINJO_FP_GREEN: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_FP_GREEN
+    ),
+    LOC_JINJO_FP_ORANGE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_FP_ORANGE
+    ),
+    LOC_JINJO_FP_PURPLE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_FP_PURPLE
+    ),
+    LOC_JINJO_FP_YELLOW: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_FP_YELLOW
+    ),
+    LOC_JINJO_GV_BLUE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_GV_BLUE
+    ),
+    LOC_JINJO_GV_GREEN: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_GV_GREEN
+    ),
+    LOC_JINJO_GV_ORANGE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_GV_ORANGE
+    ),
+    LOC_JINJO_GV_PURPLE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_GV_PURPLE
+    ),
+    LOC_JINJO_GV_YELLOW: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_GV_YELLOW
+    ),
+    LOC_JINJO_MMM_BLUE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_MMM_BLUE
+    ),
+    LOC_JINJO_MMM_GREEN: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_MMM_GREEN
+    ),
+    LOC_JINJO_MMM_ORANGE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_MMM_ORANGE
+    ),
+    LOC_JINJO_MMM_PURPLE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_MMM_PURPLE
+    ),
+    LOC_JINJO_MMM_YELLOW: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_MMM_YELLOW
+    ),
+    LOC_JINJO_RBB_BLUE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_RBB_BLUE
+    ),
+    LOC_JINJO_RBB_GREEN: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_RBB_GREEN
+    ),
+    LOC_JINJO_RBB_ORANGE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_RBB_ORANGE
+    ),
+    LOC_JINJO_RBB_PURPLE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_RBB_PURPLE
+    ),
+    LOC_JINJO_RBB_YELLOW: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_RBB_YELLOW
+    ),
+    LOC_JINJO_CCW_BLUE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_CCW_BLUE
+    ),
+    LOC_JINJO_CCW_GREEN: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_CCW_GREEN
+    ),
+    LOC_JINJO_CCW_ORANGE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_CCW_ORANGE
+    ),
+    LOC_JINJO_CCW_PURPLE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_CCW_PURPLE
+    ),
+    LOC_JINJO_CCW_YELLOW: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_JINJO_CCW_YELLOW
+    ),
     LOC_JIGGY_GL_ENTRYWAY: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR,
         address=0x00000033
@@ -1062,40 +1432,40 @@ location_data_table: Dict[str, BKLocationData] = {
         address=0x04000011
     ),
     "SM Jump Molehill 1": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
-        address=0x0001D5B5
+        region=RGN_SPIRAL_MOUNTAIN,
+        address=0x0400000A
     ),
     "SM Jump Molehill 2": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
-        address=0x0001D5B6
+        region=RGN_SPIRAL_MOUNTAIN,
+        address=0x04000007
     ),
     "SM Jump Molehill 3": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
-        address=0x0001D5B7
+        region=RGN_SPIRAL_MOUNTAIN,
+        address=0x04000008
     ),
     "SM Swim Molehill": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
-        address=0x0001D5B8
+        region=RGN_SPIRAL_MOUNTAIN,
+        address=0x0400000F
     ),
     "SM Climb Molehill": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
-        address=0x0001D5B9
+        region=RGN_SPIRAL_MOUNTAIN,
+        address=0x04000005
     ),
     "SM Beak Barge Molehill": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
-        address=0x0001D5BA
+        region=RGN_SPIRAL_MOUNTAIN,
+        address=0x04000000
     ),
     "SM Attack Molehill 1": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
-        address=0x0001D5BB
+        region=RGN_SPIRAL_MOUNTAIN,
+        address=0x04000004
     ),
     "SM Attack Molehill 2": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
-        address=0x0001D5BC
+        region=RGN_SPIRAL_MOUNTAIN,
+        address=0x0400000C
     ),
     "SM Attack Molehill 3": BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR,
-        address=0x0001D5BD
+        region=RGN_SPIRAL_MOUNTAIN,
+        address=0x0400000B
     ),
     # ~ "BLUEEGGS Cheato": BKLocationData(
         # ~ region=RGN_GRUNTILDAS_LAIR,
