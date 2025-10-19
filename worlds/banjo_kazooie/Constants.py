@@ -153,11 +153,18 @@ LOC_TRANSFORMATION_WALRUS = "Walrus"
 LOC_TRANSFORMATION_PUMPKIN = "Pumpkin"
 LOC_TRANSFORMATION_BEE = "Bee"
 
+# Molehills - Spiral Mountain
+LOC_MOLEHILL_SM_COMBAT_VEGGIE_PATCH = "SM Molehill - Combat Tutorial Veggie Patch"
+LOC_MOLEHILL_SM_ROCKS = "SM Molehill - Rocks"
+LOC_MOLEHILL_SM_NEAR_MOUNTAIN_BRIDGE = "SM Molehill - Near Mountain Bridge"
+LOC_MOLEHILL_SM_NEAR_RIVER = "SM Molehill - Near River"
+LOC_MOLEHILL_SM_IN_FRONT_OF_STUMP = "SM Molehill - In Front of Stump"
+
 LOC_EMPTY_HONEYCOMB_SM_LOG = "SM Empty Honeycomb Piece on Log"
 LOC_EMPTY_HONEYCOMB_SM_WATERFALL = "SM Empty Honeycomb Piece Behind Waterfall"
 LOC_EMPTY_HONEYCOMB_SM_TREE = "SM Empty Honeycomb Piece Atop Tree"
 LOC_EMPTY_HONEYCOMB_SM_UNDERWATER = "SM Underwater Empty Honeycomb Piece"
-LOC_EMPTY_HONEYCOMB_SM_ROCK = "SM Rock Empty Honeycomb Piece"
+LOC_EMPTY_HONEYCOMB_SM_ROCKS = "SM Rocks Empty Honeycomb Piece"
 LOC_EMPTY_HONEYCOMB_SM_COLLIWOBBLE = "SM Colliwobble Empty Honeycomb Piece"
 
 LOC_JIGGY_GL_ENTRYWAY = "GL Entryway Jiggy"
@@ -181,6 +188,11 @@ LOC_MUMBO_TOKEN_GL_BELOW_RBB_ENTRANCE = "GL Mumbo Token Below RBB Entrance"
 LOC_MUMBO_TOKEN_GL_BY_MMM_PODIUM = "GL Mumbo Token By MMM Jiggy Podium"
 LOC_MUMBO_TOKEN_GL_NEAR_CCW_PODIUM_SWITCH = "GL Mumbo Token Near CCW Jiggy Podium Switch"
 
+# Molehills - Mumbo's Mountain
+LOC_MOLEHILL_MM_AFTER_CHIMPYS_STUMP = "MM Molehill - After Chimpy's Stump"
+LOC_MOLEHILL_MM_STONEHENGE = "MM Molehill - Stonehenge"
+LOC_MOLEHILL_MM_HUTS = "MM Molehill - Huts"
+
 LOC_JINJO_MM_BLUE = "MM Blue Jinjo"
 LOC_JINJO_MM_GREEN = "MM Green Jinjo"
 LOC_JINJO_MM_ORANGE = "MM Orange Jinjo"
@@ -203,6 +215,10 @@ LOC_MUMBO_TOKEN_MM_CHIMPY = "MM Chimpy Mumbo Token"
 LOC_MUMBO_TOKEN_MM_STONEHENGE = "MM Stonehenge Mumbo Token"
 LOC_MUMBO_TOKEN_MM_MUMBOS_HUT = "MM Mumbo Token Near Mumbo's Hut"
 LOC_MUMBO_TOKEN_MM_TERMITE_MOUND = "MM Termite Mound Mumbo Token"
+
+# Molehills - Treasure Trove Cove
+LOC_MOLEHILL_TTC_MAST = "TTC Molehill - Ship Mast"
+LOC_MOLEHILL_TTC_NEAR_SANDCASTLE = "TTC Molehill - Near Sandcastle"
 
 LOC_JINJO_TTC_BLUE = "TTC Blue Jinjo"
 LOC_JINJO_TTC_GREEN = "TTC Green Jinjo"
@@ -232,6 +248,9 @@ LOC_MUMBO_TOKEN_TTC_POOL = "TTC Underwater Pool Mumbo Token"
 LOC_MUMBO_TOKEN_TTC_CRATE = "TTC Mumbo Token Atop Floating Crate"
 LOC_MUMBO_TOKEN_TTC_LIGHTHOUSE = "TTC Lighthouse Mumbo Token"
 
+# Molehills - Clanker's Cavern
+LOC_MOLEHILL_CC_NEAR_SPINNING_BLADES = "CC Molehill - Near Spinning Blades"
+
 LOC_JINJO_CC_BLUE = "CC Blue Jinjo"
 LOC_JINJO_CC_GREEN = "CC Green Jinjo"
 LOC_JINJO_CC_ORANGE = "CC Orange Jinjo"
@@ -254,6 +273,9 @@ LOC_MUMBO_TOKEN_CC_CLANKER_TAIL = "CC Mumbo Token Above Clanker's Tail"
 LOC_MUMBO_TOKEN_CC_CLANKER_GOLD_TEETH = "CC Clanker's Gold Teeth Mumbo Token"
 LOC_MUMBO_TOKEN_CC_GRATE = "CC Wall Grate Mumbo Token"
 LOC_MUMBO_TOKEN_CC_UNDERWATER_TUNNEL = "CC Underwater Tunnel Mumbo Token"
+
+# Molehills - Bubblegloop Swamp
+LOC_MOLEHILL_BGS_BEHIND_WORLD_ENTRY = "BGS Molehill - Behind World Entry"
 
 LOC_JINJO_BGS_BLUE = "BGS Blue Jinjo"
 LOC_JINJO_BGS_GREEN = "BGS Green Jinjo"
@@ -283,6 +305,9 @@ LOC_MUMBO_TOKEN_BGS_UNDER_HUTS_LEFT = "BGS Left Mumbo Token Under Huts"
 LOC_MUMBO_TOKEN_BGS_UNDER_HUTS_RIGHT = "BGS Right Mumbo Token Under Huts"
 LOC_MUMBO_TOKEN_BGS_INSIDE_MR_VILE = "BGS Mumbo Token Inside Mr. Vile"
 
+# Molehills - Freezeezy Peak
+LOC_MOLEHILL_FP_NEXT_TO_STACK_OF_PRESENTS = "FP Molehill - Next to Stack of Presents"
+
 LOC_JINJO_FP_BLUE = "FP Blue Jinjo"
 LOC_JINJO_FP_GREEN = "FP Green Jinjo"
 LOC_JINJO_FP_ORANGE = "FP Orange Jinjo"
@@ -310,6 +335,9 @@ LOC_MUMBO_TOKEN_FP_LARGE_SNOWMAN_LEFT = "FP Left Mumbo Token Under Large Snowman
 LOC_MUMBO_TOKEN_FP_LARGE_SNOWMAN_RIGHT = "FP Right Mumbo Token Under Large Snowman"
 LOC_MUMBO_TOKEN_FP_UNDER_CHRISTMAS_TREE = "FP Mumbo Token Under Christmas Tree"
 LOC_MUMBO_TOKEN_FP_UNDERWATER = "FP Mumbo Token Underwater Near Scarf"
+
+# Molehills - Gobi's Valley
+LOC_MOLEHILL_GV_NEAR_KAZOOIE_PYRAMID = "GV Molehill - Near Kazooie Pyramid"
 
 LOC_JINJO_GV_BLUE = "GV Blue Jinjo"
 LOC_JINJO_GV_GREEN = "GV Green Jinjo"

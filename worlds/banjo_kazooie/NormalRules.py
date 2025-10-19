@@ -22,6 +22,12 @@ def can_traverse_bgs(state, player):
         state.has(ITEM_FLAP_FLIP, player)
     )
 
+def can_break_mmm_gates(state, player):
+    return (
+        state.has(ITEM_RAT_A_TAT_RAP, player) or
+        state.has(ITEM_BEAK_BARGE, player)
+    )
+
 def can_reach_eyrie(state, player):
     return (
         state.has(ITEM_TALON_TROT, player) and
@@ -302,18 +308,32 @@ def get_location_rules(player, options):
         LOC_TRANSFORMATION_WALRUS:
             lambda state:
             (
-                has_tokens_for_all_transforms(state, player)
+                has_tokens_for_all_transforms(state, player) and
+                state.has(ITEM_FLIGHT, player)
             ),
         LOC_TRANSFORMATION_PUMPKIN:
             lambda state:
             (
-                has_tokens_for_all_transforms(state, player)
+                has_tokens_for_all_transforms(state, player) and
+                can_break_mmm_gates(state, player)
             ),
         LOC_TRANSFORMATION_BEE:
             lambda state:
             (
-                has_tokens_for_all_transforms(state, player)
+                has_tokens_for_all_transforms(state, player) and
+                state.has(ITEM_TALON_TROT, player) and
+                state.has(ITEM_STILT_STRIDE, player)
             ),
+        LOC_MOLEHILL_SM_COMBAT_VEGGIE_PATCH:
+            lambda state: True,
+        LOC_MOLEHILL_SM_ROCKS:
+            lambda state: True,
+        LOC_MOLEHILL_SM_NEAR_MOUNTAIN_BRIDGE:
+            lambda state: True,
+        LOC_MOLEHILL_SM_NEAR_RIVER:
+            lambda state: True,
+        LOC_MOLEHILL_SM_IN_FRONT_OF_STUMP:
+            lambda state: True,
         LOC_EMPTY_HONEYCOMB_SM_LOG:
             lambda state:
             (
@@ -350,7 +370,7 @@ def get_location_rules(player, options):
             (
                 state.has(ITEM_SWIM, player)
             ),
-        LOC_EMPTY_HONEYCOMB_SM_ROCK:
+        LOC_EMPTY_HONEYCOMB_SM_ROCKS:
             lambda state:
             (
                 state.has(ITEM_BEAK_BARGE, player)
@@ -493,6 +513,15 @@ def get_location_rules(player, options):
             (
                 state.has(ITEM_FLAP_FLIP, player)
             ),
+        LOC_MOLEHILL_MM_AFTER_CHIMPYS_STUMP:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_MOLEHILL_MM_STONEHENGE:
+            lambda state: True,
+        LOC_MOLEHILL_MM_HUTS:
+            lambda state: True,
         LOC_JIGGY_MM_CONGA_ORANGE_THROW:
             lambda state: True,
         LOC_JIGGY_MM_CHIMPY_ORANGE:
@@ -618,6 +647,18 @@ def get_location_rules(player, options):
                 state.has(ITEM_JUMP, player) or
                 state.has(ITEM_RAT_A_TAT_RAP, player) or
                 state.has(ITEM_FEATHERY_FLAP, player) or
+                state.has(ITEM_FLAP_FLIP, player) or
+                state.has(ITEM_TALON_TROT, player)
+            ),
+        LOC_MOLEHILL_TTC_MAST:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player)
+            ),
+        LOC_MOLEHILL_TTC_NEAR_SANDCASTLE:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
                 state.has(ITEM_FLAP_FLIP, player) or
                 state.has(ITEM_TALON_TROT, player)
             ),
@@ -783,6 +824,12 @@ def get_location_rules(player, options):
             lambda state:
             (
              state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_MOLEHILL_CC_NEAR_SPINNING_BLADES:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player) and
+                state.has(ITEM_FLAP_FLIGHT, player)
             ),
         LOC_JIGGY_CC_CLANKER_RAISE:
             lambda state:
@@ -953,6 +1000,8 @@ def get_location_rules(player, options):
             (
                 state.has(ITEM_SWIM, player)
             ),
+        LOC_MOLEHILL_BGS_BEHIND_WORLD_ENTRY:
+            lambda state: True,
         LOC_JIGGY_BGS_EGG:
             lambda state:
             (
@@ -1152,6 +1201,8 @@ def get_location_rules(player, options):
                 state.has(ITEM_STILT_STRIDE, player) and
                 state.has(ITEM_TRANSFORMATION_CROCODILE, player)
             ),
+        LOC_MOLEHILL_FP_NEXT_TO_STACK_OF_PRESENTS:
+            lambda state: True,
         LOC_JIGGY_FP_SIR_SLUSH:
             lambda state:
             (
@@ -1193,7 +1244,7 @@ def get_location_rules(player, options):
                     state.has(ITEM_JUMP, player) or
                     state.has(ITEM_FEATHERY_FLAP, player) or    #required to the Jiggy at the top of the tree
                     state.has(ITEM_FLAP_FLIP, player) or
-                    state.has(ITEM_RAT_A_TAT_RAP)
+                    state.has(ITEM_RAT_A_TAT_RAP, player)
                 )
             ),
         LOC_JIGGY_FP_WOZZA:
@@ -1308,6 +1359,11 @@ def get_location_rules(player, options):
                     state.has(ITEM_STILT_STRIDE, player)
                 ) and
                 state.has(ITEM_TRANSFORMATION_WALRUS, player)
+            ),
+        LOC_MOLEHILL_GV_NEAR_KAZOOIE_PYRAMID:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player)
             ),
         LOC_JIGGY_GV_JINXY:
             lambda state:
