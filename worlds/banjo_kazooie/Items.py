@@ -94,6 +94,11 @@ item_data_table: Dict[str, BKItemData] = {
         code=0x04000011,
         type=ItemClassification.progression
     ),
+    ITEM_ULTIMATE: BKItemData(
+        code=0x69000000,
+        type=ItemClassification.useful,
+        can_create=lambda options: False
+    ),
     ITEM_BLUBBER_GOLD: BKItemData(
         code=None,
         type=ItemClassification.progression,
