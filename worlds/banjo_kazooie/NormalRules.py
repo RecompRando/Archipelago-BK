@@ -43,6 +43,77 @@ def can_reach_ttc_flight_pad(state, player):
     return (
         can_reach_ttc_middle_ledge(state, player) or
         state.has(ITEM_TALON_TROT, player)
+
+def can_reach_bgs_puzzle_from_world_room(state, player):
+    return (
+        state.has(ITEM_FLAP_FLIP, player) and
+        state.has(ITEM_SWIM, player)
+    )
+
+def can_reach_fp_puzzle_from_world_room(state, player):
+    return (
+        state.has(ITEM_TALON_TROT, player) and
+        (
+            state.has(ITEM_STILT_STRIDE, player) or
+            state.has(ITEM_TRANSFORMATION_CROCODILE, player)
+        )
+    )
+
+def can_reach_gv_puzzle_from_world_room(state, player):
+    return (
+        state.has(ITEM_NOTE, player, 350)
+    )
+
+def can_reach_mmm_puzzle_from_world_room(state, player):
+    return (
+        state.has(ITEM_NOTE, player, 450) and
+        state.has(ITEM_SWIM, player) and
+        state.has(ITEM_JUMP, player) and
+        (
+            state.has(ITEM_FEATHERY_FLAP, player) or
+            state.has(ITEM_RAT_A_TAT_RAP, player)
+        )
+    )
+
+def can_hit_one_water_switch(state, player):
+    return (
+        # break gate outside MMM
+        can_break_mmm_gates(state, player) and
+        # get to the switch
+        state.has(ITEM_TRANSFORMATION_PUMPKIN, player) and
+        # hit the switch
+        state.has(ITEM_BEAK_BUSTER, player)
+    )
+
+def can_hit_two_water_switches(state, player):
+    return (
+        can_hit_one_water_switch(state, player) and
+        # get to the switch itself
+        state.has(ITEM_SWIM, player) and
+        # break box
+        (
+            state.has(ITEM_RAT_A_TAT_RAP, player) or
+            state.has(ITEM_BEAK_BARGE, player)
+        )
+    )
+
+def can_hit_three_water_switches(state, player):
+    return (
+        can_hit_two_water_switches(state, player) and
+        # get to the switch itself
+        state.has(ITEM_SWIM, player) and
+        # break grate
+        state.has(ITEM_RAT_A_TAT_RAP, player)
+    )
+
+def can_reach_rbb_puzzle_from_world_room(state, player):
+    return (
+        can_hit_two_water_switches(state, player)
+    )
+
+def can_reach_ccw_puzzle_from_world_room(state, player):
+    return (
+        state.has(ITEM_SWIM, player)
     )
 
 def can_traverse_bgs(state, player):
@@ -78,18 +149,20 @@ def get_region_rules(player, options):
         rgn_connection_string(RGN_GRUNTILDAS_LAIR_LOBBY, RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR):
             lambda state:
             (
+                state.has(ITEM_TALON_TROT, player) and
                 state.has(ITEM_NOTE, player, 50)
             ),
         rgn_connection_string(RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR, RGN_TREASURE_TROVE_COVE):
             lambda state:
             (
-                state.has(ITEM_JIGGY, player, 15) and  # 1+2+5+7
-                state.has(ITEM_TALON_TROT, player)
+                state.has(ITEM_JIGGY, player, 3)  # 1+2+5+7
             ),
         rgn_connection_string(RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR, RGN_CLANKERS_CAVERN):
             lambda state:
             (
-                state.has(ITEM_JIGGY, player, 15)  # 1+2+5+7
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_JIGGY, player, 8)  # 1+2+5+7
             ),
         rgn_connection_string(RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR):
             lambda state:
@@ -100,27 +173,28 @@ def get_region_rules(player, options):
         rgn_connection_string(RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR, RGN_BUBBLEGLOOP_SWAMP):
             lambda state:
             (
-                state.has(ITEM_JIGGY, player, 23) and
+                can_reach_bgs_puzzle_from_world_room(state, player) and
+                state.has(ITEM_JIGGY, player, 15) and
                 state.has(ITEM_TALON_TROT, player)  # 1+2+5+7+8
             ),
         rgn_connection_string(RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR):
             lambda state:
             (
                 state.has(ITEM_NOTE, player, 260) and
-                state.has(ITEM_TALON_TROT, player) and
                 state.has(ITEM_SHOCK_SPRING_JUMP, player)
             ),
         rgn_connection_string(RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR, RGN_FREEZEEZY_PEAK):
             lambda state:
             (
+                can_reach_fp_puzzle_from_world_room(state, player) and
                 state.has(ITEM_SHOCK_SPRING_JUMP, player) and
-                state.has(ITEM_JIGGY, player, 32)  # 1+2+5+7+8+9
+                state.has(ITEM_JIGGY, player, 23)  # 1+2+5+7+8+9
             ),
         rgn_connection_string(RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR, RGN_GOBIS_VALLEY):
             lambda state:
             (
+                can_reach_gv_puzzle_from_world_room(state, player) and
                 state.has(ITEM_JIGGY, player, 32) and  # 1+2+5+7+8+9
-                state.has(ITEM_SHOCK_SPRING_JUMP, player) and
                 state.has(ITEM_STILT_STRIDE, player)
             ),
         rgn_connection_string(RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_350_NOTE_DOOR):
@@ -131,34 +205,30 @@ def get_region_rules(player, options):
         rgn_connection_string(RGN_GRUNTILDAS_LAIR_350_NOTE_DOOR, RGN_MAD_MONSTER_MANSION):
             lambda state:
             (
-                state.has(ITEM_JIGGY, player, 54)  # 1+2+5+7+8+9+10+12
+                can_reach_mmm_puzzle_from_world_room(state, player) and
+                state.has(ITEM_JIGGY, player, 42)  # 1+2+5+7+8+9+10+12
             ),
-        rgn_connection_string(RGN_GRUNTILDAS_LAIR_350_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_450_NOTE_DOOR):
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_450_NOTE_DOOR):
             lambda state:
             (
                 state.has(ITEM_NOTE, player, 450)
             ),
-        rgn_connection_string(RGN_GRUNTILDAS_LAIR_350_NOTE_DOOR, RGN_MAD_MONSTER_MANSION):
-            lambda state:
-            (
-                state.has(ITEM_JIGGY, player, 54)  # 1+2+5+7+8+9+10+12
-            ),
         rgn_connection_string(RGN_GRUNTILDAS_LAIR_450_NOTE_DOOR, RGN_RUSTY_BUCKET_BAY):
             lambda state:
             (
-                state.has(ITEM_SWIM, player) and
+                can_reach_rbb_puzzle_from_world_room(state, player) and
                 state.has(ITEM_JIGGY, player, 54)  # 1+2+5+7+8+9+10+12
             ),
         rgn_connection_string(RGN_GRUNTILDAS_LAIR_450_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_640_NOTE_DOOR):
             lambda state:
             (
-                state.has(ITEM_SWIM, player) and
-                state.has(ITEM_BEAK_BUSTER, player) and
+                can_hit_three_water_switches(state, player) and
                 state.has(ITEM_NOTE, player, 640)
             ),
         rgn_connection_string(RGN_GRUNTILDAS_LAIR_640_NOTE_DOOR, RGN_CLICK_CLOCK_WOOD):
             lambda state:
             (
+                can_reach_ccw_puzzle_from_world_room(state, player) and
                 state.has(ITEM_JIGGY, player, 69) and  # 1+2+5+7+8+9+10+12+15
                 state.has(ITEM_BEAK_BUSTER, player) and
                 state.has(ITEM_FLAP_FLIP, player)
