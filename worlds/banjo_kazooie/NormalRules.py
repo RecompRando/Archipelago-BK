@@ -1162,10 +1162,10 @@ def get_location_rules(player, options):
                 )
             ),
         LOC_JIGGY_TTC_BLUBBER:
-            lambda state: True,
-            # ~ (
-                # ~ state.has(ITEM_BLUBBER_GOLD, player, 2)
-            # ~ ),
+            lambda state:
+            (
+                state.has(ITEM_BLUBBER_GOLD, player, 2)
+            ),
         LOC_JIGGY_TTC_SANDCASTLE:
             lambda state:
             (
