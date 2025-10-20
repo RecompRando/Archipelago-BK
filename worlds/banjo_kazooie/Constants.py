@@ -44,7 +44,7 @@ ITEM_GREEN_PRESENT = "Green Present"
 ITEM_WORM = "Caterpillar"
 ITEM_ACORN = "Acorn"
 
-ITEM_ULTIMATE = "Ultimate"
+ITEM_SHNIGEDY_DING_DONG = "SHNIGEDY DING-DONG"
 
 ITEM_JINJO_MM_BLUE = "Mumbo's Mountain Blue Jinjo"
 ITEM_JINJO_MM_GREEN = "Mumbo's Mountain Green Jinjo"

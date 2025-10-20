@@ -94,7 +94,7 @@ item_data_table: Dict[str, BKItemData] = {
         code=0x04000011,
         type=ItemClassification.progression
     ),
-    ITEM_ULTIMATE: BKItemData(
+    ITEM_SHNIGEDY_DING_DONG: BKItemData(
         code=0x69000000,
         type=ItemClassification.useful,
         can_create=lambda options: False
