@@ -1507,803 +1507,803 @@ location_data_table: Dict[str, BKLocationData] = {
         # ~ region=RGN_GRUNTILDAS_LAIR,
         # ~ address=0x0001D5C7
     # ~ ),
-    "Mumbo's Mountain Note 1": BKLocationData(
+    LOC_NOTE_MM_BRIDGE_1: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x010218DD
     ),
-    "Mumbo's Mountain Note 2": BKLocationData(
+    LOC_NOTE_MM_BRIDGE_2: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x01021791
     ),
-    "Mumbo's Mountain Note 3": BKLocationData(
+    LOC_NOTE_MM_BRIDGE_3: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102165A
     ),
-    "Mumbo's Mountain Note 4": BKLocationData(
+    LOC_NOTE_MM_BRIDGE_4: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x01021537
     ),
-    "Mumbo's Mountain Note 5": BKLocationData(
+    LOC_NOTE_MM_BRIDGE_5: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102141F
     ),
-    "Mumbo's Mountain Note 6": BKLocationData(
+    LOC_NOTE_MM_BRIDGE_6: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x01021317
     ),
-    "Mumbo's Mountain Note 7": BKLocationData(
+    LOC_NOTE_MM_BRIDGE_7: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x01021226
     ),
-    "Mumbo's Mountain Note 8": BKLocationData(
+    LOC_NOTE_MM_TOWER_SLOPE_1: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x010202F1
     ),
-    "Mumbo's Mountain Note 9": BKLocationData(
+    LOC_NOTE_MM_TOWER_SLOPE_2: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x010202BB
     ),
-    "Mumbo's Mountain Note 10": BKLocationData(
+    LOC_NOTE_MM_TOWER_SLOPE_3: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x01020281
     ),
-    "Mumbo's Mountain Note 11": BKLocationData(
+    LOC_NOTE_MM_TOWER_SLOPE_4: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x01020216
     ),
-    "Mumbo's Mountain Note 12": BKLocationData(
+    LOC_NOTE_MM_TOWER_SLOPE_5: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102018E
     ),
-    "Mumbo's Mountain Note 13": BKLocationData(
+    LOC_NOTE_MM_TOWER_SLOPE_6: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102010A
     ),
-    "Mumbo's Mountain Note 14": BKLocationData(
+    LOC_NOTE_MM_TOWER_SLOPE_7: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x01020098
     ),
-    "Mumbo's Mountain Note 15": BKLocationData(
+    LOC_NOTE_MM_TOWER_SLOPE_8: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x010200CC
     ),
-    "Mumbo's Mountain Note 16": BKLocationData(
+    LOC_NOTE_MM_TOWER_SLOPE_9: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x01020176
     ),
-    "Mumbo's Mountain Note 17": BKLocationData(
+    LOC_NOTE_MM_HENGE_SLOPE_1: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102FAF7
     ),
-    "Mumbo's Mountain Note 18": BKLocationData(
+    LOC_NOTE_MM_HENGE_SLOPE_2: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102FA8E
     ),
-    "Mumbo's Mountain Note 19": BKLocationData(
+    LOC_NOTE_MM_HENGE_SLOPE_3: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102FA16
     ),
-    "Mumbo's Mountain Note 20": BKLocationData(
+    LOC_NOTE_MM_HENGE_SLOPE_4: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102F9AB
     ),
-    "Mumbo's Mountain Note 21": BKLocationData(
+    LOC_NOTE_MM_STONEHENGE_1: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102F46F
     ),
-    "Mumbo's Mountain Note 22": BKLocationData(
+    LOC_NOTE_MM_STONEHENGE_2: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102F2DF
     ),
-    "Mumbo's Mountain Note 23": BKLocationData(
+    LOC_NOTE_MM_STONEHENGE_3: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102F145
     ),
-    "Mumbo's Mountain Note 24": BKLocationData(
+    LOC_NOTE_MM_STONEHENGE_4: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102F041
     ),
-    "Mumbo's Mountain Note 25": BKLocationData(
+    LOC_NOTE_MM_STONEHENGE_5: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102EF58
     ),
-    "Mumbo's Mountain Note 26": BKLocationData(
+    LOC_NOTE_MM_STONEHENGE_6: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102EF42
     ),
-    "Mumbo's Mountain Note 27": BKLocationData(
+    LOC_NOTE_MM_STONEHENGE_7: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102EF46
     ),
-    "Mumbo's Mountain Note 28": BKLocationData(
+    LOC_NOTE_MM_STONEHENGE_8: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102EFF6
     ),
-    "Mumbo's Mountain Note 29": BKLocationData(
+    LOC_NOTE_MM_STONEHENGE_9: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102F0C1
     ),
-    "Mumbo's Mountain Note 30": BKLocationData(
+    LOC_NOTE_MM_STONEHENGE_10: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102F236
     ),
-    "Mumbo's Mountain Note 31": BKLocationData(
+    LOC_NOTE_MM_STONEHENGE_11: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102F39E
     ),
-    "Mumbo's Mountain Note 32": BKLocationData(
+    LOC_NOTE_MM_STONEHENGE_12: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102F515
     ),
-    "Mumbo's Mountain Note 33": BKLocationData(
+    LOC_NOTE_MM_STONEHENGE_13: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102F68B
     ),
-    "Mumbo's Mountain Note 34": BKLocationData(
+    LOC_NOTE_MM_STONEHENGE_14: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102F777
     ),
-    "Mumbo's Mountain Note 35": BKLocationData(
+    LOC_NOTE_MM_CONGA_SLOPE_UR_1: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102FB90
     ),
-    "Mumbo's Mountain Note 36": BKLocationData(
+    LOC_NOTE_MM_CONGA_SLOPE_UR_2: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102FADF
     ),
-    "Mumbo's Mountain Note 37": BKLocationData(
+    LOC_NOTE_MM_CONGA_SLOPE_UR_3: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102FAF0
     ),
-    "Mumbo's Mountain Note 38": BKLocationData(
+    LOC_NOTE_MM_CONGA_SLOPE_UL_1: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102F808
     ),
-    "Mumbo's Mountain Note 39": BKLocationData(
+    LOC_NOTE_MM_CONGA_SLOPE_UL_2: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102F75B
     ),
-    "Mumbo's Mountain Note 40": BKLocationData(
+    LOC_NOTE_MM_CONGA_SLOPE_UL_3: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102F765
     ),
-    "Mumbo's Mountain Note 41": BKLocationData(
+    LOC_NOTE_MM_CONGA_SLOPE_MR_1: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102FDBB
     ),
-    "Mumbo's Mountain Note 42": BKLocationData(
+    LOC_NOTE_MM_CONGA_SLOPE_MR_2: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102FD10
     ),
-    "Mumbo's Mountain Note 43": BKLocationData(
+    LOC_NOTE_MM_CONGA_SLOPE_MR_3: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102FD11
     ),
-    "Mumbo's Mountain Note 44": BKLocationData(
+    LOC_NOTE_MM_CONGA_SLOPE_BL_1: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102F5CD
     ),
-    "Mumbo's Mountain Note 45": BKLocationData(
+    LOC_NOTE_MM_CONGA_SLOPE_BL_2: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102F5E1
     ),
-    "Mumbo's Mountain Note 46": BKLocationData(
+    LOC_NOTE_MM_CONGA_SLOPE_BL_3: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102F693
     ),
-    "Mumbo's Mountain Note 47": BKLocationData(
+    LOC_NOTE_MM_CONGA_SLOPE_ML_1: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102F38B
     ),
-    "Mumbo's Mountain Note 48": BKLocationData(
+    LOC_NOTE_MM_CONGA_SLOPE_ML_2: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102F37D
     ),
-    "Mumbo's Mountain Note 49": BKLocationData(
+    LOC_NOTE_MM_CONGA_SLOPE_ML_3: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102F435
     ),
-    "Mumbo's Mountain Note 50": BKLocationData(
+    LOC_NOTE_MM_CONGA_SLOPE_BR_1: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102FBAA
     ),
-    "Mumbo's Mountain Note 51": BKLocationData(
+    LOC_NOTE_MM_CONGA_SLOPE_BR_2: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102FBFA
     ),
-    "Mumbo's Mountain Note 52": BKLocationData(
+    LOC_NOTE_MM_CONGA_SLOPE_BR_3: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102FC5A
     ),
-    "Mumbo's Mountain Note 53": BKLocationData(
+    LOC_NOTE_MM_CONGA_SLOPE_B_1: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102F9BF
     ),
-    "Mumbo's Mountain Note 54": BKLocationData(
+    LOC_NOTE_MM_CONGA_SLOPE_B_2: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102F9CA
     ),
-    "Mumbo's Mountain Note 55": BKLocationData(
+    LOC_NOTE_MM_CONGA_SLOPE_B_3: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102FA70
     ),
-    "Mumbo's Mountain Note 56": BKLocationData(
+    LOC_NOTE_MM_MUMBO_SLOPE_TR_1: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x01021D2D
     ),
-    "Mumbo's Mountain Note 57": BKLocationData(
+    LOC_NOTE_MM_MUMBO_SLOPE_TR_2: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x01021E20
     ),
-    "Mumbo's Mountain Note 58": BKLocationData(
+    LOC_NOTE_MM_MUMBO_SLOPE_TR_3: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x01021E1A
     ),
-    "Mumbo's Mountain Note 59": BKLocationData(
+    LOC_NOTE_MM_MUMBO_SLOPE_MR_1: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x01021BBB
     ),
-    "Mumbo's Mountain Note 60": BKLocationData(
+    LOC_NOTE_MM_MUMBO_SLOPE_MR_2: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x01021C6D
     ),
-    "Mumbo's Mountain Note 61": BKLocationData(
+    LOC_NOTE_MM_MUMBO_SLOPE_MR_3: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x01021C22
     ),
-    "Mumbo's Mountain Note 62": BKLocationData(
+    LOC_NOTE_MM_MUMBO_SLOPE_ML_1: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x010214FE
     ),
-    "Mumbo's Mountain Note 63": BKLocationData(
+    LOC_NOTE_MM_MUMBO_SLOPE_ML_2: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102150B
     ),
-    "Mumbo's Mountain Note 64": BKLocationData(
+    LOC_NOTE_MM_MUMBO_SLOPE_ML_3: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102159C
     ),
-    "Mumbo's Mountain Note 65": BKLocationData(
+    LOC_NOTE_MM_MUMBO_SLOPE_LL_1: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102177B
     ),
-    "Mumbo's Mountain Note 66": BKLocationData(
+    LOC_NOTE_MM_MUMBO_SLOPE_LL_2: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x01021835
     ),
-    "Mumbo's Mountain Note 67": BKLocationData(
+    LOC_NOTE_MM_MUMBO_SLOPE_LL_3: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x010217F4
     ),
-    "Mumbo's Mountain Note 68": BKLocationData(
+    LOC_NOTE_MM_MUMBO_SLOPE_BM_1: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x01021B3C
     ),
-    "Mumbo's Mountain Note 69": BKLocationData(
+    LOC_NOTE_MM_MUMBO_SLOPE_BM_2: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x01021BF5
     ),
-    "Mumbo's Mountain Note 70": BKLocationData(
+    LOC_NOTE_MM_MUMBO_SLOPE_BM_3: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x01021B12
     ),
-    "Mumbo's Mountain Note 71": BKLocationData(
+    LOC_NOTE_MM_MUMBO_SLOPE_BR_1: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x01022186
     ),
-    "Mumbo's Mountain Note 72": BKLocationData(
+    LOC_NOTE_MM_MUMBO_SLOPE_BR_2: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x01022094
     ),
-    "Mumbo's Mountain Note 73": BKLocationData(
+    LOC_NOTE_MM_MUMBO_SLOPE_BR_3: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102209A
     ),
-    "Mumbo's Mountain Note 74": BKLocationData(
+    LOC_NOTE_MM_MUMBO_SKULL_1: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x010E0083
     ),
-    "Mumbo's Mountain Note 75": BKLocationData(
+    LOC_NOTE_MM_MUMBO_SKULL_2: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x010EFF4D
     ),
-    "Mumbo's Mountain Note 76": BKLocationData(
+    LOC_NOTE_MM_MUMBO_SKULL_3: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x010EFE4D
     ),
-    "Mumbo's Mountain Note 77": BKLocationData(
+    LOC_NOTE_MM_MUMBO_SKULL_4: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x010EFE46
     ),
-    "Mumbo's Mountain Note 78": BKLocationData(
+    LOC_NOTE_MM_TOTEM_HUT_1: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x010211FA
     ),
-    "Mumbo's Mountain Note 79": BKLocationData(
+    LOC_NOTE_MM_TOTEM_HUT_2: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x010215C3
     ),
-    "Mumbo's Mountain Note 80": BKLocationData(
+    LOC_NOTE_MM_TOTEM_HUT_3: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x010219FA
     ),
-    "Mumbo's Mountain Note 81": BKLocationData(
+    LOC_NOTE_MM_TOTEM_HUT_4: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x01021799
     ),
-    "Mumbo's Mountain Note 82": BKLocationData(
+    LOC_NOTE_MM_TOTEM_HUT_5: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x01020F57
     ),
-    "Mumbo's Mountain Note 83": BKLocationData(
+    LOC_NOTE_MM_TOTEM_HUT_6: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x01020D88
     ),
-    "Mumbo's Mountain Note 84": BKLocationData(
+    LOC_NOTE_MM_DESTROY_TOTEM_HUT_1: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x01020069
     ),
-    "Mumbo's Mountain Note 85": BKLocationData(
+    LOC_NOTE_MM_DESTROY_TOTEM_HUT_2: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102006A
     ),
-    "Mumbo's Mountain Note 86": BKLocationData(
+    LOC_NOTE_MM_DESTROY_TOTEM_HUT_3: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102006B
     ),
-    "Mumbo's Mountain Note 87": BKLocationData(
+    LOC_NOTE_MM_DESTROY_TOTEM_HUT_4: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102006C
     ),
-    "Mumbo's Mountain Note 88": BKLocationData(
+    LOC_NOTE_MM_DESTROY_TOTEM_HUT_5: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0102006D
     ),
-    "Mumbo's Mountain Note 89": BKLocationData(
+    LOC_NOTE_MM_UNDERWATER_LEFT_CAVE_1: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x010208F5
     ),
-    "Mumbo's Mountain Note 90": BKLocationData(
+    LOC_NOTE_MM_UNDERWATER_LEFT_CAVE_2: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x01020923
     ),
-    "Mumbo's Mountain Note 91": BKLocationData(
+    LOC_NOTE_MM_UNDERWATER_LEFT_CAVE_3: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x01020952
     ),
-    "Mumbo's Mountain Note 92": BKLocationData(
+    LOC_NOTE_MM_UNDERWATER_RIGHT_CAVE_1: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x01020CB1
     ),
-    "Mumbo's Mountain Note 93": BKLocationData(
+    LOC_NOTE_MM_UNDERWATER_RIGHT_CAVE_2: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x01020D28
     ),
-    "Mumbo's Mountain Note 94": BKLocationData(
+    LOC_NOTE_MM_UNDERWATER_RIGHT_CAVE_3: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x01020D9D
     ),
-    "Mumbo's Mountain Note 95": BKLocationData(
+    LOC_NOTE_MM_TERMITE_MOUND_1: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x010C0374
     ),
-    "Mumbo's Mountain Note 96": BKLocationData(
+    LOC_NOTE_MM_TERMITE_MOUND_2: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x010C0316
     ),
-    "Mumbo's Mountain Note 97": BKLocationData(
+    LOC_NOTE_MM_TERMITE_MOUND_3: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x010C02AA
     ),
-    "Mumbo's Mountain Note 98": BKLocationData(
+    LOC_NOTE_MM_TERMITE_MOUND_4: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x010C029A
     ),
-    "Mumbo's Mountain Note 99": BKLocationData(
+    LOC_NOTE_MM_TERMITE_MOUND_5: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x010C02FA
     ),
-    "Mumbo's Mountain Note 100": BKLocationData(
+    LOC_NOTE_MM_TERMITE_MOUND_6: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x010C0362
     ),
-    "Treasure Trove Cove Note 1": BKLocationData(
+    LOC_NOTE_TTC_ARRIVAL_1: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x010719EA
     ),
-    "Treasure Trove Cove Note 2": BKLocationData(
+    LOC_NOTE_TTC_ARRIVAL_2: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01071C0D
     ),
-    "Treasure Trove Cove Note 3": BKLocationData(
+    LOC_NOTE_TTC_ARRIVAL_3: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01071E29
     ),
-    "Treasure Trove Cove Note 4": BKLocationData(
+    LOC_NOTE_TTC_ARRIVAL_4: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01071C0A
     ),
-    "Treasure Trove Cove Note 5": BKLocationData(
+    LOC_NOTE_TTC_SHIP_FRONT_NET_1: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01070156
     ),
-    "Treasure Trove Cove Note 6": BKLocationData(
+    LOC_NOTE_TTC_SHIP_FRONT_NET_2: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x010702D8
     ),
-    "Treasure Trove Cove Note 7": BKLocationData(
+    LOC_NOTE_TTC_SHIP_FRONT_NET_3: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0107047C
     ),
-    "Treasure Trove Cove Note 8": BKLocationData(
+    LOC_NOTE_TTC_SANDCASTLE_TOP_1: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01071CC5
     ),
-    "Treasure Trove Cove Note 9": BKLocationData(
+    LOC_NOTE_TTC_SANDCASTLE_TOP_2: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01071CBE
     ),
-    "Treasure Trove Cove Note 10": BKLocationData(
+    LOC_NOTE_TTC_SANDCASTLE_TOP_3: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01071D71
     ),
-    "Treasure Trove Cove Note 11": BKLocationData(
+    LOC_NOTE_TTC_SANDCASTLE_TOP_4: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01071E14
     ),
-    "Treasure Trove Cove Note 12": BKLocationData(
+    LOC_NOTE_TTC_SANDCASTLE_TOP_5: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01071E2A
     ),
-    "Treasure Trove Cove Note 13": BKLocationData(
+    LOC_NOTE_TTC_SANDCASTLE_INSIDE_1: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x010A010A
     ),
-    "Treasure Trove Cove Note 14": BKLocationData(
+    LOC_NOTE_TTC_SANDCASTLE_INSIDE_2: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x010A0065
     ),
-    "Treasure Trove Cove Note 15": BKLocationData(
+    LOC_NOTE_TTC_SANDCASTLE_INSIDE_3: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x010A053B
     ),
-    "Treasure Trove Cove Note 16": BKLocationData(
+    LOC_NOTE_TTC_SANDCASTLE_INSIDE_4: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x010A0496
     ),
-    "Treasure Trove Cove Note 17": BKLocationData(
+    LOC_NOTE_TTC_SHELL_INSIDE_1: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0106FB6F
     ),
-    "Treasure Trove Cove Note 18": BKLocationData(
+    LOC_NOTE_TTC_SHELL_INSIDE_2: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0106FF9A
     ),
-    "Treasure Trove Cove Note 19": BKLocationData(
+    LOC_NOTE_TTC_SHELL_INSIDE_3: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01060367
     ),
-    "Treasure Trove Cove Note 20": BKLocationData(
+    LOC_NOTE_TTC_SHELL_INSIDE_4: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x010604A3
     ),
-    "Treasure Trove Cove Note 21": BKLocationData(
+    LOC_NOTE_TTC_SHELL_INSIDE_5: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x010602BD
     ),
-    "Treasure Trove Cove Note 22": BKLocationData(
+    LOC_NOTE_TTC_SHELL_INSIDE_6: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0106FF54
     ),
-    "Treasure Trove Cove Note 23": BKLocationData(
+    LOC_NOTE_TTC_UPPER_POOL_STAIRS_1: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0107EF90
     ),
-    "Treasure Trove Cove Note 24": BKLocationData(
+    LOC_NOTE_TTC_UPPER_POOL_STAIRS_2: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0107EDD8
     ),
-    "Treasure Trove Cove Note 25": BKLocationData(
+    LOC_NOTE_TTC_UPPER_POOL_STAIRS_3: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0107EC2A
     ),
-    "Treasure Trove Cove Note 26": BKLocationData(
+    LOC_NOTE_TTC_UPPER_POOL_STAIRS_4: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0107EA70
     ),
-    "Treasure Trove Cove Note 27": BKLocationData(
+    LOC_NOTE_TTC_MIDDLE_POOL_STAIRS_1: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0107EBE6
     ),
-    "Treasure Trove Cove Note 28": BKLocationData(
+    LOC_NOTE_TTC_MIDDLE_POOL_STAIRS_2: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0107EBB0
     ),
-    "Treasure Trove Cove Note 29": BKLocationData(
+    LOC_NOTE_TTC_MIDDLE_POOL_STAIRS_3: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0107EB78
     ),
-    "Treasure Trove Cove Note 30": BKLocationData(
+    LOC_NOTE_TTC_MIDDLE_POOL_STAIRS_4: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0107EB42
     ),
-    "Treasure Trove Cove Note 31": BKLocationData(
+    LOC_NOTE_TTC_LOWER_POOL_STAIRS_1: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0107EB41
     ),
-    "Treasure Trove Cove Note 32": BKLocationData(
+    LOC_NOTE_TTC_LOWER_POOL_STAIRS_2: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0107EB28
     ),
-    "Treasure Trove Cove Note 33": BKLocationData(
+    LOC_NOTE_TTC_LOWER_POOL_STAIRS_3: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0107EB10
     ),
-    "Treasure Trove Cove Note 34": BKLocationData(
+    LOC_NOTE_TTC_LOWER_POOL_STAIRS_4: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0107EAF5
     ),
-    "Treasure Trove Cove Note 35": BKLocationData(
+    LOC_NOTE_TTC_CRAB_POOL_1: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0107F2BD
     ),
-    "Treasure Trove Cove Note 36": BKLocationData(
+    LOC_NOTE_TTC_CRAB_POOL_2: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0107F3A0
     ),
-    "Treasure Trove Cove Note 37": BKLocationData(
+    LOC_NOTE_TTC_CRAB_POOL_3: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0107F3ED
     ),
-    "Treasure Trove Cove Note 38": BKLocationData(
+    LOC_NOTE_TTC_CHEST_BRIDGE_1: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x010707ED
     ),
-    "Treasure Trove Cove Note 39": BKLocationData(
+    LOC_NOTE_TTC_CHEST_BRIDGE_2: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x010708EE
     ),
-    "Treasure Trove Cove Note 40": BKLocationData(
+    LOC_NOTE_TTC_CHEST_BRIDGE_3: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x010709F2
     ),
-    "Treasure Trove Cove Note 41": BKLocationData(
+    LOC_NOTE_TTC_NIPPER_BRIDGE_1: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01070EFD
     ),
-    "Treasure Trove Cove Note 42": BKLocationData(
+    LOC_NOTE_TTC_NIPPER_BRIDGE_2: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01070F48
     ),
-    "Treasure Trove Cove Note 43": BKLocationData(
+    LOC_NOTE_TTC_NIPPER_BRIDGE_3: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01070F98
     ),
-    "Treasure Trove Cove Note 44": BKLocationData(
+    LOC_NOTE_TTC_BLUBBER_BRIDGE_1: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x010713D9
     ),
-    "Treasure Trove Cove Note 45": BKLocationData(
+    LOC_NOTE_TTC_BLUBBER_BRIDGE_2: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01071495
     ),
-    "Treasure Trove Cove Note 46": BKLocationData(
+    LOC_NOTE_TTC_BLUBBER_BRIDGE_3: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01071552
     ),
-    "Treasure Trove Cove Note 47": BKLocationData(
+    LOC_NOTE_TTC_SANDCASTLE_BRIDGE_1: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01071B66
     ),
-    "Treasure Trove Cove Note 48": BKLocationData(
+    LOC_NOTE_TTC_SANDCASTLE_BRIDGE_2: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01071C38
     ),
-    "Treasure Trove Cove Note 49": BKLocationData(
+    LOC_NOTE_TTC_SANDCASTLE_BRIDGE_3: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01071D0A
     ),
-    "Treasure Trove Cove Note 50": BKLocationData(
+    LOC_NOTE_TTC_SSS_PILLAR_1: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01071695
     ),
-    "Treasure Trove Cove Note 51": BKLocationData(
+    LOC_NOTE_TTC_SSS_PILLAR_2: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01071712
     ),
-    "Treasure Trove Cove Note 52": BKLocationData(
+    LOC_NOTE_TTC_SSS_PILLAR_3: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0107178F
     ),
-    "Treasure Trove Cove Note 53": BKLocationData(
+    LOC_NOTE_TTC_ISLAND_PLATFORM_1: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01071CC6
     ),
-    "Treasure Trove Cove Note 54": BKLocationData(
+    LOC_NOTE_TTC_ISLAND_PLATFORM_2: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01071F07
     ),
-    "Treasure Trove Cove Note 55": BKLocationData(
+    LOC_NOTE_TTC_ISLAND_PLATFORM_3: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0107213E
     ),
-    "Treasure Trove Cove Note 56": BKLocationData(
+    LOC_NOTE_TTC_ISLAND_PLATFORM_4: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x010720A2
     ),
-    "Treasure Trove Cove Note 57": BKLocationData(
+    LOC_NOTE_TTC_ISLAND_PLATFORM_5: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01071DB9
     ),
-    "Treasure Trove Cove Note 58": BKLocationData(
+    LOC_NOTE_TTC_ISLAND_PLATFORM_6: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01071BCB
     ),
-    "Treasure Trove Cove Note 59": BKLocationData(
+    LOC_NOTE_TTC_TREE_STERN_1: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01071264
     ),
-    "Treasure Trove Cove Note 60": BKLocationData(
+    LOC_NOTE_TTC_TREE_STERN_2: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x010712D2
     ),
-    "Treasure Trove Cove Note 61": BKLocationData(
+    LOC_NOTE_TTC_TREE_STERN_3: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x010711F7
     ),
-    "Treasure Trove Cove Note 62": BKLocationData(
+    LOC_NOTE_TTC_TREE_STERN_4: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01071176
     ),
-    "Treasure Trove Cove Note 63": BKLocationData(
+    LOC_NOTE_TTC_TREE_BOW_1: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01070929
     ),
-    "Treasure Trove Cove Note 64": BKLocationData(
+    LOC_NOTE_TTC_TREE_BOW_2: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01070945
     ),
-    "Treasure Trove Cove Note 65": BKLocationData(
+    LOC_NOTE_TTC_TREE_BOW_3: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01070859
     ),
-    "Treasure Trove Cove Note 66": BKLocationData(
+    LOC_NOTE_TTC_TREE_BOW_4: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01070852
     ),
-    "Treasure Trove Cove Note 67": BKLocationData(
+    LOC_NOTE_TTC_SHIP_FRONT_NET_4: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01070618
     ),
-    "Treasure Trove Cove Note 68": BKLocationData(
+    LOC_NOTE_TTC_SHIP_FRONT_NET_5: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x010707A2
     ),
-    "Treasure Trove Cove Note 69": BKLocationData(
+    LOC_NOTE_TTC_SHIP_FRONT_NET_6: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01070935
     ),
-    "Treasure Trove Cove Note 70": BKLocationData(
+    LOC_NOTE_TTC_SHIP_AFT_NET_1: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01070D41
     ),
-    "Treasure Trove Cove Note 71": BKLocationData(
+    LOC_NOTE_TTC_SHIP_AFT_NET_2: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01070D1C
     ),
-    "Treasure Trove Cove Note 72": BKLocationData(
+    LOC_NOTE_TTC_SHIP_AFT_NET_3: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01070D04
     ),
-    "Treasure Trove Cove Note 73": BKLocationData(
+    LOC_NOTE_TTC_SHIP_AFT_NET_4: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01070D02
     ),
-    "Treasure Trove Cove Note 74": BKLocationData(
+    LOC_NOTE_TTC_SHIP_AFT_NET_5: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01070D05
     ),
-    "Treasure Trove Cove Note 75": BKLocationData(
+    LOC_NOTE_TTC_SHIP_AFT_HOLD_1: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01050174
     ),
-    "Treasure Trove Cove Note 76": BKLocationData(
+    LOC_NOTE_TTC_SHIP_AFT_HOLD_2: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x010500B5
     ),
-    "Treasure Trove Cove Note 77": BKLocationData(
+    LOC_NOTE_TTC_SHIP_AFT_HOLD_3: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01050038
     ),
-    "Treasure Trove Cove Note 78": BKLocationData(
+    LOC_NOTE_TTC_SHIP_AFT_HOLD_4: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0105FFB7
     ),
-    "Treasure Trove Cove Note 79": BKLocationData(
+    LOC_NOTE_TTC_SHIP_BOW_HOLD_1: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0105FA71
     ),
-    "Treasure Trove Cove Note 80": BKLocationData(
+    LOC_NOTE_TTC_SHIP_BOW_HOLD_2: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0105F9EF
     ),
-    "Treasure Trove Cove Note 81": BKLocationData(
+    LOC_NOTE_TTC_SHIP_BOW_HOLD_3: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0105F970
     ),
-    "Treasure Trove Cove Note 82": BKLocationData(
+    LOC_NOTE_TTC_SHIP_BOW_HOLD_4: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0105F8E9
     ),
-    "Treasure Trove Cove Note 83": BKLocationData(
+    LOC_NOTE_TTC_SSS_CHEST_1: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01070CC7
     ),
-    "Treasure Trove Cove Note 84": BKLocationData(
+    LOC_NOTE_TTC_SSS_CHEST_2: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01070CF9
     ),
-    "Treasure Trove Cove Note 85": BKLocationData(
+    LOC_NOTE_TTC_SSS_CHEST_3: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01070C74
     ),
-    "Treasure Trove Cove Note 86": BKLocationData(
+    LOC_NOTE_TTC_SSS_CHEST_4: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01070C17
     ),
-    "Treasure Trove Cove Note 87": BKLocationData(
+    LOC_NOTE_TTC_SSS_CHEST_5: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01070BE7
     ),
-    "Treasure Trove Cove Note 88": BKLocationData(
+    LOC_NOTE_TTC_MAP_PILLAR_PATH_1: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0107FB5D
     ),
-    "Treasure Trove Cove Note 89": BKLocationData(
+    LOC_NOTE_TTC_MAP_PILLAR_PATH_2: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0107FA87
     ),
-    "Treasure Trove Cove Note 90": BKLocationData(
+    LOC_NOTE_TTC_MAP_PILLAR_PATH_3: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0107F9AD
     ),
-    "Treasure Trove Cove Note 91": BKLocationData(
+    LOC_NOTE_TTC_MAP_PILLAR_PATH_4: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0107F894
     ),
-    "Treasure Trove Cove Note 92": BKLocationData(
+    LOC_NOTE_TTC_LIGHTHOUSE_CAVE_1: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01070828
     ),
-    "Treasure Trove Cove Note 93": BKLocationData(
+    LOC_NOTE_TTC_LIGHTHOUSE_PATH_1: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01070CA5
     ),
-    "Treasure Trove Cove Note 94": BKLocationData(
+    LOC_NOTE_TTC_LIGHTHOUSE_PATH_2: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01070BD3
     ),
-    "Treasure Trove Cove Note 95": BKLocationData(
+    LOC_NOTE_TTC_LIGHTHOUSE_PATH_3: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01070BA4
     ),
-    "Treasure Trove Cove Note 96": BKLocationData(
+    LOC_NOTE_TTC_LIGHTHOUSE_BALCONY_1: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01071625
     ),
-    "Treasure Trove Cove Note 97": BKLocationData(
+    LOC_NOTE_TTC_LIGHTHOUSE_BALCONY_2: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0107155A
     ),
-    "Treasure Trove Cove Note 98": BKLocationData(
+    LOC_NOTE_TTC_LIGHTHOUSE_BALCONY_3: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x01071693
     ),
-    "Treasure Trove Cove Note 99": BKLocationData(
+    LOC_NOTE_TTC_LIGHTHOUSE_BALCONY_4: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x010717FF
     ),
-    "Treasure Trove Cove Note 100": BKLocationData(
+    LOC_NOTE_TTC_LIGHTHOUSE_BALCONY_5: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x010717C5
     ),
