@@ -17,7 +17,13 @@ class LogicDifficulty(Choice):
     default = 1
 
 
+class Notesanity(Toggle):
+    """Set whether notes will be shuffled."""
+    display_name = "Notesanity"
+
+
 @dataclass
 class BKOptions(PerGameCommonOptions):
     start_inventory_from_pool: StartInventoryPool
     logic_difficulty: LogicDifficulty
+    notesanity: Notesanity
