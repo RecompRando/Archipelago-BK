@@ -43,6 +43,7 @@ def can_reach_ttc_flight_pad(state, player):
     return (
         can_reach_ttc_middle_ledge(state, player) or
         state.has(ITEM_TALON_TROT, player)
+    )
 
 def can_reach_bgs_puzzle_from_world_room(state, player):
     return (
