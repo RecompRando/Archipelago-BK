@@ -19,7 +19,7 @@ class BKWebWorld(WebWorld):
         "English",
         "setup_en.md",
         "setup/en",
-        ["JadeCurtiss90, LittleCube, ThatHypedPerson, PixelShake92, Muervo_"]
+        ["JadeCurtiss90", "Spicy Wolf", "LittleCube", "ThatHypedPerson", "PixelShake92", "Muervo_"]
     )
     
     tutorials = [setup_en]
