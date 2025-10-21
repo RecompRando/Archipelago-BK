@@ -1479,34 +1479,34 @@ location_data_table: Dict[str, BKLocationData] = {
         # ~ region=RGN_GRUNTILDAS_LAIR,
         # ~ address=0x0001D5C0
     # ~ ),
-    # ~ "Ice Key": BKLocationData(
-        # ~ region=RGN_GRUNTILDAS_LAIR,
-        # ~ address=0x0001D5C1
-    # ~ ),
-    # ~ "Pink Egg": BKLocationData(
-        # ~ region=RGN_GRUNTILDAS_LAIR,
-        # ~ address=0x0001D5C2
-    # ~ ),
-    # ~ "Blue Egg": BKLocationData(
-        # ~ region=RGN_GRUNTILDAS_LAIR,
-        # ~ address=0x0001D5C3
-    # ~ ),
-    # ~ "Cyan Egg": BKLocationData(
-        # ~ region=RGN_GRUNTILDAS_LAIR,
-        # ~ address=0x0001D5C4
-    # ~ ),
-    # ~ "Green Egg": BKLocationData(
-        # ~ region=RGN_GRUNTILDAS_LAIR,
-        # ~ address=0x0001D5C5
-    # ~ ),
-    # ~ "Red Egg": BKLocationData(
-        # ~ region=RGN_GRUNTILDAS_LAIR,
-        # ~ address=0x0001D5C6
-    # ~ ),
-    # ~ "Yellow Egg": BKLocationData(
-        # ~ region=RGN_GRUNTILDAS_LAIR,
-        # ~ address=0x0001D5C7
-    # ~ ),
+    LOC_SNS_KEY_ICE: BKLocationData(
+        region=RGN_FREEZEEZY_PEAK,
+        address=0x05000007
+    ),
+    LOC_SNS_EGG_PINK: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x05000005
+    ),
+    LOC_SNS_EGG_BLUE: BKLocationData(
+        region=RGN_GOBIS_VALLEY,
+        address=0x05000004
+    ),
+    LOC_SNS_EGG_CYAN: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
+        address=0x05000006
+    ),
+    LOC_SNS_EGG_GREEN: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
+        address=0x05000003
+    ),
+    LOC_SNS_EGG_RED: BKLocationData(
+        region=RGN_RUSTY_BUCKET_BAY,
+        address=0x05000002
+    ),
+    LOC_SNS_EGG_YELLOW: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=0x05000001
+    ),
     LOC_NOTE_MM_BRIDGE_1: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x010218DD
@@ -2951,7 +2951,7 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_BUBBLEGLOOP_SWAMP,
         address=0x010D006C
     ),
-    LOG_NOTE_BGS_DESTROY_HUT_2: BKLocationData(
+    LOC_NOTE_BGS_DESTROY_HUT_2: BKLocationData(
         region=RGN_BUBBLEGLOOP_SWAMP,
         address=0x010D006D
     ),
@@ -5075,19 +5075,19 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_CLICK_CLOCK_WOOD,
         address=0x01462BBD
     ),
-    LOC_NOTE_CCW_SLUSH_PLATFORM_1: BKLocationData(
+    LOC_NOTE_CCW_WINTER_SLUSH_PLATFORM_1: BKLocationData(
         region=RGN_CLICK_CLOCK_WOOD,
         address=0x0146187F
     ),
-    LOC_NOTE_CCW_SLUSH_PLATFORM_2: BKLocationData(
+    LOC_NOTE_CCW_WINTER_SLUSH_PLATFORM_2: BKLocationData(
         region=RGN_CLICK_CLOCK_WOOD,
         address=0x0146187C
     ),
-    LOC_NOTE_CCW_SLUSH_PLATFORM_3: BKLocationData(
+    LOC_NOTE_CCW_WINTER_SLUSH_PLATFORM_3: BKLocationData(
         region=RGN_CLICK_CLOCK_WOOD,
         address=0x01461C02
     ),
-    LOC_NOTE_CCW_SLUSH_PLATFORM_4: BKLocationData(
+    LOC_NOTE_CCW_WINTER_SLUSH_PLATFORM_4: BKLocationData(
         region=RGN_CLICK_CLOCK_WOOD,
         address=0x01461C01
     ),
