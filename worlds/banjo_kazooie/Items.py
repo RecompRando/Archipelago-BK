@@ -94,6 +94,11 @@ item_data_table: Dict[str, BKItemData] = {
         code=0x04000011,
         type=ItemClassification.progression
     ),
+    ITEM_SHNIGEDY_DING_DONG: BKItemData(
+        code=0x69000000,
+        type=ItemClassification.useful,
+        can_create=lambda options: False
+    ),
     ITEM_BLUBBER_GOLD: BKItemData(
         code=None,
         type=ItemClassification.progression,
@@ -126,198 +131,260 @@ item_data_table: Dict[str, BKItemData] = {
     ),
     ITEM_JINJO_MM_BLUE: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_MM_GREEN: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_MM_ORANGE: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_MM_PURPLE: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_MM_YELLOW: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_TTC_BLUE: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_TTC_GREEN: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_TTC_ORANGE: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_TTC_PURPLE: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_TTC_YELLOW: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_CC_BLUE: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_CC_GREEN: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_CC_ORANGE: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_CC_PURPLE: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_CC_YELLOW: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_BGS_BLUE: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_BGS_GREEN: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_BGS_ORANGE: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_BGS_PURPLE: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_BGS_YELLOW: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_FP_BLUE: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_FP_GREEN: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_FP_ORANGE: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_FP_PURPLE: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_FP_YELLOW: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_GV_BLUE: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_GV_GREEN: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_GV_ORANGE: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_GV_PURPLE: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_GV_YELLOW: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_MMM_BLUE: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_MMM_GREEN: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_MMM_ORANGE: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_MMM_PURPLE: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_MMM_YELLOW: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_RBB_BLUE: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_RBB_GREEN: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_RBB_ORANGE: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_RBB_PURPLE: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_RBB_YELLOW: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_CCW_BLUE: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_CCW_GREEN: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_CCW_ORANGE: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_CCW_PURPLE: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JINJO_CCW_YELLOW: BKItemData(
         code=None,
-        type=ItemClassification.progression
+        type=ItemClassification.progression,
+        can_create=lambda options: False
     ),
     ITEM_JIGGY: BKItemData(
         code=0x0001FBE2,
         type=ItemClassification.progression,
-        num_exist=100
+        num_exist=98
+    ),
+    ITEM_JIGGY_FILLER: BKItemData(
+        code=0xFF01FBE2,
+        type=ItemClassification.filler,
+        num_exist=2
     ),
     ITEM_MUMBO_TOKEN: BKItemData(
         code=0x0001FBE3,
         type=ItemClassification.progression,
-        num_exist=116
+        num_exist=75
+    ),
+    ITEM_MUMBO_TOKEN_FILLER: BKItemData(
+        code=0xFF01FBE3,
+        type=ItemClassification.filler,
+        num_exist=41
     ),
     ITEM_NOTE: BKItemData(
         code=0x0001FBE4,
         type=ItemClassification.progression,
-        num_exist=900
+        num_exist=882,
+        can_create=lambda options: False
+    ),
+    ITEM_NOTE_FILLER: BKItemData(
+        code=0xFF01FBE4,
+        type=ItemClassification.filler,
+        num_exist=18,
+        can_create=lambda options: False
     ),
     ITEM_EMPTY_HONEYCOMB: BKItemData(
         code=0x0001FBE5,

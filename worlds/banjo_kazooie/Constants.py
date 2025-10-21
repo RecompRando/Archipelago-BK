@@ -1,6 +1,9 @@
 ITEM_JIGGY = "Jiggy"
+ITEM_JIGGY_FILLER = "Jiggy (Filler)"
 ITEM_MUMBO_TOKEN = "Mumbo Token"
+ITEM_MUMBO_TOKEN_FILLER = "Mumbo Token (Filler)"
 ITEM_NOTE = "Note"
+ITEM_NOTE_FILLER = "Note (Filler)"
 ITEM_EMPTY_HONEYCOMB = "Empty Honeycomb Piece"
 ITEM_DOUBLE_HEALTH = "Double Health"
 
@@ -40,6 +43,8 @@ ITEM_GREEN_PRESENT = "Green Present"
 
 ITEM_WORM = "Caterpillar"
 ITEM_ACORN = "Acorn"
+
+ITEM_SHNIGEDY_DING_DONG = "SHNIGEDY DING-DONG"
 
 ITEM_JINJO_MM_BLUE = "Mumbo's Mountain Blue Jinjo"
 ITEM_JINJO_MM_GREEN = "Mumbo's Mountain Green Jinjo"

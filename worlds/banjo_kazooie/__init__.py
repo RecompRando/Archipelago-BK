@@ -92,6 +92,12 @@ class BKWorld(World):
 
             self.place(location_name, location_data_table[location_name].locked_item)
 
+        # temporarily forced to fire
+        if True or not self.options.notesanity.value:
+            for location_name, location_data in location_data_table.items():
+                if location_data.address is not None and (location_data.address & 0xFF000000) == 0x01000000:
+                    self.place(location_name, ITEM_NOTE)
+
     def create_and_add_filler_items(self, count: int = 1):
         for i in range(count):
             self.multiworld.itempool.append(self.create_item(self.get_filler_item_name()))
@@ -127,6 +133,10 @@ class BKWorld(World):
         for location in mw.get_locations(player):
             name = location.name
             if name in location_rules and location_data_table[name].can_create(self.options):
+                # temporarily forced to True for all note locations
+                if location_data_table[name].address is not None and (location_data_table[name].address & 0xFF000000) == 0x01000000:
+                    location.access_rule = lambda state: True
+                    continue
                 location.access_rule = location_rules[name]
 
     def fill_slot_data(self):
