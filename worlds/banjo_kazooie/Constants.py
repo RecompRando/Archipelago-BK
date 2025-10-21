@@ -35,6 +35,14 @@ ITEM_TRANSFORMATION_WALRUS = "Walrus"
 ITEM_TRANSFORMATION_PUMPKIN = "Pumpkin"
 ITEM_TRANSFORMATION_BEE = "Bee"
 
+ITEM_SNS_KEY_ICE = "Ice Key Unlock"
+ITEM_SNS_EGG_PINK = "Pink Egg Unlock"
+ITEM_SNS_EGG_BLUE = "Blue Egg Unlock"
+ITEM_SNS_EGG_CYAN = "Cyan Egg Unlock"
+ITEM_SNS_EGG_GREEN = "Green Egg Unlock"
+ITEM_SNS_EGG_RED = "Red Egg Unlock"
+ITEM_SNS_EGG_YELLOW = "Yellow Egg Unlock"
+
 ITEM_BLUBBER_GOLD = "Blubber's Gold"
 
 ITEM_RED_PRESENT = "Red Present"
@@ -157,6 +165,14 @@ LOC_TRANSFORMATION_CROCODILE = "Crocodile"
 LOC_TRANSFORMATION_WALRUS = "Walrus"
 LOC_TRANSFORMATION_PUMPKIN = "Pumpkin"
 LOC_TRANSFORMATION_BEE = "Bee"
+
+LOC_SNS_KEY_ICE = "Ice Key"
+LOC_SNS_EGG_PINK = "Pink Egg"
+LOC_SNS_EGG_BLUE = "Blue Egg"
+LOC_SNS_EGG_CYAN = "Cyan Egg"
+LOC_SNS_EGG_GREEN = "Green Egg"
+LOC_SNS_EGG_RED = "Red Egg"
+LOC_SNS_EGG_YELLOW = "Yellow Egg"
 
 # Molehills Spiral Mountain
 LOC_MOLEHILL_SM_COMBAT_VEGGIE_PATCH_1 = "SM Molehill Combat Tutorial Veggie Patch (1)"

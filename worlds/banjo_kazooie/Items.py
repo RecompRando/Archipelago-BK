@@ -440,40 +440,33 @@ item_data_table: Dict[str, BKItemData] = {
         type=ItemClassification.progression,
         can_create=lambda options: False
     ),
-    "Ice Key": BKItemData(
-        code=0x0001FBEA,
-        type=ItemClassification.progression,
-        can_create=lambda options: False
+    ITEM_SNS_KEY_ICE: BKItemData(
+        code=0x05000007,
+        type=ItemClassification.progression
     ),
-    "Pink Egg": BKItemData(
-        code=0x0001FBEB,
-        type=ItemClassification.progression,
-        can_create=lambda options: False
+    ITEM_SNS_EGG_PINK: BKItemData(
+        code=0x05000005,
+        type=ItemClassification.progression
     ),
-    "Blue Egg": BKItemData(
-        code=0x0001FBEC,
-        type=ItemClassification.progression,
-        can_create=lambda options: False
+    ITEM_SNS_EGG_BLUE: BKItemData(
+        code=0x05000004,
+        type=ItemClassification.progression
     ),
-    "Cyan Egg": BKItemData(
-        code=0x0001FBED,
-        type=ItemClassification.progression,
-        can_create=lambda options: False
+    ITEM_SNS_EGG_CYAN: BKItemData(
+        code=0x05000006,
+        type=ItemClassification.progression
     ),
-    "Green Egg": BKItemData(
-        code=0x0001FBEE,
-        type=ItemClassification.progression,
-        can_create=lambda options: False
+    ITEM_SNS_EGG_GREEN: BKItemData(
+        code=0x05000003,
+        type=ItemClassification.progression
     ),
-    "Red Egg": BKItemData(
-        code=0x0001FBEF,
-        type=ItemClassification.progression,
-        can_create=lambda options: False
+    ITEM_SNS_EGG_RED: BKItemData(
+        code=0x05000002,
+        type=ItemClassification.progression
     ),
-    "Yellow Egg": BKItemData(
-        code=0x0001FBF0,
-        type=ItemClassification.progression,
-        can_create=lambda options: False
+    ITEM_SNS_EGG_YELLOW: BKItemData(
+        code=0x05000001,
+        type=ItemClassification.progression
     ),
     ITEM_HONEYCOMB: BKItemData(
         code=0x0001FBF1,
