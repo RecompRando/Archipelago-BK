@@ -120,8 +120,9 @@ def can_reach_ccw_puzzle_from_world_room(state, player):
 def can_traverse_bgs(state, player):
     return (
         state.has(ITEM_JUMP, player) or
-        state.has(ITEM_FEATHERY_FLAP, player) or  # required to access most of the level
-        state.has(ITEM_FLAP_FLIP, player)
+        state.has(ITEM_FEATHERY_FLAP, player) or # required to access most of the level
+        state.has(ITEM_RAT_A_TAT_RAP, player)
+        # or state.has(ITEM_FLAP_FLIP, player)   #this is awful, so I'm commenting it out for now
     )
 
 def can_break_mmm_gates(state, player):
@@ -2941,13 +2942,7 @@ def get_location_rules(player, options):
         LOC_JIGGY_BGS_FLIBBET:
             lambda state:
             (
-                (
-                    state.has(ITEM_JUMP, player) or
-                    state.has(ITEM_FEATHERY_FLAP, player) or
-                    state.has(ITEM_FLAP_FLIP, player) or    #required to access most of the level
-                    state.has(ITEM_TALON_TROT, player) or    #can fall from bridge without taking damage
-                    state.has(ITEM_STILT_STRIDE, player)
-                ) and
+                can_traverse_bgs(state, player) and
                 (
                     state.has(ITEM_ROLL, player) or
                     state.has(ITEM_RAT_A_TAT_RAP, player) or
@@ -2960,60 +2955,45 @@ def get_location_rules(player, options):
         LOC_JIGGY_BGS_TANKTUP:
             lambda state:
             (
-                (
-                    state.has(ITEM_JUMP, player) or
-                    state.has(ITEM_FEATHERY_FLAP, player) or    #required to access most of the level
-                    state.has(ITEM_FLAP_FLIP, player) or
-                    state.has(ITEM_STILT_STRIDE, player)
-                ) and
+                can_traverse_bgs(state, player) and
                 state.has(ITEM_BEAK_BUSTER, player)
             ),
         LOC_JIGGY_BGS_TIPTUP:
             lambda state:
             (
-                (
-                    state.has(ITEM_JUMP, player) or
-                    state.has(ITEM_FEATHERY_FLAP, player) or    #required to access most of the level
-                    state.has(ITEM_FLAP_FLIP, player) or
-                    state.has(ITEM_STILT_STRIDE, player)
-                ) and
+                can_traverse_bgs(state, player) and
                 state.has(ITEM_BEAK_BUSTER, player)
             ),
         LOC_JIGGY_BGS_HUT:
             lambda state:
             (
-                (
-                    state.has(ITEM_JUMP, player) or
-                    state.has(ITEM_FEATHERY_FLAP, player) or    #required to access most of the level/get on the huts
-                    state.has(ITEM_RAT_A_TAT_RAP, player) or
-                    state.has(ITEM_FLAP_FLIP, player)
-                ) and
+                can_traverse_bgs(state, player) and
                 state.has(ITEM_SHOCK_SPRING_JUMP, player) and
                 state.has(ITEM_BEAK_BUSTER, player)
             ),
         LOC_JIGGY_BGS_MUMBOS_HUT_RACE:
             lambda state:
             (
+                can_traverse_bgs(state, player) and
                 state.has(ITEM_BEAK_BUSTER, player) and
                 state.has(ITEM_STILT_STRIDE, player)
             ),
         LOC_JIGGY_BGS_CROCTUS:
             lambda state:
             (
-                (
-                    state.has(ITEM_JUMP, player) or
-                    state.has(ITEM_FEATHERY_FLAP, player) or    #required to access most of the level
-                    state.has(ITEM_RAT_A_TAT_RAP, player) or
-                    state.has(ITEM_FLAP_FLIP, player)
-                ) and
+                can_traverse_bgs(state, player) and
                 state.has(ITEM_EGGS, player) and
-                state.has(ITEM_TALON_TROT, player) and    #required to reach all Croctus locations
+                (
+                    state.has(ITEM_TALON_TROT, player) or    #required to reach all Croctus locations
+                    state.has(ITEM_STILT_STRIDE, player)
+                ) and
                 state.has(ITEM_SHOCK_SPRING_JUMP, player) and
                 state.has(ITEM_BEAK_BUSTER, player)
             ),
         LOC_JIGGY_BGS_MR_VILE:
             lambda state:
             (
+                can_traverse_bgs(state, player) and
                 state.has(ITEM_STILT_STRIDE, player) and
                 state.has(ITEM_TRANSFORMATION_CROCODILE, player)
             ),
@@ -3026,15 +3006,65 @@ def get_location_rules(player, options):
                 state.has(ITEM_JINJO_BGS_PURPLE, player) and
                 state.has(ITEM_JINJO_BGS_YELLOW, player)
             ),
+        LOC_JINJO_BGS_BLUE:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) and
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        (
+                            state.has(ITEM_TALON_TROT, player) or
+                            state.has(ITEM_STILT_STRIDE, player)
+                        )
+                    )
+                )
+            ),
+        LOC_JINJO_BGS_GREEN:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                (
+                    state.has(ITEM_TALON_TROT, player) or
+                    state.has(ITEM_STILT_STRIDE, player)
+                )
+            ),
+        LOC_JINJO_BGS_ORANGE:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_JINJO_BGS_PURPLE:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player) and
+                state.has(ITEM_TRANSFORMATION_CROCODILE, player)
+            ),
+        LOC_JINJO_BGS_YELLOW:
+            lambda state:
+            (
+                state.has(ITEM_FEATHERY_FLAP, player) or
+                state.has(ITEM_RAT_A_TAT_RAP, player) or
+                (
+                    state.has(ITEM_JUMP, player) and
+                    state.has(ITEM_TALON_TROT, player)
+                )
+            ),
         LOC_EMPTY_HONEYCOMB_BGS_TIPTUP_STAND:
             lambda state:
             (
+                can_traverse_bgs(state, player) and
                 state.has(ITEM_FLAP_FLIP, player) and
                 state.has(ITEM_BEAK_BUSTER, player)
             ),
         LOC_EMPTY_HONEYCOMB_BGS_INSIDE_MUMBOS_HUT:
             lambda state:
             (
+                can_traverse_bgs(state, player) and
                 state.has(ITEM_STILT_STRIDE, player) and
                 (
                     state.has(ITEM_FLAP_FLIP, player) or
@@ -3042,7 +3072,8 @@ def get_location_rules(player, options):
                         state.has(ITEM_JUMP, player) and
                         (
                             state.has(ITEM_FEATHERY_FLAP, player) or
-                            state.has(ITEM_RAT_A_TAT_RAP, player)
+                            state.has(ITEM_RAT_A_TAT_RAP, player) or
+                            state.has(ITEM_TALON_TROT, player)
                         )
                     )
                 )
@@ -3055,12 +3086,7 @@ def get_location_rules(player, options):
         LOC_MUMBO_TOKEN_BGS_ATOP_CATTAIL:
             lambda state:
             (
-                (
-                    state.has(ITEM_JUMP, player) or
-                    state.has(ITEM_FEATHERY_FLAP, player) or  # required to access most of the level
-                    state.has(ITEM_FLAP_FLIP, player) or
-                    state.has(ITEM_STILT_STRIDE, player)
-                ) and
+                can_traverse_bgs(state, player) and
                 state.has(ITEM_CLIMB, player)
             ),
         LOC_MUMBO_TOKEN_BGS_CENTRAL_PLATFORM:
@@ -3072,53 +3098,648 @@ def get_location_rules(player, options):
         LOC_MUMBO_TOKEN_BGS_INSIDE_TANKTUP:
             lambda state:
             (
-                (
-                    state.has(ITEM_JUMP, player) or
-                    state.has(ITEM_FEATHERY_FLAP, player) or    #required to access most of the level
-                    state.has(ITEM_FLAP_FLIP, player) or
-                    state.has(ITEM_STILT_STRIDE, player)
-                ) and
+                can_traverse_bgs(state, player) and
                 state.has(ITEM_BEAK_BUSTER, player)
             ),
         LOC_MUMBO_TOKEN_BGS_INSIDE_HUT:
             lambda state:
             (
-                (
-                    state.has(ITEM_JUMP, player) or
-                    state.has(ITEM_FEATHERY_FLAP, player) or  # required to access most of the level/get on the huts
-                    state.has(ITEM_RAT_A_TAT_RAP, player) or
-                    state.has(ITEM_FLAP_FLIP, player)
-                ) and
+                can_traverse_bgs(state, player) and
                 state.has(ITEM_SHOCK_SPRING_JUMP, player) and
                 state.has(ITEM_BEAK_BUSTER, player)
             ),
         LOC_MUMBO_TOKEN_BGS_BEHIND_MUMBOS_HUT:
             lambda state:
             (
+                can_traverse_bgs(state, player) and
                 state.has(ITEM_STILT_STRIDE, player)
             ),
         LOC_MUMBO_TOKEN_BGS_BEHIND_MUMBO:
             lambda state:
             (
+                can_traverse_bgs(state, player) and
                 state.has(ITEM_STILT_STRIDE, player)
             ),
         LOC_MUMBO_TOKEN_BGS_UNDER_HUTS_LEFT:
             lambda state:
             (
+                can_traverse_bgs(state, player) and
                 state.has(ITEM_STILT_STRIDE, player) and
                 state.has(ITEM_TRANSFORMATION_CROCODILE, player)
             ),
         LOC_MUMBO_TOKEN_BGS_UNDER_HUTS_RIGHT:
             lambda state:
             (
+                can_traverse_bgs(state, player) and
                 state.has(ITEM_STILT_STRIDE, player) and
                 state.has(ITEM_TRANSFORMATION_CROCODILE, player)
             ),
         LOC_MUMBO_TOKEN_BGS_INSIDE_MR_VILE:
             lambda state:
             (
+                can_traverse_bgs(state, player) and
                 state.has(ITEM_STILT_STRIDE, player) and
                 state.has(ITEM_TRANSFORMATION_CROCODILE, player)
+            ),
+        LOC_NOTE_BGS_ENTRY_BRIDGE_1:
+            lambda state: True,
+        LOC_NOTE_BGS_ENTRY_BRIDGE_2:
+            lambda state: True,
+        LOC_NOTE_BGS_ENTRY_BRIDGE_3:
+            lambda state: True,
+        LOC_NOTE_BGS_ENTRY_BRIDGE_4:
+            lambda state: True,
+        LOC_NOTE_BGS_ENTRY_BRIDGE_5:
+            lambda state: True,
+        LOC_NOTE_BGS_SWITCH_LOG_1:
+            lambda state: True,
+        LOC_NOTE_BGS_SWITCH_LOG_2:
+            lambda state: True,
+        LOC_NOTE_BGS_SWITCH_LOG_3:
+            lambda state: True,
+        LOC_NOTE_BGS_STUMP_LOG_1:
+            lambda state:
+            (
+                can_traverse_bgs(state, player)
+            ),
+        LOC_NOTE_BGS_STUMP_LOG_2:
+            lambda state:
+            (
+                can_traverse_bgs(state, player)
+            ),
+        LOC_NOTE_BGS_STUMP_LOG_3:
+            lambda state:
+            (
+                can_traverse_bgs(state, player)
+            ),
+        LOC_NOTE_BGS_TURTLE_LOG_1:
+            lambda state:
+            (
+                can_traverse_bgs(state, player)
+            ),
+        LOC_NOTE_BGS_TURTLE_LOG_2:
+            lambda state:
+            (
+                can_traverse_bgs(state, player)
+            ),
+        LOC_NOTE_BGS_TURTLE_LOG_3:
+            lambda state:
+            (
+                can_traverse_bgs(state, player)
+            ),
+        LOC_NOTE_BGS_TANKTUPS_FLIPPERS_1:
+            lambda state:
+            (
+                can_traverse_bgs(state, player)
+            ),
+        LOC_NOTE_BGS_TANKTUPS_FLIPPERS_2:
+            lambda state:
+            (
+                can_traverse_bgs(state, player)
+            ),
+        LOC_NOTE_BGS_TANKTUPS_FLIPPERS_3:
+            lambda state:
+            (
+                can_traverse_bgs(state, player)
+            ),
+        LOC_NOTE_BGS_TANKTUPS_FLIPPERS_4:
+            lambda state:
+            (
+                can_traverse_bgs(state, player)
+            ),
+        LOC_NOTE_BGS_PILLAR_LOG_1:
+            lambda state:
+            (
+                can_traverse_bgs(state, player)
+            ),
+        LOC_NOTE_BGS_PILLAR_LOG_2:
+            lambda state:
+            (
+                can_traverse_bgs(state, player)
+            ),
+        LOC_NOTE_BGS_PILLAR_LOG_3:
+            lambda state:
+            (
+                can_traverse_bgs(state, player)
+            ),
+        LOC_NOTE_BGS_CROCODILE_LOG_1:
+            lambda state:
+            (
+                can_traverse_bgs(state, player)
+            ),
+        LOC_NOTE_BGS_CROCODILE_LOG_2:
+            lambda state:
+            (
+                can_traverse_bgs(state, player)
+            ),
+        LOC_NOTE_BGS_CROCODILE_LOG_3:
+            lambda state:
+            (
+                can_traverse_bgs(state, player)
+            ),
+        LOC_NOTE_BGS_CROCODILES_SNOUT_1:
+            lambda state:
+            (
+                can_traverse_bgs(state, player)
+            ),
+        LOC_NOTE_BGS_CROCODILES_SNOUT_2:
+            lambda state:
+            (
+                can_traverse_bgs(state, player)
+            ),
+        LOC_NOTE_BGS_CROCODILES_SNOUT_3:
+            lambda state:
+            (
+                can_traverse_bgs(state, player)
+            ),
+        LOC_NOTE_BGS_CROCODILES_SNOUT_4:
+            lambda state:
+            (
+                can_traverse_bgs(state, player)
+            ),
+        LOC_NOTE_BGS_CROCODILES_SNOUT_5:
+            lambda state:
+            (
+                can_traverse_bgs(state, player)
+            ),
+        LOC_NOTE_BGS_BEHIND_EGG_1:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_BEHIND_EGG_2:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_BEHIND_EGG_3:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_BEHIND_EGG_4:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_BEHIND_EGG_5:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_FIRST_BRIDGE_1:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_FIRST_BRIDGE_2:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_FIRST_BRIDGE_3:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_FIRST_BRIDGE_4:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_FIRST_BRIDGE_5:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_SECOND_BRIDGE_1:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_SECOND_BRIDGE_2:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_SECOND_BRIDGE_3:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_SECOND_BRIDGE_4:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_THIRD_BRIDGE_1:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_THIRD_BRIDGE_2:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_THIRD_BRIDGE_3:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_THIRD_BRIDGE_4:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_THIRD_BRIDGE_5:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_THIRD_BRIDGE_6:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_THIRD_BRIDGE_7:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_FOURTH_BRIDGE_1:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_FOURTH_BRIDGE_2:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_FOURTH_BRIDGE_3:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_FOURTH_BRIDGE_4:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_INSIDE_TANKTUP_1:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_NOTE_BGS_INSIDE_TANKTUP_2:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_NOTE_BGS_INSIDE_TANKTUP_3:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_NOTE_BGS_INSIDE_TANKTUP_4:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_NOTE_BGS_INSIDE_TANKTUP_5:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_NOTE_BGS_INSIDE_TANKTUP_6:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_NOTE_BGS_DESTROY_HUT_1:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_NOTE_BGS_DESTROY_HUT_2:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_NOTE_BGS_DESTROY_HUT_3:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_NOTE_BGS_DESTROY_HUT_4:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_NOTE_BGS_DESTROY_HUT_5:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_NOTE_BGS_CATTAIL_1:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) and
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        (
+                            state.has(ITEM_TALON_TROT, player) or
+                            state.has(ITEM_STILT_STRIDE, player)
+                        )
+                    )
+                )
+            ),
+        LOC_NOTE_BGS_CATTAIL_2:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) and
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        (
+                            state.has(ITEM_TALON_TROT, player) or
+                            state.has(ITEM_STILT_STRIDE, player)
+                        )
+                    )
+                ) and
+                (
+                    state.has(ITEM_FLAP_FLIP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) or
+                        state.has(ITEM_BEAK_BUSTER, player)
+                    )
+                )
+            ),
+        LOC_NOTE_BGS_CATTAIL_3:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) and
+                state.has(ITEM_FLAP_FLIP, player) and
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        (
+                            state.has(ITEM_TALON_TROT, player) or
+                            state.has(ITEM_STILT_STRIDE, player)
+                        )
+                    )
+                )
+            ),
+        LOC_NOTE_BGS_BEHIND_JINJO_1:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_BEHIND_JINJO_2:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_BEHIND_JINJO_3:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_BEHIND_JINJO_4:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_BEHIND_JINJO_5:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_MAZE_1:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_MAZE_2:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_MAZE_3:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_MAZE_4:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_MAZE_5:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_MAZE_6:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_MAZE_7:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_MAZE_8:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_MAZE_9:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_MAZE_10:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_MAZE_11:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_MAZE_12:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_RIGHT_NOSTRIL_1:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player) and
+                state.has(ITEM_TRANSFORMATION_CROCODILE, player)
+            ),
+        LOC_NOTE_BGS_RIGHT_NOSTRIL_2:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player) and
+                state.has(ITEM_TRANSFORMATION_CROCODILE, player)
+            ),
+        LOC_NOTE_BGS_RIGHT_NOSTRIL_3:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player) and
+                state.has(ITEM_TRANSFORMATION_CROCODILE, player)
+            ),
+        LOC_NOTE_BGS_LEFT_NOSTRIL_1:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player) and
+                state.has(ITEM_TRANSFORMATION_CROCODILE, player)
+            ),
+        LOC_NOTE_BGS_LEFT_NOSTRIL_2:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player) and
+                state.has(ITEM_TRANSFORMATION_CROCODILE, player)
+            ),
+        LOC_NOTE_BGS_LEFT_NOSTRIL_3:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player) and
+                state.has(ITEM_TRANSFORMATION_CROCODILE, player)
+            ),
+        LOC_NOTE_BGS_UNDER_PILLAR_1:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player) and
+                state.has(ITEM_TRANSFORMATION_CROCODILE, player)
+            ),
+        LOC_NOTE_BGS_UNDER_PILLAR_2:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player) and
+                state.has(ITEM_TRANSFORMATION_CROCODILE, player)
+            ),
+        LOC_NOTE_BGS_UNDER_PILLAR_3:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player) and
+                state.has(ITEM_TRANSFORMATION_CROCODILE, player)
+            ),
+        LOC_NOTE_BGS_UNDER_PILLAR_4:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player) and
+                state.has(ITEM_TRANSFORMATION_CROCODILE, player)
+            ),
+        LOC_NOTE_BGS_BEHIND_PILLARS_1:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_BEHIND_PILLARS_2:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_BEHIND_PILLARS_3:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_BEHIND_PILLARS_4:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_BGS_BEHIND_PILLARS_5:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_STILT_STRIDE, player)
             ),
         LOC_MOLEHILL_FP_NEXT_TO_STACK_OF_PRESENTS:
             lambda state: True,
