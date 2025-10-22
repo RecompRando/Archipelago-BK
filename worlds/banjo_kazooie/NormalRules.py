@@ -102,6 +102,12 @@ def can_reach_mmm_second_floor(state, player):
         )
     )
 
+def can_reach_mmm_third_floor(state, player):
+    return (
+        can_reach_mmm_second_floor(state, player) and
+        state.has(ITEM_SHOCK_SPRING_JUMP, player)
+    )
+
 def can_hit_one_water_switch(state, player):
     return (
         # break gate outside MMM
@@ -168,7 +174,8 @@ def can_traverse_bgs(state, player):
 def can_break_mmm_gates(state, player):
     return (
         state.has(ITEM_RAT_A_TAT_RAP, player) or
-        state.has(ITEM_BEAK_BARGE, player)
+        state.has(ITEM_BEAK_BARGE, player) or
+        state.has(ITEM_EGGS, player)
     )
 
 def can_reach_eyrie(state, player):
@@ -5893,9 +5900,8 @@ def get_location_rules(player, options):
         LOC_JIGGY_MMM_CELLAR:
             lambda state:
             (
-                state.has(ITEM_RAT_A_TAT_RAP, player) or
-                state.has(ITEM_BEAK_BARGE, player) or       #Wonderwing also works
-                state.has(ITEM_EGGS, player)
+                can_break_mmm_gates(state, player) or
+                state.has(ITEM_BEAK_BUSTER, player)
             ),
         LOC_JIGGY_MMM_TUMBLAR:
             lambda state:
@@ -5911,11 +5917,7 @@ def get_location_rules(player, options):
                 (
                     state.has(ITEM_TRANSFORMATION_PUMPKIN, player) and
                     state.has(ITEM_FLAP_FLIP, player) and   #required to get to Mumbo's Skull
-                    (
-                        state.has(ITEM_RAT_A_TAT_RAP, player) or    #required to open church gate
-                        state.has(ITEM_BEAK_BARGE, player) or       #Wonderwing also works
-                        state.has(ITEM_EGGS, player)
-                    )
+                    can_break_mmm_gates(state, player)
                 )
             ),
         LOC_JIGGY_MMM_FLOWERPOT:
@@ -5926,11 +5928,7 @@ def get_location_rules(player, options):
         LOC_JIGGY_MMM_CLOCK_TOWER:
             lambda state:
             (
-                (
-                    state.has(ITEM_RAT_A_TAT_RAP, player) or  # required to open church gate
-                    state.has(ITEM_BEAK_BARGE, player) or  # Wonderwing also works
-                    state.has(ITEM_EGGS, player)
-                ) and
+                can_break_mmm_gates(state, player) and
                 state.has(ITEM_JUMP, player) and
                 state.has(ITEM_TALON_TROT, player) and
                 state.has(ITEM_CLIMB, player)
@@ -5938,11 +5936,7 @@ def get_location_rules(player, options):
         LOC_JIGGY_MMM_MOTZAND:
             lambda state:
             (
-                (
-                    state.has(ITEM_RAT_A_TAT_RAP, player) or  # required to open church gate
-                    state.has(ITEM_BEAK_BARGE, player) or  # Wonderwing also works
-                    state.has(ITEM_EGGS, player)
-                ) and
+                can_break_mmm_gates(state, player) and
                 state.has(ITEM_BEAK_BUSTER, player) and
                 state.has(ITEM_TURBO_TALON_TROT, player) and
                 state.has(ITEM_FLAP_FLIP, player) and
@@ -5952,27 +5946,16 @@ def get_location_rules(player, options):
             lambda state:
             (
                 can_reach_mmm_second_floor(state, player) and
-                (
-                    state.has(ITEM_TRANSFORMATION_PUMPKIN, player) and
-                    state.has(ITEM_FLAP_FLIP, player) and           #required to get to Mumbo's Skull
-                    (
-                        state.has(ITEM_RAT_A_TAT_RAP, player) or    #required to open church gate
-                        state.has(ITEM_BEAK_BARGE, player) or       #Wonderwing also works
-                        state.has(ITEM_EGGS, player)
-                    )
-                )
+                can_break_mmm_gates(state, player) and
+                state.has(ITEM_FLAP_FLIP, player) and   #required to get to Mumbo's Skull
+                state.has(ITEM_TRANSFORMATION_PUMPKIN, player)
             ),
         LOC_JIGGY_MMM_STORM_DRAIN:
             lambda state:
             (
+                can_break_mmm_gates(state, player) and
                 state.has(ITEM_TRANSFORMATION_PUMPKIN, player) and
-                state.has(ITEM_FLAP_FLIP, player) and           #required to get to Mumbo's Skull
-                (
-                    state.has(ITEM_RAT_A_TAT_RAP, player) or    #required to open church gate
-                    state.has(ITEM_BEAK_BARGE, player) or       #Wonderwing also works
-                    state.has(ITEM_EGGS, player)
-                )
-
+                state.has(ITEM_FLAP_FLIP, player)
             ),
         LOC_JIGGY_MMM_JINJO:
             lambda state:
@@ -5983,14 +5966,33 @@ def get_location_rules(player, options):
                 state.has(ITEM_JINJO_MMM_PURPLE, player) and
                 state.has(ITEM_JINJO_MMM_YELLOW, player)
             ),
+        LOC_JINJO_MMM_BLUE:
+            lambda state:
+            (
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        LOC_JINJO_MMM_GREEN:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        LOC_JINJO_MMM_ORANGE:
+            lambda state: True,
+        LOC_JINJO_MMM_PURPLE:
+            lambda state:
+            (
+                can_break_mmm_gates(state, player)
+            ),
+        LOC_JINJO_MMM_YELLOW:
+            lambda state:
+            (
+                can_reach_mmm_third_floor(state, player)
+            ),
         LOC_EMPTY_HONEYCOMB_MMM_CHURCH_RAFTER:
             lambda state:
             (
-                (
-                    state.has(ITEM_RAT_A_TAT_RAP, player) or  # required to open church gate
-                    state.has(ITEM_BEAK_BARGE, player) or  # Wonderwing also works
-                    state.has(ITEM_EGGS, player)
-                ) and
+                can_break_mmm_gates(state, player) and
                 state.has(ITEM_BEAK_BUSTER, player) and
                 state.has(ITEM_TURBO_TALON_TROT, player) and
                 state.has(ITEM_FLAP_FLIP, player) and
@@ -6001,15 +6003,9 @@ def get_location_rules(player, options):
             lambda state:
             (
                 can_reach_mmm_second_floor(state, player) and
-                (
-                    state.has(ITEM_TRANSFORMATION_PUMPKIN, player) and
-                    state.has(ITEM_FLAP_FLIP, player) and           #required to get to Mumbo's Skull
-                    (
-                        state.has(ITEM_RAT_A_TAT_RAP, player) or    #required to open church gate
-                        state.has(ITEM_BEAK_BARGE, player) or       #Wonderwing also works
-                        state.has(ITEM_EGGS, player)
-                    )
-                )
+                can_break_mmm_gates(state, player) and
+                state.has(ITEM_TRANSFORMATION_PUMPKIN, player) and
+                state.has(ITEM_FLAP_FLIP, player)
             ),
         LOC_MUMBO_TOKEN_MMM_FIREPLACE:
             lambda state:
@@ -6018,31 +6014,21 @@ def get_location_rules(player, options):
                     state.has(ITEM_CLIMB, player) and      #you can either climb up the mansion and enter the chimney...
                     state.has(ITEM_SHOCK_SPRING_JUMP, player)
                 ) or
-                (
-                    state.has(ITEM_RAT_A_TAT_RAP, player) or
-                    state.has(ITEM_BEAK_BARGE, player) or       #...or just break down the door and walk in
-                    state.has(ITEM_EGGS, player)                #Wonderwing also works
-                )
+                can_break_mmm_gates(state, player)          #or just break down the front door and walk in
             ),
         LOC_MUMBO_TOKEN_MMM_CELLAR:
             lambda state:
             (
-                state.has(ITEM_RAT_A_TAT_RAP, player) or
-                state.has(ITEM_BEAK_BARGE, player) or       #Wonderwing also works
-                state.has(ITEM_EGGS, player)
+                can_break_mmm_gates(state, player)
             ),
         LOC_MUMBO_TOKEN_MMM_LOGGO:
             lambda state:
             (
                 can_reach_mmm_second_floor(state, player) and
                 (
+                    can_break_mmm_gates(state, player) and
                     state.has(ITEM_TRANSFORMATION_PUMPKIN, player) and
-                    state.has(ITEM_FLAP_FLIP, player) and           #required to get to Mumbo's Skull
-                    (
-                        state.has(ITEM_RAT_A_TAT_RAP, player) or    #required to open church gate
-                        state.has(ITEM_BEAK_BARGE, player) or       #Wonderwing also works
-                        state.has(ITEM_EGGS, player)
-                    )
+                    state.has(ITEM_FLAP_FLIP, player)
                 )
             ),
         LOC_MUMBO_TOKEN_MMM_SINK:
@@ -6056,13 +6042,9 @@ def get_location_rules(player, options):
             lambda state:
             (
                 (                   #you can either turn into a pumpkin and go in through the small gap in the hedge...
+                    can_break_mmm_gates(state, player) and
                     state.has(ITEM_TRANSFORMATION_PUMPKIN, player) and
-                    state.has(ITEM_FLAP_FLIP, player) and           #required to get to Mumbo's Skull
-                    (
-                        state.has(ITEM_RAT_A_TAT_RAP, player) or    #required to open church gate
-                        state.has(ITEM_BEAK_BARGE, player) or       #Wonderwing also works
-                        state.has(ITEM_EGGS, player)
-                    )
+                    state.has(ITEM_FLAP_FLIP, player)
                 ) or
                 state.has(ITEM_CLIMB, player) #...or just climb onto the roof and fall onto it, your call:)
             ),
@@ -6076,41 +6058,33 @@ def get_location_rules(player, options):
             (
                 state.has(ITEM_SWIM, player) or
                 (
+                    can_break_mmm_gates(state, player) and
                     state.has(ITEM_TRANSFORMATION_PUMPKIN, player) and
-                    state.has(ITEM_FLAP_FLIP, player) and   #required to get to Mumbo's Skull
-                    (
-                        state.has(ITEM_RAT_A_TAT_RAP, player) or    #required to open church gate
-                        state.has(ITEM_BEAK_BARGE, player) or       #Wonderwing also works
-                        state.has(ITEM_EGGS, player)
-                    )
+                    state.has(ITEM_FLAP_FLIP, player)
                 )
             ),
         LOC_MUMBO_TOKEN_MMM_BEHIND_GRAVE:
             lambda state:
             (
-                state.has(ITEM_RAT_A_TAT_RAP, player) or  # required to open church gate
-                state.has(ITEM_BEAK_BARGE, player) or  # Wonderwing also works
-                state.has(ITEM_EGGS, player)
+                can_break_mmm_gates(state, player)
             ),
         LOC_MUMBO_TOKEN_MMM_CLOCK_TOWER:
             lambda state:
             (
-                (
-                    state.has(ITEM_RAT_A_TAT_RAP, player) or  # required to open church gate
-                    state.has(ITEM_BEAK_BARGE, player) or  # Wonderwing also works
-                    state.has(ITEM_EGGS, player)
-                ) and
+                can_break_mmm_gates(state, player) and
                 state.has(ITEM_JUMP, player) and
-                state.has(ITEM_TALON_TROT, player)
+                (
+                    state.has(ITEM_TALON_TROT, player) or
+                    (
+                        state.has(ITEM_FLAP_FLIP, player) and
+                        state.has(ITEM_TRANSFORMATION_PUMPKIN, player)
+                    )
+                )
             ),
         LOC_MUMBO_TOKEN_MMM_CHURCH_CHAIR:
             lambda state:
             (
-                (
-                    state.has(ITEM_RAT_A_TAT_RAP, player) or  # required to open church gate
-                    state.has(ITEM_BEAK_BARGE, player) or  # Wonderwing also works
-                    state.has(ITEM_EGGS, player)
-                ) and
+                can_break_mmm_gates(state, player) and
                 state.has(ITEM_BEAK_BUSTER, player) and
                 state.has(ITEM_TURBO_TALON_TROT, player) and
                 state.has(ITEM_FLAP_FLIP, player)
@@ -6118,11 +6092,7 @@ def get_location_rules(player, options):
         LOC_MUMBO_TOKEN_MMM_CHURCH_RAFTER:
             lambda state:
             (
-                (
-                    state.has(ITEM_RAT_A_TAT_RAP, player) or  # required to open church gate
-                    state.has(ITEM_BEAK_BARGE, player) or  # Wonderwing also works
-                    state.has(ITEM_EGGS, player)
-                ) and
+                can_break_mmm_gates(state, player) and
                 state.has(ITEM_BEAK_BUSTER, player) and
                 state.has(ITEM_TURBO_TALON_TROT, player) and
                 state.has(ITEM_FLAP_FLIP, player) and
@@ -6144,6 +6114,754 @@ def get_location_rules(player, options):
             ),
         LOC_MUMBO_TOKEN_MMM_NEAR_FOUNTAIN:
             lambda state: True,
+        LOC_NOTE_MMM_ENTRANCE_WALL_1:
+            lambda state: True,
+        LOC_NOTE_MMM_ENTRANCE_WALL_2:
+            lambda state: True,
+        LOC_NOTE_MMM_ENTRANCE_WALL_3:
+            lambda state: True,
+        LOC_NOTE_MMM_ENTRANCE_WALL_4:
+            lambda state: True,
+        LOC_NOTE_MMM_HEDGE_MAZE_1:
+            lambda state: True,
+        LOC_NOTE_MMM_HEDGE_MAZE_2:
+            lambda state: True,
+        LOC_NOTE_MMM_HEDGE_MAZE_3:
+            lambda state: True,
+        LOC_NOTE_MMM_HEDGE_MAZE_4:
+            lambda state: True,
+        LOC_NOTE_MMM_HEDGE_MAZE_5:
+            lambda state: True,
+        LOC_NOTE_MMM_HEDGE_MAZE_6:
+            lambda state: True,
+        LOC_NOTE_MMM_FOUNTAIN_1:
+            lambda state: True,
+        LOC_NOTE_MMM_FOUNTAIN_2:
+            lambda state: True,
+        LOC_NOTE_MMM_FOUNTAIN_3:
+            lambda state: True,
+        LOC_NOTE_MMM_FOUNTAIN_4:
+            lambda state: True,
+        LOC_NOTE_MMM_GRAVEYARD_ALCOVE_1:
+            lambda state: True,
+        LOC_NOTE_MMM_GRAVEYARD_ALCOVE_2:
+            lambda state: True,
+        LOC_NOTE_MMM_GRAVEYARD_ALCOVE_3:
+            lambda state: True,
+        LOC_NOTE_MMM_GUTTER_DRAIN_1:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) or
+                (
+                    can_break_mmm_gates(state, player) and
+                    state.has(ITEM_TRANSFORMATION_PUMPKIN, player) and
+                    state.has(ITEM_FLAP_FLIP, player)
+                )
+            ),
+        LOC_NOTE_MMM_GUTTER_DRAIN_2:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) or
+                (
+                    can_break_mmm_gates(state, player) and
+                    state.has(ITEM_TRANSFORMATION_PUMPKIN, player) and
+                    state.has(ITEM_FLAP_FLIP, player)
+                )
+            ),
+        LOC_NOTE_MMM_GUTTER_DRAIN_3:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) or
+                (
+                    can_break_mmm_gates(state, player) and
+                    state.has(ITEM_TRANSFORMATION_PUMPKIN, player) and
+                    state.has(ITEM_FLAP_FLIP, player)
+                )
+            ),
+        LOC_NOTE_MMM_GUTTER_DRAIN_4:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) or
+                (
+                    can_break_mmm_gates(state, player) and
+                    state.has(ITEM_TRANSFORMATION_PUMPKIN, player) and
+                    state.has(ITEM_FLAP_FLIP, player)
+                )
+            ),
+        LOC_NOTE_MMM_DINING_ROOM_CHAIR_1:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FEATHERY_FLAP, player) or
+                state.has(ITEM_FLAP_FLIP, player) or
+                state.has(ITEM_RAT_A_TAT_RAP, player)
+            ),
+        LOC_NOTE_MMM_DINING_ROOM_CHAIR_2:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FEATHERY_FLAP, player) or
+                state.has(ITEM_FLAP_FLIP, player) or
+                state.has(ITEM_RAT_A_TAT_RAP, player)
+            ),
+        LOC_NOTE_MMM_DINING_ROOM_CHAIR_3:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FEATHERY_FLAP, player) or
+                state.has(ITEM_FLAP_FLIP, player) or
+                state.has(ITEM_RAT_A_TAT_RAP, player)
+            ),
+        LOC_NOTE_MMM_DINING_ROOM_CHAIR_4:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FEATHERY_FLAP, player) or
+                state.has(ITEM_FLAP_FLIP, player) or
+                state.has(ITEM_RAT_A_TAT_RAP, player)
+            ),
+        LOC_NOTE_MMM_DINING_ROOM_CHAIR_5:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FEATHERY_FLAP, player) or
+                state.has(ITEM_FLAP_FLIP, player) or
+                state.has(ITEM_RAT_A_TAT_RAP, player)
+            ),
+        LOC_NOTE_MMM_DINING_ROOM_CHAIR_6:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FEATHERY_FLAP, player) or
+                state.has(ITEM_FLAP_FLIP, player) or
+                state.has(ITEM_RAT_A_TAT_RAP, player)
+            ),
+        LOC_NOTE_MMM_DINING_ROOM_CHAIR_7:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FEATHERY_FLAP, player) or
+                state.has(ITEM_FLAP_FLIP, player) or
+                state.has(ITEM_RAT_A_TAT_RAP, player)
+            ),
+        LOC_NOTE_MMM_DINING_ROOM_CHAIR_8:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FEATHERY_FLAP, player) or
+                state.has(ITEM_FLAP_FLIP, player) or
+                state.has(ITEM_RAT_A_TAT_RAP, player)
+            ),
+        LOC_NOTE_MMM_UPPER_GUTTERS_1:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        LOC_NOTE_MMM_UPPER_GUTTERS_2:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        LOC_NOTE_MMM_UPPER_GUTTERS_3:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        LOC_NOTE_MMM_UPPER_GUTTERS_4:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        LOC_NOTE_MMM_PAINTING_ROOM_1:
+            lambda state:
+            (
+                can_reach_mmm_third_floor(state, player)
+            ),
+        LOC_NOTE_MMM_PAINTING_ROOM_2:
+            lambda state:
+            (
+                can_reach_mmm_third_floor(state, player)
+            ),
+        LOC_NOTE_MMM_PAINTING_ROOM_3:
+            lambda state:
+            (
+                can_reach_mmm_third_floor(state, player)
+            ),
+        LOC_NOTE_MMM_PAINTING_ROOM_4:
+            lambda state:
+            (
+                can_reach_mmm_third_floor(state, player)
+            ),
+        LOC_NOTE_MMM_PAINTING_ROOM_5:
+            lambda state:
+            (
+                can_reach_mmm_third_floor(state, player)
+            ),
+        LOC_NOTE_MMM_PAINTING_ROOM_6:
+            lambda state:
+            (
+                can_reach_mmm_third_floor(state, player)
+            ),
+        LOC_NOTE_MMM_PAINTING_ROOM_7:
+            lambda state:
+            (
+                can_reach_mmm_third_floor(state, player)
+            ),
+        LOC_NOTE_MMM_PAINTING_ROOM_8:
+            lambda state:
+            (
+                can_reach_mmm_third_floor(state, player)
+            ),
+        LOC_NOTE_MMM_PAINTING_ROOM_9:
+            lambda state:
+            (
+                can_reach_mmm_third_floor(state, player)
+            ),
+        LOC_NOTE_MMM_BEDROOM_DRESSER_1:
+            lambda state:
+            (
+                can_reach_mmm_third_floor(state, player) and
+                (
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_FLAP_FLIP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player)
+                )
+            ),
+        LOC_NOTE_MMM_BEDROOM_DRESSER_2:
+            lambda state:
+            (
+                can_reach_mmm_third_floor(state, player) and
+                (
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_FLAP_FLIP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player)
+                )
+            ),
+        LOC_NOTE_MMM_BEDROOM_DRESSER_3:
+            lambda state:
+            (
+                can_reach_mmm_third_floor(state, player) and
+                (
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_FLAP_FLIP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player)
+                )
+            ),
+        LOC_NOTE_MMM_BEDROOM_DRESSER_4:
+            lambda state:
+            (
+                can_reach_mmm_third_floor(state, player) and
+                (
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_FLAP_FLIP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player)
+                )
+            ),
+        LOC_NOTE_MMM_BASEMENT_WINE_RACK_1:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player) and
+                (
+                    can_break_mmm_gates(state, player) or
+                    state.has(ITEM_BEAK_BUSTER, player)
+                )
+            ),
+        LOC_NOTE_MMM_BASEMENT_WINE_RACK_2:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player) and
+                (
+                    can_break_mmm_gates(state, player) or
+                    state.has(ITEM_BEAK_BUSTER, player)
+                )
+            ),
+        LOC_NOTE_MMM_BASEMENT_WINE_RACK_3:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player) and
+                (
+                    can_break_mmm_gates(state, player) or
+                    state.has(ITEM_BEAK_BUSTER, player)
+                )
+            ),
+        LOC_NOTE_MMM_BASEMENT_WINE_RACK_4:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player) and
+                (
+                    can_break_mmm_gates(state, player) or
+                    state.has(ITEM_BEAK_BUSTER, player)
+                )
+            ),
+        LOC_NOTE_MMM_CHURCH_ROOF_1:
+            lambda state:
+            (
+                can_break_mmm_gates(state, player) and
+                state.has(ITEM_JUMP, player) and
+                (
+                    state.has(ITEM_TALON_TROT, player) or
+                    (
+                        state.has(ITEM_FLAP_FLIP, player) and
+                        state.has(ITEM_TRANSFORMATION_PUMPKIN, player)
+                    )
+                )
+            ),
+        LOC_NOTE_MMM_CHURCH_ROOF_2:
+            lambda state:
+            (
+                can_break_mmm_gates(state, player) and
+                state.has(ITEM_JUMP, player) and
+                (
+                    state.has(ITEM_TALON_TROT, player) or
+                    (
+                        state.has(ITEM_FLAP_FLIP, player) and
+                        state.has(ITEM_TRANSFORMATION_PUMPKIN, player)
+                    )
+                )
+            ),
+        LOC_NOTE_MMM_CHURCH_ROOF_3:
+            lambda state:
+            (
+                can_break_mmm_gates(state, player) and
+                state.has(ITEM_JUMP, player) and
+                (
+                    state.has(ITEM_TALON_TROT, player) or
+                    (
+                        state.has(ITEM_FLAP_FLIP, player) and
+                        state.has(ITEM_TRANSFORMATION_PUMPKIN, player)
+                    )
+                )
+            ),
+        LOC_NOTE_MMM_CHURCH_ROOF_4:
+            lambda state:
+            (
+                can_break_mmm_gates(state, player) and
+                state.has(ITEM_JUMP, player) and
+                (
+                    state.has(ITEM_TALON_TROT, player) or
+                    (
+                        state.has(ITEM_FLAP_FLIP, player) and
+                        state.has(ITEM_TRANSFORMATION_PUMPKIN, player)
+                    )
+                )
+            ),
+        LOC_NOTE_MMM_CHURCH_ROOF_5:
+            lambda state:
+            (
+                can_break_mmm_gates(state, player) and
+                state.has(ITEM_JUMP, player) and
+                (
+                    state.has(ITEM_TALON_TROT, player) or
+                    (
+                        state.has(ITEM_FLAP_FLIP, player) and
+                        state.has(ITEM_TRANSFORMATION_PUMPKIN, player)
+                    )
+                )
+            ),
+        LOC_NOTE_MMM_CHURCH_ROOF_6:
+            lambda state:
+            (
+                can_break_mmm_gates(state, player) and
+                state.has(ITEM_JUMP, player) and
+                (
+                    state.has(ITEM_TALON_TROT, player) or
+                    (
+                        state.has(ITEM_FLAP_FLIP, player) and
+                        state.has(ITEM_TRANSFORMATION_PUMPKIN, player)
+                    )
+                )
+            ),
+        LOC_NOTE_MMM_CHURCH_ROOF_7:
+            lambda state:
+            (
+                can_break_mmm_gates(state, player) and
+                state.has(ITEM_JUMP, player) and
+                (
+                    state.has(ITEM_TALON_TROT, player) or
+                    (
+                        state.has(ITEM_FLAP_FLIP, player) and
+                        state.has(ITEM_TRANSFORMATION_PUMPKIN, player)
+                    )
+                )
+            ),
+        LOC_NOTE_MMM_CHURCH_ROOF_8:
+            lambda state:
+            (
+                can_break_mmm_gates(state, player) and
+                state.has(ITEM_JUMP, player) and
+                (
+                    state.has(ITEM_TALON_TROT, player) or
+                    (
+                        state.has(ITEM_FLAP_FLIP, player) and
+                        state.has(ITEM_TRANSFORMATION_PUMPKIN, player)
+                    )
+                )
+            ),
+        LOC_NOTE_MMM_CHURCH_ROOF_9:
+            lambda state:
+            (
+                can_break_mmm_gates(state, player) and
+                state.has(ITEM_JUMP, player) and
+                (
+                    state.has(ITEM_TALON_TROT, player) or
+                    (
+                        state.has(ITEM_FLAP_FLIP, player) and
+                        state.has(ITEM_TRANSFORMATION_PUMPKIN, player)
+                    )
+                )
+            ),
+        LOC_NOTE_MMM_CHURCH_ROOF_10:
+            lambda state:
+            (
+                can_break_mmm_gates(state, player) and
+                state.has(ITEM_JUMP, player) and
+                (
+                    state.has(ITEM_TALON_TROT, player) or
+                    (
+                        state.has(ITEM_FLAP_FLIP, player) and
+                        state.has(ITEM_TRANSFORMATION_PUMPKIN, player)
+                    )
+                )
+            ),
+        LOC_NOTE_MMM_CLOCK_TOWER_1:
+            lambda state:
+            (
+                can_break_mmm_gates(state, player) and
+                state.has(ITEM_JUMP, player) and
+                (
+                    state.has(ITEM_TALON_TROT, player) or
+                    (
+                        state.has(ITEM_FLAP_FLIP, player) and
+                        state.has(ITEM_TRANSFORMATION_PUMPKIN, player)
+                    )
+                )
+            ),
+        LOC_NOTE_MMM_CLOCK_TOWER_2:
+            lambda state:
+            (
+                can_break_mmm_gates(state, player) and
+                state.has(ITEM_JUMP, player) and
+                (
+                    state.has(ITEM_TALON_TROT, player) or
+                    (
+                        state.has(ITEM_FLAP_FLIP, player) and
+                        state.has(ITEM_TRANSFORMATION_PUMPKIN, player)
+                    )
+                )
+            ),
+        LOC_NOTE_MMM_CLOCK_TOWER_3:
+            lambda state:
+            (
+                can_break_mmm_gates(state, player) and
+                state.has(ITEM_JUMP, player) and
+                (
+                    state.has(ITEM_TALON_TROT, player) or
+                    (
+                        state.has(ITEM_FLAP_FLIP, player) and
+                        state.has(ITEM_TRANSFORMATION_PUMPKIN, player)
+                    )
+                )
+            ),
+        LOC_NOTE_MMM_CLOCK_TOWER_4:
+            lambda state:
+            (
+                can_break_mmm_gates(state, player) and
+                state.has(ITEM_JUMP, player) and
+                (
+                    state.has(ITEM_TALON_TROT, player) or
+                    (
+                        state.has(ITEM_FLAP_FLIP, player) and
+                        state.has(ITEM_TRANSFORMATION_PUMPKIN, player)
+                    )
+                )
+            ),
+        LOC_NOTE_MMM_ON_TUMBLARS_SHACK_1:
+            lambda state:
+            (
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        LOC_NOTE_MMM_ON_TUMBLARS_SHACK_2:
+            lambda state:
+            (
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        LOC_NOTE_MMM_ON_TUMBLARS_SHACK_3:
+            lambda state:
+            (
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        LOC_NOTE_MMM_ON_TUMBLARS_SHACK_4:
+            lambda state:
+            (
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        LOC_NOTE_MMM_CHURCH_PEW_1:
+            lambda state:
+            (
+                can_break_mmm_gates(state, player) and
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_TURBO_TALON_TROT, player) and
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_NOTE_MMM_CHURCH_PEW_2:
+            lambda state:
+            (
+                can_break_mmm_gates(state, player) and
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_TURBO_TALON_TROT, player) and
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_NOTE_MMM_CHURCH_PEW_3:
+            lambda state:
+            (
+                can_break_mmm_gates(state, player) and
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_TURBO_TALON_TROT, player) and
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_NOTE_MMM_CHURCH_PEW_4:
+            lambda state:
+            (
+                can_break_mmm_gates(state, player) and
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_TURBO_TALON_TROT, player) and
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_NOTE_MMM_ORGAN_PEDALS_1:
+            lambda state:
+            (
+                can_break_mmm_gates(state, player) and
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_TURBO_TALON_TROT, player)
+            ),
+        LOC_NOTE_MMM_ORGAN_PEDALS_2:
+            lambda state:
+            (
+                can_break_mmm_gates(state, player) and
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_TURBO_TALON_TROT, player)
+            ),
+        LOC_NOTE_MMM_ORGAN_PIPES_1:
+            lambda state:
+            (
+                can_break_mmm_gates(state, player) and
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_TURBO_TALON_TROT, player) and
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        LOC_NOTE_MMM_ORGAN_PIPES_2:
+            lambda state:
+            (
+                can_break_mmm_gates(state, player) and
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_TURBO_TALON_TROT, player) and
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        LOC_NOTE_MMM_ORGAN_PIPES_3:
+            lambda state:
+            (
+                can_break_mmm_gates(state, player) and
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_TURBO_TALON_TROT, player) and
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        LOC_NOTE_MMM_ORGAN_PIPES_4:
+            lambda state:
+            (
+                can_break_mmm_gates(state, player) and
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_TURBO_TALON_TROT, player) and
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        LOC_NOTE_MMM_WELL_LEDGES_1:
+            lambda state:
+            (
+                state.has(ITEM_FEATHERY_FLAP, player) or
+                state.has(ITEM_RAT_A_TAT_RAP, player) or
+                (
+                    state.has(ITEM_JUMP, player) and
+                    state.has(ITEM_TALON_TROT, player)
+                )
+            ),
+        LOC_NOTE_MMM_WELL_LEDGES_2:
+            lambda state:
+            (
+                state.has(ITEM_FEATHERY_FLAP, player) or
+                state.has(ITEM_RAT_A_TAT_RAP, player) or
+                (
+                    state.has(ITEM_JUMP, player) and
+                    state.has(ITEM_TALON_TROT, player)
+                )
+            ),
+        LOC_NOTE_MMM_WELL_LEDGES_3:
+            lambda state:
+            (
+                state.has(ITEM_FEATHERY_FLAP, player) or
+                state.has(ITEM_RAT_A_TAT_RAP, player) or
+                (
+                    state.has(ITEM_JUMP, player) and
+                    state.has(ITEM_TALON_TROT, player)
+                )
+            ),
+        LOC_NOTE_MMM_WELL_LEDGES_4:
+            lambda state:
+            (
+                state.has(ITEM_FEATHERY_FLAP, player) or
+                state.has(ITEM_RAT_A_TAT_RAP, player) or
+                (
+                    state.has(ITEM_JUMP, player) and
+                    state.has(ITEM_TALON_TROT, player)
+                )
+            ),
+        LOC_NOTE_MMM_INSIDE_WELL_1:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player) or
+                (
+                    state.has(ITEM_TRANSFORMATION_PUMPKIN, player) and
+                    state.has(ITEM_FLAP_FLIP, player) and   #required to get to Mumbo's Skull
+                    can_break_mmm_gates(state, player)
+                )
+            ),
+        LOC_NOTE_MMM_INSIDE_WELL_2:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player) or
+                (
+                    state.has(ITEM_TRANSFORMATION_PUMPKIN, player) and
+                    state.has(ITEM_FLAP_FLIP, player) and   #required to get to Mumbo's Skull
+                    can_break_mmm_gates(state, player)
+                )
+            ),
+        LOC_NOTE_MMM_INSIDE_WELL_3:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player) or
+                (
+                    state.has(ITEM_TRANSFORMATION_PUMPKIN, player) and
+                    state.has(ITEM_FLAP_FLIP, player) and   #required to get to Mumbo's Skull
+                    can_break_mmm_gates(state, player)
+                )
+            ),
+        LOC_NOTE_MMM_INSIDE_WELL_4:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player) or
+                (
+                    state.has(ITEM_TRANSFORMATION_PUMPKIN, player) and
+                    state.has(ITEM_FLAP_FLIP, player) and   #required to get to Mumbo's Skull
+                    can_break_mmm_gates(state, player)
+                )
+            ),
+        LOC_NOTE_MMM_INSIDE_WELL_5:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player) or
+                (
+                    state.has(ITEM_TRANSFORMATION_PUMPKIN, player) and
+                    state.has(ITEM_FLAP_FLIP, player) and   #required to get to Mumbo's Skull
+                    can_break_mmm_gates(state, player)
+                )
+            ),
+        LOC_NOTE_MMM_INSIDE_WELL_6:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player) or
+                (
+                    state.has(ITEM_TRANSFORMATION_PUMPKIN, player) and
+                    state.has(ITEM_FLAP_FLIP, player) and   #required to get to Mumbo's Skull
+                    can_break_mmm_gates(state, player)
+                )
+            ),
+        LOC_NOTE_MMM_INSIDE_WELL_7:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player) or
+                (
+                    state.has(ITEM_TRANSFORMATION_PUMPKIN, player) and
+                    state.has(ITEM_FLAP_FLIP, player) and   #required to get to Mumbo's Skull
+                    can_break_mmm_gates(state, player)
+                )
+            ),
+        LOC_NOTE_MMM_MUMBOS_SKULL_1:
+            lambda state:
+            (
+                can_break_mmm_gates(state, player) and
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_NOTE_MMM_MUMBOS_SKULL_2:
+            lambda state:
+            (
+                can_break_mmm_gates(state, player) and
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_NOTE_MMM_INSIDE_TUMBLARS_SHACK_1:
+            lambda state:
+            (
+                can_break_mmm_gates(state, player)
+            ),
+        LOC_NOTE_MMM_INSIDE_TUMBLARS_SHACK_2:
+            lambda state:
+            (
+                can_break_mmm_gates(state, player)
+            ),
+        LOC_NOTE_MMM_INSIDE_TUMBLARS_SHACK_3:
+            lambda state:
+            (
+                can_break_mmm_gates(state, player)
+            ),
+        LOC_NOTE_MMM_INSIDE_TUMBLARS_SHACK_4:
+            lambda state:
+            (
+                can_break_mmm_gates(state, player)
+            ),
+        LOC_NOTE_MMM_RAIN_BARREL_1:
+            lambda state:
+            (
+                state.has(ITEM_TRANSFORMATION_PUMPKIN, player) and
+                state.has(ITEM_FLAP_FLIP, player) and   #required to get to Mumbo's Skull
+                can_break_mmm_gates(state, player)
+            ),
+        LOC_NOTE_MMM_RAIN_BARREL_2:
+            lambda state:
+            (
+                state.has(ITEM_TRANSFORMATION_PUMPKIN, player) and
+                state.has(ITEM_FLAP_FLIP, player) and   #required to get to Mumbo's Skull
+                can_break_mmm_gates(state, player)
+            ),
+        LOC_NOTE_MMM_RAIN_BARREL_3:
+            lambda state:
+            (
+                state.has(ITEM_TRANSFORMATION_PUMPKIN, player) and
+                state.has(ITEM_FLAP_FLIP, player) and   #required to get to Mumbo's Skull
+                can_break_mmm_gates(state, player)
+            ),
+        LOC_NOTE_MMM_RAIN_BARREL_4:
+            lambda state:
+            (
+                state.has(ITEM_TRANSFORMATION_PUMPKIN, player) and
+                state.has(ITEM_FLAP_FLIP, player) and   #required to get to Mumbo's Skull
+                can_break_mmm_gates(state, player)
+            ),
+        LOC_NOTE_MMM_RAIN_BARREL_5:
+            lambda state:
+            (
+                state.has(ITEM_TRANSFORMATION_PUMPKIN, player) and
+                state.has(ITEM_FLAP_FLIP, player) and   #required to get to Mumbo's Skull
+                can_break_mmm_gates(state, player)
+            ),
         LOC_JIGGY_RBB_SMOKESTACK:
             lambda state:
             (
