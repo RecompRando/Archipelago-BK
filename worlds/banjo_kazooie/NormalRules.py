@@ -178,6 +178,12 @@ def can_break_mmm_gates(state, player):
         state.has(ITEM_EGGS, player)
     )
 
+def can_break_rbb_windows(state, player):
+    return (
+        state.has(ITEM_RAT_A_TAT_RAP, player) or
+        state.has(ITEM_EGGS, player)
+    )
+
 def can_reach_eyrie(state, player):
     return (
         state.has(ITEM_TALON_TROT, player) and
@@ -6902,23 +6908,29 @@ def get_location_rules(player, options):
                 state.has(ITEM_CLIMB, player) and
                 state.has(ITEM_BEAK_BARGE, player) and
                 (
-                    state.has(ITEM_FEATHERY_FLAP, player) or
-                    state.has(ITEM_FLAP_FLIP, player) or        #to get on top of the box
-                    state.has(ITEM_RAT_A_TAT_RAP, player) or    #going around is never logically unique due to Trot
-                    state.has(ITEM_TALON_TROT, player)
+                    (
+                        state.has(ITEM_FEATHERY_FLAP, player) or
+                        state.has(ITEM_FLAP_FLIP, player) or        #you can either climb on top of the box...
+                        state.has(ITEM_RAT_A_TAT_RAP, player) or
+                        (
+                            state.has(ITEM_JUMP, player) and
+                            state.has(ITEM_TALON_TROT, player)
+                        )
+                    ) or
+                    (
+                        state.has(ITEM_TALON_TROT, player) and  #...or take the ladder (or the toll roads around)
+                        state.has(ITEM_SHOCK_SPRING_JUMP, player)
+                    )
                 )
             ),
         LOC_JIGGY_RBB_CAPTAINS_ROOM:
             lambda state:
             (
-                (
-                    state.has(ITEM_RAT_A_TAT_RAP, player) or   #to break the window and the wooden door
-                    state.has(ITEM_EGGS, player)                #Wonderwing probably works?
-                ) and
+                can_break_rbb_windows(state, player) and
                 (
                     state.has(ITEM_JUMP, player) or
                     state.has(ITEM_FLAP_FLIP, player) or        #to get the Jiggy
-                    state.has(ITEM_BEAK_BUSTER, player)         #not tested but probably works?
+                    state.has(ITEM_BEAK_BUSTER, player)          #not tested but probably works?
                 )
             ),
         LOC_JIGGY_RBB_BOSS_BOOM_BOX:
@@ -6979,6 +6991,59 @@ def get_location_rules(player, options):
                 state.has(ITEM_JINJO_RBB_PURPLE, player) and
                 state.has(ITEM_JINJO_RBB_YELLOW, player)
             ),
+        LOC_JINJO_RBB_BLUE:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) or  # you can climb the ladder (or the box on the ship)...
+                (
+                    state.has(ITEM_EGGS, player) and  # or take the toll bridges around
+                    state.has(ITEM_TALON_TROT, player)
+                )
+            ),
+        LOC_JINJO_RBB_GREEN:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_CLIMB, player) or   #you can climb the ladder (or the box on the ship)...
+                    (
+                        state.has(ITEM_EGGS, player) and    #or take the toll bridges around
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                ) and
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or    #you need these to get the Jinjo safely regardless
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                )
+            ),
+        LOC_JINJO_RBB_ORANGE:
+            lambda state:
+            (
+                state.has(ITEM_EGGS, player) and    #you pay the troll toll, like it or not:P
+                state.has(ITEM_CLIMB, player) and
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or  #to climb the box on the ship
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                )
+            ),
+        LOC_JINJO_RBB_PURPLE:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_JINJO_RBB_YELLOW:
+            lambda state:
+            (
+                state.has(ITEM_FEATHERY_FLAP, player) or
+                state.has(ITEM_RAT_A_TAT_RAP, player)
+            ),
         LOC_EMPTY_HONEYCOMB_RBB_ENGINE_ROOM:
             lambda state:
             (
@@ -6993,7 +7058,7 @@ def get_location_rules(player, options):
         LOC_EMPTY_HONEYCOMB_RBB_WAREHOUSE:
             lambda state:
             (
-                state.has(ITEM_SWIM, player) and
+                state.has(ITEM_SWIM, player) and   #evading Snacker is fairly reasonable for this
                 state.has(ITEM_BEAK_BUSTER, player) and
                 state.has(ITEM_FLIGHT, player)
             ),
@@ -7013,10 +7078,7 @@ def get_location_rules(player, options):
         LOC_MUMBO_TOKEN_RBB_BARRACKS:
             lambda state:
             (
-                (
-                    state.has(ITEM_RAT_A_TAT_RAP, player) or   #to break the window
-                    state.has(ITEM_EGGS, player)               #Wonderwing works too
-                ) and
+                can_break_rbb_windows(state, player) and
                 state.has(ITEM_FLAP_FLIP, player)
             ),
         LOC_MUMBO_TOKEN_RBB_ENGINE_ROOM_ENTRY:
@@ -7051,8 +7113,7 @@ def get_location_rules(player, options):
         LOC_MUMBO_TOKEN_RBB_NAVIGATION_ROOM:
             lambda state:
             (
-                state.has(ITEM_RAT_A_TAT_RAP, player) or   #to break the window
-                state.has(ITEM_EGGS, player)               #Wonderwing works too
+                can_break_rbb_windows(state, player)
             ),
         LOC_MUMBO_TOKEN_RBB_OVEN:
             lambda state:
@@ -7068,19 +7129,29 @@ def get_location_rules(player, options):
         LOC_MUMBO_TOKEN_RBB_TOXIC_WASTE_DRUM:
             lambda state:
             (
-                state.has(ITEM_FEATHERY_FLAP, player) or
-                state.has(ITEM_RAT_A_TAT_RAP, player)
+                (
+                    state.has(ITEM_CLIMB, player) or   #you can climb the ladder (or the box on the ship)...
+                    (
+                        state.has(ITEM_EGGS, player) and    #or take the toll bridges around
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                ) and
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or    #you need these to get the token safely regardless
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                )
             ),
         LOC_MUMBO_TOKEN_RBB_SHIP_BOW:
             lambda state: True,
         LOC_MUMBO_TOKEN_RBB_LEFT_SHIPPING_CRATE:
             lambda state:
             (
-                (
-                    (
-                        state.has(ITEM_FLAP_FLIP, player) or    #first, you need to get to the crate, either from
-                        state.has(ITEM_CLIMB, player)           #the ship's crane...
-                    ) or
+                (                                   #first, you need to get to the crate, either from
+                state.has(ITEM_CLIMB, player) or    #the ladder (or ship's crane)...
                     (
                         state.has(ITEM_EGGS, player) and        #...or by going around the perimeter of the level
                         state.has(ITEM_TALON_TROT, player)
@@ -7094,18 +7165,809 @@ def get_location_rules(player, options):
         LOC_MUMBO_TOKEN_RBB_MIDDLE_SHIPPING_CRATE:
             lambda state:
             (
-                (
-                    (
-                        state.has(ITEM_CLIMB, player)           #first, you need to get to the crate, either from
-                    ) or                                        #the ship's crane...
+                (                                   #first, you need to get to the crate, either from
+                state.has(ITEM_CLIMB, player) or    #the ladder (or ship's crane)...
                     (
                         state.has(ITEM_EGGS, player) and        #...or by going around the perimeter of the level
                         state.has(ITEM_TALON_TROT, player)
                     )
                 ) and
                 (
-                    state.has(ITEM_FLAP_FLIP, player)           #then you need to actually be able to get the token
+                    state.has(ITEM_FLAP_FLIP, player)            #then you need to actually be able to get the token
                 )
+            ),
+        LOC_NOTE_RBB_GANGPLANK_1:
+            lambda state: True,
+        LOC_NOTE_RBB_GANGPLANK_2:
+            lambda state: True,
+        LOC_NOTE_RBB_GANGPLANK_3:
+            lambda state: True,
+        LOC_NOTE_RBB_GANGPLANK_4:
+            lambda state: True,
+        LOC_NOTE_RBB_GANGPLANK_5:
+            lambda state: True,
+        LOC_NOTE_RBB_AFT_RAMP_1:
+            lambda state: True,
+        LOC_NOTE_RBB_AFT_RAMP_2:
+            lambda state: True,
+        LOC_NOTE_RBB_AFT_RAMP_3:
+            lambda state: True,
+        LOC_NOTE_RBB_AFT_RAMP_4:
+            lambda state: True,
+        LOC_NOTE_RBB_AFT_DECK_1:
+            lambda state: True,
+        LOC_NOTE_RBB_AFT_DECK_2:
+            lambda state: True,
+        LOC_NOTE_RBB_AFT_DECK_3:
+            lambda state: True,
+        LOC_NOTE_RBB_AFT_DECK_4:
+            lambda state: True,
+        LOC_NOTE_RBB_AFT_DECK_5:
+            lambda state: True,
+        LOC_NOTE_RBB_AFT_DECK_6:
+            lambda state: True,
+        LOC_NOTE_RBB_FAN_ROOM_1:
+            lambda state: True,
+        LOC_NOTE_RBB_FAN_ROOM_2:
+            lambda state: True,
+        LOC_NOTE_RBB_FAN_ROOM_3:
+            lambda state: True,
+        LOC_NOTE_RBB_FAN_ROOM_4:
+            lambda state: True,
+        LOC_NOTE_RBB_KITCHEN_1:
+            lambda state: True,
+        LOC_NOTE_RBB_KITCHEN_2:
+            lambda state: True,
+        LOC_NOTE_RBB_KITCHEN_3:
+            lambda state: True,
+        LOC_NOTE_RBB_KITCHEN_4:
+            lambda state: True,
+        LOC_NOTE_RBB_KITCHEN_5:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FEATHERY_FLAP, player) or    #this counter is a little higher up than the others
+                state.has(ITEM_FLAP_FLIP, player) or
+                state.has(ITEM_RAT_A_TAT_RAP, player)
+            ),
+        LOC_NOTE_RBB_STOREROOM_SHELF_1:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_NOTE_RBB_STOREROOM_SHELF_2:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_NOTE_RBB_STOREROOM_SHELF_3:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_NOTE_RBB_STOREROOM_SHELF_4:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_NOTE_RBB_STOREROOM_SHELF_5:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_NOTE_RBB_WHISTLES_1:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) or
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_NOTE_RBB_WHISTLES_2:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) or
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_NOTE_RBB_LOWER_BRIDGE_1:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player)
+            ),
+        LOC_NOTE_RBB_LOWER_BRIDGE_2:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player)
+            ),
+        LOC_NOTE_RBB_LOWER_BRIDGE_3:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player)
+            ),
+        LOC_NOTE_RBB_LOWER_BRIDGE_4:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player)
+            ),
+        LOC_NOTE_RBB_UPPER_BRIDGE_1:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player)
+            ),
+        LOC_NOTE_RBB_UPPER_BRIDGE_2:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player)
+            ),
+        LOC_NOTE_RBB_UPPER_BRIDGE_3:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player)
+            ),
+        LOC_NOTE_RBB_UPPER_BRIDGE_4:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player)
+            ),
+        LOC_NOTE_RBB_BUNK_ROOM_1:
+            lambda state:
+            (
+                can_break_rbb_windows(state, player)
+            ),
+        LOC_NOTE_RBB_BUNK_ROOM_2:
+            lambda state:
+            (
+                can_break_rbb_windows(state, player)
+            ),
+        LOC_NOTE_RBB_BUNK_ROOM_3:
+            lambda state:
+            (
+                can_break_rbb_windows(state, player)
+            ),
+        LOC_NOTE_RBB_BUNK_ROOM_4:
+            lambda state:
+            (
+                can_break_rbb_windows(state, player)
+            ),
+        LOC_NOTE_RBB_NAVIGATION_ROOM_1:
+            lambda state:
+            (
+                can_break_rbb_windows(state, player)
+            ),
+        LOC_NOTE_RBB_NAVIGATION_ROOM_2:
+            lambda state:
+            (
+                can_break_rbb_windows(state, player)
+            ),
+        LOC_NOTE_RBB_NAVIGATION_ROOM_3:
+            lambda state:
+            (
+                can_break_rbb_windows(state, player)
+            ),
+        LOC_NOTE_RBB_NAVIGATION_ROOM_4:
+            lambda state:
+            (
+                can_break_rbb_windows(state, player)
+            ),
+        LOC_NOTE_RBB_CAPTAINS_BEDROOM_1:
+            lambda state:
+            (
+                can_break_rbb_windows(state, player)
+            ),
+        LOC_NOTE_RBB_CAPTAINS_BEDROOM_2:
+            lambda state:
+            (
+                can_break_rbb_windows(state, player)
+            ),
+        LOC_NOTE_RBB_CAPTAINS_BEDROOM_3:
+            lambda state:
+            (
+                can_break_rbb_windows(state, player)
+            ),
+        LOC_NOTE_RBB_ENGINE_ROOM_RIGHT_1:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BARGE, player) or   #to open the engine room door
+                    state.has(ITEM_EGGS, player)
+                ) and
+                state.has(ITEM_CLIMB, player)
+            ),
+        LOC_NOTE_RBB_ENGINE_ROOM_RIGHT_2:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BARGE, player) or   #to open the engine room door
+                    state.has(ITEM_EGGS, player)
+                ) and
+                state.has(ITEM_CLIMB, player)
+            ),
+        LOC_NOTE_RBB_ENGINE_ROOM_RIGHT_3:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BARGE, player) or   #to open the engine room door
+                    state.has(ITEM_EGGS, player)
+                ) and
+                state.has(ITEM_CLIMB, player)
+            ),
+        LOC_NOTE_RBB_ENGINE_ROOM_RIGHT_4:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BARGE, player) or   #to open the engine room door
+                    state.has(ITEM_EGGS, player)
+                ) and
+                state.has(ITEM_CLIMB, player)
+            ),
+        LOC_NOTE_RBB_ENGINE_ROOM_LEFT_1:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BARGE, player) or   #to open the engine room door
+                    state.has(ITEM_EGGS, player)
+                ) and
+                state.has(ITEM_CLIMB, player)
+            ),
+        LOC_NOTE_RBB_ENGINE_ROOM_LEFT_2:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BARGE, player) or   #to open the engine room door
+                    state.has(ITEM_EGGS, player)
+                ) and
+                state.has(ITEM_CLIMB, player)
+            ),
+        LOC_NOTE_RBB_ENGINE_ROOM_LEFT_3:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BARGE, player) or   #to open the engine room door
+                    state.has(ITEM_EGGS, player)
+                ) and
+                state.has(ITEM_CLIMB, player)
+            ),
+        LOC_NOTE_RBB_ENGINE_ROOM_LEFT_4:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BARGE, player) or   #to open the engine room door
+                    state.has(ITEM_EGGS, player)
+                ) and
+                state.has(ITEM_CLIMB, player)
+            ),
+        LOC_NOTE_RBB_ENGINE_ROOM_CENTER_1:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BARGE, player) or   #to open the engine room door
+                    state.has(ITEM_EGGS, player)
+                ) and
+                state.has(ITEM_CLIMB, player) and
+                state.has(ITEM_BEAK_BUSTER, player)         #to hit the switch before entering
+            ),
+        LOC_NOTE_RBB_ENGINE_ROOM_CENTER_2:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BARGE, player) or   #to open the engine room door
+                    state.has(ITEM_EGGS, player)
+                ) and
+                state.has(ITEM_CLIMB, player) and
+                state.has(ITEM_BEAK_BUSTER, player)         #to hit the switch before entering
+            ),
+        LOC_NOTE_RBB_ENGINE_ROOM_CENTER_3:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BARGE, player) or   #to open the engine room door
+                    state.has(ITEM_EGGS, player)
+                ) and
+                state.has(ITEM_CLIMB, player) and
+                state.has(ITEM_BEAK_BUSTER, player)         #to hit the switch before entering
+            ),
+        LOC_NOTE_RBB_ENGINE_ROOM_CENTER_4:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BARGE, player) or   #to open the engine room door
+                    state.has(ITEM_EGGS, player)
+                ) and
+                state.has(ITEM_CLIMB, player) and
+                state.has(ITEM_BEAK_BUSTER, player)         #to hit the switch before entering
+            ),
+        LOC_NOTE_RBB_JINJO_GRATE_1:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player)
+            ),
+        LOC_NOTE_RBB_JINJO_GRATE_2:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player)
+            ),
+        LOC_NOTE_RBB_JINJO_GRATE_3:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player)
+            ),
+        LOC_NOTE_RBB_JINJO_GRATE_4:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player)
+            ),
+        LOC_NOTE_RBB_CRANE_CATWALK_1:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or   #to jump on the TNT box above the boss room
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                ) and
+                (
+                    state.has(ITEM_JUMP, player) or             #to jump on the other boxes
+                    state.has(ITEM_FLAP_FLIP, player)
+                ) and
+                state.has(ITEM_CLIMB, player)
+            ),
+        LOC_NOTE_RBB_CRANE_CATWALK_2:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or   #to jump on the TNT box above the boss room
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                ) and
+                (
+                    state.has(ITEM_JUMP, player) or             #to jump on the other boxes
+                    state.has(ITEM_FLAP_FLIP, player)
+                ) and
+                state.has(ITEM_CLIMB, player)
+            ),
+        LOC_NOTE_RBB_CRANE_CATWALK_3:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or   #to jump on the TNT box above the boss room
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                ) and
+                (
+                    state.has(ITEM_JUMP, player) or             #to jump on the other boxes
+                    state.has(ITEM_FLAP_FLIP, player)
+                ) and
+                state.has(ITEM_CLIMB, player)
+            ),
+        LOC_NOTE_RBB_FLOODED_WAREHOUSE_1:
+            lambda state:
+            (
+                (
+                    (
+                        state.has(ITEM_EGGS, player) and    #to get to the notes, you can either take the toll road...
+                        state.has(ITEM_TALON_TROT, player) and
+                        state.has(ITEM_BEAK_BUSTER, player)
+                    )
+                ) or
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or    #...or go in through the submerged door and climb up
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                ) and
+                state.has(ITEM_FLAP_FLIP, player)           #you need this for the last jump regardless
+            ),
+        LOC_NOTE_RBB_FLOODED_WAREHOUSE_2:
+            lambda state:
+            (
+                (
+                    (
+                        state.has(ITEM_EGGS, player) and    #to get to the notes, you can either take the toll road...
+                        state.has(ITEM_TALON_TROT, player) and
+                        state.has(ITEM_BEAK_BUSTER, player)
+                    )
+                ) or
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or    #...or go in through the submerged door and climb up
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                ) and
+                state.has(ITEM_FLAP_FLIP, player)           #you need this for the last jump regardless
+            ),
+        LOC_NOTE_RBB_FLOODED_WAREHOUSE_3:
+            lambda state:
+            (
+                (
+                    (
+                        state.has(ITEM_EGGS, player) and    #to get to the notes, you can either take the toll road...
+                        state.has(ITEM_TALON_TROT, player) and
+                        state.has(ITEM_BEAK_BUSTER, player)
+                    )
+                ) or
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or    #...or go in through the submerged door and climb up
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                ) and
+                state.has(ITEM_FLAP_FLIP, player)           #you need this for the last jump regardless
+            ),
+        LOC_NOTE_RBB_FLOODED_WAREHOUSE_4:
+            lambda state:
+            (
+                (
+                    (
+                        state.has(ITEM_EGGS, player) and    #to get to the notes, you can either take the toll road...
+                        state.has(ITEM_TALON_TROT, player) and
+                        state.has(ITEM_BEAK_BUSTER, player)
+                    )
+                ) or
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or    #...or go in through the submerged door and climb up
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                ) and
+                state.has(ITEM_FLAP_FLIP, player)           #you need this for the last jump regardless
+            ),
+        LOC_NOTE_RBB_SNACKERS_POOL_1:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) and
+                (
+                    state.has(ITEM_CLIMB, player) or
+                    state.has(ITEM_EGGS, player)
+                )
+
+            ),
+        LOC_NOTE_RBB_SNACKERS_POOL_2:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) and
+                (
+                    state.has(ITEM_CLIMB, player) or
+                    state.has(ITEM_EGGS, player)
+                )
+
+            ),
+        LOC_NOTE_RBB_SNACKERS_POOL_3:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) and
+                (
+                    state.has(ITEM_CLIMB, player) or
+                    state.has(ITEM_EGGS, player)
+                )
+
+            ),
+        LOC_NOTE_RBB_SNACKERS_POOL_4:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) and
+                (
+                    state.has(ITEM_CLIMB, player) or
+                    state.has(ITEM_EGGS, player)
+                )
+
+            ),
+        LOC_NOTE_RBB_SNACKERS_POOL_5:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) and
+                (
+                    state.has(ITEM_CLIMB, player) or
+                    state.has(ITEM_EGGS, player)
+                )
+
+            ),
+        LOC_NOTE_RBB_TOXIC_BARREL_1:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) or   #you can climb the ladder (or the box on the ship)...
+                (
+                    state.has(ITEM_EGGS, player) and    #or take the toll bridges around
+                    state.has(ITEM_TALON_TROT, player)
+                )
+            ),
+        LOC_NOTE_RBB_TOXIC_BARREL_2:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_CLIMB, player) or   #you can climb the ladder (or the box on the ship)...
+                    (
+                        state.has(ITEM_EGGS, player) and    #or take the toll bridges around
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                ) and
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or    #you need these to get the note safely regardless
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                )
+            ),
+        LOC_NOTE_RBB_TOXIC_BARREL_3:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_CLIMB, player) or   #you can climb the ladder (or the box on the ship)...
+                    (
+                        state.has(ITEM_EGGS, player) and    #or take the toll bridges around
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                ) and
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or    #you need these to get the note safely regardless
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                )
+            ),
+        LOC_NOTE_RBB_TOXIC_CRANE_1:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_CLIMB, player) and
+                    (
+                        state.has(ITEM_FEATHERY_FLAP, player) or
+                        state.has(ITEM_FLAP_FLIP, player) or        #you can either climb on top of the box...
+                        state.has(ITEM_RAT_A_TAT_RAP, player) or
+                        (
+                            state.has(ITEM_JUMP, player) and
+                            state.has(ITEM_TALON_TROT, player)
+                        )
+                    )
+                ) or
+                (
+                    state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                    (
+                        state.has(ITEM_CLIMB, player) or  #...or take the ladder (or the toll roads around)
+                        (
+                            state.has(ITEM_EGGS, player) and
+                            state.has(ITEM_TALON_TROT, player)
+                        )
+                    )
+                )
+            ),
+        LOC_NOTE_RBB_TOXIC_CRANE_2:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_CLIMB, player) and
+                    (
+                        state.has(ITEM_FEATHERY_FLAP, player) or
+                        state.has(ITEM_FLAP_FLIP, player) or        #you can either climb on top of the box...
+                        state.has(ITEM_RAT_A_TAT_RAP, player) or
+                        (
+                            state.has(ITEM_JUMP, player) and
+                            state.has(ITEM_TALON_TROT, player)
+                        )
+                    )
+                ) or
+                (
+                    state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                    (
+                        state.has(ITEM_CLIMB, player) or  #...or take the ladder (or the toll roads around)
+                        (
+                            state.has(ITEM_EGGS, player) and
+                            state.has(ITEM_TALON_TROT, player)
+                        )
+                    )
+                )
+            ),
+        LOC_NOTE_RBB_TOXIC_CRANE_3:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_CLIMB, player) and
+                    (
+                        state.has(ITEM_FEATHERY_FLAP, player) or
+                        state.has(ITEM_FLAP_FLIP, player) or        #you can either climb on top of the box...
+                        state.has(ITEM_RAT_A_TAT_RAP, player) or
+                        (
+                            state.has(ITEM_JUMP, player) and
+                            state.has(ITEM_TALON_TROT, player)
+                        )
+                    )
+                ) or
+                (
+                    state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                    (
+                        state.has(ITEM_CLIMB, player) or  #...or take the ladder (or the toll roads around)
+                        (
+                            state.has(ITEM_EGGS, player) and
+                            state.has(ITEM_TALON_TROT, player)
+                        )
+                    )
+                )
+            ),
+        LOC_NOTE_RBB_WAREHOUSE_1_1:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) or
+                (
+                    state.has(ITEM_EGGS, player) and
+                    state.has(ITEM_TALON_TROT, player)
+                )
+            ),
+        LOC_NOTE_RBB_WAREHOUSE_1_2:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) or
+                (
+                    state.has(ITEM_EGGS, player) and
+                    state.has(ITEM_TALON_TROT, player)
+                )
+            ),
+        LOC_NOTE_RBB_WAREHOUSE_1_3:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) or
+                (
+                    state.has(ITEM_EGGS, player) and
+                    state.has(ITEM_TALON_TROT, player)
+                )
+            ),
+        LOC_NOTE_RBB_WAREHOUSE_1_4:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) or
+                (
+                    state.has(ITEM_EGGS, player) and
+                    state.has(ITEM_TALON_TROT, player)
+                )
+            ),
+        LOC_NOTE_RBB_WAREHOUSE_1_5:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_CLIMB, player) or
+                    (
+                        state.has(ITEM_EGGS, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                ) and
+                (
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_FLAP_FLIP, player)
+                )
+            ),
+        LOC_NOTE_RBB_WAREHOUSE_1_6:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_CLIMB, player) or
+                    (
+                        state.has(ITEM_EGGS, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                ) and
+                (
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_FLAP_FLIP, player)
+                )
+            ),
+        LOC_NOTE_RBB_WAREHOUSE_1_7:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_CLIMB, player) or
+                    (
+                        state.has(ITEM_EGGS, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                ) and
+                (
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_FLAP_FLIP, player)
+                )
+            ),
+        LOC_NOTE_RBB_WAREHOUSE_1_8:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_CLIMB, player) or
+                    (
+                        state.has(ITEM_EGGS, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                ) and
+                (
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_FLAP_FLIP, player)
+                )
+            ),
+        LOC_NOTE_RBB_WAREHOUSE_3_1:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) or
+                (
+                    state.has(ITEM_EGGS, player) and
+                    state.has(ITEM_TALON_TROT, player)
+                )
+            ),
+        LOC_NOTE_RBB_WAREHOUSE_3_2:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) or
+                (
+                    state.has(ITEM_EGGS, player) and
+                    state.has(ITEM_TALON_TROT, player)
+                )
+            ),
+        LOC_NOTE_RBB_WAREHOUSE_3_3:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) or
+                (
+                    state.has(ITEM_EGGS, player) and
+                    state.has(ITEM_TALON_TROT, player)
+                )
+            ),
+        LOC_NOTE_RBB_WAREHOUSE_3_4:
+            lambda state:
+            (
+                state.has(ITEM_CLIMB, player) or
+                (
+                    state.has(ITEM_EGGS, player) and
+                    state.has(ITEM_TALON_TROT, player)
+                )
+            ),
+        LOC_NOTE_RBB_ANCHOR_ROOM_1:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_NOTE_RBB_ANCHOR_ROOM_2:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_NOTE_RBB_ANCHOR_ROOM_3:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_NOTE_RBB_ANCHOR_ROOM_4:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player)
             ),
         LOC_JIGGY_CCW_TREETOP_ROOM:
             lambda state:
