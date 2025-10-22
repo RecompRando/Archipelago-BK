@@ -277,30 +277,21 @@ def get_location_rules(player, options):
             lambda state:
             (
                 state.has(ITEM_CLIMB, player) and
-                state.has(ITEM_FLAP_FLIP, player) or
                 (
-                    state.has(ITEM_JUMP, player) and
-                    state.has(ITEM_FEATHERY_FLAP, player)
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_FLAP_FLIP, player) or
+                    state.has(ITEM_FLIGHT, player)
                 )
             ),
         LOC_GREEN_PRESENT_FP_NEAR_RAMP:
-            lambda state:
-            (
-                state.has(ITEM_TALON_TROT, player) or
-                (
-                    state.has(ITEM_JUMP, player) and
-                    state.has(ITEM_FEATHERY_FLAP, player)
-                )
-            ),
+            lambda state: True,
         LOC_BLUE_PRESENT_FP_GIANT_SNOWMAN_NOSE:
             lambda state:
             (
                 state.has(ITEM_TALON_TROT, player) and
-                state.has(ITEM_SHOCK_SPRING_JUMP, player) and
-                state.has(ITEM_FLAP_FLIP, player) or
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) or
                 (
-                    state.has(ITEM_FLIGHT, player) and
-                    state.has(ITEM_FLAP_FLIP, player)
+                    state.has(ITEM_FLIGHT, player)
                 )
             ),
         # Worms
@@ -3783,7 +3774,6 @@ def get_location_rules(player, options):
                 (
                     state.has(ITEM_JUMP, player) or
                     state.has(ITEM_FEATHERY_FLAP, player) or    #required to the Jiggy at the top of the tree
-                    state.has(ITEM_FLAP_FLIP, player) or
                     state.has(ITEM_RAT_A_TAT_RAP, player)
                 )
             ),
@@ -3830,6 +3820,49 @@ def get_location_rules(player, options):
                 state.has(ITEM_JINJO_FP_ORANGE, player) and
                 state.has(ITEM_JINJO_FP_PURPLE, player) and
                 state.has(ITEM_JINJO_FP_YELLOW, player)
+            ),
+        LOC_JINJO_FP_BLUE:
+            lambda state:
+            (
+                state.has(ITEM_FLIGHT, player) or
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                )
+            ),
+        LOC_JINJO_FP_GREEN:
+            lambda state: True,
+        LOC_JINJO_FP_ORANGE:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_FLIGHT, player) or    #required to reach Mumbo's Skull
+                    state.has(ITEM_STILT_STRIDE, player)
+                ) and
+                state.has(ITEM_TRANSFORMATION_WALRUS, player) and
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_JINJO_FP_PURPLE:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_JINJO_FP_YELLOW:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_FLIGHT, player) or    #required to reach Mumbo's Skull
+                    state.has(ITEM_STILT_STRIDE, player)
+                ) and
+                (
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_FLAP_FLIP, player)
+                )
             ),
         LOC_EMPTY_HONEYCOMB_FP_SIR_SLUSH:
             lambda state:
@@ -3880,16 +3913,9 @@ def get_location_rules(player, options):
         LOC_MUMBO_TOKEN_FP_UNDER_CHRISTMAS_TREE:
             lambda state:
             (
-                (
-                    state.has(ITEM_RAT_A_TAT_RAP, player) or
-                    state.has(ITEM_BEAK_BUSTER, player)
-                ) and
-                state.has(ITEM_EGGS, player) and
-                state.has(ITEM_FLIGHT, player) and
-                (
-                    state.has(ITEM_JUMP, player) or
-                    state.has(ITEM_FLAP_FLIP, player)
-                )
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FLAP_FLIP, player) or
+                state.has(ITEM_FLIGHT, player)
             ),
         LOC_MUMBO_TOKEN_FP_UNDERWATER:
             lambda state:
@@ -3899,6 +3925,649 @@ def get_location_rules(player, options):
                     state.has(ITEM_STILT_STRIDE, player)
                 ) and
                 state.has(ITEM_TRANSFORMATION_WALRUS, player)
+            ),
+        LOC_NOTE_FP_UPPER_BOGGY_RAMP_1:
+            lambda state: True,
+        LOC_NOTE_FP_UPPER_BOGGY_RAMP_2:
+            lambda state: True,
+        LOC_NOTE_FP_UPPER_BOGGY_RAMP_3:
+            lambda state: True,
+        LOC_NOTE_FP_UPPER_BOGGY_RAMP_4:
+            lambda state: True,
+        LOC_NOTE_FP_UPPER_BOGGY_RAMP_5:
+            lambda state: True,
+        LOC_NOTE_FP_LOWER_BOGGY_RAMP_1:
+            lambda state: True,
+        LOC_NOTE_FP_LOWER_BOGGY_RAMP_2:
+            lambda state: True,
+        LOC_NOTE_FP_LOWER_BOGGY_RAMP_3:
+            lambda state: True,
+        LOC_NOTE_FP_LOWER_BOGGY_RAMP_4:
+            lambda state: True,
+        LOC_NOTE_FP_BEHIND_TREE_1:
+            lambda state: True,
+        LOC_NOTE_FP_BEHIND_TREE_2:
+            lambda state: True,
+        LOC_NOTE_FP_BEHIND_TREE_3:
+            lambda state: True,
+        LOC_NOTE_FP_BEHIND_TREE_4:
+            lambda state: True,
+        LOC_NOTE_FP_BEHIND_TREE_5:
+            lambda state: True,
+        LOC_NOTE_FP_JINJO_PRESENTS_1:
+            lambda state: True,
+        LOC_NOTE_FP_JINJO_PRESENTS_2:
+            lambda state: True,
+        LOC_NOTE_FP_JINJO_PRESENTS_3:
+            lambda state: True,
+        LOC_NOTE_FP_JINJO_PRESENTS_4:
+            lambda state: True,
+        LOC_NOTE_FP_SLUSH_PRESENT_1:
+            lambda state: True,
+        LOC_NOTE_FP_SLUSH_PRESENT_2:
+            lambda state: True,
+        LOC_NOTE_FP_SLUSH_PRESENT_3:
+            lambda state: True,
+        LOC_NOTE_FP_SLUSH_PRESENT_4:
+            lambda state: True,
+        LOC_NOTE_FP_SKULL_HOUSE_1:
+            lambda state: True,
+        LOC_NOTE_FP_SKULL_HOUSE_2:
+            lambda state: True,
+        LOC_NOTE_FP_SKULL_HOUSE_3:
+            lambda state: True,
+        LOC_NOTE_FP_SLUSH_HOUSE_1:
+            lambda state: True,
+        LOC_NOTE_FP_SLUSH_HOUSE_2:
+            lambda state: True,
+        LOC_NOTE_FP_SLUSH_HOUSE_3:
+            lambda state: True,
+        LOC_NOTE_FP_BEEHIVE_PLATFORM_1:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_BEEHIVE_PLATFORM_2:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_BEEHIVE_PLATFORM_3:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_BEEHIVE_PLATFORM_4:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_LEFT_FOOT_1:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FEATHERY_FLAP, player) or
+                state.has(ITEM_RAT_A_TAT_RAP, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_LEFT_FOOT_2:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FEATHERY_FLAP, player) or
+                state.has(ITEM_RAT_A_TAT_RAP, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_LEFT_FOOT_3:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FEATHERY_FLAP, player) or
+                state.has(ITEM_RAT_A_TAT_RAP, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_LEFT_FOOT_4:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FEATHERY_FLAP, player) or
+                state.has(ITEM_RAT_A_TAT_RAP, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_LEFT_FOOT_5:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FEATHERY_FLAP, player) or
+                state.has(ITEM_RAT_A_TAT_RAP, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_RIGHT_FOOT_1:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FEATHERY_FLAP, player) or
+                state.has(ITEM_RAT_A_TAT_RAP, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_RIGHT_FOOT_2:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FEATHERY_FLAP, player) or
+                state.has(ITEM_RAT_A_TAT_RAP, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_RIGHT_FOOT_3:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FEATHERY_FLAP, player) or
+                state.has(ITEM_RAT_A_TAT_RAP, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_RIGHT_FOOT_4:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FEATHERY_FLAP, player) or
+                state.has(ITEM_RAT_A_TAT_RAP, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_RIGHT_FOOT_5:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FEATHERY_FLAP, player) or
+                state.has(ITEM_RAT_A_TAT_RAP, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_INSIDE_TREE_1:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BUSTER, player)
+                ) and
+                state.has(ITEM_EGGS, player) and
+                state.has(ITEM_FLIGHT, player) and
+                state.has(ITEM_CLIMB, player) and
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player)
+                )
+            ),
+        LOC_NOTE_FP_INSIDE_TREE_2:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BUSTER, player)
+                ) and
+                state.has(ITEM_EGGS, player) and
+                state.has(ITEM_FLIGHT, player) and
+                state.has(ITEM_CLIMB, player) and
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player)
+                )
+            ),
+        LOC_NOTE_FP_INSIDE_TREE_3:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BUSTER, player)
+                ) and
+                state.has(ITEM_EGGS, player) and
+                state.has(ITEM_FLIGHT, player) and
+                state.has(ITEM_CLIMB, player) and
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player)
+                )
+            ),
+        LOC_NOTE_FP_INSIDE_TREE_4:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BUSTER, player)
+                ) and
+                state.has(ITEM_EGGS, player) and
+                state.has(ITEM_FLIGHT, player) and
+                state.has(ITEM_CLIMB, player) and
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player)
+                )
+            ),
+        LOC_NOTE_FP_INSIDE_TREE_5:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BUSTER, player)
+                ) and
+                state.has(ITEM_EGGS, player) and
+                state.has(ITEM_FLIGHT, player) and
+                state.has(ITEM_CLIMB, player) and
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player)
+                )
+            ),
+        LOC_NOTE_FP_INSIDE_TREE_6:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BUSTER, player)
+                ) and
+                state.has(ITEM_EGGS, player) and
+                state.has(ITEM_FLIGHT, player) and
+                state.has(ITEM_CLIMB, player) and
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player)
+                )
+            ),
+        LOC_NOTE_FP_INSIDE_TREE_7:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BUSTER, player)
+                ) and
+                state.has(ITEM_EGGS, player) and
+                state.has(ITEM_FLIGHT, player) and
+                state.has(ITEM_CLIMB, player) and
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player)
+                )
+            ),
+        LOC_NOTE_FP_INSIDE_TREE_8:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BUSTER, player)
+                ) and
+                state.has(ITEM_EGGS, player) and
+                state.has(ITEM_FLIGHT, player) and
+                state.has(ITEM_CLIMB, player) and
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player)
+                )
+            ),
+        LOC_NOTE_FP_INSIDE_TREE_9:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BUSTER, player)
+                ) and
+                state.has(ITEM_EGGS, player) and
+                state.has(ITEM_FLIGHT, player) and
+                state.has(ITEM_CLIMB, player) and
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player)
+                )
+            ),
+        LOC_NOTE_FP_INSIDE_TREE_10:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BUSTER, player)
+                ) and
+                state.has(ITEM_EGGS, player) and
+                state.has(ITEM_FLIGHT, player) and
+                state.has(ITEM_CLIMB, player) and
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player)
+                )
+            ),
+        LOC_NOTE_FP_INSIDE_TREE_11:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BUSTER, player)
+                ) and
+                state.has(ITEM_EGGS, player) and
+                state.has(ITEM_FLIGHT, player) and
+                state.has(ITEM_CLIMB, player) and
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player)
+                )
+            ),
+        LOC_NOTE_FP_INSIDE_TREE_12:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BUSTER, player)
+                ) and
+                state.has(ITEM_EGGS, player) and
+                state.has(ITEM_FLIGHT, player) and
+                state.has(ITEM_CLIMB, player) and
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player)
+                )
+            ),
+        LOC_NOTE_FP_WOZZA_PLATFORM_1:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_WOZZA_PLATFORM_2:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_WOZZA_PLATFORM_3:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_WOZZA_PLATFORM_4:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_SNOWMANS_SCARF_1:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_SNOWMANS_SCARF_2:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_SNOWMANS_SCARF_3:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_SNOWMANS_SCARF_4:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_SNOWMANS_SCARF_5:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_SNOWMANS_SCARF_6:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_SNOWMANS_SCARF_7:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_SNOWMANS_SCARF_8:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_SNOWMANS_SCARF_9:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_SNOWMANS_SCARF_10:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_SNOWMANS_SCARF_11:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_SNOWMANS_SCARF_12:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_SNOWMANS_SCARF_13:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_SNOWMANS_SCARF_14:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_SNOWMANS_SCARF_15:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_SNOWMANS_NECK_1:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_SNOWMANS_NECK_2:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_SNOWMANS_NECK_3:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_SNOWMANS_NECK_4:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_SNOWMANS_HAT_1:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_SNOWMANS_HAT_2:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_SNOWMANS_HAT_3:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_SNOWMANS_HAT_4:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_SNOWMANS_HAT_5:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_SNOWMANS_HAT_6:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_SNOWMANS_HAT_7:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_SNOWMANS_HAT_8:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_NOTE_FP_MUMBOS_SKULL_1:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_FLIGHT, player) or    #required to reach Mumbo's Skull
+                    state.has(ITEM_STILT_STRIDE, player)
+                ) and
+                (
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_FLAP_FLIP, player)
+                )
+            ),
+        LOC_NOTE_FP_MUMBOS_SKULL_2:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_FLIGHT, player) or    #required to reach Mumbo's Skull
+                    state.has(ITEM_STILT_STRIDE, player)
+                ) and
+                (
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_FLAP_FLIP, player)
+                )
+            ),
+        LOC_NOTE_FP_MUMBOS_SKULL_3:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_FLIGHT, player) or    #required to reach Mumbo's Skull
+                    state.has(ITEM_STILT_STRIDE, player)
+                ) and
+                (
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_FLAP_FLIP, player)
+                )
+            ),
+        LOC_NOTE_FP_MUMBOS_SKULL_4:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_FLIGHT, player) or    #required to reach Mumbo's Skull
+                    state.has(ITEM_STILT_STRIDE, player)
+                ) and
+                (
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_FLAP_FLIP, player)
+                )
+            ),
+        LOC_NOTE_FP_MUMBOS_SKULL_5:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_FLIGHT, player) or    #required to reach Mumbo's Skull
+                    state.has(ITEM_STILT_STRIDE, player)
+                ) and
+                (
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_FLAP_FLIP, player)
+                )
+            ),
+        LOC_NOTE_FP_MUMBOS_SKULL_6:
+            lambda state:
+            (
+                (
+                    state.has(ITEM_FLIGHT, player) or    #required to reach Mumbo's Skull
+                    state.has(ITEM_STILT_STRIDE, player)
+                ) and
+                (
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_FLAP_FLIP, player)
+                )
+            ),
+        LOC_NOTE_FP_MUMBO_ISLAND_1:
+            lambda state:
+            (
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_FP_MUMBO_ISLAND_2:
+            lambda state:
+            (
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_FP_MUMBO_ISLAND_3:
+            lambda state:
+            (
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_FP_MUMBO_ISLAND_4:
+            lambda state:
+            (
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_FP_MUMBO_ISLAND_5:
+            lambda state:
+            (
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_FP_MUMBO_ISLAND_6:
+            lambda state:
+            (
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_FP_MUMBO_ISLAND_7:
+            lambda state:
+            (
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_FP_MUMBO_ISLAND_8:
+            lambda state:
+            (
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_NOTE_FP_MUMBO_ISLAND_9:
+            lambda state:
+            (
+                state.has(ITEM_STILT_STRIDE, player)
             ),
         LOC_MOLEHILL_GV_NEAR_KAZOOIE_PYRAMID:
             lambda state:
