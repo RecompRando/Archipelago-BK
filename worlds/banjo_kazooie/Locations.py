@@ -1,6 +1,7 @@
 from typing import Callable, Dict, NamedTuple, Optional
 
 from BaseClasses import Location, MultiWorld
+from . import ITEM_SEASON_SPRING
 
 from .Constants import *
 
@@ -205,6 +206,26 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_CLICK_CLOCK_WOOD,
         address=None,
         locked_item=ITEM_ACORN
+    ),
+    LOC_SEASON_SPRING:  BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_SEASON_SPRING
+    ),
+    LOC_SEASON_SUMMER:  BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_SEASON_SUMMER
+    ),
+    LOC_SEASON_FALL:  BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_SEASON_FALL
+    ),
+    LOC_SEASON_WINTER:  BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_SEASON_WINTER
     ),
     LOC_JINJO_MM_BLUE: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
