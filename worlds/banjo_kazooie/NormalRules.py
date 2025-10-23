@@ -353,7 +353,11 @@ def get_region_rules(player, options):
         rgn_connection_string(RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR, RGN_TREASURE_TROVE_COVE):
             lambda state:
             (
-                state.has(ITEM_JIGGY, player, 3)  # 1+2+5+7
+                state.has(ITEM_JIGGY, player, 3) and  # 1+2+5+7
+                (
+                    state.has(ITEM_FLAP_FLIP, player) or
+                    state.has(ITEM_TALON_TROT, player)
+                )
             ),
         rgn_connection_string(RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR, RGN_CLANKERS_CAVERN):
             lambda state:
@@ -959,7 +963,11 @@ def get_location_rules(player, options):
             lambda state:
             (
                 state.has(ITEM_SNS_EGG_CYAN, player) and
-                state.has(ITEM_BEAK_BUSTER, player)
+                (
+                    state.has(ITEM_BEAK_BUSTER, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_EGGS, player)
+                )
             ),
         LOC_SNS_EGG_GREEN:
             lambda state:
