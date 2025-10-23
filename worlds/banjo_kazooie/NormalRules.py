@@ -454,7 +454,7 @@ def get_region_rules(player, options):
             (
                 state.has(ITEM_NOTE, player, 882)
             ),
-        rgn_connection_string(RGN_GRUNTILDAS_LAIR_882_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_FIGHT):
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_810_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_FIGHT):
             lambda state: True,
     }
 

@@ -1,7 +1,6 @@
 from typing import Callable, Dict, NamedTuple, Optional
 
 from BaseClasses import Location, MultiWorld
-from . import ITEM_SEASON_SPRING
 
 from .Constants import *
 
@@ -469,7 +468,7 @@ location_data_table: Dict[str, BKLocationData] = {
         address=0x00000035
     ),
     LOC_JIGGY_GL_WITCHS_HAT: BKLocationData(
-        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
+        region=RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR,
         address=0x00000037
     ),
     LOC_JIGGY_GL_ABOVE_FP: BKLocationData(
@@ -814,7 +813,7 @@ location_data_table: Dict[str, BKLocationData] = {
     ),
     "GLTF Secret Prize": BKLocationData(
         region=RGN_GRUNTILDAS_LAIR_882_NOTE_DOOR,
-        address=0x05000000
+        address=0x08000000
     ),
     LOC_JIGGY_CCW_TREETOP_ROOM: BKLocationData(
         region=RGN_CLICK_CLOCK_WOOD,

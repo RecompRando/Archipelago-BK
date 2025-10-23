@@ -63,7 +63,7 @@ item_data_table: Dict[str, BKItemData] = {
     ),
     ITEM_TALON_TROT_SPEED_ONLY: BKItemData(
         code=0x04000013,
-        type=ItemClassification.progression,
+        type=ItemClassification.useful,
         can_create=lambda options: False
     ),
     ITEM_BEAK_BUSTER: BKItemData(
@@ -115,6 +115,26 @@ item_data_table: Dict[str, BKItemData] = {
         can_create=lambda options: False
     ),
     ITEM_BLUE_PRESENT: BKItemData(
+        code=None,
+        type=ItemClassification.progression,
+        can_create=lambda options: False
+    ),
+    ITEM_SEASON_SPRING: BKItemData(
+        code=None,
+        type=ItemClassification.progression,
+        can_create=lambda options: False
+    ),
+    ITEM_SEASON_SUMMER: BKItemData(
+        code=None,
+        type=ItemClassification.progression,
+        can_create=lambda options: False
+    ),
+    ITEM_SEASON_FALL: BKItemData(
+        code=None,
+        type=ItemClassification.progression,
+        can_create=lambda options: False
+    ),
+    ITEM_SEASON_WINTER: BKItemData(
         code=None,
         type=ItemClassification.progression,
         can_create=lambda options: False
@@ -377,14 +397,12 @@ item_data_table: Dict[str, BKItemData] = {
     ITEM_NOTE: BKItemData(
         code=0x0001FBE4,
         type=ItemClassification.progression,
-        num_exist=882,
-        can_create=lambda options: False
+        num_exist=882
     ),
     ITEM_NOTE_FILLER: BKItemData(
         code=0xFF01FBE4,
         type=ItemClassification.filler,
-        num_exist=18,
-        can_create=lambda options: False
+        num_exist=18
     ),
     ITEM_EMPTY_HONEYCOMB: BKItemData(
         code=0x0001FBE5,

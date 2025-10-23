@@ -84,6 +84,47 @@ class BKWorld(World):
             }, BKLocation)
             region.add_exits(region_data.connecting_regions)
 
+        num_extra_jiggies = 4
+        num_extra_honeycombs = 9
+        num_extra_molehills = 9
+        num_extra_sns = 29
+
+        for location_name, location_data in location_data_table.items():
+            region = mw.get_region(location_data.region, player)
+            if location_data.address is not None and location_data.can_create(self.options) and (location_data.address & 0xFF000000) == 0x00000000:
+                for i in range(2, num_extra_jiggies + 2):
+                    name = location_name + " (" + str(i) + ")"
+                    address = (0x10000000 + 0x01000000*(i - 2)) | (location_data.address & 0x00FFFFFF)
+                    region.add_locations({
+                        name: address,
+                    }, BKLocation)
+            if location_data.address is not None and location_data.can_create(self.options) and (location_data.address & 0xFF000000) == 0x02000000:
+                for i in range(2, num_extra_honeycombs + 2):
+                    name = location_name + " (" + str(i) + ")"
+                    address = (0x30000000 + 0x01000000*(i - 2)) | (location_data.address & 0x00FFFFFF)
+                    region.add_locations({
+                        name: address,
+                    }, BKLocation)
+            if location_data.address is not None and location_data.can_create(self.options) and (location_data.address & 0xFF000000) == 0x04000000:
+                for i in range(2, num_extra_molehills + 2):
+                    name = location_name + " (" + str(i) + ")"
+                    address = (0x50000000 + 0x01000000*(i - 2)) | (location_data.address & 0x00FFFFFF)
+                    region.add_locations({
+                        name: address,
+                    }, BKLocation)
+            if location_data.address is not None and location_data.can_create(self.options) and (location_data.address & 0xFF000000) == 0x05000000:
+                for i in range(2, num_extra_sns + 2):
+                    name = location_name + " (" + str(i) + ")"
+                    address = (0x70000000 + 0x01000000*(i - 2)) | (location_data.address & 0x00FFFFFF)
+                    region.add_locations({
+                        name: address,
+                    }, BKLocation)
+
+        self.create_and_add_filler_items(100*num_extra_jiggies)
+        self.create_and_add_filler_items(24*num_extra_honeycombs)
+        self.create_and_add_filler_items(18*num_extra_molehills)
+        self.create_and_add_filler_items(7*num_extra_sns)
+
         # Place locked locations.
         for location_name, location_data in locked_locations.items():
             # Ignore locations we never created.
@@ -92,8 +133,7 @@ class BKWorld(World):
 
             self.place(location_name, location_data_table[location_name].locked_item)
 
-        # temporarily forced to fire
-        if True or not self.options.notesanity.value:
+        if not self.options.notesanity.value:
             for location_name, location_data in location_data_table.items():
                 if location_data.address is not None and (location_data.address & 0xFF000000) == 0x01000000:
                     self.place(location_name, ITEM_NOTE)
@@ -133,10 +173,6 @@ class BKWorld(World):
         for location in mw.get_locations(player):
             name = location.name
             if name in location_rules and location_data_table[name].can_create(self.options):
-                # temporarily forced to True for all note locations
-                if location_data_table[name].address is not None and (location_data_table[name].address & 0xFF000000) == 0x01000000:
-                    location.access_rule = lambda state: True
-                    continue
                 location.access_rule = location_rules[name]
 
     def fill_slot_data(self):
