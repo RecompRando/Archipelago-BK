@@ -5133,6 +5133,54 @@ location_data_table: Dict[str, BKLocationData] = {
     ),
 }
 
+num_extra_jiggies = 4
+num_extra_honeycombs = 9
+num_extra_molehills = 9
+num_extra_sns = 29
+
+num_total_extra_locs = 0
+
+extra_location_table = {}
+extra_location_table_old_names = {}
+
+for location_name, location_data in location_data_table.items():
+    region = location_data.region
+    if location_data.address is not None and (location_data.address & 0xFF000000) == 0x00000000:
+        for i in range(2, num_extra_jiggies + 2):
+            name = location_name + " (" + str(i) + ")"
+            address = (0x10000000 + 0x01000000*(i - 2)) | (location_data.address & 0x00FFFFFF)
+            can_create = location_data.can_create
+            extra_location_table[name] = BKLocationData(region=region, address=address, can_create=can_create)
+            extra_location_table_old_names[name] = location_name
+            num_total_extra_locs += 1
+    if location_data.address is not None and (location_data.address & 0xFF000000) == 0x02000000:
+        for i in range(2, num_extra_honeycombs + 2):
+            name = location_name + " (" + str(i) + ")"
+            address = (0x30000000 + 0x01000000*(i - 2)) | (location_data.address & 0x00FFFFFF)
+            can_create = location_data.can_create
+            extra_location_table[name] = BKLocationData(region=region, address=address, can_create=can_create)
+            extra_location_table_old_names[name] = location_name
+            num_total_extra_locs += 1
+    if location_data.address is not None and (location_data.address & 0xFF000000) == 0x04000000:
+        for i in range(2, num_extra_molehills + 2):
+            name = location_name + " (" + str(i) + ")"
+            address = (0x50000000 + 0x01000000*(i - 2)) | (location_data.address & 0x00FFFFFF)
+            can_create = location_data.can_create
+            extra_location_table[name] = BKLocationData(region=region, address=address, can_create=can_create)
+            extra_location_table_old_names[name] = location_name
+            num_total_extra_locs += 1
+    if location_data.address is not None and (location_data.address & 0xFF000000) == 0x05000000:
+        for i in range(2, num_extra_sns + 2):
+            name = location_name + " (" + str(i) + ")"
+            address = (0x70000000 + 0x01000000*(i - 2)) | (location_data.address & 0x00FFFFFF)
+            can_create = location_data.can_create
+            extra_location_table[name] = BKLocationData(region=region, address=address, can_create=can_create)
+            extra_location_table_old_names[name] = location_name
+            num_total_extra_locs += 1
+
+for location_name, location_data in extra_location_table.items():
+    location_data_table[location_name] = BKLocationData(region=location_data.region, address=location_data.address, can_create=location_data.can_create)
+
 location_table = {name: data.address for name, data in location_data_table.items() if data.address is not None}
 code_to_location_table = {data.address: name for name, data in location_data_table.items() if data.address is not None}
 locked_locations = {name: data for name, data in location_data_table.items() if data.locked_item}

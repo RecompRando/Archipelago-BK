@@ -397,12 +397,14 @@ item_data_table: Dict[str, BKItemData] = {
     ITEM_NOTE: BKItemData(
         code=0x0001FBE4,
         type=ItemClassification.progression,
-        num_exist=882
+        num_exist=882,
+        can_create=lambda options: options.notesanity.value
     ),
     ITEM_NOTE_FILLER: BKItemData(
         code=0xFF01FBE4,
         type=ItemClassification.filler,
-        num_exist=18
+        num_exist=18,
+        can_create=lambda options: options.notesanity.value
     ),
     ITEM_EMPTY_HONEYCOMB: BKItemData(
         code=0x0001FBE5,
