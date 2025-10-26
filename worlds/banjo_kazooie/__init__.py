@@ -4,7 +4,7 @@ from typing import Dict
 from BaseClasses import Region, Tutorial
 from worlds.AutoWorld import WebWorld, World
 from .Items import BKItem, item_data_table, item_table, code_to_item_table
-from .Locations import BKLocation, location_data_table, location_table, code_to_location_table, locked_locations
+from .Locations import BKLocation, BKLocationData, num_total_extra_locs, location_data_table, extra_location_table, extra_location_table_old_names, location_table, code_to_location_table, locked_locations
 from .Options import BKOptions
 from .Regions import region_data_table, get_exit
 from .NormalRules import *
@@ -84,46 +84,7 @@ class BKWorld(World):
             }, BKLocation)
             region.add_exits(region_data.connecting_regions)
 
-        num_extra_jiggies = 4
-        num_extra_honeycombs = 9
-        num_extra_molehills = 9
-        num_extra_sns = 29
-
-        for location_name, location_data in location_data_table.items():
-            region = mw.get_region(location_data.region, player)
-            if location_data.address is not None and location_data.can_create(self.options) and (location_data.address & 0xFF000000) == 0x00000000:
-                for i in range(2, num_extra_jiggies + 2):
-                    name = location_name + " (" + str(i) + ")"
-                    address = (0x10000000 + 0x01000000*(i - 2)) | (location_data.address & 0x00FFFFFF)
-                    region.add_locations({
-                        name: address,
-                    }, BKLocation)
-            if location_data.address is not None and location_data.can_create(self.options) and (location_data.address & 0xFF000000) == 0x02000000:
-                for i in range(2, num_extra_honeycombs + 2):
-                    name = location_name + " (" + str(i) + ")"
-                    address = (0x30000000 + 0x01000000*(i - 2)) | (location_data.address & 0x00FFFFFF)
-                    region.add_locations({
-                        name: address,
-                    }, BKLocation)
-            if location_data.address is not None and location_data.can_create(self.options) and (location_data.address & 0xFF000000) == 0x04000000:
-                for i in range(2, num_extra_molehills + 2):
-                    name = location_name + " (" + str(i) + ")"
-                    address = (0x50000000 + 0x01000000*(i - 2)) | (location_data.address & 0x00FFFFFF)
-                    region.add_locations({
-                        name: address,
-                    }, BKLocation)
-            if location_data.address is not None and location_data.can_create(self.options) and (location_data.address & 0xFF000000) == 0x05000000:
-                for i in range(2, num_extra_sns + 2):
-                    name = location_name + " (" + str(i) + ")"
-                    address = (0x70000000 + 0x01000000*(i - 2)) | (location_data.address & 0x00FFFFFF)
-                    region.add_locations({
-                        name: address,
-                    }, BKLocation)
-
-        self.create_and_add_filler_items(100*num_extra_jiggies)
-        self.create_and_add_filler_items(24*num_extra_honeycombs)
-        self.create_and_add_filler_items(18*num_extra_molehills)
-        self.create_and_add_filler_items(7*num_extra_sns)
+        self.create_and_add_filler_items(num_total_extra_locs)
 
         # Place locked locations.
         for location_name, location_data in locked_locations.items():
@@ -174,6 +135,10 @@ class BKWorld(World):
             name = location.name
             if name in location_rules and location_data_table[name].can_create(self.options):
                 location.access_rule = location_rules[name]
+            elif name in extra_location_table and location_data_table[name].can_create(self.options):
+                old_name = extra_location_table_old_names[name]
+                if old_name in location_rules:
+                    location.access_rule = location_rules[old_name]
 
     def fill_slot_data(self):
         return {
