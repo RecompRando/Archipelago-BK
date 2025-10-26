@@ -2411,6 +2411,7 @@ def get_location_rules(player, options):
             lambda state:
             (
                 state.has(ITEM_SWIM, player) and
+                state.has(ITEM_CLIMB, player) and
                 state.has(ITEM_SHOCK_SPRING_JUMP, player) and
                 (
                     state.has(ITEM_RAT_A_TAT_RAP, player) or
@@ -2449,6 +2450,7 @@ def get_location_rules(player, options):
             lambda state:
             (
                 state.has(ITEM_SWIM, player) and
+                state.has(ITEM_CLIMB, player) and
                 state.has(ITEM_SHOCK_SPRING_JUMP, player) and
                 (
                     state.has(ITEM_RAT_A_TAT_RAP, player) or
@@ -2486,6 +2488,7 @@ def get_location_rules(player, options):
             lambda state:
             (
                 state.has(ITEM_SWIM, player) and
+                state.has(ITEM_CLIMB, player) and
                 state.has(ITEM_SHOCK_SPRING_JUMP, player) and
                 (
                     state.has(ITEM_RAT_A_TAT_RAP, player) or
@@ -9181,6 +9184,1708 @@ def get_location_rules(player, options):
                     state.has(ITEM_FLIGHT, player)
                 )
             ),
-        LOC_DEFEAT_GRUNTILDA:
+        # Egg and Feather Rules
+
+        LOC_BEGG_MM_BEHIND_STONEHENGE_PILLAR_1:
+            lambda state: True,
+        LOC_BEGG_MM_BEHIND_STONEHENGE_PILLAR_2:
+            lambda state: True,
+        LOC_BEGG_MM_BEHIND_STONEHENGE_PILLAR_3:
+            lambda state: True,
+        LOC_BEGG_MM_BEHIND_STONEHENGE_PILLAR_4:
+            lambda state: True,
+        LOC_BEGG_MM_BEHIND_STONEHENGE_PILLAR_5:
+            lambda state: True,
+        LOC_BEGG_MM_INSIDE_DESTROYED_HUT_1:
+            lambda state:
+            (
+                state.has(ITEM_BEAK_BUSTER, player)
+                and
+                (
+                    state.has(ITEM_FLAP_FLIP, player) or
+                    state.has(ITEM_JUMP, player)
+                )
+            ),
+        LOC_BEGG_MM_INSIDE_DESTROYED_HUT_2:
+            lambda state:
+            (
+                state.has(ITEM_BEAK_BUSTER, player)
+                and
+                (
+                    state.has(ITEM_FLAP_FLIP, player) or
+                    state.has(ITEM_JUMP, player)
+                )
+            ),
+        LOC_BEGG_MM_INSIDE_DESTROYED_HUT_3:
+            lambda state:
+            (
+                state.has(ITEM_BEAK_BUSTER, player)
+                and
+                (
+                    state.has(ITEM_FLAP_FLIP, player) or
+                    state.has(ITEM_JUMP, player)
+                )
+            ),
+        LOC_BEGG_MM_INSIDE_DESTROYED_HUT_4:
+            lambda state:
+            (
+                state.has(ITEM_BEAK_BUSTER, player)
+                and
+                (
+                    state.has(ITEM_FLAP_FLIP, player) or
+                    state.has(ITEM_JUMP, player)
+                )
+            ),
+        LOC_BEGG_MM_INSIDE_DESTROYED_HUT_5:
+            lambda state:
+            (
+                state.has(ITEM_BEAK_BUSTER, player)
+                and
+                (
+                    state.has(ITEM_FLAP_FLIP, player) or
+                    state.has(ITEM_JUMP, player)
+                )
+            ),
+        LOC_BEGG_MM_CHIMPY_1:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_BEGG_MM_CHIMPY_2:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_BEGG_MM_CHIMPY_3:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_BEGG_MM_CHIMPY_4:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_BEGG_MM_CHIMPY_5:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_BEGG_MM_CHIMPY_6:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_BEGG_MM_CHIMPY_7:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_BEGG_MM_CHIMPY_8:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_BEGG_MM_INSIDE_MUMBOS_1:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_BEGG_MM_INSIDE_MUMBOS_2:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_BEGG_MM_INSIDE_MUMBOS_3:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_BEGG_MM_INSIDE_MUMBOS_4:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_BEGG_MM_INSIDE_MUMBOS_5:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_BEGG_MM_INSIDE_MUMBOS_6:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_BEGG_MM_INSIDE_MUMBOS_7:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_BEGG_MM_INSIDE_MUMBOS_8:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_BEGG_MM_INSIDE_MUMBOS_9:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_BEGG_MM_INSIDE_MUMBOS_10:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_BEGG_MM_INSIDE_MUMBOS_11:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_BEGG_MM_INSIDE_MUMBOS_12:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player) or
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_BEGG_MM_TERMITE_MOUND_1:
+            lambda state:
+            (
+                state.has(ITEM_TRANSFORMATION_TERMITE, player)
+            ),
+        LOC_BEGG_MM_TERMITE_MOUND_2:
+            lambda state:
+            (
+                state.has(ITEM_TRANSFORMATION_TERMITE, player)
+            ),
+        LOC_BEGG_MM_TERMITE_MOUND_3:
+            lambda state:
+            (
+                state.has(ITEM_TRANSFORMATION_TERMITE, player)
+            ),
+        LOC_BEGG_MM_TERMITE_MOUND_4:
+            lambda state:
+            (
+                state.has(ITEM_TRANSFORMATION_TERMITE, player)
+            ),
+        LOC_BEGG_MM_TERMITE_MOUND_5:
+            lambda state:
+            (
+                state.has(ITEM_TRANSFORMATION_TERMITE, player)
+            ),
+        LOC_BEGG_MM_TERMITE_MOUND_6:
+            lambda state:
+            (
+                state.has(ITEM_TRANSFORMATION_TERMITE, player)
+            ),
+        LOC_BEGG_GL_AROUND_RED_CAULDRON_1:
+            lambda state: True,
+        LOC_BEGG_GL_AROUND_RED_CAULDRON_2:
+            lambda state: True,
+        LOC_BEGG_GL_AROUND_RED_CAULDRON_3:
+            lambda state: True,
+        LOC_BEGG_GL_AROUND_RED_CAULDRON_4:
+            lambda state: True,
+        LOC_BEGG_GL_AROUND_RED_CAULDRON_5:
+            lambda state: True,
+        LOC_BEGG_GL_AROUND_RED_CAULDRON_6:
+            lambda state: True,
+        LOC_BEGG_GL_AROUND_RED_CAULDRON_7:
+            lambda state: True,
+        LOC_BEGG_GL_AROUND_RED_CAULDRON_8:
+            lambda state: True,
+        LOC_BEGG_GL_NEAR_CCW_SWITCH_1:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_BEGG_GL_NEAR_CCW_SWITCH_2:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_BEGG_GL_NEAR_CCW_SWITCH_3:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_BEGG_GL_NEAR_CCW_SWITCH_4:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_BEGG_GL_NEAR_CCW_SWITCH_5:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_BEGG_GL_NEAR_CCW_SWITCH_6:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_BEGG_GL_NEAR_CCW_SWITCH_7:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_BEGG_GL_AROUND_BGS_PAINTING_1:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_SWIM, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_BEGG_GL_AROUND_BGS_PAINTING_2:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_SWIM, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_BEGG_GL_AROUND_BGS_PAINTING_3:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_SWIM, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_BEGG_GL_AROUND_BGS_PAINTING_4:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_SWIM, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_BEGG_GL_AROUND_BGS_PAINTING_5:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_SWIM, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_BEGG_GL_AROUND_BGS_PAINTING_6:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_SWIM, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_BEGG_GL_AROUND_BGS_PAINTING_7:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_SWIM, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_BEGG_GL_AROUND_BGS_PAINTING_8:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_SWIM, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_BEGG_GL_AROUND_FP_PAINTING_1:
+            lambda state:
+            (
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_BEGG_GL_AROUND_FP_PAINTING_2:
+            lambda state:
+            (
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_BEGG_GL_AROUND_FP_PAINTING_3:
+            lambda state:
+            (
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_BEGG_GL_AROUND_FP_PAINTING_4:
+            lambda state:
+            (
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_BEGG_TTC_INSIDE_NIPPER_1:
+            lambda state:
+            (
+                state.has(ITEM_RAT_A_TAT_RAP, player)
+            ),
+        LOC_BEGG_TTC_INSIDE_NIPPER_2:
+            lambda state:
+            (
+                state.has(ITEM_RAT_A_TAT_RAP, player)
+            ),
+        LOC_BEGG_TTC_INSIDE_NIPPER_3:
+            lambda state:
+            (
+                state.has(ITEM_RAT_A_TAT_RAP, player)
+            ),
+        LOC_BEGG_TTC_INSIDE_NIPPER_4:
+            lambda state:
+            (
+                state.has(ITEM_RAT_A_TAT_RAP, player)
+            ),
+        LOC_BEGG_TTC_INSIDE_NIPPER_5:
+            lambda state:
+            (
+                state.has(ITEM_RAT_A_TAT_RAP, player)
+            ),
+        LOC_BEGG_TTC_PATH_TO_LIGHT_1:
+            lambda state:
+            (
+                can_reach_ttc_flight_pad(state, player) and
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_BEGG_TTC_PATH_TO_LIGHT_2:
+            lambda state:
+            (
+                can_reach_ttc_flight_pad(state, player) and
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_BEGG_TTC_PATH_TO_LIGHT_3:
+            lambda state:
+            (
+                can_reach_ttc_flight_pad(state, player) and
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_BEGG_TTC_PATH_TO_LIGHT_4:
+            lambda state:
+            (
+                can_reach_ttc_flight_pad(state, player) and
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_BEGG_TTC_PATH_TO_LIGHT_5:
+            lambda state:
+            (
+                can_reach_ttc_flight_pad(state, player) and
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_BEGG_TTC_PATH_TO_LIGHT_6:
+            lambda state:
+            (
+                can_reach_ttc_flight_pad(state, player) and
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_BEGG_TTC_TREE_STAIRS_1:
+            lambda state:
+            (
+                state.has(ITEM_FLIGHT, player) and
+                (
+                    state.has(ITEM_CLIMB, player) or
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                )
+            ),
+        LOC_BEGG_TTC_TREE_STAIRS_2:
+            lambda state:
+            (
+                state.has(ITEM_FLIGHT, player) and
+                (
+                    state.has(ITEM_CLIMB, player) or
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                )
+            ),
+        LOC_BEGG_TTC_TREE_STAIRS_3:
+            lambda state:
+            (
+                state.has(ITEM_FLIGHT, player) and
+                (
+                    state.has(ITEM_CLIMB, player) or
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                )
+            ),
+        LOC_BEGG_TTC_TREE_STAIRS_4:
+            lambda state:
+            (
+                state.has(ITEM_FLIGHT, player) and
+                (
+                    state.has(ITEM_CLIMB, player) or
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                )
+            ),
+        LOC_BEGG_TTC_TREE_OVERLOOKING_BLUBBER_1:
+            lambda state:
+            (
+                state.has(ITEM_FLIGHT, player) and
+                (
+                    state.has(ITEM_CLIMB, player) or
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                )
+            ),
+        LOC_BEGG_TTC_TREE_OVERLOOKING_BLUBBER_2:
+            lambda state:
+            (
+                state.has(ITEM_FLIGHT, player) and
+                (
+                    state.has(ITEM_CLIMB, player) or
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                )
+            ),
+        LOC_BEGG_TTC_TREE_OVERLOOKING_BLUBBER_3:
+            lambda state:
+            (
+                state.has(ITEM_FLIGHT, player) and
+                (
+                    state.has(ITEM_CLIMB, player) or
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                )
+            ),
+        LOC_BEGG_TTC_TREE_OVERLOOKING_BLUBBER_4:
+            lambda state:
+            (
+                state.has(ITEM_FLIGHT, player) and
+                (
+                    state.has(ITEM_CLIMB, player) or
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                )
+            ),
+        LOC_BEGG_TTC_TREE_OVERLOOKING_POOLS_1:
+            lambda state:
+            (
+                state.has(ITEM_FLIGHT, player) and
+                (
+                    state.has(ITEM_CLIMB, player) or
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                )
+            ),
+        LOC_BEGG_TTC_TREE_OVERLOOKING_POOLS_2:
+            lambda state:
+            (
+                state.has(ITEM_FLIGHT, player) and
+                (
+                    state.has(ITEM_CLIMB, player) or
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                )
+            ),
+        LOC_BEGG_TTC_TREE_OVERLOOKING_POOLS_3:
+            lambda state:
+            (
+                state.has(ITEM_FLIGHT, player) and
+                (
+                    state.has(ITEM_CLIMB, player) or
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                )
+            ),
+        LOC_BEGG_TTC_TREE_OVERLOOKING_POOLS_4:
+            lambda state:
+            (
+                state.has(ITEM_FLIGHT, player) and
+                (
+                    state.has(ITEM_CLIMB, player) or
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                )
+            ),
+        LOC_BEGG_CC_RIGHT_CUBBY_PIPE_1:
+            lambda state:
+            (
+                    state.has(ITEM_SWIM, player) and
+                    state.has(ITEM_CLIMB, player) and
+                    state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                    (
+                            state.has(ITEM_FEATHERY_FLAP, player) or
+                            state.has(ITEM_RAT_A_TAT_RAP, player) or
+                            (
+                                    state.has(ITEM_JUMP, player) and
+                                    state.has(ITEM_TALON_TROT, player)
+                            )
+                    )
+            ),
+        LOC_BEGG_CC_RIGHT_CUBBY_PIPE_2:
+            lambda state:
+            (
+                    state.has(ITEM_SWIM, player) and
+                    state.has(ITEM_CLIMB, player) and
+                    state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                    (
+                            state.has(ITEM_FEATHERY_FLAP, player) or
+                            state.has(ITEM_RAT_A_TAT_RAP, player) or
+                            (
+                                    state.has(ITEM_JUMP, player) and
+                                    state.has(ITEM_TALON_TROT, player)
+                            )
+                    )
+            ),
+        LOC_BEGG_CC_RIGHT_BELOW_CUBBY_PIPE_1:
+            lambda state:
+            (
+                    state.has(ITEM_SWIM, player) and
+                    (
+                            state.has(ITEM_JUMP, player) or
+                            state.has(ITEM_FEATHERY_FLAP, player) or
+                            state.has(ITEM_RAT_A_TAT_RAP, player)
+                    )
+            ),
+        LOC_BEGG_CC_RIGHT_BELOW_CUBBY_PIPE_2:
+            lambda state:
+            (
+                    state.has(ITEM_SWIM, player) and
+                    (
+                            state.has(ITEM_JUMP, player) or
+                            state.has(ITEM_FEATHERY_FLAP, player) or
+                            state.has(ITEM_RAT_A_TAT_RAP, player)
+                    )
+            ),
+        LOC_BEGG_CC_RIGHT_BELOW_CUBBY_PIPE_3:
+            lambda state:
+            (
+                    state.has(ITEM_SWIM, player) and
+                    (
+                            state.has(ITEM_JUMP, player) or
+                            state.has(ITEM_FEATHERY_FLAP, player) or
+                            state.has(ITEM_RAT_A_TAT_RAP, player)
+                    )
+            ),
+        LOC_BEGG_CC_RIGHT_BELOW_CUBBY_PIPE_4:
+            lambda state:
+            (
+                    state.has(ITEM_SWIM, player) and
+                    (
+                            state.has(ITEM_JUMP, player) or
+                            state.has(ITEM_FEATHERY_FLAP, player) or
+                            state.has(ITEM_RAT_A_TAT_RAP, player)
+                    )
+            ),
+        LOC_BEGG_CC_RIGHT_BELOW_CUBBY_PIPE_5:
+            lambda state:
+            (
+                    state.has(ITEM_SWIM, player) and
+                    (
+                            state.has(ITEM_JUMP, player) or
+                            state.has(ITEM_FEATHERY_FLAP, player) or
+                            state.has(ITEM_RAT_A_TAT_RAP, player)
+                    )
+            ),
+        LOC_BEGG_CC_RIGHT_BELOW_CUBBY_PIPE_6:
+            lambda state:
+            (
+                    state.has(ITEM_SWIM, player) and
+                    (
+                            state.has(ITEM_JUMP, player) or
+                            state.has(ITEM_FEATHERY_FLAP, player) or
+                            state.has(ITEM_RAT_A_TAT_RAP, player)
+                    )
+            ),
+        LOC_BEGG_CC_RIGHT_BELOW_CUBBY_PIPE_7:
+            lambda state:
+            (
+                    state.has(ITEM_SWIM, player) and
+                    (
+                            state.has(ITEM_JUMP, player) or
+                            state.has(ITEM_FEATHERY_FLAP, player) or
+                            state.has(ITEM_RAT_A_TAT_RAP, player)
+                    )
+            ),
+        LOC_BEGG_CC_RIGHT_BELOW_CUBBY_PIPE_8:
+            lambda state:
+            (
+                    state.has(ITEM_SWIM, player) and
+                    (
+                            state.has(ITEM_JUMP, player) or
+                            state.has(ITEM_FEATHERY_FLAP, player) or
+                            state.has(ITEM_RAT_A_TAT_RAP, player)
+                    )
+            ),
+        LOC_BEGG_CC_RIGHT_BELOW_CUBBY_PIPE_9:
+            lambda state:
+            (
+                    state.has(ITEM_SWIM, player) and
+                    (
+                            state.has(ITEM_JUMP, player) or
+                            state.has(ITEM_FEATHERY_FLAP, player) or
+                            state.has(ITEM_RAT_A_TAT_RAP, player)
+                    )
+            ),
+        LOC_BEGG_CC_INSIDE_BREAKABLE_GRATE_1:
+            lambda state:
+            (
+                    state.has(ITEM_SWIM, player) and
+                    state.has(ITEM_CLIMB, player) and
+                    state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                    (
+                            state.has(ITEM_FEATHERY_FLAP, player) or
+                            state.has(ITEM_RAT_A_TAT_RAP, player) or
+                            (
+                                    state.has(ITEM_JUMP, player) and
+                                    state.has(ITEM_TALON_TROT, player)
+                            )
+                    ) and
+                    state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_BEGG_CC_INSIDE_BREAKABLE_GRATE_2:
+            lambda state:
+            (
+                    state.has(ITEM_SWIM, player) and
+                    state.has(ITEM_CLIMB, player) and
+                    state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                    (
+                            state.has(ITEM_FEATHERY_FLAP, player) or
+                            state.has(ITEM_RAT_A_TAT_RAP, player) or
+                            (
+                                    state.has(ITEM_JUMP, player) and
+                                    state.has(ITEM_TALON_TROT, player)
+                            )
+                    ) and
+                    state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_BEGG_CC_INSIDE_BREAKABLE_GRATE_3:
+            lambda state:
+            (
+                    state.has(ITEM_SWIM, player) and
+                    state.has(ITEM_CLIMB, player) and
+                    state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                    (
+                            state.has(ITEM_FEATHERY_FLAP, player) or
+                            state.has(ITEM_RAT_A_TAT_RAP, player) or
+                            (
+                                    state.has(ITEM_JUMP, player) and
+                                    state.has(ITEM_TALON_TROT, player)
+                            )
+                    ) and
+                    state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_BEGG_CC_INSIDE_BREAKABLE_GRATE_4:
+            lambda state:
+            (
+                    state.has(ITEM_SWIM, player) and
+                    state.has(ITEM_CLIMB, player) and
+                    state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                    (
+                            state.has(ITEM_FEATHERY_FLAP, player) or
+                            state.has(ITEM_RAT_A_TAT_RAP, player) or
+                            (
+                                    state.has(ITEM_JUMP, player) and
+                                    state.has(ITEM_TALON_TROT, player)
+                            )
+                    ) and
+                    state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_BEGG_CC_INSIDE_BREAKABLE_GRATE_5:
+            lambda state:
+            (
+                    state.has(ITEM_SWIM, player) and
+                    state.has(ITEM_CLIMB, player) and
+                    state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                    (
+                            state.has(ITEM_FEATHERY_FLAP, player) or
+                            state.has(ITEM_RAT_A_TAT_RAP, player) or
+                            (
+                                    state.has(ITEM_JUMP, player) and
+                                    state.has(ITEM_TALON_TROT, player)
+                            )
+                    ) and
+                    state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_BEGG_CC_INSIDE_CLANKERS_STOMACH_1:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_BEGG_CC_INSIDE_CLANKERS_STOMACH_2:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_BEGG_CC_INSIDE_CLANKERS_STOMACH_3:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_BEGG_CC_INSIDE_CLANKERS_STOMACH_4:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_BEGG_CC_INSIDE_CLANKERS_STOMACH_5:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_BEGG_CC_INSIDE_CLANKERS_STOMACH_6:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_BEGG_CC_INSIDE_CLANKERS_STOMACH_7:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_BEGG_CC_INSIDE_CLANKERS_STOMACH_8:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_REDF_GL_OUTSIDE_CC_1:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_BEAK_BUSTER, player) and
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                )
+            ),
+        LOC_REDF_GL_OUTSIDE_CC_2:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_BEAK_BUSTER, player) and
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                )
+            ),
+        LOC_REDF_GL_OUTSIDE_CC_3:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_BEAK_BUSTER, player) and
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                )
+            ),
+        LOC_REDF_GL_OUTSIDE_CC_4:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_BEAK_BUSTER, player) and
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                )
+            ),
+        LOC_REDF_GL_AROUND_GRUNTY_STATUE_1:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player) or
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_REDF_GL_AROUND_GRUNTY_STATUE_2:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player) or
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_REDF_GL_AROUND_GRUNTY_STATUE_3:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player) or
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_REDF_GL_AROUND_GRUNTY_STATUE_4:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player) or
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_REDF_GL_AROUND_GRUNTY_STATUE_5:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player) or
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_REDF_GL_AROUND_GRUNTY_STATUE_6:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player) or
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_REDF_GL_AROUND_GRUNTY_STATUE_7:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player) or
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_REDF_GL_AROUND_GRUNTY_STATUE_8:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player) or
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_REDF_TTC_SHIP_MAST_1:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                (
+                    can_reach_ttc_flight_pad(state, player) and
+                    state.has(ITEM_FLIGHT, player)
+                )
+            ),
+        LOC_REDF_TTC_SHIP_MAST_2:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                (
+                    can_reach_ttc_flight_pad(state, player) and
+                    state.has(ITEM_FLIGHT, player)
+                )
+            ),
+        LOC_REDF_TTC_SHIP_MAST_3:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                (
+                    can_reach_ttc_flight_pad(state, player) and
+                    state.has(ITEM_FLIGHT, player)
+                )
+            ),
+        LOC_REDF_TTC_SHIP_MAST_4:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                (
+                    can_reach_ttc_flight_pad(state, player) and
+                    state.has(ITEM_FLIGHT, player)
+                )
+            ),
+        LOC_REDF_TTC_SHIP_MAST_5:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                (
+                    can_reach_ttc_flight_pad(state, player) and
+                    state.has(ITEM_FLIGHT, player)
+                )
+            ),
+        LOC_REDF_TTC_SHIP_MAST_7:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                (
+                    can_reach_ttc_flight_pad(state, player) and
+                    state.has(ITEM_FLIGHT, player)
+                )
+            ),
+        LOC_REDF_TTC_SHIP_MAST_8:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                (
+                    can_reach_ttc_flight_pad(state, player) and
+                    state.has(ITEM_FLIGHT, player)
+                )
+            ),
+        LOC_REDF_TTC_ROCK_POOL_1:
+            lambda state:
+            (
+                can_reach_ttc_upper_ledge(state, player) and
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_REDF_TTC_ROCK_POOL_2:
+            lambda state:
+            (
+                can_reach_ttc_upper_ledge(state, player) and
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_REDF_TTC_ROCK_POOL_3:
+            lambda state:
+            (
+                can_reach_ttc_upper_ledge(state, player) and
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_REDF_TTC_ROCK_POOL_4:
+            lambda state:
+            (
+                can_reach_ttc_upper_ledge(state, player) and
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_REDF_TTC_ROCK_POOL_5:
+            lambda state:
+            (
+                can_reach_ttc_upper_ledge(state, player) and
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_REDF_TTC_ROCK_POOL_6:
+            lambda state:
+            (
+                can_reach_ttc_upper_ledge(state, player) and
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_REDF_TTC_ROCK_POOL_7:
+            lambda state:
+            (
+                can_reach_ttc_upper_ledge(state, player) and
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_REDF_TTC_ROCK_POOL_8:
+            lambda state:
+            (
+                can_reach_ttc_upper_ledge(state, player) and
+                state.has(ITEM_SWIM, player)
+            ),
+    LOC_REDF_TTC_ROCK_POOL_9:
+            lambda state:
+            (
+                can_reach_ttc_upper_ledge(state, player) and
+                state.has(ITEM_SWIM, player)
+            ),
+    LOC_REDF_TTC_ROCK_POOL_ISLAND_FLIGHT_1:
+    lambda state:
+    (
+        can_reach_ttc_middle_ledge(state, player)
+    ),
+    LOC_REDF_TTC_ROCK_POOL_ISLAND_FLIGHT_2:
+    lambda state:
+    (
+        can_reach_ttc_middle_ledge(state, player)
+    ),
+    LOC_REDF_TTC_ROCK_POOL_ISLAND_FLIGHT_3:
+    lambda state:
+    (
+        can_reach_ttc_middle_ledge(state, player) and
+        (
+            state.has(ITEM_FLAP_FLIP, player) or
+            state.has(ITEM_FLIGHT, player)
+        )
+    ),
+    LOC_REDF_TTC_ROCK_POOL_ISLAND_FLIGHT_4:
+    lambda state:
+    (
+        can_reach_ttc_middle_ledge(state, player) and
+        (
+            state.has(ITEM_FLAP_FLIP, player) or
+            state.has(ITEM_FLIGHT, player)
+        )
+    ),
+    LOC_REDF_TTC_WORLD_ENTRY_FLIGHT_1:
+    lambda state:
+    (
+        can_reach_ttc_middle_ledge(state, player)
+    ),
+    LOC_REDF_TTC_WORLD_ENTRY_FLIGHT_2:
+    lambda state:
+    (
+        can_reach_ttc_middle_ledge(state, player)
+    ),
+    LOC_REDF_TTC_WORLD_ENTRY_FLIGHT_3:
+    lambda state:
+    (
+        can_reach_ttc_middle_ledge(state, player) and
+        (
+            state.has(ITEM_FLAP_FLIP, player) or
+            state.has(ITEM_FLIGHT, player)
+        )
+    ),
+    LOC_REDF_TTC_WORLD_ENTRY_FLIGHT_4:
+    lambda state:
+    (
+        can_reach_ttc_middle_ledge(state, player) and
+        (
+            state.has(ITEM_FLAP_FLIP, player) or
+            state.has(ITEM_FLIGHT, player)
+        )
+    ),
+    LOC_REDF_TTC_SANDCASTLE_FLIGHT_1:
+    lambda state:
+    (
+        can_reach_ttc_middle_ledge(state, player)
+    ),
+    LOC_REDF_TTC_SANDCASTLE_FLIGHT_2:
+    lambda state:
+    (
+        can_reach_ttc_middle_ledge(state, player)
+    ),
+    LOC_REDF_TTC_SANDCASTLE_FLIGHT_3:
+    lambda state:
+    (
+        can_reach_ttc_middle_ledge(state, player) and
+        (
+            state.has(ITEM_FLAP_FLIP, player) or
+            state.has(ITEM_FLIGHT, player)
+        )
+    ),
+    LOC_REDF_TTC_SANDCASTLE_FLIGHT_4:
+    lambda state:
+    (
+        can_reach_ttc_middle_ledge(state, player) and
+        (
+            state.has(ITEM_FLAP_FLIP, player) or
+            state.has(ITEM_FLIGHT, player)
+        )
+    ),
+    LOC_REDF_TTC_NIPPER_TREE_1:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_NIPPER_TREE_2:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_NIPPER_TREE_3:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_NIPPER_TREE_4:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_NIPPER_TREE_5:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_NIPPER_TREE_6:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_NIPPER_TREE_7:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_NIPPER_TREE_8:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_ENTRY_TREE_1:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_ENTRY_TREE_2:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_ENTRY_TREE_3:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_ENTRY_TREE_4:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_ENTRY_TREE_5:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_ENTRY_TREE_6:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_ENTRY_TREE_7:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_ENTRY_TREE_8:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_SANDCASTLE_TREE_1:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_SANDCASTLE_TREE_2:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_SANDCASTLE_TREE_3:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_SANDCASTLE_TREE_4:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_SANDCASTLE_TREE_5:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_SANDCASTLE_TREE_6:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_SANDCASTLE_TREE_7:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_SANDCASTLE_TREE_8:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_SANDCASTLE_TREE_9:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_SANDCASTLE_TREE_10:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_SANDCASTLE_TREE_11:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_SANDCASTLE_TREE_12:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_SHOCK_SPRING_BEACH_TREE_1:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_SHOCK_SPRING_BEACH_TREE_2:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_SHOCK_SPRING_BEACH_TREE_3:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_SHOCK_SPRING_BEACH_TREE_4:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_SHOCK_SPRING_BEACH_TREE_5:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_SHOCK_SPRING_BEACH_TREE_6:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_SHOCK_SPRING_BEACH_TREE_7:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_SHOCK_SPRING_BEACH_TREE_8:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_SHOCK_SPRING_BEACH_TREE_9:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_SHOCK_SPRING_BEACH_TREE_10:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_SHOCK_SPRING_BEACH_TREE_11:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_SHOCK_SPRING_BEACH_TREE_12:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_PATH_TO_X_BEACH_TREE_1:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_PATH_TO_X_BEACH_TREE_2:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_PATH_TO_X_BEACH_TREE_3:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_PATH_TO_X_BEACH_TREE_4:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_PATH_TO_X_BEACH_TREE_5:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_PATH_TO_X_BEACH_TREE_6:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_PATH_TO_X_BEACH_TREE_7:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_PATH_TO_X_BEACH_TREE_8:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_PATH_TO_X_BEACH_TREE_9:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_PATH_TO_X_BEACH_TREE_10:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_PATH_TO_X_BEACH_TREE_11:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_PATH_TO_X_BEACH_TREE_12:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player)
+    ),
+    LOC_REDF_TTC_SHOCK_SPRINGS_1:
+    lambda state:
+    (
+        can_reach_ttc_middle_ledge(state, player) and
+        (
+            state.has(ITEM_FLIGHT, player) or
+            state.has(ITEM_SHOCK_SPRING_JUMP, player)
+        )
+    ),
+    LOC_REDF_TTC_SHOCK_SPRINGS_2:
+    lambda state:
+    (
+        can_reach_ttc_middle_ledge(state, player) and
+        (
+            state.has(ITEM_FLIGHT, player) or
+            state.has(ITEM_SHOCK_SPRING_JUMP, player)
+        )
+    ),
+    LOC_REDF_TTC_SHOCK_SPRINGS_3:
+    lambda state:
+    (
+        can_reach_ttc_middle_ledge(state, player) and
+        (
+            state.has(ITEM_FLIGHT, player) or
+            state.has(ITEM_SHOCK_SPRING_JUMP, player)
+        )
+    ),
+    LOC_REDF_TTC_BEACH_CHEST_1:
+    lambda state:
+    (
+        state.has(ITEM_FLAP_FLIP, player)
+    ),
+    LOC_REDF_TTC_BEACH_CHEST_2:
+    lambda state:
+    (
+        state.has(ITEM_FLAP_FLIP, player)
+    ),
+    LOC_REDF_TTC_BEACH_CHEST_3:
+    lambda state:
+    (
+        state.has(ITEM_FLAP_FLIP, player)
+    ),
+    LOC_REDF_TTC_BEACH_CHEST_4:
+    lambda state:
+    (
+        state.has(ITEM_FLAP_FLIP, player)
+    ),
+    LOC_REDF_TTC_BEACH_CHEST_5:
+    lambda state:
+    (
+        state.has(ITEM_FLAP_FLIP, player)
+    ),
+    LOC_REDF_TTC_BEACH_CHEST_6:
+    lambda state:
+    (
+        state.has(ITEM_FLAP_FLIP, player)
+    ),
+    LOC_REDF_TTC_BEACH_CHEST_7:
+    lambda state:
+    (
+        state.has(ITEM_FLAP_FLIP, player)
+    ),
+    LOC_REDF_TTC_BEACH_CHEST_8:
+    lambda state:
+    (
+        state.has(ITEM_FLAP_FLIP, player)
+    ),
+    LOC_REDF_TTC_MAP_PATH_1:
+    lambda state:
+    (
+        state.has(ITEM_FEATHERY_FLAP, player) or
+        state.has(ITEM_RAT_A_TAT_RAP, player) or
+        (
+            state.has(ITEM_JUMP, player) and
+            state.has(ITEM_TALON_TROT, player)
+        )
+    ),
+    LOC_REDF_TTC_MAP_PATH_2:
+    lambda state:
+    (
+        state.has(ITEM_FEATHERY_FLAP, player) or
+        state.has(ITEM_RAT_A_TAT_RAP, player) or
+        (
+            state.has(ITEM_JUMP, player) and
+            state.has(ITEM_TALON_TROT, player)
+        )
+    ),
+    LOC_REDF_TTC_MAP_PATH_3:
+    lambda state:
+    (
+        state.has(ITEM_FEATHERY_FLAP, player) or
+        state.has(ITEM_RAT_A_TAT_RAP, player) or
+        (
+            state.has(ITEM_JUMP, player) and
+            state.has(ITEM_TALON_TROT, player)
+        ) and
+        (
+            state.has(ITEM_FLAP_FLIP, player) or
+            state.has(ITEM_FLIGHT, player)
+        )
+    ),
+    LOC_REDF_TTC_MAP_PATH_4:
+    lambda state:
+    (
+        state.has(ITEM_FEATHERY_FLAP, player) or
+        state.has(ITEM_RAT_A_TAT_RAP, player) or
+        (
+            state.has(ITEM_JUMP, player) and
+            state.has(ITEM_TALON_TROT, player)
+        ) and
+        (
+            state.has(ITEM_FLAP_FLIP, player) or
+            state.has(ITEM_FLIGHT, player)
+        )
+    ),
+    LOC_REDF_CC_CLANKER_TAIL_1:
+    lambda state:
+    (
+        state.has(ITEM_SWIM, player)
+    ),
+    LOC_REDF_CC_CLANKER_TAIL_2:
+    lambda state:
+    (
+        state.has(ITEM_SWIM, player)
+    ),
+    LOC_REDF_CC_CLANKER_TAIL_3:
+    lambda state:
+    (
+        state.has(ITEM_SWIM, player)
+    ),
+    LOC_REDF_CC_CLANKER_TAIL_4:
+    lambda state:
+    (
+        state.has(ITEM_SWIM, player)
+    ),
+    LOC_REDF_CC_CLANKER_TAIL_5:
+    lambda state:
+    (
+        state.has(ITEM_SWIM, player)
+    ),
+    LOC_REDF_CC_CLANKER_TAIL_6:
+    lambda state:
+    (
+        state.has(ITEM_SWIM, player)
+    ),
+    LOC_REDF_CC_INSIDE_CLANKERS_STOMACH_1:
+    lambda state:
+    (
+        state.has(ITEM_SWIM, player)
+    ),
+    LOC_REDF_CC_INSIDE_CLANKERS_STOMACH_2:
+    lambda state:
+    (
+        state.has(ITEM_SWIM, player)
+    ),
+    LOC_REDF_CC_INSIDE_CLANKERS_STOMACH_3:
+    lambda state:
+    (
+        state.has(ITEM_SWIM, player)
+    ),
+    LOC_REDF_CC_INSIDE_CLANKERS_STOMACH_4:
+    lambda state:
+    (
+        state.has(ITEM_SWIM, player)
+    ),
+    LOC_REDF_MMM_ROOFTOP_FEATHER_1:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player) and
+        state.has(ITEM_SHOCK_SPRING_JUMP, player)
+    ),
+    LOC_REDF_MMM_ROOFTOP_FEATHER_2:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player) and
+        state.has(ITEM_SHOCK_SPRING_JUMP, player)
+    ),
+    LOC_REDF_MMM_ROOFTOP_FEATHER_3:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player) and
+        state.has(ITEM_SHOCK_SPRING_JUMP, player)
+    ),
+    LOC_REDF_MMM_ROOFTOP_FEATHER_4:
+    lambda state:
+    (
+        state.has(ITEM_CLIMB, player) and
+        state.has(ITEM_SHOCK_SPRING_JUMP, player)
+    ),
+    LOC_GOLDF_GL_UNDER_BGS_BRIDGES:
+    lambda state:
+    (
+        can_traverse_bgs(state, player) and
+        state.has(ITEM_STILT_STRIDE, player) and
+        state.has(ITEM_TRANSFORMATION_CROCODILE, player)
+    ),
+    LOC_GOLDF_GL_SWAMP_CHEATO:
+    lambda state:
+    (
+        can_traverse_bgs(state, player) and
+        state.has(ITEM_STILT_STRIDE, player) and
+        state.has(ITEM_TRANSFORMATION_CROCODILE, player) and
+        (
+            state.has(ITEM_BEAK_BARGE, player) or
+            state.has(ITEM_RAT_A_TAT_RAP, player) or
+            state.has(ITEM_BEAK_BUSTER, player) or
+            state.has(ITEM_EGGS, player)
+        )
+    ),
+    LOC_GOLDF_CC_PLATFORM_NEAR_CLANKER_1:
+    lambda state:
+    (
+            state.has(ITEM_SWIM, player) and
+            (
+                state.has(ITEM_JUMP, player) or
+                (
+                    state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                    (
+                        state.has(ITEM_FEATHERY_FLAP, player) or
+                        state.has(ITEM_RAT_A_TAT_RAP, player)
+                    )
+                )
+            )
+    ),
+    LOC_GOLDF_CC_PLATFORM_NEAR_CLANKER_2:
+    lambda state:
+    (
+            state.has(ITEM_SWIM, player) and
+            (
+                state.has(ITEM_JUMP, player) or
+                (
+                    state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                    (
+                        state.has(ITEM_FEATHERY_FLAP, player) or
+                        state.has(ITEM_RAT_A_TAT_RAP, player)
+                    )
+                )
+            )
+    ),
+    LOC_GOLDF_CC_CRATES_INSIDE_CLANKER_1:
+    lambda state:
+    (
+        state.has(ITEM_SWIM, player) and  # required to access most of the level
+        state.has(ITEM_FLAP_FLIP, player) and  # required to jump through all the rings
+        (
+            state.has(ITEM_FEATHERY_FLAP, player) or
+            state.has(ITEM_RAT_A_TAT_RAP, player) or
+            (
+                state.has(ITEM_JUMP, player) and
+                state.has(ITEM_TALON_TROT, player)
+            )
+        )
+    ),
+    LOC_GOLDF_CC_CRATES_INSIDE_CLANKER_2:
+    lambda state:
+    (
+        state.has(ITEM_SWIM, player) and  # required to access most of the level
+        state.has(ITEM_FLAP_FLIP, player) and  # required to jump through all the rings
+        (
+            state.has(ITEM_FEATHERY_FLAP, player) or
+            state.has(ITEM_RAT_A_TAT_RAP, player) or
+            (
+                state.has(ITEM_JUMP, player) and
+                state.has(ITEM_TALON_TROT, player)
+            )
+        )
+    ),
+    LOC_GOLDF_CC_CRATES_INSIDE_CLANKER_3:
+    lambda state:
+    (
+        state.has(ITEM_SWIM, player) and  # required to access most of the level
+        state.has(ITEM_FLAP_FLIP, player) and  # required to jump through all the rings
+        (
+            state.has(ITEM_FEATHERY_FLAP, player) or
+            state.has(ITEM_RAT_A_TAT_RAP, player) or
+            (
+                state.has(ITEM_JUMP, player) and
+                state.has(ITEM_TALON_TROT, player)
+            )
+        )
+    ),
+    LOC_GOLDF_CC_FLIGHT_PAD_LEDGE:
+    lambda state:
+    (
+            state.has(ITEM_SWIM, player) and
+            state.has(ITEM_FLIGHT, player)
+    ),
+    LOC_GOLDF_CC_SAWBLADES_1:
+    lambda state:
+    (
+            state.has(ITEM_SWIM, player) and
+            state.has(ITEM_FLIGHT, player) and
+            state.has(ITEM_WONDERWING, player)
+    ),
+    LOC_GOLDF_CC_SAWBLADES_2:
+    lambda state:
+    (
+            state.has(ITEM_SWIM, player) and
+            state.has(ITEM_FLIGHT, player) and
+            state.has(ITEM_WONDERWING, player)
+    ),
+    LOC_GOLDF_CC_SAWBLADES_3:
+    lambda state:
+    (
+            state.has(ITEM_SWIM, player) and
+            state.has(ITEM_FLIGHT, player) and
+            state.has(ITEM_WONDERWING, player)
+    ),
+    LOC_GOLDF_CC_SAWBLADES_4:
+    lambda state:
+    (
+            state.has(ITEM_SWIM, player) and
+            state.has(ITEM_FLIGHT, player) and
+            state.has(ITEM_WONDERWING, player)
+    ),
+    LOC_GOLDF_CC_SAWBLADES_5:
+    lambda state:
+    (
+            state.has(ITEM_SWIM, player) and
+            state.has(ITEM_FLIGHT, player) and
+            state.has(ITEM_WONDERWING, player)
+    ),
+    LOC_GOLDF_MMM_MAZE_2:
+    lambda state: True,
+
+    LOC_GOLDF_MMM_MAZE_BEHIND_HUT_1:
+    lambda state:
+    (
+            can_break_breakable_gates(state, player) and
+            state.has(ITEM_FLAP_FLIP, player)
+    ),
+    LOC_GOLDF_MMM_MAZE_BEHIND_HUT_2:
+    lambda state:
+    (
+            can_break_breakable_gates(state, player) and
+            state.has(ITEM_FLAP_FLIP, player)
+    ),
+    LOC_DEFEAT_GRUNTILDA:
             lambda state: True,
     }

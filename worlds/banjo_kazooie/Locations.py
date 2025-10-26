@@ -5127,6 +5127,1697 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_CLICK_CLOCK_WOOD,
         address=0x01460890
     ),
+    # Egg and Feather Locations
+    # Gruntys Lair Eggs
+    LOC_BEGG_GL_AROUND_RED_CAULDRON_1: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
+        address=0x0900057B
+    ),
+    LOC_BEGG_GL_AROUND_RED_CAULDRON_2: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x09000892
+    ),
+    LOC_BEGG_GL_AROUND_RED_CAULDRON_3: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x09000CAD
+    ),
+    LOC_BEGG_GL_AROUND_RED_CAULDRON_4: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x09000FA5
+    ),
+    LOC_BEGG_GL_AROUND_RED_CAULDRON_5: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x09000FA7
+    ),
+    LOC_BEGG_GL_AROUND_RED_CAULDRON_6: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x09000CC3
+    ),
+    LOC_BEGG_GL_AROUND_RED_CAULDRON_7: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x0900087D
+    ),
+    LOC_BEGG_GL_AROUND_RED_CAULDRON_8: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x09000570
+    ),
+    LOC_BEGG_GL_NEAR_CCW_SWITCH_1: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x0900045D
+    ),
+    LOC_BEGG_GL_NEAR_CCW_SWITCH_2: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x09000372
+    ),
+    LOC_BEGG_GL_NEAR_CCW_SWITCH_3: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x0900019D
+    ),
+    LOC_BEGG_GL_NEAR_CCW_SWITCH_4: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x0900FF99
+    ),
+    LOC_BEGG_GL_NEAR_CCW_SWITCH_5: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x0900FF1E
+    ),
+    LOC_BEGG_GL_NEAR_CCW_SWITCH_6: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x0900004D
+    ),
+    LOC_BEGG_GL_NEAR_CCW_SWITCH_7: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x09000260
+    ),
+    LOC_BEGG_GL_AROUND_BGS_PAINTING_1: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x0900E0AD
+    ),
+    LOC_BEGG_GL_AROUND_BGS_PAINTING_2: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x0900DFE2
+    ),
+    LOC_BEGG_GL_AROUND_BGS_PAINTING_3: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x0900DFD8
+    ),
+    LOC_BEGG_GL_AROUND_BGS_PAINTING_4: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x0900E020
+    ),
+    LOC_BEGG_GL_AROUND_BGS_PAINTING_5: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x0900E714
+    ),
+    LOC_BEGG_GL_AROUND_BGS_PAINTING_6: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x0900E8C1
+    ),
+    LOC_BEGG_GL_AROUND_BGS_PAINTING_7: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x0900E9C6
+    ),
+    LOC_BEGG_GL_AROUND_BGS_PAINTING_8: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x0900EA6A
+    ),
+    LOC_BEGG_GL_AROUND_FP_PAINTING_1: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x0900F436
+    ),
+    LOC_BEGG_GL_AROUND_FP_PAINTING_2: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x0900F361
+    ),
+    LOC_BEGG_GL_AROUND_FP_PAINTING_3: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x0900F237
+    ),
+    LOC_BEGG_GL_AROUND_FP_PAINTING_4: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x0900F0FD
+    ),
+    LOC_BEGG_GL_NEAR_STILT_STRIDE_GOBIS_1: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x090003EC
+    ),
+    LOC_BEGG_GL_NEAR_STILT_STRIDE_GOBIS_2: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x090002D8
+    ),
+    LOC_BEGG_GL_NEAR_STILT_STRIDE_GOBIS_3: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x090004E4
+    ),
+    LOC_BEGG_GL_NEAR_STILT_STRIDE_GOBIS_4: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x090005E0
+    ),
+    LOC_BEGG_GL_350_NOTE_DOOR_STATUE_HAT_1: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x09000CDE
+    ),
+    LOC_BEGG_GL_350_NOTE_DOOR_STATUE_HAT_2: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x09000B12
+    ),
+    LOC_BEGG_GL_350_NOTE_DOOR_STATUE_HAT_3: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x09000946
+    ),
+    LOC_BEGG_GL_350_NOTE_DOOR_STATUE_HAT_4: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x0900077A
+    ),
+    LOC_BEGG_GL_350_NOTE_DOOR_STATUE_HAT_5: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x090005AE
+    ),
+    LOC_BEGG_GL_350_NOTE_DOOR_STATUE_HAT_6: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x090003E2
+    ),
+
+    # Mumbos Mountain Eggs
+    LOC_BEGG_MM_BEHIND_STONHENGE_PILLAR_1: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0900F4B3
+    ),
+    LOC_BEGG_MM_BEHIND_STONHENGE_PILLAR_2: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0900F4AB
+    ),
+    LOC_BEGG_MM_BEHIND_STONHENGE_PILLAR_3: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0900F49D
+    ),
+    LOC_BEGG_MM_BEHIND_STONHENGE_PILLAR_4: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0900F492
+    ),
+    LOC_BEGG_MM_BEHIND_STONHENGE_PILLAR_5: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0900F48A
+    ),
+    LOC_BEGG_MM_INSIDE_DESTROYED_HUT_1: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0900006A
+    ),
+    LOC_BEGG_MM_INSIDE_DESTROYED_HUT_2: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0900006B
+    ),
+    LOC_BEGG_MM_INSIDE_DESTROYED_HUT_3: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0900006C
+    ),
+    LOC_BEGG_MM_INSIDE_DESTROYED_HUT_4: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0900006D
+    ),
+    LOC_BEGG_MM_INSIDE_DESTROYED_HUT_5: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x09000069
+    ),
+    LOC_BEGG_MM_CHIMPY_1: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0900027C
+    ),
+    LOC_BEGG_MM_CHIMPY_2: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x090001C8
+    ),
+    LOC_BEGG_MM_CHIMPY_3: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x09000106
+    ),
+    LOC_BEGG_MM_CHIMPY_4: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x09000035
+    ),
+    LOC_BEGG_MM_CHIMPY_5: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0900FF68
+    ),
+    LOC_BEGG_MM_CHIMPY_6: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0900FF00
+    ),
+    LOC_BEGG_MM_CHIMPY_7: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0900FEC5
+    ),
+    LOC_BEGG_MM_CHIMPY_8: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0900FEFC
+    ),
+    LOC_BEGG_MM_CHIMPY_9: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0900052F
+    ),
+    LOC_BEGG_MM_CHIMPY_10: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x09000611
+    ),
+    LOC_BEGG_MM_CHIMPY_11: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x09000AA6
+    ),
+    LOC_BEGG_MM_CHIMPY_12: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x09000AD2
+    ),
+    LOC_BEGG_MM_INSIDE_MUMBOS_1: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x090002FB
+    ),
+    LOC_BEGG_MM_INSIDE_MUMBOS_2: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x09000402
+    ),
+    LOC_BEGG_MM_INSIDE_MUMBOS_3: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0900045F
+    ),
+    LOC_BEGG_MM_INSIDE_MUMBOS_4: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x090003F2
+    ),
+    LOC_BEGG_MM_INSIDE_MUMBOS_5: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x090002FB
+    ),
+    LOC_BEGG_MM_INSIDE_MUMBOS_6: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x090001A1
+    ),
+    LOC_BEGG_MM_INSIDE_MUMBOS_7: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x09000006
+    ),
+    LOC_BEGG_MM_INSIDE_MUMBOS_8: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0900FF15
+    ),
+    LOC_BEGG_MM_INSIDE_MUMBOS_9: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0900FEA6
+    ),
+    LOC_BEGG_MM_INSIDE_MUMBOS_10: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0900FF1B
+    ),
+    LOC_BEGG_MM_INSIDE_MUMBOS_11: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x09000023
+    ),
+    LOC_BEGG_MM_INSIDE_MUMBOS_12: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x09000179
+    ),
+    LOC_BEGG_MM_TERMITE_MOUND_1: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0900055C
+    ),
+    LOC_BEGG_MM_TERMITE_MOUND_2: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x090005CB
+    ),
+    LOC_BEGG_MM_TERMITE_MOUND_3: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x09000629
+    ),
+    LOC_BEGG_MM_TERMITE_MOUND_4: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x09000617
+    ),
+    LOC_BEGG_MM_TERMITE_MOUND_5: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x09000548
+    ),
+    LOC_BEGG_MM_TERMITE_MOUND_6: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x090005BA
+    ),
+    # Treasure Trove Eggs
+    LOC_BEGG_TTC_INSIDE_NIPPER_1: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x09000039
+    ),
+    LOC_BEGG_TTC_INSIDE_NIPPER_2: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x09000096
+    ),
+    LOC_BEGG_TTC_INSIDE_NIPPER_3: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0900001C
+    ),
+    LOC_BEGG_TTC_INSIDE_NIPPER_4: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0900FF8B
+    ),
+    LOC_BEGG_TTC_INSIDE_NIPPER_5: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0900FF87
+    ),
+    LOC_BEGG_TTC_PATH_TO_LIGHT_1: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x090012A9
+    ),
+    LOC_BEGG_TTC_PATH_TO_LIGHT_2: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x090012D0
+    ),
+    LOC_BEGG_TTC_PATH_TO_LIGHT_3: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x09001217
+    ),
+    LOC_BEGG_TTC_PATH_TO_LIGHT_4: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x09000EF5
+    ),
+    LOC_BEGG_TTC_PATH_TO_LIGHT_5: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x09001025
+    ),
+    LOC_BEGG_TTC_PATH_TO_LIGHT_6: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x090011A6
+    ),
+    LOC_BEGG_TTC_TREE_STAIRS_1: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0900167C
+    ),
+    LOC_BEGG_TTC_TREE_STAIRS_2: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0900167B
+    ),
+    LOC_BEGG_TTC_TREE_STAIRS_3: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0900174D
+    ),
+    LOC_BEGG_TTC_TREE_STAIRS_4: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0900174E
+    ),
+    LOC_BEGG_TTC_TREE_OVERLOOKING_BLUBBER_1: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x090014C2
+    ),
+    LOC_BEGG_TTC_TREE_OVERLOOKING_BLUBBER_2: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x09001572
+    ),
+    LOC_BEGG_TTC_TREE_OVERLOOKING_BLUBBER_3: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x090014D4
+    ),
+    LOC_BEGG_TTC_TREE_OVERLOOKING_BLUBBER_4: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x09001410
+    ),
+    LOC_BEGG_TTC_TREE_OVERLOOKING_POOLS_1: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x090007BB
+    ),
+    LOC_BEGG_TTC_TREE_OVERLOOKING_POOLS_2: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x090007B7
+    ),
+    LOC_BEGG_TTC_TREE_OVERLOOKING_POOLS_3: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x090006B3
+    ),
+    LOC_BEGG_TTC_TREE_OVERLOOKING_POOLS_4: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x090006B7
+    ),
+    LOC_BEGG_TTC_TREE_OVERLOOKING_MAP_PATH_1: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x090008C2
+    ),
+    LOC_BEGG_TTC_TREE_OVERLOOKING_MAP_PATH_2: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0900096A
+    ),
+    LOC_BEGG_TTC_TREE_OVERLOOKING_MAP_PATH_3: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x09000935
+    ),
+    LOC_BEGG_TTC_TREE_OVERLOOKING_MAP_PATH_4: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x090009EB
+    ),
+    LOC_BEGG_TTC_CLIFFSIDE_PATH_1: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0900E031
+    ),
+    LOC_BEGG_TTC_CLIFFSIDE_PATH_2: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0900E0D9
+    ),
+    LOC_BEGG_TTC_CLIFFSIDE_PATH_3: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0900E094
+    ),
+    LOC_BEGG_TTC_CLIFFSIDE_PATH_4: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0900E039
+    ),
+    LOC_BEGG_TTC_CLIFFSIDE_PATH_5: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0900E16B
+    ),
+    LOC_BEGG_TTC_CLIFFSIDE_PATH_6: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0900E207
+    ),
+    LOC_BEGG_TTC_CLIFFSIDE_PATH_7: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0900E349
+    ),
+    LOC_BEGG_TTC_CLIFFSIDE_PATH_8: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0900E2C5
+    ),
+    LOC_BEGG_TTC_ROCK_POOL_1: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0900E96E
+    ),
+    LOC_BEGG_TTC_ROCK_POOL_2: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0900E8CC
+    ),
+    LOC_BEGG_TTC_ROCK_POOL_3: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0900E855
+    ),
+    LOC_BEGG_TTC_ROCK_POOL_4: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0900E860
+    ),
+    LOC_BEGG_TTC_ROCK_POOL_5: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0900E986
+    ),
+    LOC_BEGG_TTC_ROCK_POOL_6: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0900EAB8
+    ),
+    LOC_BEGG_TTC_ROCK_POOL_7: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0900EC2F
+    ),
+    LOC_BEGG_TTC_ROCK_POOL_CHEST_1: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0900FB7D
+    ),
+    LOC_BEGG_TTC_ROCK_POOL_CHEST_2: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0900FBFB
+    ),
+    LOC_BEGG_TTC_ROCK_POOL_CHEST_3: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0900FC7F
+    ),
+    LOC_BEGG_TTC_ROCK_POOL_CHEST_4: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0900FBD4
+    ),
+    LOC_BEGG_TTC_ROCK_POOL_CHEST_5: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0900FC27
+    ),
+    LOC_BEGG_CC_RIGHT_CUBBY_PIPE_1: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0900290A
+    ),
+    LOC_BEGG_CC_RIGHT_CUBBY_PIPE_2: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x09002990
+    ),
+    LOC_BEGG_CC_RIGHT_BELOW_CUBBY_PIPE_1: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0900290A
+    ),
+    LOC_BEGG_CC_RIGHT_BELOW_CUBBY_PIPE_2: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x09002990
+    ),
+    LOC_BEGG_CC_RIGHT_BELOW_CUBBY_PIPE_3: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x09001DFA
+    ),
+    LOC_BEGG_CC_RIGHT_BELOW_CUBBY_PIPE_4: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x09001DCE
+    ),
+    LOC_BEGG_CC_RIGHT_BELOW_CUBBY_PIPE_5: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x09001E2C
+    ),
+    LOC_BEGG_CC_RIGHT_BELOW_CUBBY_PIPE_6: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x09001ED8
+    ),
+    LOC_BEGG_CC_RIGHT_BELOW_CUBBY_PIPE_7: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x09001FA2
+    ),
+    LOC_BEGG_CC_RIGHT_BELOW_CUBBY_PIPE_8: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0900203D
+    ),
+    LOC_BEGG_CC_RIGHT_BELOW_CUBBY_PIPE_9: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x09002075
+    ),
+    LOC_BEGG_CC_INSIDE_BREAKBALE_GRATE_1: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x090036E4
+    ),
+    LOC_BEGG_CC_INSIDE_BREAKBALE_GRATE_2: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x09003755
+    ),
+    LOC_BEGG_CC_INSIDE_BREAKBALE_GRATE_3: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x09003723
+    ),
+    LOC_BEGG_CC_INSIDE_BREAKBALE_GRATE_4: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x09003700
+    ),
+    LOC_BEGG_CC_INSIDE_BREAKBALE_GRATE_5: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x090036D9
+    ),
+    LOC_BEGG_CC_INSIDE_CLANKERS_STOMACH_1: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x09000635
+    ),
+    LOC_BEGG_CC_INSIDE_CLANKERS_STOMACH_2: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0900FBD3
+    ),
+    LOC_BEGG_CC_INSIDE_CLANKERS_STOMACH_3: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0900FF17
+    ),
+    LOC_BEGG_CC_INSIDE_CLANKERS_STOMACH_4: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x090002FC
+    ),
+    LOC_BEGG_CC_INSIDE_CLANKERS_STOMACH_5: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0900032A
+    ),
+    LOC_BEGG_CC_INSIDE_CLANKERS_STOMACH_6: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0900FF44
+    ),
+    LOC_BEGG_CC_INSIDE_CLANKERS_STOMACH_7: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0900FBB4
+    ),
+    LOC_BEGG_CC_INSIDE_CLANKERS_STOMACH_8: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0900F8C6
+    ),
+    LOC_BEGG_CC_ENTRANCE_UNDERWATER_1: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0900FAD9
+    ),
+    LOC_BEGG_CC_ENTRANCE_UNDERWATER_2: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0900F92B
+    ),
+    LOC_BEGG_CC_ENTRANCE_UNDERWATER_3: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0900F71D
+    ),
+    LOC_BEGG_CC_ENTRANCE_UNDERWATER_4: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0900F6F7
+    ),
+    LOC_BEGG_CC_ENTRANCE_UNDERWATER_5: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0900F8DC
+    ),
+    LOC_BEGG_CC_ENTRANCE_UNDERWATER_6: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0900FAA8
+    ),
+    LOC_BEGG_CC_SNIPPETS_PIPE_1: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x090045BE
+    ),
+    LOC_BEGG_CC_SNIPPETS_PIPE_2: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x09004692
+    ),
+    LOC_BEGG_CC_SNIPPETS_PIPE_3: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x09004768
+    ),
+    LOC_BEGG_CC_SNIPPETS_PIPE_4: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0900483E
+    ),
+    LOC_BEGG_CC_SNIPPETS_PIPE_5: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0900490F
+    ),
+    LOC_BEGG_CC_UNDERNEATH_CLANKER_1: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x090011AC
+    ),
+    LOC_BEGG_CC_UNDERNEATH_CLANKER_2: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x090011C5
+    ),
+    LOC_BEGG_CC_UNDERNEATH_CLANKER_3: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x090011BA
+    ),
+    LOC_BEGG_CC_UNDERNEATH_CLANKER_4: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x090011D6
+    ),
+    LOC_BEGG_CC_UNDERNEATH_CLANKER_5: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x090011DD
+    ),
+
+    # Freezeezy Peak Eggs
+
+    # Bubblegloop Swamp Eggs
+
+    LOC_BEGG_BGS_BEHIND_MOLEHILL_1: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x090028C2
+    ),
+    LOC_BEGG_BGS_BEHIND_MOLEHILL_2: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0900294E
+    ),
+    LOC_BEGG_BGS_BEHIND_MOLEHILL_3: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x090029E6
+    ),
+    LOC_BEGG_BGS_BEHIND_MOLEHILL_4: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x09002A80
+    ),
+    LOC_BEGG_BGS_BEHIND_MOLEHILL_5: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x09002B16
+    ),
+    LOC_BEGG_GL_STUMP_NEAR_GIANT_EGG_1: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x0900F310
+    ),
+    LOC_BEGG_GL_STUMP_NEAR_GIANT_EGG_2: BKLocationData(
+        region=RGN_GRUNTYS_LAIR,
+        address=0x0900F052
+    ),
+    LOC_BEGG_BGS_AROUND_CENTRAL_PLATFORM_TOKEN_1: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x09001085
+    ),
+    LOC_BEGG_BGS_AROUND_CENTRAL_PLATFORM_TOKEN_2: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0900105A
+    ),
+    LOC_BEGG_BGS_AROUND_CENTRAL_PLATFORM_TOKEN_3: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x090010E1
+    ),
+    LOC_BEGG_BGS_AROUND_CENTRAL_PLATFORM_TOKEN_4: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0900119C
+    ),
+    LOC_BEGG_BGS_AROUND_CENTRAL_PLATFORM_TOKEN_5: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x090011CE
+    ),
+    LOC_BEGG_BGS_AROUND_CENTRAL_PLATFORM_TOKEN_6: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x09001147
+    ),
+    LOC_BEGG_BGS_BEHIND_TANKTUP_1: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x090020DE
+    ),
+    LOC_BEGG_BGS_BEHIND_TANKTUP_2: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x090020B9
+    ),
+    LOC_BEGG_BGS_BEHIND_TANKTUP_3: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0900208A
+    ),
+    LOC_BEGG_BGS_BEHIND_TANKTUP_4: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x09002092
+    ),
+    LOC_BEGG_BGS_BEHIND_TIPTUP_1: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0900F7AD
+    ),
+    LOC_BEGG_BGS_BEHIND_TIPTUP_2: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0900F842
+    ),
+    LOC_BEGG_BGS_BEHIND_TIPTUP_3: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0900F971
+    ),
+    LOC_BEGG_BGS_BEHIND_TIPTUP_4: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0900FA06
+    ),
+    LOC_BEGG_BGS_MUMBOS_HUT_RACE_1: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0900CBAA
+    ),
+    LOC_BEGG_BGS_MUMBOS_HUT_RACE_2: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0900CC99
+    ),
+    LOC_BEGG_BGS_MUMBOS_HUT_RACE_3: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0900CD89
+    ),
+    LOC_BEGG_BGS_MUMBOS_HUT_RACE_4: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0900CEE7
+    ),
+    LOC_BEGG_BGS_MUMBOS_HUT_RACE_5: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0900D034
+    ),
+    LOC_BEGG_BGS_IN_SWAMP_NEAR_MR_VILE_ENTRY_1: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0900F92F
+    ),
+    LOC_BEGG_BGS_IN_SWAMP_NEAR_MR_VILE_ENTRY_2: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0900F9AC
+    ),
+    LOC_BEGG_BGS_IN_SWAMP_NEAR_MR_VILE_ENTRY_3: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0900FA25
+    ),
+    LOC_BEGG_BGS_IN_SWAMP_NEAR_MR_VILE_ENTRY_4: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0900F7B9
+    ),
+    LOC_BEGG_BGS_IN_SWAMP_NEAR_MR_VILE_ENTRY_5: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0900F73A
+    ),
+    LOC_BEGG_BGS_IN_SWAMP_NEAR_MR_VILE_ENTRY_6: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0900F6BC
+    ),
+    LOC_BEGG_BGS_IN_SWAMP_BEHIND_TIMER_PATH_1: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0900F8DF
+    ),
+    LOC_BEGG_BGS_IN_SWAMP_BEHIND_TIMER_PATH_2: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0900F88C
+    ),
+    LOC_BEGG_BGS_IN_SWAMP_BEHIND_TIMER_PATH_3: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0900F834
+    ),
+    LOC_BEGG_BGS_IN_SWAMP_IN_FRONT_SHOCK_HUTS_1: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0900FB7E
+    ),
+    LOC_BEGG_BGS_IN_SWAMP_IN_FRONT_SHOCK_HUTS_2: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0900FB29
+    ),
+    LOC_BEGG_BGS_IN_SWAMP_IN_FRONT_SHOCK_HUTS_3: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0900FAC5
+    ),
+    LOC_BEGG_BGS_IN_SWAMP_IN_UNDER_SHOCK_HUTS_1: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0900044F
+    ),
+    LOC_BEGG_BGS_IN_SWAMP_IN_UNDER_SHOCK_HUTS_2: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0900036C
+    ),
+    LOC_BEGG_BGS_IN_SWAMP_IN_UNDER_SHOCK_HUTS_3: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0900044A
+    ),
+    LOC_BEGG_BGS_IN_SWAMP_IN_UNDER_SHOCK_HUTS_4: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0900052C
+    ),
+    LOC_BEGG_BGS_BEHIND_MR_VILE_1: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0900FB5B
+    ),
+    LOC_BEGG_BGS_BEHIND_MR_VILE_2: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x090004A1
+    ),
+    # Note! There are 6 Uncollectable eggs on 2 cattails in the level
+
+    #
+    # Mad Monster Mansion Eggs
+
+    LOC_BEGG_MMM_MANTLE_1: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0900F862
+    ),
+    LOC_BEGG_MMM_MANTLE_2: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0900F7B3
+    ),
+    LOC_BEGG_MMM_MANTLE_3: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0900F705
+    ),
+    LOC_BEGG_MMM_MANTLE_4: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0900F910
+    ),
+    LOC_BEGG_MMM_MANTLE_5: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0900F9BF
+    ),
+    # Feathers
+
+    # Feathers Gruntys Lair
+    LOC_REDF_GL_OUTSIDE_CC_1: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0A00FB3E
+    ),
+    LOC_REDF_GL_OUTSIDE_CC_2: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0A00F9EF
+    ),
+    LOC_REDF_GL_OUTSIDE_CC_3: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0A00F8A4
+    ),
+    LOC_REDF_GL_OUTSIDE_CC_4: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0A00F755
+    ),
+    LOC_REDF_GL_AROUND_GRUNTY_STATUE_1: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR,
+        address=0x0A0000FA
+    ),
+    LOC_REDF_GL_AROUND_GRUNTY_STATUE_2: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR,
+        address=0x0A0001C9
+    ),
+    LOC_REDF_GL_AROUND_GRUNTY_STATUE_3: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR,
+        address=0x0A000063
+    ),
+    LOC_REDF_GL_AROUND_GRUNTY_STATUE_4: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR,
+        address=0x0A00FD34
+    ),
+    LOC_REDF_GL_AROUND_GRUNTY_STATUE_5: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR,
+        address=0x0A00FAB7
+    ),
+    LOC_REDF_GL_AROUND_GRUNTY_STATUE_6: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR,
+        address=0x0A00F981
+    ),
+    LOC_REDF_GL_AROUND_GRUNTY_STATUE_7: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR,
+        address=0x0A00FA2D
+    ),
+    LOC_REDF_GL_AROUND_GRUNTY_STATUE_8: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR,
+        address=0x0A00FD89
+    ),
+    LOC_REDF_GL_NEAR_GOBIS_VASE_SWITCH_1: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
+        address=0x0A001223
+    ),
+    LOC_REDF_GL_NEAR_GOBIS_VASE_SWITCH_2: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
+        address=0x0A001462
+    ),
+    LOC_REDF_GL_NEAR_GOBIS_VASE_SWITCH_3: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
+        address=0x0A001669
+    ),
+    LOC_REDF_GL_NEAR_GOBIS_VASE_SWITCH_4: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
+        address=0x0A0017B5
+    ),
+    LOC_REDF_GL_NEAR_GOBIS_VASE_SWITCH_5: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
+        address=0x0A0015F6
+    ),
+    LOC_REDF_GL_NEAR_GOBIS_VASE_SWITCH_6: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
+        address=0x0A001425
+    ),
+    LOC_REDF_GL_SHOCK_SPRING_FREEZEEZY_ENTRY_1: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
+        address=0x0A002CB0
+    ),
+    LOC_REDF_GL_SHOCK_SPRING_FREEZEEZY_ENTRY_2: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
+        address=0x0A002CDC
+    ),
+    LOC_REDF_GL_SHOCK_SPRING_FREEZEEZY_ENTRY_3: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
+        address=0x0A002D08
+    ),
+    LOC_REDF_GL_SHOCK_SPRING_FREEZEEZY_ENTRY_4: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
+        address=0x0A002D33
+    ),
+    # Treasure Trove Feathers
+    LOC_REDF_TTC_SHIP_MAST_1: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A000ADC
+    ),
+    LOC_REDF_TTC_SHIP_MAST_2: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A000AD8
+    ),
+    LOC_REDF_TTC_SHIP_MAST_3: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A000B01
+    ),
+    LOC_REDF_TTC_SHIP_MAST_4: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A000B57
+    ),
+    LOC_REDF_TTC_SHIP_MAST_5: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A000BA6
+    ),
+    LOC_REDF_TTC_SHIP_MAST_6: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=None #TODO
+    ),
+    LOC_REDF_TTC_SHIP_MAST_7: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A000B70
+    ),
+    LOC_REDF_TTC_SHIP_MAST_8: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A000B1E
+    ),
+    LOC_REDF_TTC_ROCK_POOL_1: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00EFC4
+    ),
+    LOC_REDF_TTC_ROCK_POOL_2: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00F070
+    ),
+    LOC_REDF_TTC_ROCK_POOL_3: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00EF18
+    ),
+    LOC_REDF_TTC_ROCK_POOL_4: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00EC28
+    ),
+    LOC_REDF_TTC_ROCK_POOL_5: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00EBC4
+    ),
+    LOC_REDF_TTC_ROCK_POOL_6: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00EA82
+    ),
+    LOC_REDF_TTC_ROCK_POOL_7: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00E98C
+    ),
+    LOC_REDF_TTC_ROCK_POOL_8: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00EB9A
+    ),
+    LOC_REDF_TTC_ROCK_POOL_9: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00EE32
+    ),
+    LOC_REDF_TTC_ROCK_POOL_ISLAND_FLIGHT_1: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00F076
+    ),
+    LOC_REDF_TTC_ROCK_POOL_ISLAND_FLIGHT_2: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00F10C
+    ),
+    LOC_REDF_TTC_ROCK_POOL_ISLAND_FLIGHT_3: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00F1A2
+    ),
+    LOC_REDF_TTC_ROCK_POOL_ISLAND_FLIGHT_4: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00F238
+    ),
+    LOC_REDF_TTC_WORLD_ENTRY_FLIGHT_1: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A001242
+    ),
+    LOC_REDF_TTC_WORLD_ENTRY_FLIGHT_2: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A0012D8
+    ),
+    LOC_REDF_TTC_WORLD_ENTRY_FLIGHT_3: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00136E
+    ),
+    LOC_REDF_TTC_WORLD_ENTRY_FLIGHT_4: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A001404
+    ),
+    LOC_REDF_TTC_SANDCASTLE_FLIGHT_1: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A0022B8
+    ),
+    LOC_REDF_TTC_SANDCASTLE_FLIGHT_2: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00234E
+    ),
+    LOC_REDF_TTC_SANDCASTLE_FLIGHT_3: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A0023E4
+    ),
+    LOC_REDF_TTC_SANDCASTLE_FLIGHT_4: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00247A
+    ),
+    LOC_REDF_TTC_NIPPER_TREE_1: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00FCDA
+    ),
+    LOC_REDF_TTC_NIPPER_TREE_2: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00FD67
+    ),
+    LOC_REDF_TTC_NIPPER_TREE_3: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00FDAA
+    ),
+    LOC_REDF_TTC_NIPPER_TREE_4: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00FE37
+    ),
+    LOC_REDF_TTC_NIPPER_TREE_5: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A0009AE
+    ),
+    LOC_REDF_TTC_NIPPER_TREE_6: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A0008DE
+    ),
+    LOC_REDF_TTC_NIPPER_TREE_7: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A000976
+    ),
+    LOC_REDF_TTC_NIPPER_TREE_8: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A000A3D
+    ),
+    LOC_REDF_TTC_ENTRY_TREE_1: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A0014C9
+    ),
+    LOC_REDF_TTC_ENTRY_TREE_2: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A001418
+    ),
+    LOC_REDF_TTC_ENTRY_TREE_3: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A0014D6
+    ),
+    LOC_REDF_TTC_ENTRY_TREE_4: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00157F
+    ),
+    LOC_REDF_TTC_ENTRY_TREE_5: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A001CE4
+    ),
+    LOC_REDF_TTC_ENTRY_TREE_6: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A001C17
+    ),
+    LOC_REDF_TTC_ENTRY_TREE_7: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A001C4D
+    ),
+    LOC_REDF_TTC_ENTRY_TREE_8: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A001D27
+    ),
+    LOC_REDF_TTC_SANDCASTLE_TREE_1: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A002806
+    ),
+    LOC_REDF_TTC_SANDCASTLE_TREE_2: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A0028EC
+    ),
+    LOC_REDF_TTC_SANDCASTLE_TREE_3: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A0028B4
+    ),
+    LOC_REDF_TTC_SANDCASTLE_TREE_4: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A0027E2
+    ),
+    LOC_REDF_TTC_SANDCASTLE_TREE_5: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A0029DB
+    ),
+    LOC_REDF_TTC_SANDCASTLE_TREE_6: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A002959
+    ),
+    LOC_REDF_TTC_SANDCASTLE_TREE_7: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A0029F6
+    ),
+    LOC_REDF_TTC_SANDCASTLE_TREE_8: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A002A83
+    ),
+    LOC_REDF_TTC_SANDCASTLE_TREE_9: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A002852
+    ),
+    LOC_REDF_TTC_SANDCASTLE_TREE_10: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A0027A4
+    ),
+    LOC_REDF_TTC_SANDCASTLE_TREE_11: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A002806
+    ),
+    LOC_REDF_TTC_SANDCASTLE_TREE_12: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A0028C6
+    ),
+    LOC_REDF_TTC_SHOCK_SPRING_BEACH_TREE_1: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00255E
+    ),
+    LOC_REDF_TTC_SHOCK_SPRING_BEACH_TREE_2: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A002586
+    ),
+    LOC_REDF_TTC_SHOCK_SPRING_BEACH_TREE_3: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A002475
+    ),
+    LOC_REDF_TTC_SHOCK_SPRING_BEACH_TREE_4: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A0024A3
+    ),
+    LOC_REDF_TTC_SHOCK_SPRING_BEACH_TREE_5: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00237F
+    ),
+    LOC_REDF_TTC_SHOCK_SPRING_BEACH_TREE_6: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00228C
+    ),
+    LOC_REDF_TTC_SHOCK_SPRING_BEACH_TREE_7: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A0022FE
+    ),
+    LOC_REDF_TTC_SHOCK_SPRING_BEACH_TREE_8: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A0023E0
+    ),
+    LOC_REDF_TTC_SHOCK_SPRING_BEACH_TREE_9: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A0021DB
+    ),
+    LOC_REDF_TTC_SHOCK_SPRING_BEACH_TREE_10: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A002119
+    ),
+    LOC_REDF_TTC_SHOCK_SPRING_BEACH_TREE_11: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00210D
+    ),
+    LOC_REDF_TTC_SHOCK_SPRING_BEACH_TREE_12: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A0021ED
+    ),
+    LOC_REDF_TTC_PATH_TO_X_BEACH_TREE_1: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A001385
+    ),
+    LOC_REDF_TTC_PATH_TO_X_BEACH_TREE_2: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00148E
+    ),
+    LOC_REDF_TTC_PATH_TO_X_BEACH_TREE_3: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A001456
+    ),
+    LOC_REDF_TTC_PATH_TO_X_BEACH_TREE_4: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A001353
+    ),
+    LOC_REDF_TTC_PATH_TO_X_BEACH_TREE_5: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A001041
+    ),
+    LOC_REDF_TTC_PATH_TO_X_BEACH_TREE_6: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A000F36
+    ),
+    LOC_REDF_TTC_PATH_TO_X_BEACH_TREE_7: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A000F3C
+    ),
+    LOC_REDF_TTC_PATH_TO_X_BEACH_TREE_8: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A001043
+    ),
+    LOC_REDF_TTC_PATH_TO_X_BEACH_TREE_9: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A000B65
+    ),
+    LOC_REDF_TTC_PATH_TO_X_BEACH_TREE_10: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A000A7B
+    ),
+    LOC_REDF_TTC_PATH_TO_X_BEACH_TREE_11: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A000A68
+    ),
+    LOC_REDF_TTC_PATH_TO_X_BEACH_TREE_12: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A000B45
+    ),
+    LOC_REDF_TTC_SHOCK_SPRINGS_1: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A0013D9
+    ),
+    LOC_REDF_TTC_SHOCK_SPRINGS_2: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00135C
+    ),
+    LOC_REDF_TTC_SHOCK_SPRINGS_3: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A001456
+    ),
+    LOC_REDF_TTC_BEACH_CHEST_1: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A000478
+    ),
+    LOC_REDF_TTC_BEACH_CHEST_2: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A0004B0
+    ),
+    LOC_REDF_TTC_BEACH_CHEST_3: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A000448
+    ),
+    LOC_REDF_TTC_BEACH_CHEST_4: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A0004C7
+    ),
+    LOC_REDF_TTC_BEACH_CHEST_5: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00050B
+    ),
+    LOC_REDF_TTC_BEACH_CHEST_6: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00053B
+    ),
+    LOC_REDF_TTC_BEACH_CHEST_7: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A0004ED
+    ),
+    LOC_REDF_TTC_BEACH_CHEST_8: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A000490
+    ),
+    LOC_REDF_TTC_MAP_PATH_1: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00F744
+    ),
+    LOC_REDF_TTC_MAP_PATH_2: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00F7DA
+    ),
+    LOC_REDF_TTC_MAP_PATH_3: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00F870
+    ),
+    LOC_REDF_TTC_MAP_PATH_4: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A00F906
+    ),
+    LOC_REDF_CC_ENTRY_HIGH_PIPE_1: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0A00F027
+    ),
+    LOC_REDF_CC_ENTRY_HIGH_PIPE_2: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0A00F871
+    ),
+    LOC_REDF_CC_UNDERNEATH_CLANKER_1: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0A0022C6
+    ),
+    LOC_REDF_CC_UNDERNEATH_CLANKER_2: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0A00217F
+    ),
+    LOC_REDF_CC_UNDERNEATH_CLANKER3: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0A002031
+    ),
+    LOC_REDF_CC_UNDERNEATH_CLANKER4: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0A002035
+    ),
+    LOC_REDF_CC_UNDERNEATH_CLANKER_5: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0A001EE6
+    ),
+    LOC_REDF_CC_UNDERNEATH_CLANKER_6: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0A001DA2
+    ),
+    LOC_REDF_CC_CLANKER_TAIL_1: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0A00366E
+    ),
+    LOC_REDF_CC_CLANKER_TAIL_2: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0A0037D3
+    ),
+    LOC_REDF_CC_CLANKER_TAIL_3: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0A00389A
+    ),
+    LOC_REDF_CC_CLANKER_TAIL_4: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0A003853
+    ),
+    LOC_REDF_CC_CLANKER_TAIL_5: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0A00373D
+    ),
+    LOC_REDF_CC_CLANKER_TAIL_6: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0A0036C0
+    ),
+    LOC_REDF_CC_INSIDE_CLANKERS_STOMACH_1: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0A00096E
+    ),
+    LOC_REDF_CC_INSIDE_CLANKERS_STOMACH_2: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0A000698
+    ),
+    LOC_REDF_CC_INSIDE_CLANKERS_STOMACH_3: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0A00F667
+    ),
+    LOC_REDF_CC_INSIDE_CLANKERS_STOMACH_4: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0A00F93C
+    ),
+    # Bubblegloop Feathers
+
+    LOC_REDF_BGS_ATOP_WORLD_ENTRY_CATTAIL_1: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0A001CA9
+    ),
+    LOC_REDF_BGS_ATOP_WORLD_ENTRY_CATTAIL_2: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0A001D0D
+    ),
+    LOC_REDF_BGS_ATOP_WORLD_ENTRY_CATTAIL_3: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0A001D6D
+    ),
+    LOC_REDF_BGS_IN_SWAMP_FRONT_TANKTUP_1: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0A000DDC
+    ),
+    LOC_REDF_BGS_IN_SWAMP_FRONT_TANKTUP_2: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0A000D6C
+    ),
+    LOC_REDF_BGS_IN_SWAMP_FRONT_TANKTUP_3: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0A000D00
+    ),
+    LOC_REDF_BGS_IN_SWAMP_FRONT_TANKTUP_4: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0A000A54
+    ),
+    LOC_REDF_BGS_IN_SWAMP_FRONT_TANKTUP_5: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0A000ACA
+    ),
+    LOC_REDF_BGS_IN_SWAMP_FRONT_TANKTUP_6: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0A000B4F
+    ),
+    LOC_REDF_BGS_INSIDE_MUMBOS_HUT_1: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0A00FEAB
+    ),
+    LOC_REDF_BGS_INSIDE_MUMBOS_HUT_2: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0A00017D
+    ),
+    LOC_REDF_BGS_INSIDE_MUMBOS_HUT_3: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0A000463
+    ),
+    LOC_REDF_BGS_INSIDE_MUMBOS_HUT_4: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0A000196
+    ),
+    LOC_REDF_BGS_IN_SWAMP_PATH_TO_MUMBOS_1: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0A00E5C4
+    ),
+    LOC_REDF_BGS_IN_SWAMP_PATH_TO_MUMBOS_2: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0A00E65A
+    ),
+    LOC_REDF_BGS_IN_SWAMP_PATH_TO_MUMBOS_3: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0A00E6F0
+    ),
+    LOC_REDF_BGS_IN_SWAMP_IN_FRONT_TIMER_PATH_1: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0A000BE4
+    ),
+    LOC_REDF_BGS_IN_SWAMP_IN_FRONT_TIMER_PATH_2: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0A000BC7
+    ),
+    LOC_REDF_BGS_IN_SWAMP_IN_FRONT_TIMER_PATH_3: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0A000BA
+    ),
+    LOC_REDF_BGS_IN_SWAMP_IN_FRONT_SHOCK_HUTS_1: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0A0009E4
+    ),
+    LOC_REDF_BGS_IN_SWAMP_IN_FRONT_SHOCK_HUTS_2: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0A000976
+    ),
+    LOC_REDF_BGS_IN_SWAMP_IN_FRONT_SHOCK_HUTS_3: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0A000916
+    ),
+    LOC_REDF_BGS_IN_SWAMP_IN_UNDER_SHOCK_HUTS_1: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0A0004C9
+    ),
+    LOC_REDF_BGS_IN_SWAMP_IN_UNDER_SHOCK_HUTS_2: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0A00038C
+    ),
+    LOC_REDF_BGS_IN_SWAMP_IN_UNDER_SHOCK_HUTS_3: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0A0003E2
+    ),
+    LOC_REDF_BGS_IN_SWAMP_IN_UNDER_SHOCK_HUTS_4: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0A00050F
+    ),
+    LOC_REDF_BGS_BEHIND_MR_VILE_1: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0A00F948
+    ),
+    LOC_REDF_BGS_BEHIND_MR_VILE_2: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0A000024
+    ),
+    LOC_REDF_BGS_BEHIND_MR_VILE_3: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0A00070F
+    ),
+    LOC_REDF_BGS_BEHIND_MR_VILE_4: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0A00000F
+    ),
+    # Freezeezy Peak Feathers
+
+    # Mad Monster Mansion Feathers
+
+    LOC_REDF_MMM_ROOFTOP_FEATHER_1: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
+        address=0x0A000CBB
+    ),
+    LOC_REDF_MMM_ROOFTOP_FEATHER_2: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
+        address=0x0A000847
+    ),
+    LOC_REDF_MMM_ROOFTOP_FEATHER_3: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
+        address=0x0A000BD7
+    ),
+    LOC_REDF_MMM_ROOFTOP_FEATHER_4: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
+        address=0x0A001050
+    ),
+    #LOC_REDF_MMM_ROOFTOP_FEATHER_4: BKLocationData(
+        #region=RGN_MAD_MONSTER_MANSION,
+        #address=0x0A00FD6B
+    #),
+    #LOC_REDF_MMM_ROOFTOP_FEATHER_4: BKLocationData(
+        #region=RGN_MAD_MONSTER_MANSION,
+        #address=0x0A00FCD
+    #),
+
+    # Gold Feathers
+    LOC_GOLDF_GL_UNDER_BGS_BRIDGES: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR,
+        address=0x0B00F9C7
+    ),
+    LOC_GOLDF_GL_SWAMP_CHEATO: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR,
+        address=0x0B00E813
+    ),
+    LOC_GOLDF_CC_ENTRY_HIGH_PIPE_1: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0B000D53
+    ),
+    LOC_GOLDF_CC_ENTRY_HIGH_PIPE_2: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0B00F9B4
+    ),
+    LOC_GOLDF_CC_PLATFORM_NEAR_CLANKER_1: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0B000D53
+    ),
+    LOC_GOLDF_CC_PLATFORM_NEAR_CLANKER_2: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0B000D25
+    ),
+    LOC_GOLDF_CC_CRATES_INSIDE_CLANKER_1: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0B000217
+    ),
+    LOC_GOLDF_CC_CRATES_INSIDE_CLANKER_2: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0B000B60
+    ),
+    LOC_GOLDF_CC_CRATES_INSIDE_CLANKER_3: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0B000838
+    ),
+    LOC_GOLDF_CC_FLIGHT_PAD_LEDGE: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0B00FA74
+    ),
+    LOC_GOLDF_CC_SAWBLADES_1: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0B00F82F
+    ),
+    LOC_GOLDF_CC_SAWBLADES_2: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0B00F7FD
+    ),
+    LOC_GOLDF_CC_SAWBLADES_3: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0B00F7CB
+    ),
+    LOC_GOLDF_CC_SAWBLADES_4: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0B00F79A
+    ),
+    LOC_GOLDF_CC_SAWBLADES_5: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0B00F768
+    ),
+    LOC_GOLDF_BGS_STUMP_NEAR_YELLOW_JINJO: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0B000C09
+    ),
+    LOC_GOLDF_BGS_STUMP_UNDER_CATTAIL_JINJO: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0B00CCDA
+    ),
+    LOC_GOLDF_BGS_IN_SWAMP_BEHIND_TIMER_PATH: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0B00FD97
+    ),
+    LOC_GOLDF_BGS_IN_SWAMP_IN_UNDER_SHOCK_HUTS_1: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0B0000C7
+    ),
+    LOC_GOLDF_BGS_IN_SWAMP_IN_UNDER_SHOCK_HUTS_2: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0B00FF43
+    ),
+    LOC_GOLDF_BGS_BEHIND_MR_VILE: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0B0004FE
+    ),
+    LOC_GOLDF_BGS_IN_FRONT_OF_MUMBOS_HUT: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0B00D8F8
+    ),
+    LOC_GOLDF_BGS_CATTAIL_NEAR_VILE_1: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0B00D4B2
+    ),
+    LOC_GOLDF_BGS_CATTAIL_NEAR_VILE_2: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0B00D516
+    ),
+    LOC_GOLDF_BGS_CATTAIL_NEAR_VILE_3: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0B00D57A
+    ),
+    # Freezeezy Peak Gold Feathers
+
+    LOC_GOLDF_FP_ON_BOGGYS_ROOF: BKLocationData(
+        region=RGN_FREEZEEZY_PEAK,
+        address=0x0B0037A5
+    ),
+    # Mad Monster Mansion Gold Feathers
+
+    LOC_GOLDF_MMM_MAZE_2: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
+        address=0x0B00F6B7
+    ),
+    LOC_GOLDF_MMM_MAZE_BEHIND_HUT_1: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
+        address=0x0B00EC24
+    ),
+    LOC_GOLDF_MMM_MAZE_BEHIND_HUT_2: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
+        address=0x0B000390
+    ),
+    LOC_REDF_MMM_ROOFTOP_FEATHER_5: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
+        address=0x0A00FCD
+    ),
     LOC_DEFEAT_GRUNTILDA: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR_FIGHT,
         locked_item=ITEM_VICTORY
