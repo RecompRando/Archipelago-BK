@@ -5792,25 +5792,25 @@ def get_location_rules(player, options):
         LOC_NOTE_GV_INSIDE_WATER_PYRAMID_1:
             lambda state:
             (
-                can_reach_gv_rest_of_level(state, player) and
+                state.has(ITEM_TURBO_TALON_TROT, player) and
                 state.has(ITEM_SWIM, player)
             ),
         LOC_NOTE_GV_INSIDE_WATER_PYRAMID_2:
             lambda state:
             (
-                can_reach_gv_rest_of_level(state, player) and
+                state.has(ITEM_TURBO_TALON_TROT, player) and
                 state.has(ITEM_SWIM, player)
             ),
         LOC_NOTE_GV_INSIDE_WATER_PYRAMID_3:
             lambda state:
             (
-                can_reach_gv_rest_of_level(state, player) and
+                state.has(ITEM_TURBO_TALON_TROT, player) and
                 state.has(ITEM_SWIM, player)
             ),
         LOC_NOTE_GV_INSIDE_WATER_PYRAMID_4:
             lambda state:
             (
-                can_reach_gv_rest_of_level(state, player) and
+                state.has(ITEM_TURBO_TALON_TROT, player) and
                 state.has(ITEM_SWIM, player)
             ),
         LOC_NOTE_GV_TOMB_MOAT_1:
@@ -5847,25 +5847,25 @@ def get_location_rules(player, options):
             lambda state:
             (
                 can_reach_gv_rest_of_level(state, player) and
-                state.has(ITEM_SWIM, player)
+                state.has(ITEM_BEAK_BUSTER, player)
             ),
         LOC_NOTE_GV_INSIDE_FLIP_PYRAMID_1:
             lambda state:
             (
                 can_reach_gv_rest_of_level(state, player) and
-                state.has(ITEM_SWIM, player)
+                state.has(ITEM_BEAK_BUSTER, player)
             ),
         LOC_NOTE_GV_INSIDE_FLIP_PYRAMID_2:
             lambda state:
             (
                 can_reach_gv_rest_of_level(state, player) and
-                state.has(ITEM_SWIM, player)
+                state.has(ITEM_BEAK_BUSTER, player)
             ),
         LOC_NOTE_GV_INSIDE_FLIP_PYRAMID_3:
             lambda state:
             (
                 can_reach_gv_rest_of_level(state, player) and
-                state.has(ITEM_SWIM, player)
+                state.has(ITEM_BEAK_BUSTER, player)
             ),
         LOC_NOTE_GV_INSIDE_FLIP_PYRAMID_4:
             lambda state:
