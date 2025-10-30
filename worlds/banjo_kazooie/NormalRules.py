@@ -58,6 +58,7 @@ def can_reach_cc_entrance(state, player):
 
 def can_reach_bgs_puzzle_from_world_room(state, player):
     return (
+        can_reach_cc_entrance(state, player) and
         state.has(ITEM_FLAP_FLIP, player) and
         state.has(ITEM_SWIM, player)
     )
@@ -397,6 +398,10 @@ def get_region_rules(player, options):
             (
                 can_reach_gv_puzzle_from_world_room(state, player) and
                 state.has(ITEM_JIGGY, player, 32) and  # 1+2+5+7+8+9
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_
+                )
                 state.has(ITEM_STILT_STRIDE, player)
             ),
         rgn_connection_string(RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_350_NOTE_DOOR):
@@ -4875,12 +4880,10 @@ def get_location_rules(player, options):
                     )
                 ) and
                 state.has(ITEM_EGGS, player) and
+                state.has(ITEM_FLAP_FLIP, player) and
                 (
-                    state.has(ITEM_FLAP_FLIP, player) or
-                    (
-                        state.has(ITEM_JUMP, player) or
-                        state.has(ITEM_TALON_TROT, player)
-                    )
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_TALON_TROT, player)
                 )
             ),
         LOC_JIGGY_GV_GRABBA:
@@ -5045,12 +5048,10 @@ def get_location_rules(player, options):
                     )
                 ) and
                 state.has(ITEM_EGGS, player) and
+                state.has(ITEM_FLAP_FLIP, player) and
                 (
-                    state.has(ITEM_FLAP_FLIP, player) or
-                    (
-                        state.has(ITEM_JUMP, player) or
-                        state.has(ITEM_TALON_TROT, player)
-                    )
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_TALON_TROT, player)
                 )
             ),
         LOC_JINJO_GV_PURPLE:
@@ -5620,12 +5621,10 @@ def get_location_rules(player, options):
                     )
                 ) and
                 state.has(ITEM_EGGS, player) and
+                state.has(ITEM_FLAP_FLIP, player) and
                 (
-                    state.has(ITEM_FLAP_FLIP, player) or
-                    (
-                        state.has(ITEM_JUMP, player) or
-                        state.has(ITEM_TALON_TROT, player)
-                    )
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_TALON_TROT, player)
                 )
             ),
         LOC_NOTE_GV_JINXY_CARPETS_2:
@@ -5650,12 +5649,10 @@ def get_location_rules(player, options):
                     )
                 ) and
                 state.has(ITEM_EGGS, player) and
+                state.has(ITEM_FLAP_FLIP, player) and
                 (
-                    state.has(ITEM_FLAP_FLIP, player) or
-                    (
-                        state.has(ITEM_JUMP, player) or
-                        state.has(ITEM_TALON_TROT, player)
-                    )
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_TALON_TROT, player)
                 )
             ),
         LOC_NOTE_GV_JINXY_CARPETS_3:
@@ -5680,12 +5677,10 @@ def get_location_rules(player, options):
                     )
                 ) and
                 state.has(ITEM_EGGS, player) and
+                state.has(ITEM_FLAP_FLIP, player) and
                 (
-                    state.has(ITEM_FLAP_FLIP, player) or
-                    (
-                        state.has(ITEM_JUMP, player) or
-                        state.has(ITEM_TALON_TROT, player)
-                    )
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_TALON_TROT, player)
                 )
             ),
         LOC_NOTE_GV_GRABBAS_PLATFORM_1:
@@ -6787,6 +6782,7 @@ def get_location_rules(player, options):
             lambda state:
             (
                     can_break_breakable_gates(state, player) and
+                    state.has(ITEM_WONDERWING, player) and
                     state.has(ITEM_BEAK_BUSTER, player) and
                     state.has(ITEM_TURBO_TALON_TROT, player) and
                     state.has(ITEM_FLAP_FLIP, player)
@@ -6795,6 +6791,7 @@ def get_location_rules(player, options):
             lambda state:
             (
                     can_break_breakable_gates(state, player) and
+                    state.has(ITEM_WONDERWING, player) and
                     state.has(ITEM_BEAK_BUSTER, player) and
                     state.has(ITEM_TURBO_TALON_TROT, player) and
                     state.has(ITEM_FLAP_FLIP, player)
@@ -6803,6 +6800,7 @@ def get_location_rules(player, options):
             lambda state:
             (
                     can_break_breakable_gates(state, player) and
+                    state.has(ITEM_WONDERWING, player) and
                     state.has(ITEM_BEAK_BUSTER, player) and
                     state.has(ITEM_TURBO_TALON_TROT, player) and
                     state.has(ITEM_FLAP_FLIP, player)
@@ -6811,6 +6809,7 @@ def get_location_rules(player, options):
             lambda state:
             (
                     can_break_breakable_gates(state, player) and
+                    state.has(ITEM_WONDERWING, player) and
                     state.has(ITEM_BEAK_BUSTER, player) and
                     state.has(ITEM_TURBO_TALON_TROT, player) and
                     state.has(ITEM_FLAP_FLIP, player)
