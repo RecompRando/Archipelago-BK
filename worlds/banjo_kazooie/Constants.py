@@ -1793,7 +1793,7 @@ LOC_BEGG_GV_SANDYBUTTS_MAZE_NEAR_EXIT_2 = "GV Blue Egg 2 Near Sandybutt's Maze E
 LOC_BEGG_GV_SANDYBUTTS_MAZE_NEAR_EXIT_3 = "GV Blue Egg 3 Near Sandybutt's Maze Exit"
 LOC_BEGG_GV_SANDYBUTTS_MAZE_NEAR_EXIT_4 = "GV Blue Egg 4 Near Sandybutt's Maze Exit"
 
-# Mad Monster Mansion additional eggs 
+# Mad Monster Mansion 
 LOC_BEGG_MMM_INSIDE_BACK_GROUND_FLOOR_WINDOW_1 = "MMM Blue Egg 1 Inside Back Ground Floor Window"
 LOC_BEGG_MMM_INSIDE_BACK_GROUND_FLOOR_WINDOW_2 = "MMM Blue Egg 2 Inside Back Ground Floor Window"
 LOC_BEGG_MMM_INSIDE_BACK_GROUND_FLOOR_WINDOW_3 = "MMM Blue Egg 3 Inside Back Ground Floor Window"
@@ -1883,12 +1883,19 @@ LOC_BEGG_MMM_BENEATH_FLOORBOARDS_3 = "MMM Blue Egg 3 Beneath Floorboards"
 LOC_BEGG_MMM_BENEATH_FLOORBOARDS_4 = "MMM Blue Egg 4 Beneath Floorboards"
 LOC_BEGG_MMM_BENEATH_FLOORBOARDS_5 = "MMM Blue Egg 5 Beneath Floorboards"
 
-# Rusty Bucket Bay Eggs (entire section missing from Document 1)
+# Rusty Bucket Bay Eggs 
+
+
 LOC_BEGG_RBB_WORLD_ENTRY_CRATES_1 = "RBB Blue Egg 1 in Crates at World Entry"
 LOC_BEGG_RBB_WORLD_ENTRY_CRATES_2 = "RBB Blue Egg 2 in Crates at World Entry"
 LOC_BEGG_RBB_WORLD_ENTRY_CRATES_3 = "RBB Blue Egg 3 in Crates at World Entry"
 LOC_BEGG_RBB_WORLD_ENTRY_CRATES_4 = "RBB Blue Egg 4 in Crates at World Entry"
 LOC_BEGG_RBB_WORLD_ENTRY_CRATES_5 = "RBB Blue Egg 5 in Crates at World Entry"
+
+LOC_BEGG_RBB_Navigation_1 = "RBB Blue Egg 1 Inside Navigation Room"
+LOC_BEGG_RBB_Navigation_2 = "RBB Blue Egg 2 Inside Navigation Room"
+LOC_BEGG_RBB_Navigation_3 = "RBB Blue Egg 3 Inside Navigation Room"
+LOC_BEGG_RBB_Navigation_4 = "RBB Blue Egg 1 Inside Navigation Room"
 
 LOC_BEGG_RBB_FLOODED_WAREHOUSE_BEAM_1 = "RBB Blue Egg 1 on Flooded Warehouse Beam"
 LOC_BEGG_RBB_FLOODED_WAREHOUSE_BEAM_2 = "RBB Blue Egg 2 on Flooded Warehouse Beam"
