@@ -6833,19 +6833,19 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_RUSTY_BUCKET_BAY,
         address=0x09000384
     ),
-    LOC_BEGG_RBB_Navigation_1: BKLocationData(
+    LOC_BEGG_RBB_NAVIGATION_1: BKLocationData(
         region=RGN_RUSTY_BUCKET_BAY,
         address=0x090000BE
     ),
-    LOC_BEGG_RBB_Navigation_2: BKLocationData(
+    LOC_BEGG_RBB_NAVIGATION_2: BKLocationData(
         region=RGN_RUSTY_BUCKET_BAY,
         address=0x09000009
     ),
-    LOC_BEGG_RBB_Navigation_3: BKLocationData(
+    LOC_BEGG_RBB_NAVIGATION_3: BKLocationData(
         region=RGN_RUSTY_BUCKET_BAY,
         address=0x0900FF56
     ),
-    LOC_BEGG_RBB_Navigation_4: BKLocationData(
+    LOC_BEGG_RBB_NAVIGATION_4: BKLocationData(
         region=RGN_RUSTY_BUCKET_BAY,
         address=0x0900FEA2
     ),
