@@ -396,13 +396,15 @@ def get_region_rules(player, options):
         rgn_connection_string(RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR, RGN_GOBIS_VALLEY):
             lambda state:
             (
-                can_reach_gv_puzzle_from_world_room(state, player) and
-                state.has(ITEM_JIGGY, player, 32) and  # 1+2+5+7+8+9
+                (
+                    can_reach_gv_puzzle_from_world_room(state, player) and
+                    state.has(ITEM_JIGGY, player, 32) and
+                    state.has(ITEM_STILT_STRIDE, player)  # 1+2+5+7+8+9
+                ) and
                 (
                     state.has(ITEM_RAT_A_TAT_RAP, player) or
-                    state.has(ITEM_
+                    state.has(ITEM_BEAK_BARGE, player)
                 )
-                state.has(ITEM_STILT_STRIDE, player)
             ),
         rgn_connection_string(RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_350_NOTE_DOOR):
             lambda state:
@@ -9983,6 +9985,7 @@ def get_location_rules(player, options):
             (
                 state.has(ITEM_SWIM, player)
             ),
+    # Red Feathers
         LOC_REDF_GL_OUTSIDE_CC_1:
             lambda state:
             (

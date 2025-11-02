@@ -5130,316 +5130,316 @@ location_data_table: Dict[str, BKLocationData] = {
    # Egg and Feather Locations
     # Gruntys Lair Eggs
     LOC_BEGG_GL_AROUND_RED_CAULDRON_1: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900057B
     ),
     LOC_BEGG_GL_AROUND_RED_CAULDRON_2: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x09000892
     ),
     LOC_BEGG_GL_AROUND_RED_CAULDRON_3: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x09000CAD
     ),
     LOC_BEGG_GL_AROUND_RED_CAULDRON_4: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x09000FA5
     ),
     LOC_BEGG_GL_AROUND_RED_CAULDRON_5: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x09000FA7
     ),
     LOC_BEGG_GL_AROUND_RED_CAULDRON_6: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x09000CC3
     ),
     LOC_BEGG_GL_AROUND_RED_CAULDRON_7: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900087D
     ),
     LOC_BEGG_GL_AROUND_RED_CAULDRON_8: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x09000570
     ),
     LOC_BEGG_GL_NEAR_CCW_SWITCH_1: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900045D
     ),
     LOC_BEGG_GL_NEAR_CCW_SWITCH_2: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x09000372
     ),
     LOC_BEGG_GL_NEAR_CCW_SWITCH_3: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900019D
     ),
     LOC_BEGG_GL_NEAR_CCW_SWITCH_4: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900FF99
     ),
     LOC_BEGG_GL_NEAR_CCW_SWITCH_5: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900FF1E
     ),
     LOC_BEGG_GL_NEAR_CCW_SWITCH_6: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900004D
     ),
     LOC_BEGG_GL_NEAR_CCW_SWITCH_7: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x09000260
     ),
     LOC_BEGG_GL_AROUND_BGS_PAINTING_1: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900E0AD
     ),
     LOC_BEGG_GL_AROUND_BGS_PAINTING_2: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900DFE2
     ),
     LOC_BEGG_GL_AROUND_BGS_PAINTING_3: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900DFD8
     ),
     LOC_BEGG_GL_AROUND_BGS_PAINTING_4: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900E020
     ),
     LOC_BEGG_GL_AROUND_BGS_PAINTING_5: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900E714
     ),
     LOC_BEGG_GL_AROUND_BGS_PAINTING_6: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900E8C1
     ),
     LOC_BEGG_GL_AROUND_BGS_PAINTING_7: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900E9C6
     ),
     LOC_BEGG_GL_AROUND_BGS_PAINTING_8: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900EA6A
     ),
     LOC_BEGG_GL_AROUND_FP_PAINTING_1: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR,
         address=0x0900F436
     ),
     LOC_BEGG_GL_AROUND_FP_PAINTING_2: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR,
         address=0x0900F361
     ),
     LOC_BEGG_GL_AROUND_FP_PAINTING_3: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR,
         address=0x0900F237
     ),
     LOC_BEGG_GL_AROUND_FP_PAINTING_4: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR,
         address=0x0900F0FD
     ),
     LOC_BEGG_GL_NEAR_STILT_STRIDE_GOBIS_1: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
         address=0x090003EC
     ),
     LOC_BEGG_GL_NEAR_STILT_STRIDE_GOBIS_2: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
         address=0x090002D8
     ),
     LOC_BEGG_GL_NEAR_STILT_STRIDE_GOBIS_3: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
         address=0x090004E4
     ),
     LOC_BEGG_GL_NEAR_STILT_STRIDE_GOBIS_4: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
         address=0x090005E0
     ),
     LOC_BEGG_GL_350_DOOR_STATUE_HAT_1: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
         address=0x09000CDE
     ),
     LOC_BEGG_GL_350_DOOR_STATUE_HAT_2: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x09000B12
     ),
     LOC_BEGG_GL_350_DOOR_STATUE_HAT_3: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x09000946
     ),
     LOC_BEGG_GL_350_DOOR_STATUE_HAT_4: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900077A
     ),
     LOC_BEGG_GL_350_DOOR_STATUE_HAT_5: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x090005AE
     ),
     LOC_BEGG_GL_350_DOOR_STATUE_HAT_6: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x090003E2
     ),
     LOC_BEGG_GL_BESIDE_GRAVEYARD_ENTRY_1: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x090015A2
     ),
     LOC_BEGG_GL_BESIDE_GRAVEYARD_ENTRY_2: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900164C
     ),
     LOC_BEGG_GL_BESIDE_GRAVEYARD_ENTRY_3: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x09001B00
     ),
     LOC_BEGG_GL_BESIDE_GRAVEYARD_ENTRY_4: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x09001B77
     ),
     LOC_BEGG_GL_INSIDE_GRAVEYARD_CRACKED_DOOR_1: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900FEF3
     ),
     LOC_BEGG_GL_INSIDE_GRAVEYARD_CRACKED_DOOR_2: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x09000206
     ),
     LOC_BEGG_GL_INSIDE_GRAVEYARD_CRACKED_DOOR_3: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x09000516
     ),
     LOC_BEGG_GL_INSIDE_GRAVEYARD_CRACKED_DOOR_4: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x09000022
     ),
     LOC_BEGG_GL_INSIDE_GRAVEYARD_CRACKED_DOOR_5: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900FD05
     ),
     LOC_BEGG_GL_INSIDE_GRAVEYARD_CRACKED_DOOR_6: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900FA08
     ),
     LOC_BEGG_GL_BELOW_MMM_PAINTING_1: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900F4EC
     ),
     LOC_BEGG_GL_BELOW_MMM_PAINTING_2: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900F117
     ),
     LOC_BEGG_GL_BELOW_MMM_PAINTING_3: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900EFAA
     ),
     LOC_BEGG_GL_BELOW_MMM_PAINTING_4: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900F10D
     ),
     LOC_BEGG_GL_BELOW_MMM_PAINTING_5: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900F4F1
     ),
     LOC_BEGG_GL_BELOW_MMM_PAINTING_6: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900FA2B
     ),
     LOC_BEGG_GL_BELOW_MMM_PAINTING_7: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900FF6A
     ),
     LOC_BEGG_GL_BELOW_MMM_PAINTING_8: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x09000359
     ),
     LOC_BEGG_GL_BELOW_MMM_PAINTING_9: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x090004BA
     ),
     LOC_BEGG_GL_BELOW_MMM_PAINTING_10: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900FA44
     ),
     LOC_BEGG_GL_BETWEEN_CRATES_NEAR_RBB_1: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900FAD9
     ),
     LOC_BEGG_GL_BETWEEN_CRATES_NEAR_RBB_2: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900FA56
     ),
     LOC_BEGG_GL_BETWEEN_CRATES_NEAR_RBB_3: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900FAD8
     ),
     LOC_BEGG_GL_BETWEEN_CRATES_NEAR_RBB_4: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900FB5B
     ),
     LOC_BEGG_GL_NEAR_RBB_PAINTING_1: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x09002064
     ),
     LOC_BEGG_GL_NEAR_RBB_PAINTING_2: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900200D
     ),
     LOC_BEGG_GL_UPPER_PATH_NEAR_765_DOOR_1: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x09001130
     ),
     LOC_BEGG_GL_UPPER_PATH_NEAR_765_DOOR_2: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x090012C1
     ),
     LOC_BEGG_GL_UPPER_PATH_NEAR_765_DOOR_3: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x09001450
     ),
     LOC_BEGG_GL_UPPER_PATH_NEAR_765_DOOR_4: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x090015E0
     ),
     LOC_BEGG_GL_GRUNTY_FIGHT_1: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x09001E13
     ),
     LOC_BEGG_GL_GRUNTY_FIGHT_2: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x090510BD
     ),
     LOC_BEGG_GL_GRUNTY_FIGHT_3: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0904BD0A
     ),
     LOC_BEGG_GL_GRUNTY_FIGHT_4: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x09060914
     ),
     LOC_BEGG_GL_GRUNTY_FIGHT_5: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x09000132
     ),
     LOC_BEGG_GL_GRUNTY_FIGHT_6: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x09001E14
     ),
     # Quite a few give 9000000 IDs
     # Mumbos Mountain Eggs
-    LOC_BEGG_MM_BEHIND_STONHENGE_PILLAR_1: BKLocationData(
+    LOC_BEGG_MM_BEHIND_STONEHENGE_PILLAR_1: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0900F4B3
     ),
-    LOC_BEGG_MM_BEHIND_STONHENGE_PILLAR_2: BKLocationData(
+    LOC_BEGG_MM_BEHIND_STONEHENGE_PILLAR_2: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0900F4AB
     ),
-    LOC_BEGG_MM_BEHIND_STONHENGE_PILLAR_3: BKLocationData(
+    LOC_BEGG_MM_BEHIND_STONEHENGE_PILLAR_3: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0900F49D
     ),
-    LOC_BEGG_MM_BEHIND_STONHENGE_PILLAR_4: BKLocationData(
+    LOC_BEGG_MM_BEHIND_STONEHENGE_PILLAR_4: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0900F492
     ),
-    LOC_BEGG_MM_BEHIND_STONHENGE_PILLAR_5: BKLocationData(
+    LOC_BEGG_MM_BEHIND_STONEHENGE_PILLAR_5: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0900F48A
     ),
@@ -5816,23 +5816,23 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_CLANKERS_CAVERN,
         address=0x09002075
     ),
-    LOC_BEGG_CC_INSIDE_BREAKBALE_GRATE_1: BKLocationData(
+    LOC_BEGG_CC_INSIDE_BREAKABLE_GRATE_1: BKLocationData(
         region=RGN_CLANKERS_CAVERN,
         address=0x090036E4
     ),
-    LOC_BEGG_CC_INSIDE_BREAKBALE_GRATE_2: BKLocationData(
+    LOC_BEGG_CC_INSIDE_BREAKABLE_GRATE_2: BKLocationData(
         region=RGN_CLANKERS_CAVERN,
         address=0x09003755
     ),
-    LOC_BEGG_CC_INSIDE_BREAKBALE_GRATE_3: BKLocationData(
+    LOC_BEGG_CC_INSIDE_BREAKABLE_GRATE_3: BKLocationData(
         region=RGN_CLANKERS_CAVERN,
         address=0x09003723
     ),
-    LOC_BEGG_CC_INSIDE_BREAKBALE_GRATE_4: BKLocationData(
+    LOC_BEGG_CC_INSIDE_BREAKABLE_GRATE_4: BKLocationData(
         region=RGN_CLANKERS_CAVERN,
         address=0x09003700
     ),
-    LOC_BEGG_CC_INSIDE_BREAKBALE_GRATE_5: BKLocationData(
+    LOC_BEGG_CC_INSIDE_BREAKABLE_GRATE_5: BKLocationData(
         region=RGN_CLANKERS_CAVERN,
         address=0x090036D9
     ),
@@ -5958,11 +5958,11 @@ location_data_table: Dict[str, BKLocationData] = {
         address=0x09002B16
     ),
     LOC_BEGG_BGS_STUMP_NEAR_GIANT_EGG_1: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900F310
     ),
     LOC_BEGG_BGS_STUMP_NEAR_GIANT_EGG_2: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0900F052
     ),
     LOC_BEGG_BGS_AROUND_CENTRAL_PLATFORM_TOKEN_1: BKLocationData(
@@ -7634,211 +7634,211 @@ location_data_table: Dict[str, BKLocationData] = {
         address=0x0A00F755
     ),
     LOC_REDF_GL_AROUND_GRUNTY_STATUE_1: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A0000FA
     ),
     LOC_REDF_GL_AROUND_GRUNTY_STATUE_2: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A0001C9
     ),
     LOC_REDF_GL_AROUND_GRUNTY_STATUE_3: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A000063
     ),
     LOC_REDF_GL_AROUND_GRUNTY_STATUE_4: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A00FD34
     ),
     LOC_REDF_GL_AROUND_GRUNTY_STATUE_5: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A00FAB7
     ),
     LOC_REDF_GL_AROUND_GRUNTY_STATUE_6: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A00F981
     ),
     LOC_REDF_GL_AROUND_GRUNTY_STATUE_7: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A00FA2D
     ),
     LOC_REDF_GL_AROUND_GRUNTY_STATUE_8: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A00FD89
     ),
     LOC_REDF_GL_NEAR_GOBIS_VASE_SWITCH_1: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A001223
     ),
     LOC_REDF_GL_NEAR_GOBIS_VASE_SWITCH_2: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A001462
     ),
     LOC_REDF_GL_NEAR_GOBIS_VASE_SWITCH_3: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A001669
     ),
     LOC_REDF_GL_NEAR_GOBIS_VASE_SWITCH_4: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A0017B5
     ),
     LOC_REDF_GL_NEAR_GOBIS_VASE_SWITCH_5: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A0015F6
     ),
     LOC_REDF_GL_NEAR_GOBIS_VASE_SWITCH_6: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A001425
     ),
     LOC_REDF_GL_SHOCK_SPRING_FREEZEEZY_ENTRY_1: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A002CB0
     ),
     LOC_REDF_GL_SHOCK_SPRING_FREEZEEZY_ENTRY_2: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A002CDC
     ),
     LOC_REDF_GL_SHOCK_SPRING_FREEZEEZY_ENTRY_3: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A002D08
     ),
     LOC_REDF_GL_SHOCK_SPRING_FREEZEEZY_ENTRY_4: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A002D33
     ),
     LOC_REDF_GL_ATOP_GRAVESTONES_1: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A001252
     ),
     LOC_REDF_GL_ATOP_GRAVESTONES_2: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A000ECF
     ),
     LOC_REDF_GL_ATOP_GRAVESTONES_3: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A000B90
     ),
     LOC_REDF_GL_ATOP_GRAVESTONES_4: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A0009F5
     ),
     LOC_REDF_GL_ATOP_GRAVESTONES_5: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A000AA4
     ),
     LOC_REDF_GL_ATOP_GRAVESTONES_6: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A00FC3A
     ),
     LOC_REDF_GL_UNDER_GRAVEYARD_CRACKED_DOOR_COLUMNS_1: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A00CBB1
     ),
     LOC_REDF_GL_UNDER_GRAVEYARD_CRACKED_DOOR_COLUMNS_2: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A00CDEA
     ),
     LOC_REDF_GL_UNDER_GRAVEYARD_CRACKED_DOOR_COLUMNS_3: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A00C9BD
     ),
     LOC_REDF_GL_UNDER_GRAVEYARD_CRACKED_DOOR_COLUMNS_4: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A00CC04
     ),
     LOC_REDF_GL_BELOW_640_DOOR_1: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A00FEB4
     ),
     LOC_REDF_GL_BELOW_640_DOOR_2: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A0000D8
     ),
     LOC_REDF_GL_BELOW_640_DOOR_3: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A00019C
     ),
     LOC_REDF_GL_BELOW_640_DOOR_4: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A0000D3
     ),
     LOC_REDF_GL_BELOW_640_DOOR_5: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A00FEA8
     ),
     LOC_REDF_GL_BELOW_640_DOOR_6: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A00FBBB
     ),
     LOC_REDF_GL_BELOW_640_DOOR_7: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A00F5D1
     ),
     LOC_REDF_GL_BELOW_640_DOOR_8: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A00F69D
     ),
     LOC_REDF_GL_BELOW_640_DOOR_9: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A00F8C8
     ),
     LOC_REDF_GL_BELOW_640_DOOR_10: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A00FBB9
     ),
     LOC_REDF_GL_ATOP_CRATES_NEAR_RBB_1: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A00FE0A
     ),
     LOC_REDF_GL_ATOP_CRATES_NEAR_RBB_2: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A00FEE3
     ),
     LOC_REDF_GL_NEAR_RBB_PAINTING_1: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A001B9A
     ),
     LOC_REDF_GL_NEAR_RBB_PAINTING_2: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A001B1F
     ),
     LOC_REDF_GL_UPPER_PATH_NEAR_765_DOOR_1: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A0011D2
     ),
     LOC_REDF_GL_UPPER_PATH_NEAR_765_DOOR_2: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A0011F5
     ),
     LOC_REDF_GL_UPPER_PATH_NEAR_765_DOOR_3: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A001203
     ),
     LOC_REDF_GL_UPPER_PATH_NEAR_765_DOOR_4: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A000672
     ),
     LOC_REDF_GL_UPPER_PATH_NEAR_765_DOOR_5: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A0004E3
     ),
     LOC_REDF_GL_UPPER_PATH_NEAR_765_DOOR_6: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A00032E
     ),
     LOC_REDF_GL_GRUNTY_FIGHT_1: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A00673B
     ),
     LOC_REDF_GL_GRUNTY_FIGHT_2: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A055758
     ),
     LOC_REDF_GL_GRUNTY_FIGHT_3: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A000A29
     ),
     LOC_REDF_GL_GRUNTY_FIGHT_4: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A050A45
     ),
     # 3 Give no IDs
@@ -7865,9 +7865,13 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0A000BA6
     ),
-    LOC_REDF_TTC_SHIP_MAST_7: BKLocationData(
+    LOC_REDF_TTC_SHIP_MAST_6: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0A000B70
+    ),
+    LOC_REDF_TTC_SHIP_MAST_7: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0A000BA4
     ),
     LOC_REDF_TTC_SHIP_MAST_8: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
@@ -8165,8 +8169,8 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0A000B45
     ),
-    LOC_REDF_SHOCK_SPRINGS_1: BKLocationData(
-        region=RGN_UNKNOWN,
+    LOC_REDF_TTC_SHOCK_SPRINGS_1: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
         address=0x0A0013D9
     ),
     LOC_REDF_TTC_SHOCK_SPRINGS_2: BKLocationData(
@@ -9560,23 +9564,23 @@ location_data_table: Dict[str, BKLocationData] = {
         address=0x0A00050E
     ),
     LOC_REDF_CCW_AUTUMN_ENTRY_BEHIND_BEE_BOX_1: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A00029E
     ),
     LOC_REDF_CCW_AUTUMN_ENTRY_BEHIND_BEE_BOX_2: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A000275
     ),
     LOC_REDF_CCW_AUTUMN_ENTRY_BEHIND_BEE_BOX_3: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A0001B0
     ),
-    LOC_REDF_CCW_AUTUMN_ENTRY_BEHIND_NEE_BOX_4: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+    LOC_REDF_CCW_AUTUMN_ENTRY_BEHIND_BEE_BOX_4: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A000140
     ),
     LOC_REDF_CCW_AUTUMN_ENTRY_BEHIND_BEE_BOX_5: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0A000142
     ),
     LOC_REDF_CCW_AUTUMN_ENTRY_LAKE_EDGE_1: BKLocationData(
@@ -9689,59 +9693,59 @@ location_data_table: Dict[str, BKLocationData] = {
     ),
     #Gold Feathers
     LOC_GOLDF_GL_ABOVE_GRATE_NEAR_RED_CAULDRON: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0B0007AE
     ),
     LOC_GOLDF_GL_UNDER_BGS_BRIDGES: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0B00F9C7
     ),
     LOC_GOLDF_GL_SWAMP_CHEATO: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0B00E813
     ),
     LOC_GOLDF_GL_INSIDE_GRAVEYARD_CRACKED_DOOR_COFFIN: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0B00FEBF
     ),
     LOC_GOLDF_GL_LAVA_CHEATO_ROOM_1: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0B0017FF
     ),
     LOC_GOLDF_GL_LAVA_CHEATO_ROOM_2: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0B001CF4
     ),
     LOC_GOLDF_GL_ABOVE_RBB_WATER_SWITCH: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0B0006E2
     ),
     LOC_GOLDF_GL_NEAR_RBB_PAINTING: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0B002311
     ),
     LOC_GOLDF_GL_PIPE_NEAR_TIMED_WATER_SWITCH: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0B000970
     ),
     LOC_GOLDF_GL_BEHIND_CCW_CAULDRON: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0B000E63
     ),
     LOC_GOLDF_GL_LEAF_ABOVE_CCW_PATHWAY: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0B000926
     ),
     # LOC_GOLDF_GL_GRUNTY_FIGHT_1: BKLocationData(
-    #     region=RGN_GRUNTYS_LAIR,
+    #     region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
     #     address=0x0B000000
     # ),
     LOC_GOLDF_GL_GRUNTY_FIGHT_2: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0B024E21
     ),
     LOC_GOLDF_GL_GRUNTY_FIGHT_3: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0B05652B
     ),
     # 1 Gives no ID
@@ -10103,7 +10107,7 @@ location_data_table: Dict[str, BKLocationData] = {
         address=0x0B0024FB
     ),
     LOC_GOLDF_CCW_AUTUMN_ENTRY_LEAF_PILE: BKLocationData(
-        region=RGN_GRUNTYS_LAIR,
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
         address=0x0B001401
     ),
     LOC_GOLDF_CCW_AUTUMN_NEAR_BRAMBLES: BKLocationData(
