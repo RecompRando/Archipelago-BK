@@ -451,6 +451,11 @@ location_data_table: Dict[str, BKLocationData] = {
         address=None,
         locked_item=ITEM_JINJO_CCW_YELLOW
     ),
+    LOC_WITCH_SWITCH_MM: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=None,
+        locked_item=ITEM_WITCH_SWITCH_MM
+    ),
     LOC_JIGGY_GL_ENTRYWAY: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR_LOBBY,
         address=0x00000033

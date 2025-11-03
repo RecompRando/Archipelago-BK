@@ -108,6 +108,8 @@ ITEM_JINJO_CCW_ORANGE = "Click Clock Wood Orange Jinjo"
 ITEM_JINJO_CCW_PURPLE = "Click Clock Wood Purple Jinjo"
 ITEM_JINJO_CCW_YELLOW = "Click Clock Wood Yellow Jinjo"
 
+ITEM_WITCH_SWITCH_MM = "Witch Switch (MM)"
+
 ITEM_EGG_REFILL = "Egg Refill"
 ITEM_REDFEATHER_REFILL = "Red Feather Refill"
 ITEM_GOLDFEATHER_REFILL = "Gold Feather Refill"
@@ -202,6 +204,7 @@ LOC_EMPTY_HONEYCOMB_SM_UNDERWATER = "SM Underwater Empty Honeycomb Piece"
 LOC_EMPTY_HONEYCOMB_SM_ROCKS = "SM Rocks Empty Honeycomb Piece"
 LOC_EMPTY_HONEYCOMB_SM_COLLIWOBBLE = "SM Colliwobble Empty Honeycomb Piece"
 
+LOC_WITCH_SWITCH_MM = "MM Witch Switch"
 LOC_JIGGY_GL_ENTRYWAY = "GL Entryway Jiggy"
 LOC_JIGGY_GL_ATOP_MUMBOS_MOUNTAIN = "GL Atop Mumbo's Mountain Jiggy"
 LOC_JIGGY_GL_TTC_CANNON = "GL TTC Cannon Jiggy"
