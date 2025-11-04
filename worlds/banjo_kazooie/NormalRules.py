@@ -812,9 +812,21 @@ def get_location_rules(player, options):
             ),
         LOC_JIGGY_GL_ENTRYWAY:
             lambda state: True,
+        LOC_WITCH_SWITCH_MM:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_BEAK_BUSTER, player) and
+                (
+                    state.has(ITEM_JUMP, player) or
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player)
+                )
+            ),
         LOC_JIGGY_GL_ATOP_MUMBOS_MOUNTAIN:
             lambda state:
             (
+                state.has(ITEM_WITCH_SWITCH_MM, player) and
                 state.has(ITEM_TRANSFORMATION_TERMITE, player)
             ),
         LOC_JIGGY_GL_TTC_CANNON:

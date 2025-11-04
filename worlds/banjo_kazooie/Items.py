@@ -374,6 +374,11 @@ item_data_table: Dict[str, BKItemData] = {
         type=ItemClassification.progression,
         can_create=lambda options: False
     ),
+    ITEM_WITCH_SWITCH_MM: BKItemData(
+        code=None,
+        type=ItemClassification.progression,
+        can_create=lambda options: False
+    ),
     ITEM_JIGGY: BKItemData(
         code=0x0001FBE2,
         type=ItemClassification.progression,
