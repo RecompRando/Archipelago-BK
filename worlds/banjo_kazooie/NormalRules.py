@@ -4705,49 +4705,41 @@ def get_location_rules(player, options):
         LOC_NOTE_FP_SNOWMANS_HAT_1:
             lambda state:
             (
-                state.has(ITEM_TALON_TROT, player) or
                 state.has(ITEM_FLIGHT, player)
             ),
         LOC_NOTE_FP_SNOWMANS_HAT_2:
             lambda state:
             (
-                state.has(ITEM_TALON_TROT, player) or
                 state.has(ITEM_FLIGHT, player)
             ),
         LOC_NOTE_FP_SNOWMANS_HAT_3:
             lambda state:
             (
-                state.has(ITEM_TALON_TROT, player) or
                 state.has(ITEM_FLIGHT, player)
             ),
         LOC_NOTE_FP_SNOWMANS_HAT_4:
             lambda state:
             (
-                state.has(ITEM_TALON_TROT, player) or
                 state.has(ITEM_FLIGHT, player)
             ),
         LOC_NOTE_FP_SNOWMANS_HAT_5:
             lambda state:
             (
-                state.has(ITEM_TALON_TROT, player) or
                 state.has(ITEM_FLIGHT, player)
             ),
         LOC_NOTE_FP_SNOWMANS_HAT_6:
             lambda state:
             (
-                state.has(ITEM_TALON_TROT, player) or
                 state.has(ITEM_FLIGHT, player)
             ),
         LOC_NOTE_FP_SNOWMANS_HAT_7:
             lambda state:
             (
-                state.has(ITEM_TALON_TROT, player) or
                 state.has(ITEM_FLIGHT, player)
             ),
         LOC_NOTE_FP_SNOWMANS_HAT_8:
             lambda state:
             (
-                state.has(ITEM_TALON_TROT, player) or
                 state.has(ITEM_FLIGHT, player)
             ),
         LOC_NOTE_FP_MUMBOS_SKULL_1:
@@ -4755,7 +4747,7 @@ def get_location_rules(player, options):
             (
                 (
                     state.has(ITEM_FLIGHT, player) or    #required to reach Mumbo's Skull
-                    state.has(ITEM_STILT_STRIDE, player)
+                    state.has(ITEM_TRANSFORMATION_WALRUS, player)
                 ) and
                 (
                     state.has(ITEM_JUMP, player) or
@@ -4767,7 +4759,7 @@ def get_location_rules(player, options):
             (
                 (
                     state.has(ITEM_FLIGHT, player) or    #required to reach Mumbo's Skull
-                    state.has(ITEM_STILT_STRIDE, player)
+                    state.has(ITEM_TRANSFORMATION_WALRUS, player)
                 ) and
                 (
                     state.has(ITEM_JUMP, player) or
@@ -4779,7 +4771,7 @@ def get_location_rules(player, options):
             (
                 (
                     state.has(ITEM_FLIGHT, player) or    #required to reach Mumbo's Skull
-                    state.has(ITEM_STILT_STRIDE, player)
+                    state.has(ITEM_TRANSFORMATION_WALRUS, player)
                 ) and
                 (
                     state.has(ITEM_JUMP, player) or
@@ -4791,7 +4783,7 @@ def get_location_rules(player, options):
             (
                 (
                     state.has(ITEM_FLIGHT, player) or    #required to reach Mumbo's Skull
-                    state.has(ITEM_STILT_STRIDE, player)
+                    state.has(ITEM_TRANSFORMATION_WALRUS, player)
                 ) and
                 (
                     state.has(ITEM_JUMP, player) or
@@ -4803,7 +4795,7 @@ def get_location_rules(player, options):
             (
                 (
                     state.has(ITEM_FLIGHT, player) or    #required to reach Mumbo's Skull
-                    state.has(ITEM_STILT_STRIDE, player)
+                    state.has(ITEM_TRANSFORMATION_WALRUS, player)
                 ) and
                 (
                     state.has(ITEM_JUMP, player) or
@@ -4815,7 +4807,7 @@ def get_location_rules(player, options):
             (
                 (
                     state.has(ITEM_FLIGHT, player) or    #required to reach Mumbo's Skull
-                    state.has(ITEM_STILT_STRIDE, player)
+                    state.has(ITEM_TRANSFORMATION_WALRUS, player)
                 ) and
                 (
                     state.has(ITEM_JUMP, player) or
@@ -4825,47 +4817,47 @@ def get_location_rules(player, options):
         LOC_NOTE_FP_MUMBO_ISLAND_1:
             lambda state:
             (
-                state.has(ITEM_STILT_STRIDE, player)
+                state.has(ITEM_TRANSFORMATION_WALRUS, player)
             ),
         LOC_NOTE_FP_MUMBO_ISLAND_2:
             lambda state:
             (
-                state.has(ITEM_STILT_STRIDE, player)
+                state.has(ITEM_TRANSFORMATION_WALRUS, player)
             ),
         LOC_NOTE_FP_MUMBO_ISLAND_3:
             lambda state:
             (
-                state.has(ITEM_STILT_STRIDE, player)
+                state.has(ITEM_TRANSFORMATION_WALRUS, player)
             ),
         LOC_NOTE_FP_MUMBO_ISLAND_4:
             lambda state:
             (
-                state.has(ITEM_STILT_STRIDE, player)
+                state.has(ITEM_TRANSFORMATION_WALRUS, player)
             ),
         LOC_NOTE_FP_MUMBO_ISLAND_5:
             lambda state:
             (
-                state.has(ITEM_STILT_STRIDE, player)
+                state.has(ITEM_TRANSFORMATION_WALRUS, player)
             ),
         LOC_NOTE_FP_MUMBO_ISLAND_6:
             lambda state:
             (
-                state.has(ITEM_STILT_STRIDE, player)
+                state.has(ITEM_TRANSFORMATION_WALRUS, player)
             ),
         LOC_NOTE_FP_MUMBO_ISLAND_7:
             lambda state:
             (
-                state.has(ITEM_STILT_STRIDE, player)
+                state.has(ITEM_TRANSFORMATION_WALRUS, player)
             ),
         LOC_NOTE_FP_MUMBO_ISLAND_8:
             lambda state:
             (
-                state.has(ITEM_STILT_STRIDE, player)
+                state.has(ITEM_TRANSFORMATION_WALRUS, player)
             ),
         LOC_NOTE_FP_MUMBO_ISLAND_9:
             lambda state:
             (
-                state.has(ITEM_STILT_STRIDE, player)
+                state.has(ITEM_TRANSFORMATION_WALRUS, player)
             ),
         LOC_MOLEHILL_GV_NEAR_KAZOOIE_PYRAMID:
             lambda state:
