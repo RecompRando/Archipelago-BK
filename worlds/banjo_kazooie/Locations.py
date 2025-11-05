@@ -456,6 +456,46 @@ location_data_table: Dict[str, BKLocationData] = {
         address=None,
         locked_item=ITEM_WITCH_SWITCH_MM
     ),
+    LOC_WITCH_SWITCH_TTC: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=None,
+        locked_item=ITEM_WITCH_SWITCH_TTC
+    ),
+    LOC_WITCH_SWITCH_CC: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=None,
+        locked_item=ITEM_WITCH_SWITCH_CC
+    ),
+    LOC_WITCH_SWITCH_BGS: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=None,
+        locked_item=ITEM_WITCH_SWITCH_BGS
+    ),
+    LOC_WITCH_SWITCH_FP: BKLocationData(
+        region=RGN_FREEZEEZY_PEAK,
+        address=None,
+        locked_item=ITEM_WITCH_SWITCH_FP
+    ),
+    LOC_WITCH_SWITCH_GV: BKLocationData(
+        region=RGN_GOBIS_VALLEY,
+        address=None,
+        locked_item=ITEM_WITCH_SWITCH_GV
+    ),
+    LOC_WITCH_SWITCH_MMM: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
+        address=None,
+        locked_item=ITEM_WITCH_SWITCH_MMM
+    ),
+    LOC_WITCH_SWITCH_RBB: BKLocationData(
+        region=RGN_RUSTY_BUCKET_BAY,
+        address=None,
+        locked_item=ITEM_WITCH_SWITCH_RBB
+    ),
+    LOC_WITCH_SWITCH_CCW: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=None,
+        locked_item=ITEM_WITCH_SWITCH_CCW
+    ),
     LOC_JIGGY_GL_ENTRYWAY: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR_LOBBY,
         address=0x00000033

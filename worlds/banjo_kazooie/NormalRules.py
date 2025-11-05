@@ -823,6 +823,72 @@ def get_location_rules(player, options):
                     state.has(ITEM_RAT_A_TAT_RAP, player)
                 )
             ),
+        LOC_WITCH_SWITCH_TTC:
+            lambda state:
+            (
+                can_reach_ttc_flight_pad(state, player) and
+                state.has(ITEM_FLIGHT, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_WITCH_SWITCH_CC:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_WITCH_SWITCH_BGS:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_WITCH_SWITCH_FP:
+            lambda state:
+            (
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_FLIGHT, player) and
+                state.has(ITEM_BEAK_BOMB, player)
+            ),
+        LOC_WITCH_SWITCH_GV:
+            lambda state:
+            (
+                can_reach_gv_rest_of_level(state, player) and
+                (
+                    state.has(ITEM_EGGS, player) and
+                    state.has(ITEM_BEAK_BUSTER, player)
+                )
+            ),
+        LOC_WITCH_SWITCH_MMM:
+            lambda state:
+            (
+                    can_break_breakable_gates(state, player) and
+                    state.has(ITEM_BEAK_BUSTER, player) and
+                    state.has(ITEM_TURBO_TALON_TROT, player) and
+                    state.has(ITEM_FLAP_FLIP, player) and
+                    state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                    state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_WITCH_SWITCH_RBB:
+            lambda state:
+            (
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_CLIMB, player) and
+                state.has(ITEM_JUMP, player) and
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    (
+                        state.has(ITEM_TALON_TROT, player) and
+                        state.has(ITEM_RAT_A_TAT_RAP, player)
+                    )
+                )
+            ),
+        LOC_WITCH_SWITCH_CCW:
+            lambda state:
+            (
+                    can_reach_ccw_cabin(state, player, ITEM_SEASON_WINTER) and
+                    state.has(ITEM_BEAK_BUSTER, player)
+            ),
         LOC_JIGGY_GL_ATOP_MUMBOS_MOUNTAIN:
             lambda state:
             (
@@ -832,6 +898,7 @@ def get_location_rules(player, options):
         LOC_JIGGY_GL_TTC_CANNON:
             lambda state:
             (
+                state.has(ITEM_WITCH_SWITCH_TTC, player) and
                 state.has(ITEM_FLAP_FLIP, player) and
                 state.has(ITEM_FLIGHT, player) and
                 state.has(ITEM_BEAK_BUSTER, player)
@@ -839,11 +906,13 @@ def get_location_rules(player, options):
         LOC_JIGGY_GL_EYE_SWITCHES:
             lambda state:
             (
+                state.has(ITEM_WITCH_SWITCH_CC, player) and
                 state.has(ITEM_BEAK_BUSTER, player)
             ),
         LOC_JIGGY_GL_ABOVE_FP:
             lambda state:
             (
+                state.has(ITEM_WITCH_SWITCH_FP, player) and
                 state.has(ITEM_SHOCK_SPRING_JUMP, player) and
                 state.has(ITEM_BEAK_BUSTER, player) and
                 state.has(ITEM_TURBO_TALON_TROT, player) and
@@ -852,15 +921,19 @@ def get_location_rules(player, options):
         LOC_JIGGY_GL_SARCOPHAGUS:
             lambda state:
             (
-                state.has(ITEM_SHOCK_SPRING_JUMP, player) or
+                state.has(ITEM_WITCH_SWITCH_GV, player) and
                 (
-                    state.has(ITEM_FLAP_FLIP, player) and   #Requires somewhat specific timing
-                    state.has(ITEM_BEAK_BUSTER, player)
+                    state.has(ITEM_SHOCK_SPRING_JUMP, player) or
+                    (
+                        state.has(ITEM_FLAP_FLIP, player) and   #Requires somewhat specific timing
+                        state.has(ITEM_BEAK_BUSTER, player)
+                    )
                 )
             ),
         LOC_JIGGY_GL_GRUNTYS_EYE:
             lambda state:
             (
+                state.has(ITEM_WITCH_SWITCH_MMM, player) and
                 (
                     (
                         state.has(ITEM_JUMP, player) and
@@ -889,11 +962,14 @@ def get_location_rules(player, options):
         LOC_JIGGY_GL_WATER_SWITCH:
             lambda state:
             (
+                state.has(ITEM_WITCH_SWITCH_RBB, player) and
+                can_hit_two_water_switches(state, player) and
                 state.has(ITEM_SWIM, player)
             ),
         LOC_JIGGY_GL_BEE_TREE:
             lambda state:
             (
+                state.has(ITEM_WITCH_SWITCH_MM, player) and
                 state.has(ITEM_TRANSFORMATION_BEE, player) and
                 (
                     state.has(ITEM_TALON_TROT, player) or  # required to access Mumbo's Skull
@@ -7127,10 +7203,8 @@ def get_location_rules(player, options):
                     state.has(ITEM_JUMP, player) or             #to jump on the other boxes
                     state.has(ITEM_FLAP_FLIP, player)
                 ) and
-                (
-                    state.has(ITEM_CLIMB, player) or            #to drop the TNT box
-                    state.has(ITEM_BEAK_BARGE, player)          #Beak Barge is enough to beat the boss. Good luck:)
-                )
+                state.has(ITEM_CLIMB, player) and            #to drop the TNT box
+                state.has(ITEM_BEAK_BARGE, player)          #Beak Barge is enough to beat the boss. Good luck:)
             ),
         LOC_JIGGY_RBB_SNORKEL:
             lambda state:
