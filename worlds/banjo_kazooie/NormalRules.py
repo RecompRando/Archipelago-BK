@@ -2442,6 +2442,7 @@ def get_location_rules(player, options):
             lambda state:
             (
                 state.has(ITEM_SWIM, player) and    #required to access most of the level
+                state.has(ITEM_FLIGHT, player) and
                 state.has(ITEM_FLAP_FLIP, player) and    #required to jump through all the rings
                 (
                     state.has(ITEM_FEATHERY_FLAP, player) or
@@ -3220,29 +3221,25 @@ def get_location_rules(player, options):
         LOC_NOTE_CC_LEFT_CUBBIES_1:
             lambda state:
             (
+                state.has(ITEM_JUMP, player) and
                 state.has(ITEM_SWIM, player) and
                 state.has(ITEM_SHOCK_SPRING_JUMP, player) and
                 (
                     state.has(ITEM_FEATHERY_FLAP, player) or
                     state.has(ITEM_RAT_A_TAT_RAP, player) or
-                    (
-                        state.has(ITEM_JUMP, player) and
-                        state.has(ITEM_TALON_TROT, player)
-                    )
+                    state.has(ITEM_TALON_TROT, player)
                 )
             ),
         LOC_NOTE_CC_LEFT_CUBBIES_2:
             lambda state:
             (
+                state.has(ITEM_JUMP, player) and
                 state.has(ITEM_SWIM, player) and
                 state.has(ITEM_SHOCK_SPRING_JUMP, player) and
                 (
                     state.has(ITEM_FEATHERY_FLAP, player) or
                     state.has(ITEM_RAT_A_TAT_RAP, player) or
-                    (
-                        state.has(ITEM_JUMP, player) and
-                        state.has(ITEM_TALON_TROT, player)
-                    )
+                    state.has(ITEM_TALON_TROT, player)
                 )
             ),
         LOC_NOTE_CC_AFT_SAWS_1:
