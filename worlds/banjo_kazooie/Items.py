@@ -379,6 +379,46 @@ item_data_table: Dict[str, BKItemData] = {
         type=ItemClassification.progression,
         can_create=lambda options: False
     ),
+    ITEM_WITCH_SWITCH_TTC: BKItemData(
+        code=None,
+        type=ItemClassification.progression,
+        can_create=lambda options: False
+    ),
+    ITEM_WITCH_SWITCH_CC: BKItemData(
+        code=None,
+        type=ItemClassification.progression,
+        can_create=lambda options: False
+    ),
+    ITEM_WITCH_SWITCH_BGS: BKItemData(
+        code=None,
+        type=ItemClassification.progression,
+        can_create=lambda options: False
+    ),
+    ITEM_WITCH_SWITCH_FP: BKItemData(
+        code=None,
+        type=ItemClassification.progression,
+        can_create=lambda options: False
+    ),
+    ITEM_WITCH_SWITCH_GV: BKItemData(
+        code=None,
+        type=ItemClassification.progression,
+        can_create=lambda options: False
+    ),
+    ITEM_WITCH_SWITCH_MMM: BKItemData(
+        code=None,
+        type=ItemClassification.progression,
+        can_create=lambda options: False
+    ),
+    ITEM_WITCH_SWITCH_RBB: BKItemData(
+        code=None,
+        type=ItemClassification.progression,
+        can_create=lambda options: False
+    ),
+    ITEM_WITCH_SWITCH_CCW: BKItemData(
+        code=None,
+        type=ItemClassification.progression,
+        can_create=lambda options: False
+    ),
     ITEM_JIGGY: BKItemData(
         code=0x0001FBE2,
         type=ItemClassification.progression,
