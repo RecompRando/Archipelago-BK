@@ -815,6 +815,8 @@ def get_location_rules(player, options):
         LOC_JIGGY_GL_ATOP_MUMBOS_MOUNTAIN:
             lambda state:
             (
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_BEAK_BUSTER, player) and
                 state.has(ITEM_TRANSFORMATION_TERMITE, player)
             ),
         LOC_JIGGY_GL_TTC_CANNON:
@@ -827,6 +829,15 @@ def get_location_rules(player, options):
         LOC_JIGGY_GL_EYE_SWITCHES:
             lambda state:
             (
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_FLIGHT, player) and
+                state.has(ITEM_SWIM, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_JIGGY_GL_WITCHS_HAT:
+            lambda state:
+            (
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) and
                 state.has(ITEM_BEAK_BUSTER, player)
             ),
         LOC_JIGGY_GL_ABOVE_FP:
@@ -835,15 +846,17 @@ def get_location_rules(player, options):
                 state.has(ITEM_SHOCK_SPRING_JUMP, player) and
                 state.has(ITEM_BEAK_BUSTER, player) and
                 state.has(ITEM_TURBO_TALON_TROT, player) and
-                state.has(ITEM_FLIGHT, player)
+                state.has(ITEM_FLIGHT, player) and
+                state.has(ITEM_BEAK_BOMB, player)  # To get the switch under the Snowman in the level
             ),
         LOC_JIGGY_GL_SARCOPHAGUS:
             lambda state:
             (
+                state.has(ITEM_EGGS, player) and # Open up Sandybutts Tomb 
+                state.has(ITEM_BEAK_BUSTER, player) and 
                 state.has(ITEM_SHOCK_SPRING_JUMP, player) or
                 (
-                    state.has(ITEM_FLAP_FLIP, player) and   #Requires somewhat specific timing
-                    state.has(ITEM_BEAK_BUSTER, player)
+                    state.has(ITEM_FLAP_FLIP, player)  #Requires somewhat specific timing
                 )
             ),
         LOC_JIGGY_GL_GRUNTYS_EYE:
@@ -877,7 +890,8 @@ def get_location_rules(player, options):
         LOC_JIGGY_GL_WATER_SWITCH:
             lambda state:
             (
-                state.has(ITEM_SWIM, player)
+                state.has(ITEM_SWIM, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
             ),
         LOC_JIGGY_GL_BEE_TREE:
             lambda state:
