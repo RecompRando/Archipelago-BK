@@ -821,6 +821,51 @@ def get_location_rules(player, options):
                 state.has(ITEM_TALON_TROT, player) and
                 state.has(ITEM_STILT_STRIDE, player)
             ),
+        LOC_WITCH_SWITCH_MM:
+            lambda state:
+            (
+                can_reach_mm_witch(state, player)
+            ),
+        LOC_WITCH_SWITCH_TTC:
+            lambda state:
+            (
+                can_reach_ttc_witch(state, player)
+            ),
+        LOC_WITCH_SWITCH_CC:
+            lambda state:
+            (
+                can_reach_cc_witch(state, player)
+            ),
+        LOC_WITCH_SWITCH_BGS:
+            lambda state:
+            (
+                can_reach_bgs_witch(state, player)
+            ),
+        LOC_WITCH_SWITCH_FP:
+            lambda state:
+            (
+                can_reach_fp_witch(state, player)
+            ),
+        LOC_WITCH_SWITCH_GV:
+            lambda state:
+            (
+                can_reach_gv_witch(state, player)
+            ),
+        LOC_WITCH_SWITCH_MMM:
+            lambda state:
+            (
+                can_reach_mmm_witch(state, player)
+            ),
+        LOC_WITCH_SWITCH_RBB:
+            lambda state:
+            (
+                can_reach_rbb_witch(state, player)
+            ),
+        LOC_WITCH_SWITCH_CCW:
+            lambda state:
+            (
+                can_reach_ccw_witch(state, player)
+            ),
         LOC_MOLEHILL_SM_COMBAT_VEGGIE_PATCH_1:
             lambda state: True,
         LOC_MOLEHILL_SM_COMBAT_VEGGIE_PATCH_2:
@@ -890,13 +935,13 @@ def get_location_rules(player, options):
         LOC_JIGGY_GL_ATOP_MUMBOS_MOUNTAIN:
             lambda state:
             (
-                can_reach_mm_witch(state, player) and
+                state.has(ITEM_WITCH_SWITCH_MM, player) and
                 state.has(ITEM_TRANSFORMATION_TERMITE, player)
             ),
         LOC_JIGGY_GL_TTC_CANNON:
             lambda state:
             (
-                can_reach_ttc_witch(state, player) and
+                state.has(ITEM_WITCH_SWITCH_TTC, player) and
                 state.has(ITEM_FLAP_FLIP, player) and
                 state.has(ITEM_FLIGHT, player) and
                 state.has(ITEM_BEAK_BUSTER, player)
@@ -904,13 +949,13 @@ def get_location_rules(player, options):
         LOC_JIGGY_GL_EYE_SWITCHES:
             lambda state:
             (
-                can_reach_cc_witch(state, player) and
+                state.has(ITEM_WITCH_SWITCH_CC, player) and
                 state.has(ITEM_BEAK_BUSTER, player)
             ),
         LOC_JIGGY_GL_ABOVE_FP:
             lambda state:
             (
-                can_reach_fp_witch(state, player) and
+                state.has(ITEM_WITCH_SWITCH_FP, player) and
                 state.has(ITEM_SHOCK_SPRING_JUMP, player) and
                 state.has(ITEM_BEAK_BUSTER, player) and
                 state.has(ITEM_TURBO_TALON_TROT, player) and
@@ -919,7 +964,7 @@ def get_location_rules(player, options):
         LOC_JIGGY_GL_SARCOPHAGUS:
             lambda state:
             (
-                can_reach_gv_witch(state, player) and
+                state.has(ITEM_WITCH_SWITCH_GV, player) and
                 (
                     state.has(ITEM_SHOCK_SPRING_JUMP, player) or
                     (
@@ -931,7 +976,7 @@ def get_location_rules(player, options):
         LOC_JIGGY_GL_GRUNTYS_EYE:
             lambda state:
             (
-                can_reach_mmm_witch(state, player) and
+                state.has(ITEM_WITCH_SWITCH_MMM, player) and
                 (
                     (
                         state.has(ITEM_JUMP, player) and
@@ -960,14 +1005,14 @@ def get_location_rules(player, options):
         LOC_JIGGY_GL_WATER_SWITCH:
             lambda state:
             (
-                can_reach_rbb_witch(state, player) and
+                state.has(ITEM_WITCH_SWITCH_RBB, player) and
                 can_hit_two_water_switches(state, player) and
                 state.has(ITEM_SWIM, player)
             ),
         LOC_JIGGY_GL_BEE_TREE:
             lambda state:
             (
-                can_reach_ccw_witch(state, player) and
+                state.has(ITEM_WITCH_SWITCH_CCW, player) and
                 state.has(ITEM_TRANSFORMATION_BEE, player) and
                 (
                     state.has(ITEM_TALON_TROT, player) or  # required to access Mumbo's Skull
