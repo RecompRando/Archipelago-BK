@@ -22,7 +22,7 @@ class Notesanity(Toggle):
     display_name = "Notesanity"
 
 class Talonlobby(Toggle):
-    """Set whether the player is able to climb the 50 note door slope without talon trot"""
+    """Set whether the player is able to climb the 50 note door slope without talon trot."""
     display_name = "Talonlobby"
 
 # class Eggsanity(Toggle):
@@ -42,7 +42,7 @@ class BKOptions(PerGameCommonOptions):
     start_inventory_from_pool: StartInventoryPool
     logic_difficulty: LogicDifficulty
     notesanity: Notesanity
-    talonlobby: Talonlobby
+    talon_lobby: Talonlobby
     # eggsanity: Eggsanity
     # feathersanity: Feathersanity
     extra_locations: ExtraLocations
