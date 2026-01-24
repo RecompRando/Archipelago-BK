@@ -3,6 +3,13 @@ from .Constants import *
 def rgn_connection_string(rgn1, rgn2):
     return str(rgn1) + " -> " + str(rgn2)
 
+def talon_lobby(state, player, options):
+    # If there's an option to remove the Talon Trot requirement
+    if options.talon_lobby.value:
+        return True
+    # Otherwise, require Talon Trot
+    return state.has(ITEM_TALON_TROT, player)
+
 def has_tokens_for_all_transforms(state, player):
     return state.has(ITEM_MUMBO_TOKEN, player, 75)
 
@@ -404,13 +411,11 @@ def can_reach_rbb_witch(state, player):
             )
         )
     )
-
 def can_reach_ccw_witch(state, player):
     return (
         can_reach_ccw_cabin(state, player, ITEM_SEASON_WINTER) and
         state.has(ITEM_BEAK_BUSTER, player)
     )
-
 def get_region_rules(player, options):
     return {
         rgn_connection_string(RGN_SPIRAL_MOUNTAIN, RGN_GRUNTILDAS_LAIR_LOBBY):
@@ -423,8 +428,8 @@ def get_region_rules(player, options):
         rgn_connection_string(RGN_GRUNTILDAS_LAIR_LOBBY, RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR):
             lambda state:
             (
-                state.has(ITEM_TALON_TROT, player) and
-                state.has(ITEM_NOTE, player, 50)
+                state.has(ITEM_NOTE, player, 50) and 
+                talon_lobby(state, player, options)  # Option to enable talon in lobby
             ),
         rgn_connection_string(RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR, RGN_TREASURE_TROVE_COVE):
             lambda state:

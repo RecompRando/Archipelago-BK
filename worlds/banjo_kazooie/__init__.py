@@ -142,4 +142,5 @@ class BKWorld(World):
 
     def fill_slot_data(self):
         return {
+            "talon_lobby": self.options.talon_lobby.value
         }
