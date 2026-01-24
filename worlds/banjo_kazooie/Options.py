@@ -34,7 +34,9 @@ class Talonlobby(Toggle):
 #     display_name = "Feathersanity"
 
 class ExtraLocations(Toggle):
-    """Set whether extra locations will be shuffled."""
+    """Set whether extra locations will be shuffled.
+    
+    Prevents generation failures."""
     display_name = "Extra Locations"
 
 @dataclass
