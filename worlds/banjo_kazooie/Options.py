@@ -22,6 +22,7 @@ class Notesanity(Toggle):
     display_name = "Notesanity"
 
 class Talonlobby(Toggle):
+    """Set whether the player is able to climb the 50 note door slope without talon trot"""
     display_name = "Talonlobby"
 
 # class Eggsanity(Toggle):
