@@ -84,7 +84,8 @@ class BKWorld(World):
             }, BKLocation)
             region.add_exits(region_data.connecting_regions)
 
-        self.create_and_add_filler_items(num_total_extra_locs)
+        if self.options.extra_locations.value:
+            self.create_and_add_filler_items(num_total_extra_locs)
 
         # Place locked locations.
         for location_name, location_data in locked_locations.items():

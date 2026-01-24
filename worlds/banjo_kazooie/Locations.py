@@ -5182,6 +5182,7 @@ num_extra_jiggies = 4
 num_extra_honeycombs = 9
 num_extra_molehills = 9
 num_extra_sns = 29
+num_extra_mumbo_tokens = 2
 
 num_total_extra_locs = 0
 
@@ -5194,7 +5195,7 @@ for location_name, location_data in location_data_table.items():
         for i in range(2, num_extra_jiggies + 2):
             name = location_name + " (" + str(i) + ")"
             address = (0x10000000 + 0x01000000*(i - 2)) | (location_data.address & 0x00FFFFFF)
-            can_create = location_data.can_create
+            can_create = lambda options: options.extra_locations.value
             extra_location_table[name] = BKLocationData(region=region, address=address, can_create=can_create)
             extra_location_table_old_names[name] = location_name
             num_total_extra_locs += 1
@@ -5202,7 +5203,7 @@ for location_name, location_data in location_data_table.items():
         for i in range(2, num_extra_honeycombs + 2):
             name = location_name + " (" + str(i) + ")"
             address = (0x30000000 + 0x01000000*(i - 2)) | (location_data.address & 0x00FFFFFF)
-            can_create = location_data.can_create
+            can_create = lambda options: options.extra_locations.value
             extra_location_table[name] = BKLocationData(region=region, address=address, can_create=can_create)
             extra_location_table_old_names[name] = location_name
             num_total_extra_locs += 1
@@ -5210,7 +5211,7 @@ for location_name, location_data in location_data_table.items():
         for i in range(2, num_extra_molehills + 2):
             name = location_name + " (" + str(i) + ")"
             address = (0x50000000 + 0x01000000*(i - 2)) | (location_data.address & 0x00FFFFFF)
-            can_create = location_data.can_create
+            can_create = lambda options: options.extra_locations.value
             extra_location_table[name] = BKLocationData(region=region, address=address, can_create=can_create)
             extra_location_table_old_names[name] = location_name
             num_total_extra_locs += 1
@@ -5218,7 +5219,15 @@ for location_name, location_data in location_data_table.items():
         for i in range(2, num_extra_sns + 2):
             name = location_name + " (" + str(i) + ")"
             address = (0x70000000 + 0x01000000*(i - 2)) | (location_data.address & 0x00FFFFFF)
-            can_create = location_data.can_create
+            can_create = lambda options: options.extra_locations.value
+            extra_location_table[name] = BKLocationData(region=region, address=address, can_create=can_create)
+            extra_location_table_old_names[name] = location_name
+            num_total_extra_locs += 1
+    if location_data.address is not None and (location_data.address & 0xFF000000) == 0x03000000:
+        for i in range(2, num_extra_mumbo_tokens + 2):
+            name = location_name + " (" + str(i) + ")"
+            address = (0x90000000 + 0x01000000*(i - 2)) | (location_data.address & 0x00FFFFFF)
+            can_create = lambda options: options.extra_locations.value
             extra_location_table[name] = BKLocationData(region=region, address=address, can_create=can_create)
             extra_location_table_old_names[name] = location_name
             num_total_extra_locs += 1

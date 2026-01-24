@@ -33,6 +33,10 @@ class Talonlobby(Toggle):
 #     """Set whether red feathers will be shuffled."""
 #     display_name = "Feathersanity"
 
+class ExtraLocations(Toggle):
+    """Set whether extra locations will be shuffled."""
+    display_name = "Extra Locations"
+
 @dataclass
 class BKOptions(PerGameCommonOptions):
     start_inventory_from_pool: StartInventoryPool
@@ -41,3 +45,4 @@ class BKOptions(PerGameCommonOptions):
     talonlobby: Talonlobby
     # eggsanity: Eggsanity
     # feathersanity: Feathersanity
+    extra_locations: ExtraLocations
