@@ -21,18 +21,22 @@ class Notesanity(Toggle):
     """Set whether notes will be shuffled."""
     display_name = "Notesanity"
 
-class Eggsanity(Toggle):
-    """Set whether blue eggs will be shuffled."""
-    display_name = "Eggsanity"
+class Talonlobby(Toggle):
+    display_name = "Talonlobby"
 
-class Feathersanity(Toggle):
-    """Set whether red feathers will be shuffled."""
-    display_name = "Feathersanity"
+# class Eggsanity(Toggle):
+#     """Set whether blue eggs will be shuffled."""
+#     display_name = "Eggsanity"
+
+# class Feathersanity(Toggle):
+#     """Set whether red feathers will be shuffled."""
+#     display_name = "Feathersanity"
 
 @dataclass
 class BKOptions(PerGameCommonOptions):
     start_inventory_from_pool: StartInventoryPool
     logic_difficulty: LogicDifficulty
     notesanity: Notesanity
-    eggsanity: Eggsanity
-    feathersanity: Feathersanity
+    talonlobby: Talonlobby
+    # eggsanity: Eggsanity
+    # feathersanity: Feathersanity
