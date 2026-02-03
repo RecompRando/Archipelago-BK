@@ -9308,6 +9308,449 @@ def get_location_rules(player, options):
                     state.has(ITEM_FLIGHT, player)
                 )
             ),
+
+    # EXTRA LIFE LOCATION LOGIC (51 total)
+
+    # Spiral Mountain - 2 extra lives
+        LOC_LIFE_SM_BK_HOUSE:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_LIFE_SM_WATERFALL:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) or
+                (
+                    state.has(ITEM_JUMP, player) and
+                    (
+                        state.has(ITEM_FEATHERY_FLAP, player) or
+                        state.has(ITEM_RAT_A_TAT_RAP, player)
+                    )
+                )
+            ),
+
+        # Gruntilda's Lair - 10 extra lives
+        LOC_LIFE_GL_CCW_PUZZLE_ROOM:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_LIFE_GL_BGS_PIPE:
+            lambda state:
+            (
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_LIFE_GL_GRUNTY_STATUE_HAT:
+            lambda state:
+            (
+                True  # Region access only
+            ),
+        LOC_LIFE_GL_MMM_CRYPT:
+            lambda state:
+            (
+                True  # Region access only
+            ),
+        LOC_LIFE_GL_WATER_LEVEL_2:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player) and
+                state.has(ITEM_TRANSFORMATION_PUMPKIN, player)
+            ),
+        LOC_LIFE_GL_CCW_ENTRANCE_TOP:
+            lambda state:
+            (
+                True  # Region access only
+            ),
+        LOC_LIFE_GL_FURNACE_FUN_LEFT:
+            lambda state:
+            (
+                True  # Region access only
+            ),
+        LOC_LIFE_GL_FURNACE_FUN_2:
+            lambda state:
+            (
+                True  # Region access only
+            ),
+        LOC_LIFE_GL_FURNACE_FUN_3:
+            lambda state:
+            (
+                True  # Region access only
+            ),
+        LOC_LIFE_GL_810_NOTE_DOOR:
+            lambda state:
+            (
+                True  # Region access only
+            ),
+
+        # Mumbo's Mountain - 2 extra lives
+        LOC_LIFE_MM_FIFTH_HUT:
+            lambda state:
+            (
+                state.has(ITEM_BEAK_BUSTER, player) and
+                (
+                    state.has(ITEM_TALON_TROT, player) or
+                    state.has(ITEM_JUMP, player)
+                )
+            ),
+        LOC_LIFE_MM_TICKERS_TOWER:
+            lambda state:
+            (
+                state.has(ITEM_TRANSFORMATION_TERMITE, player)
+            ),
+
+        # Treasure Trove Cove - 3 extra lives
+        LOC_LIFE_TTC_POND:
+            lambda state:
+            (
+                state.has(ITEM_TALON_TROT, player)
+            ),
+        LOC_LIFE_TTC_UNDERWATER_SPIRAL:
+            lambda state:
+            (
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_LIFE_TTC_FLOATING_CRATE:
+            lambda state:
+            (
+                state.has(ITEM_JUMP, player)
+            ),
+
+        # Clanker's Cavern - 3 extra lives
+        LOC_LIFE_CC_ORANGE_JINJO_PIPE:
+            lambda state:
+            (
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_CLIMB, player)
+            ),
+        LOC_LIFE_CC_LEFT_FIN:
+            lambda state:
+            (
+                True  # Region access only
+            ),
+        LOC_LIFE_CC_GRATE_ALCOVE:
+            lambda state:
+            (
+                state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                state.has(ITEM_JUMP, player) and
+                state.has(ITEM_FEATHERY_FLAP, player)
+            ),
+
+        # Bubblegloop Swamp - 5 extra lives
+        LOC_LIFE_BGS_GIANT_EGG:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_LIFE_BGS_HUT_PEDESTALS:
+            lambda state:
+            (
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        LOC_LIFE_BGS_MR_VILE_21:
+            lambda state:
+            (
+                state.has(ITEM_TURBO_TALON_TROT, player) and
+                state.has(ITEM_TRANSFORMATION_CROCODILE, player)
+            ),
+        LOC_LIFE_BGS_MR_VILE_22:
+            lambda state:
+            (
+                state.has(ITEM_TURBO_TALON_TROT, player) and
+                state.has(ITEM_TRANSFORMATION_CROCODILE, player)
+            ),
+        LOC_LIFE_BGS_MR_VILE_23:
+            lambda state:
+            (
+                state.has(ITEM_TURBO_TALON_TROT, player) and
+                state.has(ITEM_TRANSFORMATION_CROCODILE, player)
+            ),
+
+        # Freezeezy Peak - 3 extra lives
+        LOC_LIFE_FP_MUMBOS_HUT:
+            lambda state:
+            (
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_LIFE_FP_WOZZAS_CAVE:
+            lambda state:
+            (
+                state.has(ITEM_TRANSFORMATION_WALRUS, player)
+            ),
+        LOC_LIFE_FP_BOGGY_RACE:
+            lambda state:
+            (
+                True  # Region access only
+            ),
+
+        # Gobi's Valley - 3 extra lives
+        LOC_LIFE_GV_BEHIND_JINXY:
+            lambda state:
+            (
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+        LOC_LIFE_GV_WATER_PYRAMID:
+            lambda state:
+            (
+                can_reach_gv_rest_of_level(state, player)
+            ),
+        LOC_LIFE_GV_SANDYBUTT_TOMB:
+            lambda state:
+            (
+                can_reach_gv_rest_of_level(state, player)
+            ),
+
+        # Mad Monster Mansion - 3 extra lives
+        LOC_LIFE_MMM_ORGAN_PIPES:
+            lambda state:
+            (
+                state.has(ITEM_TURBO_TALON_TROT, player)  # Need to enter church
+            ),
+        LOC_LIFE_MMM_CHANDELIER:
+            lambda state:
+            (
+                can_reach_mmm_second_floor(state, player)
+            ),
+        LOC_LIFE_MMM_SECRET_CHURCH:
+            lambda state:
+            (
+                True
+            ),
+
+        # Rusty Bucket Bay - 3 extra lives
+        LOC_LIFE_RBB_BOOM_BOX:
+            lambda state:
+            (
+                True  # Region access only
+            ),
+        LOC_LIFE_RBB_STORAGE_HUT:
+            lambda state:
+            (
+                True  # Region access only
+            ),
+        LOC_LIFE_RBB_ENGINE_ROOM:
+            lambda state:
+            (
+                True
+            ),
+
+        # Click Clock Wood Spring - 4 extra lives
+        LOC_LIFE_CCW_SPRING_MUMBOS_HUT:
+            lambda state:
+            (
+                state.has(ITEM_SEASON_SPRING, player)
+            ),
+        LOC_LIFE_CCW_SPRING_LAKE_STUMP:
+            lambda state:
+            (
+                state.has(ITEM_SEASON_SPRING, player)
+            ),
+        LOC_LIFE_CCW_SPRING_TOP_ROOM_1:
+            lambda state:
+            (
+                state.has(ITEM_SEASON_SPRING, player)
+            ),
+        LOC_LIFE_CCW_SPRING_TOP_ROOM_2:
+            lambda state:
+            (
+                state.has(ITEM_SEASON_SPRING, player)
+            ),
+
+        # Click Clock Wood Summer - 3 extra lives
+        LOC_LIFE_CCW_SUMMER_FLOWER_PLOT:
+            lambda state:
+            (
+                state.has(ITEM_SEASON_SUMMER, player)
+            ),
+        LOC_LIFE_CCW_SUMMER_TREEHOUSE:
+            lambda state:
+            (
+                state.has(ITEM_SEASON_SUMMER, player) and
+                can_reach_ccw_nabnuts_house(state, player)
+            ),
+        LOC_LIFE_CCW_SUMMER_TOP_ROOM:
+            lambda state:
+            (
+                state.has(ITEM_SEASON_SUMMER, player)
+            ),
+
+        # Click Clock Wood Autumn - 3 extra lives
+        LOC_LIFE_CCW_AUTUMN_GNAWTYS_HOUSE:
+            lambda state:
+            (
+                state.has(ITEM_SEASON_FALL, player)
+            ),
+        LOC_LIFE_CCW_AUTUMN_SNAREBEAR:
+            lambda state:
+            (
+                state.has(ITEM_SEASON_FALL, player)
+            ),
+        LOC_LIFE_CCW_AUTUMN_TOP_ROOM:
+            lambda state:
+            (
+                state.has(ITEM_SEASON_FALL, player)
+            ),
+
+        # Click Clock Wood Winter - 2 extra lives
+        LOC_LIFE_CCW_WINTER_SIR_SLUSH:
+            lambda state:
+            (
+                state.has(ITEM_SEASON_WINTER, player) and
+                state.has(ITEM_FLIGHT, player) and
+                state.has(ITEM_BEAK_BOMB, player)
+            ),
+        LOC_LIFE_CCW_WINTER_POND:
+            lambda state:
+            (
+                state.has(ITEM_SEASON_WINTER, player) and
+                state.has(ITEM_SWIM, player)
+            ),
+
+
+
+        # WITCH SWITCH LOCATIONS
+
+        LOC_WITCH_SWITCH_MM:
+            lambda state:
+            (
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+        LOC_WITCH_SWITCH_TTC:
+            lambda state:
+            (
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_WITCH_SWITCH_CC:
+            lambda state:
+            (
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_SWIM, player)
+            ),
+        LOC_WITCH_SWITCH_BGS:
+            lambda state:
+            (
+                state.has(ITEM_BEAK_BUSTER, player) and
+                can_traverse_bgs(state, player) and
+                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+            ),
+        LOC_WITCH_SWITCH_FP:
+            lambda state:
+            (
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_FLIGHT, player) and
+                state.has(ITEM_BEAK_BOMB, player)
+            ),
+        LOC_WITCH_SWITCH_GV:
+            lambda state:
+            (
+                state.has(ITEM_BEAK_BUSTER, player) and
+                can_reach_gv_rest_of_level(state, player)
+            ),
+        LOC_WITCH_SWITCH_MMM:
+            lambda state:
+            (
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_TURBO_TALON_TROT, player) and
+                state.has(ITEM_FLIGHT, player)
+            ),
+        LOC_WITCH_SWITCH_RBB:
+            lambda state:
+            (
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_JUMP, player) and
+                state.has(ITEM_FEATHERY_FLAP, player)
+            ),
+        LOC_WITCH_SWITCH_CCW:
+            lambda state:
+            (
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_SEASON_SUMMER, player) and
+                can_reach_ccw_nabnuts_house(state, player)
+            ),
+
+
+        #  WARP CAULDRON LOCATION LOGIC (8 total)
+        LOC_CAULDRON_PURPLE_1:
+            lambda state:
+            (
+                True  # Region access only
+            ),
+        LOC_CAULDRON_PURPLE_2:
+            lambda state:
+            (
+                state.has(ITEM_EGGS, player)
+            ),
+        LOC_CAULDRON_GREEN_1:
+            lambda state:
+            (
+                state.has(ITEM_EGGS, player)
+            ),
+        LOC_CAULDRON_GREEN_2:
+            lambda state:
+            (
+                True  # Region access only
+            ),
+        LOC_CAULDRON_ORANGE_1:
+            lambda state:
+            (
+                True  # Region access only
+            ),
+        LOC_CAULDRON_ORANGE_2:
+            lambda state:
+            (
+                True  # Region access only
+            ),
+        LOC_CAULDRON_YELLOW_1:
+            lambda state:
+            (
+                True  # Region access only
+            ),
+        LOC_CAULDRON_YELLOW_2:
+            lambda state:
+            (
+                True  # Region access only
+            ),
+
+
+
+        # WATER LEVEL SWITCHES
+
+        LOC_WATER_SWITCH_1:
+            lambda state:
+            (
+                can_break_breakable_gates(state, player) and
+                state.has(ITEM_TRANSFORMATION_PUMPKIN, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_WATER_SWITCH_2:
+            lambda state:
+            (
+                can_hit_one_water_switch(state, player) and
+                state.has(ITEM_SWIM, player) and
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BARGE, player)
+                )
+            ),
+        LOC_WATER_SWITCH_3:
+            lambda state:
+            (
+                can_hit_two_water_switches(state, player) and
+                state.has(ITEM_RAT_A_TAT_RAP, player)
+            ),
+
+        LOC_GV_SNS_SWITCH:
+            lambda state:
+            (
+                can_reach_gv_rest_of_level(state, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+
+
         LOC_DEFEAT_GRUNTILDA:
             lambda state: True,
     }

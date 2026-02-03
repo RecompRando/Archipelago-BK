@@ -226,230 +226,202 @@ location_data_table: Dict[str, BKLocationData] = {
         address=None,
         locked_item=ITEM_SEASON_WINTER
     ),
-    LOC_JINJO_MM_BLUE: BKLocationData(
+# ---- Jinjos: Mumbo's Mountain ----
+    ITEM_JINJO_MM_BLUE: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
-        address=None,
-        locked_item=ITEM_JINJO_MM_BLUE
+        address=0x0600015A,
     ),
-    LOC_JINJO_MM_GREEN: BKLocationData(
+    ITEM_JINJO_MM_GREEN: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
-        address=None,
-        locked_item=ITEM_JINJO_MM_GREEN
+        address=0x0600015B,
     ),
-    LOC_JINJO_MM_ORANGE: BKLocationData(
+    ITEM_JINJO_MM_ORANGE: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
-        address=None,
-        locked_item=ITEM_JINJO_MM_ORANGE
+        address=0x0600015C,
     ),
-    LOC_JINJO_MM_PURPLE: BKLocationData(
+    ITEM_JINJO_MM_PURPLE: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
-        address=None,
-        locked_item=ITEM_JINJO_MM_PURPLE
+        address=0x0600015D,
     ),
-    LOC_JINJO_MM_YELLOW: BKLocationData(
+    ITEM_JINJO_MM_YELLOW: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
-        address=None,
-        locked_item=ITEM_JINJO_MM_YELLOW
+        address=0x0600015E,
     ),
-    LOC_JINJO_TTC_BLUE: BKLocationData(
+
+    # ---- Jinjos: Treasure Trove Cove ----
+    ITEM_JINJO_TTC_BLUE: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
-        address=None,
-        locked_item=ITEM_JINJO_TTC_BLUE
+        address=0x0600025A,
     ),
-    LOC_JINJO_TTC_GREEN: BKLocationData(
+    ITEM_JINJO_TTC_GREEN: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
-        address=None,
-        locked_item=ITEM_JINJO_TTC_GREEN
+        address=0x0600025B,
     ),
-    LOC_JINJO_TTC_ORANGE: BKLocationData(
+    ITEM_JINJO_TTC_ORANGE: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
-        address=None,
-        locked_item=ITEM_JINJO_TTC_ORANGE
+        address=0x0600025C,
     ),
-    LOC_JINJO_TTC_PURPLE: BKLocationData(
+    ITEM_JINJO_TTC_PURPLE: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
-        address=None,
-        locked_item=ITEM_JINJO_TTC_PURPLE
+        address=0x0600025D,
     ),
-    LOC_JINJO_TTC_YELLOW: BKLocationData(
+    ITEM_JINJO_TTC_YELLOW: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
-        address=None,
-        locked_item=ITEM_JINJO_TTC_YELLOW
+        address=0x0600025E,
     ),
-    LOC_JINJO_CC_BLUE: BKLocationData(
+
+    # ---- Jinjos: Clanker's Cavern ----
+    ITEM_JINJO_CC_BLUE: BKLocationData(
         region=RGN_CLANKERS_CAVERN,
-        address=None,
-        locked_item=ITEM_JINJO_CC_BLUE
+        address=0x0600035A,
     ),
-    LOC_JINJO_CC_GREEN: BKLocationData(
+    ITEM_JINJO_CC_GREEN: BKLocationData(
         region=RGN_CLANKERS_CAVERN,
-        address=None,
-        locked_item=ITEM_JINJO_CC_GREEN
+        address=0x0600035B,
     ),
-    LOC_JINJO_CC_ORANGE: BKLocationData(
+    ITEM_JINJO_CC_ORANGE: BKLocationData(
         region=RGN_CLANKERS_CAVERN,
-        address=None,
-        locked_item=ITEM_JINJO_CC_ORANGE
+        address=0x0600035C,
     ),
-    LOC_JINJO_CC_PURPLE: BKLocationData(
+    ITEM_JINJO_CC_PURPLE: BKLocationData(
         region=RGN_CLANKERS_CAVERN,
-        address=None,
-        locked_item=ITEM_JINJO_CC_PURPLE
+        address=0x0600035D,
     ),
-    LOC_JINJO_CC_YELLOW: BKLocationData(
+    ITEM_JINJO_CC_YELLOW: BKLocationData(
         region=RGN_CLANKERS_CAVERN,
-        address=None,
-        locked_item=ITEM_JINJO_CC_YELLOW
+        address=0x0600035E,
     ),
-    LOC_JINJO_BGS_BLUE: BKLocationData(
+
+    # ---- Jinjos: Bubblegloop Swamp ----
+    ITEM_JINJO_BGS_BLUE: BKLocationData(
         region=RGN_BUBBLEGLOOP_SWAMP,
-        address=None,
-        locked_item=ITEM_JINJO_BGS_BLUE
+        address=0x0600045A,
     ),
-    LOC_JINJO_BGS_GREEN: BKLocationData(
+    ITEM_JINJO_BGS_GREEN: BKLocationData(
         region=RGN_BUBBLEGLOOP_SWAMP,
-        address=None,
-        locked_item=ITEM_JINJO_BGS_GREEN
+        address=0x0600045B,
     ),
-    LOC_JINJO_BGS_ORANGE: BKLocationData(
+    ITEM_JINJO_BGS_ORANGE: BKLocationData(
         region=RGN_BUBBLEGLOOP_SWAMP,
-        address=None,
-        locked_item=ITEM_JINJO_BGS_ORANGE
+        address=0x0600045C,
     ),
-    LOC_JINJO_BGS_PURPLE: BKLocationData(
+    ITEM_JINJO_BGS_PURPLE: BKLocationData(
         region=RGN_BUBBLEGLOOP_SWAMP,
-        address=None,
-        locked_item=ITEM_JINJO_BGS_PURPLE
+        address=0x0600045D,
     ),
-    LOC_JINJO_BGS_YELLOW: BKLocationData(
+    ITEM_JINJO_BGS_YELLOW: BKLocationData(
         region=RGN_BUBBLEGLOOP_SWAMP,
-        address=None,
-        locked_item=ITEM_JINJO_BGS_YELLOW
+        address=0x0600045E,
     ),
-    LOC_JINJO_FP_BLUE: BKLocationData(
+
+    # ---- Jinjos: Freezeezy Peak ----
+    ITEM_JINJO_FP_BLUE: BKLocationData(
         region=RGN_FREEZEEZY_PEAK,
-        address=None,
-        locked_item=ITEM_JINJO_FP_BLUE
+        address=0x0600055A,
     ),
-    LOC_JINJO_FP_GREEN: BKLocationData(
+    ITEM_JINJO_FP_GREEN: BKLocationData(
         region=RGN_FREEZEEZY_PEAK,
-        address=None,
-        locked_item=ITEM_JINJO_FP_GREEN
+        address=0x0600055B,
     ),
-    LOC_JINJO_FP_ORANGE: BKLocationData(
+    ITEM_JINJO_FP_ORANGE: BKLocationData(
         region=RGN_FREEZEEZY_PEAK,
-        address=None,
-        locked_item=ITEM_JINJO_FP_ORANGE
+        address=0x0600055C,
     ),
-    LOC_JINJO_FP_PURPLE: BKLocationData(
+    ITEM_JINJO_FP_PURPLE: BKLocationData(
         region=RGN_FREEZEEZY_PEAK,
-        address=None,
-        locked_item=ITEM_JINJO_FP_PURPLE
+        address=0x0600055D,
     ),
-    LOC_JINJO_FP_YELLOW: BKLocationData(
+    ITEM_JINJO_FP_YELLOW: BKLocationData(
         region=RGN_FREEZEEZY_PEAK,
-        address=None,
-        locked_item=ITEM_JINJO_FP_YELLOW
+        address=0x0600055E,
     ),
-    LOC_JINJO_GV_BLUE: BKLocationData(
+
+    # ---- Jinjos: Gobi's Valley ----
+    ITEM_JINJO_GV_BLUE: BKLocationData(
         region=RGN_GOBIS_VALLEY,
-        address=None,
-        locked_item=ITEM_JINJO_GV_BLUE
+        address=0x0600075A,
     ),
-    LOC_JINJO_GV_GREEN: BKLocationData(
+    ITEM_JINJO_GV_GREEN: BKLocationData(
         region=RGN_GOBIS_VALLEY,
-        address=None,
-        locked_item=ITEM_JINJO_GV_GREEN
+        address=0x0600075B,
     ),
-    LOC_JINJO_GV_ORANGE: BKLocationData(
+    ITEM_JINJO_GV_ORANGE: BKLocationData(
         region=RGN_GOBIS_VALLEY,
-        address=None,
-        locked_item=ITEM_JINJO_GV_ORANGE
+        address=0x0600075C,
     ),
-    LOC_JINJO_GV_PURPLE: BKLocationData(
+    ITEM_JINJO_GV_PURPLE: BKLocationData(
         region=RGN_GOBIS_VALLEY,
-        address=None,
-        locked_item=ITEM_JINJO_GV_PURPLE
+        address=0x0600075D,
     ),
-    LOC_JINJO_GV_YELLOW: BKLocationData(
+    ITEM_JINJO_GV_YELLOW: BKLocationData(
         region=RGN_GOBIS_VALLEY,
-        address=None,
-        locked_item=ITEM_JINJO_GV_YELLOW
+        address=0x0600075E,
     ),
-    LOC_JINJO_MMM_BLUE: BKLocationData(
-        region=RGN_MAD_MONSTER_MANSION,
-        address=None,
-        locked_item=ITEM_JINJO_MMM_BLUE
-    ),
-    LOC_JINJO_MMM_GREEN: BKLocationData(
-        region=RGN_MAD_MONSTER_MANSION,
-        address=None,
-        locked_item=ITEM_JINJO_MMM_GREEN
-    ),
-    LOC_JINJO_MMM_ORANGE: BKLocationData(
-        region=RGN_MAD_MONSTER_MANSION,
-        address=None,
-        locked_item=ITEM_JINJO_MMM_ORANGE
-    ),
-    LOC_JINJO_MMM_PURPLE: BKLocationData(
-        region=RGN_MAD_MONSTER_MANSION,
-        address=None,
-        locked_item=ITEM_JINJO_MMM_PURPLE
-    ),
-    LOC_JINJO_MMM_YELLOW: BKLocationData(
-        region=RGN_MAD_MONSTER_MANSION,
-        address=None,
-        locked_item=ITEM_JINJO_MMM_YELLOW
-    ),
-    LOC_JINJO_RBB_BLUE: BKLocationData(
-        region=RGN_RUSTY_BUCKET_BAY,
-        address=None,
-        locked_item=ITEM_JINJO_RBB_BLUE
-    ),
-    LOC_JINJO_RBB_GREEN: BKLocationData(
-        region=RGN_RUSTY_BUCKET_BAY,
-        address=None,
-        locked_item=ITEM_JINJO_RBB_GREEN
-    ),
-    LOC_JINJO_RBB_ORANGE: BKLocationData(
-        region=RGN_RUSTY_BUCKET_BAY,
-        address=None,
-        locked_item=ITEM_JINJO_RBB_ORANGE
-    ),
-    LOC_JINJO_RBB_PURPLE: BKLocationData(
-        region=RGN_RUSTY_BUCKET_BAY,
-        address=None,
-        locked_item=ITEM_JINJO_RBB_PURPLE
-    ),
-    LOC_JINJO_RBB_YELLOW: BKLocationData(
-        region=RGN_RUSTY_BUCKET_BAY,
-        address=None,
-        locked_item=ITEM_JINJO_RBB_YELLOW
-    ),
-    LOC_JINJO_CCW_BLUE: BKLocationData(
+
+    # ---- Jinjos: Click Clock Wood ----
+    ITEM_JINJO_CCW_BLUE: BKLocationData(
         region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_JINJO_CCW_BLUE
+        address=0x0600085A,
     ),
-    LOC_JINJO_CCW_GREEN: BKLocationData(
+    ITEM_JINJO_CCW_GREEN: BKLocationData(
         region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_JINJO_CCW_GREEN
+        address=0x0600085B,
     ),
-    LOC_JINJO_CCW_ORANGE: BKLocationData(
+    ITEM_JINJO_CCW_ORANGE: BKLocationData(
         region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_JINJO_CCW_ORANGE
+        address=0x0600085C,
     ),
-    LOC_JINJO_CCW_PURPLE: BKLocationData(
+    ITEM_JINJO_CCW_PURPLE: BKLocationData(
         region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_JINJO_CCW_PURPLE
+        address=0x0600085D,
     ),
-    LOC_JINJO_CCW_YELLOW: BKLocationData(
+    ITEM_JINJO_CCW_YELLOW: BKLocationData(
         region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_JINJO_CCW_YELLOW
+        address=0x0600085E,
+    ),
+
+    # ---- Jinjos: Rusty Bucket Bay ----
+    ITEM_JINJO_RBB_BLUE: BKLocationData(
+        region=RGN_RUSTY_BUCKET_BAY,
+        address=0x0600095A,
+    ),
+    ITEM_JINJO_RBB_GREEN: BKLocationData(
+        region=RGN_RUSTY_BUCKET_BAY,
+        address=0x0600095B,
+    ),
+    ITEM_JINJO_RBB_ORANGE: BKLocationData(
+        region=RGN_RUSTY_BUCKET_BAY,
+        address=0x0600095C,
+    ),
+    ITEM_JINJO_RBB_PURPLE: BKLocationData(
+        region=RGN_RUSTY_BUCKET_BAY,
+        address=0x0600095D,
+    ),
+    ITEM_JINJO_RBB_YELLOW: BKLocationData(
+        region=RGN_RUSTY_BUCKET_BAY,
+        address=0x0600095E,
+    ),
+
+    # ---- Jinjos: Mad Monster Mansion ----
+    ITEM_JINJO_MMM_BLUE: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
+        address=0x06000A5A,
+    ),
+    ITEM_JINJO_MMM_GREEN: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
+        address=0x06000A5B,
+    ),
+    ITEM_JINJO_MMM_ORANGE: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
+        address=0x06000A5C,
+    ),
+    ITEM_JINJO_MMM_PURPLE: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
+        address=0x06000A5D,
+    ),
+    ITEM_JINJO_MMM_YELLOW: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
+        address=0x06000A5E,
     ),
     LOC_WITCH_SWITCH_MM: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
@@ -5172,6 +5144,535 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_CLICK_CLOCK_WOOD,
         address=0x01460890
     ),
+
+    #Jinjos
+
+    # ---- Jinjos: Mumbo's Mountain (level 1) ----
+    LOC_JINJO_MM_BLUE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0600015A,
+    ),
+    LOC_JINJO_MM_GREEN: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0600015B,
+    ),
+    LOC_JINJO_MM_ORANGE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0600015C,
+    ),
+    ITEM_JINJO_MM_PURPLE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0600015D,
+    ),
+    LOC_JINJO_MM_YELLOW: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0600015E,
+    ),
+
+    # ---- Jinjos: Treasure Trove Cove (level 2) ----
+    LOC_JINJO_TTC_BLUE: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0600025A,
+    ),
+    LOC_JINJO_TTC_GREEN: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0600025B,
+    ),
+    LOC_JINJO_TTC_ORANGE: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0600025C,
+    ),
+    ITEM_JINJO_TTC_PURPLE: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0600025D,
+    ),
+    LOC_JINJO_TTC_YELLOW: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0600025E,
+    ),
+
+    # ---- Jinjos: Clanker's Cavern (level 3) ----
+    LOC_JINJO_CC_BLUE: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0600035A,
+    ),
+    LOC_JINJO_CC_GREEN: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0600035B,
+    ),
+    LOC_JINJO_CC_ORANGE: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0600035C,
+    ),
+    ITEM_JINJO_CC_PURPLE: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0600035D,
+    ),
+    LOC_JINJO_CC_YELLOW: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0600035E,
+    ),
+
+    # ---- Jinjos: Bubblegloop Swamp (level 4) ----
+    LOC_JINJO_BGS_BLUE: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0600045A,
+    ),
+    LOC_JINJO_BGS_GREEN: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0600045B,
+    ),
+    LOC_JINJO_BGS_ORANGE: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0600045C,
+    ),
+    ITEM_JINJO_BGS_PURPLE: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0600045D,
+    ),
+    LOC_JINJO_BGS_YELLOW: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0600045E,
+    ),
+
+    # ---- Jinjos: Freezeezy Peak (level 5) ----
+    LOC_JINJO_FP_BLUE: BKLocationData(
+        region=RGN_FREEZEEZY_PEAK,
+        address=0x0600055A,
+    ),
+    LOC_JINJO_FP_GREEN: BKLocationData(
+        region=RGN_FREEZEEZY_PEAK,
+        address=0x0600055B,
+    ),
+    LOC_JINJO_FP_ORANGE: BKLocationData(
+        region=RGN_FREEZEEZY_PEAK,
+        address=0x0600055C,
+    ),
+    ITEM_JINJO_FP_PURPLE: BKLocationData(
+        region=RGN_FREEZEEZY_PEAK,
+        address=0x0600055D,
+    ),
+    LOC_JINJO_FP_YELLOW: BKLocationData(
+        region=RGN_FREEZEEZY_PEAK,
+        address=0x0600055E,
+    ),
+
+    # ---- Jinjos: Gobi's Valley (level 7) ----
+    LOC_JINJO_GV_BLUE: BKLocationData(
+        region=RGN_GOBIS_VALLEY,
+        address=0x0600075A,
+    ),
+    LOC_JINJO_GV_GREEN: BKLocationData(
+        region=RGN_GOBIS_VALLEY,
+        address=0x0600075B,
+    ),
+    LOC_JINJO_GV_ORANGE: BKLocationData(
+        region=RGN_GOBIS_VALLEY,
+        address=0x0600075C,
+    ),
+    ITEM_JINJO_GV_PURPLE: BKLocationData(
+        region=RGN_GOBIS_VALLEY,
+        address=0x0600075D,
+    ),
+    LOC_JINJO_GV_YELLOW: BKLocationData(
+        region=RGN_GOBIS_VALLEY,
+        address=0x0600075E,
+    ),
+
+    # ---- Jinjos: Click Clock Wood (level 8) ----
+    LOC_JINJO_CCW_BLUE: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=0x0600085A,
+    ),
+    LOC_JINJO_CCW_GREEN: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=0x0600085B,
+    ),
+    LOC_JINJO_CCW_ORANGE: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=0x0600085C,
+    ),
+    ITEM_JINJO_CCW_PURPLE: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=0x0600085D,
+    ),
+    LOC_JINJO_CCW_YELLOW: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=0x0600085E,
+    ),
+
+    # ---- Jinjos: Rusty Bucket Bay (level 9) ----
+    LOC_JINJO_RBB_BLUE: BKLocationData(
+        region=RGN_RUSTY_BUCKET_BAY,
+        address=0x0600095A,
+    ),
+    LOC_JINJO_RBB_GREEN: BKLocationData(
+        region=RGN_RUSTY_BUCKET_BAY,
+        address=0x0600095B,
+    ),
+    LOC_JINJO_RBB_ORANGE: BKLocationData(
+        region=RGN_RUSTY_BUCKET_BAY,
+        address=0x0600095C,
+    ),
+    ITEM_JINJO_RBB_PURPLE: BKLocationData(
+        region=RGN_RUSTY_BUCKET_BAY,
+        address=0x0600095D,
+    ),
+    LOC_JINJO_RBB_YELLOW: BKLocationData(
+        region=RGN_RUSTY_BUCKET_BAY,
+        address=0x0600095E,
+    ),
+
+    # ---- Jinjos: Mad Monster Mansion (level 0xA) ----
+    LOC_JINJO_MMM_BLUE: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
+        address=0x06000A5A,
+    ),
+    LOC_JINJO_MMM_GREEN: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
+        address=0x06000A5B,
+    ),
+    LOC_JINJO_MMM_ORANGE: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
+        address=0x06000A5C,
+    ),
+    ITEM_JINJO_MMM_PURPLE: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
+        address=0x06000A5D,
+    ),
+    LOC_JINJO_MMM_YELLOW: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
+        address=0x06000A5E,
+    ),
+
+    # Extra Lives
+
+    # Spiral Mountain - 2 extra lives
+    LOC_LIFE_SM_BK_HOUSE: BKLocationData(
+        region=RGN_SPIRAL_MOUNTAIN,
+        address=0x0D012933,# Needs Flap Flip
+    ),
+    LOC_LIFE_SM_WATERFALL: BKLocationData(
+        region=RGN_SPIRAL_MOUNTAIN,
+        address=0x0D01DCE5, #Needs Jump & Wing Flap/Rat a Tat Rap or just Talon Trot
+    ),
+
+    # Gruntilda's Lair - 10 extra lives
+    LOC_LIFE_GL_CCW_PUZZLE_ROOM: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
+        address=0x0D6B15A9, #Needs Swim
+    ),
+    LOC_LIFE_GL_BGS_PIPE: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR,
+        address=0x0D05BC68, #Needs Flap Flip
+    ),
+    LOC_LIFE_GL_GRUNTY_STATUE_HAT: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
+        address=0x0D006F01,
+    ),
+    LOC_LIFE_GL_MMM_CRYPT: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_350_NOTE_DOOR,
+        address=0x0D01CBF8,
+    ),
+    LOC_LIFE_GL_WATER_LEVEL_2: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_450_NOTE_DOOR,
+        address=0x0D007801, #Requires enough tokens for pumkin MMM access and Talon Trot
+    ),
+    LOC_LIFE_GL_CCW_ENTRANCE_TOP: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_640_NOTE_DOOR,
+        address=0x0D0578A0,
+    ),
+    LOC_LIFE_GL_FURNACE_FUN_LEFT: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x0D02A8F9,
+    ),
+    LOC_LIFE_GL_FURNACE_FUN_2: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x0D00AFE0,
+    ),
+    LOC_LIFE_GL_FURNACE_FUN_3: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x0D009FE0,
+    ),
+    LOC_LIFE_GL_810_NOTE_DOOR: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x0D008EF0,
+    ),
+
+    # Mumbo's Mountain - 2 extra lives
+    LOC_LIFE_MM_FIFTH_HUT: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0D020EA1, #Needs Beak Buster and Talontrot or Beak Buster and Jump
+    ),
+    LOC_LIFE_MM_TICKERS_TOWER: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0D020D4C, # Needs 5 mumbo tokens for transformation
+    ),
+
+    # Treasure Trove Cove - 3 extra lives
+    LOC_LIFE_TTC_POND: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0D07FC22, #Needs talon trot
+    ),
+    LOC_LIFE_TTC_UNDERWATER_SPIRAL: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0D07FC32, #needs swim
+    ),
+    LOC_LIFE_TTC_FLOATING_CRATE: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0D073867, #needs jump
+    ),
+
+    # Clanker's Cavern - 3 extra lives
+    LOC_LIFE_CC_ORANGE_JINJO_PIPE: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0D0B3626, #needs Beak Buster
+    ),
+    LOC_LIFE_CC_LEFT_FIN: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0D0B2B48,
+    ),
+    LOC_LIFE_CC_GRATE_ALCOVE: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0D0B12C8, #Needs Shock spring Jump, Jump and Wing Flap
+    ),
+
+    # Bubblegloop Swamp - 4 extra lives
+    LOC_LIFE_BGS_GIANT_EGG: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0D077B03,
+    ),
+    LOC_LIFE_BGS_HUT_PEDESTALS: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0D000D02,
+    ),
+    LOC_LIFE_BGS_MR_VILE_21: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0D04CF00, #Needs Turbo Talon And Enough Tokens for Croc 
+    ),
+    LOC_LIFE_BGS_MR_VILE_22: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0D012790,#Needs Turbo Talon And Enough Tokens for Croc
+    ),
+    LOC_LIFE_BGS_MR_VILE_23: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0D01146F,#Needs Turbo Talon And Enough Tokens for Croc
+    ),
+
+    # Freezeezy Peak - 3 extra lives
+    LOC_LIFE_FP_MUMBOS_HUT: BKLocationData(
+        region=RGN_FREEZEEZY_PEAK,
+        address=0x0D00B3C0, #needs flight
+    ),
+    LOC_LIFE_FP_WOZZAS_CAVE: BKLocationData(
+        region=RGN_FREEZEEZY_PEAK,
+        address=0x0D063941, #Needs Walrus Tokens
+    ),
+    LOC_LIFE_FP_BOGGY_RACE: BKLocationData(
+        region=RGN_FREEZEEZY_PEAK,
+        address=0x0D021260,
+    ),
+
+    # Gobi's Valley - 3 extra lives
+    LOC_LIFE_GV_BEHIND_JINXY: BKLocationData(
+        region=RGN_GOBIS_VALLEY,
+        address=0x0D0149F0, #needs Stilt Stride
+    ),
+    LOC_LIFE_GV_WATER_PYRAMID: BKLocationData(
+        region=RGN_GOBIS_VALLEY,
+        address=0x0D063940,
+    ),
+    LOC_LIFE_GV_SANDYBUTT_TOMB: BKLocationData(
+        region=RGN_GOBIS_VALLEY,
+        address=0x0D00103F,
+    ),
+
+    # Mad Monster Mansion - 3 extra lives
+    LOC_LIFE_MMM_ORGAN_PIPES: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
+        address=0x0D1CFB4D,
+    ),
+    LOC_LIFE_MMM_CHANDELIER: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
+        address=0x0D2605BF,
+    ),
+    LOC_LIFE_MMM_SECRET_CHURCH: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
+        address=0x0D2B0274,
+    ),
+
+    # Rusty Bucket Bay - 3 extra lives
+    LOC_LIFE_RBB_BOOM_BOX: BKLocationData(
+        region=RGN_RUSTY_BUCKET_BAY,
+        address=0x0D38FC08,
+    ),
+    LOC_LIFE_RBB_STORAGE_HUT: BKLocationData(
+        region=RGN_RUSTY_BUCKET_BAY,
+        address=0x0D35002D,
+    ),
+    LOC_LIFE_RBB_ENGINE_ROOM: BKLocationData(
+        region=RGN_RUSTY_BUCKET_BAY,
+        address=0x0D34EFD8,
+    ),
+
+    # Click Clock Wood Spring - 4 extra lives
+    LOC_LIFE_CCW_SPRING_MUMBOS_HUT: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=0x0D43F41F,
+    ),
+    LOC_LIFE_CCW_SPRING_LAKE_STUMP: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=0x0D431595,
+    ),
+    LOC_LIFE_CCW_SPRING_TOP_ROOM_1: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=0x0D65FF5D,
+    ),
+    LOC_LIFE_CCW_SPRING_TOP_ROOM_2: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=0x0D65FE4D,
+    ),
+
+    # Click Clock Wood Summer - 3 extra lives
+    LOC_LIFE_CCW_SUMMER_FLOWER_PLOT: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=0x0D44FE7E,
+    ),
+    LOC_LIFE_CCW_SUMMER_TREEHOUSE: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=0x0D4429D0,
+    ),
+    LOC_LIFE_CCW_SUMMER_TOP_ROOM: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=0x0D66057F,
+    ),
+
+    # Click Clock Wood Autumn - 3 extra lives
+    LOC_LIFE_CCW_AUTUMN_GNAWTYS_HOUSE: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=0x0D450399,
+    ),
+    LOC_LIFE_CCW_AUTUMN_SNAREBEAR: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=0x0D452480,
+    ),
+    LOC_LIFE_CCW_AUTUMN_TOP_ROOM: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=0x0D67FE4C,
+    ),
+
+    # Click Clock Wood Winter - 2 extra lives
+    LOC_LIFE_CCW_WINTER_SIR_SLUSH: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=0x0D461A3F,
+    ),
+    LOC_LIFE_CCW_WINTER_POND: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=0x0D4616B8,
+    ),
+
+
+# WITCH SWITCH LOCATIONS (9 total)
+
+
+    LOC_WITCH_SWITCH_MM: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0E000001,
+    ),
+    LOC_WITCH_SWITCH_TTC: BKLocationData(
+        region=RGN_TREASURE_TROVE_COVE,
+        address=0x0E000002,
+    ),
+    LOC_WITCH_SWITCH_CC: BKLocationData(
+        region=RGN_CLANKERS_CAVERN,
+        address=0x0E000003,
+    ),
+    LOC_WITCH_SWITCH_BGS: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0E000004,
+    ),
+    LOC_WITCH_SWITCH_FP: BKLocationData(
+        region=RGN_FREEZEEZY_PEAK,
+        address=0x0E000005,
+    ),
+    LOC_WITCH_SWITCH_GV: BKLocationData(
+        region=RGN_GOBIS_VALLEY,
+        address=0x0E000006,
+    ),
+    LOC_WITCH_SWITCH_MMM: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
+        address=0x0E000007,
+    ),
+    LOC_WITCH_SWITCH_RBB: BKLocationData(
+        region=RGN_RUSTY_BUCKET_BAY,
+        address=0x0E000008,
+    ),
+    LOC_WITCH_SWITCH_CCW: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=0x0E000009,
+    ),
+
+
+    # WARP CAULDRON LOCATIONS (10 total)
+
+    LOC_CAULDRON_PURPLE_1: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
+        address=0x0F000001,
+    ),
+    LOC_CAULDRON_PURPLE_2: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
+        address=0x0F000002,
+    ),
+    LOC_CAULDRON_GREEN_1: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
+        address=0x0F000003,
+    ),
+    LOC_CAULDRON_GREEN_2: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_450_NOTE_DOOR,
+        address=0x0F000004,
+    ),
+    LOC_CAULDRON_ORANGE_1: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
+        address=0x0F000005,
+    ),
+    LOC_CAULDRON_ORANGE_2: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_640_NOTE_DOOR,
+        address=0x0F000006,
+    ),
+    LOC_CAULDRON_YELLOW_1: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x0F000007,
+    ),
+    LOC_CAULDRON_YELLOW_2: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_810_NOTE_DOOR,
+        address=0x0F000008,
+    ),
+
+
+    # WATER LEVEL SWITCH LOCATIONS (3 total)
+
+    LOC_WATER_SWITCH_1: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_350_NOTE_DOOR, #Needs MMM access and Pumpkin Transform
+        address=0x10000001,
+    ),
+    LOC_WATER_SWITCH_2: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_450_NOTE_DOOR,
+        address=0x10000002,
+    ),
+    LOC_WATER_SWITCH_3: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_640_NOTE_DOOR,
+        address=0x10000003,
+    ),
+
+
+    # GV SNS SWITCH LOCATION (1 total)
+
+    LOC_GV_SNS_SWITCH: BKLocationData(
+        region=RGN_GOBIS_VALLEY,
+        address=0x11000001,
+    ),
+
+
     LOC_DEFEAT_GRUNTILDA: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR_FIGHT,
         locked_item=ITEM_VICTORY
@@ -5232,9 +5733,13 @@ for location_name, location_data in location_data_table.items():
             extra_location_table_old_names[name] = location_name
             num_total_extra_locs += 1
 
-for location_name, location_data in extra_location_table.items():
-    location_data_table[location_name] = BKLocationData(region=location_data.region, address=location_data.address, can_create=location_data.can_create)
+# DO NOT merge extra_location_table into location_data_table here!
+# That happens during world generation in __init__.py when options are known.
 
+# for location_name, location_data in extra_location_table.items():
+#     location_data_table[location_name] = BKLocationData(region=location_data.region, address=location_data.address, can_create=location_data.can_create)
+
+# location_table is used for the DATA PACKAGE - only base locations, NO extras
 location_table = {name: data.address for name, data in location_data_table.items() if data.address is not None}
 code_to_location_table = {data.address: name for name, data in location_data_table.items() if data.address is not None}
 locked_locations = {name: data for name, data in location_data_table.items() if data.locked_item}

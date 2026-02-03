@@ -1443,6 +1443,121 @@ LOC_NOTE_CCW_WINTER_HIGHEST_PLATFORMS_2 = "CCW Winter Highest Platforms Note 2"
 LOC_NOTE_CCW_WINTER_HIGHEST_PLATFORMS_3 = "CCW Winter Highest Platforms Note 3"
 LOC_NOTE_CCW_WINTER_HIGHEST_PLATFORMS_4 = "CCW Winter Highest Platforms Note 4"
 
+
+# Extra Lives
+
+# Spiral Mountain
+LOC_LIFE_SM_BK_HOUSE = "Extra Life Atop Banjos Chimney"
+LOC_LIFE_SM_WATERFALL = "Extra Life Behind Waterfall"
+
+# Gruntilda's Lair
+LOC_LIFE_GL_CCW_PUZZLE_ROOM = "Extra Life GL CCW Puzzle Room"
+LOC_LIFE_GL_BGS_PIPE = "Extra Life GL Pipe Near BGS"
+LOC_LIFE_GL_GRUNTY_STATUE_HAT = "Extra Life GL Grunty Statue Hat"
+LOC_LIFE_GL_MMM_CRYPT = "Extra Life GL Behind MMM Crypt"
+LOC_LIFE_GL_WATER_LEVEL_2 = "Extra Life GL Water Level 2 Alcove"
+LOC_LIFE_GL_CCW_ENTRANCE_TOP = "Extra Life GL CCW Entrance Top"
+LOC_LIFE_GL_FURNACE_FUN_LEFT = "Extra Life GL Furnace Fun 1"
+LOC_LIFE_GL_FURNACE_FUN_2 = "Extra Life GL Furnace Fun 2"
+LOC_LIFE_GL_FURNACE_FUN_3 = "Extra Life GL Furnace Fun 3"
+LOC_LIFE_GL_810_NOTE_DOOR = "Extra Life GL 810 Note Door Window"
+
+# Mumbo's Mountain
+LOC_LIFE_MM_FIFTH_HUT = "Extra Life MM Fifth Hut"
+LOC_LIFE_MM_TICKERS_TOWER = "Extra Life MM Tickers Tower"
+
+# Treasure Trove Cove
+LOC_LIFE_TTC_POND = "Extra Life TTC Pond"
+LOC_LIFE_TTC_UNDERWATER_SPIRAL = "Extra Life TTC Underwater Spiral Path"
+LOC_LIFE_TTC_FLOATING_CRATE = "Extra Life TTC Floating Crate"
+
+# Clanker's Cavern
+LOC_LIFE_CC_ORANGE_JINJO_PIPE = "Extra Life CC Orange Jinjo Pipe"
+LOC_LIFE_CC_LEFT_FIN = "Extra Life CC Near Left Fin"
+LOC_LIFE_CC_GRATE_ALCOVE = "Extra Life CC Grate Alcove"
+
+# Bubblegloop Swamp
+LOC_LIFE_BGS_GIANT_EGG = "Extra Life BGS Above Giant Egg"
+LOC_LIFE_BGS_HUT_PEDESTALS = "Extra Life BGS Hut Pedestals"
+LOC_LIFE_BGS_MR_VILE_21 = "Extra Life BGS Mr Vile Challenge 2-1"
+LOC_LIFE_BGS_MR_VILE_22 = "Extra Life BGS Mr Vile Challenge 2-2"
+LOC_LIFE_BGS_MR_VILE_23 = "Extra Life BGS Mr Vile Challenge 2-3"
+
+# Freezeezy Peak
+LOC_LIFE_FP_MUMBOS_HUT = "Extra Life FP Mumbos Hut"
+LOC_LIFE_FP_WOZZAS_CAVE = "Extra Life FP Wozzas Cave"
+LOC_LIFE_FP_BOGGY_RACE = "Extra Life FP Boggy Race Finish"
+
+# Gobi's Valley
+LOC_LIFE_GV_BEHIND_JINXY = "Extra Life GV Behind Jinxy"
+LOC_LIFE_GV_WATER_PYRAMID = "Extra Life GV Water Pyramid Top"
+LOC_LIFE_GV_SANDYBUTT_TOMB = "Extra Life GV Sandybutt Tomb"
+
+# Mad Monster Mansion
+LOC_LIFE_MMM_ORGAN_PIPES = "Extra Life MMM Church Organ Pipes"
+LOC_LIFE_MMM_CHANDELIER = "Extra Life MMM Napper Chandelier"
+LOC_LIFE_MMM_SECRET_CHURCH = "Extra Life MMM Secret Church Room"
+
+# Rusty Bucket Bay
+LOC_LIFE_RBB_BOOM_BOX = "Extra Life RBB Boom Box Container"
+LOC_LIFE_RBB_STORAGE_HUT = "Extra Life RBB Storage Hut"
+LOC_LIFE_RBB_ENGINE_ROOM = "Extra Life RBB Engine Room Window"
+
+# Click Clock Wood Spring
+LOC_LIFE_CCW_SPRING_MUMBOS_HUT = "Extra Life CCW Spring Above Mumbos Hut"
+LOC_LIFE_CCW_SPRING_LAKE_STUMP = "Extra Life CCW Spring Lake Stump"
+LOC_LIFE_CCW_SPRING_TOP_ROOM_1 = "Extra Life CCW Spring Top Room 1"
+LOC_LIFE_CCW_SPRING_TOP_ROOM_2 = "Extra Life CCW Spring Top Room 2"
+
+# Click Clock Wood Summer
+LOC_LIFE_CCW_SUMMER_FLOWER_PLOT = "Extra Life CCW Summer Flower Plot"
+LOC_LIFE_CCW_SUMMER_TREEHOUSE = "Extra Life CCW Summer Treehouse Corner"
+LOC_LIFE_CCW_SUMMER_TOP_ROOM = "Extra Life CCW Summer Top Room"
+
+# Click Clock Wood Autumn
+LOC_LIFE_CCW_AUTUMN_GNAWTYS_HOUSE = "Extra Life CCW Autumn Gnawtys House"
+LOC_LIFE_CCW_AUTUMN_SNAREBEAR = "Extra Life CCW Autumn Snarebear"
+LOC_LIFE_CCW_AUTUMN_TOP_ROOM = "Extra Life CCW Autumn Top Room"
+
+# Click Clock Wood Winter
+LOC_LIFE_CCW_WINTER_SIR_SLUSH = "Extra Life CCW Winter Sir Slush"
+LOC_LIFE_CCW_WINTER_POND = "Extra Life CCW Winter Underwater Pond"
+
+
+# WITCH SWITCH LOCATION CONSTANTS (9 total)
+
+LOC_WITCH_SWITCH_MM = "Witch Switch MM"
+LOC_WITCH_SWITCH_TTC = "Witch Switch TTC"
+LOC_WITCH_SWITCH_CC = "Witch Switch CC"
+LOC_WITCH_SWITCH_BGS = "Witch Switch BGS"
+LOC_WITCH_SWITCH_FP = "Witch Switch FP"
+LOC_WITCH_SWITCH_GV = "Witch Switch GV"
+LOC_WITCH_SWITCH_MMM = "Witch Switch MMM"
+LOC_WITCH_SWITCH_RBB = "Witch Switch RBB"
+LOC_WITCH_SWITCH_CCW = "Witch Switch CCW"
+
+
+# WARP CAULDRON LOCATION CONSTANTS (8 total)
+
+LOC_CAULDRON_PURPLE_1 = "Warp Cauldron Purple GL 50 Note Door"
+LOC_CAULDRON_PURPLE_2 = "Warp Cauldron Purple GL MMM"
+LOC_CAULDRON_GREEN_1 = "Warp Cauldron Green GL Grunty Statue"
+LOC_CAULDRON_GREEN_2 = "Warp Cauldron Green GL RBB"
+LOC_CAULDRON_ORANGE_1 = "Warp Cauldron Orange GL CC Pipe"
+LOC_CAULDRON_ORANGE_2 = "Warp Cauldron Orange GL CCW"
+LOC_CAULDRON_YELLOW_1 = "Warp Cauldron Yellow GL Furnace Fun"
+LOC_CAULDRON_YELLOW_2 = "Warp Cauldron Yellow GL Lair Keep"
+
+
+# WATER LEVEL SWITCH LOCATION CONSTANTS (3 total)
+
+LOC_WATER_SWITCH_1 = "GL Water Switch 1"
+LOC_WATER_SWITCH_2 = "GL Water Switch 2"
+LOC_WATER_SWITCH_3 = "GL Water Switch 3"
+
+#SNS Switches
+LOC_GV_SNS_SWITCH = "GV SNS Switch"
+
 # Egg and Feather Locations
 # Gruntys Lair Eggs
 LOC_BEGG_GL_AROUND_RED_CAULDRON_1 = "GL Blue Egg 1 Around Red Cauldron"

@@ -1,7 +1,7 @@
 from typing import List
 from typing import Dict
 
-from BaseClasses import Region, Tutorial
+from BaseClasses import Region, Tutorial, CollectionState
 from worlds.AutoWorld import WebWorld, World
 from .Items import BKItem, item_data_table, item_table, code_to_item_table
 from .Locations import BKLocation, BKLocationData, num_total_extra_locs, location_data_table, extra_location_table, extra_location_table_old_names, location_table, code_to_location_table, locked_locations
@@ -54,6 +54,7 @@ class BKWorld(World):
 
     def create_items(self) -> None:
         mw = self.multiworld
+        player = self.player
 
         item_pool: List[BKItem] = []
         item_pool_count: Dict[str, int] = {}
@@ -65,6 +66,20 @@ class BKWorld(World):
                     item_pool_count[name] += 1
 
         mw.itempool += item_pool
+
+        # Add filler items for jinjo locations
+        self.create_and_add_filler_items(45)
+
+        # Balance: ensure total items >= total unfilled locations
+        # This must be here (in create_items) not in create_regions,
+        # because create_regions runs BEFORE create_items in AP's generation order.
+        total_unfilled = sum(
+            1 for loc in mw.get_locations(player)
+            if not loc.item
+        )
+        total_items = sum(1 for item in mw.itempool if item.player == player)
+        if total_items < total_unfilled:
+            self.create_and_add_filler_items(total_unfilled - total_items)
 
     def create_regions(self) -> None:
         player = self.player
@@ -99,6 +114,30 @@ class BKWorld(World):
             for location_name, location_data in location_data_table.items():
                 if location_data.address is not None and (location_data.address & 0xFF000000) == 0x01000000:
                     self.place(location_name, ITEM_NOTE)
+
+    def pre_fill(self) -> None:
+        from BaseClasses import CollectionState
+
+        player = self.player
+        mw = self.multiworld
+
+        # Place 1 Jiggy in sphere 0 to unlock MM and prevent deadlocks
+        state = CollectionState(mw)
+        sphere0_locations = [
+            loc for region in mw.regions if region.player == player
+            for loc in region.locations if not loc.item and loc.can_reach(state)
+        ]
+
+        if not sphere0_locations:
+            return
+
+        jiggy = next((i for i in mw.itempool if i.player == player and i.name == ITEM_JIGGY), None)
+        if not jiggy:
+            return
+
+        loc = self.random.choice(sphere0_locations)
+        loc.place_locked_item(jiggy)
+        mw.itempool.remove(jiggy)
 
     def create_and_add_filler_items(self, count: int = 1):
         for i in range(count):
