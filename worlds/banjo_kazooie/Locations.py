@@ -16,195 +16,138 @@ class BKLocationData(NamedTuple):
     locked_item: Optional[str] = None
 
 location_data_table: Dict[str, BKLocationData] = {
-    LOC_TRANSFORMATION_TERMITE: BKLocationData(
-        region=RGN_MUMBOS_MOUNTAIN,
-        address=None,
-        locked_item=ITEM_TRANSFORMATION_TERMITE
-    ),
-    LOC_TRANSFORMATION_CROCODILE: BKLocationData(
-        region=RGN_BUBBLEGLOOP_SWAMP,
-        address=None,
-        locked_item=ITEM_TRANSFORMATION_CROCODILE
-    ),
-    LOC_TRANSFORMATION_WALRUS: BKLocationData(
-        region=RGN_FREEZEEZY_PEAK,
-        address=None,
-        locked_item=ITEM_TRANSFORMATION_WALRUS
-    ),
-    LOC_TRANSFORMATION_PUMPKIN: BKLocationData(
-        region=RGN_MAD_MONSTER_MANSION,
-        address=None,
-        locked_item=ITEM_TRANSFORMATION_PUMPKIN
-    ),
-    LOC_TRANSFORMATION_BEE: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_TRANSFORMATION_BEE
-    ),
+    # Gold Bullions
     LOC_BLUBBER_GOLD_TTC_POOP_DECK: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
-        address=None,
-        locked_item=ITEM_BLUBBER_GOLD
+        address=0x0C00FD60,
     ),
     LOC_BLUBBER_GOLD_TTC_HOLD_UNDERWATER: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
-        address=None,
-        locked_item=ITEM_BLUBBER_GOLD
+        address=0x0C00FD63,
     ),
+    # Presents
     LOC_RED_PRESENT_FP_TREE: BKLocationData(
         region=RGN_FREEZEEZY_PEAK,
-        address=None,
-        locked_item=ITEM_RED_PRESENT
+        address=0x120001FF,
     ),
     LOC_GREEN_PRESENT_FP_NEAR_RAMP: BKLocationData(
         region=RGN_FREEZEEZY_PEAK,
-        address=None,
-        locked_item=ITEM_GREEN_PRESENT
+        address=0x120001FE,
     ),
     LOC_BLUE_PRESENT_FP_GIANT_SNOWMAN_NOSE: BKLocationData(
         region=RGN_FREEZEEZY_PEAK,
-        address=None,
-        locked_item=ITEM_BLUE_PRESENT
+        address=0x120001FD,
     ),
+    # Summer Caterpillars
     LOC_WORM_SUMMER_CCW_ENTRY_PATH: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_WORM
+        region=RGN_CCW_SUMMER,
+        address=0x13440C12,
     ),
     LOC_WORM_SUMMER_CCW_SNAPPER_NEAR_BULL: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_WORM
-    ),
-    LOC_WORM_SUMMER_CCW_LEDGE_NEAR_MUMBO: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_WORM
-    ),
-    LOC_WORM_SUMMER_CCW_OUTSIDE_MUMBO: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_WORM
-    ),
-    LOC_WORM_SUMMER_CCW_IN_DRIED_LAKE: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_WORM
+        region=RGN_CCW_SUMMER,
+        address=0x1344F8C0,
     ),
     LOC_WORM_SUMMER_CCW_LEDGE_ABOVE_BRAMBLES: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_WORM
+        region=RGN_CCW_SUMMER,
+        address=0x1344E99F,
+    ),
+    LOC_WORM_SUMMER_CCW_LEDGE_NEAR_MUMBO: BKLocationData(
+        region=RGN_CCW_SUMMER,
+        address=0x1344FB48,
+    ),
+    LOC_WORM_SUMMER_CCW_IN_DRIED_LAKE: BKLocationData(
+        region=RGN_CCW_SUMMER,
+        address=0x13441636,
+    ),
+    LOC_WORM_SUMMER_CCW_OUTSIDE_MUMBO: BKLocationData(
+        region=RGN_CCW_SUMMER,
+        address=0x1344E875,
     ),
     LOC_WORM_SUMMER_CCW_NEAR_CABIN: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_WORM
-    ),
-    LOC_WORM_SUMMER_CCW_ZUBBAS_NEST: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_WORM
+        region=RGN_CCW_SUMMER,
+        address=0x13441CBD,
     ),
     LOC_WORM_SUMMER_CCW_NEAR_NABNUTS_HOME: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_WORM
+        region=RGN_CCW_SUMMER,
+        address=0x13441A3F,
     ),
+    # Autumn Caterpillars
     LOC_WORM_AUTUMN_CCW_ENTRY_LEAF_PILE: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_WORM
+        region=RGN_CCW_AUTUMN,
+        address=0x13451EBE,
     ),
     LOC_WORM_AUTUMN_CCW_RAMP_NEAR_LAKE: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_WORM
+        region=RGN_CCW_AUTUMN,
+        address=0x134520BD,
     ),
     LOC_WORM_AUTUMN_CCW_NEAR_STILT_BOOTS: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_WORM
+        region=RGN_CCW_AUTUMN,
+        address=0x1345F830,
     ),
     LOC_WORM_AUTUMN_CCW_INSIDE_MUMBO_HUT: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_WORM
+        region=RGN_CCW_AUTUMN,
+        address=0x134CFFEB,
     ),
     LOC_WORM_AUTUMN_CCW_LEAF_PILE_NEAR_BRAMBLES: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_WORM
+        region=RGN_CCW_AUTUMN,
+        address=0x1345E5FB,
     ),
     LOC_WORM_AUTUMN_CCW_LEAF_PILE_NEAR_FLOWER: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_WORM
+        region=RGN_CCW_AUTUMN,
+        address=0x1345F25D,
     ),
     LOC_WORM_AUTUMN_CCW_LEDGE_ABOVE_BRAMBLES: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_WORM
+        region=RGN_CCW_AUTUMN,
+        address=0x1345FDCE,
     ),
     LOC_WORM_AUTUMN_CCW_ATOP_BEEHIVE: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_WORM
+        region=RGN_CCW_AUTUMN,
+        address=0x1345FC29,
     ),
     LOC_WORM_AUTUMN_CCW_INSIDE_BEEHIVE: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_WORM
+        region=RGN_CCW_AUTUMN,
+        address=0x135C006A,
     ),
     LOC_WORM_AUTUMN_CCW_BELOW_CABIN: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_WORM
+        region=RGN_CCW_AUTUMN,
+        address=0x13451EB8,
     ),
     LOC_WORM_AUTUMN_CCW_INSIDE_NABNUTS_HOUSE: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_WORM
+        region=RGN_CCW_AUTUMN,
+        address=0x1360032A,
     ),
     LOC_WORM_AUTUMN_CCW_BEHIND_EYRIE: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_WORM
+        region=RGN_CCW_AUTUMN,
+        address=0x1345FDC1,
     ),
     LOC_WORM_AUTUMN_CCW_TREETOP_PAST_NEST: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_WORM
+        region=RGN_CCW_AUTUMN,
+        address=0x13450B2A,
     ),
+    # Acorns
     LOC_ACORN_AUTUMN_CCW_BEHIND_UPPER_WINDOW: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_ACORN
+        region=RGN_CCW_AUTUMN,
+        address=0x14000001,
     ),
     LOC_ACORN_AUTUMN_CCW_EDGE_OF_CIRCULAR_GAP_PATH: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_ACORN
+        region=RGN_CCW_AUTUMN,
+        address=0x14000002,
     ),
     LOC_ACORN_AUTUMN_CCW_MIDDLE_OF_CIRCULAR_GAP_PATH: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_ACORN
+        region=RGN_CCW_AUTUMN,
+        address=0x14000003,
     ),
     LOC_ACORN_AUTUMN_CCW_LEDGE_BELOW_CIRCULAR_GAP_PATH: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_ACORN
+        region=RGN_CCW_AUTUMN,
+        address=0x14000004,
     ),
     LOC_ACORN_AUTUMN_CCW_LOWER_SLOPED_PATH: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_ACORN
+        region=RGN_CCW_AUTUMN,
+        address=0x14000005,
     ),
     LOC_ACORN_AUTUMN_CCW_INSIDE_NABNUTS_HOUSE: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_ACORN
+        region=RGN_CCW_AUTUMN,
+        address=0x14000006,
     ),
     LOC_SEASON_SPRING:  BKLocationData(
         region=RGN_CLICK_CLOCK_WOOD,
@@ -216,258 +159,213 @@ location_data_table: Dict[str, BKLocationData] = {
         address=None,
         locked_item=ITEM_SEASON_SUMMER
     ),
-    LOC_SEASON_FALL:  BKLocationData(
+    LOC_SEASON_AUTUMN:  BKLocationData(
         region=RGN_CLICK_CLOCK_WOOD,
         address=None,
-        locked_item=ITEM_SEASON_FALL
+        locked_item=ITEM_SEASON_AUTUMN
     ),
     LOC_SEASON_WINTER:  BKLocationData(
         region=RGN_CLICK_CLOCK_WOOD,
         address=None,
         locked_item=ITEM_SEASON_WINTER
     ),
-# ---- Jinjos: Mumbo's Mountain ----
-    ITEM_JINJO_MM_BLUE: BKLocationData(
+    #  Jinjos: Mumbo's Mountain 
+    LOC_JINJO_MM_BLUE: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0600015A,
     ),
-    ITEM_JINJO_MM_GREEN: BKLocationData(
+    LOC_JINJO_MM_GREEN: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0600015B,
     ),
-    ITEM_JINJO_MM_ORANGE: BKLocationData(
+    LOC_JINJO_MM_ORANGE: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0600015C,
     ),
-    ITEM_JINJO_MM_PURPLE: BKLocationData(
+    LOC_JINJO_MM_PURPLE: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0600015D,
     ),
-    ITEM_JINJO_MM_YELLOW: BKLocationData(
+    LOC_JINJO_MM_YELLOW: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
         address=0x0600015E,
     ),
 
-    # ---- Jinjos: Treasure Trove Cove ----
-    ITEM_JINJO_TTC_BLUE: BKLocationData(
+    #  Jinjos: Treasure Trove Cove 
+    LOC_JINJO_TTC_BLUE: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0600025A,
     ),
-    ITEM_JINJO_TTC_GREEN: BKLocationData(
+    LOC_JINJO_TTC_GREEN: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0600025B,
     ),
-    ITEM_JINJO_TTC_ORANGE: BKLocationData(
+    LOC_JINJO_TTC_ORANGE: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0600025C,
     ),
-    ITEM_JINJO_TTC_PURPLE: BKLocationData(
+    LOC_JINJO_TTC_PURPLE: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0600025D,
     ),
-    ITEM_JINJO_TTC_YELLOW: BKLocationData(
+    LOC_JINJO_TTC_YELLOW: BKLocationData(
         region=RGN_TREASURE_TROVE_COVE,
         address=0x0600025E,
     ),
 
-    # ---- Jinjos: Clanker's Cavern ----
-    ITEM_JINJO_CC_BLUE: BKLocationData(
+    #  Jinjos: Clanker's Cavern 
+    LOC_JINJO_CC_BLUE: BKLocationData(
         region=RGN_CLANKERS_CAVERN,
         address=0x0600035A,
     ),
-    ITEM_JINJO_CC_GREEN: BKLocationData(
+    LOC_JINJO_CC_GREEN: BKLocationData(
         region=RGN_CLANKERS_CAVERN,
         address=0x0600035B,
     ),
-    ITEM_JINJO_CC_ORANGE: BKLocationData(
+    LOC_JINJO_CC_ORANGE: BKLocationData(
         region=RGN_CLANKERS_CAVERN,
         address=0x0600035C,
     ),
-    ITEM_JINJO_CC_PURPLE: BKLocationData(
+    LOC_JINJO_CC_PURPLE: BKLocationData(
         region=RGN_CLANKERS_CAVERN,
         address=0x0600035D,
     ),
-    ITEM_JINJO_CC_YELLOW: BKLocationData(
+    LOC_JINJO_CC_YELLOW: BKLocationData(
         region=RGN_CLANKERS_CAVERN,
         address=0x0600035E,
     ),
 
-    # ---- Jinjos: Bubblegloop Swamp ----
-    ITEM_JINJO_BGS_BLUE: BKLocationData(
+    #  Jinjos: Bubblegloop Swamp 
+    LOC_JINJO_BGS_BLUE: BKLocationData(
         region=RGN_BUBBLEGLOOP_SWAMP,
         address=0x0600045A,
     ),
-    ITEM_JINJO_BGS_GREEN: BKLocationData(
+    LOC_JINJO_BGS_GREEN: BKLocationData(
         region=RGN_BUBBLEGLOOP_SWAMP,
         address=0x0600045B,
     ),
-    ITEM_JINJO_BGS_ORANGE: BKLocationData(
+    LOC_JINJO_BGS_ORANGE: BKLocationData(
         region=RGN_BUBBLEGLOOP_SWAMP,
         address=0x0600045C,
     ),
-    ITEM_JINJO_BGS_PURPLE: BKLocationData(
+    LOC_JINJO_BGS_PURPLE: BKLocationData(
         region=RGN_BUBBLEGLOOP_SWAMP,
         address=0x0600045D,
     ),
-    ITEM_JINJO_BGS_YELLOW: BKLocationData(
+    LOC_JINJO_BGS_YELLOW: BKLocationData(
         region=RGN_BUBBLEGLOOP_SWAMP,
         address=0x0600045E,
     ),
 
-    # ---- Jinjos: Freezeezy Peak ----
-    ITEM_JINJO_FP_BLUE: BKLocationData(
+    #  Jinjos: Freezeezy Peak 
+    LOC_JINJO_FP_BLUE: BKLocationData(
         region=RGN_FREEZEEZY_PEAK,
         address=0x0600055A,
     ),
-    ITEM_JINJO_FP_GREEN: BKLocationData(
+    LOC_JINJO_FP_GREEN: BKLocationData(
         region=RGN_FREEZEEZY_PEAK,
         address=0x0600055B,
     ),
-    ITEM_JINJO_FP_ORANGE: BKLocationData(
+    LOC_JINJO_FP_ORANGE: BKLocationData(
         region=RGN_FREEZEEZY_PEAK,
         address=0x0600055C,
     ),
-    ITEM_JINJO_FP_PURPLE: BKLocationData(
+    LOC_JINJO_FP_PURPLE: BKLocationData(
         region=RGN_FREEZEEZY_PEAK,
         address=0x0600055D,
     ),
-    ITEM_JINJO_FP_YELLOW: BKLocationData(
+    LOC_JINJO_FP_YELLOW: BKLocationData(
         region=RGN_FREEZEEZY_PEAK,
         address=0x0600055E,
     ),
 
-    # ---- Jinjos: Gobi's Valley ----
-    ITEM_JINJO_GV_BLUE: BKLocationData(
+    #  Jinjos: Gobi's Valley 
+    LOC_JINJO_GV_BLUE: BKLocationData(
         region=RGN_GOBIS_VALLEY,
         address=0x0600075A,
     ),
-    ITEM_JINJO_GV_GREEN: BKLocationData(
+    LOC_JINJO_GV_GREEN: BKLocationData(
         region=RGN_GOBIS_VALLEY,
         address=0x0600075B,
     ),
-    ITEM_JINJO_GV_ORANGE: BKLocationData(
+    LOC_JINJO_GV_ORANGE: BKLocationData(
         region=RGN_GOBIS_VALLEY,
         address=0x0600075C,
     ),
-    ITEM_JINJO_GV_PURPLE: BKLocationData(
+    LOC_JINJO_GV_PURPLE: BKLocationData(
         region=RGN_GOBIS_VALLEY,
         address=0x0600075D,
     ),
-    ITEM_JINJO_GV_YELLOW: BKLocationData(
+    LOC_JINJO_GV_YELLOW: BKLocationData(
         region=RGN_GOBIS_VALLEY,
         address=0x0600075E,
     ),
-
-    # ---- Jinjos: Click Clock Wood ----
-    ITEM_JINJO_CCW_BLUE: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=0x0600085A,
-    ),
-    ITEM_JINJO_CCW_GREEN: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=0x0600085B,
-    ),
-    ITEM_JINJO_CCW_ORANGE: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=0x0600085C,
-    ),
-    ITEM_JINJO_CCW_PURPLE: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=0x0600085D,
-    ),
-    ITEM_JINJO_CCW_YELLOW: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=0x0600085E,
-    ),
-
-    # ---- Jinjos: Rusty Bucket Bay ----
-    ITEM_JINJO_RBB_BLUE: BKLocationData(
+    #  Jinjos: Rusty Bucket Bay 
+    LOC_JINJO_RBB_BLUE: BKLocationData(
         region=RGN_RUSTY_BUCKET_BAY,
         address=0x0600095A,
     ),
-    ITEM_JINJO_RBB_GREEN: BKLocationData(
-        region=RGN_RUSTY_BUCKET_BAY,
-        address=0x0600095B,
-    ),
-    ITEM_JINJO_RBB_ORANGE: BKLocationData(
-        region=RGN_RUSTY_BUCKET_BAY,
-        address=0x0600095C,
-    ),
-    ITEM_JINJO_RBB_PURPLE: BKLocationData(
-        region=RGN_RUSTY_BUCKET_BAY,
-        address=0x0600095D,
-    ),
-    ITEM_JINJO_RBB_YELLOW: BKLocationData(
-        region=RGN_RUSTY_BUCKET_BAY,
-        address=0x0600095E,
-    ),
 
-    # ---- Jinjos: Mad Monster Mansion ----
-    ITEM_JINJO_MMM_BLUE: BKLocationData(
+    #  Jinjos: Mad Monster Mansion 
+    LOC_JINJO_MMM_BLUE: BKLocationData(
         region=RGN_MAD_MONSTER_MANSION,
         address=0x06000A5A,
     ),
-    ITEM_JINJO_MMM_GREEN: BKLocationData(
+    LOC_JINJO_MMM_GREEN: BKLocationData(
         region=RGN_MAD_MONSTER_MANSION,
         address=0x06000A5B,
     ),
-    ITEM_JINJO_MMM_ORANGE: BKLocationData(
+    LOC_JINJO_MMM_ORANGE: BKLocationData(
         region=RGN_MAD_MONSTER_MANSION,
         address=0x06000A5C,
     ),
-    ITEM_JINJO_MMM_PURPLE: BKLocationData(
+    LOC_JINJO_MMM_PURPLE: BKLocationData(
         region=RGN_MAD_MONSTER_MANSION,
         address=0x06000A5D,
     ),
-    ITEM_JINJO_MMM_YELLOW: BKLocationData(
+    LOC_JINJO_MMM_YELLOW: BKLocationData(
         region=RGN_MAD_MONSTER_MANSION,
         address=0x06000A5E,
     ),
-    LOC_WITCH_SWITCH_MM: BKLocationData(
-        region=RGN_MUMBOS_MOUNTAIN,
-        address=None,
-        locked_item=ITEM_WITCH_SWITCH_MM
-    ),
-    LOC_WITCH_SWITCH_TTC: BKLocationData(
-        region=RGN_TREASURE_TROVE_COVE,
-        address=None,
-        locked_item=ITEM_WITCH_SWITCH_TTC
-    ),
-    LOC_WITCH_SWITCH_CC: BKLocationData(
-        region=RGN_CLANKERS_CAVERN,
-        address=None,
-        locked_item=ITEM_WITCH_SWITCH_CC
-    ),
-    LOC_WITCH_SWITCH_BGS: BKLocationData(
-        region=RGN_BUBBLEGLOOP_SWAMP,
-        address=None,
-        locked_item=ITEM_WITCH_SWITCH_BGS
-    ),
-    LOC_WITCH_SWITCH_FP: BKLocationData(
-        region=RGN_FREEZEEZY_PEAK,
-        address=None,
-        locked_item=ITEM_WITCH_SWITCH_FP
-    ),
-    LOC_WITCH_SWITCH_GV: BKLocationData(
-        region=RGN_GOBIS_VALLEY,
-        address=None,
-        locked_item=ITEM_WITCH_SWITCH_GV
-    ),
-    LOC_WITCH_SWITCH_MMM: BKLocationData(
-        region=RGN_MAD_MONSTER_MANSION,
-        address=None,
-        locked_item=ITEM_WITCH_SWITCH_MMM
-    ),
-    LOC_WITCH_SWITCH_RBB: BKLocationData(
+
+    LOC_JINJO_RBB_GREEN: BKLocationData(
         region=RGN_RUSTY_BUCKET_BAY,
-        address=None,
-        locked_item=ITEM_WITCH_SWITCH_RBB
+        address=0x0600095B,
     ),
-    LOC_WITCH_SWITCH_CCW: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_WITCH_SWITCH_CCW
+    LOC_JINJO_RBB_ORANGE: BKLocationData(
+        region=RGN_RUSTY_BUCKET_BAY,
+        address=0x0600095C,
     ),
+    LOC_JINJO_RBB_PURPLE: BKLocationData(
+        region=RGN_RUSTY_BUCKET_BAY,
+        address=0x0600095D,
+    ),
+    LOC_JINJO_RBB_YELLOW: BKLocationData(
+        region=RGN_RUSTY_BUCKET_BAY,
+        address=0x0600095E,
+    ),
+    #  Jinjos: Click Clock Wood 
+    LOC_JINJO_CCW_BLUE: BKLocationData(
+        region=RGN_CCW_WINTER,
+        address=0x0600085A,
+    ),
+    LOC_JINJO_CCW_GREEN: BKLocationData(
+        region=RGN_CCW_SPRING,
+        address=0x0600085B,
+    ),
+    LOC_JINJO_CCW_ORANGE: BKLocationData(
+        region=RGN_CCW_AUTUMN,
+        address=0x0600085C,
+    ),
+    LOC_JINJO_CCW_PURPLE: BKLocationData(
+        region=RGN_CCW_SPRING,
+        address=0x0600085D,
+    ),
+    LOC_JINJO_CCW_YELLOW: BKLocationData(
+        region=RGN_CCW_SUMMER,
+        address=0x0600085E,
+    ),
+
     LOC_JIGGY_GL_ENTRYWAY: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR_LOBBY,
         address=0x00000033
@@ -841,35 +739,35 @@ location_data_table: Dict[str, BKLocationData] = {
         address=0x0000004F
     ),
     LOC_JIGGY_CCW_ZUBBA: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SUMMER,
         address=0x0000004C
     ),
     LOC_JIGGY_CCW_LEAVES: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SUMMER,
         address=0x0000004E
     ),
     LOC_JIGGY_CCW_CABIN: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x00000048
     ),
     LOC_JIGGY_CCW_GNAWTY: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x0000004B
     ),
     LOC_JIGGY_CCW_PLANT: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x0000004D
     ),
     LOC_JIGGY_CCW_NABNUTS: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x0000004A
     ),
     LOC_JIGGY_CCW_EYRIE: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_WINTER,
         address=0x00000049
     ),
     LOC_JIGGY_CCW_JINJO: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_WINTER,
         address=0x00000047
     ),
     LOC_EMPTY_HONEYCOMB_SM_LOG: BKLocationData(
@@ -961,11 +859,11 @@ location_data_table: Dict[str, BKLocationData] = {
         address=0x0200000F
     ),
     LOC_EMPTY_HONEYCOMB_CCW_WINTER_NABNUTS: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_WINTER,
         address=0x0200000E
     ),
     LOC_EMPTY_HONEYCOMB_CCW_WINTER_GNAWTY: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_WINTER,
         address=0x0200000D
     ),
     LOC_MUMBO_TOKEN_GL_RED_CAULDRON: BKLocationData(
@@ -1333,99 +1231,99 @@ location_data_table: Dict[str, BKLocationData] = {
         address=0x03000049
     ),
     LOC_MUMBO_TOKEN_CCW_SPRING_ENTRANCE_SNAREBEAR: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SPRING,
         address=0x03000060
     ),
     LOC_MUMBO_TOKEN_CCW_SPRING_GARDEN_SNAREBEAR: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SPRING,
         address=0x0300005F
     ),
     LOC_MUMBO_TOKEN_CCW_SPRING_TREETOP_ABOVE_MUMBOS_HUT: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SPRING,
         address=0x0300005C
     ),
     LOC_MUMBO_TOKEN_CCW_SPRING_BEEHIVE: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SPRING,
         address=0x03000061
     ),
     LOC_MUMBO_TOKEN_CCW_SPRING_CABIN: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SPRING,
         address=0x0300005B
     ),
     LOC_MUMBO_TOKEN_CCW_SPRING_NABNUTS_DRESSER: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SPRING,
         address=0x03000062
     ),
     LOC_MUMBO_TOKEN_CCW_SPRING_NEAR_EYRIES_NEST: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SPRING,
         address=0x0300005D
     ),
     LOC_MUMBO_TOKEN_CCW_SPRING_THORNS: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SPRING,
         address=0x0300005E
     ),
     LOC_MUMBO_TOKEN_CCW_SUMMER_ENTRANCE_SNAREBEAR: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SUMMER,
         address=0x03000065
     ),
     LOC_MUMBO_TOKEN_CCW_SUMMER_GNAWTY: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SUMMER,
         address=0x03000067
     ),
     LOC_MUMBO_TOKEN_CCW_SUMMER_GARDEN: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SUMMER,
         address=0x03000064
     ),
     LOC_MUMBO_TOKEN_CCW_SUMMER_MUMBOS_HUT: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SUMMER,
         address=0x03000069
     ),
     LOC_MUMBO_TOKEN_CCW_SUMMER_TREETOP_ABOVE_MUMBOS_HUT: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SUMMER,
         address=0x03000066
     ),
     LOC_MUMBO_TOKEN_CCW_SUMMER_LEAVES: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SUMMER,
         address=0x03000068
     ),
     LOC_MUMBO_TOKEN_CCW_SUMMER_AFTER_NABNUTS_HOUSE: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SUMMER,
         address=0x03000063
     ),
-    LOC_MUMBO_TOKEN_CCW_FALL_ENTRANCE_SNAREBEAR: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+    LOC_MUMBO_TOKEN_CCW_AUTUMN_ENTRANCE_SNAREBEAR: BKLocationData(
+        region=RGN_CCW_AUTUMN,
         address=0x0300006B
     ),
-    LOC_MUMBO_TOKEN_CCW_FALL_TREETOP_ABOVE_MUMBOS_HUT: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+    LOC_MUMBO_TOKEN_CCW_AUTUMN_TREETOP_ABOVE_MUMBOS_HUT: BKLocationData(
+        region=RGN_CCW_AUTUMN,
         address=0x0300006E
     ),
-    LOC_MUMBO_TOKEN_CCW_FALL_LEAVES: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+    LOC_MUMBO_TOKEN_CCW_AUTUMN_LEAVES: BKLocationData(
+        region=RGN_CCW_AUTUMN,
         address=0x0300006A
     ),
-    LOC_MUMBO_TOKEN_CCW_FALL_CABIN: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+    LOC_MUMBO_TOKEN_CCW_AUTUMN_CABIN: BKLocationData(
+        region=RGN_CCW_AUTUMN,
         address=0x0300006D
     ),
-    LOC_MUMBO_TOKEN_CCW_FALL_TREETOP_SNAREBEAR: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+    LOC_MUMBO_TOKEN_CCW_AUTUMN_TREETOP_SNAREBEAR: BKLocationData(
+        region=RGN_CCW_AUTUMN,
         address=0x0300006C
     ),
     LOC_MUMBO_TOKEN_CCW_WINTER_GARDEN: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_WINTER,
         address=0x0300006F
     ),
     LOC_MUMBO_TOKEN_CCW_WINTER_SIR_SLUSH: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_WINTER,
         address=0x03000073
     ),
     LOC_MUMBO_TOKEN_CCW_WINTER_BEEHIVE: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_WINTER,
         address=0x03000071
     ),
     LOC_MUMBO_TOKEN_CCW_WINTER_NEAR_NABNUTS_HOUSE: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_WINTER,
         address=0x03000072
     ),
     LOC_MUMBO_TOKEN_CCW_WINTER_BEHIND_LAKE_PLATFORM: BKLocationData(
@@ -1541,7 +1439,7 @@ location_data_table: Dict[str, BKLocationData] = {
         address=0x05000002
     ),
     LOC_SNS_EGG_YELLOW: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_WINTER,
         address=0x05000001
     ),
     LOC_NOTE_MM_BRIDGE_1: BKLocationData(
@@ -4745,604 +4643,404 @@ location_data_table: Dict[str, BKLocationData] = {
         address=0x018B0D78
     ),
     LOC_NOTE_CCW_SPRING_ENTRANCE_1: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SPRING,
         address=0x014009A1
     ),
     LOC_NOTE_CCW_SPRING_ENTRANCE_2: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SPRING,
         address=0x01400C41
     ),
     LOC_NOTE_CCW_SPRING_ENTRANCE_3: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SPRING,
         address=0x01400EED
     ),
     LOC_NOTE_CCW_SPRING_ENTRANCE_4: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SPRING,
         address=0x01401005
     ),
     LOC_NOTE_CCW_SPRING_GARDEN_1: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SPRING,
         address=0x0143EED9
     ),
     LOC_NOTE_CCW_SPRING_GARDEN_2: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SPRING,
         address=0x0143EB4E
     ),
     LOC_NOTE_CCW_SPRING_GARDEN_3: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SPRING,
         address=0x0143E766
     ),
     LOC_NOTE_CCW_SPRING_GARDEN_4: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SPRING,
         address=0x0143EAE6
     ),
     LOC_NOTE_CCW_SPRING_GOBI_BRIDGE_1: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SPRING,
         address=0x014304FB
     ),
     LOC_NOTE_CCW_SPRING_GOBI_BRIDGE_2: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SPRING,
         address=0x014304FC
     ),
     LOC_NOTE_CCW_SPRING_GOBI_BRIDGE_3: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SPRING,
         address=0x014304FD
     ),
     LOC_NOTE_CCW_SPRING_FLOODED_BRIDGE_1: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SPRING,
         address=0x014319F4
     ),
     LOC_NOTE_CCW_SPRING_FLOODED_BRIDGE_2: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SPRING,
         address=0x01431B72
     ),
     LOC_NOTE_CCW_SPRING_FLOODED_BRIDGE_3: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SPRING,
         address=0x01431CE2
     ),
     LOC_NOTE_CCW_SPRING_HIGH_MUMBO_WALL_1: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SPRING,
         address=0x01430384
     ),
     LOC_NOTE_CCW_SPRING_HIGH_MUMBO_WALL_2: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SPRING,
         address=0x01430385
     ),
     LOC_NOTE_CCW_SPRING_HIGH_MUMBO_WALL_3: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SPRING,
         address=0x01430399
     ),
     LOC_NOTE_CCW_SPRING_LOW_MUMBO_WALL_1: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SPRING,
         address=0x0143E9EE
     ),
     LOC_NOTE_CCW_SPRING_LOW_MUMBO_WALL_2: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SPRING,
         address=0x0143E897
     ),
     LOC_NOTE_CCW_SPRING_LOW_MUMBO_WALL_3: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SPRING,
         address=0x0143E732
     ),
     LOC_NOTE_CCW_SUMMER_ENTRY_LEAVES_1: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SUMMER,
         address=0x01440CAC
     ),
     LOC_NOTE_CCW_SUMMER_ENTRY_LEAVES_2: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SUMMER,
         address=0x01440EC3
     ),
     LOC_NOTE_CCW_SUMMER_GNAWTY_ENTRYWAY_1: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SUMMER,
         address=0x01440641
     ),
     LOC_NOTE_CCW_SUMMER_GNAWTY_ENTRYWAY_2: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SUMMER,
         address=0x01440457
     ),
     LOC_NOTE_CCW_SUMMER_ZUBBA_BRIDGE_1: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SUMMER,
         address=0x01440226
     ),
     LOC_NOTE_CCW_SUMMER_ZUBBA_BRIDGE_2: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SUMMER,
         address=0x01440168
     ),
     LOC_NOTE_CCW_SUMMER_ZUBBA_BRIDGE_3: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SUMMER,
         address=0x014400C8
     ),
     LOC_NOTE_CCW_SUMMER_TREEHOUSE_1: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SUMMER,
         address=0x01442328
     ),
     LOC_NOTE_CCW_SUMMER_TREEHOUSE_2: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SUMMER,
         address=0x0144229B
     ),
     LOC_NOTE_CCW_SUMMER_TREEHOUSE_3: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SUMMER,
         address=0x01442189
     ),
     LOC_NOTE_CCW_SUMMER_TREEHOUSE_4: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SUMMER,
         address=0x01442102
     ),
     LOC_NOTE_CCW_SUMMER_NABNUTS_PLATFORM_1: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SUMMER,
         address=0x01442403
     ),
     LOC_NOTE_CCW_SUMMER_NABNUTS_PLATFORM_2: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SUMMER,
         address=0x014422A5
     ),
     LOC_NOTE_CCW_SUMMER_NABNUTS_PLATFORM_3: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SUMMER,
         address=0x014422A6
     ),
     LOC_NOTE_CCW_SUMMER_NABNUTS_PLATFORM_4: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SUMMER,
         address=0x014425C5
     ),
     LOC_NOTE_CCW_SUMMER_NABNUTS_PLATFORM_5: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_SUMMER,
         address=0x0144281D
     ),
     LOC_NOTE_CCW_AUTUMN_MUMBO_SNAREBEAR_1: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x014505A1
     ),
     LOC_NOTE_CCW_AUTUMN_MUMBO_SNAREBEAR_2: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x014505F1
     ),
     LOC_NOTE_CCW_AUTUMN_MUMBO_SNAREBEAR_3: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x01450641
     ),
     LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_1: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x014509CE
     ),
     LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_2: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x01450E42
     ),
     LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_3: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x01451156
     ),
     LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_4: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x014512C0
     ),
     LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_5: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x01451157
     ),
     LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_6: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x01450E43
     ),
     LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_7: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x014509C4
     ),
     LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_8: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x01450384
     ),
     LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_9: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x0145FD45
     ),
     LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_10: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x0145F95C
     ),
     LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_11: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x0145F5B0
     ),
     LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_12: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x0145F46D
     ),
     LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_13: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x0145F669
     ),
     LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_14: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x0145F8C6
     ),
     LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_15: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x0145FD3F
     ),
     LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_16: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x01450546
     ),
     LOC_NOTE_CCW_AUTUMN_MUMBOS_SKULL_1: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x014CFEAD
     ),
     LOC_NOTE_CCW_AUTUMN_MUMBOS_SKULL_2: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x014C0178
     ),
     LOC_NOTE_CCW_AUTUMN_MUMBOS_SKULL_3: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x014C0465
     ),
     LOC_NOTE_CCW_AUTUMN_MUMBOS_SKULL_4: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x014C019D
     ),
     LOC_NOTE_CCW_AUTUMN_GOBIS_GARDEN_1: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x0145E81E
     ),
     LOC_NOTE_CCW_AUTUMN_GOBIS_GARDEN_2: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x0145E61A
     ),
     LOC_NOTE_CCW_AUTUMN_GOBIS_GARDEN_3: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x0145E468
     ),
     LOC_NOTE_CCW_AUTUMN_GOBIS_GARDEN_4: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x0145E2D1
     ),
     LOC_NOTE_CCW_AUTUMN_GOBIS_GARDEN_5: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x0145EA3D
     ),
     LOC_NOTE_CCW_AUTUMN_GOBI_SNAREBEAR_1: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x0145FE2A
     ),
     LOC_NOTE_CCW_AUTUMN_GOBI_SNAREBEAR_2: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x0145FDDA
     ),
     LOC_NOTE_CCW_AUTUMN_GOBI_SNAREBEAR_3: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x0145FD8A
     ),
     LOC_NOTE_CCW_AUTUMN_GNAWTYS_SHELF_1: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x014508E3
     ),
     LOC_NOTE_CCW_AUTUMN_GNAWTYS_SHELF_2: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x0145093A
     ),
     LOC_NOTE_CCW_AUTUMN_ZUBBAS_HIVE_1: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x015C0001
     ),
     LOC_NOTE_CCW_AUTUMN_ZUBBAS_HIVE_2: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x015CF9DA
     ),
     LOC_NOTE_CCW_AUTUMN_ZUBBAS_HIVE_3: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x015C00FA
     ),
     LOC_NOTE_CCW_AUTUMN_ZUBBAS_HIVE_4: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x015C063E
     ),
     LOC_NOTE_CCW_AUTUMN_NABNUTSS_SHELF_1: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x01600289
     ),
     LOC_NOTE_CCW_AUTUMN_NABNUTSS_SHELF_2: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x016001F3
     ),
     LOC_NOTE_CCW_AUTUMN_NABNUTSS_SHELF_3: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x01600158
     ),
     LOC_NOTE_CCW_AUTUMN_EYRIES_NEST_1: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x01450292
     ),
     LOC_NOTE_CCW_AUTUMN_EYRIES_NEST_2: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x0145FF0E
     ),
     LOC_NOTE_CCW_AUTUMN_EYRIES_NEST_3: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x0145FC86
     ),
     LOC_NOTE_CCW_AUTUMN_EYRIES_NEST_4: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x0145FC8C
     ),
     LOC_NOTE_CCW_AUTUMN_EYRIES_NEST_5: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x0145FEFD
     ),
     LOC_NOTE_CCW_AUTUMN_EYRIES_NEST_6: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x01450282
     ),
     LOC_NOTE_CCW_AUTUMN_EYRIES_NEST_7: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x0145050A
     ),
     LOC_NOTE_CCW_AUTUMN_EYRIES_NEST_8: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_AUTUMN,
         address=0x01450503
     ),
     LOC_NOTE_CCW_WINTER_SLUSH_BRANCHES_1: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_WINTER,
         address=0x0146F7E6
     ),
     LOC_NOTE_CCW_WINTER_SLUSH_BRANCHES_2: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_WINTER,
         address=0x0146F3E7
     ),
     LOC_NOTE_CCW_WINTER_SLUSH_BRANCHES_3: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_WINTER,
         address=0x0146FDCD
     ),
     LOC_NOTE_CCW_WINTER_SLUSH_BRANCHES_4: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_WINTER,
         address=0x0146FB4B
     ),
     LOC_NOTE_CCW_WINTER_TREEHOUSE_ROOF_1: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_WINTER,
         address=0x01462579
     ),
     LOC_NOTE_CCW_WINTER_TREEHOUSE_ROOF_2: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_WINTER,
         address=0x0146278E
     ),
     LOC_NOTE_CCW_WINTER_TREEHOUSE_ROOF_3: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_WINTER,
         address=0x014629A4
     ),
     LOC_NOTE_CCW_WINTER_TREEHOUSE_ROOF_4: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_WINTER,
         address=0x01462BBD
     ),
     LOC_NOTE_CCW_WINTER_SLUSH_PLATFORM_1: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_WINTER,
         address=0x0146187F
     ),
     LOC_NOTE_CCW_WINTER_SLUSH_PLATFORM_2: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_WINTER,
         address=0x0146187C
     ),
     LOC_NOTE_CCW_WINTER_SLUSH_PLATFORM_3: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_WINTER,
         address=0x01461C02
     ),
     LOC_NOTE_CCW_WINTER_SLUSH_PLATFORM_4: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_WINTER,
         address=0x01461C01
     ),
     LOC_NOTE_CCW_WINTER_HIGHEST_PLATFORMS_1: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_WINTER,
         address=0x01460425
     ),
     LOC_NOTE_CCW_WINTER_HIGHEST_PLATFORMS_2: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_WINTER,
         address=0x01460409
     ),
     LOC_NOTE_CCW_WINTER_HIGHEST_PLATFORMS_3: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_WINTER,
         address=0x01460528
     ),
     LOC_NOTE_CCW_WINTER_HIGHEST_PLATFORMS_4: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_WINTER,
         address=0x01460890
-    ),
-
-    #Jinjos
-
-    # ---- Jinjos: Mumbo's Mountain (level 1) ----
-    LOC_JINJO_MM_BLUE: BKLocationData(
-        region=RGN_MUMBOS_MOUNTAIN,
-        address=0x0600015A,
-    ),
-    LOC_JINJO_MM_GREEN: BKLocationData(
-        region=RGN_MUMBOS_MOUNTAIN,
-        address=0x0600015B,
-    ),
-    LOC_JINJO_MM_ORANGE: BKLocationData(
-        region=RGN_MUMBOS_MOUNTAIN,
-        address=0x0600015C,
-    ),
-    ITEM_JINJO_MM_PURPLE: BKLocationData(
-        region=RGN_MUMBOS_MOUNTAIN,
-        address=0x0600015D,
-    ),
-    LOC_JINJO_MM_YELLOW: BKLocationData(
-        region=RGN_MUMBOS_MOUNTAIN,
-        address=0x0600015E,
-    ),
-
-    # ---- Jinjos: Treasure Trove Cove (level 2) ----
-    LOC_JINJO_TTC_BLUE: BKLocationData(
-        region=RGN_TREASURE_TROVE_COVE,
-        address=0x0600025A,
-    ),
-    LOC_JINJO_TTC_GREEN: BKLocationData(
-        region=RGN_TREASURE_TROVE_COVE,
-        address=0x0600025B,
-    ),
-    LOC_JINJO_TTC_ORANGE: BKLocationData(
-        region=RGN_TREASURE_TROVE_COVE,
-        address=0x0600025C,
-    ),
-    ITEM_JINJO_TTC_PURPLE: BKLocationData(
-        region=RGN_TREASURE_TROVE_COVE,
-        address=0x0600025D,
-    ),
-    LOC_JINJO_TTC_YELLOW: BKLocationData(
-        region=RGN_TREASURE_TROVE_COVE,
-        address=0x0600025E,
-    ),
-
-    # ---- Jinjos: Clanker's Cavern (level 3) ----
-    LOC_JINJO_CC_BLUE: BKLocationData(
-        region=RGN_CLANKERS_CAVERN,
-        address=0x0600035A,
-    ),
-    LOC_JINJO_CC_GREEN: BKLocationData(
-        region=RGN_CLANKERS_CAVERN,
-        address=0x0600035B,
-    ),
-    LOC_JINJO_CC_ORANGE: BKLocationData(
-        region=RGN_CLANKERS_CAVERN,
-        address=0x0600035C,
-    ),
-    ITEM_JINJO_CC_PURPLE: BKLocationData(
-        region=RGN_CLANKERS_CAVERN,
-        address=0x0600035D,
-    ),
-    LOC_JINJO_CC_YELLOW: BKLocationData(
-        region=RGN_CLANKERS_CAVERN,
-        address=0x0600035E,
-    ),
-
-    # ---- Jinjos: Bubblegloop Swamp (level 4) ----
-    LOC_JINJO_BGS_BLUE: BKLocationData(
-        region=RGN_BUBBLEGLOOP_SWAMP,
-        address=0x0600045A,
-    ),
-    LOC_JINJO_BGS_GREEN: BKLocationData(
-        region=RGN_BUBBLEGLOOP_SWAMP,
-        address=0x0600045B,
-    ),
-    LOC_JINJO_BGS_ORANGE: BKLocationData(
-        region=RGN_BUBBLEGLOOP_SWAMP,
-        address=0x0600045C,
-    ),
-    ITEM_JINJO_BGS_PURPLE: BKLocationData(
-        region=RGN_BUBBLEGLOOP_SWAMP,
-        address=0x0600045D,
-    ),
-    LOC_JINJO_BGS_YELLOW: BKLocationData(
-        region=RGN_BUBBLEGLOOP_SWAMP,
-        address=0x0600045E,
-    ),
-
-    # ---- Jinjos: Freezeezy Peak (level 5) ----
-    LOC_JINJO_FP_BLUE: BKLocationData(
-        region=RGN_FREEZEEZY_PEAK,
-        address=0x0600055A,
-    ),
-    LOC_JINJO_FP_GREEN: BKLocationData(
-        region=RGN_FREEZEEZY_PEAK,
-        address=0x0600055B,
-    ),
-    LOC_JINJO_FP_ORANGE: BKLocationData(
-        region=RGN_FREEZEEZY_PEAK,
-        address=0x0600055C,
-    ),
-    ITEM_JINJO_FP_PURPLE: BKLocationData(
-        region=RGN_FREEZEEZY_PEAK,
-        address=0x0600055D,
-    ),
-    LOC_JINJO_FP_YELLOW: BKLocationData(
-        region=RGN_FREEZEEZY_PEAK,
-        address=0x0600055E,
-    ),
-
-    # ---- Jinjos: Gobi's Valley (level 7) ----
-    LOC_JINJO_GV_BLUE: BKLocationData(
-        region=RGN_GOBIS_VALLEY,
-        address=0x0600075A,
-    ),
-    LOC_JINJO_GV_GREEN: BKLocationData(
-        region=RGN_GOBIS_VALLEY,
-        address=0x0600075B,
-    ),
-    LOC_JINJO_GV_ORANGE: BKLocationData(
-        region=RGN_GOBIS_VALLEY,
-        address=0x0600075C,
-    ),
-    ITEM_JINJO_GV_PURPLE: BKLocationData(
-        region=RGN_GOBIS_VALLEY,
-        address=0x0600075D,
-    ),
-    LOC_JINJO_GV_YELLOW: BKLocationData(
-        region=RGN_GOBIS_VALLEY,
-        address=0x0600075E,
-    ),
-
-    # ---- Jinjos: Click Clock Wood (level 8) ----
-    LOC_JINJO_CCW_BLUE: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=0x0600085A,
-    ),
-    LOC_JINJO_CCW_GREEN: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=0x0600085B,
-    ),
-    LOC_JINJO_CCW_ORANGE: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=0x0600085C,
-    ),
-    ITEM_JINJO_CCW_PURPLE: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=0x0600085D,
-    ),
-    LOC_JINJO_CCW_YELLOW: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=0x0600085E,
-    ),
-
-    # ---- Jinjos: Rusty Bucket Bay (level 9) ----
-    LOC_JINJO_RBB_BLUE: BKLocationData(
-        region=RGN_RUSTY_BUCKET_BAY,
-        address=0x0600095A,
-    ),
-    LOC_JINJO_RBB_GREEN: BKLocationData(
-        region=RGN_RUSTY_BUCKET_BAY,
-        address=0x0600095B,
-    ),
-    LOC_JINJO_RBB_ORANGE: BKLocationData(
-        region=RGN_RUSTY_BUCKET_BAY,
-        address=0x0600095C,
-    ),
-    ITEM_JINJO_RBB_PURPLE: BKLocationData(
-        region=RGN_RUSTY_BUCKET_BAY,
-        address=0x0600095D,
-    ),
-    LOC_JINJO_RBB_YELLOW: BKLocationData(
-        region=RGN_RUSTY_BUCKET_BAY,
-        address=0x0600095E,
-    ),
-
-    # ---- Jinjos: Mad Monster Mansion (level 0xA) ----
-    LOC_JINJO_MMM_BLUE: BKLocationData(
-        region=RGN_MAD_MONSTER_MANSION,
-        address=0x06000A5A,
-    ),
-    LOC_JINJO_MMM_GREEN: BKLocationData(
-        region=RGN_MAD_MONSTER_MANSION,
-        address=0x06000A5B,
-    ),
-    LOC_JINJO_MMM_ORANGE: BKLocationData(
-        region=RGN_MAD_MONSTER_MANSION,
-        address=0x06000A5C,
-    ),
-    ITEM_JINJO_MMM_PURPLE: BKLocationData(
-        region=RGN_MAD_MONSTER_MANSION,
-        address=0x06000A5D,
-    ),
-    LOC_JINJO_MMM_YELLOW: BKLocationData(
-        region=RGN_MAD_MONSTER_MANSION,
-        address=0x06000A5E,
     ),
 
     # Extra Lives
@@ -5364,35 +5062,35 @@ location_data_table: Dict[str, BKLocationData] = {
     ),
     LOC_LIFE_GL_BGS_PIPE: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR,
-        address=0x0D05BC68, #Needs Flap Flip
+        address=0x0D72EFBA, #Needs Flap Flip
     ),
     LOC_LIFE_GL_GRUNTY_STATUE_HAT: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
-        address=0x0D006F01,
+        address=0x0D6F10CD,
     ),
     LOC_LIFE_GL_MMM_CRYPT: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR_350_NOTE_DOOR,
-        address=0x0D01CBF8,
+        address=0x0D75CAA2,
     ),
     LOC_LIFE_GL_WATER_LEVEL_2: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR_450_NOTE_DOOR,
-        address=0x0D007801, #Requires enough tokens for pumkin MMM access and Talon Trot
+        address=0x0D78079B, #Requires enough tokens for pumpkin MMM access and Talon Trot
     ),
     LOC_LIFE_GL_CCW_ENTRANCE_TOP: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR_640_NOTE_DOOR,
-        address=0x0D0578A0,
+        address=0x0D79F7CC,
     ),
     LOC_LIFE_GL_FURNACE_FUN_LEFT: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
-        address=0x0D02A8F9,
+        address=0x0D8E0001,
     ),
     LOC_LIFE_GL_FURNACE_FUN_2: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
-        address=0x0D00AFE0,
+        address=0x0D8E0002,
     ),
     LOC_LIFE_GL_FURNACE_FUN_3: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
-        address=0x0D009FE0,
+        address=0x0D8E0003,
     ),
     LOC_LIFE_GL_810_NOTE_DOOR: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
@@ -5402,11 +5100,11 @@ location_data_table: Dict[str, BKLocationData] = {
     # Mumbo's Mountain - 2 extra lives
     LOC_LIFE_MM_FIFTH_HUT: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
-        address=0x0D020EA1, #Needs Beak Buster and Talontrot or Beak Buster and Jump
+        address=0x0D020002, #Needs Beak Buster and Talontrot or Beak Buster and Jump
     ),
     LOC_LIFE_MM_TICKERS_TOWER: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
-        address=0x0D020D4C, # Needs 5 mumbo tokens for transformation
+        address=0x0D020001, # Needs 5 mumbo tokens for transformation
     ),
 
     # Treasure Trove Cove - 3 extra lives
@@ -5440,51 +5138,51 @@ location_data_table: Dict[str, BKLocationData] = {
     # Bubblegloop Swamp - 4 extra lives
     LOC_LIFE_BGS_GIANT_EGG: BKLocationData(
         region=RGN_BUBBLEGLOOP_SWAMP,
-        address=0x0D077B03,
+        address=0x0D0DFDAA,
     ),
     LOC_LIFE_BGS_HUT_PEDESTALS: BKLocationData(
         region=RGN_BUBBLEGLOOP_SWAMP,
-        address=0x0D000D02,
+        address=0x0D0D0AEC,
     ),
     LOC_LIFE_BGS_MR_VILE_21: BKLocationData(
         region=RGN_BUBBLEGLOOP_SWAMP,
-        address=0x0D04CF00, #Needs Turbo Talon And Enough Tokens for Croc 
+        address=0x0D100001,
     ),
     LOC_LIFE_BGS_MR_VILE_22: BKLocationData(
         region=RGN_BUBBLEGLOOP_SWAMP,
-        address=0x0D012790,#Needs Turbo Talon And Enough Tokens for Croc
+        address=0x0D100002,
     ),
     LOC_LIFE_BGS_MR_VILE_23: BKLocationData(
         region=RGN_BUBBLEGLOOP_SWAMP,
-        address=0x0D01146F,#Needs Turbo Talon And Enough Tokens for Croc
+        address=0x0D100003,
     ),
 
     # Freezeezy Peak - 3 extra lives
     LOC_LIFE_FP_MUMBOS_HUT: BKLocationData(
         region=RGN_FREEZEEZY_PEAK,
-        address=0x0D00B3C0, #needs flight
+        address=0x0D271467, #needs flight
     ),
     LOC_LIFE_FP_WOZZAS_CAVE: BKLocationData(
         region=RGN_FREEZEEZY_PEAK,
-        address=0x0D063941, #Needs Walrus Tokens
+        address=0x0D7FE4ED, #Needs Walrus Tokens
     ),
     LOC_LIFE_FP_BOGGY_RACE: BKLocationData(
         region=RGN_FREEZEEZY_PEAK,
-        address=0x0D021260,
+        address=0x0D27D7E6,
     ),
 
     # Gobi's Valley - 3 extra lives
     LOC_LIFE_GV_BEHIND_JINXY: BKLocationData(
         region=RGN_GOBIS_VALLEY,
-        address=0x0D0149F0, #needs Stilt Stride
+        address=0x0D12F7BC, #needs Stilt Stride
     ),
     LOC_LIFE_GV_WATER_PYRAMID: BKLocationData(
         region=RGN_GOBIS_VALLEY,
-        address=0x0D063940,
+        address=0x0D1200A9,
     ),
     LOC_LIFE_GV_SANDYBUTT_TOMB: BKLocationData(
         region=RGN_GOBIS_VALLEY,
-        address=0x0D00103F,
+        address=0x0D140CC7,
     ),
 
     # Mad Monster Mansion - 3 extra lives
@@ -5504,7 +5202,7 @@ location_data_table: Dict[str, BKLocationData] = {
     # Rusty Bucket Bay - 3 extra lives
     LOC_LIFE_RBB_BOOM_BOX: BKLocationData(
         region=RGN_RUSTY_BUCKET_BAY,
-        address=0x0D38FC08,
+        address=0x0D380001,
     ),
     LOC_LIFE_RBB_STORAGE_HUT: BKLocationData(
         region=RGN_RUSTY_BUCKET_BAY,
@@ -5563,7 +5261,7 @@ location_data_table: Dict[str, BKLocationData] = {
 
     # Click Clock Wood Winter - 2 extra lives
     LOC_LIFE_CCW_WINTER_SIR_SLUSH: BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
+        region=RGN_CCW_WINTER,
         address=0x0D461A3F,
     ),
     LOC_LIFE_CCW_WINTER_POND: BKLocationData(
@@ -5572,7 +5270,7 @@ location_data_table: Dict[str, BKLocationData] = {
     ),
 
 
-# WITCH SWITCH LOCATIONS (9 total)
+    # WITCH SWITCH LOCATIONS (9 total)
 
 
     LOC_WITCH_SWITCH_MM: BKLocationData(
@@ -5613,7 +5311,42 @@ location_data_table: Dict[str, BKLocationData] = {
     ),
 
 
-    # WARP CAULDRON LOCATIONS (10 total)
+    # WARP CAULDRON LOCATIONS (18 total)
+
+# Activation locations (PREFIX_CAULDRON_ACTIVATE = 0x17)
+    LOC_CAULDRON_ACTIVATE_PURPLE_1: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
+        address=0x17000001,
+    ),
+    LOC_CAULDRON_ACTIVATE_PURPLE_2: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_350_NOTE_DOOR,
+        address=0x17000002,
+    ),
+    LOC_CAULDRON_ACTIVATE_GREEN_1: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
+        address=0x17000003,
+    ),
+    LOC_CAULDRON_ACTIVATE_GREEN_2: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_450_NOTE_DOOR,
+        address=0x17000004,
+    ),
+    LOC_CAULDRON_ACTIVATE_ORANGE_1: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
+        address=0x17000005,
+    ),
+    LOC_CAULDRON_ACTIVATE_ORANGE_2: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_640_NOTE_DOOR,
+        address=0x17000006,
+    ),
+    LOC_CAULDRON_ACTIVATE_YELLOW_1: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x17000009,
+    ),
+    LOC_CAULDRON_ACTIVATE_YELLOW_2: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_810_NOTE_DOOR,
+        address=0x1700000A,
+    ),
+    # Warping locations
 
     LOC_CAULDRON_PURPLE_1: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
@@ -5664,7 +5397,6 @@ location_data_table: Dict[str, BKLocationData] = {
         address=0x10000003,
     ),
 
-
     # GV SNS SWITCH LOCATION (1 total)
 
     LOC_GV_SNS_SWITCH: BKLocationData(
@@ -5672,6 +5404,405 @@ location_data_table: Dict[str, BKLocationData] = {
         address=0x11000001,
     ),
 
+    # CCW Season Switches
+    LOC_CCW_SWITCH_SPRING: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=0x1B000001,
+    ),
+    LOC_CCW_SWITCH_SUMMER: BKLocationData(
+        region=RGN_CCW_SPRING,
+        address=0x1B000002,
+    ),
+    LOC_CCW_SWITCH_AUTUMN: BKLocationData(
+        region=RGN_CCW_SUMMER,
+        address=0x1B000003,
+    ),
+    LOC_CCW_SWITCH_WINTER: BKLocationData(
+        region=RGN_CCW_AUTUMN,
+        address=0x1B000004,
+    ),
+
+    # Level Unlocks
+    LOC_LEVEL_UNLOCK_1: BKLocationData(
+        region=RGN_MENU,
+        address=0x18000001,
+        can_create=lambda options: options.level_unlock_mode.value == 0,
+    ),
+    LOC_LEVEL_UNLOCK_2: BKLocationData(
+        region=RGN_MENU,
+        address=0x18000002,
+        can_create=lambda options: options.level_unlock_mode.value == 0,
+    ),
+    LOC_LEVEL_UNLOCK_3: BKLocationData(
+        region=RGN_MENU,
+        address=0x18000003,
+        can_create=lambda options: options.level_unlock_mode.value == 0,
+    ),
+    LOC_LEVEL_UNLOCK_4: BKLocationData(
+        region=RGN_MENU,
+        address=0x18000004,
+        can_create=lambda options: options.level_unlock_mode.value == 0,
+    ),
+    LOC_LEVEL_UNLOCK_5: BKLocationData(
+        region=RGN_MENU,
+        address=0x18000005,
+        can_create=lambda options: options.level_unlock_mode.value == 0,
+    ),
+    LOC_LEVEL_UNLOCK_6: BKLocationData(
+        region=RGN_MENU,
+        address=0x18000006,
+        can_create=lambda options: options.level_unlock_mode.value == 0,
+    ),
+    LOC_LEVEL_UNLOCK_7: BKLocationData(
+        region=RGN_MENU,
+        address=0x18000007,
+        can_create=lambda options: options.level_unlock_mode.value == 0,
+    ),
+    LOC_LEVEL_UNLOCK_8: BKLocationData(
+        region=RGN_MENU,
+        address=0x18000008,
+        can_create=lambda options: options.level_unlock_mode.value == 0,
+    ),
+    LOC_LEVEL_UNLOCK_9: BKLocationData(
+        region=RGN_MENU,
+        address=0x18000009,
+        can_create=lambda options: options.level_unlock_mode.value == 0,
+    ),
+    LOC_PUZZLE_COMPLETE_DOUBLE_HEALTH: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_640_NOTE_DOOR,
+        address=0x0C00000B,
+    ),
+
+    # Mumbo Transformation Locations
+
+    LOC_MUMBO_TRANSFORM_TERMITE: BKLocationData(
+        region=RGN_MUMBOS_MOUNTAIN,
+        address=0x0D000001,
+    ),
+    LOC_MUMBO_TRANSFORM_PUMPKIN: BKLocationData(
+        region=RGN_MAD_MONSTER_MANSION,
+        address=0x0D000002,
+    ),
+    LOC_MUMBO_TRANSFORM_WALRUS: BKLocationData(
+        region=RGN_FREEZEEZY_PEAK,
+        address=0x0D000003,
+    ),
+    LOC_MUMBO_TRANSFORM_CROCODILE: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x0D000004,
+    ),
+    LOC_MUMBO_TRANSFORM_BEE: BKLocationData(
+        region=RGN_CLICK_CLOCK_WOOD,
+        address=0x0D000005,
+    ),
+
+    # Cheato Spell Locations
+    # BLUEEGGS - Near FP puzzle, enter tunnel as crocodile after ice block destroyed
+    LOC_CHEATO_BLUEEGGS: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
+        address=0x1A000001,
+    ),
+    # REDFEATHERS - Lava room, follow winding path to small tunnel as pumpkin
+    LOC_CHEATO_REDFEATHERS: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_350_NOTE_DOOR,
+        address=0x1A000002,
+    ),
+    # GOLDFEATHERS - RBB entrance room, raise water to level 3, reach alcove before time runs out
+    LOC_CHEATO_GOLDFEATHERS: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_450_NOTE_DOOR,
+        address=0x1A000003,
+    ),
+
+
+    # Note Door Locations 
+    LOC_NOTE_DOOR_50: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_LOBBY,
+        address=0x16000032,
+    ),
+    LOC_NOTE_DOOR_180: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
+        address=0x160000B4,
+    ),
+    LOC_NOTE_DOOR_260: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR,
+        address=0x16000104,
+    ),
+    LOC_NOTE_DOOR_350: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
+        address=0x1600015E,
+    ),
+    LOC_NOTE_DOOR_450: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
+        address=0x160001C2,
+    ),
+    LOC_NOTE_DOOR_640: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_450_NOTE_DOOR,
+        address=0x16000280,
+    ),
+    LOC_NOTE_DOOR_765: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_640_NOTE_DOOR,
+        address=0x160002FD,
+    ),
+    LOC_NOTE_DOOR_810: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1600032A,
+    ),
+    LOC_NOTE_DOOR_828: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_810_NOTE_DOOR,
+        address=0x1600033C,
+    ),
+    LOC_NOTE_DOOR_846: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_810_NOTE_DOOR,
+        address=0x1600034E,
+    ),
+    LOC_NOTE_DOOR_864: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_810_NOTE_DOOR,
+        address=0x16000360,
+    ),
+    LOC_NOTE_DOOR_882: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_810_NOTE_DOOR,
+        address=0x16000372,
+    ),
+
+    # Collectible Item Locations
+
+    LOC_MM_ORANGE: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_810_NOTE_DOOR,
+        address=0x15000001,
+    ),
+
+    #  Brentilda 1: TTC/CC Puzzle Room (past 50 note door) 
+    LOC_BRENTILDA_1_FACT_1: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
+        address=0x19000010,
+    ),
+    LOC_BRENTILDA_1_FACT_2: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
+        address=0x19000011,
+    ),
+    LOC_BRENTILDA_1_FACT_3: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
+        address=0x19000012,
+    ),
+    #  Brentilda 2: CCW Puzzle Room 
+    LOC_BRENTILDA_2_FACT_1: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
+        address=0x19000020,
+    ),
+    LOC_BRENTILDA_2_FACT_2: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
+        address=0x19000021,
+    ),
+    LOC_BRENTILDA_2_FACT_3: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
+        address=0x19000022,
+    ),
+    #  Brentilda 3: CC Entrance Pipe 
+    LOC_BRENTILDA_3_FACT_1: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
+        address=0x190000A0,
+    ),
+    LOC_BRENTILDA_3_FACT_2: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
+        address=0x190000A1,
+    ),
+    LOC_BRENTILDA_3_FACT_3: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR,
+        address=0x190000A2,
+    ),
+    #  Brentilda 4: Behind Grunty Statue 
+    LOC_BRENTILDA_4_FACT_1: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
+        address=0x19000070,
+    ),
+    LOC_BRENTILDA_4_FACT_2: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
+        address=0x19000071,
+    ),
+    LOC_BRENTILDA_4_FACT_3: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
+        address=0x19000072,
+    ),
+    #  Brentilda 5: BGS Entrance Room Log 
+    LOC_BRENTILDA_5_FACT_1: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR,
+        address=0x19000030,
+    ),
+    LOC_BRENTILDA_5_FACT_2: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR,
+        address=0x19000031,
+    ),
+    LOC_BRENTILDA_5_FACT_3: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR,
+        address=0x19000032,
+    ),
+    #  Brentilda 6: Behind GV Entrance 
+    LOC_BRENTILDA_6_FACT_1: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
+        address=0x19000060,
+    ),
+    LOC_BRENTILDA_6_FACT_2: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
+        address=0x19000061,
+    ),
+    LOC_BRENTILDA_6_FACT_3: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
+        address=0x19000062,
+    ),
+    #  Brentilda 7: Grunty Face Statue Hat 
+    LOC_BRENTILDA_7_FACT_1: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
+        address=0x19000040,
+    ),
+    LOC_BRENTILDA_7_FACT_2: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
+        address=0x19000041,
+    ),
+    LOC_BRENTILDA_7_FACT_3: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR,
+        address=0x19000042,
+    ),
+    #  Brentilda 8: Lava Room Ledge 
+    LOC_BRENTILDA_8_FACT_1: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_450_NOTE_DOOR,
+        address=0x19000050,
+    ),
+    LOC_BRENTILDA_8_FACT_2: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_450_NOTE_DOOR,
+        address=0x19000051,
+    ),
+    LOC_BRENTILDA_8_FACT_3: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_450_NOTE_DOOR,
+        address=0x19000052,
+    ),
+    #  Brentilda 9: MMM Entrance Gravestone 
+    LOC_BRENTILDA_9_FACT_1: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_350_NOTE_DOOR,
+        address=0x19000090,
+    ),
+    LOC_BRENTILDA_9_FACT_2: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_350_NOTE_DOOR,
+        address=0x19000091,
+    ),
+    LOC_BRENTILDA_9_FACT_3: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_350_NOTE_DOOR,
+        address=0x19000092,
+    ),
+    #  Brentilda 10: CCW Entrance Room Logs 
+    LOC_BRENTILDA_10_FACT_1: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_640_NOTE_DOOR,
+        address=0x19000080,
+    ),
+    LOC_BRENTILDA_10_FACT_2: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_640_NOTE_DOOR,
+        address=0x19000081,
+    ),
+    LOC_BRENTILDA_10_FACT_3: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_640_NOTE_DOOR,
+        address=0x19000082,
+    ),
+
+    # Mr Vile Yumbly/Grumbly Holes
+    LOC_VILE_HOLE_01: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1B007ED0,
+    ),
+    LOC_VILE_HOLE_02: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1B193EDA,
+    ),
+    LOC_VILE_HOLE_03: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1B324ED0,
+    ),
+    LOC_VILE_HOLE_04: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1B25BDA4,
+    ),
+    LOC_VILE_HOLE_05: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1B0C7DA4,
+    ),
+    LOC_VILE_HOLE_06: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1B25DFF8,
+    ),
+    LOC_VILE_HOLE_07: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1B193128,
+    ),
+    LOC_VILE_HOLE_08: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1B31F12A,
+    ),
+    LOC_VILE_HOLE_09: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1B0CA000,
+    ),
+    LOC_VILE_HOLE_10: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1B0C8254,
+    ),
+    LOC_VILE_HOLE_11: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1BE72382,
+    ),
+    LOC_VILE_HOLE_12: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1BDAF251,
+    ),
+    LOC_VILE_HOLE_13: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1B190382,
+    ),
+    LOC_VILE_HOLE_14: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1BF3A255,
+    ),
+    LOC_VILE_HOLE_15: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1BE7512A,
+    ),
+    LOC_VILE_HOLE_16: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1BF3B000,
+    ),
+    LOC_VILE_HOLE_17: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1BDACFFE,
+    ),
+    LOC_VILE_HOLE_18: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1BCE6ED6,
+    ),
+    LOC_VILE_HOLE_19: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1BCE2129,
+    ),
+    LOC_VILE_HOLE_20: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1B002128,
+    ),
+    LOC_VILE_HOLE_21: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1BF3ADA7,
+    ),
+    LOC_VILE_HOLE_22: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1B004381,
+    ),
+    LOC_VILE_HOLE_23: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1BE72ED9,
+    ),
+    LOC_VILE_HOLE_24: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1B257256,
+    ),
+    LOC_VILE_HOLE_25: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1BDAEDA9,
+    ),
 
     LOC_DEFEAT_GRUNTILDA: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR_FIGHT,

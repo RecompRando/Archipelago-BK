@@ -125,12 +125,27 @@ ITEM_GOLDFEATHER_REFILL = "Gold Feather Refill"
 ITEM_HONEYCOMB = "Honeycomb"
 ITEM_EXTRA_LIFE = "Extra Life"
 
-ITEM_SEASON_SPRING = "Spring"
-ITEM_SEASON_SUMMER = "Summer"
-ITEM_SEASON_FALL = "Fall"
-ITEM_SEASON_WINTER = "Winter"
+# Level Unlock Items
+ITEM_OPEN_TTC   = "Open Treasure Trove Cove"
+ITEM_OPEN_CC    = "Open Clanker's Cavern"
+ITEM_OPEN_BGS   = "Open Bubblegloop Swamp"
+ITEM_OPEN_FP    = "Open Freezeezy Peak"
+ITEM_OPEN_GV    = "Open Gobi's Valley"
+ITEM_OPEN_MMM   = "Open Mad Monster Mansion"
+ITEM_OPEN_RBB   = "Open Rusty Bucket Bay"
+ITEM_OPEN_CCW   = "Open Click Clock Wood"
+ITEM_OPEN_FIGHT = "Open Final Battle"
+
+# Warp Cauldron Items
+ITEM_CAULDRON_PURPLE = "Purple Cauldron"
+ITEM_CAULDRON_GREEN  = "Green Cauldron"
+ITEM_CAULDRON_ORANGE = "Orange Cauldron"
+ITEM_CAULDRON_YELLOW = "Yellow Cauldron"
 
 ITEM_VICTORY = "Victory"
+
+# Chimpys Orange
+LOC_MM_ORANGE = "MM Chimpys Orange"
 
 # Blubber's Gold
 LOC_BLUBBER_GOLD_TTC_POOP_DECK = "TTC Blubber's Gold Poop Deck"
@@ -149,11 +164,12 @@ LOC_WORM_SUMMER_CCW_OUTSIDE_MUMBO = "CCW Summer Caterpillar Outside Mumbo's Skul
 LOC_WORM_SUMMER_CCW_IN_DRIED_LAKE = "CCW Summer Caterpillar In Dried Lake"
 LOC_WORM_SUMMER_CCW_LEDGE_ABOVE_BRAMBLES = "CCW Summer Caterpillar Ledge Above Brambles"
 LOC_WORM_SUMMER_CCW_NEAR_CABIN = "CCW Summer Caterpillar Near Cabin"
-LOC_WORM_SUMMER_CCW_ZUBBAS_NEST = "CCW Summer Caterpillar Near Zubba's Nest"
 LOC_WORM_SUMMER_CCW_NEAR_NABNUTS_HOME = "CCW Summer Caterpillar Near Nabnut's Home"
 
 # Caterpillars Autumn
+LOC_WORM_AUTUMN_CCW_ZUBBAS_NEST = "CCW Autumn Caterpillar Near Zubba's Nest"
 LOC_WORM_AUTUMN_CCW_ENTRY_LEAF_PILE = "CCW Autumn Caterpillar Entry Leaf Pile"
+LOC_WORM_AUTUMN_CCW_ZUBBAS_NEST = "CCW Autumn Caterpillar Near Zubba's Nest"
 LOC_WORM_AUTUMN_CCW_RAMP_NEAR_LAKE = "CCW Autumn Caterpillar Ramp Near Lake"
 LOC_WORM_AUTUMN_CCW_NEAR_STILT_BOOTS = "CCW Autumn Caterpillar Near Stilt Boots"
 LOC_WORM_AUTUMN_CCW_INSIDE_MUMBO_HUT = "CCW Autumn Caterpillar Inside Mumbo's Hut"
@@ -177,7 +193,7 @@ LOC_ACORN_AUTUMN_CCW_INSIDE_NABNUTS_HOUSE = "CCW Autumn Acorn Inside Nabnut's Ho
 
 LOC_SEASON_SPRING = "Spring"
 LOC_SEASON_SUMMER = "Summer"
-LOC_SEASON_FALL = "Fall"
+LOC_SEASON_AUTUMN = "Autumn"
 LOC_SEASON_WINTER = "Winter"
 
 LOC_TRANSFORMATION_TERMITE = "Termite"
@@ -1331,11 +1347,11 @@ LOC_MUMBO_TOKEN_CCW_SUMMER_MUMBOS_HUT = "CCW Summer Mumbo Token in Mumbo's Hut R
 LOC_MUMBO_TOKEN_CCW_SUMMER_TREETOP_ABOVE_MUMBOS_HUT = "CCW Summer Mumbo Token in Treetop Above Mumbo's Hut"
 LOC_MUMBO_TOKEN_CCW_SUMMER_LEAVES = "CCW Summer Mumbo Token in Leaves"
 LOC_MUMBO_TOKEN_CCW_SUMMER_AFTER_NABNUTS_HOUSE = "CCW Summer Mumbo Token After Nabnuts' House"
-LOC_MUMBO_TOKEN_CCW_FALL_ENTRANCE_SNAREBEAR = "CCW Fall Snarebear Mumbo Token Near Entrance"
-LOC_MUMBO_TOKEN_CCW_FALL_TREETOP_ABOVE_MUMBOS_HUT = "CCW Fall Mumbo Token in Treetop Above Mumbo's Hut"
-LOC_MUMBO_TOKEN_CCW_FALL_LEAVES = "CCW Fall Mumbo Token in Leaves"
-LOC_MUMBO_TOKEN_CCW_FALL_CABIN = "CCW Fall Mumbo Token Near Cabin"
-LOC_MUMBO_TOKEN_CCW_FALL_TREETOP_SNAREBEAR = "CCW Fall Treetop Snarebear Mumbo Token"
+LOC_MUMBO_TOKEN_CCW_AUTUMN_ENTRANCE_SNAREBEAR = "CCW Autumn Snarebear Mumbo Token Near Entrance"
+LOC_MUMBO_TOKEN_CCW_AUTUMN_TREETOP_ABOVE_MUMBOS_HUT = "CCW Autumn Mumbo Token in Treetop Above Mumbo's Hut"
+LOC_MUMBO_TOKEN_CCW_AUTUMN_LEAVES = "CCW Autumn Mumbo Token in Leaves"
+LOC_MUMBO_TOKEN_CCW_AUTUMN_CABIN = "CCW Autumn Mumbo Token Near Cabin"
+LOC_MUMBO_TOKEN_CCW_AUTUMN_TREETOP_SNAREBEAR = "CCW Autumn Treetop Snarebear Mumbo Token"
 LOC_MUMBO_TOKEN_CCW_WINTER_GARDEN = "CCW Winter Mumbo Token in Garden"
 LOC_MUMBO_TOKEN_CCW_WINTER_SIR_SLUSH = "CCW Winter Mumbo Token Under Sir Slush Near Garden"
 LOC_MUMBO_TOKEN_CCW_WINTER_BEEHIVE = "CCW Winter Mumbo Token Inside Beehive"
@@ -1537,8 +1553,17 @@ LOC_WITCH_SWITCH_RBB = "Witch Switch RBB"
 LOC_WITCH_SWITCH_CCW = "Witch Switch CCW"
 
 
-# WARP CAULDRON LOCATION CONSTANTS (8 total)
+# Warp Cauldron Activation Locations (touching for the first time)
+LOC_CAULDRON_ACTIVATE_PURPLE_1 = "Activate Purple Cauldron GL 50 Note Door"
+LOC_CAULDRON_ACTIVATE_PURPLE_2 = "Activate Purple Cauldron GL MMM"
+LOC_CAULDRON_ACTIVATE_GREEN_1  = "Activate Green Cauldron GL Grunty Statue"
+LOC_CAULDRON_ACTIVATE_GREEN_2  = "Activate Green Cauldron GL RBB"
+LOC_CAULDRON_ACTIVATE_ORANGE_1 = "Activate Orange Cauldron GL CC Pipe"
+LOC_CAULDRON_ACTIVATE_ORANGE_2 = "Activate Orange Cauldron GL CCW"
+LOC_CAULDRON_ACTIVATE_YELLOW_1 = "Activate Yellow Cauldron GL Furnace Fun"
+LOC_CAULDRON_ACTIVATE_YELLOW_2 = "Activate Yellow Cauldron GL Lair Keep"
 
+# WARP CAULDRON WARPING LOCATION CONSTANTS (8 total)
 LOC_CAULDRON_PURPLE_1 = "Warp Cauldron Purple GL 50 Note Door"
 LOC_CAULDRON_PURPLE_2 = "Warp Cauldron Purple GL MMM"
 LOC_CAULDRON_GREEN_1 = "Warp Cauldron Green GL Grunty Statue"
@@ -1547,6 +1572,12 @@ LOC_CAULDRON_ORANGE_1 = "Warp Cauldron Orange GL CC Pipe"
 LOC_CAULDRON_ORANGE_2 = "Warp Cauldron Orange GL CCW"
 LOC_CAULDRON_YELLOW_1 = "Warp Cauldron Yellow GL Furnace Fun"
 LOC_CAULDRON_YELLOW_2 = "Warp Cauldron Yellow GL Lair Keep"
+
+# Warp Cauldron Items (paired)
+ITEM_CAULDRON_PURPLE = "Purple Cauldron"
+ITEM_CAULDRON_GREEN   = "Green Cauldron"
+ITEM_CAULDRON_ORANGE = "Orange Cauldron"
+ITEM_CAULDRON_YELLOW = "Yellow Cauldron"
 
 
 # WATER LEVEL SWITCH LOCATION CONSTANTS (3 total)
@@ -1558,6 +1589,117 @@ LOC_WATER_SWITCH_3 = "GL Water Switch 3"
 #SNS Switches
 LOC_GV_SNS_SWITCH = "GV SNS Switch"
 
+
+# CCW Season Items
+ITEM_SEASON_SPRING = "CCW Spring"
+ITEM_SEASON_SUMMER = "CCW Summer"
+ITEM_SEASON_AUTUMN = "CCW Autumn"
+ITEM_SEASON_WINTER = "CCW Winter"
+
+# CCW Season Switch Locations
+LOC_CCW_SWITCH_SPRING = "CCW Spring Switch"
+LOC_CCW_SWITCH_SUMMER = "CCW Summer Switch"
+LOC_CCW_SWITCH_AUTUMN = "CCW Autumn Switch"
+LOC_CCW_SWITCH_WINTER = "CCW Winter Switch"
+
+LOC_LEVEL_UNLOCK_1 = "Level Unlock: 1st World"
+LOC_LEVEL_UNLOCK_2 = "Level Unlock: 2nd World"
+LOC_LEVEL_UNLOCK_3 = "Level Unlock: 3rd World"
+LOC_LEVEL_UNLOCK_4 = "Level Unlock: 4th World"
+LOC_LEVEL_UNLOCK_5 = "Level Unlock: 5th World"
+LOC_LEVEL_UNLOCK_6 = "Level Unlock: 6th World"
+LOC_LEVEL_UNLOCK_7 = "Level Unlock: 7th World"
+LOC_LEVEL_UNLOCK_8 = "Level Unlock: 8th World"
+LOC_LEVEL_UNLOCK_9 = "Level Unlock: Final Boss"
+LOC_PUZZLE_COMPLETE_DOUBLE_HEALTH = "GL: Complete Double Health Puzzle"
+
+# Mumbo Transformation Location Names
+LOC_MUMBO_TRANSFORM_TERMITE   = "MM: Mumbo's Transformation (Termite)"
+LOC_MUMBO_TRANSFORM_PUMPKIN   = "MMM: Mumbo's Transformation (Pumpkin)"
+LOC_MUMBO_TRANSFORM_WALRUS    = "FP: Mumbo's Transformation (Walrus)"
+LOC_MUMBO_TRANSFORM_CROCODILE = "BGS: Mumbo's Transformation (Crocodile)"
+LOC_MUMBO_TRANSFORM_BEE       = "CCW: Mumbo's Transformation (Bee)"
+
+# Cheato Spell Location Names
+LOC_CHEATO_BLUEEGGS     = "GL: Cheato - BLUEEGGS"
+LOC_CHEATO_REDFEATHERS  = "GL: Cheato - REDFEATHERS"
+LOC_CHEATO_GOLDFEATHERS = "GL: Cheato - GOLDFEATHERS"
+
+
+# Note Door Locations
+LOC_NOTE_DOOR_50  = "GL: Open 50 Note Door"
+LOC_NOTE_DOOR_180 = "GL: Open 180 Note Door"
+LOC_NOTE_DOOR_260 = "GL: Open 260 Note Door"
+LOC_NOTE_DOOR_350 = "GL: Open 350 Note Door"
+LOC_NOTE_DOOR_450 = "GL: Open 450 Note Door"
+LOC_NOTE_DOOR_640 = "GL: Open 640 Note Door"
+LOC_NOTE_DOOR_765 = "GL: Open 765 Note Door"
+LOC_NOTE_DOOR_810 = "GL: Open 810 Note Door"
+LOC_NOTE_DOOR_828 = "GL: Open 828 Note Door"
+LOC_NOTE_DOOR_846 = "GL: Open 846 Note Door"
+LOC_NOTE_DOOR_864 = "GL: Open 864 Note Door"
+LOC_NOTE_DOOR_882 = "GL: Open 882 Note Door"
+
+# Brentilda Locations
+
+LOC_BRENTILDA_1_FACT_1 = "GL: Brentilda TTC/CC Puzzle Room - Fact 1"
+LOC_BRENTILDA_1_FACT_2 = "GL: Brentilda TTC/CC Puzzle Room - Fact 2"
+LOC_BRENTILDA_1_FACT_3 = "GL: Brentilda TTC/CC Puzzle Room - Fact 3"
+LOC_BRENTILDA_2_FACT_1 = "GL: Brentilda CCW Puzzle Room - Fact 1"
+LOC_BRENTILDA_2_FACT_2 = "GL: Brentilda CCW Puzzle Room - Fact 2"
+LOC_BRENTILDA_2_FACT_3 = "GL: Brentilda CCW Puzzle Room - Fact 3"
+LOC_BRENTILDA_3_FACT_1 = "GL: Brentilda CC Entrance Pipe - Fact 1"
+LOC_BRENTILDA_3_FACT_2 = "GL: Brentilda CC Entrance Pipe - Fact 2"
+LOC_BRENTILDA_3_FACT_3 = "GL: Brentilda CC Entrance Pipe - Fact 3"
+LOC_BRENTILDA_4_FACT_1 = "GL: Brentilda Behind Grunty Statue - Fact 1"
+LOC_BRENTILDA_4_FACT_2 = "GL: Brentilda Behind Grunty Statue - Fact 2"
+LOC_BRENTILDA_4_FACT_3 = "GL: Brentilda Behind Grunty Statue - Fact 3"
+LOC_BRENTILDA_5_FACT_1 = "GL: Brentilda BGS Entrance Log - Fact 1"
+LOC_BRENTILDA_5_FACT_2 = "GL: Brentilda BGS Entrance Log - Fact 2"
+LOC_BRENTILDA_5_FACT_3 = "GL: Brentilda BGS Entrance Log - Fact 3"
+LOC_BRENTILDA_6_FACT_1 = "GL: Brentilda Behind GV Entrance - Fact 1"
+LOC_BRENTILDA_6_FACT_2 = "GL: Brentilda Behind GV Entrance - Fact 2"
+LOC_BRENTILDA_6_FACT_3 = "GL: Brentilda Behind GV Entrance - Fact 3"
+LOC_BRENTILDA_7_FACT_1 = "GL: Brentilda Grunty Statue Hat - Fact 1"
+LOC_BRENTILDA_7_FACT_2 = "GL: Brentilda Grunty Statue Hat - Fact 2"
+LOC_BRENTILDA_7_FACT_3 = "GL: Brentilda Grunty Statue Hat - Fact 3"
+LOC_BRENTILDA_8_FACT_1 = "GL: Brentilda Lava Room Ledge - Fact 1"
+LOC_BRENTILDA_8_FACT_2 = "GL: Brentilda Lava Room Ledge - Fact 2"
+LOC_BRENTILDA_8_FACT_3 = "GL: Brentilda Lava Room Ledge - Fact 3"
+LOC_BRENTILDA_9_FACT_1 = "GL: Brentilda MMM Entrance Gravestone - Fact 1"
+LOC_BRENTILDA_9_FACT_2 = "GL: Brentilda MMM Entrance Gravestone - Fact 2"
+LOC_BRENTILDA_9_FACT_3 = "GL: Brentilda MMM Entrance Gravestone - Fact 3"
+LOC_BRENTILDA_10_FACT_1 = "GL: Brentilda CCW Entrance Log - Fact 1"
+LOC_BRENTILDA_10_FACT_2 = "GL: Brentilda CCW Entrance Log - Fact 2"
+LOC_BRENTILDA_10_FACT_3 = "GL: Brentilda CCW Entrance Log - Fact 3"
+
+
+# Vile Yumbly/Grumbly Holes
+LOC_VILE_HOLE_01 = "BGS Mr. Vile Hole 1"
+LOC_VILE_HOLE_02 = "BGS Mr. Vile Hole 2"
+LOC_VILE_HOLE_03 = "BGS Mr. Vile Hole 3"
+LOC_VILE_HOLE_04 = "BGS Mr. Vile Hole 4"
+LOC_VILE_HOLE_05 = "BGS Mr. Vile Hole 5"
+LOC_VILE_HOLE_06 = "BGS Mr. Vile Hole 6"
+LOC_VILE_HOLE_07 = "BGS Mr. Vile Hole 7"
+LOC_VILE_HOLE_08 = "BGS Mr. Vile Hole 8"
+LOC_VILE_HOLE_09 = "BGS Mr. Vile Hole 9"
+LOC_VILE_HOLE_10 = "BGS Mr. Vile Hole 10"
+LOC_VILE_HOLE_11 = "BGS Mr. Vile Hole 11"
+LOC_VILE_HOLE_12 = "BGS Mr. Vile Hole 12"
+LOC_VILE_HOLE_13 = "BGS Mr. Vile Hole 13"
+LOC_VILE_HOLE_14 = "BGS Mr. Vile Hole 14"
+LOC_VILE_HOLE_15 = "BGS Mr. Vile Hole 15"
+LOC_VILE_HOLE_16 = "BGS Mr. Vile Hole 16"
+LOC_VILE_HOLE_17 = "BGS Mr. Vile Hole 17"
+LOC_VILE_HOLE_18 = "BGS Mr. Vile Hole 18"
+LOC_VILE_HOLE_19 = "BGS Mr. Vile Hole 19"
+LOC_VILE_HOLE_20 = "BGS Mr. Vile Hole 20"
+LOC_VILE_HOLE_21 = "BGS Mr. Vile Hole 21"
+LOC_VILE_HOLE_22 = "BGS Mr. Vile Hole 22"
+LOC_VILE_HOLE_23 = "BGS Mr. Vile Hole 23"
+LOC_VILE_HOLE_24 = "BGS Mr. Vile Hole 24"
+LOC_VILE_HOLE_25 = "BGS Mr. Vile Hole 25"
 # Egg and Feather Locations
 # Gruntys Lair Eggs
 LOC_BEGG_GL_AROUND_RED_CAULDRON_1 = "GL Blue Egg 1 Around Red Cauldron"
@@ -2999,6 +3141,10 @@ RGN_GRUNTILDAS_LAIR_450_NOTE_DOOR = "Gruntilda's Lair 450 Note Door"
 RGN_RUSTY_BUCKET_BAY = "Rusty Bucket Bay"
 RGN_GRUNTILDAS_LAIR_640_NOTE_DOOR = "Gruntilda's Lair 640 Note Door"
 RGN_CLICK_CLOCK_WOOD = "Click Clock Wood"
+RGN_CCW_SPRING = "Click Clock Wood Spring"
+RGN_CCW_SUMMER = "Click Clock Wood Summer"
+RGN_CCW_AUTUMN = "Click Clock Wood Autumn"
+RGN_CCW_WINTER ="Click Clock Wood Winter"
 RGN_GRUNTILDAS_LAIR_765_NOTE_DOOR = "Gruntilda's Lair 765 Note Door"
 RGN_GRUNTILDAS_LAIR_FURNACE_FUN = "Gruntilda's Lair Furnace Fun"
 RGN_GRUNTILDAS_LAIR_810_NOTE_DOOR = "Gruntilda's Lair 810 Note Door"

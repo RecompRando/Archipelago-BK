@@ -11,7 +11,6 @@ from .NormalRules import *
 from .Constants import *
 
 class BKWebWorld(WebWorld):
-    # ~ theme = "partyTime"
     
     setup_en = Tutorial(
         "Multiworld Setup Guide",
@@ -41,7 +40,10 @@ class BKWorld(World):
     item_name_to_id = item_table
 
     def generate_early(self):
-        pass
+        early_items = [ITEM_TALON_TROT]
+
+        for item in early_items:
+            self.multiworld.local_early_items[self.player][item] = 1
     
     def create_item(self, name: str) -> BKItem:
         return BKItem(name, item_data_table[name].type, item_data_table[name].code, self.player)
@@ -67,30 +69,24 @@ class BKWorld(World):
 
         mw.itempool += item_pool
 
-        # Add filler items for jinjo locations
-        self.create_and_add_filler_items(45)
-
-        # Balance: ensure total items >= total unfilled locations
-        # This must be here (in create_items) not in create_regions,
-        # because create_regions runs BEFORE create_items in AP's generation order.
         total_unfilled = sum(
             1 for loc in mw.get_locations(player)
             if not loc.item
         )
         total_items = sum(1 for item in mw.itempool if item.player == player)
-        if total_items < total_unfilled:
-            self.create_and_add_filler_items(total_unfilled - total_items)
+        
+        filler_needed = total_unfilled - total_items
+        if filler_needed > 0:
+            self.create_and_add_filler_items(filler_needed)
 
     def create_regions(self) -> None:
         player = self.player
         mw = self.multiworld
 
-        # Create regions.
         for region_name in region_data_table.keys():
             region = Region(region_name, player, mw)
             mw.regions.append(region)
 
-        # Create locations.
         for region_name, region_data in region_data_table.items():
             region = mw.get_region(region_name, player)
             region.add_locations({
@@ -99,12 +95,7 @@ class BKWorld(World):
             }, BKLocation)
             region.add_exits(region_data.connecting_regions)
 
-        if self.options.extra_locations.value:
-            self.create_and_add_filler_items(num_total_extra_locs)
-
-        # Place locked locations.
         for location_name, location_data in locked_locations.items():
-            # Ignore locations we never created.
             if not location_data.can_create(self.options):
                 continue
 
@@ -117,27 +108,90 @@ class BKWorld(World):
 
     def pre_fill(self) -> None:
         from BaseClasses import CollectionState
+        from Fill import fill_restrictive
 
         player = self.player
         mw = self.multiworld
 
-        # Place 1 Jiggy in sphere 0 to unlock MM and prevent deadlocks
+        # In threshold mode, lock the 9 unlock items to the 9 threshold locations
+        # so every jiggy threshold guarantees a world unlock
+        if self.options.level_unlock_mode.value == 0:
+            world_items = [
+                ITEM_OPEN_TTC, ITEM_OPEN_CC, ITEM_OPEN_BGS,
+                ITEM_OPEN_FP, ITEM_OPEN_GV, ITEM_OPEN_MMM,
+                ITEM_OPEN_RBB, ITEM_OPEN_CCW,
+            ]
+            world_locations = [
+                LOC_LEVEL_UNLOCK_1, LOC_LEVEL_UNLOCK_2, LOC_LEVEL_UNLOCK_3,
+                LOC_LEVEL_UNLOCK_4, LOC_LEVEL_UNLOCK_5, LOC_LEVEL_UNLOCK_6,
+                LOC_LEVEL_UNLOCK_7, LOC_LEVEL_UNLOCK_8,
+            ]
+            self.random.shuffle(world_items)
+            for loc_name, item_name in zip(world_locations, world_items):
+                loc = mw.get_location(loc_name, player)
+                item = next((i for i in mw.itempool if i.player == player and i.name == item_name), None)
+                if item:
+                    loc.place_locked_item(item)
+                    mw.itempool.remove(item)
+
+            # Final boss always last threshold
+            loc = mw.get_location(LOC_LEVEL_UNLOCK_9, player)
+            item = next((i for i in mw.itempool if i.player == player and i.name == ITEM_OPEN_FIGHT), None)
+            if item:
+                loc.place_locked_item(item)
+                mw.itempool.remove(item)
+
+        # Place a jiggy in sphere 0 to kickstart progression
         state = CollectionState(mw)
         sphere0_locations = [
             loc for region in mw.regions if region.player == player
             for loc in region.locations if not loc.item and loc.can_reach(state)
         ]
 
-        if not sphere0_locations:
-            return
+        if sphere0_locations:
+            jiggy = next((i for i in mw.itempool if i.player == player and i.name == ITEM_JIGGY), None)
+            if jiggy:
+                loc = self.random.choice(sphere0_locations)
+                loc.place_locked_item(jiggy)
+                mw.itempool.remove(jiggy)
 
-        jiggy = next((i for i in mw.itempool if i.player == player and i.name == ITEM_JIGGY), None)
-        if not jiggy:
-            return
+        # ============================================================
+        # Pre-fill all notes when notesanity is enabled.
+        #
+        # With 750 progression notes in the main fill, fill_restrictive
+        # deadlocks because notes + movement abilities compete for the
+        # same early-sphere slots. By placing notes here in isolation,
+        # the main fill only handles ~40 items and never fails.
+        #
+        # Notes are interchangeable (any Note is identical to any other),
+        # so fill_restrictive only needs to ensure enough notes are
+        # reachable before each door threshold — no item-specific logic.
+        # ============================================================
+        if self.options.notesanity.value:
+            note_items = [i for i in list(mw.itempool)
+                          if i.player == player and i.name == ITEM_NOTE]
+            for item in note_items:
+                mw.itempool.remove(item)
 
-        loc = self.random.choice(sphere0_locations)
-        loc.place_locked_item(jiggy)
-        mw.itempool.remove(jiggy)
+            available_locations = [
+                loc for loc in mw.get_unfilled_locations(player)
+                if not loc.progress_type == loc.progress_type.EXCLUDED
+            ]
+            self.random.shuffle(available_locations)
+            self.random.shuffle(note_items)
+
+            # Pre-collect all non-note progression items into the state
+            # so fill_restrictive knows which locations are reachable.
+            # Without this, only sphere 0 locations are available and
+            # there aren't enough for 750 notes.
+            fill_state = CollectionState(mw)
+            for item in mw.itempool:
+                if item.player == player and item.advancement:
+                    fill_state.collect(item, prevent_sweep=True)
+            fill_state.sweep_for_advancements()
+
+            fill_restrictive(mw, fill_state, available_locations, note_items,
+                             single_player_placement=True, name="BK Notes")
 
     def create_and_add_filler_items(self, count: int = 1):
         for i in range(count):
@@ -146,23 +200,17 @@ class BKWorld(World):
     def get_filler_item_name(self) -> str:
         filler_items = [ITEM_EGG_REFILL, ITEM_REDFEATHER_REFILL, ITEM_GOLDFEATHER_REFILL]
         return self.random.choice(filler_items)
-        # filler_weights = (50, 25, 10, 5, 1)
-        # return self.random.choices(filler_items, weights=filler_weights)[0]
 
     def set_rules(self) -> None:
         player = self.player
         mw = self.multiworld
         options = self.options
 
-        # Completion condition.
         mw.completion_condition[player] = lambda state: state.has("Victory", player)
 
         if (self.options.logic_difficulty.value == 4):
             return
 
-        # ~ if (self.options.logic_difficulty.value == 0):
-            # ~ region_rules = get_baby_region_rules(player, options)
-            # ~ location_rules = get_baby_location_rules(player, options)
         if (self.options.logic_difficulty.value == 1):
             region_rules = get_region_rules(player, options)
             location_rules = get_location_rules(player, options)
@@ -182,5 +230,7 @@ class BKWorld(World):
 
     def fill_slot_data(self):
         return {
-            "talon_lobby": self.options.talon_lobby.value
+            "talon_lobby": self.options.talon_lobby.value,
+            "extra_locations": self.options.extra_locations.value,
+            "level_unlock_mode": self.options.level_unlock_mode.value,
         }

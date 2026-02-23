@@ -39,6 +39,16 @@ class ExtraLocations(Toggle):
     Prevents generation failures."""
     display_name = "Extra Locations"
 
+class LevelUnlockMode(Choice):
+    """How worlds beyond Mumbo's Mountain are unlocked.
+    
+    Thresholds: Collecting jiggies unlocks worlds automatically at set thresholds.
+    Items: World unlock items are shuffled into the multiworld item pool."""
+    display_name = "Level Unlock Mode"
+    option_thresholds = 0
+    option_items = 1
+    default = 0
+
 @dataclass
 class BKOptions(PerGameCommonOptions):
     start_inventory_from_pool: StartInventoryPool
@@ -48,3 +58,4 @@ class BKOptions(PerGameCommonOptions):
     # eggsanity: Eggsanity
     # feathersanity: Feathersanity
     extra_locations: ExtraLocations
+    level_unlock_mode: LevelUnlockMode

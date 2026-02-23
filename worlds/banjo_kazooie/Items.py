@@ -100,52 +100,32 @@ item_data_table: Dict[str, BKItemData] = {
         can_create=lambda options: False
     ),
     ITEM_BLUBBER_GOLD: BKItemData(
-        code=None,
+        code=0x06000001,
         type=ItemClassification.progression,
         can_create=lambda options: False
     ),
     ITEM_RED_PRESENT: BKItemData(
-        code=None,
+        code=0x06000002,
         type=ItemClassification.progression,
         can_create=lambda options: False
     ),
     ITEM_GREEN_PRESENT: BKItemData(
-        code=None,
+        code=0x06000003,
         type=ItemClassification.progression,
         can_create=lambda options: False
     ),
     ITEM_BLUE_PRESENT: BKItemData(
-        code=None,
-        type=ItemClassification.progression,
-        can_create=lambda options: False
-    ),
-    ITEM_SEASON_SPRING: BKItemData(
-        code=None,
-        type=ItemClassification.progression,
-        can_create=lambda options: False
-    ),
-    ITEM_SEASON_SUMMER: BKItemData(
-        code=None,
-        type=ItemClassification.progression,
-        can_create=lambda options: False
-    ),
-    ITEM_SEASON_FALL: BKItemData(
-        code=None,
-        type=ItemClassification.progression,
-        can_create=lambda options: False
-    ),
-    ITEM_SEASON_WINTER: BKItemData(
-        code=None,
+        code=0x06000004,
         type=ItemClassification.progression,
         can_create=lambda options: False
     ),
     ITEM_WORM: BKItemData(
-        code=None,
+        code=0x06000005,
         type=ItemClassification.progression,
         can_create=lambda options: False
     ),
     ITEM_ACORN: BKItemData(
-        code=None,
+        code=0x06000006,
         type=ItemClassification.progression,
         can_create=lambda options: False
     ),
@@ -419,6 +399,22 @@ item_data_table: Dict[str, BKItemData] = {
         type=ItemClassification.progression,
         can_create=lambda options: False
     ),
+    ITEM_SEASON_SPRING: BKItemData(
+        code=0x0001FFC0,
+        type=ItemClassification.progression,
+    ),
+    ITEM_SEASON_SUMMER: BKItemData(
+        code=0x0001FFC1,
+        type=ItemClassification.progression,
+    ),
+    ITEM_SEASON_AUTUMN: BKItemData(
+        code=0x0001FFC2,
+        type=ItemClassification.progression,
+    ),
+    ITEM_SEASON_WINTER: BKItemData(
+        code=0x0001FFC3,
+        type=ItemClassification.progression,
+    ),
     ITEM_JIGGY: BKItemData(
         code=0x0001FBE2,
         type=ItemClassification.progression,
@@ -441,14 +437,14 @@ item_data_table: Dict[str, BKItemData] = {
     ),
     ITEM_NOTE: BKItemData(
         code=0x0001FBE4,
-        type=ItemClassification.progression,
-        num_exist=882,
+        type=ItemClassification.progression_skip_balancing,
+        num_exist=750,
         can_create=lambda options: options.notesanity.value
     ),
     ITEM_NOTE_FILLER: BKItemData(
         code=0xFF01FBE4,
         type=ItemClassification.filler,
-        num_exist=18,
+        num_exist=150,
         can_create=lambda options: options.notesanity.value
     ),
     ITEM_EMPTY_HONEYCOMB: BKItemData(
@@ -481,29 +477,24 @@ item_data_table: Dict[str, BKItemData] = {
         type=ItemClassification.useful
     ),
     ITEM_TRANSFORMATION_TERMITE: BKItemData(
-        code=None,
+        code=0x0001FFB0,
         type=ItemClassification.progression,
-        can_create=lambda options: False
     ),
     ITEM_TRANSFORMATION_CROCODILE: BKItemData(
-        code=None,
+        code=0x0001FFB1,
         type=ItemClassification.progression,
-        can_create=lambda options: False
     ),
     ITEM_TRANSFORMATION_WALRUS: BKItemData(
-        code=None,
+        code=0x0001FFB2,
         type=ItemClassification.progression,
-        can_create=lambda options: False
     ),
     ITEM_TRANSFORMATION_PUMPKIN: BKItemData(
-        code=None,
+        code=0x0001FFB3,
         type=ItemClassification.progression,
-        can_create=lambda options: False
     ),
     ITEM_TRANSFORMATION_BEE: BKItemData(
-        code=None,
+        code=0x0001FFB4,
         type=ItemClassification.progression,
-        can_create=lambda options: False
     ),
     ITEM_SNS_KEY_ICE: BKItemData(
         code=0x05000007,
@@ -557,6 +548,61 @@ item_data_table: Dict[str, BKItemData] = {
         code=0x0001FBF5,
         type=ItemClassification.filler,
         can_create=lambda options: False
+    ),
+    # Level Unlock Items (9 total - MM is always open)
+    ITEM_OPEN_TTC: BKItemData(
+        code=0x0001FFE3,
+        type=ItemClassification.progression,
+    ),
+    ITEM_OPEN_CC: BKItemData(
+        code=0x0001FFE4,
+        type=ItemClassification.progression,
+    ),
+    ITEM_OPEN_BGS: BKItemData(
+        code=0x0001FFE5,
+        type=ItemClassification.progression,
+    ),
+    ITEM_OPEN_FP: BKItemData(
+        code=0x0001FFE6,
+        type=ItemClassification.progression,
+    ),
+    ITEM_OPEN_GV: BKItemData(
+        code=0x0001FFE7,
+        type=ItemClassification.progression,
+    ),
+    ITEM_OPEN_MMM: BKItemData(
+        code=0x0001FFE8,
+        type=ItemClassification.progression,
+    ),
+    ITEM_OPEN_RBB: BKItemData(
+        code=0x0001FFE9,
+        type=ItemClassification.progression,
+    ),
+    ITEM_OPEN_CCW: BKItemData(
+        code=0x0001FFEA,
+        type=ItemClassification.progression,
+    ),
+    ITEM_OPEN_FIGHT: BKItemData(
+        code=0x0001FFEB,
+        type=ItemClassification.progression,
+    ),
+
+    # Warp Cauldron Items (4 paired)
+    ITEM_CAULDRON_PURPLE: BKItemData(
+        code=0x0001FFD0,
+        type=ItemClassification.progression,
+    ),
+    ITEM_CAULDRON_GREEN: BKItemData(
+        code=0x0001FFD1,
+        type=ItemClassification.progression,
+    ),
+    ITEM_CAULDRON_ORANGE: BKItemData(
+        code=0x0001FFD2,
+        type=ItemClassification.progression,
+    ),
+    ITEM_CAULDRON_YELLOW: BKItemData(
+        code=0x0001FFD3,
+        type=ItemClassification.progression,
     ),
     ITEM_VICTORY: BKItemData(
         type=ItemClassification.progression,

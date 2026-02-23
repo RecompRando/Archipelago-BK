@@ -4,10 +4,8 @@ def rgn_connection_string(rgn1, rgn2):
     return str(rgn1) + " -> " + str(rgn2)
 
 def talon_lobby(state, player, options):
-    # If there's an option to remove the Talon Trot requirement
     if options.talon_lobby.value:
         return True
-    # Otherwise, require Talon Trot
     return state.has(ITEM_TALON_TROT, player)
 
 def has_tokens_for_all_transforms(state, player):
@@ -18,23 +16,23 @@ def can_smash_mm_huts(state, player):
         state.has(ITEM_BEAK_BUSTER, player) and
         (
             state.has(ITEM_JUMP, player) or
-            state.has(ITEM_FLAP_FLIP, player)    #required to get on top of the huts
+            state.has(ITEM_FLAP_FLIP, player)
         )
     )
 
 def can_reach_ttc_upper_ledge(state, player):
     return (
         state.has(ITEM_JUMP, player) or
-        state.has(ITEM_FEATHERY_FLAP, player) or        #required to reasonably get to and climb ladders without getting
-        state.has(ITEM_RAT_A_TAT_RAP, player) or        #snack attacked
+        state.has(ITEM_FEATHERY_FLAP, player) or
+        state.has(ITEM_RAT_A_TAT_RAP, player) or
         (
-            state.has(ITEM_TALON_TROT, player) and    #or you can go up from Nipper
+            state.has(ITEM_TALON_TROT, player) and
             state.has(ITEM_SHOCK_SPRING_JUMP, player)
         ) or
         (
             state.has(ITEM_FLIGHT, player) and
             (
-                state.has(ITEM_FLAP_FLIP, player) or    #you can also fly up there
+                state.has(ITEM_FLAP_FLIP, player) or
                 state.has(ITEM_TALON_TROT, player)
             )
         )
@@ -42,8 +40,8 @@ def can_reach_ttc_upper_ledge(state, player):
 
 def can_reach_ttc_middle_ledge(state, player):
     return (
-        can_reach_ttc_upper_ledge(state, player) or  #one of these are required to get to the middle ledge
-        state.has(ITEM_FLAP_FLIP, player)           #this, however, can access ONLY the middle ledge
+        can_reach_ttc_upper_ledge(state, player) or
+        state.has(ITEM_FLAP_FLIP, player)
     )
 
 def can_reach_ttc_flight_pad(state, player):
@@ -81,7 +79,7 @@ def can_reach_fp_puzzle_from_world_room(state, player):
 
 def can_reach_gv_puzzle_from_world_room(state, player):
     return (
-        state.has(ITEM_NOTE, player, 350)
+        state.has(ITEM_NOTE, player, 290)
     )
 
 def can_reach_gv_rest_of_level(state, player):
@@ -90,12 +88,9 @@ def can_reach_gv_rest_of_level(state, player):
         state.has(ITEM_TURBO_TALON_TROT, player)
     )
 
-#def gobi_moved_to_ccw(state, player):
-    #TODO
-
 def can_reach_mmm_puzzle_from_world_room(state, player):
     return (
-        state.has(ITEM_NOTE, player, 450) and
+        state.has(ITEM_NOTE, player, 380) and
         state.has(ITEM_SWIM, player) and
         state.has(ITEM_JUMP, player) and
         (
@@ -108,8 +103,8 @@ def can_reach_mmm_second_floor(state, player):
     return (
         state.has(ITEM_CLIMB, player) and
         (
-            state.has(ITEM_RAT_A_TAT_RAP, player) or  #required to break window
-            state.has(ITEM_EGGS, player)              #Wonderwing also works
+            state.has(ITEM_RAT_A_TAT_RAP, player) or
+            state.has(ITEM_EGGS, player)
         )
     )
 
@@ -121,20 +116,16 @@ def can_reach_mmm_third_floor(state, player):
 
 def can_hit_one_water_switch(state, player):
     return (
-        # break gate outside MMM
-            can_break_breakable_gates(state, player) and
-            # get to the switch
-            state.has(ITEM_TRANSFORMATION_PUMPKIN, player) and
-            # hit the switch
-            state.has(ITEM_BEAK_BUSTER, player)
+        state.has(ITEM_OPEN_MMM, player) and
+        can_break_breakable_gates(state, player) and
+        state.has(ITEM_TRANSFORMATION_PUMPKIN, player) and
+        state.has(ITEM_BEAK_BUSTER, player)
     )
 
 def can_hit_two_water_switches(state, player):
     return (
         can_hit_one_water_switch(state, player) and
-        # get to the switch itself
         state.has(ITEM_SWIM, player) and
-        # break box
         (
             state.has(ITEM_RAT_A_TAT_RAP, player) or
             state.has(ITEM_BEAK_BARGE, player)
@@ -144,9 +135,7 @@ def can_hit_two_water_switches(state, player):
 def can_hit_three_water_switches(state, player):
     return (
         can_hit_two_water_switches(state, player) and
-        # get to the switch itself
         state.has(ITEM_SWIM, player) and
-        # break grate
         state.has(ITEM_RAT_A_TAT_RAP, player)
     )
 
@@ -162,24 +151,20 @@ def can_reach_ccw_puzzle_from_world_room(state, player):
 
 def can_reach_ccw_nabnuts_house(state, player):
     return (
-        state.has(ITEM_FLIGHT, player) or
+        state.has(ITEM_TALON_TROT, player) and
+        state.has(ITEM_SHOCK_SPRING_JUMP, player) and
         (
-            state.has(ITEM_TALON_TROT, player) and
-            state.has(ITEM_SHOCK_SPRING_JUMP, player) and
-            (
-                state.has(ITEM_JUMP, player) or
-                state.has(ITEM_FEATHERY_FLAP, player) or
-                state.has(ITEM_RAT_A_TAT_RAP, player)
-            )
+            state.has(ITEM_JUMP, player) or
+            state.has(ITEM_FEATHERY_FLAP, player) or
+            state.has(ITEM_RAT_A_TAT_RAP, player)
         )
     )
 
 def can_traverse_bgs(state, player):
     return (
         state.has(ITEM_JUMP, player) or
-        state.has(ITEM_FEATHERY_FLAP, player) or # required to access most of the level
+        state.has(ITEM_FEATHERY_FLAP, player) or
         state.has(ITEM_RAT_A_TAT_RAP, player)
-        # or state.has(ITEM_FLAP_FLIP, player)   #this is awful, so I'm commenting it out for now
     )
 
 def can_break_breakable_gates(state, player):
@@ -212,128 +197,40 @@ def can_reach_ccw_summer_switch(state, player):
         state.has(ITEM_SHOCK_SPRING_JUMP, player)
     )
 
-def can_reach_ccw_fall_switch(state, player):
+def can_reach_ccw_autumn_switch(state, player):
     return (
         can_reach_ccw_summer_switch(state, player)
     )
 
 def can_reach_ccw_winter_switch(state, player):
     return (
-        can_reach_ccw_fall_switch(state, player)
+        can_reach_ccw_autumn_switch(state, player)
     )
 
-def can_reach_ccw_beehive(state, player, season = None):
-    if season == ITEM_SEASON_SPRING:
-        return (
-            (
-                state.has(ITEM_SEASON_SPRING, player) and
-                state.has(ITEM_TALON_TROT, player)
-            )
-        )
-    elif season == ITEM_SEASON_SUMMER:
-        return (
-            state.has(ITEM_SEASON_SUMMER, player) and
-            (
-                state.has(ITEM_TALON_TROT, player) or
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_SUMMER)
-            )
-        )
-    elif season == ITEM_SEASON_FALL:
-        return (
-            state.has(ITEM_SEASON_FALL, player) and
-            (
-                state.has(ITEM_TALON_TROT, player) or
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_FALL)
-            )
-        )
-    elif season == ITEM_SEASON_WINTER:
-        return (
-            state.has(ITEM_SEASON_WINTER, player) and
-            (
-                state.has(ITEM_TALON_TROT, player) or
-                state.has(ITEM_FLIGHT, player)
-            )
-        )
-    else:
-        return (
-            can_reach_ccw_beehive(state, player, ITEM_SEASON_SPRING) or
-            can_reach_ccw_beehive(state, player, ITEM_SEASON_SUMMER) or
-            can_reach_ccw_beehive(state, player, ITEM_SEASON_FALL) or
-            can_reach_ccw_beehive(state, player, ITEM_SEASON_WINTER)
-        )
+def can_reach_ccw_beehive(state, player):
+    return (
+        state.has(ITEM_TALON_TROT, player)
+    )
 
-def can_reach_ccw_cabin(state, player, season = None):
-    if season == ITEM_SEASON_SPRING:
-        return (
-            state.has(ITEM_SEASON_SPRING, player) and
-            state.has(ITEM_TALON_TROT, player) and
-            state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+def can_reach_ccw_cabin(state, player):
+    return (
+        state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+        (
+            state.has(ITEM_FEATHERY_FLAP, player) or
+            state.has(ITEM_RAT_A_TAT_RAP, player) or
             (
-                state.has(ITEM_FEATHERY_FLAP, player) or
-                state.has(ITEM_RAT_A_TAT_RAP, player) or
-                state.has(ITEM_JUMP, player)
-            )
-        )
-    elif season == ITEM_SEASON_SUMMER:
-        return (
-            state.has(ITEM_SEASON_SUMMER, player) and
-            state.has(ITEM_SHOCK_SPRING_JUMP, player) and
-            (
-                state.has(ITEM_FEATHERY_FLAP, player) or
-                state.has(ITEM_RAT_A_TAT_RAP, player) or
-                (
-                    state.has(ITEM_JUMP, player) and
-                    state.has(ITEM_TALON_TROT, player)
-                )
-            ) and
-            (
-                state.has(ITEM_FLAP_FLIP, player) or
+                state.has(ITEM_JUMP, player) and
                 state.has(ITEM_TALON_TROT, player)
             )
+        ) and
+        (
+            state.has(ITEM_FLAP_FLIP, player) or
+            state.has(ITEM_TALON_TROT, player)
         )
-    elif season == ITEM_SEASON_FALL:
-        return (
-            state.has(ITEM_SEASON_FALL, player) and
-            state.has(ITEM_SHOCK_SPRING_JUMP, player) and
-            (
-                state.has(ITEM_FEATHERY_FLAP, player) or
-                state.has(ITEM_RAT_A_TAT_RAP, player) or
-                (
-                    state.has(ITEM_JUMP, player) and
-                    state.has(ITEM_TALON_TROT, player)
-                )
-            ) and
-            (
-                state.has(ITEM_FLAP_FLIP, player) or
-                state.has(ITEM_TALON_TROT, player)
-            )
-        )
-    elif season == ITEM_SEASON_WINTER:
-        return (
-            state.has(ITEM_SEASON_WINTER, player) and
-            (
-                (
-                    state.has(ITEM_TALON_TROT, player) and
-                    state.has(ITEM_SHOCK_SPRING_JUMP, player) and
-                    (
-                        state.has(ITEM_FEATHERY_FLAP, player) or
-                        state.has(ITEM_RAT_A_TAT_RAP, player) or
-                        (
-                            state.has(ITEM_JUMP, player) and
-                            state.has(ITEM_TALON_TROT, player)
-                        )
-                    )
-                ) or
-                state.has(ITEM_FLIGHT, player)
-            )
-        )
-    else:
-        return (
-            can_reach_ccw_cabin(state, player, ITEM_SEASON_SPRING) or
-            can_reach_ccw_cabin(state, player, ITEM_SEASON_SUMMER) or
-            can_reach_ccw_cabin(state, player, ITEM_SEASON_FALL) or
-            can_reach_ccw_cabin(state, player, ITEM_SEASON_WINTER)
-        )
+    )
+
+def has_season_unlocked(state, player, season: str) -> bool:
+    return state.has(f"CCW {season}", player)
 
 def can_reach_eyrie(state, player):
     return (
@@ -411,138 +308,216 @@ def can_reach_rbb_witch(state, player):
             )
         )
     )
+
 def can_reach_ccw_witch(state, player):
     return (
-        can_reach_ccw_cabin(state, player, ITEM_SEASON_WINTER) and
+        can_reach_ccw_cabin(state, player) and
         state.has(ITEM_BEAK_BUSTER, player)
     )
+
+
 def get_region_rules(player, options):
     return {
+        # === Spiral Mountain -> Lair ===
+
         rgn_connection_string(RGN_SPIRAL_MOUNTAIN, RGN_GRUNTILDAS_LAIR_LOBBY):
             lambda state: True,
-        rgn_connection_string(RGN_GRUNTILDAS_LAIR_LOBBY, RGN_MUMBOS_MOUNTAIN):
-            lambda state:
-            (
-                state.has(ITEM_JIGGY, player)
-            ),
+
+        # === Lobby -> 50 Note Door ===
+
         rgn_connection_string(RGN_GRUNTILDAS_LAIR_LOBBY, RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR):
-            lambda state:
-            (
-                state.has(ITEM_NOTE, player, 50) and 
-                talon_lobby(state, player, options)  # Option to enable talon in lobby
-            ),
-        rgn_connection_string(RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR, RGN_TREASURE_TROVE_COVE):
-            lambda state:
-            (
-                state.has(ITEM_JIGGY, player, 3) and  # 1+2+5+7
-                (
-                    state.has(ITEM_FLAP_FLIP, player) or
-                    state.has(ITEM_TALON_TROT, player)
-                )
-            ),
-        rgn_connection_string(RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR, RGN_CLANKERS_CAVERN):
-            lambda state:
-            (
-                state.has(ITEM_JIGGY, player, 8) and  # 1+2+5+7
-                state.has(ITEM_SHOCK_SPRING_JUMP, player) and
-                can_reach_cc_entrance(state, player)
-            ),
-        rgn_connection_string(RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR):
-            lambda state:
-            (
-                state.has(ITEM_NOTE, player, 180) and
+            lambda state: (
+                talon_lobby(state, player, options) or
                 state.has(ITEM_TALON_TROT, player)
             ),
-        rgn_connection_string(RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR, RGN_BUBBLEGLOOP_SWAMP):
-            lambda state:
-            (
-                can_reach_bgs_puzzle_from_world_room(state, player) and
-                state.has(ITEM_JIGGY, player, 15) and
-                state.has(ITEM_TALON_TROT, player)  # 1+2+5+7+8
+
+        # === Forward Note Door Connections ===
+
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR):
+            lambda state: (
+                state.has(ITEM_NOTE, player, 150) and
+                state.has(ITEM_TALON_TROT, player)
             ),
+
         rgn_connection_string(RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR):
-            lambda state:
-            (
-                state.has(ITEM_NOTE, player, 260) and
+            lambda state: (
+                state.has(ITEM_NOTE, player, 220) and
                 state.has(ITEM_SHOCK_SPRING_JUMP, player)
             ),
-        rgn_connection_string(RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR, RGN_FREEZEEZY_PEAK):
-            lambda state:
-            (
-                can_reach_fp_puzzle_from_world_room(state, player) and
-                state.has(ITEM_SHOCK_SPRING_JUMP, player) and
-                state.has(ITEM_JIGGY, player, 23)  # 1+2+5+7+8+9
-            ),
-        rgn_connection_string(RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR, RGN_GOBIS_VALLEY):
-            lambda state:
-            (
+
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_350_NOTE_DOOR):
+            lambda state: state.has(ITEM_NOTE, player, 290),
+
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_450_NOTE_DOOR):
+            lambda state: (
+                state.has(ITEM_NOTE, player, 380) or
                 (
-                    can_reach_gv_puzzle_from_world_room(state, player) and
-                    state.has(ITEM_JIGGY, player, 32) and
-                    state.has(ITEM_STILT_STRIDE, player)  # 1+2+5+7+8+9
-                ) and
-                (
-                    state.has(ITEM_RAT_A_TAT_RAP, player) or
-                    state.has(ITEM_BEAK_BARGE, player)
+                    state.has(ITEM_CAULDRON_GREEN, player) and
+                    state.has(ITEM_EGGS, player) and
+                    state.has(ITEM_SWIM, player)
                 )
             ),
-        rgn_connection_string(RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_350_NOTE_DOOR):
-            lambda state:
-            (
-                state.has(ITEM_NOTE, player, 350)
-            ),
-        rgn_connection_string(RGN_GRUNTILDAS_LAIR_350_NOTE_DOOR, RGN_MAD_MONSTER_MANSION):
-            lambda state:
-            (
-                can_reach_mmm_puzzle_from_world_room(state, player) and
-                state.has(ITEM_JIGGY, player, 42)  # 1+2+5+7+8+9+10+12
-            ),
-        rgn_connection_string(RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_450_NOTE_DOOR):
-            lambda state:
-            (
-                state.has(ITEM_NOTE, player, 450)
-            ),
-        rgn_connection_string(RGN_GRUNTILDAS_LAIR_450_NOTE_DOOR, RGN_RUSTY_BUCKET_BAY):
-            lambda state:
-            (
-                can_reach_rbb_puzzle_from_world_room(state, player) and
-                state.has(ITEM_JIGGY, player, 54)  # 1+2+5+7+8+9+10+12
-            ),
+
         rgn_connection_string(RGN_GRUNTILDAS_LAIR_450_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_640_NOTE_DOOR):
-            lambda state:
-            (
-                can_hit_three_water_switches(state, player) and
-                state.has(ITEM_NOTE, player, 640)
+            lambda state: (
+                can_hit_two_water_switches(state, player) and
+                state.has(ITEM_NOTE, player, 540)
             ),
-        rgn_connection_string(RGN_GRUNTILDAS_LAIR_640_NOTE_DOOR, RGN_CLICK_CLOCK_WOOD):
-            lambda state:
-            (
-                can_reach_ccw_puzzle_from_world_room(state, player) and
-                state.has(ITEM_JIGGY, player, 69) and  # 1+2+5+7+8+9+10+12+15
-                state.has(ITEM_BEAK_BUSTER, player) and
-                state.has(ITEM_FLAP_FLIP, player)
-            ),
+
         rgn_connection_string(RGN_GRUNTILDAS_LAIR_640_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_765_NOTE_DOOR):
-            lambda state:
-            (
-                state.has(ITEM_NOTE, player, 765) and
+            lambda state: (
+                state.has(ITEM_NOTE, player, 690) and
                 state.has(ITEM_FLAP_FLIP, player)
             ),
+
         rgn_connection_string(RGN_GRUNTILDAS_LAIR_765_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_FURNACE_FUN):
             lambda state: True,
+
         rgn_connection_string(RGN_GRUNTILDAS_LAIR_FURNACE_FUN, RGN_GRUNTILDAS_LAIR_810_NOTE_DOOR):
-            lambda state:
-            (
-                state.has(ITEM_NOTE, player, 810) and
-                state.has(ITEM_JIGGY, player, 94)
+            lambda state: (
+                state.has(ITEM_NOTE, player, 705) or
+                state.has(ITEM_CAULDRON_YELLOW, player)
             ),
+
         rgn_connection_string(RGN_GRUNTILDAS_LAIR_810_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_882_NOTE_DOOR):
-            lambda state:
-            (
-                state.has(ITEM_NOTE, player, 882)
-            ),
-        rgn_connection_string(RGN_GRUNTILDAS_LAIR_810_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_FIGHT):
+            lambda state: state.has(ITEM_NOTE, player, 750),
+
+        # === Reverse Note Door Connections (no notes needed walking back) ===
+
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_640_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_450_NOTE_DOOR):
+            lambda state: state.has(ITEM_JUMP, player),
+
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_450_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_350_NOTE_DOOR):
+            lambda state: state.has(ITEM_NOTE, player, 290),
+
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_350_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR):
+            lambda state: state.has(ITEM_NOTE, player, 290),
+
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR):
             lambda state: True,
+
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR):
+            lambda state: True,
+
+        # === Warp Cauldron Shortcuts ===
+
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_350_NOTE_DOOR):
+            lambda state: (
+                state.has(ITEM_NOTE, player, 290) and
+                state.has(ITEM_CAULDRON_PURPLE, player)
+            ),
+
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_350_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR):
+            lambda state: (
+                state.has(ITEM_CAULDRON_PURPLE, player) and
+                state.has(ITEM_EGGS, player)
+            ),
+
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_450_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR):
+            lambda state: (
+                state.has(ITEM_CAULDRON_GREEN, player) and
+                state.has(ITEM_SWIM, player) and
+                state.has(ITEM_JUMP, player)
+            ),
+
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_640_NOTE_DOOR):
+            lambda state: state.has(ITEM_CAULDRON_ORANGE, player),
+
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_640_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR):
+            lambda state: state.has(ITEM_CAULDRON_ORANGE, player),
+
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_810_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_FURNACE_FUN):
+            lambda state: state.has(ITEM_CAULDRON_YELLOW, player),
+
+        # === Level Entrances ===
+
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_LOBBY, RGN_MUMBOS_MOUNTAIN):
+            lambda state: True,
+
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR, RGN_TREASURE_TROVE_COVE):
+            lambda state: (
+                state.has(ITEM_OPEN_TTC, player) and
+                (
+                    state.has(ITEM_TALON_TROT, player) or
+                    state.has(ITEM_FLAP_FLIP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_FEATHERY_FLAP, player)
+                    )
+                )
+            ),
+
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_50_NOTE_DOOR, RGN_CLANKERS_CAVERN):
+            lambda state: (
+                state.has(ITEM_OPEN_CC, player) and
+                can_reach_cc_entrance(state, player)
+            ),
+
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_180_NOTE_DOOR, RGN_BUBBLEGLOOP_SWAMP):
+            lambda state: state.has(ITEM_OPEN_BGS, player),
+
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR, RGN_FREEZEEZY_PEAK):
+            lambda state: state.has(ITEM_OPEN_FP, player),
+
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_260_NOTE_DOOR, RGN_GOBIS_VALLEY):
+            lambda state: (
+                state.has(ITEM_OPEN_GV, player) and
+                state.has(ITEM_STILT_STRIDE, player)
+            ),
+
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_350_NOTE_DOOR, RGN_MAD_MONSTER_MANSION):
+            lambda state: (
+                state.has(ITEM_OPEN_MMM, player) and
+                state.has(ITEM_NOTE, player, 290)
+            ),
+
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_450_NOTE_DOOR, RGN_RUSTY_BUCKET_BAY):
+            lambda state: (
+                state.has(ITEM_OPEN_RBB, player) and
+                (
+                    can_hit_two_water_switches(state, player) or
+                    (
+                        state.has(ITEM_CAULDRON_GREEN, player) and
+                        state.has(ITEM_EGGS, player) and
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_CAULDRON_ORANGE, player)
+                    )
+                )
+            ),
+
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_640_NOTE_DOOR, RGN_CLICK_CLOCK_WOOD):
+            lambda state: (
+                state.has(ITEM_OPEN_CCW, player) and
+                (
+                    (
+                        state.has(ITEM_SWIM, player) and
+                        can_hit_two_water_switches(state, player)
+                    ) or
+                    (
+                        state.has(ITEM_CAULDRON_ORANGE, player) and
+                        state.has(ITEM_BEAK_BUSTER, player)
+                    )
+                )
+            ),
+
+        # === CCW Season Entrances ===
+
+        rgn_connection_string(RGN_CLICK_CLOCK_WOOD, RGN_CCW_SPRING):
+            lambda state: state.has(ITEM_SEASON_SPRING, player),
+
+        rgn_connection_string(RGN_CLICK_CLOCK_WOOD, RGN_CCW_SUMMER):
+            lambda state: state.has(ITEM_SEASON_SUMMER, player),
+
+        rgn_connection_string(RGN_CLICK_CLOCK_WOOD, RGN_CCW_AUTUMN):
+            lambda state: state.has(ITEM_SEASON_AUTUMN, player),
+
+        rgn_connection_string(RGN_CLICK_CLOCK_WOOD, RGN_CCW_WINTER):
+            lambda state: state.has(ITEM_SEASON_WINTER, player),
+
+        # === Fight ===
+
+        rgn_connection_string(RGN_GRUNTILDAS_LAIR_810_NOTE_DOOR, RGN_GRUNTILDAS_LAIR_FIGHT):
+            lambda state: state.has(ITEM_OPEN_FIGHT, player),
     }
 
 def get_location_rules(player, options):
@@ -552,7 +527,8 @@ def get_location_rules(player, options):
             lambda state:
             (
                 state.has(ITEM_BEAK_BUSTER, player) and
-                state.has(ITEM_SWIM, player)
+                state.has(ITEM_SWIM, player) and
+                state.has(ITEM_FLAP_FLIP, player) #Prevent getting stuck in the hole
             ),
         LOC_BLUBBER_GOLD_TTC_HOLD_UNDERWATER:
             lambda state:
@@ -683,7 +659,8 @@ def get_location_rules(player, options):
             (
                 can_reach_eyrie(state, player) and
                 state.has(ITEM_TALON_TROT, player) and
-                state.has(ITEM_BEAK_BUSTER, player)
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_FLAP_FLIP, player)
             ),
         LOC_WORM_AUTUMN_CCW_BELOW_CABIN:
             lambda state:
@@ -785,46 +762,15 @@ def get_location_rules(player, options):
             (
                 can_reach_ccw_summer_switch(state, player)
             ),
-        LOC_SEASON_FALL:
+        LOC_SEASON_AUTUMN:
             lambda state:
             (
-                can_reach_ccw_fall_switch(state, player)
+                can_reach_ccw_autumn_switch(state, player)
             ),
         LOC_SEASON_WINTER:
             lambda state:
             (
                 can_reach_ccw_winter_switch(state, player)
-            ),
-        LOC_TRANSFORMATION_TERMITE:
-            lambda state:
-            (
-                has_tokens_for_all_transforms(state, player)
-            ),
-        LOC_TRANSFORMATION_CROCODILE:
-            lambda state:
-            (
-                has_tokens_for_all_transforms(state, player) and
-                can_traverse_bgs(state, player) and
-                state.has(ITEM_STILT_STRIDE, player)
-            ),
-        LOC_TRANSFORMATION_WALRUS:
-            lambda state:
-            (
-                has_tokens_for_all_transforms(state, player) and
-                state.has(ITEM_FLIGHT, player)
-            ),
-        LOC_TRANSFORMATION_PUMPKIN:
-            lambda state:
-            (
-                    has_tokens_for_all_transforms(state, player) and
-                    can_break_breakable_gates(state, player)
-            ),
-        LOC_TRANSFORMATION_BEE:
-            lambda state:
-            (
-                has_tokens_for_all_transforms(state, player) and
-                state.has(ITEM_TALON_TROT, player) and
-                state.has(ITEM_STILT_STRIDE, player)
             ),
         LOC_WITCH_SWITCH_MM:
             lambda state:
@@ -940,13 +886,13 @@ def get_location_rules(player, options):
         LOC_JIGGY_GL_ATOP_MUMBOS_MOUNTAIN:
             lambda state:
             (
-                state.has(ITEM_WITCH_SWITCH_MM, player) and
+                can_reach_mm_witch(state, player) and
                 state.has(ITEM_TRANSFORMATION_TERMITE, player)
             ),
         LOC_JIGGY_GL_TTC_CANNON:
             lambda state:
             (
-                state.has(ITEM_WITCH_SWITCH_TTC, player) and
+                can_reach_ttc_witch(state, player) and
                 state.has(ITEM_FLAP_FLIP, player) and
                 state.has(ITEM_FLIGHT, player) and
                 state.has(ITEM_BEAK_BUSTER, player)
@@ -954,13 +900,24 @@ def get_location_rules(player, options):
         LOC_JIGGY_GL_EYE_SWITCHES:
             lambda state:
             (
-                state.has(ITEM_WITCH_SWITCH_CC, player) and
+                can_reach_cc_witch(state, player) and
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_SWIM, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_JIGGY_GL_WITCHS_HAT:
+            lambda state:
+            (
+                can_reach_bgs_witch(state, player) and
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_SWIM, player) and
                 state.has(ITEM_BEAK_BUSTER, player)
             ),
         LOC_JIGGY_GL_ABOVE_FP:
             lambda state:
             (
-                state.has(ITEM_WITCH_SWITCH_FP, player) and
+                can_reach_fp_witch(state, player) and
+                state.has(ITEM_BEAK_BOMB, player) and
                 state.has(ITEM_SHOCK_SPRING_JUMP, player) and
                 state.has(ITEM_BEAK_BUSTER, player) and
                 state.has(ITEM_TURBO_TALON_TROT, player) and
@@ -969,19 +926,23 @@ def get_location_rules(player, options):
         LOC_JIGGY_GL_SARCOPHAGUS:
             lambda state:
             (
-                state.has(ITEM_WITCH_SWITCH_GV, player) and
+                can_reach_gv_witch(state, player) and
+                state.has(ITEM_EGGS, player) and
+                 state.has(ITEM_BEAK_BUSTER, player) and
                 (
                     state.has(ITEM_SHOCK_SPRING_JUMP, player) or
                     (
-                        state.has(ITEM_FLAP_FLIP, player) and   #Requires somewhat specific timing
-                        state.has(ITEM_BEAK_BUSTER, player)
+                        state.has(ITEM_FLAP_FLIP, player)  #Requires somewhat specific timing
                     )
                 )
             ),
         LOC_JIGGY_GL_GRUNTYS_EYE:
             lambda state:
             (
-                state.has(ITEM_WITCH_SWITCH_MMM, player) and
+                can_reach_mmm_witch(state, player) and
+                state.has(ITEM_TURBO_TALON_TROT, player) and
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_FLIGHT, player) and
                 (
                     (
                         state.has(ITEM_JUMP, player) and
@@ -989,9 +950,7 @@ def get_location_rules(player, options):
                     ) or
                     (
                         state.has(ITEM_SHOCK_SPRING_JUMP, player) and
-                        state.has(ITEM_BEAK_BUSTER, player) and
-                        state.has(ITEM_TURBO_TALON_TROT, player) and
-                        state.has(ITEM_FLIGHT, player)
+                        state.has(ITEM_TURBO_TALON_TROT, player)
                     )
                 ) and
                 (
@@ -1000,9 +959,7 @@ def get_location_rules(player, options):
                     state.has(ITEM_WONDERWING, player) or
                     (
                         state.has(ITEM_SHOCK_SPRING_JUMP, player) and
-                        state.has(ITEM_BEAK_BUSTER, player) and
                         state.has(ITEM_TURBO_TALON_TROT, player) and
-                        state.has(ITEM_FLIGHT, player) and
                         state.has(ITEM_BEAK_BOMB, player)
                     )
                 )
@@ -1010,20 +967,22 @@ def get_location_rules(player, options):
         LOC_JIGGY_GL_WATER_SWITCH:
             lambda state:
             (
-                state.has(ITEM_WITCH_SWITCH_RBB, player) and
+                can_reach_rbb_witch(state, player) and
                 can_hit_two_water_switches(state, player) and
                 state.has(ITEM_SWIM, player)
             ),
         LOC_JIGGY_GL_BEE_TREE:
             lambda state:
             (
-                state.has(ITEM_WITCH_SWITCH_CCW, player) and
+                can_reach_ccw_witch(state, player) and
+                state.has(ITEM_BEAK_BUSTER, player) and
                 state.has(ITEM_TRANSFORMATION_BEE, player) and
                 (
                     state.has(ITEM_TALON_TROT, player) or  # required to access Mumbo's Skull
                     state.has(ITEM_STILT_STRIDE, player)
                 )
             ),
+            #Warp Cauldrons
         LOC_MUMBO_TOKEN_GL_RED_CAULDRON:
             lambda state: True,
         LOC_MUMBO_TOKEN_GL_DRAIN_PIPE:
@@ -1195,11 +1154,11 @@ def get_location_rules(player, options):
         LOC_JIGGY_MM_JINJO:
             lambda state:
             (
-                state.has(ITEM_JINJO_MM_BLUE, player) and
-                state.has(ITEM_JINJO_MM_GREEN, player) and
-                state.has(ITEM_JINJO_MM_ORANGE, player) and
-                state.has(ITEM_JINJO_MM_PURPLE, player) and
-                state.has(ITEM_JINJO_MM_YELLOW, player)
+                state.can_reach(LOC_JINJO_MM_BLUE, "Location", player) and
+                state.can_reach(LOC_JINJO_MM_GREEN, "Location", player) and
+                state.can_reach(LOC_JINJO_MM_ORANGE, "Location", player) and
+                state.can_reach(LOC_JINJO_MM_PURPLE, "Location", player) and
+                state.can_reach(LOC_JINJO_MM_YELLOW, "Location", player)
             ),
         LOC_JINJO_MM_BLUE:
             lambda state:
@@ -1575,7 +1534,9 @@ def get_location_rules(player, options):
         LOC_JIGGY_TTC_BLUBBER:
             lambda state:
             (
-                state.has(ITEM_BLUBBER_GOLD, player, 2)
+                state.has(ITEM_SWIM, player) and 
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
             ),
         LOC_JIGGY_TTC_SANDCASTLE:
             lambda state:
@@ -1661,11 +1622,11 @@ def get_location_rules(player, options):
         LOC_JIGGY_TTC_JINJO:
             lambda state:
             (
-                state.has(ITEM_JINJO_TTC_BLUE, player) and
-                state.has(ITEM_JINJO_TTC_GREEN, player) and
-                state.has(ITEM_JINJO_TTC_ORANGE, player) and
-                state.has(ITEM_JINJO_TTC_PURPLE, player) and
-                state.has(ITEM_JINJO_TTC_YELLOW, player)
+                state.can_reach(LOC_JINJO_TTC_BLUE, "Location", player) and
+                state.can_reach(LOC_JINJO_TTC_GREEN, "Location", player) and
+                state.can_reach(LOC_JINJO_TTC_ORANGE, "Location", player) and
+                state.can_reach(LOC_JINJO_TTC_PURPLE, "Location", player) and
+                state.can_reach(LOC_JINJO_TTC_YELLOW, "Location", player)
             ),
         LOC_JINJO_TTC_BLUE:
             lambda state:
@@ -2535,11 +2496,11 @@ def get_location_rules(player, options):
         LOC_JIGGY_CC_JINJO:
             lambda state:
             (
-                state.has(ITEM_JINJO_CC_BLUE, player) and
-                state.has(ITEM_JINJO_CC_GREEN, player) and
-                state.has(ITEM_JINJO_CC_ORANGE, player) and
-                state.has(ITEM_JINJO_CC_PURPLE, player) and
-                state.has(ITEM_JINJO_CC_YELLOW, player)
+                state.can_reach(LOC_JINJO_CC_BLUE, "Location", player) and
+                state.can_reach(LOC_JINJO_CC_GREEN, "Location", player) and
+                state.can_reach(LOC_JINJO_CC_ORANGE, "Location", player) and
+                state.can_reach(LOC_JINJO_CC_PURPLE, "Location", player) and
+                state.can_reach(LOC_JINJO_CC_YELLOW, "Location", player)
             ),
         LOC_JINJO_CC_BLUE:
             lambda state:
@@ -3410,11 +3371,11 @@ def get_location_rules(player, options):
         LOC_JIGGY_BGS_JINJO:
             lambda state:
             (
-                state.has(ITEM_JINJO_BGS_BLUE, player) and
-                state.has(ITEM_JINJO_BGS_GREEN, player) and
-                state.has(ITEM_JINJO_BGS_ORANGE, player) and
-                state.has(ITEM_JINJO_BGS_PURPLE, player) and
-                state.has(ITEM_JINJO_BGS_YELLOW, player)
+                state.can_reach(LOC_JINJO_BGS_BLUE, "Location", player) and
+                state.can_reach(LOC_JINJO_BGS_GREEN, "Location", player) and
+                state.can_reach(LOC_JINJO_BGS_ORANGE, "Location", player) and
+                state.can_reach(LOC_JINJO_BGS_PURPLE, "Location", player) and
+                state.can_reach(LOC_JINJO_BGS_YELLOW, "Location", player)
             ),
         LOC_JINJO_BGS_BLUE:
             lambda state:
@@ -4208,9 +4169,13 @@ def get_location_rules(player, options):
         LOC_JIGGY_FP_PRESENTS:
             lambda state:
             (
-                state.has(ITEM_RED_PRESENT, player) and
-                state.has(ITEM_BLUE_PRESENT, player) and
-                state.has(ITEM_GREEN_PRESENT, player)
+                state.has(ITEM_CLIMB, player) and
+                state.has(ITEM_TALON_TROT, player) and
+                (
+                    state.has(ITEM_FLIGHT, player) or
+                    state.has(ITEM_SHOCK_SPRING_JUMP, player)
+                )
+                
             ),
         LOC_JIGGY_FP_BOGGY_RACE_1:
             lambda state:
@@ -4234,11 +4199,11 @@ def get_location_rules(player, options):
         LOC_JIGGY_FP_JINJO:
             lambda state:
             (
-                state.has(ITEM_JINJO_FP_BLUE, player) and
-                state.has(ITEM_JINJO_FP_GREEN, player) and
-                state.has(ITEM_JINJO_FP_ORANGE, player) and
-                state.has(ITEM_JINJO_FP_PURPLE, player) and
-                state.has(ITEM_JINJO_FP_YELLOW, player)
+                state.can_reach(LOC_JINJO_FP_BLUE, "Location", player) and
+                state.can_reach(LOC_JINJO_FP_GREEN, "Location", player) and
+                state.can_reach(LOC_JINJO_FP_ORANGE, "Location", player) and
+                state.can_reach(LOC_JINJO_FP_PURPLE, "Location", player) and
+                state.can_reach(LOC_JINJO_FP_YELLOW, "Location", player)
             ),
         LOC_JINJO_FP_BLUE:
             lambda state:
@@ -5136,11 +5101,11 @@ def get_location_rules(player, options):
         LOC_JIGGY_GV_JINJO:
             lambda state:
             (
-                state.has(ITEM_JINJO_GV_BLUE, player) and
-                state.has(ITEM_JINJO_GV_GREEN, player) and
-                state.has(ITEM_JINJO_GV_ORANGE, player) and
-                state.has(ITEM_JINJO_GV_PURPLE, player) and
-                state.has(ITEM_JINJO_GV_YELLOW, player)
+                state.can_reach(LOC_JINJO_GV_BLUE, "Location", player) and
+                state.can_reach(LOC_JINJO_GV_GREEN, "Location", player) and
+                state.can_reach(LOC_JINJO_GV_ORANGE, "Location", player) and
+                state.can_reach(LOC_JINJO_GV_PURPLE, "Location", player) and
+                state.can_reach(LOC_JINJO_GV_YELLOW, "Location", player)
             ),
         LOC_JINJO_GV_BLUE:
             lambda state:
@@ -6262,11 +6227,11 @@ def get_location_rules(player, options):
         LOC_JIGGY_MMM_JINJO:
             lambda state:
             (
-                state.has(ITEM_JINJO_MMM_BLUE, player) and
-                state.has(ITEM_JINJO_MMM_GREEN, player) and
-                state.has(ITEM_JINJO_MMM_ORANGE, player) and
-                state.has(ITEM_JINJO_MMM_PURPLE, player) and
-                state.has(ITEM_JINJO_MMM_YELLOW, player)
+                state.can_reach(LOC_JINJO_MMM_BLUE, "Location", player) and
+                state.can_reach(LOC_JINJO_MMM_GREEN, "Location", player) and
+                state.can_reach(LOC_JINJO_MMM_ORANGE, "Location", player) and
+                state.can_reach(LOC_JINJO_MMM_PURPLE, "Location", player) and
+                state.can_reach(LOC_JINJO_MMM_YELLOW, "Location", player)
             ),
         LOC_JINJO_MMM_BLUE:
             lambda state:
@@ -7283,11 +7248,11 @@ def get_location_rules(player, options):
         LOC_JIGGY_RBB_JINJO:
             lambda state:
             (
-                state.has(ITEM_JINJO_RBB_BLUE, player) and
-                state.has(ITEM_JINJO_RBB_GREEN, player) and
-                state.has(ITEM_JINJO_RBB_ORANGE, player) and
-                state.has(ITEM_JINJO_RBB_PURPLE, player) and
-                state.has(ITEM_JINJO_RBB_YELLOW, player)
+                state.can_reach(LOC_JINJO_RBB_BLUE, "Location", player) and
+                state.can_reach(LOC_JINJO_RBB_GREEN, "Location", player) and
+                state.can_reach(LOC_JINJO_RBB_ORANGE, "Location", player) and
+                state.can_reach(LOC_JINJO_RBB_PURPLE, "Location", player) and
+                state.can_reach(LOC_JINJO_RBB_YELLOW, "Location", player)
             ),
         LOC_JINJO_RBB_BLUE:
             lambda state:
@@ -8270,18 +8235,19 @@ def get_location_rules(player, options):
         LOC_JIGGY_CCW_TREETOP_ROOM:
             lambda state:
             (
+                has_season_unlocked(state, player, "Spring") and
                 can_break_breakable_gates(state, player) and
                 (
                     (
-                        can_reach_ccw_cabin(state, player, ITEM_SEASON_SPRING) and
+                        can_reach_ccw_cabin(state, player) and
                         state.has(ITEM_FLAP_FLIP, player)
                     ) or
                     (
-                        can_reach_ccw_cabin(state, player, ITEM_SEASON_SUMMER) and
+                        can_reach_ccw_cabin(state, player)and
                         state.has(ITEM_FLAP_FLIP, player)
                     ) or
                     (
-                        can_reach_ccw_cabin(state, player, ITEM_SEASON_WINTER) and
+                        can_reach_ccw_cabin(state, player) and
                         (
                             state.has(ITEM_FLAP_FLIP, player) or
                             state.has(ITEM_FLIGHT, player)
@@ -8308,18 +8274,20 @@ def get_location_rules(player, options):
         LOC_JIGGY_CCW_ZUBBA:
             lambda state:
             (
-                can_reach_ccw_beehive(state, player, ITEM_SEASON_SPRING) and
-                state.has(ITEM_BEAK_BUSTER, player)         #yes, you can beat the Zubbas with just Beak Buster
+                can_reach_ccw_beehive(state, player) and
+                state.has(ITEM_BEAK_BUSTER, player) and #yes, you can beat the Zubbas with just Beak Buster(BUT FUCK THAT!)
+                state.has(ITEM_RAT_A_TAT_RAP, player)                  
             ),
         LOC_JIGGY_CCW_LEAVES:
             lambda state:
             (
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_SUMMER)
+                can_reach_ccw_cabin(state, player)and
+                state.has(ITEM_FLAP_FLIP, player)
             ),
         LOC_JIGGY_CCW_CABIN:
             lambda state:
             (
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_SUMMER)
+                can_reach_ccw_cabin(state, player)
             ),
         LOC_JIGGY_CCW_GNAWTY:
             lambda state:
@@ -8332,7 +8300,7 @@ def get_location_rules(player, options):
                         state.has(ITEM_EGGS, player)
                     )
                 ) and
-                state.has(ITEM_SEASON_FALL, player) and
+                state.has(ITEM_SEASON_AUTUMN, player) and
                 state.has(ITEM_SWIM, player)
             ),
         LOC_JIGGY_CCW_PLANT:
@@ -8340,39 +8308,37 @@ def get_location_rules(player, options):
             (
                 state.has(ITEM_SEASON_SPRING, player) and
                 state.has(ITEM_SEASON_SUMMER, player) and
-                state.has(ITEM_SEASON_FALL, player) and
+                state.has(ITEM_SEASON_AUTUMN, player) and
                 state.has(ITEM_EGGS, player) and
                 state.has(ITEM_BEAK_BUSTER, player) and         #needs all Gobi events prior done
                 (
-                    can_reach_ccw_beehive(state, player, ITEM_SEASON_SPRING) or
-                    can_reach_ccw_beehive(state, player, ITEM_SEASON_SUMMER)
+                    can_reach_ccw_beehive(state, player)  or
+                    can_reach_ccw_beehive(state, player)
                 )
             ),
         LOC_JIGGY_CCW_NABNUTS:
             lambda state:
             (
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_FALL) and
-                state.has(ITEM_ACORN, player, 6)
+                can_reach_ccw_cabin(state, player)
             ),
         LOC_JIGGY_CCW_EYRIE:
             lambda state:
             (
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_SPRING) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_SUMMER) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_FALL) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_WINTER) and
+                can_reach_ccw_cabin(state, player) and
+                can_reach_ccw_cabin(state, player)and
+                can_reach_ccw_cabin(state, player) and
+                can_reach_ccw_cabin(state, player) and
                 state.has(ITEM_SHOCK_SPRING_JUMP, player) and
-                state.has(ITEM_BEAK_BUSTER, player) and
-                state.has(ITEM_WORM, player, 15)
+                state.has(ITEM_BEAK_BUSTER, player)
             ),
         LOC_JIGGY_CCW_JINJO:
             lambda state:
             (
-                state.has(ITEM_JINJO_CCW_BLUE, player) and
-                state.has(ITEM_JINJO_CCW_GREEN, player) and
-                state.has(ITEM_JINJO_CCW_ORANGE, player) and
-                state.has(ITEM_JINJO_CCW_PURPLE, player) and
-                state.has(ITEM_JINJO_CCW_YELLOW, player)
+                state.can_reach(LOC_JINJO_CCW_BLUE, "Location", player) and
+                state.can_reach(LOC_JINJO_CCW_GREEN, "Location", player) and
+                state.can_reach(LOC_JINJO_CCW_ORANGE, "Location", player) and
+                state.can_reach(LOC_JINJO_CCW_PURPLE, "Location", player) and
+                state.can_reach(LOC_JINJO_CCW_YELLOW, "Location", player)
             ),
         LOC_JINJO_CCW_BLUE:
             lambda state:
@@ -8396,7 +8362,7 @@ def get_location_rules(player, options):
                         )
                     ) or
                     (
-                        can_reach_ccw_cabin(state, player, ITEM_SEASON_SPRING) and
+                        can_reach_ccw_cabin(state, player) and
                         state.has(ITEM_FLAP_FLIP, player) and
                         state.has(ITEM_WONDERWING, player)
                     )
@@ -8405,7 +8371,7 @@ def get_location_rules(player, options):
         LOC_JINJO_CCW_ORANGE:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player) and
+                state.has(ITEM_SEASON_AUTUMN, player) and
                 state.has(ITEM_TALON_TROT, player)
             ),
         LOC_JINJO_CCW_PURPLE:
@@ -8484,12 +8450,12 @@ def get_location_rules(player, options):
         LOC_MUMBO_TOKEN_CCW_SPRING_TREETOP_ABOVE_MUMBOS_HUT:
             lambda state:
             (
-                can_reach_ccw_beehive(state, player, ITEM_SEASON_SPRING)
+                can_reach_ccw_beehive(state, player) 
             ),
         LOC_MUMBO_TOKEN_CCW_SPRING_BEEHIVE:
             lambda state:
             (
-                can_reach_ccw_beehive(state, player, ITEM_SEASON_SPRING)
+                can_reach_ccw_beehive(state, player) 
             ),
         LOC_MUMBO_TOKEN_CCW_SPRING_CABIN:
             lambda state:
@@ -8504,7 +8470,7 @@ def get_location_rules(player, options):
                         )
                     ) or
                     (
-                        can_reach_ccw_cabin(state, player, ITEM_SEASON_SPRING)
+                        can_reach_ccw_cabin(state, player)
                     )
                 )
             ),
@@ -8521,7 +8487,7 @@ def get_location_rules(player, options):
                         )
                     ) or
                     (
-                        can_reach_ccw_cabin(state, player, ITEM_SEASON_SPRING)
+                        can_reach_ccw_cabin(state, player)
                     )
                 )
             ),
@@ -8538,7 +8504,7 @@ def get_location_rules(player, options):
                         )
                     ) or
                     (
-                        can_reach_ccw_cabin(state, player, ITEM_SEASON_SPRING)
+                        can_reach_ccw_cabin(state, player)
                     )
                 )
             ),
@@ -8590,43 +8556,43 @@ def get_location_rules(player, options):
         LOC_MUMBO_TOKEN_CCW_SUMMER_TREETOP_ABOVE_MUMBOS_HUT:
             lambda state:
             (
-                can_reach_ccw_beehive(state, player, ITEM_SEASON_SUMMER)
+                can_reach_ccw_beehive(state, player)
             ),
         LOC_MUMBO_TOKEN_CCW_SUMMER_LEAVES:
             lambda state:
             (
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_SUMMER)
+                can_reach_ccw_cabin(state, player)
             ),
         LOC_MUMBO_TOKEN_CCW_SUMMER_AFTER_NABNUTS_HOUSE:
             lambda state:
             (
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_SUMMER)
+                can_reach_ccw_cabin(state, player)
             ),
-        LOC_MUMBO_TOKEN_CCW_FALL_ENTRANCE_SNAREBEAR:
+        LOC_MUMBO_TOKEN_CCW_AUTUMN_ENTRANCE_SNAREBEAR:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player) and
+                state.has(ITEM_SEASON_AUTUMN, player) and
                 state.has(ITEM_WONDERWING, player)
             ),
-        LOC_MUMBO_TOKEN_CCW_FALL_TREETOP_ABOVE_MUMBOS_HUT:
+        LOC_MUMBO_TOKEN_CCW_AUTUMN_TREETOP_ABOVE_MUMBOS_HUT:
             lambda state:
             (
-                can_reach_ccw_beehive(state, player, ITEM_SEASON_FALL)
+                can_reach_ccw_beehive(state, player)
             ),
-        LOC_MUMBO_TOKEN_CCW_FALL_LEAVES:
+        LOC_MUMBO_TOKEN_CCW_AUTUMN_LEAVES:
             lambda state:
             (
-                can_reach_ccw_beehive(state, player, ITEM_SEASON_FALL)
+                can_reach_ccw_beehive(state, player)
             ),
-        LOC_MUMBO_TOKEN_CCW_FALL_CABIN:
+        LOC_MUMBO_TOKEN_CCW_AUTUMN_CABIN:
             lambda state:
             (
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_FALL)
+                can_reach_ccw_cabin(state, player)
             ),
-        LOC_MUMBO_TOKEN_CCW_FALL_TREETOP_SNAREBEAR:
+        LOC_MUMBO_TOKEN_CCW_AUTUMN_TREETOP_SNAREBEAR:
             lambda state:
             (
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_FALL) and
+                can_reach_ccw_cabin(state, player) and
                 state.has(ITEM_FLAP_FLIP, player) and
                 state.has(ITEM_WONDERWING, player)
             ),
@@ -8645,12 +8611,12 @@ def get_location_rules(player, options):
         LOC_MUMBO_TOKEN_CCW_WINTER_BEEHIVE:
             lambda state:
             (
-                can_reach_ccw_beehive(state, player, ITEM_SEASON_WINTER)
+                can_reach_ccw_beehive(state, player)
             ),
         LOC_MUMBO_TOKEN_CCW_WINTER_NEAR_NABNUTS_HOUSE:
             lambda state:
             (
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_WINTER)
+                can_reach_ccw_cabin(state, player)
             ),
         LOC_MUMBO_TOKEN_CCW_WINTER_BEHIND_LAKE_PLATFORM:
             lambda state:
@@ -8779,181 +8745,181 @@ def get_location_rules(player, options):
             lambda state:
             (
                 state.has(ITEM_SEASON_SUMMER, player) and
-                can_reach_ccw_beehive(state, player, ITEM_SEASON_SUMMER)
+                can_reach_ccw_beehive(state, player)
             ),
         LOC_NOTE_CCW_SUMMER_ZUBBA_BRIDGE_2:
             lambda state:
             (
                 state.has(ITEM_SEASON_SUMMER, player) and
-                can_reach_ccw_beehive(state, player, ITEM_SEASON_SUMMER)
+                can_reach_ccw_beehive(state, player)
             ),
         LOC_NOTE_CCW_SUMMER_ZUBBA_BRIDGE_3:
             lambda state:
             (
                 state.has(ITEM_SEASON_SUMMER, player) and
-                can_reach_ccw_beehive(state, player, ITEM_SEASON_SUMMER)
+                can_reach_ccw_beehive(state, player)
             ),
         LOC_NOTE_CCW_SUMMER_TREEHOUSE_1:
             lambda state:
             (
                 state.has(ITEM_SEASON_SUMMER, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_SUMMER)
+                can_reach_ccw_cabin(state, player)
             ),
         LOC_NOTE_CCW_SUMMER_TREEHOUSE_2:
             lambda state:
             (
                 state.has(ITEM_SEASON_SUMMER, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_SUMMER)
+                can_reach_ccw_cabin(state, player)
             ),
         LOC_NOTE_CCW_SUMMER_TREEHOUSE_3:
             lambda state:
             (
                 state.has(ITEM_SEASON_SUMMER, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_SUMMER)
+                can_reach_ccw_cabin(state, player)
             ),
         LOC_NOTE_CCW_SUMMER_TREEHOUSE_4:
             lambda state:
             (
                 state.has(ITEM_SEASON_SUMMER, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_SUMMER)
+                can_reach_ccw_cabin(state, player)
             ),
         LOC_NOTE_CCW_SUMMER_NABNUTS_PLATFORM_1:
             lambda state:
             (
                 state.has(ITEM_SEASON_SUMMER, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_SUMMER) and
+                can_reach_ccw_cabin(state, player)and
                 state.has(ITEM_TALON_TROT, player)
             ),
         LOC_NOTE_CCW_SUMMER_NABNUTS_PLATFORM_2:
             lambda state:
             (
                 state.has(ITEM_SEASON_SUMMER, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_SUMMER) and
+                can_reach_ccw_cabin(state, player)and
                 state.has(ITEM_TALON_TROT, player)
             ),
         LOC_NOTE_CCW_SUMMER_NABNUTS_PLATFORM_3:
             lambda state:
             (
                 state.has(ITEM_SEASON_SUMMER, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_SUMMER) and
+                can_reach_ccw_cabin(state, player)and
                 state.has(ITEM_TALON_TROT, player)
             ),
         LOC_NOTE_CCW_SUMMER_NABNUTS_PLATFORM_4:
             lambda state:
             (
                 state.has(ITEM_SEASON_SUMMER, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_SUMMER) and
+                can_reach_ccw_cabin(state, player)and
                 state.has(ITEM_TALON_TROT, player)
             ),
         LOC_NOTE_CCW_SUMMER_NABNUTS_PLATFORM_5:
             lambda state:
             (
                 state.has(ITEM_SEASON_SUMMER, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_SUMMER) and
+                can_reach_ccw_cabin(state, player)and
                 state.has(ITEM_TALON_TROT, player)
             ),
         LOC_NOTE_CCW_AUTUMN_MUMBO_SNAREBEAR_1:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player) and
+                state.has(ITEM_SEASON_AUTUMN, player) and
                 state.has(ITEM_WONDERWING, player)
             ),
         LOC_NOTE_CCW_AUTUMN_MUMBO_SNAREBEAR_2:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player) and
+                state.has(ITEM_SEASON_AUTUMN, player) and
                 state.has(ITEM_WONDERWING, player)
             ),
         LOC_NOTE_CCW_AUTUMN_MUMBO_SNAREBEAR_3:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player) and
+                state.has(ITEM_SEASON_AUTUMN, player) and
                 state.has(ITEM_WONDERWING, player)
             ),
         LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_1:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player)
+                state.has(ITEM_SEASON_AUTUMN, player)
             ),
         LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_2:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player)
+                state.has(ITEM_SEASON_AUTUMN, player)
             ),
         LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_3:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player)
+                state.has(ITEM_SEASON_AUTUMN, player)
             ),
         LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_4:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player)
+                state.has(ITEM_SEASON_AUTUMN, player)
             ),
         LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_5:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player)
+                state.has(ITEM_SEASON_AUTUMN, player)
             ),
         LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_6:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player)
+                state.has(ITEM_SEASON_AUTUMN, player)
             ),
         LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_7:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player)
+                state.has(ITEM_SEASON_AUTUMN, player)
             ),
         LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_8:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player)
+                state.has(ITEM_SEASON_AUTUMN, player)
             ),
         LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_9:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player)
+                state.has(ITEM_SEASON_AUTUMN, player)
             ),
         LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_10:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player)
+                state.has(ITEM_SEASON_AUTUMN, player)
             ),
         LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_11:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player)
+                state.has(ITEM_SEASON_AUTUMN, player)
             ),
         LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_12:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player)
+                state.has(ITEM_SEASON_AUTUMN, player)
             ),
         LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_13:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player)
+                state.has(ITEM_SEASON_AUTUMN, player)
             ),
         LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_14:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player)
+                state.has(ITEM_SEASON_AUTUMN, player)
             ),
         LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_15:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player)
+                state.has(ITEM_SEASON_AUTUMN, player)
             ),
         LOC_NOTE_CCW_AUTUMN_LOWER_TREE_PATH_16:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player)
+                state.has(ITEM_SEASON_AUTUMN, player)
             ),
         LOC_NOTE_CCW_AUTUMN_MUMBOS_SKULL_1:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player) and
+                state.has(ITEM_SEASON_AUTUMN, player) and
                 (
                     state.has(ITEM_TALON_TROT, player) or
                     state.has(ITEM_STILT_STRIDE, player)
@@ -8966,7 +8932,7 @@ def get_location_rules(player, options):
         LOC_NOTE_CCW_AUTUMN_MUMBOS_SKULL_2:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player) and
+                state.has(ITEM_SEASON_AUTUMN, player) and
                 (
                     state.has(ITEM_TALON_TROT, player) or
                     state.has(ITEM_STILT_STRIDE, player)
@@ -8979,7 +8945,7 @@ def get_location_rules(player, options):
         LOC_NOTE_CCW_AUTUMN_MUMBOS_SKULL_3:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player) and
+                state.has(ITEM_SEASON_AUTUMN, player) and
                 (
                     state.has(ITEM_TALON_TROT, player) or
                     state.has(ITEM_STILT_STRIDE, player)
@@ -8992,7 +8958,7 @@ def get_location_rules(player, options):
         LOC_NOTE_CCW_AUTUMN_MUMBOS_SKULL_4:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player) and
+                state.has(ITEM_SEASON_AUTUMN, player) and
                 (
                     state.has(ITEM_TALON_TROT, player) or
                     state.has(ITEM_STILT_STRIDE, player)
@@ -9005,44 +8971,44 @@ def get_location_rules(player, options):
         LOC_NOTE_CCW_AUTUMN_GOBIS_GARDEN_1:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player)
+                state.has(ITEM_SEASON_AUTUMN, player)
             ),
         LOC_NOTE_CCW_AUTUMN_GOBIS_GARDEN_2:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player)
+                state.has(ITEM_SEASON_AUTUMN, player)
             ),
         LOC_NOTE_CCW_AUTUMN_GOBIS_GARDEN_3:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player)
+                state.has(ITEM_SEASON_AUTUMN, player)
             ),
         LOC_NOTE_CCW_AUTUMN_GOBIS_GARDEN_4:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player)
+                state.has(ITEM_SEASON_AUTUMN, player)
             ),
         LOC_NOTE_CCW_AUTUMN_GOBIS_GARDEN_5:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player)
+                state.has(ITEM_SEASON_AUTUMN, player)
             ),
         LOC_NOTE_CCW_AUTUMN_GOBI_SNAREBEAR_1:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player) and
+                state.has(ITEM_SEASON_AUTUMN, player) and
                 state.has(ITEM_WONDERWING, player)
             ),
         LOC_NOTE_CCW_AUTUMN_GOBI_SNAREBEAR_2:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player) and
+                state.has(ITEM_SEASON_AUTUMN, player) and
                 state.has(ITEM_WONDERWING, player)
             ),
         LOC_NOTE_CCW_AUTUMN_GOBI_SNAREBEAR_3:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player) and
+                state.has(ITEM_SEASON_AUTUMN, player) and
                 state.has(ITEM_WONDERWING, player)
             ),
         LOC_NOTE_CCW_AUTUMN_GNAWTYS_SHELF_1:
@@ -9054,7 +9020,7 @@ def get_location_rules(player, options):
                     state.has(ITEM_BEAK_BUSTER, player) or
                     state.has(ITEM_EGGS, player)
                 ) and
-                state.has(ITEM_SEASON_FALL, player) and
+                state.has(ITEM_SEASON_AUTUMN, player) and
                 state.has(ITEM_SWIM, player) and
                 (
                     state.has(ITEM_FLAP_FLIP, player) or
@@ -9077,7 +9043,7 @@ def get_location_rules(player, options):
                     state.has(ITEM_BEAK_BUSTER, player) or
                     state.has(ITEM_EGGS, player)
                 ) and
-                state.has(ITEM_SEASON_FALL, player) and
+                state.has(ITEM_SEASON_AUTUMN, player) and
                 state.has(ITEM_SWIM, player) and
                 (
                     state.has(ITEM_FLAP_FLIP, player) or
@@ -9094,129 +9060,129 @@ def get_location_rules(player, options):
         LOC_NOTE_CCW_AUTUMN_ZUBBAS_HIVE_1:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player) and
-                can_reach_ccw_beehive(state, player, ITEM_SEASON_FALL) and
+                state.has(ITEM_SEASON_AUTUMN, player) and
+                can_reach_ccw_beehive(state, player) and
                 state.has(ITEM_BEAK_BUSTER, player)
             ),
         LOC_NOTE_CCW_AUTUMN_ZUBBAS_HIVE_2:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player) and
-                can_reach_ccw_beehive(state, player, ITEM_SEASON_FALL) and
+                state.has(ITEM_SEASON_AUTUMN, player) and
+                can_reach_ccw_beehive(state, player) and
                 state.has(ITEM_BEAK_BUSTER, player)
             ),
         LOC_NOTE_CCW_AUTUMN_ZUBBAS_HIVE_3:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player) and
-                can_reach_ccw_beehive(state, player, ITEM_SEASON_FALL) and
+                state.has(ITEM_SEASON_AUTUMN, player) and
+                can_reach_ccw_beehive(state, player) and
                 state.has(ITEM_BEAK_BUSTER, player)
             ),
         LOC_NOTE_CCW_AUTUMN_ZUBBAS_HIVE_4:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player) and
-                can_reach_ccw_beehive(state, player, ITEM_SEASON_FALL) and
+                state.has(ITEM_SEASON_AUTUMN, player) and
+                can_reach_ccw_beehive(state, player) and
                 state.has(ITEM_BEAK_BUSTER, player)
             ),
         LOC_NOTE_CCW_AUTUMN_NABNUTSS_SHELF_1:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_FALL) and
+                state.has(ITEM_SEASON_AUTUMN, player) and
+                can_reach_ccw_cabin(state, player) and
                 state.has(ITEM_FLAP_FLIP, player)
             ),
         LOC_NOTE_CCW_AUTUMN_NABNUTSS_SHELF_2:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_FALL) and
+                state.has(ITEM_SEASON_AUTUMN, player) and
+                can_reach_ccw_cabin(state, player) and
                 state.has(ITEM_FLAP_FLIP, player)
             ),
         LOC_NOTE_CCW_AUTUMN_NABNUTSS_SHELF_3:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_FALL) and
+                state.has(ITEM_SEASON_AUTUMN, player) and
+                can_reach_ccw_cabin(state, player) and
                 state.has(ITEM_FLAP_FLIP, player)
             ),
         LOC_NOTE_CCW_AUTUMN_EYRIES_NEST_1:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_FALL)
+                state.has(ITEM_SEASON_AUTUMN, player) and
+                can_reach_ccw_cabin(state, player)
             ),
         LOC_NOTE_CCW_AUTUMN_EYRIES_NEST_2:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_FALL)
+                state.has(ITEM_SEASON_AUTUMN, player) and
+                can_reach_ccw_cabin(state, player)
             ),
         LOC_NOTE_CCW_AUTUMN_EYRIES_NEST_3:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_FALL)
+                state.has(ITEM_SEASON_AUTUMN, player) and
+                can_reach_ccw_cabin(state, player)
             ),
         LOC_NOTE_CCW_AUTUMN_EYRIES_NEST_4:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_FALL)
+                state.has(ITEM_SEASON_AUTUMN, player) and
+                can_reach_ccw_cabin(state, player)
             ),
         LOC_NOTE_CCW_AUTUMN_EYRIES_NEST_5:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_FALL)
+                state.has(ITEM_SEASON_AUTUMN, player) and
+                can_reach_ccw_cabin(state, player)
             ),
         LOC_NOTE_CCW_AUTUMN_EYRIES_NEST_6:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_FALL)
+                state.has(ITEM_SEASON_AUTUMN, player) and
+                can_reach_ccw_cabin(state, player)
             ),
         LOC_NOTE_CCW_AUTUMN_EYRIES_NEST_7:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_FALL)
+                state.has(ITEM_SEASON_AUTUMN, player) and
+                can_reach_ccw_cabin(state, player)
             ),
         LOC_NOTE_CCW_AUTUMN_EYRIES_NEST_8:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_FALL)
+                state.has(ITEM_SEASON_AUTUMN, player) and
+                can_reach_ccw_cabin(state, player)
             ),
         LOC_NOTE_CCW_WINTER_SLUSH_BRANCHES_1:
             lambda state:
             (
                 state.has(ITEM_SEASON_WINTER, player) and
-                can_reach_ccw_beehive(state, player, ITEM_SEASON_WINTER)
+                can_reach_ccw_beehive(state, player)
             ),
         LOC_NOTE_CCW_WINTER_SLUSH_BRANCHES_2:
             lambda state:
             (
                 state.has(ITEM_SEASON_WINTER, player) and
-                can_reach_ccw_beehive(state, player, ITEM_SEASON_WINTER)
+                can_reach_ccw_beehive(state, player)
             ),
         LOC_NOTE_CCW_WINTER_SLUSH_BRANCHES_3:
             lambda state:
             (
                 state.has(ITEM_SEASON_WINTER, player) and
-                can_reach_ccw_beehive(state, player, ITEM_SEASON_WINTER)
+                can_reach_ccw_beehive(state, player)
             ),
         LOC_NOTE_CCW_WINTER_SLUSH_BRANCHES_4:
             lambda state:
             (
                 state.has(ITEM_SEASON_WINTER, player) and
-                can_reach_ccw_beehive(state, player, ITEM_SEASON_WINTER)
+                can_reach_ccw_beehive(state, player)
             ),
         LOC_NOTE_CCW_WINTER_TREEHOUSE_ROOF_1:
             lambda state:
             (
                 state.has(ITEM_SEASON_WINTER, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_WINTER) and #you can TECHNICALLY do this with just flight but...
+                can_reach_ccw_cabin(state, player) and #you can TECHNICALLY do this with just flight but...
                 state.has(ITEM_FLAP_FLIP, player) and
                 state.has(ITEM_TALON_TROT, player)
             ),
@@ -9224,7 +9190,7 @@ def get_location_rules(player, options):
             lambda state:
             (
                 state.has(ITEM_SEASON_WINTER, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_WINTER) and #you can TECHNICALLY do this with just flight but...
+                can_reach_ccw_cabin(state, player) and #you can TECHNICALLY do this with just flight but...
                 state.has(ITEM_FLAP_FLIP, player) and
                 state.has(ITEM_TALON_TROT, player)
             ),
@@ -9232,7 +9198,7 @@ def get_location_rules(player, options):
             lambda state:
             (
                 state.has(ITEM_SEASON_WINTER, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_WINTER) and #you can TECHNICALLY do this with just flight but...
+                can_reach_ccw_cabin(state, player) and #you can TECHNICALLY do this with just flight but...
                 state.has(ITEM_FLAP_FLIP, player) and
                 state.has(ITEM_TALON_TROT, player)
             ),
@@ -9240,7 +9206,7 @@ def get_location_rules(player, options):
             lambda state:
             (
                 state.has(ITEM_SEASON_WINTER, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_WINTER) and #you can TECHNICALLY do this with just flight but...
+                can_reach_ccw_cabin(state, player) and #you can TECHNICALLY do this with just flight but...
                 state.has(ITEM_FLAP_FLIP, player) and
                 state.has(ITEM_TALON_TROT, player)
             ),
@@ -9248,31 +9214,31 @@ def get_location_rules(player, options):
             lambda state:
             (
                 state.has(ITEM_SEASON_WINTER, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_WINTER)
+                can_reach_ccw_cabin(state, player)
             ),
         LOC_NOTE_CCW_WINTER_SLUSH_PLATFORM_2:
             lambda state:
             (
                 state.has(ITEM_SEASON_WINTER, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_WINTER)
+                can_reach_ccw_cabin(state, player)
             ),
         LOC_NOTE_CCW_WINTER_SLUSH_PLATFORM_3:
             lambda state:
             (
                 state.has(ITEM_SEASON_WINTER, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_WINTER)
+                can_reach_ccw_cabin(state, player)
             ),
         LOC_NOTE_CCW_WINTER_SLUSH_PLATFORM_4:
             lambda state:
             (
                 state.has(ITEM_SEASON_WINTER, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_WINTER)
+                can_reach_ccw_cabin(state, player)
             ),
         LOC_NOTE_CCW_WINTER_HIGHEST_PLATFORMS_1:
             lambda state:
             (
                 state.has(ITEM_SEASON_WINTER, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_WINTER) and
+                can_reach_ccw_cabin(state, player) and
                 (
                     state.has(ITEM_FLAP_FLIP, player) or
                     state.has(ITEM_FLIGHT, player)
@@ -9282,7 +9248,7 @@ def get_location_rules(player, options):
             lambda state:
             (
                 state.has(ITEM_SEASON_WINTER, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_WINTER) and
+                can_reach_ccw_cabin(state, player) and
                 (
                     state.has(ITEM_FLAP_FLIP, player) or
                     state.has(ITEM_FLIGHT, player)
@@ -9292,7 +9258,7 @@ def get_location_rules(player, options):
             lambda state:
             (
                 state.has(ITEM_SEASON_WINTER, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_WINTER) and
+                can_reach_ccw_cabin(state, player) and
                 (
                     state.has(ITEM_FLAP_FLIP, player) or
                     state.has(ITEM_FLIGHT, player)
@@ -9302,7 +9268,7 @@ def get_location_rules(player, options):
             lambda state:
             (
                 state.has(ITEM_SEASON_WINTER, player) and
-                can_reach_ccw_cabin(state, player, ITEM_SEASON_WINTER) and
+                can_reach_ccw_cabin(state, player) and
                 (
                     state.has(ITEM_FLAP_FLIP, player) or
                     state.has(ITEM_FLIGHT, player)
@@ -9550,12 +9516,15 @@ def get_location_rules(player, options):
         LOC_LIFE_CCW_SPRING_TOP_ROOM_1:
             lambda state:
             (
-                state.has(ITEM_SEASON_SPRING, player)
+                state.has(ITEM_SEASON_SPRING, player) and
+                can_reach_ccw_nabnuts_house(state, player)
             ),
         LOC_LIFE_CCW_SPRING_TOP_ROOM_2:
             lambda state:
             (
-                state.has(ITEM_SEASON_SPRING, player)
+                state.has(ITEM_SEASON_SPRING, player) and
+                can_reach_ccw_nabnuts_house(state, player) and
+                state.has(ITEM_FLAP_FLIP, player)
             ),
 
         # Click Clock Wood Summer - 3 extra lives
@@ -9573,24 +9542,31 @@ def get_location_rules(player, options):
         LOC_LIFE_CCW_SUMMER_TOP_ROOM:
             lambda state:
             (
-                state.has(ITEM_SEASON_SUMMER, player)
+                state.has(ITEM_SEASON_SUMMER, player) and
+                can_reach_ccw_nabnuts_house(state, player) and
+                state.has(ITEM_FLAP_FLIP, player)
             ),
 
         # Click Clock Wood Autumn - 3 extra lives
         LOC_LIFE_CCW_AUTUMN_GNAWTYS_HOUSE:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player)
+                state.has(ITEM_SEASON_AUTUMN, player) and
+                state.has(ITEM_SEASON_SUMMER, player) and
+                state.has(ITEM_BEAK_BARGE, player)
             ),
         LOC_LIFE_CCW_AUTUMN_SNAREBEAR:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player)
+                state.has(ITEM_SEASON_AUTUMN, player) and 
+                state.has(ITEM_WONDERWING, player)
             ),
         LOC_LIFE_CCW_AUTUMN_TOP_ROOM:
             lambda state:
             (
-                state.has(ITEM_SEASON_FALL, player)
+                state.has(ITEM_SEASON_AUTUMN, player) and
+                can_reach_ccw_nabnuts_house(state, player) and
+                state.has(ITEM_FLAP_FLIP, player)
             ),
 
         # Click Clock Wood Winter - 2 extra lives
@@ -9669,11 +9645,13 @@ def get_location_rules(player, options):
             (
                 state.has(ITEM_BEAK_BUSTER, player) and
                 state.has(ITEM_SEASON_SUMMER, player) and
+                state.has(ITEM_SEASON_WINTER, player) and
+                state.has(ITEM_FLIGHT, player) and
                 can_reach_ccw_nabnuts_house(state, player)
             ),
 
 
-        #  WARP CAULDRON LOCATION LOGIC (8 total)
+        #  WARP CAULDRONS
         LOC_CAULDRON_PURPLE_1:
             lambda state:
             (
@@ -9692,27 +9670,27 @@ def get_location_rules(player, options):
         LOC_CAULDRON_GREEN_2:
             lambda state:
             (
-                True  # Region access only
+                True 
             ),
         LOC_CAULDRON_ORANGE_1:
             lambda state:
             (
-                True  # Region access only
+                True 
             ),
         LOC_CAULDRON_ORANGE_2:
             lambda state:
             (
-                True  # Region access only
+                True  
             ),
         LOC_CAULDRON_YELLOW_1:
             lambda state:
             (
-                True  # Region access only
+                True  
             ),
         LOC_CAULDRON_YELLOW_2:
             lambda state:
             (
-                True  # Region access only
+                True  
             ),
 
 
@@ -9750,6 +9728,376 @@ def get_location_rules(player, options):
                 state.has(ITEM_BEAK_BUSTER, player)
             ),
 
+        # Puzzle Completion Location Rules 
+
+        LOC_PUZZLE_COMPLETE_DOUBLE_HEALTH:
+            lambda state:
+            (
+                state.has(ITEM_JIGGY, player, 4) and
+                state.has(ITEM_NOTE, player, 750) and
+                state.has(ITEM_CAULDRON_ORANGE, player) and
+                state.has(ITEM_FLAP_FLIP, player)
+            ),
+
+        # Mumbo Transformation Location Rules
+
+
+        LOC_MUMBO_TRANSFORM_TERMITE:
+            lambda state:
+            (
+                state.has(ITEM_MUMBO_TOKEN, player, 5)
+            ),
+        LOC_MUMBO_TRANSFORM_PUMPKIN:
+            lambda state:
+            (
+                state.has(ITEM_MUMBO_TOKEN, player, 20) and
+                can_reach_mmm_second_floor(state, player)
+            ),
+        LOC_MUMBO_TRANSFORM_WALRUS:
+            lambda state:
+            (
+                state.has(ITEM_MUMBO_TOKEN, player, 15)
+            ),
+        LOC_MUMBO_TRANSFORM_CROCODILE:
+            lambda state:
+            (
+                state.has(ITEM_MUMBO_TOKEN, player, 10) and
+                can_traverse_bgs(state, player)
+            ),
+        LOC_MUMBO_TRANSFORM_BEE:
+            lambda state:
+            (
+                state.has(ITEM_MUMBO_TOKEN, player, 25) and
+                state.has(ITEM_TALON_TROT, player)
+            ),
+
+
+        # Cheato Spell Location Rules
+
+        # BLUEEGGS - Near FP puzzle, enter tunnel as crocodile after ice block destroyed
+        LOC_CHEATO_BLUEEGGS:
+            lambda state:
+            (
+                state.has(ITEM_TRANSFORMATION_CROCODILE, player) and
+                state.has(ITEM_EGGS, player) and
+                state.has(ITEM_BEAK_BUSTER, player) and
+                (
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    state.has(ITEM_BEAK_BARGE, player)
+                )
+            ),
+        # REDFEATHERS - Lava room, follow winding path to small tunnel as pumpkin
+        LOC_CHEATO_REDFEATHERS:
+            lambda state:
+            (
+                state.has(ITEM_EGGS, player) and
+                state.has(ITEM_BEAK_BUSTER, player) and
+                state.has(ITEM_TRANSFORMATION_PUMPKIN, player)
+            ),
+        # GOLDFEATHERS - RBB entrance room, raise water to level 3, reach alcove before time runs out
+        LOC_CHEATO_GOLDFEATHERS:
+            lambda state:
+            (
+                state.has(ITEM_EGGS, player) and
+                state.has(ITEM_BEAK_BUSTER, player) and
+                can_hit_three_water_switches(state, player) and
+                state.has(ITEM_SWIM, player)
+            ),
+
+
+        # Note Door Location Rules
+
+
+        LOC_NOTE_DOOR_50:
+            lambda state:
+            (
+                state.has(ITEM_NOTE, player, 40)
+            ),
+        LOC_NOTE_DOOR_180:
+            lambda state:
+            (
+                state.has(ITEM_NOTE, player, 150)
+            ),
+        LOC_NOTE_DOOR_260:
+            lambda state:
+            (
+                state.has(ITEM_NOTE, player, 220)
+            ),
+        LOC_NOTE_DOOR_350:
+            lambda state:
+            (
+                state.has(ITEM_NOTE, player, 290)
+            ),
+        LOC_NOTE_DOOR_450:
+            lambda state:
+            (
+                state.has(ITEM_NOTE, player, 380)
+            ),
+        LOC_NOTE_DOOR_640:
+            lambda state:
+            (
+                state.has(ITEM_NOTE, player, 540)
+            ),
+        LOC_NOTE_DOOR_765:
+            lambda state:
+            (
+                state.has(ITEM_NOTE, player, 650)
+            ),
+        LOC_NOTE_DOOR_810:
+            lambda state:
+            (
+                state.has(ITEM_NOTE, player, 690)
+            ),
+        LOC_NOTE_DOOR_828:
+            lambda state:
+            (
+                state.has(ITEM_NOTE, player, 705)
+            ),
+        LOC_NOTE_DOOR_846:
+            lambda state:
+            (
+                state.has(ITEM_NOTE, player, 720)
+            ),
+        LOC_NOTE_DOOR_864:
+            lambda state:
+            (
+                state.has(ITEM_NOTE, player, 730)
+            ),
+        LOC_NOTE_DOOR_882:
+            lambda state:
+            (
+                state.has(ITEM_NOTE, player, 750)
+            ),
+
+        # Brentilda Locations
+
+        # Brentilda 1 - TTC/CC Puzzle Room
+        LOC_BRENTILDA_1_FACT_1:
+            lambda state: (
+                state.has(ITEM_NOTE, player, 40) and
+                (
+                state.has(ITEM_TALON_TROT, player) or
+                talon_lobby(state, player, options)
+                )
+            ),
+
+        LOC_BRENTILDA_1_FACT_2:
+            lambda state: (
+                state.has(ITEM_NOTE, player, 40) and
+                (
+                state.has(ITEM_TALON_TROT, player) or
+                talon_lobby(state, player, options)
+                )
+            ),
+        LOC_BRENTILDA_1_FACT_3:
+            lambda state: (
+                state.has(ITEM_NOTE, player, 40) and
+                (
+                state.has(ITEM_TALON_TROT, player) or
+                talon_lobby(state, player, options)
+                )
+            ),
+        # Brentilda 2 - CCW Puzzle Room
+        LOC_BRENTILDA_2_FACT_1:
+            lambda state: (
+                state.has(ITEM_NOTE, player, 40) and
+                state.has(ITEM_SWIM, player) and
+                (
+                state.has(ITEM_TALON_TROT, player) or
+                talon_lobby(state, player, options)
+                )
+            ),
+        LOC_BRENTILDA_2_FACT_2:
+            lambda state: (
+                state.has(ITEM_NOTE, player, 40) and
+                state.has(ITEM_SWIM, player) and
+                (
+                state.has(ITEM_TALON_TROT, player) or
+                talon_lobby(state, player, options)
+                )
+            ),
+        LOC_BRENTILDA_2_FACT_3:
+            lambda state: (
+                state.has(ITEM_NOTE, player, 40) and
+                state.has(ITEM_SWIM, player) and
+                (
+                state.has(ITEM_TALON_TROT, player) or
+                talon_lobby(state, player, options)
+                )
+            ),
+        # Brentilda 3 - CC Entrance Pipe (need to climb up)
+        LOC_BRENTILDA_3_FACT_1:
+            lambda state: (
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_BRENTILDA_3_FACT_2:
+            lambda state: (
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        LOC_BRENTILDA_3_FACT_3:
+            lambda state: (
+                state.has(ITEM_FLAP_FLIP, player) and
+                state.has(ITEM_BEAK_BUSTER, player)
+            ),
+        # Brentilda 4 - Behind Grunty Statue
+        LOC_BRENTILDA_4_FACT_1:
+            lambda state: True,
+        LOC_BRENTILDA_4_FACT_2:
+            lambda state: True,
+        LOC_BRENTILDA_4_FACT_3:
+            lambda state: True,
+        # Brentilda 5 - BGS Entrance Log
+        LOC_BRENTILDA_5_FACT_1:
+            lambda state: True,
+        LOC_BRENTILDA_5_FACT_2:
+            lambda state: True,
+        LOC_BRENTILDA_5_FACT_3:
+            lambda state: True,
+        # Brentilda 6 - Behind GV Entrance
+        LOC_BRENTILDA_6_FACT_1:
+            lambda state: state.has(ITEM_STILT_STRIDE, player),
+        LOC_BRENTILDA_6_FACT_2:
+            lambda state: state.has(ITEM_STILT_STRIDE, player),
+        LOC_BRENTILDA_6_FACT_3:
+            lambda state: state.has(ITEM_STILT_STRIDE, player),
+        # Brentilda 7 - Grunty Statue Hat (need to get on top but region rules cover for now)
+        LOC_BRENTILDA_7_FACT_1:
+            lambda state: True,
+        LOC_BRENTILDA_7_FACT_2:
+            lambda state: True,
+        LOC_BRENTILDA_7_FACT_3:
+            lambda state: True,
+        # Brentilda 8 - Lava Room Ledge
+        LOC_BRENTILDA_8_FACT_1:
+            lambda state: state.has(ITEM_TRANSFORMATION_PUMPKIN, player),
+        LOC_BRENTILDA_8_FACT_2:
+            lambda state: state.has(ITEM_TRANSFORMATION_PUMPKIN, player),
+        LOC_BRENTILDA_8_FACT_3:
+            lambda state: state.has(ITEM_TRANSFORMATION_PUMPKIN, player),
+        # Brentilda 9 - MMM Entrance Gravestone
+        LOC_BRENTILDA_9_FACT_1:
+            lambda state: True,
+        LOC_BRENTILDA_9_FACT_2:
+            lambda state: True,
+        LOC_BRENTILDA_9_FACT_3:
+            lambda state: True,
+        # Brentilda 10 - CCW Entrance Log
+        LOC_BRENTILDA_10_FACT_1:
+            lambda state: True,
+        LOC_BRENTILDA_10_FACT_2:
+            lambda state: True,
+        LOC_BRENTILDA_10_FACT_3:
+            lambda state: True,
+
+    # Cauldron activation locations - auto-fired when item received
+        LOC_CAULDRON_ACTIVATE_PURPLE_1:
+            lambda state: state.has(ITEM_CAULDRON_PURPLE, player),
+        LOC_CAULDRON_ACTIVATE_PURPLE_2:
+            lambda state: state.has(ITEM_CAULDRON_PURPLE, player),
+        LOC_CAULDRON_ACTIVATE_GREEN_1:
+            lambda state: state.has(ITEM_CAULDRON_GREEN, player),
+        LOC_CAULDRON_ACTIVATE_GREEN_2:
+            lambda state: state.has(ITEM_CAULDRON_GREEN, player),
+        LOC_CAULDRON_ACTIVATE_ORANGE_1:
+            lambda state: state.has(ITEM_CAULDRON_ORANGE, player),
+        LOC_CAULDRON_ACTIVATE_ORANGE_2:
+            lambda state: state.has(ITEM_CAULDRON_ORANGE, player),
+        LOC_CAULDRON_ACTIVATE_YELLOW_1:
+            lambda state: state.has(ITEM_CAULDRON_YELLOW, player),
+        LOC_CAULDRON_ACTIVATE_YELLOW_2:
+            lambda state: state.has(ITEM_CAULDRON_YELLOW, player),
+
+        # Cauldron warp locations - need item to use
+        LOC_CAULDRON_PURPLE_1:
+            lambda state: state.has(ITEM_CAULDRON_PURPLE, player),
+        LOC_CAULDRON_PURPLE_2:
+            lambda state: state.has(ITEM_CAULDRON_PURPLE, player),
+        LOC_CAULDRON_GREEN_1:
+            lambda state: state.has(ITEM_CAULDRON_GREEN, player),
+        LOC_CAULDRON_GREEN_2:
+            lambda state: state.has(ITEM_CAULDRON_GREEN, player),
+        LOC_CAULDRON_ORANGE_1:
+            lambda state: state.has(ITEM_CAULDRON_ORANGE, player),
+        LOC_CAULDRON_ORANGE_2:
+            lambda state: state.has(ITEM_CAULDRON_ORANGE, player),
+        LOC_CAULDRON_YELLOW_1:
+            lambda state: state.has(ITEM_CAULDRON_YELLOW, player),
+        LOC_CAULDRON_YELLOW_2:
+            lambda state: state.has(ITEM_CAULDRON_YELLOW, player),
+
+        # Level unlock thresholds - require jiggy counts
+        LOC_LEVEL_UNLOCK_1:
+            lambda state: state.has(ITEM_JIGGY, player, 3),
+        LOC_LEVEL_UNLOCK_2:
+            lambda state: state.has(ITEM_JIGGY, player, 8),
+        LOC_LEVEL_UNLOCK_3:
+            lambda state: state.has(ITEM_JIGGY, player, 15),
+        LOC_LEVEL_UNLOCK_4:
+            lambda state: state.has(ITEM_JIGGY, player, 23),
+        LOC_LEVEL_UNLOCK_5:
+            lambda state: state.has(ITEM_JIGGY, player, 32),
+        LOC_LEVEL_UNLOCK_6:
+            lambda state: state.has(ITEM_JIGGY, player, 42),
+        LOC_LEVEL_UNLOCK_7:
+            lambda state: state.has(ITEM_JIGGY, player, 54),
+        LOC_LEVEL_UNLOCK_8:
+            lambda state: state.has(ITEM_JIGGY, player, 69),
+        LOC_LEVEL_UNLOCK_9:
+            lambda state: state.has(ITEM_JIGGY, player, 84),
+
+        # Vile Hole
+        LOC_VILE_HOLE_01: 
+            lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
+        LOC_VILE_HOLE_02: 
+            lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
+        LOC_VILE_HOLE_03: 
+            lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
+        LOC_VILE_HOLE_04: 
+            lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
+        LOC_VILE_HOLE_05: 
+            lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
+        LOC_VILE_HOLE_06: 
+            lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
+        LOC_VILE_HOLE_07: 
+            lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
+        LOC_VILE_HOLE_08: 
+            lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
+        LOC_VILE_HOLE_09: 
+            lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
+        LOC_VILE_HOLE_10: 
+            lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
+        LOC_VILE_HOLE_11: 
+            lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
+        LOC_VILE_HOLE_12: 
+            lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
+        LOC_VILE_HOLE_13: 
+            lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
+        LOC_VILE_HOLE_14: 
+            lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
+        LOC_VILE_HOLE_15: 
+            lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
+        LOC_VILE_HOLE_16: 
+            lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
+        LOC_VILE_HOLE_17: 
+            lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
+        LOC_VILE_HOLE_18: 
+            lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
+        LOC_VILE_HOLE_19: 
+            lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
+        LOC_VILE_HOLE_20: 
+            lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
+        LOC_VILE_HOLE_21: 
+            lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
+        LOC_VILE_HOLE_22: 
+            lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
+        LOC_VILE_HOLE_23: 
+            lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
+        LOC_VILE_HOLE_24: 
+            lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
+        LOC_VILE_HOLE_25: 
+            lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
 
         LOC_DEFEAT_GRUNTILDA:
             lambda state: True,
