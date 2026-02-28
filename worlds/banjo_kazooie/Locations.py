@@ -149,26 +149,6 @@ location_data_table: Dict[str, BKLocationData] = {
         region=RGN_CCW_AUTUMN,
         address=0x14000006,
     ),
-    LOC_SEASON_SPRING:  BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_SEASON_SPRING
-    ),
-    LOC_SEASON_SUMMER:  BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_SEASON_SUMMER
-    ),
-    LOC_SEASON_AUTUMN:  BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_SEASON_AUTUMN
-    ),
-    LOC_SEASON_WINTER:  BKLocationData(
-        region=RGN_CLICK_CLOCK_WOOD,
-        address=None,
-        locked_item=ITEM_SEASON_WINTER
-    ),
     #  Jinjos: Mumbo's Mountain 
     LOC_JINJO_MM_BLUE: BKLocationData(
         region=RGN_MUMBOS_MOUNTAIN,
@@ -5702,106 +5682,128 @@ location_data_table: Dict[str, BKLocationData] = {
         address=0x19000082,
     ),
 
-    # Mr Vile Yumbly/Grumbly Holes
-    LOC_VILE_HOLE_01: BKLocationData(
-        region=RGN_BUBBLEGLOOP_SWAMP,
-        address=0x1B007ED0,
-    ),
-    LOC_VILE_HOLE_02: BKLocationData(
-        region=RGN_BUBBLEGLOOP_SWAMP,
-        address=0x1B193EDA,
-    ),
-    LOC_VILE_HOLE_03: BKLocationData(
-        region=RGN_BUBBLEGLOOP_SWAMP,
-        address=0x1B324ED0,
-    ),
-    LOC_VILE_HOLE_04: BKLocationData(
-        region=RGN_BUBBLEGLOOP_SWAMP,
-        address=0x1B25BDA4,
-    ),
-    LOC_VILE_HOLE_05: BKLocationData(
-        region=RGN_BUBBLEGLOOP_SWAMP,
-        address=0x1B0C7DA4,
-    ),
-    LOC_VILE_HOLE_06: BKLocationData(
-        region=RGN_BUBBLEGLOOP_SWAMP,
-        address=0x1B25DFF8,
-    ),
-    LOC_VILE_HOLE_07: BKLocationData(
-        region=RGN_BUBBLEGLOOP_SWAMP,
-        address=0x1B193128,
-    ),
-    LOC_VILE_HOLE_08: BKLocationData(
-        region=RGN_BUBBLEGLOOP_SWAMP,
-        address=0x1B31F12A,
-    ),
-    LOC_VILE_HOLE_09: BKLocationData(
-        region=RGN_BUBBLEGLOOP_SWAMP,
-        address=0x1B0CA000,
-    ),
-    LOC_VILE_HOLE_10: BKLocationData(
-        region=RGN_BUBBLEGLOOP_SWAMP,
-        address=0x1B0C8254,
-    ),
-    LOC_VILE_HOLE_11: BKLocationData(
+# Mr Vile Yumblie/Grumblie Holes
+    #
+    # Grid layout (top-down, crocodile head at bottom):
+    #
+    #        A1    A2    A3            <- Row A (3)
+    #      B1    B2    B3    B4       <- Row B (4)
+    #    C1    C2    C3    C4    C5   <- Row C (5)
+    #      D1    D2    D3    D4       <- Row D (4)
+    #    E1    E2    E3    E4    E5   <- Row E (5)
+    #      F1    F2    F3    F4       <- Row F (4)
+    #           CROCODILE HEAD
+
+    # Row A (z ~ +900)
+    LOC_VILE_HOLE_A1: BKLocationData(
         region=RGN_BUBBLEGLOOP_SWAMP,
         address=0x1BE72382,
     ),
-    LOC_VILE_HOLE_12: BKLocationData(
-        region=RGN_BUBBLEGLOOP_SWAMP,
-        address=0x1BDAF251,
-    ),
-    LOC_VILE_HOLE_13: BKLocationData(
-        region=RGN_BUBBLEGLOOP_SWAMP,
-        address=0x1B190382,
-    ),
-    LOC_VILE_HOLE_14: BKLocationData(
-        region=RGN_BUBBLEGLOOP_SWAMP,
-        address=0x1BF3A255,
-    ),
-    LOC_VILE_HOLE_15: BKLocationData(
-        region=RGN_BUBBLEGLOOP_SWAMP,
-        address=0x1BE7512A,
-    ),
-    LOC_VILE_HOLE_16: BKLocationData(
-        region=RGN_BUBBLEGLOOP_SWAMP,
-        address=0x1BF3B000,
-    ),
-    LOC_VILE_HOLE_17: BKLocationData(
-        region=RGN_BUBBLEGLOOP_SWAMP,
-        address=0x1BDACFFE,
-    ),
-    LOC_VILE_HOLE_18: BKLocationData(
-        region=RGN_BUBBLEGLOOP_SWAMP,
-        address=0x1BCE6ED6,
-    ),
-    LOC_VILE_HOLE_19: BKLocationData(
-        region=RGN_BUBBLEGLOOP_SWAMP,
-        address=0x1BCE2129,
-    ),
-    LOC_VILE_HOLE_20: BKLocationData(
-        region=RGN_BUBBLEGLOOP_SWAMP,
-        address=0x1B002128,
-    ),
-    LOC_VILE_HOLE_21: BKLocationData(
-        region=RGN_BUBBLEGLOOP_SWAMP,
-        address=0x1BF3ADA7,
-    ),
-    LOC_VILE_HOLE_22: BKLocationData(
+    LOC_VILE_HOLE_A2: BKLocationData(
         region=RGN_BUBBLEGLOOP_SWAMP,
         address=0x1B004381,
     ),
-    LOC_VILE_HOLE_23: BKLocationData(
+    LOC_VILE_HOLE_A3: BKLocationData(
         region=RGN_BUBBLEGLOOP_SWAMP,
-        address=0x1BE72ED9,
+        address=0x1B190382,
     ),
-    LOC_VILE_HOLE_24: BKLocationData(
+
+    # Row B (z ~ +600)
+    LOC_VILE_HOLE_B1: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1BDAF251,
+    ),
+    LOC_VILE_HOLE_B2: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1BF3A255,
+    ),
+    LOC_VILE_HOLE_B3: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1B0C8254,
+    ),
+    LOC_VILE_HOLE_B4: BKLocationData(
         region=RGN_BUBBLEGLOOP_SWAMP,
         address=0x1B257256,
     ),
-    LOC_VILE_HOLE_25: BKLocationData(
+
+    # Row C (z ~ +300)
+    LOC_VILE_HOLE_C1: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1BCE2129,
+    ),
+    LOC_VILE_HOLE_C2: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1BE7512A,
+    ),
+    LOC_VILE_HOLE_C3: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1B002128,
+    ),
+    LOC_VILE_HOLE_C4: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1B193128,
+    ),
+    LOC_VILE_HOLE_C5: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1B31F12A,
+    ),
+
+    # Row D (z ~ 0)
+    LOC_VILE_HOLE_D1: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1BDACFFE,
+    ),
+    LOC_VILE_HOLE_D2: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1BF3B000,
+    ),
+    LOC_VILE_HOLE_D3: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1B0CA000,
+    ),
+    LOC_VILE_HOLE_D4: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1B25DFF8,
+    ),
+
+    # Row E (z ~ -300)
+    LOC_VILE_HOLE_E1: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1BCE6ED6,
+    ),
+    LOC_VILE_HOLE_E2: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1BE72ED9,
+    ),
+    LOC_VILE_HOLE_E3: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1B007ED0,
+    ),
+    LOC_VILE_HOLE_E4: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1B193EDA,
+    ),
+    LOC_VILE_HOLE_E5: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1B324ED0,
+    ),
+
+    # Row F (z ~ -600)
+    LOC_VILE_HOLE_F1: BKLocationData(
         region=RGN_BUBBLEGLOOP_SWAMP,
         address=0x1BDAEDA9,
+    ),
+    LOC_VILE_HOLE_F2: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1BF3ADA7,
+    ),
+    LOC_VILE_HOLE_F3: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1B0C7DA4,
+    ),
+    LOC_VILE_HOLE_F4: BKLocationData(
+        region=RGN_BUBBLEGLOOP_SWAMP,
+        address=0x1B25BDA4,
     ),
 
     LOC_DEFEAT_GRUNTILDA: BKLocationData(

@@ -9727,7 +9727,30 @@ def get_location_rules(player, options):
                 can_reach_gv_rest_of_level(state, player) and
                 state.has(ITEM_BEAK_BUSTER, player)
             ),
-
+        LOC_CCW_SWITCH_SPRING:
+            lambda state:
+            (
+                can_reach_ccw_spring_switch(state, player) or
+                state.has(ITEM_SEASON_SPRING, player)
+            ),
+        LOC_CCW_SWITCH_SUMMER:
+            lambda state:
+            (
+                can_reach_ccw_summer_switch(state, player) or
+                state.has(ITEM_SEASON_SUMMER, player)
+            ),
+        LOC_CCW_SWITCH_AUTUMN:
+            lambda state:
+            (
+                can_reach_ccw_autumn_switch(state, player) or
+                state.has(ITEM_SEASON_AUTUMN, player)
+            ),
+        LOC_CCW_SWITCH_WINTER:
+            lambda state:
+            (
+                can_reach_ccw_winter_switch(state, player) or
+                state.has(ITEM_SEASON_WINTER, player)
+            ),
         # Puzzle Completion Location Rules 
 
         LOC_PUZZLE_COMPLETE_DOUBLE_HEALTH:
@@ -10045,59 +10068,61 @@ def get_location_rules(player, options):
         LOC_LEVEL_UNLOCK_8:
             lambda state: state.has(ITEM_JIGGY, player, 69),
         LOC_LEVEL_UNLOCK_9:
-            lambda state: state.has(ITEM_JIGGY, player, 84),
+            lambda state: state.has(ITEM_JIGGY, player, 94),
 
         # Vile Hole
-        LOC_VILE_HOLE_01: 
+        # Vile Holes (grid layout A1-F4)
+        LOC_VILE_HOLE_A1: 
             lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
-        LOC_VILE_HOLE_02: 
+        LOC_VILE_HOLE_A2: 
             lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
-        LOC_VILE_HOLE_03: 
+        LOC_VILE_HOLE_A3: 
             lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
-        LOC_VILE_HOLE_04: 
+        LOC_VILE_HOLE_B1: 
             lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
-        LOC_VILE_HOLE_05: 
+        LOC_VILE_HOLE_B2: 
             lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
-        LOC_VILE_HOLE_06: 
+        LOC_VILE_HOLE_B3: 
             lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
-        LOC_VILE_HOLE_07: 
+        LOC_VILE_HOLE_B4: 
             lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
-        LOC_VILE_HOLE_08: 
+        LOC_VILE_HOLE_C1: 
             lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
-        LOC_VILE_HOLE_09: 
+        LOC_VILE_HOLE_C2: 
             lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
-        LOC_VILE_HOLE_10: 
+        LOC_VILE_HOLE_C3: 
             lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
-        LOC_VILE_HOLE_11: 
+        LOC_VILE_HOLE_C4: 
             lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
-        LOC_VILE_HOLE_12: 
+        LOC_VILE_HOLE_C5: 
             lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
-        LOC_VILE_HOLE_13: 
+        LOC_VILE_HOLE_D1: 
             lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
-        LOC_VILE_HOLE_14: 
+        LOC_VILE_HOLE_D2: 
             lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
-        LOC_VILE_HOLE_15: 
+        LOC_VILE_HOLE_D3: 
             lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
-        LOC_VILE_HOLE_16: 
+        LOC_VILE_HOLE_D4: 
             lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
-        LOC_VILE_HOLE_17: 
+        LOC_VILE_HOLE_E1: 
             lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
-        LOC_VILE_HOLE_18: 
+        LOC_VILE_HOLE_E2: 
             lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
-        LOC_VILE_HOLE_19: 
+        LOC_VILE_HOLE_E3: 
             lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
-        LOC_VILE_HOLE_20: 
+        LOC_VILE_HOLE_E4: 
             lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
-        LOC_VILE_HOLE_21: 
+        LOC_VILE_HOLE_E5: 
             lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
-        LOC_VILE_HOLE_22: 
+        LOC_VILE_HOLE_F1: 
             lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
-        LOC_VILE_HOLE_23: 
+        LOC_VILE_HOLE_F2: 
             lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
-        LOC_VILE_HOLE_24: 
+        LOC_VILE_HOLE_F3: 
             lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
-        LOC_VILE_HOLE_25: 
+        LOC_VILE_HOLE_F4: 
             lambda state: state.has(ITEM_TRANSFORMATION_CROCODILE, player),
+
 
         LOC_DEFEAT_GRUNTILDA:
             lambda state: True,
