@@ -108,7 +108,6 @@ class BKWorld(World):
 
     def pre_fill(self) -> None:
         from BaseClasses import CollectionState
-        from Fill import fill_restrictive
 
         player = self.player
         mw = self.multiworld
@@ -156,42 +155,11 @@ class BKWorld(World):
                 mw.itempool.remove(jiggy)
 
         # ============================================================
-        # Pre-fill all notes when notesanity is enabled.
-        #
-        # With 750 progression notes in the main fill, fill_restrictive
-        # deadlocks because notes + movement abilities compete for the
-        # same early-sphere slots. By placing notes here in isolation,
-        # the main fill only handles ~40 items and never fails.
-        #
-        # Notes are interchangeable (any Note is identical to any other),
-        # so fill_restrictive only needs to ensure enough notes are
-        # reachable before each door threshold — no item-specific logic.
+        # Notes go through the main fill so they can appear in other
+        # players' worlds. Their progression_skip_balancing classification
+        # ensures AP places them in reachable locations without trying
+        # to balance them across spheres (which would deadlock with 750).
         # ============================================================
-        if self.options.notesanity.value:
-            note_items = [i for i in list(mw.itempool)
-                          if i.player == player and i.name == ITEM_NOTE]
-            for item in note_items:
-                mw.itempool.remove(item)
-
-            available_locations = [
-                loc for loc in mw.get_unfilled_locations(player)
-                if not loc.progress_type == loc.progress_type.EXCLUDED
-            ]
-            self.random.shuffle(available_locations)
-            self.random.shuffle(note_items)
-
-            # Pre-collect all non-note progression items into the state
-            # so fill_restrictive knows which locations are reachable.
-            # Without this, only sphere 0 locations are available and
-            # there aren't enough for 750 notes.
-            fill_state = CollectionState(mw)
-            for item in mw.itempool:
-                if item.player == player and item.advancement:
-                    fill_state.collect(item, prevent_sweep=True)
-            fill_state.sweep_for_advancements()
-
-            fill_restrictive(mw, fill_state, available_locations, note_items,
-                             single_player_placement=True, name="BK Notes")
 
     def create_and_add_filler_items(self, count: int = 1):
         for i in range(count):
@@ -233,4 +201,5 @@ class BKWorld(World):
             "talon_lobby": self.options.talon_lobby.value,
             "extra_locations": self.options.extra_locations.value,
             "level_unlock_mode": self.options.level_unlock_mode.value,
+            "furnace_fun_sanity": self.options.furnace_fun_sanity.value,
         }

@@ -49,6 +49,13 @@ class LevelUnlockMode(Choice):
     option_items = 1
     default = 0
 
+class FurnaceFunSanity(Toggle):
+    """Set whether Furnace Fun board tiles are individual locations.
+    
+    Each question tile on the Furnace Fun game board becomes a check
+    when answered correctly. Adds 77 locations."""
+    display_name = "Furnace Fun Sanity"
+
 @dataclass
 class BKOptions(PerGameCommonOptions):
     start_inventory_from_pool: StartInventoryPool
@@ -59,3 +66,4 @@ class BKOptions(PerGameCommonOptions):
     # feathersanity: Feathersanity
     extra_locations: ExtraLocations
     level_unlock_mode: LevelUnlockMode
+    furnace_fun_sanity: FurnaceFunSanity

@@ -481,7 +481,7 @@ item_data_table: Dict[str, BKItemData] = {
         type=ItemClassification.progression,
     ),
     ITEM_TRANSFORMATION_CROCODILE: BKItemData(
-        code=0x0001FFB1,
+        code=0x0001FFB3,
         type=ItemClassification.progression,
     ),
     ITEM_TRANSFORMATION_WALRUS: BKItemData(
@@ -489,7 +489,7 @@ item_data_table: Dict[str, BKItemData] = {
         type=ItemClassification.progression,
     ),
     ITEM_TRANSFORMATION_PUMPKIN: BKItemData(
-        code=0x0001FFB3,
+        code=0x0001FFB1,
         type=ItemClassification.progression,
     ),
     ITEM_TRANSFORMATION_BEE: BKItemData(

@@ -5074,7 +5074,7 @@ location_data_table: Dict[str, BKLocationData] = {
     ),
     LOC_LIFE_GL_810_NOTE_DOOR: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
-        address=0x0D008EF0,
+        address=0x0D93FE94,
     ),
 
     # Mumbo's Mountain - 2 extra lives
@@ -5354,11 +5354,11 @@ location_data_table: Dict[str, BKLocationData] = {
     ),
     LOC_CAULDRON_YELLOW_1: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
-        address=0x0F000007,
+        address=0x0F000009,
     ),
     LOC_CAULDRON_YELLOW_2: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR_810_NOTE_DOOR,
-        address=0x0F000008,
+        address=0x0F00000A,
     ),
 
 
@@ -5806,6 +5806,394 @@ location_data_table: Dict[str, BKLocationData] = {
         address=0x1B25BDA4,
     ),
 
+    # Furnace Fun Sanity Tiles (77 question tiles, mesh 0x191-0x1EF)
+
+    LOC_FF_1_BANJO: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C000191,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_2_PICTURE: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C000192,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_3_SKULL: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C000194,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_4_JOKER: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C000195,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_5_MUSIC: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C000197,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_6_BANJO: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C000198,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_7_GRUNTY: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C00019A,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_8_PICTURE: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C00019B,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_9_BANJO: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C00019C,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_10_JOKER: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C00019D,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_11_BANJO: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C00019E,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_12_BANJO: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001A0,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_13_JOKER: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001A1,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_14_GRUNTY: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001A2,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_15_MINIGAME: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001A3,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_16_BANJO: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001A5,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_17_MINIGAME: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001A6,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_18_PICTURE: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001A7,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_19_BANJO: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001A8,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_20_MUSIC: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001A9,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_21_GRUNTY: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001AA,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_22_BANJO: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001AB,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_23_SKULL: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001AE,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_24_GRUNTY: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001AF,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_25_PICTURE: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001B0,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_26_BANJO: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001B1,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_27_MUSIC: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001B2,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_28_SKULL: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001B3,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_29_GRUNTY: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001B6,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_30_BANJO: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001B7,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_31_BANJO: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001B9,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_32_MINIGAME: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001BA,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_33_MUSIC: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001BB,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_34_PICTURE: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001BC,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_35_GRUNTY: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001BD,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_36_BANJO: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001BE,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_37_PICTURE: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001BF,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_38_MUSIC: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001C0,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_39_PICTURE: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001C1,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_40_GRUNTY: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001C2,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_41_PICTURE: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001C3,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_42_MUSIC: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001C5,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_43_MINIGAME: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001C6,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_44_MUSIC: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001C7,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_45_SKULL: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001C8,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_46_SKULL: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001C9,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_47_MUSIC: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001CA,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_48_GRUNTY: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001CB,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_49_JOKER: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001CC,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_50_BANJO: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001CD,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_51_BANJO: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001CF,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_52_SKULL: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001D0,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_53_PICTURE: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001D1,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_54_MUSIC: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001D2,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_55_MINIGAME: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001D3,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_56_BANJO: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001D4,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_57_PICTURE: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001D6,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_58_PICTURE: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001D7,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_59_SKULL: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001D8,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_60_GRUNTY: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001D9,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_61_GRUNTY: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001DA,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_62_MUSIC: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001DC,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_63_MINIGAME: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001DD,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_64_SKULL: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001DE,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_65_JOKER: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001DF,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_66_BANJO: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001E0,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_67_BANJO: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001E1,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_68_SKULL: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001E2,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_69_PICTURE: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001E3,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_70_SKULL: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001E4,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_71_SKULL: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001E6,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_72_GRUNTY: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001E7,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_73_BANJO: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001E8,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_74_PICTURE: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001EA,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_75_SKULL: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001EC,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_76_SKULL: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001ED,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+    LOC_FF_77_SKULL: BKLocationData(
+        region=RGN_GRUNTILDAS_LAIR_FURNACE_FUN,
+        address=0x1C0001EF,
+        can_create=lambda options: options.furnace_fun_sanity.value,
+    ),
+
     LOC_DEFEAT_GRUNTILDA: BKLocationData(
         region=RGN_GRUNTILDAS_LAIR_FIGHT,
         locked_item=ITEM_VICTORY
@@ -5868,9 +6256,6 @@ for location_name, location_data in location_data_table.items():
 
 # DO NOT merge extra_location_table into location_data_table here!
 # That happens during world generation in __init__.py when options are known.
-
-# for location_name, location_data in extra_location_table.items():
-#     location_data_table[location_name] = BKLocationData(region=location_data.region, address=location_data.address, can_create=location_data.can_create)
 
 # location_table is used for the DATA PACKAGE - only base locations, NO extras
 location_table = {name: data.address for name, data in location_data_table.items() if data.address is not None}
