@@ -8333,10 +8333,10 @@ def get_location_rules(player, options):
             lambda state:
             (
                 can_reach_ccw_cabin(state, player) and
-                state.has(ITEM_SEASON_SPRING, state, player) and
-                state.has(ITEM_SEASON_SUMMER, state, player) and
-                state.has(ITEM_SEASON_AUTUMN, state, player) and
-                state.has(ITEM_SEASON_WINTER, state, player) and
+                state.has(ITEM_SEASON_SPRING, player) and
+                state.has(ITEM_SEASON_SUMMER, player) and
+                state.has(ITEM_SEASON_AUTUMN, player) and
+                state.has(ITEM_SEASON_WINTER, player) and
                 state.has(ITEM_SHOCK_SPRING_JUMP, player) and
                 state.has(ITEM_BEAK_BUSTER, player)
             ),
