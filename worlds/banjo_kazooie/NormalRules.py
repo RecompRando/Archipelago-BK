@@ -16,7 +16,8 @@ def can_smash_mm_huts(state, player):
         state.has(ITEM_BEAK_BUSTER, player) and
         (
             state.has(ITEM_JUMP, player) or
-            state.has(ITEM_FLAP_FLIP, player)
+            state.has(ITEM_FLAP_FLIP, player) or
+            state.has(ITEM_TALON_TROT, player)
         )
     )
 
@@ -874,7 +875,8 @@ def get_location_rules(player, options):
         LOC_EMPTY_HONEYCOMB_SM_ROCKS:
             lambda state:
             (
-                state.has(ITEM_BEAK_BARGE, player)
+                state.has(ITEM_BEAK_BARGE, player) or
+                state.has(ITEM_BEAK_BUSTER, player)
             ),
         LOC_EMPTY_HONEYCOMB_SM_COLLIWOBBLE:
             lambda state:
@@ -1383,37 +1385,43 @@ def get_location_rules(player, options):
             lambda state:
             (
                 state.has(ITEM_JUMP, player) or
-                state.has(ITEM_FLAP_FLIP, player)
+                state.has(ITEM_FLAP_FLIP, player) or
+                state.has(ITEM_TALON_TROT, player)
             ),
         LOC_NOTE_MM_TOTEM_HUT_2:
             lambda state:
             (
                 state.has(ITEM_JUMP, player) or
-                state.has(ITEM_FLAP_FLIP, player)
+                state.has(ITEM_FLAP_FLIP, player) or
+                state.has(ITEM_TALON_TROT, player)
             ),
         LOC_NOTE_MM_TOTEM_HUT_3:
             lambda state:
             (
                 state.has(ITEM_JUMP, player) or
-                state.has(ITEM_FLAP_FLIP, player)
+                state.has(ITEM_FLAP_FLIP, player) or
+                state.has(ITEM_TALON_TROT, player)
             ),
         LOC_NOTE_MM_TOTEM_HUT_4:
             lambda state:
             (
                 state.has(ITEM_JUMP, player) or
-                state.has(ITEM_FLAP_FLIP, player)
+                state.has(ITEM_FLAP_FLIP, player) or
+                state.has(ITEM_TALON_TROT, player)
             ),
         LOC_NOTE_MM_TOTEM_HUT_5:
             lambda state:
             (
                 state.has(ITEM_JUMP, player) or
-                state.has(ITEM_FLAP_FLIP, player)
+                state.has(ITEM_FLAP_FLIP, player) or
+                state.has(ITEM_TALON_TROT, player)
             ),
         LOC_NOTE_MM_TOTEM_HUT_6:
             lambda state:
             (
                 state.has(ITEM_JUMP, player) or
-                state.has(ITEM_FLAP_FLIP, player)
+                state.has(ITEM_FLAP_FLIP, player) or
+                state.has(ITEM_TALON_TROT, player)
             ),
         LOC_NOTE_MM_DESTROY_TOTEM_HUT_1:
             lambda state:
@@ -8325,9 +8333,10 @@ def get_location_rules(player, options):
             lambda state:
             (
                 can_reach_ccw_cabin(state, player) and
-                can_reach_ccw_cabin(state, player)and
-                can_reach_ccw_cabin(state, player) and
-                can_reach_ccw_cabin(state, player) and
+                state.has(ITEM_SEASON_SPRING, state, player) and
+                state.has(ITEM_SEASON_SUMMER, state, player) and
+                state.has(ITEM_SEASON_AUTUMN, state, player) and
+                state.has(ITEM_SEASON_WINTER, state, player) and
                 state.has(ITEM_SHOCK_SPRING_JUMP, player) and
                 state.has(ITEM_BEAK_BUSTER, player)
             ),
@@ -9397,9 +9406,17 @@ def get_location_rules(player, options):
         LOC_LIFE_CC_GRATE_ALCOVE:
             lambda state:
             (
+                state.has(ITEM_SWIM, player) and
+                state.has(ITEM_CLIMB, player) and
                 state.has(ITEM_SHOCK_SPRING_JUMP, player) and
-                state.has(ITEM_JUMP, player) and
-                state.has(ITEM_FEATHERY_FLAP, player)
+                (
+                    state.has(ITEM_FEATHERY_FLAP, player) or
+                    state.has(ITEM_RAT_A_TAT_RAP, player) or
+                    (
+                        state.has(ITEM_JUMP, player) and
+                        state.has(ITEM_TALON_TROT, player)
+                    )
+                )
             ),
 
         # Bubblegloop Swamp - 5 extra lives
@@ -9413,7 +9430,10 @@ def get_location_rules(player, options):
             lambda state:
             (
                 can_traverse_bgs(state, player) and
-                state.has(ITEM_SHOCK_SPRING_JUMP, player)
+
+                (   state.has(ITEM_TRANSFORMATION_CROCODILE, player) or  
+                    state.has(ITEM_STILT_STRIDE, player) 
+                )  
             ),
         LOC_LIFE_BGS_MR_VILE_21:
             lambda state:
@@ -9477,7 +9497,8 @@ def get_location_rules(player, options):
         LOC_LIFE_MMM_CHANDELIER:
             lambda state:
             (
-                can_reach_mmm_second_floor(state, player)
+                can_reach_mmm_second_floor(state, player) and
+                state.has(ITEM_FLIGHT, player)
             ),
         LOC_LIFE_MMM_SECRET_CHURCH:
             lambda state:
@@ -9629,9 +9650,12 @@ def get_location_rules(player, options):
         LOC_WITCH_SWITCH_MMM:
             lambda state:
             (
-                state.has(ITEM_BEAK_BUSTER, player) and
-                state.has(ITEM_TURBO_TALON_TROT, player) and
-                state.has(ITEM_FLIGHT, player)
+                    can_break_breakable_gates(state, player) and
+                    state.has(ITEM_BEAK_BUSTER, player) and
+                    state.has(ITEM_TURBO_TALON_TROT, player) and
+                    state.has(ITEM_FLAP_FLIP, player) and
+                    state.has(ITEM_SHOCK_SPRING_JUMP, player) and
+                    state.has(ITEM_FLIGHT, player)
             ),
         LOC_WITCH_SWITCH_RBB:
             lambda state:
@@ -9774,7 +9798,11 @@ def get_location_rules(player, options):
             lambda state:
             (
                 state.has(ITEM_MUMBO_TOKEN, player, 20) and
-                can_reach_mmm_second_floor(state, player)
+                (
+                    state.has(ITEM_TRANSFORMATION_PUMPKIN, player) or
+                    can_reach_mmm_second_floor(state, player)
+                )
+                
             ),
         LOC_MUMBO_TRANSFORM_WALRUS:
             lambda state:
