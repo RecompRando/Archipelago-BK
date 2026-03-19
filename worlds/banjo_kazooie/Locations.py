@@ -1236,7 +1236,7 @@ location_data_table: Dict[str, BKLocationData] = {
     ),
     LOC_MUMBO_TOKEN_CCW_SPRING_THORNS: BKLocationData(
         region=RGN_CCW_SPRING,
-        address=0x0300005E
+        address=0x0300005D
     ),
     LOC_MUMBO_TOKEN_CCW_SUMMER_ENTRANCE_SNAREBEAR: BKLocationData(
         region=RGN_CCW_SUMMER,
